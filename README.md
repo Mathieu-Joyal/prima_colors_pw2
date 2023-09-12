@@ -1,6 +1,7 @@
-# Projet-web-2
-Sit web pour un festival de couleurs:  Prima-Colors
-# Projet Synthèse 
+<div style="text-align: center;">
+  <img src="images/logo_header.png" width="35%" />
+</div>
+
 
 ## Site Web pour un festival de couleurs
 
@@ -10,28 +11,48 @@ Sit web pour un festival de couleurs:  Prima-Colors
 > - Shante Nicolaides
 > - Mathieu Joyal
 ---
+
+
  
 
 L'objectif de ce projet est de concevoir un site web captivant pour le Festival de Couleurs Prima-Colors. Nous mettrons en avant les diverses activités telles que concours, performances de DJ, course annuelle de couleurs, ateliers artistiques ect. Le tout doit être conçu de manière fonctionnelle, dynamique et intuitive pour une expérience utilisateur optimale.
 
 Le festival vise une clientèle dynamique, âgée de 18 à 40 ans passionnée d'arts, de musique et d'activités variés. Le site web a pour mission de répondre à leurs attentes en offrant une expérience moderne, alliant technologie et plaisir.
 
+## Voici des exemples de clientèles que le festival cible : 
+| Catégorie | Description |
+| --- | --- |   
+**Les Amateurs d'Art et les Artistes Émergents** | Ce groupe comprend les passionnés d'art, les étudiants en art et les artistes émergents qui cherchent à découvrir de nouvelles inspirations et à élargir leurs horizons créatifs. 
+| **Les Urbains Créatifs** |Les citadins qui valorisent l'expression artistique et qui sont attirés par la vie urbaine, la culture alternative et les espaces innovants. 
+| **Les Aventuriers Culturels** | Les personnes avides de découvertes culturelles, qui aiment explorer de nouvelles expériences et participer à des événements novateurs. 
+| **Les Influenceurs et les Blogueurs** |Les influenceurs et les blogueurs qui sont actifs dans les domaines de l'art, de la culture urbaine et de la créativité. 
+| **Les Entrepreneurs Créatifs et les Innovateurs** |Ceux et celles qui cherchent à créer des synergies entre l'art et l'innovation, promouvant ainsi l'émergence de projets novateurs. 
+| **Les Amateurs de Musique et de Performances** | Le Festival Prima-Colors propose également une programmation musicale variée et des performances de DJ en présentiel, attirant ainsi les amateurs de musique et de spectacles. 
+ 
 
-![personna](images/personna.jpg)
+<img src="images/personna.jpg" width="50%"/>
+
+Le Festival Prima-Colors vise à offrir une expérience riche et diversifiée à tous ces publics, créant ainsi un espace où l'expression artistique prend vie de manière inclusive et stimulante. 
 
 ---
 
 >  ##  Prima-Colors
 
-- Prima-Colors est un événement annuel incontournable qui attire chaque année des milliers de visiteurs. Cette célébration de l'art sous toutes ses formes se distingue par sa thématique unique et ses couleurs vibrantes. Pendant trois jours, les participants peuvent se plonger dans un monde d'inspiration, d'apprentissage et d'émerveillement. 
+- Prima-Colors est un événement annuel incontournable qui attire chaque année des milliers de visiteurs. Cette célébration de l'art sous toutes ses formes se distingue par sa thématique unique et ses couleurs vibrantes. Pendant trois jours, les participants peuvent se plonger dans un monde d'inspiration, d'apprentissage et d'émerveillement. L'essence de ce festival est excentrique avec un mélange audacieux de couleurs et de formes qui repousse les limites de l'ordinaire. Prima-Colors croit fermement que l'art transcende les conventions, et ils promouvoient des talents qui osent expérimenter et innover.
 
 ### Le site est inspiré de 
-![inspiration](images/inspiration.jpg)
+<img src="images/inspiration.jpg" width="40%" />
 
 ### Le logo, la typographie et la palette de couleurs se déclinent comme tel;
-![logo](images/logo.jpg)
-![palette](images/palette.jpg)
-![font](images/font.jpg)
+<div style="display: flex; flex-direction: row;">
+<div style="display: flex; flex-direction: column;">
+  <img src="images/logo_header.png" width="50%" />
+  <img src="images/logo_fond.png" width="50%" />
+  </div>
+  <img src="images/palette.jpg" width="30%"; margin-right: 10px />
+  <img src="images/font.jpg" width="30%" />
+</div>
+
 
 ---
 
@@ -45,9 +66,8 @@ Le festival vise une clientèle dynamique, âgée de 18 à 40 ans passionnée d'
 
 ## Forces et faiblesses des technologies
 | Technologies | Forces | Faiblesses |
-| --- | --- | :---: 
-|   
-**Visual Studio Code** | Gratuit / Open Source ,  Léger et rapide, Intégration avec Git | Nécessite des extensions pour certaines fonctionnalités 
+| --- | --- | :--- 
+| **Visual Studio Code** | Gratuit / Open Source ,  Léger et rapide, Intégration avec Git | Nécessite des extensions pour certaines fonctionnalités 
 | **JavaScript** |Interopérabilité, Exécution côté client  | Sécurité faible face aux attaques
 | **PHP** | Polyvalent, Intégration avec BDD | Sécurité faible aux failles d'injection de SQL (mais mieux qu'avant)
 | **Laravel** | Utilisation MVC, Système de routage puissant | Taille du framework
