@@ -1,64 +1,77 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<div align = "center">
+  <img src="public/img/readme/logo_header.png" width="35%" />
+</div>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+## Site Web pour un festival de couleurs
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
+ Site web créé par : 
+> - Marie-Eve Paquette
+> - Shante Nicolaides
+> - Mathieu Joyal
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+ 
 
-## Learning Laravel
+L'objectif de ce projet est de concevoir un site web captivant pour le Festival de Couleurs Prima-Colors. Nous mettrons en avant les diverses activités telles que concours, performances de DJ, course annuelle de couleurs, ateliers artistiques ect. Le tout doit être conçu de manière fonctionnelle, dynamique et intuitive pour une expérience utilisateur optimale.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Le festival vise une clientèle dynamique, âgée de 18 à 40 ans passionnée d'arts, de musique et d'activités variés. Le site web a pour mission de répondre à leurs attentes en offrant une expérience moderne, alliant technologie et plaisir.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Voici des exemples de clientèles que le festival cible : 
+| Catégorie | Description |
+| --- | --- |   
+**Les Amateurs d'Art et les Artistes Émergents** | Ce groupe comprend les passionnés d'art, les étudiants en art et les artistes émergents qui cherchent à découvrir de nouvelles inspirations et à élargir leurs horizons créatifs. 
+| **Les Urbains Créatifs** |Les citadins qui valorisent l'expression artistique et qui sont attirés par la vie urbaine, la culture alternative et les espaces innovants. 
+| **Les Aventuriers Culturels** | Les personnes avides de découvertes culturelles, qui aiment explorer de nouvelles expériences et participer à des événements novateurs. 
+| **Les Influenceurs et les Blogueurs** |Les influenceurs et les blogueurs qui sont actifs dans les domaines de l'art, de la culture urbaine et de la créativité. 
+| **Les Entrepreneurs Créatifs et les Innovateurs** |Ceux et celles qui cherchent à créer des synergies entre l'art et l'innovation, promouvant ainsi l'émergence de projets novateurs. 
+| **Les Amateurs de Musique et de Performances** | Le Festival Prima-Colors propose également une programmation musicale variée et des performances de DJ en présentiel, attirant ainsi les amateurs de musique et de spectacles. 
+ 
 
-## Laravel Sponsors
+<img src="public/img/readme/personna.jpg" width="50%"/>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Le Festival Prima-Colors vise à offrir une expérience riche et diversifiée à tous ces publics, créant ainsi un espace où l'expression artistique prend vie de manière inclusive et stimulante. 
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+>  ##  Prima-Colors
 
-## Contributing
+- Prima-Colors est un événement annuel incontournable qui attire chaque année des milliers de visiteurs. Cette célébration de l'art sous toutes ses formes se distingue par sa thématique unique et ses couleurs vibrantes. Pendant trois jours, les participants peuvent se plonger dans un monde d'inspiration, d'apprentissage et d'émerveillement. L'essence de ce festival est excentrique avec un mélange audacieux de couleurs et de formes qui repousse les limites de l'ordinaire. Prima-Colors croit fermement que l'art transcende les conventions, et ils promouvoient des talents qui osent expérimenter et innover.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Le site est inspiré de 
+<img src="public/img/readme/inspiration.jpg" width="40%" />
 
-## Code of Conduct
+### Le logo, la typographie et la palette de couleurs se déclinent comme tel;
+  <img src="public/img/readme/logo_typo.png" width="50%" />
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+##  Le site web sera créer avec diverses choix technologiques pour permettre la réalisation dynamique et intuitive voulu. 
 
-## License
+    - Le développement : VS Code, JavaScript, PHP, Laravel, Html et Css. L'utilisation de Vue.js sera utilisé    pour les composantes sans aucun doute également.
+    - La planification : Click-Up et Adobe XD
+    - La gestion de projet : SourceTree et Github. 
+    - Le montage vidéo et la qualité/montage des photos seront réalisés par Photoshop et Premiere Pro.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Forces et faiblesses des technologies
+| Technologies | Forces | Faiblesses |
+| --- | --- | :--- 
+| **Visual Studio Code** | Gratuit / Open Source ,  Léger et rapide, Intégration avec Git | Nécessite des extensions pour certaines fonctionnalités 
+| **JavaScript** |Interopérabilité, Exécution côté client  | Sécurité faible face aux attaques
+| **PHP** | Polyvalent, Intégration avec BDD | Sécurité faible aux failles d'injection de SQL (mais mieux qu'avant)
+| **Laravel** | Utilisation MVC, Système de routage puissant | Taille du framework
+| **HTML** | Universalité, Interopérabilité  |Limitations fonctionnelles, Statique
+| **CSS** | Réutilisation du style, Large compatibilité, Flexibilité  | Peut être complexe dans des scénarios avancés
+| **Vue.JS** | Composants réutilisables, Rendu côté client (création réactive sans nécessairement rechragement de la page) | Taille du bundle lourd, 
+| **Click-Up** | Polyvalent, Personnalisable d'après les projets, Visibilité pour le suivi de temps| Dépendance à Internet
+| **Adobe XD** |Création rapide de prototypes interactifs, Possibilités de partage et de commentaires   |Fonctionnalités de conception limitées
+| **SourceTree** | Visualisation des modifications, Intégration avec Git, Gestion graphique des branches|Mises à jour fréquentes
+| **GitHub** |Hébergement de code, Sécurité, Collaboration entre membres du projet  |Dépendance à Git
+| **PhotoShop** |Intégration avec d'autres logiciels Adobe , Précision et contrôle, Polyvalence, Large gamme de fonctionnalités (création, modification,manipulation d'images ect)|Ressources système : L'utilisation intensive des fonctionnalités avancées peut ralentir les ordinateurs moins puissants.
+| **Premiere Pro** |Gestion de projet avancée, Performances, Intégration avec la suite Adobe  | Taille des fichiers, Dépendance à Adobe
+ 
+
