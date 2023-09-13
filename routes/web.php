@@ -1,18 +1,21 @@
 <?php
 
+
+use App\Http\Controllers\ActualiteController;
+use App\Http\Controllers\ActiviteController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+/*ACCUEIL*/
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/**PAGE ACTIVITÉS */
+Route::get('/actualites', [ActualiteController::class, 'index'])
+->name('activites.index');
+
+/**PAGE ACTUALITÉS */
+Route::get('/actualites', [ActualiteController::class, 'index'])
+->name('actiualites.index');
+
+/** PAGE À PROPOS*/
+/** PAGE BILLETERIE */
+/**PAGE CONCOURS */
+
