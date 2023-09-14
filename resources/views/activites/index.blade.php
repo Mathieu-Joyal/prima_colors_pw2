@@ -1,6 +1,7 @@
 <x-layout titre="Les activites">
 
-
+{{-- <x-nav/> --}}
+{{-- <x-hero/> --}}
     <h1>activites</h1>
     <h2>Vendredi</h2>
     <h2>Samedi</h2>
@@ -32,7 +33,7 @@
         <button>boutton voir plus</button>
 
     </section>
-    <x-ban_concours />
+    {{-- <x-ban_concours /> --}}
     <section class="conteneur-activites">
         <h2>Vendredi</h2>
         <h2>Samedi</h2>
@@ -63,7 +64,7 @@
 
     </section>
 
-    <x-ban_compte />
+    {{-- <x-ban_compte /> --}}
 
     <section class="conteneur-activites">
         <h2>Vendredi</h2>
@@ -94,8 +95,8 @@
         <button>boutton voir plus</button>
 
     </section>
-    <x-ban_billet />
+    {{-- <x-ban_billet /> --}}
 
-    <x-footer />
+    {{-- <x-footer /> --}}
 
 </x-layout>

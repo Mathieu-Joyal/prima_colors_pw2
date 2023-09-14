@@ -14,7 +14,11 @@ class ActualiteFactory extends Factory
     public function definition()
     {
         return [
-            //
-        ];
+            "titre" => ucfirst($this->faker->word()),
+            "date_publication" => $this->faker->date(),
+            "description" => $this->faker->paragraph(),
+            "image" => $this->faker->word(),
+            "employe_id" => 2
+         ];
     }
 }
