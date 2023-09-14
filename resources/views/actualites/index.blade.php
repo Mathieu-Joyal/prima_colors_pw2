@@ -7,7 +7,7 @@
 
     <section class="conteneur-actualites">
         <h2>Nouveauté de la scène 2023</h2>
-        @foreach ($actualites as $actualite)
+        @foreach ($actualitesRecentes as $actualite)
             <article class="actualites">
 
                 <div class="conteneur-image">
@@ -29,8 +29,8 @@
     </section>
     {{-- <x-ban_concours/> --}}
     <section class="conteneur-actualites">
-        <h2>Nouveauté de la scène 2023</h2>
-        @foreach ($actualites as $actualite)
+        <h2>2022</h2>
+        @foreach ($actualitesAnciennes as $actualite)
             <article class="actualites">
 
                 <div class="conteneur-image">

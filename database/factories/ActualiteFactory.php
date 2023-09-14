@@ -15,7 +15,7 @@ class ActualiteFactory extends Factory
     {
         return [
             "titre" => ucfirst($this->faker->word()),
-            "date_publication" => $this->faker->date(),
+            "date_publication" => $this->faker->dateTimeBetween('2022-01-01', '2023-12-31')->format('Y-m-d'),
             "description" => $this->faker->paragraph(),
             "image" => $this->faker->word(),
             "employe_id" => 2

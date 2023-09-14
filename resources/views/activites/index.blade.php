@@ -9,7 +9,7 @@
     <h3>date de vendredi</h3>
 
     <section class="conteneur-activites">
-        @foreach ($activites as $activite)
+        @foreach ($vendrediActivites as $activite)
             <article class="activites vendredi">
 
                 <div class="conteneur-image">
@@ -38,8 +38,8 @@
         <h2>Vendredi</h2>
         <h2>Samedi</h2>
         <h2>Dimanche</h2>
-        <h3>date de vendredi</h3>
-        @foreach ($activites as $activite)
+        <h3>date de samedi</h3>
+        @foreach ($samediActivites as $activite)
             <article class="activites samedi">
 
                 <div class="conteneur-image">
@@ -70,8 +70,8 @@
         <h2>Vendredi</h2>
         <h2>Samedi</h2>
         <h2>Dimanche</h2>
-        <h3>date de vendredi</h3>
-        @foreach ($activites as $activite)
+        <h3>date de dimanche</h3>
+        @foreach ($dimancheActivites as $activite)
             <article class="activites dimanche">
 
                 <div class="conteneur-image">
