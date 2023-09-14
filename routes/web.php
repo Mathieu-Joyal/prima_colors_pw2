@@ -11,12 +11,12 @@ use Illuminate\Support\Facades\Route;
 /*ACCUEIL*/
 
 /**PAGE ACTIVITÉS */
-Route::get('/actualites', [ActualiteController::class, 'index'])
+Route::get('/activites', [ActiviteController::class, 'index'])
 ->name('activites.index');
 
 /**PAGE ACTUALITÉS */
-// Route::get('/actualites', [ActualiteController::class, 'index'])
-// ->name('actiualites.index');
+Route::get('/actualites', [ActualiteController::class, 'index'])
+->name('actualites.index');
 
 /** PAGE À PROPOS*/
 /** PAGE BILLETERIE */
