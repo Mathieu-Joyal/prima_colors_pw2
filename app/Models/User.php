@@ -47,8 +47,18 @@ class User extends Authenticatable
      *
      * @return BelongsToMany
      */
+    public function forfaits() {
+
+        return $this->belongsToMany(Forfait::class, "reservations");
+    }
+
+    /**
+     *
+     *
+     * @return HasMany
+     */
     public function reservations() {
 
-        return $this->belongsToMany(Reservation::class);
+        return $this->hasMany(Reservation::class);
     }
 }

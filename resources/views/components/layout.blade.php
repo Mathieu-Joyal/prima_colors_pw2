@@ -1,4 +1,5 @@
-@props(['titre' => 'Lara GPT'])
+@props(["titre" => "Festival Prima-Colors"])
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,5 +19,6 @@
 
     {{ $slot }}
 </body>
+
 
 </html>
