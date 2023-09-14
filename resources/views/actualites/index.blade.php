@@ -9,7 +9,7 @@
             <article class="actualites">
 
                 <div class="conteneur-image">
-                    <img class="thumbnail" src="{{ $actualite->poster }}" alt="image de l'actualite">
+                    <img class="thumbnail" src="{{ $actualite->image }}" alt="image de l'actualite">
                 </div>
                 <div class="titre">
                     {{ $actualite->titre }}

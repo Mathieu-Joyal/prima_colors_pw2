@@ -1,6 +1,6 @@
 <x-layout titre="Les activites">
 
-    <x-nav />
+
     <h1>activites</h1>
     <h2>Nouveauté de la scène 2023</h2>
 
@@ -9,17 +9,23 @@
             <article class="activites">
 
                 <div class="conteneur-image">
-                    <img class="thumbnail" src="{{ $activite->poster }}" alt="image de l'activite">
+                    <img class="thumbnail" src="{{ $activite->image }}" alt="image de l'activite">
                 </div>
                 <div class="titre">
-                    {{ $activite->titre }}
+                   titre {{ $activite->titre }}
                 </div>
 
                 <div class="date-publication">
-                    {{ $activite->date_publication }}
+                 date   {{ $activite->date }}
+                </div>
+                <div class="date-publication">
+                 heure   {{ $activite->heure }}
+                </div>
+                <div class="date-publication">
+                 endroit   {{ $activite->endroit }}
                 </div>
                 <div class="description">
-                    {{ $activite->description }}
+                  description  {{ $activite->description }}
                 </div>
 
             </article>
@@ -27,7 +33,7 @@
         @endforeach
     </section>
 
-<x-ban_concours />
+
     <x-footer />
 
 </x-layout>
