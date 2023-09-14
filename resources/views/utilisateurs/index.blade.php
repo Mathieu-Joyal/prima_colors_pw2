@@ -16,8 +16,6 @@
 
     <h2>Bonjour {{ $user->prenom }}!</h2>
 
-    {{ $reservations }}
-
     <section class="forfaits">
 
         @foreach ($forfaits as $forfait)
@@ -80,8 +78,61 @@
 
     </section>
 
+    <section class="concours">
 
+        {{-- <form action="{{ route('utilisateurs.store') }}" --}}
+                method="POST"
+                enctype="multipart/form-data"
+        >
+            @csrf
 
+            {{-- titre oeuvre --}}
+            <div>
+                <label for="titre_oeuvre">
+                    Titre de l'oeuvre
+                </label>
+
+                <div>
+                    <input
+                        id="titre_oeuvre"
+                        name="titre_oeuvre"
+                        type="text"
+                        autofocus
+                        value="{{ old('titre') }}"
+                    >
+
+                    {{-- <x-forms.erreur champ="titre" /> --}}
+
+                </div>
+            </div>
+
+            {{-- image oeuvre --}}
+            <div>
+                <label for="image_oeuvre">
+                    Fichier de l'oeuvre
+                </label>
+
+                <div>
+                    <input
+                        id="image_oeuvre"
+                        name="image_oeuvre"
+                        type="file"
+                    >
+
+                    <x-forms.erreur champ="avatar" />
+
+                </div>
+
+            </div>
+
+            <div>
+                <button type="submit">
+                    Soumettez votre oeuvre!
+                </button>
+            </div>
+        </form>
+
+    </section>
 
     <x-footer />
 
