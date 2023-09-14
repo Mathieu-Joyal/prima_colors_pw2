@@ -5,6 +5,8 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\Role;
 
+
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -29,6 +31,11 @@ class DatabaseSeeder extends Seeder
         // Ajout d'employés fictifs
         \App\Models\Employe::factory(25)->create();
 
+        // ajout des activités
 
+        \App\Models\Activite::factory(10)->create();
+
+        // ajout des actualités
+        \App\Models\Actualite::factory(10)->create();
     }
 }
