@@ -12,12 +12,22 @@ class ActualiteController extends Controller
      *
      * @return View
      */
+
     public function index()
     {
-      $actualites = Actualite::all();
+        $actualitesRecentes = Actualite::whereYear('date_publication', 2023)
+            ->orderBy('date_publication', 'desc')
+            ->take(5)
+            ->get();
 
-      return view ("actualites.index", [
-        "actualites" => $actualites,
-      ]);
+        $actualitesAnciennes = Actualite::whereYear('date_publication', 2022)
+            ->orderBy('date_publication', 'desc')
+            ->take(5)
+            ->get();
+
+        return view("actualites.index", [
+            "actualitesRecentes" => $actualitesRecentes,
+            "actualitesAnciennes" => $actualitesAnciennes,
+        ]);
     }
 }
