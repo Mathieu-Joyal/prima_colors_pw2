@@ -15,7 +15,7 @@ class ActiviteFactory extends Factory
     {
         return [
            "titre" => ucfirst($this->faker->word()),
-           "date" => $this->faker->date(),
+           "date" => $this->faker->dateTimeBetween('2023-10-13', '2023-10-16')->format('Y-m-d'),
            "heure" => $this->faker->time(),
            "description" => $this->faker->paragraph(),
            "endroit" => $this->faker->word(),
