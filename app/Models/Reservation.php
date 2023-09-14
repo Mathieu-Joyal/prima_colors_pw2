@@ -14,9 +14,9 @@ class Reservation extends Model
      *
      * @return BelongsToMany
      */
-    public function users() {
+    public function user() {
 
-        return $this->belongsToMany(User::class);
+        return $this->belongsTo(User::class);
     }
 
     /**
@@ -24,8 +24,8 @@ class Reservation extends Model
      *
      * @return BelongsToMany
      */
-    public function forfaits() {
+    public function forfait() {
 
-        return $this->belongsToMany(Forfait::class);
+        return $this->belongsTo(Forfait::class);
     }
 }
