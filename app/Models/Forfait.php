@@ -14,8 +14,18 @@ class Forfait extends Model
      *
      * @return BelongsToMany
      */
+    public function users() {
+
+        return $this->belongsToMany(User::class, "reservations");
+    }
+
+    /**
+     *
+     *
+     * @return HasMany
+     */
     public function reservations() {
 
-        return $this->belongsToMany(Reservation::class);
+        return $this->hasMany(Reservation::class);
     }
 }

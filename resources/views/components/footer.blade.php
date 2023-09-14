@@ -25,9 +25,9 @@
         </div>
     </div>
     <img src="img/logo/bon-logo.png" alt="">
- 
-       <p class="slogan">Prima-Colors : L'Art de Vivre, Peint en Mille Couleurs !</p> 
-   
+
+       <p class="slogan">Prima-Colors : L'Art de Vivre, Peint en Mille Couleurs !</p>
+
     <div class="info">
         <p>Prima-Colors@info.ca</p>
         <img src="img/reseau/facebook.jpg" alt="">
