@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AccueilController;
 use App\Http\Controllers\ActualiteController;
 use App\Http\Controllers\ActiviteController;
 use App\Http\Controllers\ConnexionController;
@@ -9,6 +10,8 @@ use App\Http\Controllers\UtilisateurController;
 use Illuminate\Support\Facades\Route;
 
 /*ACCUEIL*/
+Route::get("/", [AccueilController::class, 'index'])
+    ->name('accueil');
 
 /**PAGE ACTIVITÉS */
 Route::get('/activites', [ActiviteController::class, 'index'])

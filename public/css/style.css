@@ -1,1 +1,10 @@
-/*# sourceMappingURL=style.css.map */
+main{
+    background-color: black;
+}
+
+p{
+    color: white;
+}
+h2, h3, h1 {
+    color: pink
+}
