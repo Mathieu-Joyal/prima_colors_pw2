@@ -22,7 +22,7 @@ class ConnexionController extends Controller
      * @param Request $request
      * @return RedirectResponse
      */
-    public function authentifier(Request $request) {
+    public function authentifierUser(Request $request) {
 
         // Validation
         $valides = $request->validate([
@@ -40,6 +40,40 @@ class ConnexionController extends Controller
 
             return redirect()
                     ->intended(route('utilisateurs.index'))
+                    ->with('succes', 'Vous êtes connectés!');
+        }
+
+        // Redirection
+        return back()
+                ->withErrors([
+                    "email" => "Les informations fournies ne sont pas valides"
+                ])
+                ->onlyInput('email');
+
+    }
+    /**
+     * Traite la connexion d'un utilisateur
+     *
+     * @param Request $request
+     * @return RedirectResponse
+     */
+    public function authentifierEmploye(Request $request) {
+
+        // Validation
+        $valides = $request->validate([
+            "identifiant" => "required",
+            "password" => "required"
+        ], [
+            "identifiant.required" => "L'identifiant est requis.",
+            "password.required" => "Le mot de passe est requis."
+        ]);
+
+        // Ajouter l'employé à la session
+        if(Auth::attempt($valides)){
+            $request->session()->regenerate();
+
+            return redirect()
+                    ->intended(route('employes.index'))
                     ->with('succes', 'Vous êtes connectés!');
         }
 

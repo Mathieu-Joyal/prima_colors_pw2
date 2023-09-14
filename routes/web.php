@@ -35,8 +35,8 @@ Route::get("/connexion", [ConnexionController::class, 'create'])
     // ->middleware('guest');
 
 // Traitement du formulaire de connexion d'un compte utilisateur
-Route::post("/connexion", [ConnexionController::class, 'authentifier'])
-    ->name('connexion.authentifier');
+Route::post("/connexion", [ConnexionController::class, 'authentifierUser'])
+    ->name('connexion.authentifierUser');
 
 // Affichage de l'enregistrement d'un nouveau compte utilisateur
 Route::get("/enregistrement",[EnregistrementController::class, 'create'])
@@ -46,9 +46,15 @@ Route::get("/enregistrement",[EnregistrementController::class, 'create'])
 Route::post("/enregistrement", [EnregistrementController::class, 'store'])
     ->name('enregistrement.store');
 
-// Déconnexion de du compte utilisateur
+// Déconnexion du compte utilisateur
 Route::post("/deconnexion", [ConnexionController::class, 'deconnecter'])
     ->name('deconnexion');
+
+
+// Traitement du formulaire de connexion d'un compte employé
+Route::post("/connexion/employe", [ConnexionController::class, 'authentifierEmploye'])
+    ->name('connexion.authentifierEmploye');
+
 
     // SECTION UTILISATEUR
 // Affichage de la page utilisateur
