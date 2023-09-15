@@ -53,6 +53,10 @@ Route::post("/deconnexion", [ConnexionController::class, 'deconnecter'])
 Route::post("/connexion/employe", [ConnexionController::class, 'authentifierEmploye'])
     ->name('connexion.authentifierEmploye');
 
+// Traitement du formulaire d'enregistrement d'un nouveau compte utilisateur
+Route::post("/enregistrement/employe", [EnregistrementController::class, 'storeEmploye'])
+    ->name('enregistrement.storeEmploye');
+
 
     // SECTION UTILISATEUR
 
