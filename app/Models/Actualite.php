@@ -10,7 +10,7 @@ class Actualite extends Model
     use HasFactory;
 
     /**
-     *
+     * Actualité associée à un employé
      *
      * @return BelongsTo
      */

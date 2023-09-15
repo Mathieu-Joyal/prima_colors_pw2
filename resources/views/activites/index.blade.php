@@ -1,9 +1,14 @@
 <x-layout titre="Les activites">
 
-    <x-nav />
+
+   <x-nav />
 
     <main>
        {{-- <x-hero/> --}}
+
+<x-nav/>
+{{-- <x-hero/> --}}
+
     <h1>activites</h1>
     <h2 class = "selected">Vendredi</h2>
     <h2>Samedi</h2>
@@ -18,6 +23,7 @@
                     <img class="thumbnail" src="{{ $activite->image }}" alt="image de l'activite">
                 </div>
 
+
                 <div class="conteneur-titre">
 
                     <div class="heur">
@@ -31,11 +37,25 @@
                         <p>endroit {{ $activite->endroit }}</p>
                     </div>
 
+                <div class="titre">
+                    <p>titre {{ $activite->titre }}</p>
+
+                </div>
+
+                <div class="date-publication">
+                    <p> heure {{ $activite->heure }}</p>
+
+                </div>
+                <div class="date-publication">
+                    <p>endroit {{ $activite->endroit }}</p>
+
+
                 </div>
 
 
                 <div class="description">
                     <p> description {{ $activite->description }}</p>
+
                 </div>
             </article>
         @endforeach
@@ -55,6 +75,7 @@
                     <img class="thumbnail" src="{{ $activite->image }}" alt="image de l'activite">
                 </div>
 
+
                 <div class="conteneur-titre">
 
                     <div class="heur">
@@ -68,11 +89,29 @@
                         <p>endroit {{ $activite->endroit }}</p>
                     </div>
 
+                <div class="titre">
+                    <p>titre {{ $activite->titre }}</p>
+
+                </div>
+
+                <div class="date-publication">
+                    <p> heure {{ $activite->heure }}</p>
+
+                </div>
+                <div class="date-publication">
+                    <p>endroit {{ $activite->endroit }}</p>
+
+
                 </div>
 
 
                 <div class="description">
+
                     <p> description {{ $activite->description }}</p>
+
+                    <p>  description {{ $activite->description }}</p>
+
+
                 </div>
             </article>
         @endforeach
@@ -94,6 +133,7 @@
                     <img class="thumbnail" src="{{ $activite->image }}" alt="image de l'activite">
                 </div>
 
+
                 <div class="conteneur-titre">
 
                     <div class="heur">
@@ -107,11 +147,25 @@
                         <p>endroit {{ $activite->endroit }}</p>
                     </div>
 
+                <div class="titre">
+                    <p> titre {{ $activite->titre }}</p>
+
+                </div>
+
+                <div class="date-publication">
+                    <p> heure {{ $activite->heure }}</p>
+
+                </div>
+                <div class="date-publication">
+                    <p> endroit {{ $activite->endroit }}</p>
+
+
                 </div>
 
 
                 <div class="description">
                     <p> description {{ $activite->description }}</p>
+
                 </div>
 
             </article>
@@ -120,7 +174,9 @@
 
     </section>
     {{-- <x-ban_billet /> --}}
+
 </main>
+
     <x-footer />
 
 </x-layout>

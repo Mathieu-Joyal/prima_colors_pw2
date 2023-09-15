@@ -24,7 +24,7 @@
             <p>Actualités</p>
         </div>
     </div>
-    <img src="img/logo/bon-logo.png" alt="">
+    <img src="img/logo/logo.svg" alt="">
 
        <p class="slogan">Prima-Colors : L'Art de Vivre, Peint en Mille Couleurs !</p>
 
