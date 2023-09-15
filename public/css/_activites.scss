@@ -1,0 +1,29 @@
+.conteneur-activites {
+    display: flex;
+    flex-direction: column;
+
+    .conteneur-date {
+        display: flex;
+        flex-direction: column;
+
+        .conteneur-jours {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+
+            h2 {
+                color: $blanc;
+
+                .selected {
+                    color: $rose;
+                }
+            }
+        }
+        .conteneur-bordure{
+            width: 300px;
+            border-bottom: solid $rose 3px;
+        }
+    }
+
+
+}

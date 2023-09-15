@@ -5,6 +5,7 @@ h1 {
   font-style: normal;
   color: #eca6d9;
   font-size: 80px;
+  color: #eeb15e;
 }
 
 h2 {
@@ -13,6 +14,7 @@ h2 {
   font-style: normal;
   font-size: 48px;
   text-transform: uppercase;
+  color: #eca6d9;
 }
 
 h3 {
@@ -27,6 +29,11 @@ p {
   font-weight: 300;
   font-style: normal;
   font-size: 27px;
+  color: white;
+}
+
+main {
+  background-color: #030303;
 }
 
 .contenu {
@@ -67,4 +74,28 @@ p.slogan {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+.conteneur-activites {
+  display: flex;
+  flex-direction: column;
+}
+.conteneur-activites .conteneur-date {
+  display: flex;
+  flex-direction: column;
+}
+.conteneur-activites .conteneur-date .conteneur-jours {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.conteneur-activites .conteneur-date .conteneur-jours h2 {
+  color: white;
+}
+.conteneur-activites .conteneur-date .conteneur-jours h2 .selected {
+  color: #eca6d9;
+}
+.conteneur-activites .conteneur-date .conteneur-bordure {
+  width: 300px;
+  border-bottom: solid #eca6d9 3px;
 }/*# sourceMappingURL=style.css.map */
