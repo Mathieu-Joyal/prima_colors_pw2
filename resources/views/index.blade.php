@@ -1,8 +1,4 @@
 <x-layout titre="Festival Prima-Colors | Accueil">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/nav.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
-    <main>
         <x-nav />
         {{-- <video src=""></video> --}
         --}}
@@ -12,7 +8,7 @@
 
         <p>le festival est blabla</p>
 
-        <div class="section_activites">
+        <div class="section_activites">or
             <img src="img/accueil/activites.jpg" alt="">
             <h3>Activités hautes en couleurs!</h3>
             <p> description activités</p>
@@ -39,5 +35,5 @@
         {{-- <x-ban_compte></x-ban_compte> --}}
         {{-- <x-ban_billet></x-ban_billet> --}}
         <x-footer></x-footer>
-    </main>
+   
 </x-layout>

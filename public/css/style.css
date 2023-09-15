@@ -1,4 +1,3 @@
-@charset "UTF-8";
 h1 {
   font-family: "pf-venue-stencil", sans-serif;
   font-weight: 700;
@@ -49,31 +48,66 @@ main {
 
 .menu .item {
   display: flex;
-  align-items: center; /* Centre le texte verticallement */
-  margin-right: 20px; /* Espacement entre les éléments */
+  align-items: center;
 }
 
-.menu .item p {
-  margin-right: 10px; /* Espacement entre le texte et la ligne */
+.menu .item a {
+  margin-right: 10px;
+  font-size: 40px;
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+  font-family: "pf-venue", sans-serif;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  transition: -webkit-text-decoration 0.3s ease;
+  transition: text-decoration 0.3s ease;
+  transition: text-decoration 0.3s ease, -webkit-text-decoration 0.3s ease;
+  cursor: pointer;
+}
+
+.menu .item a:hover {
+  text-decoration: underline;
 }
 
 .menu .ligne {
-  height: 40px; /* Hauteur de la ligne */
-  width: 3px; /* Largeur de la ligne */
-  background-color: #ECA6D9;
+  height: 40px;
+  width: 3px;
+  background-color: #eca6d9;
   z-index: 1;
 }
 
 p.slogan {
-  color: #ECA6D9;
+  color: #eca6d9;
   text-transform: capitalize;
   text-align: center;
+  font-size: 36px;
+  font-weight: bold;
 }
 
 .info {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-top: 20px;
+  font-size: 40px;
+}
+
+.info p {
+  text-decoration: none;
+  transition: -webkit-text-decoration 0.3s ease;
+  transition: text-decoration 0.3s ease;
+  transition: text-decoration 0.3s ease, -webkit-text-decoration 0.3s ease;
+  cursor: pointer;
+}
+.info p:hover {
+  text-decoration: underline;
+}
+
+img {
+  margin-left: 350px;
+  margin-top: 46px;
 }
 
 .conteneur-activites {
