@@ -1,3 +1,4 @@
+@charset "UTF-8";
 h1 {
   font-family: "pf-venue-stencil", sans-serif;
   font-weight: 700;
@@ -26,4 +27,44 @@ p {
   font-weight: 300;
   font-style: normal;
   font-size: 27px;
+}
+
+.contenu {
+  background-color: #0B8A80;
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.menu .item {
+  display: flex;
+  align-items: center; /* Centre le texte verticallement */
+  margin-right: 20px; /* Espacement entre les éléments */
+}
+
+.menu .item p {
+  margin-right: 10px; /* Espacement entre le texte et la ligne */
+}
+
+.menu .ligne {
+  height: 40px; /* Hauteur de la ligne */
+  width: 3px; /* Largeur de la ligne */
+  background-color: #ECA6D9;
+  z-index: 1;
+}
+
+p.slogan {
+  color: #ECA6D9;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */
