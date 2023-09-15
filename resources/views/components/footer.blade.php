@@ -1,38 +1,39 @@
 <div class="contenu">
     <div class="menu">
         <div class="item">
-            <p>Accueil</p>
+            <a href="accueil.index">Accueil</a>
             <div class="ligne"></div>
         </div>
         <div class="item">
-            <p>Billets</p>
+            <a href="billets.index">Billets</a>
             <div class="ligne"></div>
         </div>
         <div class="item">
-            <p>Activités</p>
+            <a href="activites.index">Activités</a>
             <div class="ligne"></div>
         </div>
         <div class="item">
-            <p>Concours</p>
+            <a href="concours.index">Concours</a>
             <div class="ligne"></div>
         </div>
         <div class="item">
-            <p>À Propos</p>
+            <a href="apropos.index">À Propos</a>
             <div class="ligne"></div>
         </div>
         <div class="item">
-            <p>Actualités</p>
+            <a href="actualites.index">Actualités</a>
         </div>
     </div>
-    <img src="img/logo/logo.svg" alt="">
+    
+    <img src="img/logo/logo.png" alt="">
 
        <p class="slogan">Prima-Colors : L'Art de Vivre, Peint en Mille Couleurs !</p>
 
     <div class="info">
         <p>Prima-Colors@info.ca</p>
-        <img src="img/reseau/facebook.jpg" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
+        <img src="img/reseau/facebook/f_logo_RGB-Black_58.png" alt="">
+        <img src="img/reseau/instagram/Instagram_Glyph_Black.png" alt="">
+        <img src="img/reseau/youtube/yt_logo_mono_light3.png" alt=""> 
     </div>
 </div>
 
