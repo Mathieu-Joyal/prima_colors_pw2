@@ -14,14 +14,17 @@
                     <img class="thumbnail" src="{{ $actualite->image }}" alt="image de l'actualite">
                 </div>
                 <div class="titre">
-                    {{ $actualite->titre }}
+                    <p>{{ $actualite->titre }}</p>
+
                 </div>
 
                 <div class="date-publication">
-                    {{ $actualite->date_publication }}
+                    <p> {{ $actualite->date_publication }}</p>
+
                 </div>
                 <div class="description">
-                    {{ $actualite->description }}
+                    <p>{{ $actualite->description }}</p>
+
                 </div>
 
             </article>
@@ -37,14 +40,17 @@
                     <img class="thumbnail" src="{{ $actualite->image }}" alt="image de l'actualite">
                 </div>
                 <div class="titre">
-                    {{ $actualite->titre }}
+                    <p>  {{ $actualite->titre }}</p>
+
                 </div>
 
                 <div class="date-publication">
-                    {{ $actualite->date_publication }}
+                    <p>{{ $actualite->date_publication }}</p>
+
                 </div>
                 <div class="description">
-                    {{ $actualite->description }}
+                    <p>{{ $actualite->description }}</p>
+
                 </div>
 
             </article>
@@ -52,6 +58,6 @@
     </section>
 
     {{-- <x-ban_billet/> --}}
-    {{-- <x-footer /> --}}
+    <x-footer />
 
 </x-layout>
