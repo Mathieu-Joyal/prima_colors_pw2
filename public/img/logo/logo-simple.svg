@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1533" height="764" viewBox="0 0 1533 764">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_35" data-name="Rectangle 35" width="1532" height="717" transform="translate(200 717)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Group_165" data-name="Group 165" transform="translate(0 -103)">
+    <g id="Group_164" data-name="Group 164">
+      <g id="Mask_Group_1" data-name="Mask Group 1" transform="translate(-200 -614)" clip-path="url(#clip-path)">
+        <g id="logo-rond-noir" transform="translate(-517.338 492.806)">
+          <ellipse id="Ellipse_16" data-name="Ellipse 16" cx="362.203" cy="353.368" rx="362.203" ry="353.368" transform="translate(1066.084 229.326)"/>
+          <g id="prima">
+            <g id="Group_73" data-name="Group 73">
+              <path id="Path_37" data-name="Path 37" d="M800.312,342.517h85.6V608.591h-85.6V342.517Zm0,296.666h85.6v198.9h-85.6Zm119.223,19.954v-65.18h25.219c16.045,0,19.865-5.979,19.865-12.636V421.011c0-6.657-3.819-12.636-19.865-12.636H921.07V342.517h53.49c53.49,0,75.657,26.611,75.657,59.861V558.689c0,51.223-3.819,100.447-71.837,100.447H919.535Z" fill="#eca6d9"/>
+              <path id="Path_38" data-name="Path 38" d="M1094.551,342.517h85.6V608.591h-85.6V342.517Zm0,296.666h85.6v198.9h-85.6Zm119.223,19.954v-65.18h25.219c16.045,0,19.865-5.979,19.865-12.636V421.011c0-6.657-3.819-12.636-19.865-12.636h-23.684V342.517h53.49c53.49,0,75.657,25.933,75.657,59.861V602.595c0,25.272-13.761,52.544-66.483,56.542l34.393,25.951,57.327,152.991h-89.417l-66.483-178.942Z" fill="#eca6d9"/>
+              <path id="Path_39" data-name="Path 39" d="M1415.543,342.517h86.365V608.591h-86.365V342.517Zm0,296.666h86.365v198.9h-86.365Z" fill="#eca6d9"/>
+              <path id="Path_40" data-name="Path 40" d="M1741.1,647.839,1572.211,342.517h91.7L1790.775,572l-38.98,75.835h-10.709ZM1572.961,419.691l84.063,151.653v37.248h-84.063V419.673Zm0,219.51h84.063V838.1h-84.063Zm261.381-141.015h-3.819l-20.632,39.908-42.8-77.156,62.664-118.4h90.185V838.1h-85.6V498.185Z" fill="#eca6d9"/>
+              <path id="Path_41" data-name="Path 41" d="M2052.156,342.517h103.178l50.438,266.075H2126.3l-22.934-138.356h-3.052l-32.09,214.191h35.928l9.174,68.518H2058.3L2046.07,838.1h-90.185l96.289-495.561Zm107,495.561-28.271-198.9h81.011l37.445,198.9Z" fill="#eca6d9"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <text id="COLORS" transform="translate(1110 833)" fill="#eeb15e" font-size="120" font-family="PFVenue-Stencil, PF Venue Stencil" letter-spacing="0.23em"><tspan x="0" y="0">COLORS</tspan></text>
+  </g>
+</svg>

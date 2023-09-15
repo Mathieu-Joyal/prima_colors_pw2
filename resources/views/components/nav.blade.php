@@ -1,8 +1,8 @@
 <div>
-    <img src="img/logo/logo_header.jpg" alt="">
+    <img src="img/logo/logo-header.svg" alt="">
     <div class= background>
     </div>
-    {{-- <a href="{{ route('/') }}">Accueil</a> 
+    {{-- <a href="{{ route('/') }}">Accueil</a>
    <a href="{{ route('activites.index') }}">Activités</a>
     <a href="{{ route('concours.index') }}">Concours</a>
     <a href="{{ route('apropos.index') }}">À Propos</a>
