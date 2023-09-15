@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Reservation;
-use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -38,5 +37,19 @@ class ReservationController extends Controller
         return redirect()
                 ->route('utilisateurs.index')
                 ->with('succes', 'La réservation de votre forfait est confirmé');
+    }
+
+    /**
+     * Suppression d'une réservation
+     *
+     * @param int $id Id du fait à supprimer
+     * @return RedirectResponse
+     */
+    public function destroy($id)
+    {
+        Reservation::destroy($id);
+
+        return redirect()->route('utilisateurs.index')
+            ->with('succes', "La réservation a été annulée!");
     }
 }

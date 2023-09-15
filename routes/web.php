@@ -69,3 +69,7 @@ Route::get('/utilisateurs', [UtilisateurController::class, 'index'])
 Route::post('/utilisateurs', [ReservationController::class, 'store'])
     ->name('reservations.store');
 
+// traitement de la suppression du forfait choisit par l'utilisateur
+Route::get("/utilisateurs/destroy/{id}", [ReservationController::class, 'destroy'])
+    ->name('reservations.destroy');
+
