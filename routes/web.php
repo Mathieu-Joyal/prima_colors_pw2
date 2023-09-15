@@ -26,11 +26,6 @@ Route::get('/actualites', [ActualiteController::class, 'index'])
 /**PAGE CONCOURS */
 
 
-
-
-
-
-
     // SECTION CONNEXION - CRÉATION COMPTE
 // Affichage de la connexion d'un compte utilisateur
 Route::get("/connexion", [ConnexionController::class, 'create'])
@@ -60,6 +55,7 @@ Route::post("/connexion/employe", [ConnexionController::class, 'authentifierEmpl
 
 
     // SECTION UTILISATEUR
+
 // Affichage de la page utilisateur
 Route::get('/utilisateurs', [UtilisateurController::class, 'index'])
     ->name('utilisateurs.index')
@@ -69,7 +65,11 @@ Route::get('/utilisateurs', [UtilisateurController::class, 'index'])
 Route::post('/utilisateurs', [ReservationController::class, 'store'])
     ->name('reservations.store');
 
-// traitement de la suppression du forfait choisit par l'utilisateur
-Route::get("/utilisateurs/destroy/{id}", [ReservationController::class, 'destroy'])
+// Traitement de la suppression du forfait choisit par l'utilisateur
+Route::get("/utilisateurs/{id}", [ReservationController::class, 'destroy'])
     ->name('reservations.destroy');
+
+// Traitement du formulaire d'ajout du concours
+Route::post('/utilisateurs/concours', [UtilisateurController::class, 'updateConcours'])
+    ->name('utilisateurs.updateConcours');
 
