@@ -3,19 +3,27 @@ h1 {
   font-weight: 700;
   font-style: normal;
   color: #eca6d9;
+  font-size: 80px;
 }
 
 h2 {
   font-family: "pf-venue", sans-serif;
   font-weight: 700;
   font-style: normal;
+  font-size: 48px;
+  text-transform: uppercase;
 }
 
 h3 {
   font-family: "pf-venue", sans-serif;
   font-weight: 400;
   font-style: normal;
+  font-size: 38px;
 }
 
-
-/*# sourceMappingURL=style.css.map */
+p {
+  font-family: "pf-venue", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 27px;
+}/*# sourceMappingURL=style.css.map */
