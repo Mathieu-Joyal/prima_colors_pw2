@@ -21,7 +21,7 @@
 
                     <div class="conteneur-bordure">
                         <div class="bordure"></div>
-                        <div>
+                        <div class="date">
                             <h2>2023 | 10 | 13</h2>
                         </div>
                     </div>
@@ -44,31 +44,17 @@
                             <div class="titre">
                                 <p> titre {{ $activite->titre }}</p>
                             </div>
+
                             <div class="endroit">
                                 <p>endroit {{ $activite->endroit }}</p>
                             </div>
-
-                            <div class="titre">
-                                <p>titre {{ $activite->titre }}</p>
-
-                            </div>
-
-                            <div class="date-publication">
-                                <p> heure {{ $activite->heure }}</p>
-
-                            </div>
-                            <div class="date-publication">
-                                <p>endroit {{ $activite->endroit }}</p>
-
-
-                            </div>
-
 
                             <div class="description">
                                 <p> description {{ $activite->description }}</p>
 
                             </div>
                     </article>
+
                 @endforeach
                 <button>boutton voir plus</button>
 

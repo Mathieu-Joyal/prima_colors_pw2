@@ -32,8 +32,20 @@ p {
   color: white;
 }
 
-main {
+html {
   background-color: #030303;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  margin-left: 3em;
+  margin-right: 3em;
+}
+
+article {
+  margin-left: 10em;
+  margin-right: 10em;
 }
 
 .contenu {
@@ -88,14 +100,37 @@ p.slogan {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  width: 50%;
 }
 .conteneur-activites .conteneur-date .conteneur-jours h2 {
   color: white;
 }
-.conteneur-activites .conteneur-date .conteneur-jours h2 .selected {
+.conteneur-activites .conteneur-date .conteneur-jours h2.selected {
   color: #eca6d9;
 }
 .conteneur-activites .conteneur-date .conteneur-bordure {
-  width: 300px;
-  border-bottom: solid #eca6d9 3px;
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+}
+.conteneur-activites .conteneur-date .conteneur-bordure .bordure {
+  width: 75%;
+  border-top: solid #eca6d9 3px;
+}
+.conteneur-activites .conteneur-date .conteneur-bordure .date h2 {
+  margin: 0;
+}
+.conteneur-activites .activites {
+  display: flex;
+  justify-content: space-between;
+}
+.conteneur-activites .activites p.heur {
+  font-weight: bold;
+}
+.conteneur-activites .activites:nth-child(even) {
+  border: 1px solid blue;
+  flex-direction: row-reverse;
+}
+.conteneur-activites .activites .description {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

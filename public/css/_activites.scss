@@ -10,20 +10,49 @@
             display: flex;
             justify-content: space-between;
             flex-direction: row;
+            width: 50%;
 
             h2 {
                 color: $blanc;
 
-                .selected {
+                &.selected {
                     color: $rose;
                 }
             }
         }
-        .conteneur-bordure{
-            width: 300px;
-            border-bottom: solid $rose 3px;
+
+        .conteneur-bordure {
+            display: flex;
+            justify-content: space-between;
+            width: 75%;
+
+            .bordure {
+                width: 75%;
+                border-top: solid $rose 3px;
+            }
+
+            .date {
+                h2 {
+                    margin: 0;
+                }
+            }
         }
     }
 
+    .activites {
+        display: flex;
+        justify-content: space-between;
+        p.heur{
+            font-weight: bold;
+        }
 
+        &:nth-child(even){
+            border: 1px solid blue;
+            flex-direction: row-reverse;
+        }
+
+        .description{
+            display: none;
+        }
+    }
 }
