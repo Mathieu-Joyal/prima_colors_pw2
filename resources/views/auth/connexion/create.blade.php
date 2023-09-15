@@ -62,7 +62,7 @@
 
         <section class="employe">
 
-            <h2>Section employe</h2>
+            <h2>Section employé</h2>
 
             <form action="{{ route('connexion.authentifierEmploye') }}" method="POST">
                 @csrf

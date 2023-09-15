@@ -28,8 +28,8 @@ class EnregistrementController extends Controller
 
         // Validation
         $valides = $request->validate([
-            "prenom" => "required",
-            "nom" => "required",
+            "prenom" => "required|max:255",
+            "nom" => "required|max:255",
             // where does users comes from?
             "email" => "required|email|unique:users,email",
             "ville" => "required",
@@ -38,7 +38,9 @@ class EnregistrementController extends Controller
             "confirmation_password" => "required|same:password"
         ],[
             "prenom.required" => "Le prénom est requis",
+            "prenom.max" => "Vous devez avoir un maximum de :max caractères",
             "nom.required" => "Le nom est requis",
+            "nom.max" => "Vous devez avoir un maximum de :max caractères",
             "email.required" => "Le courriel est requis",
             "email.email" => "Le courriel doit avoir un format valide",
             "email.unique" => "Ce courriel ne peut pas être utilisé",

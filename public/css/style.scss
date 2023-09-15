@@ -42,8 +42,20 @@ p {
 }
 
 //GENERAL
-main{
-    background-color: $noir
+html{
+    background-color: $noir;
+    margin: 0;
+    padding: 0;
+}
+section{
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
+
+article{
+     margin-left: 10em;
+    margin-right: 10em;
 }
 
 

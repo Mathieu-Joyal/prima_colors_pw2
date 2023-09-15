@@ -52,7 +52,7 @@ class ConnexionController extends Controller
 
     }
     /**
-     * Traite la connexion d'un utilisateur
+     * Traite la connexion d'un employé
      *
      * @param Request $request
      * @return RedirectResponse
@@ -69,7 +69,7 @@ class ConnexionController extends Controller
         ]);
 
         // Ajouter l'employé à la session
-        if(Auth::attempt($valides)){
+        if(Auth::guard('employe')->attempt($valides)){
             $request->session()->regenerate();
 
             return redirect()
