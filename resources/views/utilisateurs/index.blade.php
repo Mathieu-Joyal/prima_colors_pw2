@@ -16,7 +16,7 @@
 
     <h2>Bonjour {{ $user->prenom }}!</h2>
 
-    <section class="forfaits" style="color: white">
+    <section class="forfaits">
 
         @foreach ($forfaits as $forfait)
             <article class="un_forfait">
@@ -37,7 +37,7 @@
 
     </section>
 
-    <section class="selection_forfait" style="color: white">
+    <section class="selection_forfait">
 
         <h3>Choissisez votre forfait</h3>
 
@@ -62,7 +62,7 @@
 
     </section>
 
-    <section class="forfaits_reserve" style="color: white">
+    <section class="forfaits_reserve">
 
         <h3>Vos forfaits réservés</h3>
 
@@ -84,15 +84,14 @@
 
     </section>
 
-    <section class="concours" style="color: white">
+    <section class="concours">
 
-        {{-- <form action="{{ route('utilisateurs.store') }}" --}}
+        <form action="{{ route('utilisateurs.updateConcours') }}"
                 method="POST"
                 enctype="multipart/form-data"
         >
             @csrf
 
-            {{-- titre oeuvre --}}
             <div>
                 <label for="titre_oeuvre">
                     Titre de l'oeuvre
@@ -103,7 +102,6 @@
                         id="titre_oeuvre"
                         name="titre_oeuvre"
                         type="text"
-                        autofocus
                         value="{{ old('titre') }}"
                     >
 
@@ -112,7 +110,6 @@
                 </div>
             </div>
 
-            {{-- image oeuvre --}}
             <div>
                 <label for="image_oeuvre">
                     Fichier de l'oeuvre
@@ -125,7 +122,7 @@
                         type="file"
                     >
 
-                    <x-forms.erreur champ="avatar" />
+                    {{-- <x-forms.erreur champ="image_oeuvre" /> --}}
 
                 </div>
 
