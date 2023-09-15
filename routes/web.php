@@ -4,6 +4,7 @@ use App\Http\Controllers\AccueilController;
 use App\Http\Controllers\ActualiteController;
 use App\Http\Controllers\ActiviteController;
 use App\Http\Controllers\ConnexionController;
+use App\Http\Controllers\EmployeController;
 use App\Http\Controllers\EnregistrementController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\UtilisateurController;
@@ -27,7 +28,7 @@ Route::get('/actualites', [ActualiteController::class, 'index'])
 
 
     // SECTION CONNEXION - CRÉATION COMPTE
-// Affichage de la connexion d'un compte utilisateur
+// Affichage de la connexion d'un compte
 Route::get("/connexion", [ConnexionController::class, 'create'])
     ->name('connexion.create');
     // ->middleware('guest');
@@ -56,6 +57,13 @@ Route::post("/connexion/employe", [ConnexionController::class, 'authentifierEmpl
 // Traitement du formulaire d'enregistrement d'un nouveau compte utilisateur
 Route::post("/enregistrement/employe", [EnregistrementController::class, 'storeEmploye'])
     ->name('enregistrement.storeEmploye');
+
+    // SECTION EMPLOYÉ
+
+// Affichage de la page employé
+Route::get('/employes', [EmployeController::class, 'index'])
+    ->name('employes.index');
+    // ->middleware('auth');
 
 
     // SECTION UTILISATEUR
