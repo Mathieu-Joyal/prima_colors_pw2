@@ -2,62 +2,85 @@
 
     {{-- <x-nav /> --}}
     {{-- <x-hero/> --}}
-    <h1>Actualités</h1>
+    <main>
+        <h1>Actualités</h1>
 
 
-    <section class="conteneur-actualites">
-        <h2>Nouveauté de la scène 2023</h2>
-        @foreach ($actualitesRecentes as $actualite)
-            <article class="actualites">
-
-                <div class="conteneur-image">
-                    <img class="thumbnail" src="{{ $actualite->image }}" alt="image de l'actualite">
-                </div>
+        <section class="conteneur-actualites">
+            <div class="conteneur-bordure">
+                <div class="bordure"></div>
                 <div class="titre">
-                    <p>{{ $actualite->titre }}</p>
-
+                    <h2>Nouveauté de la scène 2023</h2>
                 </div>
+            </div>
 
-                <div class="date-publication">
-                    <p> {{ $actualite->date_publication }}</p>
+            @foreach ($actualitesRecentes as $actualite)
+                <article class="conteneur-actualites">
 
-                </div>
-                <div class="description">
-                    <p>{{ $actualite->description }}</p>
+                    <div class="date-publication">
+                        <p> {{ $actualite->date_publication }}</p>
+                    </div>
 
-                </div>
+                    <div class="conteneur-une-actualite">
 
-            </article>
-        @endforeach
-    </section>
-    {{-- <x-ban_concours/> --}}
-    <section class="conteneur-actualites">
-        <h2>2022</h2>
-        @foreach ($actualitesAnciennes as $actualite)
-            <article class="actualites">
+                        <div class="titre">
+                            <p>{{ $actualite->titre }}</p>
+                        </div>
 
-                <div class="conteneur-image">
-                    <img class="thumbnail" src="{{ $actualite->image }}" alt="image de l'actualite">
-                </div>
+
+                        <div class="description">
+                            <p>{{ $actualite->description }}</p>
+                        </div>
+                    </div>
+
+                    <div class="conteneur-image">
+                        <img class="thumbnail" src="{{ $actualite->image }}" alt="image de l'actualite">
+                    </div>
+
+                </article>
+            @endforeach
+
+        {{-- <x-ban_concours/> --}}
+
+        <section class="conteneur-actualites">
+
+            <div class="conteneur-bordure">
+                <div class="bordure"></div>
                 <div class="titre">
-                    <p>  {{ $actualite->titre }}</p>
-
+                    <h2> la scène 2023</h2>
                 </div>
+            </div>
 
-                <div class="date-publication">
-                    <p>{{ $actualite->date_publication }}</p>
+            @foreach ($actualitesAnciennes as $actualite)
+                <article class="conteneur-actualites">
 
-                </div>
-                <div class="description">
-                    <p>{{ $actualite->description }}</p>
+                    <div class="date-publication">
+                        <p> {{ $actualite->date_publication }}</p>
+                    </div>
 
-                </div>
+                    <div class="conteneur-une-actualite">
 
-            </article>
-        @endforeach
-    </section>
+                        <div class="titre">
+                            <p>{{ $actualite->titre }}</p>
+                        </div>
 
-    {{-- <x-ban_billet/> --}}
+
+                        <div class="description">
+                            <p>{{ $actualite->description }}</p>
+                        </div>
+                    </div>
+
+                    <div class="conteneur-image">
+                        <img class="thumbnail" src="{{ $actualite->image }}" alt="image de l'actualite">
+                    </div>
+
+                </article>
+
+            @endforeach
+        </section>
+
+        {{-- <x-ban_billet/> --}}
+    </main>
     <x-footer />
 
 </x-layout>
