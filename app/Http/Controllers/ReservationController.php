@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Reservation;
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ReservationController extends Controller
 {
@@ -23,14 +25,11 @@ class ReservationController extends Controller
             "forfait.required" => "",
         ]);
 
-        // Séparé les deux valeurs inséré dans l'option de la réservation
-        list($forfait_id, $user_id) = explode('-', request('forfait'));
-
         // Préparation à l'inclusion des informations dans la BDD
         $reservation = new Reservation();
 
-        $reservation->forfait_id = $forfait_id;
-        $reservation->user_id = $user_id;
+        $reservation->forfait_id = $valides["forfait"];
+        $reservation->user_id = Auth::id();
 
         // Sauvegarder toutes les informations dans la BDD
         $reservation->save();
