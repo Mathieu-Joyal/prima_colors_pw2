@@ -16,7 +16,7 @@
 
     <h2>Bonjour {{ $user->prenom }}!</h2>
 
-    <section class="forfaits">
+    <section class="forfaits" style="color: white">
 
         @foreach ($forfaits as $forfait)
             <article class="un_forfait">
@@ -37,7 +37,7 @@
 
     </section>
 
-    <section class="selection_forfait">
+    <section class="selection_forfait" style="color: white">
 
         <h3>Choissisez votre forfait</h3>
 
@@ -47,7 +47,7 @@
             <select name="forfait" id="forfait">
 
                 @foreach ($forfaits as $forfait)
-                    <option value="{{ $forfait->id }}-{{ $user->id }}">{{ $forfait->titre }}</option>
+                    <option value="{{ $forfait->id }}">{{ $forfait->titre }}</option>
                 @endforeach
 
             </select>
@@ -62,7 +62,7 @@
 
     </section>
 
-    <section class="forfaits_reserve">
+    <section class="forfaits_reserve" style="color: white">
 
         <h3>Vos forfaits réservés</h3>
 
@@ -72,13 +72,19 @@
                 <div>
                     {{ $reservation->forfait->titre }}
                 </div>
+
+                <a href="{{ route('reservations.destroy', ['id' => $reservation->id]) }}">
+                    <span>
+                        Annuler la réservation
+                    </span>
+                </a>
             </article>
 
         @endforeach
 
     </section>
 
-    <section class="concours">
+    <section class="concours" style="color: white">
 
         {{-- <form action="{{ route('utilisateurs.store') }}" --}}
                 method="POST"

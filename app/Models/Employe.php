@@ -10,7 +10,7 @@ class Employe extends Model
     use HasFactory;
 
     /**
-     *
+     * Employé associé à un rôle
      *
      * @return BelongsTo
      */
@@ -19,7 +19,7 @@ class Employe extends Model
     }
 
     /**
-     *
+     * Actualité liée à un employé
      *
      * @return HasMany
      */
@@ -28,7 +28,7 @@ class Employe extends Model
     }
 
     /**
-     *
+     * Activité liée à un employé
      *
      * @return HasMany
      */

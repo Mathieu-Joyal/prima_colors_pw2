@@ -43,7 +43,7 @@ class User extends Authenticatable
     ];
 
     /**
-     *
+     * Rôle lié à plusieurs forfaits via des réservations
      *
      * @return BelongsToMany
      */
@@ -53,7 +53,7 @@ class User extends Authenticatable
     }
 
     /**
-     *
+     * Réservations associées à ce rôle
      *
      * @return HasMany
      */

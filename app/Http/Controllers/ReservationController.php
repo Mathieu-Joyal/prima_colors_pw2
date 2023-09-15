@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Reservation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ReservationController extends Controller
 {
@@ -23,14 +24,11 @@ class ReservationController extends Controller
             "forfait.required" => "",
         ]);
 
-        // Séparé les deux valeurs inséré dans l'option de la réservation
-        list($forfait_id, $user_id) = explode('-', request('forfait'));
-
         // Préparation à l'inclusion des informations dans la BDD
         $reservation = new Reservation();
 
-        $reservation->forfait_id = $forfait_id;
-        $reservation->user_id = $user_id;
+        $reservation->forfait_id = $valides["forfait"];
+        $reservation->user_id = Auth::id();
 
         // Sauvegarder toutes les informations dans la BDD
         $reservation->save();
@@ -39,5 +37,19 @@ class ReservationController extends Controller
         return redirect()
                 ->route('utilisateurs.index')
                 ->with('succes', 'La réservation de votre forfait est confirmé');
+    }
+
+    /**
+     * Suppression d'une réservation
+     *
+     * @param int $id Id du fait à supprimer
+     * @return RedirectResponse
+     */
+    public function destroy($id)
+    {
+        Reservation::destroy($id);
+
+        return redirect()->route('utilisateurs.index')
+            ->with('succes', "La réservation a été annulée!");
     }
 }
