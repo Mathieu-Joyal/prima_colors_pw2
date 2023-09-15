@@ -14,6 +14,7 @@ h1 {
     font-style: normal;
     color: $rose;
     font-size: 80px;
+    color: $jaune;
 }
 
 h2 {
@@ -22,6 +23,7 @@ h2 {
     font-style: normal;
     font-size: 48px;
     text-transform: uppercase;
+    color: $rose;
 }
 
 h3 {
@@ -36,4 +38,15 @@ p {
     font-weight: 300;
     font-style: normal;
     font-size: 27px;
+    color: $blanc;
 }
+
+//GENERAL
+main{
+    background-color: $noir
+}
+
+
+@import "_footer.scss";
+@import "_nav.scss";
+@import "_activites.scss";

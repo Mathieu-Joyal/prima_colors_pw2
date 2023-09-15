@@ -1,9 +1,11 @@
+@charset "UTF-8";
 h1 {
   font-family: "pf-venue-stencil", sans-serif;
   font-weight: 700;
   font-style: normal;
   color: #eca6d9;
   font-size: 80px;
+  color: #eeb15e;
 }
 
 h2 {
@@ -12,6 +14,7 @@ h2 {
   font-style: normal;
   font-size: 48px;
   text-transform: uppercase;
+  color: #eca6d9;
 }
 
 h3 {
@@ -26,4 +29,73 @@ p {
   font-weight: 300;
   font-style: normal;
   font-size: 27px;
+  color: white;
+}
+
+main {
+  background-color: #030303;
+}
+
+.contenu {
+  background-color: #0B8A80;
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.menu .item {
+  display: flex;
+  align-items: center; /* Centre le texte verticallement */
+  margin-right: 20px; /* Espacement entre les éléments */
+}
+
+.menu .item p {
+  margin-right: 10px; /* Espacement entre le texte et la ligne */
+}
+
+.menu .ligne {
+  height: 40px; /* Hauteur de la ligne */
+  width: 3px; /* Largeur de la ligne */
+  background-color: #ECA6D9;
+  z-index: 1;
+}
+
+p.slogan {
+  color: #ECA6D9;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.conteneur-activites {
+  display: flex;
+  flex-direction: column;
+}
+.conteneur-activites .conteneur-date {
+  display: flex;
+  flex-direction: column;
+}
+.conteneur-activites .conteneur-date .conteneur-jours {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.conteneur-activites .conteneur-date .conteneur-jours h2 {
+  color: white;
+}
+.conteneur-activites .conteneur-date .conteneur-jours h2 .selected {
+  color: #eca6d9;
+}
+.conteneur-activites .conteneur-date .conteneur-bordure {
+  width: 300px;
+  border-bottom: solid #eca6d9 3px;
 }/*# sourceMappingURL=style.css.map */
