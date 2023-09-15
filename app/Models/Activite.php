@@ -10,7 +10,7 @@ class Activite extends Model
     use HasFactory;
 
     /**
-     *
+     * Activité associée à un employé
      *
      * @return BelongsTo
      */

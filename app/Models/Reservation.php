@@ -10,7 +10,7 @@ class Reservation extends Model
     use HasFactory;
 
     /**
-     *
+     * Réservation utilisateur pour un forfait
      *
      * @return BelongsToMany
      */
@@ -20,7 +20,7 @@ class Reservation extends Model
     }
 
     /**
-     *
+     * Modèle de forfaits disponibles
      *
      * @return BelongsToMany
      */

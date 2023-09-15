@@ -10,7 +10,7 @@ class Role extends Model
     use HasFactory;
 
     /**
-     *
+     * Rôle associé à plusieurs employés
      *
      * @return HasMany
      */

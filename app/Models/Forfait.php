@@ -10,7 +10,7 @@ class Forfait extends Model
     use HasFactory;
 
     /**
-     *
+     * Forfait réservé par les utilisateurs
      *
      * @return BelongsToMany
      */
@@ -20,7 +20,7 @@ class Forfait extends Model
     }
 
     /**
-     *
+     * Réservations associées à ce forfait
      *
      * @return HasMany
      */
