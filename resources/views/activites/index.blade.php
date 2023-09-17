@@ -28,14 +28,15 @@
                 <article class="activites vendredi">
 
                     <div class="conteneur-image">
-                        <img class="thumbnail" src="{{ $activite->image }}" alt="image de l'activite">
+                        {{-- <img class="thumbnail" src="{{ $activite->image }}" alt="image de l'activite"> --}}
+                        <img class="thumbnail" src="{{asset('img\images\pexels-alex-nasto-582635.jpg')}}" alt="">
                     </div>
 
 
                     <div class="conteneur-titre">
 
                         <div class="heure">
-                            <p>heure {{ $activite->heure }}</p>
+                            <p class="heure">heure bbbbbbbcccccbbbbbb{{ $activite->heure }}</p>
                         </div>
 
                         <div class="titre">
@@ -52,7 +53,7 @@
                         </div>
                 </article>
             @endforeach
-            <button>boutton voir plus</button>
+            <button class="voir">Voir plus</button>
 
         </section>
         {{-- <x-ban_concours /> --}}
@@ -76,14 +77,15 @@
                 <article class="activites samedi">
 
                     <div class="conteneur-image">
-                        <img class="thumbnail" src="{{ $activite->image }}" alt="image de l'activite">
+                        {{-- <img class="thumbnail" src="{{ $activite->image }}" alt="image de l'activite"> --}}
+                        <img class="thumbnail" src="{{asset('img\images\pexels-alex-nasto-582635.jpg')}}" alt="">
                     </div>
 
 
                     <div class="conteneur-titre">
 
                         <div class="heure">
-                            <p>heure {{ $activite->heure }}</p>
+                            <p class="heure">heure {{ $activite->heure }}</p>
                         </div>
 
                         <div class="titre">
@@ -100,7 +102,7 @@
                         </div>
                 </article>
             @endforeach
-            <button>boutton voir plus</button>
+            <button class="voir">Voir plus</button>
 
         </section>
 
@@ -126,14 +128,15 @@
                 <article class="activites dimanche">
 
                     <div class="conteneur-image">
-                        <img class="thumbnail" src="{{ $activite->image }}" alt="image de l'activite">
+                        {{-- <img class="thumbnail" src="{{ $activite->image }}" alt="image de l'activite"> --}}
+                        <img class="thumbnail" src="{{asset('img\images\pexels-alex-nasto-582635.jpg')}}" alt="">
                     </div>
 
 
                     <div class="conteneur-titre">
 
                         <div class="heure">
-                            <p>heure {{ $activite->heure }}</p>
+                            <p class="heure">heure {{ $activite->heure }}</p>
                         </div>
 
                         <div class="titre">
@@ -150,7 +153,7 @@
                         </div>
                 </article>
             @endforeach
-            <button>boutton voir plus</button>
+            <button class="voir">Voir plus</button>
 
         </section>
         {{-- <x-ban_billet /> --}}

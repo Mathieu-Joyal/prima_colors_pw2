@@ -39,6 +39,7 @@ p {
     font-style: normal;
     font-size: 27px;
     color: $blanc;
+    text-transform: capitalize;
 }
 
 //GENERAL
@@ -50,6 +51,7 @@ html{
 section{
     margin-left: 3em;
     margin-right: 3em;
+    padding-bottom: 5em;
 }
 
 
@@ -58,6 +60,21 @@ article{
     margin-right: 10em;
 }
 
+button.voir {
+    margin-left: 4.4em;
+    margin-right: 4.4em;
+    height: 70px;
+    font-family: "pf-venue", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 36px;
+    text-transform: uppercase;
+    padding-top: 10px;
+    border: $jaune 3px solid;
+    background-color: $noir;
+    color: $jaune;
+
+}
 
 @import "_footer.scss";
 @import "_nav.scss";
