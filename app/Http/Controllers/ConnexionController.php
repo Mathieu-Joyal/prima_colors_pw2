@@ -45,12 +45,13 @@ class ConnexionController extends Controller
         if(Auth::attempt($valides)){
             $request->session()->regenerate();
 
+            // Redirection s'il y a succes de la connexion
             return redirect()
                     ->intended(route('utilisateurs.index'))
                     ->with('succes', 'Vous êtes connectés!');
         }
 
-        // Redirection
+        // Redirection si la connection échoue
         return back()
                 ->withErrors([
                     "email" => "Les informations fournies ne sont pas valides"

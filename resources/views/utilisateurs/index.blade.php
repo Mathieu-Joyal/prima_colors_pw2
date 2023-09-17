@@ -2,16 +2,18 @@
 
     <x-header />
 
-    {{-- <x-alertes.succes cle="succes" /> --}}
+    <x-alertes.succes cle="succes" />
 
+    {{-- Pourrait être une composante? --}}
     <div class="deconnexion">
-        {{-- Pourrait être une composante? --}}
 
-        <form action="{{ route('deconnexion') }}" method="POST">
+        <form action="{{ route('deconnexion') }}"
+                method="POST"
+        >
             @csrf
+
             <input type="submit" value="Déconnexion">
         </form>
-
     </div>
 
     <h2>Bonjour {{ $user->prenom }}!</h2>
@@ -19,40 +21,46 @@
     <section class="forfaits">
 
         @foreach ($forfaits as $forfait)
+
             <article class="un_forfait">
+
                 <div>
                     {{ $forfait->titre }}
                 </div>
+
                 <div>
                     {{ $forfait->description }}
                 </div>
+
                 <div>
                     {{ $forfait->date_arrive }} - {{ $forfait->date_depart }}
                 </div>
+
                 <div>
                     {{ $forfait->prix }}$
                 </div>
             </article>
         @endforeach
-
     </section>
 
     <section class="selection_forfait">
 
         <h3>Choissisez votre forfait</h3>
 
-        <form action="{{ route('reservations.store') }}" method="POST">
+        <form action="{{ route('reservations.store') }}"
+                method="POST"
+        >
             @csrf
 
             <select
-                name="forfaits"
-                id="forfaits"
+                name="forfait"
+                id="forfait"
             >
 
                 @foreach ($forfaits as $forfait)
+
                     <option value="{{ $forfait->id }}">{{ $forfait->titre }}</option>
                 @endforeach
-
             </select>
 
             <div>
@@ -60,9 +68,7 @@
                     Confirmer ce forfait
                 </button>
             </div>
-
         </form>
-
     </section>
 
     <section class="forfaits_reserve">
@@ -72,6 +78,7 @@
         @foreach ($reservations as $reservation)
 
             <article class="une_reservation">
+
                 <div>
                     {{ $reservation->forfait->titre }}
                 </div>
@@ -82,9 +89,7 @@
                     </span>
                 </a>
             </article>
-
         @endforeach
-
     </section>
 
     <section class="concours">
@@ -107,10 +112,8 @@
                         type="text"
                         value="{{ old('titre') }}"
                     >
-
-                    {{-- <x-forms.erreur champ="titre" /> --}}
-
                 </div>
+                <x-forms.erreur champ="titre" />
             </div>
 
             <div>
@@ -124,11 +127,8 @@
                         name="image_oeuvre"
                         type="file"
                     >
-
-                    {{-- <x-forms.erreur champ="image_oeuvre" /> --}}
-
                 </div>
-
+                <x-forms.erreur champ="image_oeuvre" />
             </div>
 
             <div>
@@ -137,7 +137,6 @@
                 </button>
             </div>
         </form>
-
     </section>
 
     <x-footer />

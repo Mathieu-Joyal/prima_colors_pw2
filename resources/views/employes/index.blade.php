@@ -2,14 +2,16 @@
 
     <x-header />
 
-    {{-- @dd($users) --}}
-
+    {{-- Succès de la connexion à confimer après résoudre problème avec auth:employe --}}
     {{-- <x-alertes.succes cle="succes" /> --}}
 
+    {{-- Pourrait être une composante --}}
     <div class="deconnexion">
-        {{-- Pourrait être une composante? --}}
-        <form action="{{ route('deconnexion') }}" method="POST">
+        <form action="{{ route('deconnexion') }}"
+                method="POST"
+        >
             @csrf
+
             <input type="submit" value="Déconnexion">
         </form>
     </div>
