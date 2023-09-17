@@ -14,43 +14,51 @@
 
             <h2>Section utilisateur</h2>
 
-            <form action="{{ route('connexion.authentifierUser') }}" method="POST">
+            <form action="{{ route('connexion.authentifierUser') }}"
+                    method="POST"
+            >
                 @csrf
+
                 <div>
-                    <label for="email">Courriel Utilisateur </label>
-                    {{-- <x-forms.erreur champ="email" /> --}}
+                    <label for="email">
+                        Courriel Utilisateur
+                    </label>
+
                     <div>
                         <input
-                            id="email"
-                            name="email"
-                            type="email"
-                            autocomplete="email"
-                            value="{{ old('email') }}"
+                        id="email"
+                        name="email"
+                        type="email"
+                        autocomplete="email"
+                        value="{{ old('email') }}"
                         >
                     </div>
+                    <x-forms.erreur champ="email" />
                 </div>
+
                 <div>
-                    <div>
-                        <label for="password">
-                            Mot de passe
-                        </label>
-                    </div>
-                    {{-- <x-forms.erreur champ="password" /> --}}
+                    <label for="password">
+                        Mot de passe
+                    </label>
+
                     <div>
                         <input
-                            id="password"
-                            name="password"
-                            type="password"
-                            autocomplete="current-password"
+                        id="password"
+                        name="password"
+                        type="password"
+                        autocomplete="current-password"
                         >
                     </div>
+                    <x-forms.erreur champ="password" />
                 </div>
+
                 <div>
                     <button type="submit">
                         Connectez-vous!
                     </button>
                 </div>
             </form>
+
             <div>
                 <p>
                     <a href="{{ route('enregistrement.create') }}">
@@ -64,51 +72,50 @@
 
             <h2>Section employé</h2>
 
-            <form action="{{ route('connexion.authentifierEmploye') }}" method="POST">
+            <form action="{{ route('connexion.authentifierEmploye') }}"
+                    method="POST"
+            >
                 @csrf
+
                 <div>
-                    <label for="email">Identifiant </label>
-                    {{-- <x-forms.erreur champ="identifiant" /> --}}
+                    <label for="email">
+                        Identifiant
+                    </label>
+
                     <div>
                         <input
-                            id="identifiant"
-                            name="identifiant"
-                            type="text"
-                            value="{{ old('identifiant') }}"
+                        id="identifiant"
+                        name="identifiant"
+                        type="text"
+                        value="{{ old('identifiant') }}"
                         >
                     </div>
+                    <x-forms.erreur champ="identifiant" />
                 </div>
+
                 <div>
-                    <div>
-                        <label for="password">
-                            Mot de passe
-                        </label>
-                    </div>
-                    {{-- <x-forms.erreur champ="password" /> --}}
+                    <label for="password">
+                        Mot de passe
+                    </label>
+
                     <div>
                         <input
-                            id="password"
-                            name="password"
-                            type="password"
-                            autocomplete="current-password"
+                        id="password"
+                        name="password"
+                        type="password"
+                        autocomplete="current-password"
                         >
                     </div>
+                    <x-forms.erreur champ="password" />
                 </div>
+
                 <div>
                     <button type="submit">
                         Connectez-vous!
                     </button>
                 </div>
             </form>
-            {{-- <div>
-                <p>
-                    <a href="{{ route('enregistrement.create') }}">
-                        Pas un membre?
-                    </a>
-                </p>
-            </div> --}}
         </section>
-
     </div>
 
     <x-footer />

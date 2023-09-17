@@ -7,6 +7,13 @@ use Illuminate\Support\Facades\Auth;
 
 class ConnexionController extends Controller
 {
+
+    // public function __construct()
+    // {
+    //     // Apply 'auth:employe' middleware to 'authentifierEmploye' method
+    //     $this->middleware('auth:employe', ['only' => 'authentifierEmploye']);
+    // }
+
     /**
      * Affiche le formulaire de connexion
      *
@@ -38,12 +45,13 @@ class ConnexionController extends Controller
         if(Auth::attempt($valides)){
             $request->session()->regenerate();
 
+            // Redirection s'il y a succes de la connexion
             return redirect()
                     ->intended(route('utilisateurs.index'))
                     ->with('succes', 'Vous êtes connectés!');
         }
 
-        // Redirection
+        // Redirection si la connection échoue
         return back()
                 ->withErrors([
                     "email" => "Les informations fournies ne sont pas valides"
@@ -51,6 +59,7 @@ class ConnexionController extends Controller
                 ->onlyInput('email');
 
     }
+
     /**
      * Traite la connexion d'un employé
      *
@@ -103,6 +112,5 @@ class ConnexionController extends Controller
         return redirect()
                 ->route('connexion.create')
                 ->with('succes', "Vous êtes déconnectés!");
-
     }
 }

@@ -42,13 +42,15 @@ class ReservationController extends Controller
     /**
      * Suppression d'une réservation
      *
-     * @param int $id Id du fait à supprimer
+     * @param int $id Id de la réservation à supprimer
      * @return RedirectResponse
      */
     public function destroy($id)
     {
+        // Supprimer la réservation
         Reservation::destroy($id);
 
+        // Redirection
         return redirect()->route('utilisateurs.index')
             ->with('succes', "La réservation a été annulée!");
     }
