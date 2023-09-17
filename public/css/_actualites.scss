@@ -1,3 +1,39 @@
-.conteneur-actualites{
+.conteneur-articles-actualites {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 3px solid $rose;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
 
+    h3,
+    h4 {
+        color: $rose;
+        margin-top: 0;
+    }
+
+    .conteneur-gauche {
+        display: flex;
+        max-width: 1000px;
+        justify-content: space-between;
+        padding-left: 2em;
+    }
+
+    .conteneur-titre {
+        display: flex;
+        flex-direction: column;
+        padding-left: 6em;
+    }
+
+    .conteneur-image {
+        height: 260px;
+        width: 450px;
+        padding-right: 2em;
+
+        img {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+        }
+    }
 }

@@ -21,6 +21,15 @@ h3 {
   font-weight: 400;
   font-style: normal;
   font-size: 38px;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-family: "pf-venue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  text-transform: uppercase;
 }
 
 p {
@@ -220,4 +229,39 @@ img {
 }
 .conteneur-activites .activites .description {
   display: none;
+}
+
+.conteneur-articles-actualites {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px solid #eca6d9;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+}
+.conteneur-articles-actualites h3,
+.conteneur-articles-actualites h4 {
+  color: #eca6d9;
+  margin-top: 0;
+}
+.conteneur-articles-actualites .conteneur-gauche {
+  display: flex;
+  max-width: 1000px;
+  justify-content: space-between;
+  padding-left: 2em;
+}
+.conteneur-articles-actualites .conteneur-titre {
+  display: flex;
+  flex-direction: column;
+  padding-left: 6em;
+}
+.conteneur-articles-actualites .conteneur-image {
+  height: 260px;
+  width: 450px;
+  padding-right: 2em;
+}
+.conteneur-articles-actualites .conteneur-image img {
+  height: 100%;
+  width: 100%;
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */
