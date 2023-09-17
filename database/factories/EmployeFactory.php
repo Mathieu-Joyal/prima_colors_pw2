@@ -8,7 +8,7 @@ use Illuminate\Support\Str;
 class EmployeFactory extends Factory
 {
     /**
-     * Define the model's default state.
+     * Définir les propriétés par défaut du modèle Employe.
      *
      * @return array
      */
