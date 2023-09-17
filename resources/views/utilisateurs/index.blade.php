@@ -94,6 +94,8 @@
 
     <section class="concours">
 
+        <h3>Participer au concours!</h3>
+
         <form action="{{ route('utilisateurs.updateConcours') }}"
                 method="POST"
                 enctype="multipart/form-data"
@@ -137,6 +139,19 @@
                 </button>
             </div>
         </form>
+    </section>
+
+    <section class="un_coucours">
+        @if ($user->image_oeuvre != null)
+
+            <h4>{{$user->titre_oeuvre}}</h4>
+
+            <div>
+                <img src="{{ $user->image_oeuvre }}" alt="{{$user->titre_oeuvre}}">
+            </div>
+
+        @endif
+
     </section>
 
     <x-footer />
