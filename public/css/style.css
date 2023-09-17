@@ -58,10 +58,8 @@ article {
   margin-right: 10em;
 }
 
-button.voir {
-  margin-left: 4.4em;
-  margin-right: 4.4em;
-  height: 70px;
+button.voir,
+#voir {
   font-family: "pf-venue", sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -71,6 +69,12 @@ button.voir {
   border: #eeb15e 3px solid;
   background-color: #030303;
   color: #eeb15e;
+}
+
+button.voir {
+  margin-left: 4.4em;
+  margin-right: 4.4em;
+  height: 70px;
 }
 
 .conteneur-bordure {
@@ -264,4 +268,8 @@ img {
   height: 100%;
   width: 100%;
   margin: 0;
+}
+
+#plus {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

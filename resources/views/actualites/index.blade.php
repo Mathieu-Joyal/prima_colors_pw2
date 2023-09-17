@@ -2,9 +2,7 @@
 
     <x-nav />
     {{-- <x-hero/> --}}
-    <main>
-
-
+    <main id="app">
 
         <section class="conteneur-actualites">
             <h1>Actualités</h1>
@@ -31,8 +29,14 @@
 
 
                             <div class="description">
-                                <p>{{ $actualite->description }}</p>
+                                <p class="voir-moins">{{ $actualite->description }} <span id="dots">...</span>
+                                    <span id="plus">{{ $actualite->description }} </span>
+                                </p>
                             </div>
+                            <button onclick="voirPlus()" id="voir">Read more</button>
+                            {{-- <div class="arrow" onclick="myFunction()" id="myBtn">
+                                <img class="" src="{{ asset('img\images\arrow-right-long.png') }}" alt="">
+                            </div> --}}
 
                         </div>
                     </div>
@@ -45,6 +49,7 @@
 
                 </article>
             @endforeach
+
 
             {{-- <x-ban_concours/> --}}
 
@@ -73,8 +78,14 @@
 
 
                             <div class="description">
-                                <p>{{ $actualite->description }}</p>
+                                <p class="voir-moins">{{ $actualite->description }} <span id="dots">...</span>
+                                    <span id="plus">{{ $actualite->description }} </span>
+                                </p>
                             </div>
+                            <button onclick="VoirPlus()" id="voir">Read more</button>
+                            {{-- <div class="arrow" onclick="myFunction()" id="myBtn">
+                                <img class="" src="{{ asset('img\images\arrow-right-long.png') }}" alt="">
+                            </div> --}}
 
                         </div>
                     </div>
@@ -91,6 +102,24 @@
 
             {{-- <x-ban_billet/> --}}
     </main>
+    <script>
+        function voirPlus() {
+            var dots = document.getElementById("dots");
+            var plusText = document.getElementById("plus");
+            var btnText = document.getElementById("voir");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Voir plus";
+                plusText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Voir moin";
+                plusText.style.display = "inline";
+            }
+        }
+    </script>
+    {{-- <script src="js/main.js" type="module"></script> --}}
     <x-footer />
 
 </x-layout>
