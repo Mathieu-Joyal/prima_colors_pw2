@@ -158,6 +158,10 @@
 
                             @foreach ($forfaits as $forfait)
 
+                            {{-- ****************************************
+                            NE FONCTIONNE PAS À CAUSE DE L'AUTH
+                            VOIR SI DEUXIÈME ROUTE APRÈS AUTH MARCHE
+                            **************************************** --}}
                                 @if ($forfait->id === $reservation->forfait_id)
                                     <li>Titre du forfait: {{ $forfait->titre }}</li>
                                     <li>Description du forfait: {{ $forfait->description }}</li>
