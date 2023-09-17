@@ -19,27 +19,6 @@
                 }
             }
         }
-
-        .conteneur-bordure {
-            display: flex;
-            justify-content: space-between;
-            width: 75%;
-            height: 45px;
-            margin-bottom: 3em;
-
-
-            .bordure {
-                width: 83%;
-                border-bottom: solid $rose 3px;
-                height: 100;
-            }
-
-            .date {
-                h2 {
-                    margin: 0;
-                }
-            }
-        }
     }
 
     .activites {

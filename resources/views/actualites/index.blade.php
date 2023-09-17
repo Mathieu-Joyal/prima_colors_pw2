@@ -34,7 +34,8 @@
                     </div>
 
                     <div class="conteneur-image">
-                        <img class="thumbnail" src="{{ $actualite->image }}" alt="image de l'actualite">
+                        {{-- <img class="thumbnail" src="{{ $actualite->image }}" alt="image de l'actualite"> --}}
+                        <img class="thumbnail" src="{{asset('img\images\pexels-alex-nasto-582635.jpg')}}" alt="">
                     </div>
 
                 </article>
@@ -47,7 +48,7 @@
             <div class="conteneur-bordure">
                 <div class="bordure"></div>
                 <div class="titre">
-                    <h2> la scène 2023</h2>
+                    <h2> la scène 2022</h2>
                 </div>
             </div>
 
@@ -71,7 +72,8 @@
                     </div>
 
                     <div class="conteneur-image">
-                        <img class="thumbnail" src="{{ $actualite->image }}" alt="image de l'actualite">
+                        {{-- <img class="thumbnail" src="{{ $actualite->image }}" alt="image de l'actualite"> --}}
+                        <img class="thumbnail" src="{{asset('img\images\pexels-alex-nasto-582635.jpg')}}" alt="">
                     </div>
 
                 </article>

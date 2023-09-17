@@ -18,7 +18,7 @@
 
                 <div class="conteneur-bordure">
                     <div class="bordure"></div>
-                    <div class="date">
+                    <div class="titre">
                         <h2>2023 | 10 | 13</h2>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
 
                 <div class="conteneur-bordure">
                     <div class="bordure"></div>
-                    <div class="date">
+                    <div class="titre">
                         <h2>2023 | 10 | 13</h2>
                     </div>
                 </div>
@@ -119,7 +119,7 @@
 
                 <div class="conteneur-bordure">
                     <div class="bordure"></div>
-                    <div class="date">
+                    <div class="titre">
                         <h2>2023 | 10 | 13</h2>
                     </div>
                 </div>
