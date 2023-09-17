@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Employe;
 use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class EnregistrementController extends Controller
@@ -31,7 +30,6 @@ class EnregistrementController extends Controller
         $valides = $request->validate([
             "prenom" => "required|max:255",
             "nom" => "required|max:255",
-            // where does users comes from?
             "email" => "required|email|unique:users,email",
             "ville" => "required",
             "age" =>"required|integer|min:18|max:99",

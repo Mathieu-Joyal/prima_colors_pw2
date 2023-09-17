@@ -111,6 +111,5 @@ class ConnexionController extends Controller
         return redirect()
                 ->route('connexion.create')
                 ->with('succes', "Vous êtes déconnectés!");
-
     }
 }
