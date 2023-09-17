@@ -44,7 +44,10 @@
         <form action="{{ route('reservations.store') }}" method="POST">
             @csrf
 
-            <select name="forfait" id="forfait">
+            <select
+                name="forfaits"
+                id="forfaits"
+            >
 
                 @foreach ($forfaits as $forfait)
                     <option value="{{ $forfait->id }}">{{ $forfait->titre }}</option>

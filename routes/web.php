@@ -53,6 +53,7 @@ Route::post("/deconnexion", [ConnexionController::class, 'deconnecter'])
 // Traitement du formulaire de connexion d'un compte employé
 Route::post("/connexion/employe", [ConnexionController::class, 'authentifierEmploye'])
     ->name('connexion.authentifierEmploye');
+    // ->middleware('auth:employe');
 
 // Traitement du formulaire d'enregistrement d'un nouveau compte utilisateur
 Route::post("/enregistrement/employe", [EnregistrementController::class, 'storeEmploye'])
@@ -84,4 +85,3 @@ Route::get("/utilisateurs/{id}", [ReservationController::class, 'destroy'])
 // Traitement du formulaire d'ajout du concours
 Route::post('/utilisateurs/concours', [UtilisateurController::class, 'updateConcours'])
     ->name('utilisateurs.updateConcours');
-

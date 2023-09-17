@@ -42,7 +42,6 @@ class DatabaseSeeder extends Seeder
         \App\Models\Employe::factory(25)->create();
 
         // ajout des activités
-
         \App\Models\Activite::factory(10)->create();
 
         // ajout des actualités

@@ -7,6 +7,13 @@ use Illuminate\Support\Facades\Auth;
 
 class ConnexionController extends Controller
 {
+
+    // public function __construct()
+    // {
+    //     // Apply 'auth:employe' middleware to 'authentifierEmploye' method
+    //     $this->middleware('auth:employe', ['only' => 'authentifierEmploye']);
+    // }
+
     /**
      * Affiche le formulaire de connexion
      *
@@ -51,6 +58,7 @@ class ConnexionController extends Controller
                 ->onlyInput('email');
 
     }
+
     /**
      * Traite la connexion d'un employé
      *
