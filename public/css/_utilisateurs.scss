@@ -1,0 +1,29 @@
+body {
+    color: $jaune;
+
+    h3 {
+        color: $jaune;
+    }
+
+    h4 {
+    }
+
+    section {
+        padding: 0.5em;
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    article {
+        padding: 0.5em;
+
+        div {
+            color: $blanc;
+            margin: 1em 0;
+        }
+    }
+}

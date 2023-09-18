@@ -7,13 +7,6 @@ use Illuminate\Support\Facades\Auth;
 
 class ConnexionController extends Controller
 {
-
-    // public function __construct()
-    // {
-    //     // Apply 'auth:employe' middleware to 'authentifierEmploye' method
-    //     $this->middleware('auth:employe', ['only' => 'authentifierEmploye']);
-    // }
-
     /**
      * Affiche le formulaire de connexion
      *
@@ -89,9 +82,9 @@ class ConnexionController extends Controller
         // Redirection
         return back()
                 ->withErrors([
-                    "email" => "Les informations fournies ne sont pas valides"
+                    "identifiant" => "Les informations fournies ne sont pas valides"
                 ])
-                ->onlyInput('email');
+                ->onlyInput('identifiant');
 
     }
 
@@ -101,7 +94,26 @@ class ConnexionController extends Controller
      * @param Request $request
      * @return RedirectResponse
      */
-    public function deconnecter(Request $request) {
+    public function deconnecterUser(Request $request) {
+        Auth::logout();
+
+        // Enlever l'utilisateur de la session
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        // Redirection
+        return redirect()
+                ->route('connexion.create')
+                ->with('succes', "Vous êtes déconnectés!");
+    }
+
+    /**
+     * Traite la déconnexion de l'employé
+     *
+     * @param Request $request
+     * @return RedirectResponse
+     */
+    public function deconnecterEmploye(Request $request) {
         Auth::logout();
 
         // Enlever l'utilisateur de la session

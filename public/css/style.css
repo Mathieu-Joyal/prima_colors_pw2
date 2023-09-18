@@ -234,70 +234,26 @@ img {
 .conteneur-activites .activites .description {
   display: none;
 }
-.conteneur-activites .activites.hidden {
-  display: none;
-}
-.conteneur-activites .hidden {
-  display: none;
-}
 
-.conteneur-articles-actualites {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 3px solid #eca6d9;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  margin-bottom: 2em;
-}
-.conteneur-articles-actualites h3,
-.conteneur-articles-actualites h4 {
-  color: #eca6d9;
-  margin-top: 0;
-}
-.conteneur-articles-actualites .conteneur-gauche {
-  display: flex;
-  max-width: 1000px;
-  justify-content: space-between;
-  padding-left: 2em;
-}
-.conteneur-articles-actualites .conteneur-titre {
-  display: flex;
-  flex-direction: column;
-  padding-left: 6em;
-  padding-right: 6em;
-}
-.conteneur-articles-actualites .conteneur-image {
-  height: 260px;
-  width: 450px;
-  padding-right: 2em;
-}
-.conteneur-articles-actualites .conteneur-image img {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-}
-
-.plus {
-  display: none;
-}
-
-.conteneur-btn-voir {
-  display: flex;
-  justify-content: flex-end;
-}
-.conteneur-btn-voir button.voir-plus {
-  font-family: "pf-venue", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 36px;
+body {
   color: #eeb15e;
-  background-color: #030303;
-  border: none;
-  cursor: pointer;
 }
-.conteneur-btn-voir img {
-  margin: 0;
-  height: 25px;
-  padding-top: 0.5em;
-  padding-left: 1em;
+body h3 {
+  color: #eeb15e;
+}
+body section {
+  padding: 0.5em;
+}
+body section img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+body article {
+  padding: 0.5em;
+}
+body article div {
+  color: white;
+  margin: 1em 0;
+
 }/*# sourceMappingURL=style.css.map */
