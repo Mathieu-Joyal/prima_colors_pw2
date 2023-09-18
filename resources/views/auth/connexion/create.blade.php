@@ -103,7 +103,7 @@
                         id="password"
                         name="password"
                         type="password"
-                        autocomplete="current-password"
+                        {{-- autocomplete="current-password" --}}
                         >
                     </div>
                     <x-forms.erreur champ="password" />

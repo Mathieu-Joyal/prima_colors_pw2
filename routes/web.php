@@ -46,7 +46,7 @@ Route::post("/connexion", [ConnexionController::class, 'authentifierUser'])
 // Traitement du formulaire de connexion d'un compte employé
 Route::post("/connexion/employe", [ConnexionController::class, 'authentifierEmploye'])
     ->name('connexion.authentifierEmploye');
-    // ->middleware('auth:employe');
+    // ->middleware('guest');
 
 
     // SECTION CRÉATION D'UN COMPTE
@@ -101,5 +101,5 @@ Route::post('/utilisateurs/concours', [UtilisateurController::class, 'updateConc
     // SECTION COMPTE EMPLOYÉ
 // Affichage de la page employé
 Route::get('/employes', [EmployeController::class, 'index'])
-    ->name('employes.index');
-    // ->middleware('auth');
+    ->name('employes.index')
+    ->middleware('employe');
