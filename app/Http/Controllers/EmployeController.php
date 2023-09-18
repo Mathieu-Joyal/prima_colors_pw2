@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Middleware\Employe;
 use App\Models\Forfait;
 use App\Models\Reservation;
 use App\Models\Role;
@@ -17,10 +18,13 @@ class EmployeController extends Controller
      */
     public function index() {
 
-        $employe = auth()->guard('employe')->user();
+        $un_employe = auth()->guard('employe')->user();
+
+        $employes = \App\Models\Employe::all();
 
         return view('employes.index', [
-            "employe" => $employe,
+            "un_employe" => $un_employe,
+            "employes" => $employes,
             "roles" => Role::all(),
             "users" => User::all(),
             "reservations" => Reservation::all(),

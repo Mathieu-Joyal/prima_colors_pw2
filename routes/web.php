@@ -87,7 +87,7 @@ Route::post('/utilisateurs', [ReservationController::class, 'store'])
     ->middleware('auth');
 
 // Traitement de la suppression du forfait choisit par l'utilisateur
-Route::get("/utilisateurs/{id}", [ReservationController::class, 'destroyByUser'])
+Route::get("/utilisateurs/{id}/user", [ReservationController::class, 'destroyByUser'])
     ->name('reservations.destroyByUser')
     ->middleware('auth');
 
@@ -103,6 +103,6 @@ Route::get('/employes', [EmployeController::class, 'index'])
     ->middleware('employe');
 
 // Traitement de la suppression par l'admininstrateur du forfait choisit par l'utilisateur
-Route::get("/utilisateurs/{id}", [ReservationController::class, 'destroyByAdmin'])
+Route::get("/utilisateurs/{id}/admin", [ReservationController::class, 'destroyByAdmin'])
     ->name('reservations.destroyByAdmin')
     ->middleware('auth:employe');
