@@ -2,21 +2,24 @@
     background-color: $vert;
     width: 100%;
 }
+
 .menu {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center; 
-  }
+}
   
-  .menu .item {
+.menu .item {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-  }
+}
   
-  .menu .item a {
+.menu .item a {
+    display: block;
+    width: 100%;
     margin-right: 10px;
     font-size: 40px;
     font-family: "pf-venue", sans-serif;
@@ -29,16 +32,22 @@
     margin-top: 30px;
     margin-right: 50px;
     margin-left: 50px;
-  
-  }
-  
-  .menu .item a:hover .ligne {
-    width: 180px;
+    transition: color 0.3s ease;
+}
+
+.menu .item a:hover {
+    color: $noir;
+    z-index: 3;
+}
+
+.menu .item a:hover .ligne {
+    width: 100%;
     background-color: $rose;
-    z-index: 1;
-  }
+    z-index: -1;
+    transition: width 0.3s ease;
+}
   
-  .menu .ligne {
+.menu .ligne {
     height: 65px;
     width: 3px;
     background-color: $rose;
@@ -47,11 +56,9 @@
     top: 50%; 
     transform: translateY(-50%); 
     transition: width 0.3s ease, background-color 0.3s ease;
-    margin-left: -50px;
-    
-  }
+    margin-left: -50px; 
+}
   
-
 .logo{
    margin-left: 365px;
     margin-top: 30px;
@@ -75,8 +82,7 @@ p.slogan {
       transition: text-decoration 0.3s ease;
       cursor: pointer;
       margin-left: 50px;
-      font-size: 36px;
-     
+      font-size: 36px; 
     }
   
     p:hover {
@@ -95,7 +101,7 @@ p.slogan {
     }
   }
 
-  .copyright{
+.copyright{
    text-align: center;
-  }
+}
   

@@ -8,8 +8,9 @@
 
         <div class="item">
             <a href="billets.index">
-                <div class="ligne"></div>
+               
                 Billets
+                <div class="ligne"></div>
             </a>
         </div>
         <div class="item">
