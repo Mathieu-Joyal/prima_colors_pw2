@@ -21,6 +21,15 @@ h3 {
   font-weight: 400;
   font-style: normal;
   font-size: 38px;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-family: "pf-venue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  text-transform: uppercase;
 }
 
 p {
@@ -29,6 +38,7 @@ p {
   font-style: normal;
   font-size: 27px;
   color: white;
+  text-transform: capitalize;
 }
 
 html {
@@ -40,11 +50,52 @@ html {
 section {
   margin-left: 3em;
   margin-right: 3em;
+  padding-bottom: 5em;
 }
 
 article {
   margin-left: 10em;
   margin-right: 10em;
+}
+
+button.voir {
+  font-family: "pf-venue", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 36px;
+  text-transform: uppercase;
+  padding-top: 10px;
+  border: #eeb15e 3px solid;
+  background-color: #030303;
+  color: #eeb15e;
+  margin-left: 4.4em;
+  margin-right: 4.4em;
+  height: 70px;
+}
+
+button.voir {
+  font-size: 36px;
+}
+
+.conteneur-bordure {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 45px;
+  margin-bottom: 3em;
+}
+.conteneur-bordure .bordure {
+  width: 60%;
+  border-bottom: solid #eca6d9 3px;
+  height: 100%;
+}
+.conteneur-bordure .titre {
+  width: 40%;
+  padding-left: 1em;
+  text-align: left;
+}
+.conteneur-bordure .titre h2 {
+  margin: 0;
 }
 
 .contenu {
@@ -142,29 +193,111 @@ img {
 .conteneur-activites .conteneur-date .conteneur-jours h2.selected {
   color: #eca6d9;
 }
-.conteneur-activites .conteneur-date .conteneur-bordure {
-  display: flex;
-  justify-content: space-between;
-  width: 75%;
-}
-.conteneur-activites .conteneur-date .conteneur-bordure .bordure {
-  width: 75%;
-  border-top: solid #eca6d9 3px;
-}
-.conteneur-activites .conteneur-date .conteneur-bordure .date h2 {
-  margin: 0;
-}
 .conteneur-activites .activites {
-  display: flex;
+  display: inline-flex;
   justify-content: space-between;
+  margin-bottom: 3em;
 }
-.conteneur-activites .activites p.heur {
+.conteneur-activites .activites .conteneur-image {
+  display: inline;
+  height: 200px;
+  width: calc(100% - 300px);
+  margin-left: 0;
+}
+.conteneur-activites .activites .conteneur-image img {
+  height: 100%;
+  width: 100%;
+  margin-left: 0;
+  margin-top: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.conteneur-activites .activites .conteneur-titre {
+  min-width: 300px; /* Set a maximum width to prevent it from becoming too wide */
+  white-space: nowrap; /* Prevent text from wrapping */
+  text-align: right;
+  overflow: hidden;
+}
+.conteneur-activites .activites p.heure {
   font-weight: bold;
 }
 .conteneur-activites .activites:nth-child(even) {
-  border: 1px solid blue;
   flex-direction: row-reverse;
+}
+.conteneur-activites .activites:nth-child(even) .conteneur-image {
+  margin-right: 0; /* Push image to the left */
+  margin-left: initial; /* Reset margin-left */
+}
+.conteneur-activites .activites:nth-child(even) .conteneur-titre {
+  text-align: left; /* Align text on the left side for even articles */
 }
 .conteneur-activites .activites .description {
   display: none;
+}
+.conteneur-activites .activites.hidden {
+  display: none;
+}
+.conteneur-activites .hidden {
+  display: none;
+}
+
+.conteneur-articles-actualites {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px solid #eca6d9;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+}
+.conteneur-articles-actualites h3,
+.conteneur-articles-actualites h4 {
+  color: #eca6d9;
+  margin-top: 0;
+}
+.conteneur-articles-actualites .conteneur-gauche {
+  display: flex;
+  max-width: 1000px;
+  justify-content: space-between;
+  padding-left: 2em;
+}
+.conteneur-articles-actualites .conteneur-titre {
+  display: flex;
+  flex-direction: column;
+  padding-left: 6em;
+  padding-right: 6em;
+}
+.conteneur-articles-actualites .conteneur-image {
+  height: 260px;
+  width: 450px;
+  padding-right: 2em;
+}
+.conteneur-articles-actualites .conteneur-image img {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.plus {
+  display: none;
+}
+
+.conteneur-btn-voir {
+  display: flex;
+  justify-content: flex-end;
+}
+.conteneur-btn-voir button.voir-plus {
+  font-family: "pf-venue", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 36px;
+  color: #eeb15e;
+  background-color: #030303;
+  border: none;
+  cursor: pointer;
+}
+.conteneur-btn-voir img {
+  margin: 0;
+  height: 25px;
+  padding-top: 0.5em;
+  padding-left: 1em;
 }/*# sourceMappingURL=style.css.map */

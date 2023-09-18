@@ -18,24 +18,26 @@
 
                 <div class="conteneur-bordure">
                     <div class="bordure"></div>
-                    <div class="date">
+                    <div class="titre">
                         <h2>2023 | 10 | 13</h2>
                     </div>
                 </div>
             </div>
 
-            @foreach ($vendrediActivites as $activite)
-                <article class="activites vendredi">
+            @foreach ($vendrediActivites as  $key => $activite)
+            <article class="activites vendredi {{ $key >= 3 ? 'hidden' : '' }} ">
+
 
                     <div class="conteneur-image">
-                        <img class="thumbnail" src="{{ $activite->image }}" alt="image de l'activite">
+                        {{-- <img class="thumbnail" src="{{ $activite->image }}" alt="image de l'activite"> --}}
+                        <img class="thumbnail" src="{{asset('img\images\pexels-alex-nasto-582635.jpg')}}" alt="">
                     </div>
 
 
                     <div class="conteneur-titre">
 
                         <div class="heure">
-                            <p>heure {{ $activite->heure }}</p>
+                            <p class="heure">heure bbbbbbbcccccbbbbbb{{ $activite->heure }}</p>
                         </div>
 
                         <div class="titre">
@@ -52,7 +54,34 @@
                         </div>
                 </article>
             @endforeach
-            <button>boutton voir plus</button>
+            <button class="voir voir-plus" onclick="voirPlus(this)">Voir plus</button>
+            <script>
+                function voirPlus(button) {
+                    const articlesVendredi = document.querySelectorAll('.activites.vendredi');
+                    const articlesSamedi = document.querySelectorAll('.activites.samedi');
+                    const articlesDimanche = document.querySelectorAll('.activites.dimanche');
+
+                    articlesVendredi.forEach(function(article) {
+                        article.classList.toggle('hidden');
+                    });
+                    articlesSamedi.forEach(function(article) {
+                        article.classList.toggle('hidden');
+                    });
+                    articlesDimanche.forEach(function(article) {
+                        article.classList.toggle('hidden');
+                    });
+
+                    const buttonText = button.innerText;
+                    button.innerText = buttonText === 'Voir plus' ? 'Voir moins' : 'Voir plus';
+                }
+            </script>
+
+
+
+
+
+
+
 
         </section>
         {{-- <x-ban_concours /> --}}
@@ -67,23 +96,24 @@
 
                 <div class="conteneur-bordure">
                     <div class="bordure"></div>
-                    <div class="date">
+                    <div class="titre">
                         <h2>2023 | 10 | 13</h2>
                     </div>
                 </div>
             </div>
-            @foreach ($samediActivites as $activite)
-                <article class="activites samedi">
+            @foreach ($samediActivites as  $key => $activite)
+            <article class="activites samedi {{ $key >= 3 ? 'hidden' : '' }}">
 
                     <div class="conteneur-image">
-                        <img class="thumbnail" src="{{ $activite->image }}" alt="image de l'activite">
+                        {{-- <img class="thumbnail" src="{{ $activite->image }}" alt="image de l'activite"> --}}
+                        <img class="thumbnail" src="{{asset('img\images\pexels-alex-nasto-582635.jpg')}}" alt="">
                     </div>
 
 
                     <div class="conteneur-titre">
 
                         <div class="heure">
-                            <p>heure {{ $activite->heure }}</p>
+                            <p class="heure">heure {{ $activite->heure }}</p>
                         </div>
 
                         <div class="titre">
@@ -100,8 +130,8 @@
                         </div>
                 </article>
             @endforeach
-            <button>boutton voir plus</button>
-
+            <button class="voir voir-plus" onclick="voirPlus(this)">Voir plus</button>
+            {{-- <button class="voir hidden voir-moins">Voir moins</button> --}}
         </section>
 
         {{-- <x-ban_compte /> --}}
@@ -117,23 +147,24 @@
 
                 <div class="conteneur-bordure">
                     <div class="bordure"></div>
-                    <div class="date">
+                    <div class="titre">
                         <h2>2023 | 10 | 13</h2>
                     </div>
                 </div>
             </div>
-            @foreach ($dimancheActivites as $activite)
-                <article class="activites dimanche">
+            @foreach ($dimancheActivites as  $key => $activite)
+            <article class="activites dimanche {{ $key >= 3 ? 'hidden' : '' }}">
 
                     <div class="conteneur-image">
-                        <img class="thumbnail" src="{{ $activite->image }}" alt="image de l'activite">
+                        {{-- <img class="thumbnail" src="{{ $activite->image }}" alt="image de l'activite"> --}}
+                        <img class="thumbnail" src="{{asset('img\images\pexels-alex-nasto-582635.jpg')}}" alt="">
                     </div>
 
 
                     <div class="conteneur-titre">
 
                         <div class="heure">
-                            <p>heure {{ $activite->heure }}</p>
+                            <p class="heure">heure {{ $activite->heure }}</p>
                         </div>
 
                         <div class="titre">
@@ -150,7 +181,8 @@
                         </div>
                 </article>
             @endforeach
-            <button>boutton voir plus</button>
+            <button class="voir voir-plus" onclick="voirPlus(this)">Voir plus</button>
+            {{-- <button class="voir hidden voir-moins">Voir moins</button> --}}
 
         </section>
         {{-- <x-ban_billet /> --}}
