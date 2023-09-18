@@ -58,8 +58,7 @@ article {
   margin-right: 10em;
 }
 
-button.voir,
-#voir {
+button.voir {
   font-family: "pf-venue", sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -69,12 +68,13 @@ button.voir,
   border: #eeb15e 3px solid;
   background-color: #030303;
   color: #eeb15e;
-}
-
-button.voir {
   margin-left: 4.4em;
   margin-right: 4.4em;
   height: 70px;
+}
+
+button.voir {
+  font-size: 36px;
 }
 
 .conteneur-bordure {
@@ -258,6 +258,7 @@ img {
   display: flex;
   flex-direction: column;
   padding-left: 6em;
+  padding-right: 6em;
 }
 .conteneur-articles-actualites .conteneur-image {
   height: 260px;
@@ -270,6 +271,27 @@ img {
   margin: 0;
 }
 
-#plus {
+.plus {
   display: none;
+}
+
+.conteneur-btn-voir {
+  display: flex;
+  justify-content: flex-end;
+}
+.conteneur-btn-voir button.voir-plus {
+  font-family: "pf-venue", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 36px;
+  color: #eeb15e;
+  background-color: #030303;
+  border: none;
+  cursor: pointer;
+}
+.conteneur-btn-voir img {
+  margin: 0;
+  height: 25px;
+  padding-top: 0.5em;
+  padding-left: 1em;
 }/*# sourceMappingURL=style.css.map */

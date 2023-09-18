@@ -4,6 +4,7 @@
     {{-- <x-hero/> --}}
     <main id="app">
 
+
         <section class="conteneur-actualites">
             <h1>Actualités</h1>
             <div class="conteneur-bordure">
@@ -12,6 +13,7 @@
                     <h2>Nouveauté de la scène 2023</h2>
                 </div>
             </div>
+
 
             @foreach ($actualitesRecentes as $actualite)
                 <article class="conteneur-articles-actualites">
@@ -29,15 +31,18 @@
 
 
                             <div class="description">
-                                <p class="voir-moins">{{ $actualite->description }} <span id="dots">...</span>
-                                    <span id="plus">{{ $actualite->description }} </span>
+                                <p class="voir-moins">{{ $actualite->description }}
+                                    <span class="dots">...</span>
+                                    <span class="plus">{{ $actualite->description }} </span>
                                 </p>
                             </div>
-                            <button onclick="voirPlus()" id="voir">Read more</button>
-                            {{-- <div class="arrow" onclick="myFunction()" id="myBtn">
-                                <img class="" src="{{ asset('img\images\arrow-right-long.png') }}" alt="">
-                            </div> --}}
 
+                            <div class="conteneur-btn-voir">
+                                <button onclick="voirPlus(this)" class="voir-plus">
+                                    Voir plus
+                                </button>
+                                <img class="arrow-image" src="{{ asset('img\images\arrow-jaune.png') }}" alt="">
+                            </div>
                         </div>
                     </div>
 
@@ -78,15 +83,18 @@
 
 
                             <div class="description">
-                                <p class="voir-moins">{{ $actualite->description }} <span id="dots">...</span>
-                                    <span id="plus">{{ $actualite->description }} </span>
+                                <p class="voir-moins">{{ $actualite->description }}
+                                    <span class="dots">...</span>
+                                    <span class="plus">{{ $actualite->description }} </span>
                                 </p>
                             </div>
-                            <button onclick="VoirPlus()" id="voir">Read more</button>
-                            {{-- <div class="arrow" onclick="myFunction()" id="myBtn">
-                                <img class="" src="{{ asset('img\images\arrow-right-long.png') }}" alt="">
-                            </div> --}}
 
+                            <div class="conteneur-btn-voir">
+                                <button onclick="voirPlus(this)" class="voir-plus">
+                                    Voir plus
+                                </button>
+                                <img class="arrow-image" src="{{ asset('img\images\arrow-jaune.png') }}" alt="">
+                            </div>
                         </div>
                     </div>
 
@@ -103,18 +111,19 @@
             {{-- <x-ban_billet/> --}}
     </main>
     <script>
-        function voirPlus() {
-            var dots = document.getElementById("dots");
-            var plusText = document.getElementById("plus");
-            var btnText = document.getElementById("voir");
+        function voirPlus(button) {
+            var parent = button.parentElement.parentElement.parentElement;
+            var dots = parent.querySelector(".dots");
+            var plusText = parent.querySelector(".plus");
+            var btnText = parent.querySelector(".voir-plus");
 
-            if (dots.style.display === "none") {
+            if (dots.style.display === "none" || dots.style.display === "") {
                 dots.style.display = "inline";
                 btnText.innerHTML = "Voir plus";
                 plusText.style.display = "none";
             } else {
                 dots.style.display = "none";
-                btnText.innerHTML = "Voir moin";
+                btnText.innerHTML = "Voir moins";
                 plusText.style.display = "inline";
             }
         }

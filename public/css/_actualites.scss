@@ -23,6 +23,7 @@
         display: flex;
         flex-direction: column;
         padding-left: 6em;
+        padding-right: 6em;
     }
 
     .conteneur-image {
@@ -37,4 +38,32 @@
         }
     }
 }
-#plus {display: none;}
+
+.plus {
+    display: none;
+}
+
+.conteneur-btn-voir {
+    display: flex;
+    justify-content: flex-end;
+
+    button.voir-plus {
+        font-family: "pf-venue", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 36px;
+        color: $jaune;
+        background-color: $noir;
+        border: none;
+        cursor: pointer;
+    }
+
+    img {
+        margin: 0;
+        height: 25px;
+        padding-top: 0.5em;
+        padding-left: 1em;
+
+    }
+
+}

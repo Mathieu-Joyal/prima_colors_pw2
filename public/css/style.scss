@@ -73,8 +73,8 @@ article {
 
 
 //BOUTTONS
-button.voir,
-#voir {
+button.voir
+ {
     font-family: "pf-venue", sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -84,12 +84,14 @@ button.voir,
     border: $jaune 3px solid;
     background-color: $noir;
     color: $jaune;
-}
-
-button.voir {
     margin-left: 4.4em;
     margin-right: 4.4em;
     height: 70px;
+}
+
+button.voir {
+
+    font-size: 36px;
 
 }
 
