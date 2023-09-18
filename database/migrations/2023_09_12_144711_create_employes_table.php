@@ -20,6 +20,7 @@ class CreateEmployesTable extends Migration
             $table->integer('identifiant')->unique()->unsigned();
             $table->string('password');
             $table->foreignId('role_id')->constrained()->cascadeOnDelete();
+            // email_verified_at pour les employés à enlever? Je crois que oui
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();

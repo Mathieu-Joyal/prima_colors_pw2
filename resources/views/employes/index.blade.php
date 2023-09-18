@@ -2,16 +2,18 @@
 
     <x-header />
 
+    {{-- Succès de la connexion à confimer après résoudre problème avec auth:employe --}}
     {{-- <x-alertes.succes cle="succes" /> --}}
 
+    {{-- Pourrait être une composante --}}
     <div class="deconnexion">
-        {{-- Pourrait être une composante? --}}
-
-        {{-- <form action="{{ route('deconnexion') }}" method="POST">
+        <form action="{{ route('deconnexion') }}"
+                method="POST"
+        >
             @csrf
-            <input type="submit" value="Déconnexion">
-        </form> --}}
 
+            <input type="submit" value="Déconnexion">
+        </form>
     </div>
 
     <div class="conteneur">
@@ -20,7 +22,6 @@
 
         <form action="{{ route('enregistrement.storeEmploye') }}"
                 method="POST"
-                {{-- enctype="multipart/form-data" --}}
         >
             @csrf
 
@@ -64,64 +65,21 @@
 
             </div>
 
-            {{-- courriel --}}
+            {{-- identifiant --}}
             <div>
-                <label for="email">
-                    Courriel
+                <label for="identifiant">
+                    Identifiant
                 </label>
 
                 <div>
                     <input
-                        id="email"
-                        name="email"
-                        type="email"
-                        value="{{ old('email') }}"
-                    >
-
-                    <x-forms.erreur champ="email" />
-
-                </div>
-
-            </div>
-
-            {{-- ville --}}
-            {{-- Pourrais-être intéressant API de toutes les villes, mais payant? --}}
-            <div>
-                <label for="ville">
-                    Ville (facultatif)
-                </label>
-
-                <div>
-                    <input
-                        id="ville"
-                        name="ville"
+                        id="identifiant"
+                        name="identifiant"
                         type="text"
-                        value="{{ old('ville') }}"
+                        value="{{ old('identifiant') }}"
                     >
 
-                    <x-forms.erreur champ="ville" />
-
-                </div>
-
-            </div>
-
-            {{-- age --}}
-            <div>
-                <label for="age">
-                    Âge
-                </label>
-
-                <div>
-                    <input
-                        id="age"
-                        name="age"
-                        type="number"
-                        min="18"
-                        max="99"
-                        value="{{ old('age') }}"
-                    >
-
-                    <x-forms.erreur champ="age" />
+                    <x-forms.erreur champ="identifiant" />
 
                 </div>
 
@@ -158,7 +116,7 @@
 
                 <div>
                     <input
-                        id="confirm-password"
+                        id="confirmation_password"
                         name="confirmation_password"
                         type="password"
                     >
@@ -169,12 +127,64 @@
 
             </div>
 
+            <select
+                name="roles"
+                id="roles"
+            >
+
+                @foreach ($roles as $role)
+                    <option value="{{ $role->id }}">{{ $role->nom }}</option>
+                @endforeach
+
+            </select>
+
             <div>
                 <button type="submit">
-                    Créez votre compte!
+                    Créez le compte employé
                 </button>
             </div>
         </form>
+
+        <section class="utilisteurs">
+            <ul>
+
+                @foreach ($users as $user)
+                    <li>Prénom: {{$user->prenom}}</li>
+                    <li>Nom: {{$user->nom}}</li>
+
+                    @foreach ($reservations as $reservation)
+
+                        @if ($user->id === $reservation->user_id)
+
+                            @foreach ($forfaits as $forfait)
+
+                            {{-- ****************************************
+                            NE FONCTIONNE PAS À CAUSE DE L'AUTH
+                            VOIR SI DEUXIÈME ROUTE APRÈS AUTH MARCHE
+                            **************************************** --}}
+                                @if ($forfait->id === $reservation->forfait_id)
+                                    <li>Titre du forfait: {{ $forfait->titre }}</li>
+                                    <li>Description du forfait: {{ $forfait->description }}</li>
+
+                                    <a href="{{ route('reservations.destroy', ['id' => $reservation->id]) }}">
+                                        <span>
+                                            Annuler la réservation
+                                        </span>
+                                    </a>
+
+                                @endif
+
+
+                            @endforeach
+
+                        @endif
+
+                    @endforeach
+                @endforeach
+
+            </ul>
+
+        </section>
     </div>
 
 

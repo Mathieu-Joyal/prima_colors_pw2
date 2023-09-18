@@ -1,43 +1,5 @@
 <?php
 
-// namespace App\Models;
-
-// use Illuminate\Database\Eloquent\Factories\HasFactory;
-// use Illuminate\Contracts\Auth\Authenticatable;
-// use Illuminate\Database\Eloquent\Model;
-
-// class Employe extends Model implements Authenticatable
-// {
-//     use HasFactory;
-
-//     /**
-//      * Employé associé à un rôle
-//      *
-//      * @return BelongsTo
-//      */
-//     public function role() {
-//         return $this->belongsTo(Role::class);
-//     }
-
-//     /**
-//      * Actualité liée à un employé
-//      *
-//      * @return HasMany
-//      */
-//     public function actualites() {
-//         return $this->hasMany(Actualite::class);
-//     }
-
-//     /**
-//      * Activité liée à un employé
-//      *
-//      * @return HasMany
-//      */
-//     public function activites() {
-//         return $this->hasMany(Activite::class);
-//     }
-// }
-
 namespace App\Models;
 
 use Illuminate\Contracts\Auth\Authenticatable;
@@ -47,39 +9,46 @@ use Illuminate\Database\Eloquent\Model;
 class Employe extends Model implements Authenticatable
 {
 
+    // ************************************************************************************************************* //
+    // Implémentation de cette section en raison de l'existence de la table "employes".
+    // Ajustements apportés pour l'intégrer dans notre système d'authentification. Ces méthodes et configurations garantissent que le système
+    // d'authentification fonctionne correctement avec à la fois les utilisateurs et les employés, permettant de faire la distinction
+    // entre les deux et de personnaliser leurs processus d'authentification selon les besoins.
+    // ************************************************************************************************************* //
+
     use HasFactory;
     /**
-     * Get the name of the unique identifier for the user.
+     * Obtenez le nom de l'identifiant unique de l'utilisateur.
      *
      * @return string
      */
     public function getAuthIdentifierName()
     {
-        return 'identifiant'; // Replace with the actual column name for employee identification
+        return 'identifiant'; // Remplacez par le nom de colonne réel pour l'identification de l'employé.
     }
 
     /**
-     * Get the unique identifier for the user.
+     * Obtenez l'identifiant unique de l'utilisateur.
      *
      * @return mixed
      */
     public function getAuthIdentifier()
     {
-        return $this->getKey(); // Assuming the primary key is 'id'; replace with the actual primary key name if different
+        return $this->getKey(); // Remplacez par le nom de la clé primaire réelle si elle est différente.
     }
 
     /**
-     * Get the password for the user.
+     * Obtenez le mot de passe de l'utilisateur.
      *
      * @return string
      */
     public function getAuthPassword()
     {
-        return $this->password; // Replace with the actual column name for the password
+        return $this->password; // Remplacez par le nom de colonne réel pour le mot de passe.
     }
 
     /**
-     * Get the remember token for the user.
+     *Obtenez le jeton de mémorisation pour l'utilisateur.
      *
      * @return string|null
      */
@@ -89,7 +58,7 @@ class Employe extends Model implements Authenticatable
     }
 
     /**
-     * Set the remember token for the user.
+     * Définissez le jeton de mémorisation pour l'utilisateur.
      *
      * @param  string  $value
      * @return void
@@ -100,7 +69,7 @@ class Employe extends Model implements Authenticatable
     }
 
     /**
-     * Get the column name for the "remember me" token.
+     * Obtenez le nom de la colonne pour le jeton "remember me".
      *
      * @return string
      */
@@ -108,6 +77,8 @@ class Employe extends Model implements Authenticatable
     {
         return 'remember_token';
     }
+
+    // ************************************************************************************************************* //
 
     /**
      * Employé associé à un rôle

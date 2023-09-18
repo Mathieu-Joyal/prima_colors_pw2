@@ -18,6 +18,7 @@ class UtilisateurController extends Controller
      */
     public function index() {
 
+        // Récupération de l'utilisateur connecté
         $user = auth()->user();
 
         return view('utilisateurs.index', [

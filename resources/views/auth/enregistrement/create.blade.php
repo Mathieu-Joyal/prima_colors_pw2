@@ -8,11 +8,9 @@
 
         <form action="{{ route('enregistrement.store') }}"
                 method="POST"
-                {{-- enctype="multipart/form-data" --}}
         >
             @csrf
 
-            {{-- prénom --}}
             <div>
                 <label for="prenom">
                     Prénom
@@ -26,13 +24,10 @@
                         autofocus
                         value="{{ old('prenom') }}"
                     >
-
-                    <x-forms.erreur champ="prenom" />
-
                 </div>
+                <x-forms.erreur champ="prenom" />
             </div>
 
-            {{-- nom --}}
             <div>
                 <label for="nom">
                     Nom
@@ -45,14 +40,10 @@
                         type="text"
                         value="{{ old('nom') }}"
                     >
-
-                    <x-forms.erreur champ="nom" />
-
                 </div>
-
+                <x-forms.erreur champ="nom" />
             </div>
 
-            {{-- courriel --}}
             <div>
                 <label for="email">
                     Courriel
@@ -65,15 +56,10 @@
                         type="email"
                         value="{{ old('email') }}"
                     >
-
-                    <x-forms.erreur champ="email" />
-
                 </div>
-
+                <x-forms.erreur champ="email" />
             </div>
 
-            {{-- ville --}}
-            {{-- Pourrais-être intéressant API de toutes les villes, mais payant? --}}
             <div>
                 <label for="ville">
                     Ville (facultatif)
@@ -86,14 +72,10 @@
                         type="text"
                         value="{{ old('ville') }}"
                     >
-
-                    <x-forms.erreur champ="ville" />
-
                 </div>
-
+                <x-forms.erreur champ="ville" />
             </div>
 
-            {{-- age --}}
             <div>
                 <label for="age">
                     Âge
@@ -108,14 +90,10 @@
                         max="99"
                         value="{{ old('age') }}"
                     >
-
-                    <x-forms.erreur champ="age" />
-
                 </div>
-
+                <x-forms.erreur champ="age" />
             </div>
 
-            {{-- mot de passe --}}
             <div>
                 <div>
                     <label for="password">
@@ -129,14 +107,10 @@
                         name="password"
                         type="password"
                     >
-
-                    <x-forms.erreur champ="password" />
-
                 </div>
-
+                <x-forms.erreur champ="password" />
             </div>
 
-            {{-- confirmation du mot de passe --}}
             <div>
                 <div>
                     <label for="confirm-password">
@@ -150,11 +124,8 @@
                         name="confirmation_password"
                         type="password"
                     >
-
-                    <x-forms.erreur champ="confirmation_password" />
-
                 </div>
-
+                <x-forms.erreur champ="confirmation_password" />
             </div>
 
             <div>
