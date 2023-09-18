@@ -30,7 +30,7 @@
 
                     <div class="conteneur-image">
                         {{-- <img class="thumbnail" src="{{ $activite->image }}" alt="image de l'activite"> --}}
-                        <img class="thumbnail" src="{{asset('img\activites\flame.jpg')}}" alt="">
+                        <img class="thumbnail" src="{{asset('img\activites\cereals.png')}}" alt="">
                     </div>
 
 
