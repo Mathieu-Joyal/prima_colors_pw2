@@ -167,4 +167,26 @@ img {
 }
 .conteneur-activites .activites .description {
   display: none;
+}
+
+body {
+  color: #eeb15e;
+}
+body h3 {
+  color: #eeb15e;
+}
+body section {
+  padding: 0.5em;
+}
+body section img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+body article {
+  padding: 0.5em;
+}
+body article div {
+  color: white;
+  margin: 1em 0;
 }/*# sourceMappingURL=style.css.map */

@@ -4,7 +4,6 @@
 
     <x-alertes.succes cle="succes" />
 
-    {{-- Pourrait être une composante? --}}
     <div class="deconnexion">
 
         <form action="{{ route('deconnexion.user') }}"
@@ -20,24 +19,29 @@
 
     <section class="forfaits">
 
+        <h3>Les forfait</h3>
+
         @foreach ($forfaits as $forfait)
 
             <article class="un_forfait">
 
-                <div>
+                <h4>
                     {{ $forfait->titre }}
-                </div>
+                </h4>
 
                 <div>
                     {{ $forfait->description }}
                 </div>
 
                 <div>
-                    {{ $forfait->date_arrive }} - {{ $forfait->date_depart }}
+                    Date d'arrivé: {{ $forfait->date_arrive }}
+                </div>
+                <div>
+                    Date de départ: {{ $forfait->date_depart }}
                 </div>
 
                 <div>
-                    {{ $forfait->prix }}$
+                   Coût du forfait: {{ $forfait->prix }}$
                 </div>
             </article>
         @endforeach
@@ -141,13 +145,15 @@
         </form>
     </section>
 
-    <section class="un_coucours">
-        @if ($user->image_oeuvre != null)
+    @if ($user->image_oeuvre != null)
+        <section class="un_coucours">
+
+            <h3>Votre participation</h3>
 
             <h4>{{$user->titre_oeuvre}}</h4>
 
             <div>
-                <img src="{{ $user->image_oeuvre }}" alt="{{$user->titre_oeuvre}}">
+                <img src="{{ $user->image_oeuvre }}" alt="{{ $user->titre_oeuvre }}" style="max-width: 500px">
             </div>
 
         @endif
