@@ -41,14 +41,14 @@
                                 <button onclick="voirPlus(this)" class="voir-plus">
                                     Voir plus
                                 </button>
-                                <img class="arrow-image" src="{{ asset('img\images\arrow-jaune.png') }}" alt="">
+                                <img class="arrow-image" src="{{ asset('img\arrow-jaune.png') }}" alt="">
                             </div>
                         </div>
                     </div>
 
                     <div class="conteneur-image">
                         {{-- <img class="thumbnail" src="{{ $actualite->image }}" alt="image de l'actualite"> --}}
-                        <img class="thumbnail" src="{{ asset('img\images\pexels-alex-nasto-582635.jpg') }}"
+                        <img class="thumbnail" src="{{ asset('img\actualites\1.png') }}"
                             alt="">
                     </div>
 

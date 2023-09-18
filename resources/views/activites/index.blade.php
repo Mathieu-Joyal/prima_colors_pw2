@@ -30,7 +30,7 @@
 
                     <div class="conteneur-image">
                         {{-- <img class="thumbnail" src="{{ $activite->image }}" alt="image de l'activite"> --}}
-                        <img class="thumbnail" src="{{asset('img\images\pexels-alex-nasto-582635.jpg')}}" alt="">
+                        <img class="thumbnail" src="{{asset('img\activites\cereals.png')}}" alt="">
                     </div>
 
 
@@ -72,7 +72,7 @@
                     });
 
                     const buttonText = button.innerText;
-                    button.innerText = buttonText === 'Voir plus' ? 'Voir moins' : 'Voir plus';
+                    button.innerText = buttonText === 'VOIR PLUS' ? 'VOIR MOINS' : 'VOIR PLUS';
                 }
             </script>
 
