@@ -234,6 +234,12 @@ img {
 .conteneur-activites .activites .description {
   display: none;
 }
+.conteneur-activites .activites.hidden {
+  display: none;
+}
+.conteneur-activites .hidden {
+  display: none;
+}
 
 .conteneur-articles-actualites {
   display: flex;

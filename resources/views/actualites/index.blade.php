@@ -112,10 +112,10 @@
     </main>
     <script>
         function voirPlus(button) {
-            var parent = button.parentElement.parentElement.parentElement;
-            var dots = parent.querySelector(".dots");
-            var plusText = parent.querySelector(".plus");
-            var btnText = parent.querySelector(".voir-plus");
+            const parent = button.parentElement.parentElement.parentElement;
+            const dots = parent.querySelector(".dots");
+            const plusText = parent.querySelector(".plus");
+            const btnText = parent.querySelector(".voir-plus");
 
             if (dots.style.display === "none" || dots.style.display === "") {
                 dots.style.display = "inline";
