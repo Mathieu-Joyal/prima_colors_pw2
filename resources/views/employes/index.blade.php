@@ -7,7 +7,7 @@
 
     {{-- Pourrait être une composante --}}
     <div class="deconnexion">
-        <form action="{{ route('deconnexion') }}"
+        <form action="{{ route('deconnexion.employe') }}"
                 method="POST"
         >
             @csrf

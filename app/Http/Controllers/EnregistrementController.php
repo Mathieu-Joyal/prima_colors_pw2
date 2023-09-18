@@ -78,7 +78,7 @@ class EnregistrementController extends Controller
     }
 
     /**
-     * Traite l'enregistrement du compte utilisateur
+     * Traite l'enregistrement du compte employé
      *
      * @param Request $request
      * @return RedirectResponse
@@ -91,7 +91,8 @@ class EnregistrementController extends Controller
             "nom" => "required|max:255",
             "identifiant" => "required|integer|min:1000000|max:9999999",
             "password" => "required|min:8",
-            "confirmation_password" => "required|same:password"
+            "confirmation_password" => "required|same:password",
+            "roles" => "required"
         ],[
             "prenom.required" => "Le prénom est requis",
             "prenom.max" => "Vous devez avoir un maximum de :max caractères",
@@ -103,7 +104,8 @@ class EnregistrementController extends Controller
             "password.required" => "Le mot de passe est requis",
             "password.min" => "Le mot de passe doit avoir une longueur de :min caractères",
             "confirmation_password.required" => "La confirmation du mot de passe est requise",
-            "confirmation_password.same" => "Le mot de passe n'a pu être confirmé"
+            "confirmation_password.same" => "Le mot de passe n'a pu être confirmé",
+            "roles.required" => "Le role est requis",
         ]);
 
         // Préparation à l'inclusion des informations dans la BDD
@@ -113,13 +115,14 @@ class EnregistrementController extends Controller
         $employe->nom = $valides["nom"];
         $employe->identifiant = $valides["identifiant"];
         $employe->password = Hash::make($valides["password"]);
+        $employe->role_id = $valides["roles"];
 
         // Sauvegarder toutes les informations dans la BDD
         $employe->save();
 
         // Redirection
         return redirect()
-                ->route('employe.index')
+                ->route('employes.index')
                 ->with('succes', 'Votre compte employé a été créé');
     }
 }
