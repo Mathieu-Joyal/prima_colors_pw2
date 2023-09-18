@@ -32,48 +32,47 @@ Route::get('/actualites', [ActualiteController::class, 'index'])
     // SECTION CONNEXION D'UN COMPTE
 // Affichage de la connexion d'un compte
 Route::get("/connexion", [ConnexionController::class, 'create'])
-    ->name('connexion.create');
-    // ->middleware('guest');
+    ->name('connexion.create')
+    ->middleware('guest');
 
 // Traitement du formulaire de connexion d'un compte utilisateur
 Route::post("/connexion", [ConnexionController::class, 'authentifierUser'])
-    ->name('connexion.authentifierUser');
-    // ->middleware('guest');
+    ->name('connexion.authentifierUser')
+    ->middleware('guest');
 
-    // **********************
-    // *ROUTE NON-FONCTIONNEL*
-    // **********************
 // Traitement du formulaire de connexion d'un compte employé
 Route::post("/connexion/employe", [ConnexionController::class, 'authentifierEmploye'])
-    ->name('connexion.authentifierEmploye');
-    // ->middleware('guest');
+    ->name('connexion.authentifierEmploye')
+    ->middleware('guest');
 
 
     // SECTION CRÉATION D'UN COMPTE
 // Affichage de l'enregistrement d'un nouveau compte utilisateur
 Route::get("/enregistrement",[EnregistrementController::class, 'create'])
-    ->name('enregistrement.create');
-    // ->middleware('guest');
+    ->name('enregistrement.create')
+    ->middleware('guest');
 
 // Traitement du formulaire d'enregistrement d'un nouveau compte utilisateur
 Route::post("/enregistrement", [EnregistrementController::class, 'store'])
-    ->name('enregistrement.store');
-    // ->middleware('guest');
+    ->name('enregistrement.store')
+    ->middleware('guest');
 
-    // **********************
-    // *ROUTE NON-FONCTIONNEL*
-    // **********************
 // Traitement du formulaire d'enregistrement d'un nouveau compte employe
 Route::post("/enregistrement/employe", [EnregistrementController::class, 'storeEmploye'])
-    ->name('enregistrement.storeEmploye');
-    // ->middleware('guest');
+    ->name('enregistrement.storeEmploye')
+    ->middleware('auth:employe');
 
 
     // SECTION DÉCONNEXION D'UN COMPTE
 // Déconnexion du compte utilisateur
-Route::post("/deconnexion", [ConnexionController::class, 'deconnecter'])
-    ->name('deconnexion');
-    // ->middleware('auth');
+Route::post("/deconnexion", [ConnexionController::class, 'deconnecterUser'])
+    ->name('deconnexion.user')
+    ->middleware('auth');
+
+// Déconnexion du compte employé
+Route::post("/deconnexion/employe", [ConnexionController::class, 'deconnecterEmploye'])
+    ->name('deconnexion.employe')
+    ->middleware('auth:employe');
 
 
     // SECTION COMPTE UTILISATEUR
@@ -96,7 +95,6 @@ Route::get("/utilisateurs/{id}", [ReservationController::class, 'destroy'])
 Route::post('/utilisateurs/concours', [UtilisateurController::class, 'updateConcours'])
     ->name('utilisateurs.updateConcours')
     ->middleware('auth');
-
 
     // SECTION COMPTE EMPLOYÉ
 // Affichage de la page employé
