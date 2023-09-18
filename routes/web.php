@@ -87,8 +87,8 @@ Route::post('/utilisateurs', [ReservationController::class, 'store'])
     ->middleware('auth');
 
 // Traitement de la suppression du forfait choisit par l'utilisateur
-Route::get("/utilisateurs/{id}", [ReservationController::class, 'destroy'])
-    ->name('reservations.destroy')
+Route::get("/utilisateurs/{id}", [ReservationController::class, 'destroyByUser'])
+    ->name('reservations.destroyByUser')
     ->middleware('auth');
 
 // Traitement du formulaire d'ajout du concours
@@ -101,3 +101,8 @@ Route::post('/utilisateurs/concours', [UtilisateurController::class, 'updateConc
 Route::get('/employes', [EmployeController::class, 'index'])
     ->name('employes.index')
     ->middleware('employe');
+
+// Traitement de la suppression par l'admininstrateur du forfait choisit par l'utilisateur
+Route::get("/utilisateurs/{id}", [ReservationController::class, 'destroyByAdmin'])
+    ->name('reservations.destroyByAdmin')
+    ->middleware('auth:employe');

@@ -17,7 +17,7 @@ class EmployeController extends Controller
      */
     public function index() {
 
-        $employe = auth()->user();
+        $employe = auth()->guard('employe')->user();
 
         return view('employes.index', [
             "employe" => $employe,
@@ -27,23 +27,4 @@ class EmployeController extends Controller
             "forfaits" => Forfait::all(),
         ]);
     }
-
-    // public function index() {
-    //     $employe = auth('employe')->user();
-
-    //     if ($employe) {
-    //         // Employe is authenticated, you can safely access their properties
-    //         $employeId = $employe->id;
-
-    //         return view('employes.index', [
-    //             "employe" => $employe,
-    //             "roles" => Role::all(),
-    //             // "reservations" => Reservation::where('user_id', $employeId)->get(),
-    //         ]);
-    //     }
-
-        // Handle the case where no employe is authenticated
-        // dd("Don't work");
-        // return redirect()->route('connexion.create')->with('error', 'Vous devez vous connecter en tant qu\'employé.');
-    // }
 }

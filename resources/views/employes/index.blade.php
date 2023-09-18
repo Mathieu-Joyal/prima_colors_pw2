@@ -25,7 +25,6 @@
         >
             @csrf
 
-            {{-- prénom --}}
             <div>
                 <label for="prenom">
                     Prénom
@@ -39,13 +38,10 @@
                         autofocus
                         value="{{ old('prenom') }}"
                     >
-
-                    <x-forms.erreur champ="prenom" />
-
                 </div>
+                <x-forms.erreur champ="prenom" />
             </div>
 
-            {{-- nom --}}
             <div>
                 <label for="nom">
                     Nom
@@ -58,14 +54,10 @@
                         type="text"
                         value="{{ old('nom') }}"
                     >
-
-                    <x-forms.erreur champ="nom" />
-
                 </div>
-
+                <x-forms.erreur champ="nom" />
             </div>
 
-            {{-- identifiant --}}
             <div>
                 <label for="identifiant">
                     Identifiant
@@ -78,14 +70,10 @@
                         type="text"
                         value="{{ old('identifiant') }}"
                     >
-
-                    <x-forms.erreur champ="identifiant" />
-
                 </div>
-
+                <x-forms.erreur champ="identifiant" />
             </div>
 
-            {{-- mot de passe --}}
             <div>
                 <div>
                     <label for="password">
@@ -99,14 +87,10 @@
                         name="password"
                         type="password"
                     >
-
-                    <x-forms.erreur champ="password" />
-
                 </div>
-
+                <x-forms.erreur champ="password" />
             </div>
 
-            {{-- confirmation du mot de passe --}}
             <div>
                 <div>
                     <label for="confirm-password">
@@ -120,11 +104,8 @@
                         name="confirmation_password"
                         type="password"
                     >
-
-                    <x-forms.erreur champ="confirmation_password" />
-
                 </div>
-
+                <x-forms.erreur champ="confirmation_password" />
             </div>
 
             <select
@@ -135,7 +116,6 @@
                 @foreach ($roles as $role)
                     <option value="{{ $role->id }}">{{ $role->nom }}</option>
                 @endforeach
-
             </select>
 
             <div>
@@ -158,20 +138,19 @@
 
                             @foreach ($forfaits as $forfait)
 
-                            {{-- ****************************************
-                            NE FONCTIONNE PAS À CAUSE DE L'AUTH
-                            VOIR SI DEUXIÈME ROUTE APRÈS AUTH MARCHE
-                            **************************************** --}}
                                 @if ($forfait->id === $reservation->forfait_id)
                                     <li>Titre du forfait: {{ $forfait->titre }}</li>
-                                    <li>Description du forfait: {{ $forfait->description }}</li>
 
-                                    <a href="{{ route('reservations.destroy', ['id' => $reservation->id]) }}">
-                                        <span>
-                                            Annuler la réservation
-                                        </span>
-                                    </a>
+                                    @if ($employe->role_id === 1)
 
+                                        <a href="{{ route('reservations.destroyByAdmin', ['id' => $reservation->id]) }}">
+                                            @csrf
+
+                                            <span>
+                                                Annuler la réservation
+                                            </span>
+                                        </a>
+                                    @endif
                                 @endif
 
 

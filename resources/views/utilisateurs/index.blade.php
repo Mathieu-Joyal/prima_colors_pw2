@@ -83,7 +83,7 @@
                     {{ $reservation->forfait->titre }}
                 </div>
 
-                <a href="{{ route('reservations.destroy', ['id' => $reservation->id]) }}">
+                <a href="{{ route('reservations.destroyByUser', ['id' => $reservation->id]) }}">
                     <span>
                         Annuler la réservation
                     </span>
