@@ -1,0 +1,141 @@
+.contenu_nav {
+    position: relative;
+    background-color: $noir;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 50px;
+    z-index: 0; 
+}
+  
+.background {
+    width: 100%;
+    height: 70px;
+    background-color: $vert;
+    position: absolute;
+    z-index: 1; 
+}
+  
+.ligne_rose {
+    width: 100%;
+    background-color: $rose;
+    height: 3px;
+    z-index: 2; 
+    position: absolute; 
+    top: 140px;
+}
+  
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 3; 
+}
+  
+.menu .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-left: 50px; 
+}
+  
+.menu .item a.nav {
+    display: block;
+    width: 100%;
+    margin-right: 10px;
+    margin-top: 0px;
+    font-size: 30px;
+    font-family: "pf-venue", sans-serif;
+    text-transform: uppercase;
+    color: $blanc;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 2;
+    position: relative;
+    transition: color 0.3s ease;
+}
+  
+.menu .item a:hover {
+    color: $noir;
+    z-index: 3;
+}
+  
+.menu .item a:hover .ligne, 
+.menu .item a:hover .ligne_debut {
+    width: 100%;
+    background-color: $rose;
+    z-index: -1;
+    transition: width 0.3s ease;
+}
+  
+.menu .ligne {
+    height: 65px;
+    width: 3px;
+    background-color: $rose;
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: width 0.3s ease, background-color 0.3s ease;
+    margin-left: -50px;
+}
+  
+.billet {
+    position: relative;
+    display: inline-block; 
+    z-index: 3;
+}
+
+.billet-img-container {
+    position: relative; 
+    max-width: 100%;
+}
+
+.billet-img {
+    max-width: 100%;
+     
+}
+
+.billet-text {
+    position: absolute;
+    font-family: "pf-venue", sans-serif;
+    bottom: 10px; 
+    color: $noir;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 50px;
+    margin-left: 28px;
+    z-index: 4;
+}
+
+
+.billet-img-container:hover .billet-img {
+    filter: grayscale(100%) sepia(100%) hue-rotate(180deg); 
+}
+
+.billet-img-container:hover .billet-text {
+    color: $blanc; 
+}
+
+
+
+.reseau {
+    display: flex;
+    gap: 20px;  
+    z-index: 3;
+}
+  
+.reseau-img {
+    max-width: 100%;
+    z-index: 3;
+    margin-right: 40px;
+}
+
+.logo-nav{
+   margin-left: 20px;
+    z-index: 3;
+}
+  

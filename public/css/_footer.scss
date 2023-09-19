@@ -7,70 +7,101 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center; 
 }
-
+  
 .menu .item {
     display: flex;
-    align-items: center; 
-  
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
-
+  
 .menu .item a {
+    display: block;
+    width: 100%;
     margin-right: 10px;
     font-size: 40px;
-    margin-top: 20px;
-    margin-left: 50px;
-    margin-right: 50px;
     font-family: "pf-venue", sans-serif;
     text-transform: uppercase;
     color: $blanc;
     text-decoration: none;
-    transition: text-decoration 0.3s ease;
     cursor: pointer;
+    z-index: 2;
+    position: relative;
+    margin-top: 30px;
+    margin-right: 50px;
+    margin-left: 50px;
+    transition: color 0.3s ease;
 }
 
 .menu .item a:hover {
-    text-decoration: underline;
+    color: $noir;
+    z-index: 3;
 }
 
-
-.menu .ligne {
-    height: 40px; 
-    width: 3px; 
+.menu .item a:hover .ligne {
+    width: 100%;
     background-color: $rose;
-    z-index: 1;
+    z-index: -1;
+    transition: width 0.3s ease;
+}
+  
+.menu .ligne {
+    height: 65px;
+    width: 3px;
+    background-color: $rose;
+    z-index: -1;
+    position: absolute; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    transition: width 0.3s ease, background-color 0.3s ease;
+    margin-left: -50px; 
+}
+  
+.logo{
+   margin-left: 365px;
+    margin-top: 30px;
 }
 
 p.slogan {
     color: $rose;
-    text-transform: capitalize;
+    text-transform: uppercase;
     text-align: center;
     font-size: 36px;
     font-weight: bold;
 }
 
-.info{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 20px;
-    font-size: 40px;
-}
-
 .info {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+  
     p {
-        text-decoration: none; 
-        transition: text-decoration 0.3s ease; 
-        cursor: pointer; 
+      text-decoration: none;
+      transition: text-decoration 0.3s ease;
+      cursor: pointer;
+      margin-left: 50px;
+      font-size: 36px; 
     }
-
+  
     p:hover {
-        text-decoration: underline; 
+      text-decoration: underline;
     }
-}
+  
+    .reseau {
+      display: flex;
+      justify-content: flex-end; 
+      gap: 50px; 
+      margin-right: 30px;
+    }
+  
+    .reseau-img {
+      margin-right: 30px;
+    }
+  }
 
-img{
-   margin-left: 350px;
-   margin-top: 46px;
- 
+.copyright{
+   text-align: center;
 }
+  
