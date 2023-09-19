@@ -74,4 +74,37 @@
 
     }
 
+
+
+
+
+}
+
+.titre{
+    margin-bottom: 100px;
+}
+
+.titre h2 span {
+    opacity: 0;
+    animation: typing 2s forwards;
+    animation-delay: var(--delay);
+    display: inline-block;
+    padding-bottom: 20px;
+}
+
+.bordure.actualites {
+    width: 0;
+    height: 2px;
+    animation: expand 4s 0.5s forwards;
+    border-bottom: solid $rose 3px;
+}
+
+@keyframes expand {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes typing {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
