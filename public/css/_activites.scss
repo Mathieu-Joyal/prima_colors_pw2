@@ -14,45 +14,61 @@
 
             h2 {
                 color: $blanc;
-
                 &.selected {
                     color: $rose;
-                }
-            }
-        }
-
-        .conteneur-bordure {
-            display: flex;
-            justify-content: space-between;
-            width: 75%;
-
-            .bordure {
-                width: 75%;
-                border-top: solid $rose 3px;
-            }
-
-            .date {
-                h2 {
-                    margin: 0;
                 }
             }
         }
     }
 
     .activites {
-        display: flex;
+        display:inline-flex;
         justify-content: space-between;
-        p.heur{
+        // border: 1px solid red;
+        margin-bottom: 3em;
+
+        .conteneur-image{
+            display: inline;
+            height: 200px;
+            width: calc(100% - 300px);
+            margin-left: 0;
+            img{
+                height: 100%;
+                width: 100%;
+                margin-left: 0;
+                margin-top: 0;
+                object-fit: cover;
+            }
+        }
+        .conteneur-titre {
+            min-width: 300px; /* Set a maximum width to prevent it from becoming too wide */
+            white-space: nowrap; /* Prevent text from wrapping */
+            text-align: right;
+            overflow: hidden;
+        }
+        p.heure{
             font-weight: bold;
         }
 
         &:nth-child(even){
-            border: 1px solid blue;
+            // border: 1px solid blue;
             flex-direction: row-reverse;
+            .conteneur-image {
+                margin-right: 0; /* Push image to the left */
+                margin-left: initial; /* Reset margin-left */
+            }
+            .conteneur-titre {
+                text-align: left; /* Align text on the left side for even articles */
+            }
         }
 
         .description{
             display: none;
         }
     }
-}
+    .activites.hidden {
+        display: none;
+    }
+    .hidden {
+        display: none;
+    }  }
