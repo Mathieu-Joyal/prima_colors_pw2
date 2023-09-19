@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Employe;
 use App\Models\Actualite;
+use App\Models\Activite;
 use Illuminate\Database\Seeder;
 use App\Models\Role;
 
@@ -46,24 +47,35 @@ class DatabaseSeeder extends Seeder
 
 
         \App\Models\Activite::factory(30)->create();
+        // Ajout des activites (préexistants, dans un fichier /storage/app/data)
+        $activites = json_decode(
+            file_get_contents(storage_path("app/data/activites.json"))
+        );
 
+        foreach ($activites as $activite) {
+            Activite::factory()->create([
+                "titre" => $activite->titre,
+                "image" => $activite->image,
+                "endroit" => $activite->endroit,
+                "description" => $activite->description,
+            ]);
+        }
 
 
 
         // ajout des actualités
         \App\Models\Actualite::factory(10)->create();
-// Ajout des actualités (préexistants, dans un fichier /storage/app/data)
-$actualites = json_decode(
-    file_get_contents(storage_path("app/data/actualites.json"))
-);
+        // Ajout des actualités (préexistants, dans un fichier /storage/app/data)
+        $actualites = json_decode(
+            file_get_contents(storage_path("app/data/actualites.json"))
+        );
 
-foreach ($actualites as $actualite) {
-    Actualite::factory()->create([
-        "titre" => $actualite->titre,
-        "image" => $actualite->image,
-        "description" => $actualite->description,
-    ]);
-}
-
+        foreach ($actualites as $actualite) {
+            Actualite::factory()->create([
+                "titre" => $actualite->titre,
+                "image" => $actualite->image,
+                "description" => $actualite->description,
+            ]);
+        }
     }
 }

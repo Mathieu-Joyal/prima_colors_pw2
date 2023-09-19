@@ -3,13 +3,12 @@
     justify-content: space-between;
     border-bottom: 3px solid $rose;
     padding-top: 2em;
-    padding-bottom: 2em;
-    margin-bottom: 2em;
+
 
     h3,
     h4 {
         color: $rose;
-        margin-top: 0;
+        margin: 0;
     }
 
     .conteneur-gauche {
@@ -24,17 +23,25 @@
         flex-direction: column;
         padding-left: 6em;
         padding-right: 6em;
+        margin: 0;
+        .description{
+            margin: 0;
+            p{
+                margin: 0;
+            }
+        }
     }
 
     .conteneur-image {
         height: 260px;
-        width: 450px;
+        width: 400px;
         padding-right: 2em;
 
         img {
             height: 100%;
             width: 100%;
             margin: 0;
+            object-fit: cover;
         }
     }
 }
@@ -46,6 +53,7 @@
 .conteneur-btn-voir {
     display: flex;
     justify-content: flex-end;
+    margin: 0;
 
     button.voir-plus {
         font-family: "pf-venue", sans-serif;

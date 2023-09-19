@@ -1,6 +1,7 @@
 <?php
 
 namespace Database\Factories;
+use App\Models\Employe;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -20,7 +21,7 @@ class ActiviteFactory extends Factory
            "description" => $this->faker->paragraph(),
            "endroit" => $this->faker->word(),
            "image" => $this->faker->word(),
-           "employe_id" => 2
+           "employe_id" => Employe::inRandomOrder()->first()
         ];
     }
 }
