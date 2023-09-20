@@ -113,12 +113,12 @@ Route::get("/utilisateurs/{id}/admin", [ReservationController::class, 'destroyBy
     //Affichage du formulaire d'ajout d'une actualités
 Route::get('/actualites/create', [ActualiteController::class, 'create'])
     ->name('actualites.create')
-    ->middleware('auth');
+    ->middleware('auth:employe');
 
 // Traitement du formulaire
 Route::post('/actualites', [ActualiteController::class, 'store'])
     ->name('actualites.store')
-    ->middleware('auth');
+    ->middleware('auth:employe');
 
 // // Affichage du formulaire de modification d'une actualite
 // Route::get("/actualites/edit/{id}", [ActualiteController::class, 'edit'])

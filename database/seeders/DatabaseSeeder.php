@@ -46,7 +46,7 @@ class DatabaseSeeder extends Seeder
         // ajout des activités
 
 
-        \App\Models\Activite::factory(30)->create();
+
         // Ajout des activites (préexistants, dans un fichier /storage/app/data)
         $activites = json_decode(
             file_get_contents(storage_path("app/data/activites.json"))
@@ -63,8 +63,7 @@ class DatabaseSeeder extends Seeder
 
 
 
-        // ajout des actualités
-        \App\Models\Actualite::factory(10)->create();
+
         // Ajout des actualités (préexistants, dans un fichier /storage/app/data)
         $actualites = json_decode(
             file_get_contents(storage_path("app/data/actualites.json"))

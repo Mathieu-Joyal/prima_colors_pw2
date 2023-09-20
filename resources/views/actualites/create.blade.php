@@ -38,18 +38,10 @@
                             class=" " value="{{ old('description') }}">
                     </div>
                 </div>
-                <div>
-                    {{-- DATE PUBLICATION --}}
-                    <label for="date_publication" class="">Date de publication</label>
-                    <div>
-                        <x-forms.erreur champ="date_publication" />
-                        <input id="date_publication" name="date_publication" type="text" autofocus
-                            class=" " value="{{ old('date_publication') }}">
-                    </div>
-                </div>
+
                 <div>
                     {{-- IMAGE --}}
-                    <label for="description" class="">Déscription</label>
+                    <label for="image" class="">Image</label>
                     <div>
                         <x-forms.erreur champ="image" />
                         <input id="image" name="image" type="file"
@@ -66,9 +58,9 @@
             </form>
 
             {{-- LIEN RETOUR --}}
-            <p class="mt-10 text-center text-sm text-gray-500">
-                <a href="{{ route('notes.index') }}" class="hover:text-indigo-600">Retour aux notes</a>
-            </p>
+            {{-- <p class="mt-10 text-center text-sm text-gray-500">
+                <a href="{{ route('actualites.index') }}" class="hover:text-indigo-600">Retour aux notes</a>
+            </p> --}}
         </div>
     </div>
 

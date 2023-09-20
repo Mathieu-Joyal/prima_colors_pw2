@@ -116,9 +116,9 @@
 
         <section class="affichage-utilisateur">
 
-                @foreach ( as )
+                {{-- @foreach ( as )
 
-                @endforeach
+                @endforeach --}}
 
 
 

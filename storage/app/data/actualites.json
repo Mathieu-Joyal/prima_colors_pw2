@@ -1,0 +1,52 @@
+[
+  {
+    "titre": "Nouvelle Édition Explosive de \"Vibrations Urbaines\"!",
+    "image": "img\\actualites\\1.png",
+    "description": "Découvrez ce qui vous attend pour cette édition encore plus audacieuse du festival de couleurs urbain. De nouveaux artistes, des installations impressionnantes et des expériences inoubliables vous attendent !"
+  },
+  {
+    "titre": "Artistes Internationaux Confirmés",
+    "image": "img\\actualites\\2.png",
+    "description": "Nous sommes ravis d'annoncer la participation de talentueux artistes internationaux qui apporteront leur vision unique au festival cette année. Attendez-vous … des murales époustouflantes qui transcendent les frontières !"
+  },
+  {
+    "titre": "Programme Musical Envoûtant avec des DJs Renommés",
+    "image": "img\\actualites\\3.png",
+    "description": "La scène \"Urban Beats Arena\" vibrera au son de DJs renommés qui enflammeront le festival avec des mix envoûtants. Préparez-vous … danser toute la nuit !"
+  },
+  {
+    "titre": "Ateliers Artistiques et Éducatifs pour Tous les juges",
+    "image": "img\\actualites\\4.png",
+    "description": "Les visiteurs auront l'opportunité d'apprendre et de s'exprimer grâce … une série d'ateliers interactifs. Des maŒtres du street art partageront leurs techniques et inspireront la prochaine génération d'artistes."
+  },
+  {
+    "titre": "Fusion Culturelle Exceptionnelle : L'Art Urbain comme Catalyseur de Diversité",
+    "image": "img\\actualites\\5.png",
+    "description": "Le festival de l'année dernière a servi de plateforme pour célébrer la diversité culturelle à travers l'art. Les œuvres créées ont reflété une multitude d'influences culturelles, soulignant ainsi la richesse de la communauté locale."
+  },
+  {
+    "titre": "Murales Éphémères Éblouissantes : Un Hommage à l'Éphémérité de l'Art Urbain",
+    "image": "img\\actualites\\6.jpg",
+    "description": "Certains artistes ont choisi d'explorer l'éphémérité de l'art urbain avec des œuvres temporaires éblouissantes. Ces créations ont capturé l'instantanéité et la fugacité de l'expression artistique."
+  },
+  {
+    "titre": "Retour Triomphant de \"Vibrations Urbaines\" !",
+    "image": "img\\actualites\\7.png",
+    "description": "La dernière édition du festival a été un succès retentissant, rassemblant des milliers de passionnés d'art urbain. Les murales emblématiques ont transformé notre ville en une toile vivante."
+  },
+  {
+    "titre": "Collaborations Surprenantes entre Artistes et Musiciens",
+    "image": "img\\actualites\\8.png",
+    "description": "Le festival de l'année dernière a vu naŒtre des collaborations uniques entre les artistes de rue et les musiciens locaux. Des performances live ont créé une synergie captivante entre les arts visuels et la musique."
+  },
+  {
+    "titre": "Innovation Technologique au Service de l'Art Urbain",
+    "image": "img\\actualites\\9.png",
+    "description": "L'édition 2022 a été marquée par l'introduction de technologies novatrices, permettant aux visiteurs d'interagir avec les installations artistiques de manière inédite. Des ?uvres augmentées ont créé une expérience immersive et captivante."
+  },
+  {
+    "titre": "Événements Spéciaux en Soirée qui ont Enflammé la Nuit",
+    "image": "img\\actualites\\10.png",
+    "description": "Les festivités nocturnes ont été un point culminant incontestable. Des performances lumineuses et des spectacles de feu ont transformé les rues en un spectacle éblouissant qui a laissé une impression durable."
+  }
+]
