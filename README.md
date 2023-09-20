@@ -51,7 +51,7 @@ Le Festival Prima-Colors vise à offrir une expérience riche et diversifiée à
 
 ##  Le site web sera créer avec diverses choix technologiques pour permettre la réalisation dynamique et intuitive voulu. 
 
-    - Le développement : VS Code, JavaScript, PHP, Laravel, Html et Css. L'utilisation de Vue.js sera utilisé    pour les composantes sans aucun doute également.
+    - Le développement : VS Code, JavaScript, PHP, Laravel, Html et Css. L'utilisation de Vue.js sera utilisé pour les composantes sans aucun doute également.
     - La planification : Click-Up et Adobe XD
     - La gestion de projet : SourceTree et Github. 
     - Le montage vidéo et la qualité/montage des photos seront réalisés par Photoshop et Premiere Pro.
@@ -74,4 +74,39 @@ Le Festival Prima-Colors vise à offrir une expérience riche et diversifiée à
 | **PhotoShop** |Intégration avec d'autres logiciels Adobe , Précision et contrôle, Polyvalence, Large gamme de fonctionnalités (création, modification,manipulation d'images ect)|Ressources système : L'utilisation intensive des fonctionnalités avancées peut ralentir les ordinateurs moins puissants.
 | **Premiere Pro** |Gestion de projet avancée, Performances, Intégration avec la suite Adobe  | Taille des fichiers, Dépendance à Adobe
  
+## Présentation de la planification du travail synthèse
 
+1. La planification est catégorisé comme tel:
+
+    >- analyses des besoins 
+    >- présentation du concept 
+    >- présentation des choix technologies 
+    >- rédaction de la planification du fichier markdown 
+
+2. Design 
+
+3. Intégration front-end 
+
+4. Intégration back-end 
+
+5. Révision du projet 
+
+## Apport global des membres de l'équipe 
+
+>- Marie-Eve – contenu, front end, components et intégration/contenu du readme,  
+>- Shanté – design du site et contenu du readme, front end, base de données, back end des pages Actualités et Activités  
+>- Mathieu – organisation du click up, base de données, back end et front end de l'admin 
+
+
+La motivation est le moteur qui propulse notre équipe vers le succès. Chacun d'entre nous est animé par le désir ardent de mener à bien notre projet, conscient que la complétion et la qualité sont des piliers essentiels de notre réussite collective.
+
+Lorsqu'il s'agit de répartir la charge de travail, nous prônons l'équité. Notre objectif n'est pas de compartimenter le projet en parts égales de 33%, 33%, 33%, mais plutôt de garantir que chacun contribue de manière égale et investit un nombre d'heures similaire. Cette approche assure une distribution équilibrée des responsabilités, renforçant ainsi notre cohésion d'équipe.
+
+Notre organisation est l'un de nos atouts majeurs. La communication est au cœur de notre démarche, et nous avons consacré un temps considérable à la planification du projet, à la conception, à la gestion de la base de données, ainsi qu'à l'utilisation de l'outil de gestion de projet, ClickUp, entre autres. Cette préparation minutieuse nous permet de minimiser les problèmes potentiels et les conflits. Chacun de nous travaille de manière autonome sur sa partie spécifique du projet, ce qui élimine les conflits de programmation inutiles.
+
+Nous maintenons un rythme de communication constant, avec des débriefings quotidiens pour partager nos avancements, nos objectifs à court terme et, le cas échéant, les problèmes qui surgissent. Cette transparence favorise la résolution collective des défis et la recherche de solutions ensemble. En fin de compte, notre équipe est solidement unie par la motivation, l'équité et une communication efficace, ce qui nous permet d'avancer avec succès vers l'accomplissement de nos objectifs.
+
+## Liens: 
+
+>- clickup:  https://app.clickup.com/9003192605/v/l/s/90100440995
+>- Github:   https://github.com/Mathieu-Joyal/prima_colors_pw2
