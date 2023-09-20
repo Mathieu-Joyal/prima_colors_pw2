@@ -106,3 +106,57 @@ Route::get('/employes', [EmployeController::class, 'index'])
 Route::get("/utilisateurs/{id}/admin", [ReservationController::class, 'destroyByAdmin'])
     ->name('reservations.destroyByAdmin')
     ->middleware('auth:employe');
+
+
+    //SECTION GESTIONS ACTUALITÉS
+
+    // Affichage du formulaire d'ajout d'une actualités
+// Route::get('/actualites/create', [ActualiteController::class, 'create'])
+//     ->name('actualites.create')
+//     ->middleware('auth');
+
+// // Traitement du formulaire
+// Route::post('/actualites', [ActualiteController::class, 'store'])
+//     ->name('actualites.store')
+//     ->middleware('auth');
+
+// // Affichage du formulaire de modification d'une actualite
+// Route::get("/actualites/edit/{id}", [ActualiteController::class, 'edit'])
+//     ->name('actualites.edit')
+//     ->middleware('auth');
+
+// // Traitement du formulaire de modification
+// Route::post("/actualites/update", [ActualiteController::class, 'update'])
+//     ->name('actualites.update')
+//     ->middleware('auth');
+
+//     //Suppression d'une actualité
+// Route::post("/actualites/destroy", [ActualiteController::class, 'destroy'])
+//     ->name('actualites.destroy')
+//     ->middleware('auth');
+
+    //SECTION GESTIONS ACTIVITÉS
+
+     // Affichage du formulaire d'ajout d'une activités
+// Route::get('/activites/create', [ActiviteController::class, 'create'])
+// ->name('activites.create')
+// ->middleware('auth');
+
+// // Traitement du formulaire
+// Route::post('/activites', [ActiviteController::class, 'store'])
+// ->name('activites.store')
+// ->middleware('auth');
+
+// // Affichage du formulaire de modification d'une Activite
+// Route::get("/activites/edit/{id}", [ActiviteController::class, 'edit'])
+// ->name('activites.edit')
+// ->middleware('auth');
+
+// // Traitement du formulaire de modification
+// Route::post("/activites/update", [ActiviteController::class, 'update'])
+// ->name('activites.update')
+// ->middleware('auth');
+// //Suppression d'une activité
+// Route::post("/activites/destroy", [ActiviteController::class, 'destroy'])
+// ->name('activites.destroy')
+// ->middleware('auth');
