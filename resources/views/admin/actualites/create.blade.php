@@ -40,7 +40,7 @@
                 </div>
 
                 <div>
-                    {{-- IMAGE --}}
+                    {{-- IMAGE --hello}}
                     <label for="image" class="">Image</label>
                     <div>
                         <x-forms.erreur champ="image" />
