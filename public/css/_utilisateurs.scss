@@ -1,11 +1,13 @@
 body {
     color: $jaune;
 
-    h3 {
-        color: $jaune;
+    .presentation {
+        font-size: 1.25em;
+        margin: 0 5em;
     }
 
-    h4 {
+    h3 {
+        color: $jaune;
     }
 
     section {
@@ -19,11 +21,59 @@ body {
     }
 
     article {
-        padding: 0.5em;
+        padding: 1em .5em;
+        margin: 1em 0;
+
+        .les_dates {
+            font-size: 1em;
+        }
 
         div {
             color: $blanc;
             margin: 1em 0;
         }
+
+    }
+
+    article.une_reservation {
+        padding: 1em;
+
+        &:hover {
+        background-color: $vert;
+        transition: background-color 0.3s;
+        }
+
+        button {
+            padding: 0.5em 1em;
+            border-radius: .25em;
+            margin-top: 2em;
+            bottom: 0;
+            right: 1em;
+
+            &:hover {
+                background-color: red;
+                transition: background-color 0.3s;
+            }
+        }
+    }
+
+    .notice {
+        font-size: 0.75em;
+        color: red;
+    }
+
+    .un_concours {
+        margin: 0 0 5em 0;
+
+        h4 {
+            color: $rose;
+            text-align: center;
+        }
+
+        img {
+            padding: 0.5em;
+            border: .1em solid $vert
+        }
     }
 }
+

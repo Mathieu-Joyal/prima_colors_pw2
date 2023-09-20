@@ -38,7 +38,7 @@ p {
   font-style: normal;
   font-size: 27px;
   color: white;
-  text-transform: capitalize;
+  line-height: 1.5;
 }
 
 html {
@@ -98,6 +98,41 @@ button.voir {
   margin: 0;
 }
 
+blockquote {
+  font-family: "pf-venue", sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  font-style: italic;
+  color: #eca6d9;
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  position: relative;
+  opacity: 0;
+  animation: fade-in 1.5s ease-in-out forwards;
+}
+
+blockquote span.material-icons {
+  font-size: 36px;
+  vertical-align: middle;
+  position: relative;
+  top: -10px;
+}
+
+blockquote span.material-icons:first-child {
+  transform: scaleX(-1);
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .contenu {
   background-color: #0B8A80;
   width: 100%;
@@ -131,7 +166,7 @@ button.voir {
   position: relative;
   margin-top: 30px;
   margin-right: 50px;
-  margin-left: 50px;
+  padding-left: 50px;
   transition: color 0.3s ease;
 }
 
@@ -231,22 +266,22 @@ p.slogan {
   top: 140px;
 }
 
-.menu {
+.menu_nav {
   display: flex;
   flex-direction: row;
   align-items: center;
   z-index: 3;
 }
 
-.menu .item {
+.menu_nav .item_nav {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  margin-left: 50px;
+  padding-left: 50px;
 }
 
-.menu .item a.nav {
+.menu_nav .item_nav a.nav {
   display: block;
   width: 100%;
   margin-right: 10px;
@@ -262,21 +297,21 @@ p.slogan {
   transition: color 0.3s ease;
 }
 
-.menu .item a:hover {
+.menu_nav .item_nav a:hover {
   color: #030303;
   z-index: 3;
 }
 
-.menu .item a:hover .ligne,
-.menu .item a:hover .ligne_debut {
+.menu_nav .item_nav a:hover .ligne_nav,
+.menu_nav .item_nav a:hover .ligne_debut_nav {
   width: 100%;
   background-color: #eca6d9;
   z-index: -1;
   transition: width 0.3s ease;
 }
 
-.menu .ligne {
-  height: 65px;
+.menu_nav .ligne_nav {
+  height: 40px;
   width: 3px;
   background-color: #eca6d9;
   z-index: -1;
@@ -316,11 +351,12 @@ p.slogan {
 }
 
 .billet-img-container:hover .billet-img {
-  filter: grayscale(100%) sepia(100%) hue-rotate(180deg);
+  filter: grayscale(100%) sepia(100%) hue-rotate(300deg); /* Ajustez la valeur de hue-rotate pour obtenir une teinte rose */
+  filter: grayscale(100%) sepia(100%) hue-rotate(300deg) brightness(100%) saturate(100%);
 }
 
 .billet-img-container:hover .billet-text {
-  color: white;
+  color: white !important;
 }
 
 .reseau {
@@ -573,6 +609,10 @@ p.slogan {
 body {
   color: #eeb15e;
 }
+body .presentation {
+  font-size: 1.25em;
+  margin: 0 5em;
+}
 body h3 {
   color: #eeb15e;
 }
@@ -585,9 +625,274 @@ body section img {
   margin-right: auto;
 }
 body article {
-  padding: 0.5em;
+  padding: 1em 0.5em;
+  margin: 1em 0;
+}
+body article .les_dates {
+  font-size: 1em;
 }
 body article div {
   color: white;
   margin: 1em 0;
+}
+
+
+.section_concours {
+  position: relative;
+  background-image: url("img/accueil/ban_concours.png");
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 200px;
+  padding-bottom: 500px;
+}
+
+.carre_noir {
+  position: absolute;
+  padding-left: 15px;
+  padding-right: 15px;
+  top: 26%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  height: 365px;
+  background-color: #030303;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  z-index: 2;
+}
+
+.carre_noir h1 {
+  margin-top: -20px;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+  font-size: 95px;
+  z-index: 3;
+}
+
+.carre_noir h3 {
+  margin: 10px 0;
+  font-size: 40px;
+  padding-bottom: 100px;
+  text-transform: none;
+  z-index: 3;
+}
+
+.carre_noir a {
+  font-family: "pf-venue", sans-serif;
+  font-size: 32px;
+  text-decoration: none;
+  color: #eeb15e;
+  font-weight: bold;
+  z-index: 3;
+  border: 3px solid #eeb15e;
+  padding: 10px 50px;
+}
+
+.carre_noir .concours {
+  text-align: right;
+}
+
+.carre_noir .concours i {
+  color: #eeb15e;
+}
+
+.concours {
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+.concours .material-icons {
+  font-size: 36px;
+  color: #030303;
+  position: relative;
+  top: 18%;
+  left: 7%;
+  z-index: 4;
+}
+
+.concours::before {
+  content: "";
+  position: absolute;
+  top: 55%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  width: 38px;
+  height: 38px;
+  background-color: #eeb15e;
+  z-index: 2;
+}
+
+.section_compte {
+  position: relative;
+  background-image: url("img/accueil/ban_compte.png");
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 200px;
+  padding-bottom: 500px;
+}
+
+.carre_blanc {
+  position: absolute;
+  padding-left: 15px;
+  padding-right: 15px;
+  top: 26%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  height: 365px;
+  background-color: rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+  z-index: 2;
+}
+
+.carre_blanc h1 {
+  color: #eca6d9;
+  margin-top: -20px;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+  font-size: 95px;
+  z-index: 3;
+}
+
+.carre_blanc h3 {
+  color: #eca6d9;
+  margin: 10px 0;
+  font-size: 40px;
+  padding-bottom: 100px;
+  text-transform: none;
+  z-index: 3;
+}
+
+.carre_blanc a {
+  font-family: "pf-venue", sans-serif;
+  font-size: 32px;
+  text-decoration: none;
+  color: #030303;
+  font-weight: bold;
+  z-index: 3;
+  background-color: #eca6d9;
+  padding: 10px 50px;
+}
+
+.carre_blanc .compte {
+  text-align: right;
+}
+
+.carre_blanc .compte i {
+  color: #030303;
+}
+
+.compte {
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+.compte .material-icons {
+  font-size: 36px;
+  color: #eca6d9;
+  position: relative;
+  top: 18%;
+  left: 7%;
+  z-index: 4;
+}
+
+.compte::before {
+  content: "";
+  position: absolute;
+  top: 55%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  width: 38px;
+  height: 38px;
+  background-color: #030303;
+  z-index: 2;
+=======
+body article.une_reservation {
+  padding: 1em;
+}
+body article.une_reservation:hover {
+  background-color: #0B8A80;
+  transition: background-color 0.3s;
+}
+body article.une_reservation button {
+  padding: 0.5em 1em;
+  border-radius: 0.25em;
+  margin-top: 2em;
+  bottom: 0;
+  right: 1em;
+}
+body article.une_reservation button:hover {
+  background-color: red;
+  transition: background-color 0.3s;
+}
+body .notice {
+  font-size: 0.75em;
+  color: red;
+}
+body .un_concours {
+  margin: 0 0 5em 0;
+}
+body .un_concours h4 {
+  color: #eca6d9;
+  text-align: center;
+}
+body .un_concours img {
+  padding: 0.5em;
+  border: 0.1em solid #0B8A80;
+}
+
+.conteneur_connexion {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 5em 0;
+}
+.conteneur_connexion section {
+  flex: 1;
+  position: relative;
+  max-width: 400px;
+}
+.conteneur_connexion section:first-child::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 3px;
+  background-color: #eca6d9;
+}
+
+@media (max-width: 1060px) {
+  .conteneur_connexion {
+    display: block;
+  }
+  .conteneur_connexion section:first-child::after {
+    display: none !important;
+  }
+}
+form select {
+  padding: 1em 3em;
+  border-radius: 0.25em;
+  margin: 1em 0;
+  background-color: lightgray;
+}
+form input {
+  margin: 0 0 1em 0;
+}
+form button {
+  padding: 1em 2em;
+  border-radius: 0.25em;
+}
+form button:hover {
+  background-color: #0B8A80;
+  transition: background-color 0.3s;
+
 }/*# sourceMappingURL=style.css.map */
