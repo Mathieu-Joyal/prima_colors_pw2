@@ -39,9 +39,9 @@
                 <article class="activites vendredi {{ $key >= 3 ? 'hidden' : '' }} ">
 
                     <div class="conteneur-image">
-                        {{-- <img class="thumbnail" src="{{ $activite->image }}" alt="image de l'activite"> --}}
-                        <img class="thumbnail" src="{{ asset('img\activites\cereals.png') }}" alt=""
-                            loading="lazy">
+                        <img class="thumbnail" src="{{ $activite->image }}" alt="image de l'activite">
+                        {{-- <img class="thumbnail" src="{{ asset('img\activites\cereals.png') }}" alt=""
+                            loading="lazy"> --}}
 
                         <div class="description">
                             <p> description {{ $activite->description }}</p>
@@ -139,9 +139,9 @@
                 <article class="activites samedi {{ $key >= 3 ? 'hidden' : '' }}">
 
                     <div class="conteneur-image">
-                        {{-- <img class="thumbnail" src="{{ $activite->image }}" alt="image de l'activite"> --}}
-                        <img class="thumbnail" src="{{ asset('img\activites\costume-party.png') }}" alt=""
-                            loading="lazy">
+                        <img class="thumbnail" src="{{ $activite->image }}" alt="image de l'activite">
+                        {{-- <img class="thumbnail" src="{{ asset('img\activites\costume-party.png') }}" alt=""
+                            loading="lazy"> --}}
                         <div class="description">
                             <p> description {{ $activite->description }}</p>
 
@@ -192,9 +192,9 @@
                 <article class="activites dimanche {{ $key >= 3 ? 'hidden' : '' }}">
 
                     <div class="conteneur-image">
-                        {{-- <img class="thumbnail" src="{{ $activite->image }}" alt="image de l'activite"> --}}
-                        <img class="thumbnail" src="{{ asset('img\activites\dj2.png') }}" alt=""
-                            loading="lazy">
+                        <img class="thumbnail" src="{{ $activite->image }}" alt="image de l'activite">
+                        {{-- <img class="thumbnail" src="{{ asset('img\activites\dj2.png') }}" alt=""
+                            loading="lazy"> --}}
                         <div class="description">
                             <p> description {{ $activite->description }}</p>
 

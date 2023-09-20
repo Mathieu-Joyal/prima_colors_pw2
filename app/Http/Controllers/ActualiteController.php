@@ -18,7 +18,7 @@ class ActualiteController extends Controller
     public function index()
     {
         $actualitesRecentes = Actualite::whereYear('date_publication', 2023)
-            ->orderBy('date_publication', 'desc')
+            ->orderBy('date_publication', 'asc')
             ->take(5)
             ->get();
 
