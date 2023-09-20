@@ -26,22 +26,23 @@
     top: 140px;
 }
   
-.menu {
+.menu_nav {
     display: flex;
     flex-direction: row;
     align-items: center;
     z-index: 3; 
 }
   
-.menu .item {
+.menu_nav .item_nav {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    margin-left: 50px; 
+    padding-left: 50px;
+
 }
   
-.menu .item a.nav {
+.menu_nav .item_nav a.nav {
     display: block;
     width: 100%;
     margin-right: 10px;
@@ -57,21 +58,21 @@
     transition: color 0.3s ease;
 }
   
-.menu .item a:hover {
+.menu_nav .item_nav a:hover {
     color: $noir;
     z-index: 3;
 }
   
-.menu .item a:hover .ligne, 
-.menu .item a:hover .ligne_debut {
+.menu_nav .item_nav a:hover .ligne_nav, 
+.menu_nav .item_nav a:hover .ligne_debut_nav {
     width: 100%;
     background-color: $rose;
     z-index: -1;
     transition: width 0.3s ease;
 }
   
-.menu .ligne {
-    height: 65px;
+.menu_nav .ligne_nav {
+    height: 40px;
     width: 3px;
     background-color: $rose;
     z-index: -1;
@@ -111,16 +112,15 @@
     z-index: 4;
 }
 
-
 .billet-img-container:hover .billet-img {
-    filter: grayscale(100%) sepia(100%) hue-rotate(180deg); 
+    filter: grayscale(100%) sepia(100%) hue-rotate(300deg); /* Ajustez la valeur de hue-rotate pour obtenir une teinte rose */
+    filter: grayscale(100%) sepia(100%) hue-rotate(300deg) brightness(100%) saturate(100%);
 }
+
 
 .billet-img-container:hover .billet-text {
-    color: $blanc; 
+    color: $blanc !important;  // a voir avec marie, texte change pas
 }
-
-
 
 .reseau {
     display: flex;
