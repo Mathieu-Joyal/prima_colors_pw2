@@ -400,7 +400,8 @@ p.slogan {
   justify-content: space-between;
   margin-bottom: 3em;
   opacity: 0;
-  transform: translateX(-50px); /* Start offscreen to the left */
+  transform: translateX(-50px);
+  /* Start offscreen to the left */
   transition: opacity 2s ease, transform 2s ease;
 }
 .conteneur-activites article.activites .conteneur-image {
@@ -444,12 +445,14 @@ p.slogan {
 }
 .conteneur-activites .conteneur-image {
   opacity: 0;
-  transform: translateX(-50px); /* Start offscreen to the left */
+  transform: translateX(-50px);
+  /* Start offscreen to the left */
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 .conteneur-activites .conteneur-image.visible {
   opacity: 1;
-  transform: translateX(0); /* Move to original position */
+  transform: translateX(0);
+  /* Move to original position */
 }
 .conteneur-activites .activites.hidden {
   display: none;
@@ -459,7 +462,8 @@ p.slogan {
 }
 .conteneur-activites .activites.visible {
   opacity: 1;
-  transform: translateX(0); /* Move to original position */
+  transform: translateX(0);
+  /* Move to original position */
 }
 
 .conteneur-actualites .titre {

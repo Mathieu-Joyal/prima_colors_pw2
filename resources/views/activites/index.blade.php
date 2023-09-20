@@ -31,8 +31,6 @@
                             <span style="animation-delay: 2.2s">1</span>
                             <span style="animation-delay: 2.4s">3</span>
                         </h2>
-
-
                     </div>
                 </div>
             </div>
@@ -40,14 +38,13 @@
             @foreach ($vendrediActivites as $key => $activite)
                 <article class="activites vendredi {{ $key >= 3 ? 'hidden' : '' }} ">
 
-
                     <div class="conteneur-image">
                         {{-- <img class="thumbnail" src="{{ $activite->image }}" alt="image de l'activite"> --}}
                         <img class="thumbnail" src="{{ asset('img\activites\cereals.png') }}" alt=""
                             loading="lazy">
+
                         <div class="description">
                             <p> description {{ $activite->description }}</p>
-
                         </div>
                     </div>
 
@@ -64,8 +61,7 @@
                         <div class="endroit">
                             <p>endroit {{ $activite->endroit }}</p>
                         </div>
-
-
+                    </div>
                 </article>
             @endforeach
             <button class="voir voir-plus" onclick="voirPlus(this)">Voir plus</button>
@@ -98,6 +94,7 @@
                     observer.observe(image);
                 });
             });
+
             //see more / less @button click
             function voirPlus(button) {
                 const articlesVendredi = document.querySelectorAll('.activites.vendredi');
@@ -143,9 +140,9 @@
 
                     <div class="conteneur-image">
                         {{-- <img class="thumbnail" src="{{ $activite->image }}" alt="image de l'activite"> --}}
-                       <img class="thumbnail" src="{{ asset('img\activites\costume-party.png') }}" alt=""
+                        <img class="thumbnail" src="{{ asset('img\activites\costume-party.png') }}" alt=""
                             loading="lazy">
-                            <div class="description">
+                        <div class="description">
                             <p> description {{ $activite->description }}</p>
 
                         </div>
@@ -198,10 +195,10 @@
                         {{-- <img class="thumbnail" src="{{ $activite->image }}" alt="image de l'activite"> --}}
                         <img class="thumbnail" src="{{ asset('img\activites\dj2.png') }}" alt=""
                             loading="lazy">
-                            <div class="description">
-                                <p> description {{ $activite->description }}</p>
+                        <div class="description">
+                            <p> description {{ $activite->description }}</p>
 
-                            </div>
+                        </div>
                     </div>
 
 
