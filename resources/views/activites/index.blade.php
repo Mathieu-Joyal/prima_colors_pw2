@@ -17,9 +17,22 @@
                 </div>
 
                 <div class="conteneur-bordure">
-                    <div class="bordure"></div>
+                    <div class="bordure activites"></div>
                     <div class="titre">
-                        <h2>2023 | 10 | 13</h2>
+                        <h2>
+                            <span style="animation-delay: 0.6s">2</span>
+                            <span style="animation-delay: 0.8s">0</span>
+                            <span style="animation-delay: 1s">2</span>
+                            <span style="animation-delay: 1.2s">3</span>
+                            <span style="animation-delay: 1.4s"> | </span>
+                            <span style="animation-delay: 1.6s">1</span>
+                            <span style="animation-delay: 1.8s">0</span>
+                            <span style="animation-delay: 2s"> | </span>
+                            <span style="animation-delay: 2.2s">1</span>
+                            <span style="animation-delay: 2.4s">3</span>
+                        </h2>
+
+
                     </div>
                 </div>
             </div>
@@ -37,8 +50,6 @@
 
                         </div>
                     </div>
-
-
 
                     <div class="conteneur-titre">
 
@@ -67,20 +78,20 @@
                 const observer = new IntersectionObserver(glide, {
                     threshold: 0.2
                 });
-                const articles = document.querySelectorAll('.activites');
+                const activites = document.querySelectorAll('.activites');
                 const images = document.querySelectorAll('.conteneur-image');
 
-                function glide(entries) {
-                    entries.forEach(function(entry) {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('visible');
-                            observer.unobserve(entry.target);
+                function glide(articles) {
+                    articles.forEach(function(article) {
+                        if (article.isIntersecting) {
+                            article.target.classList.add('visible');
+                            observer.unobserve(article.target);
                         }
                     });
                 }
 
-                articles.forEach(function(article) {
-                    observer.observe(article);
+                activites.forEach(function(activite) {
+                    observer.observe(activite);
                 });
 
                 images.forEach(function(image) {

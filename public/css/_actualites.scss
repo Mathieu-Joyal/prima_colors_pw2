@@ -1,9 +1,54 @@
+.conteneur-actualites {
+    .titre {
+        margin-bottom: 100px;
+    }
+
+    .titre h2 span {
+        opacity: 0;
+        animation: typing 2s forwards;
+        animation-delay: var(--delay);
+        display: inline-block;
+        padding-bottom: 20px;
+    }
+
+    .bordure.actualites {
+        width: 0;
+        height: 2px;
+        animation: expand 4s 0.5s forwards;
+        border-bottom: solid $rose 3px;
+        margin-top: 36px;
+    }
+
+    @keyframes expand {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 100%;
+        }
+    }
+
+    @keyframes typing {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+}
+
+//ARTICLE - ACTUALITÉS
 .conteneur-articles-actualites {
     display: flex;
     justify-content: space-between;
     border-bottom: 3px solid $rose;
     padding-top: 2em;
-
 
     h3,
     h4 {
@@ -24,10 +69,16 @@
         padding-left: 6em;
         padding-right: 6em;
         margin: 0;
-        .description{
+
+        .description {
             margin: 0;
-            p{
+
+            p {
                 margin: 0;
+            }
+
+            .plus {
+                display: none;
             }
         }
     }
@@ -46,10 +97,7 @@
     }
 }
 
-.plus {
-    display: none;
-}
-
+//BOUTTON VOIR PLUS
 .conteneur-btn-voir {
     display: flex;
     justify-content: flex-end;
@@ -71,40 +119,5 @@
         height: 25px;
         padding-top: 0.5em;
         padding-left: 1em;
-
     }
-
-
-
-
-
-}
-
-.titre{
-    margin-bottom: 100px;
-}
-
-.titre h2 span {
-    opacity: 0;
-    animation: typing 2s forwards;
-    animation-delay: var(--delay);
-    display: inline-block;
-    padding-bottom: 20px;
-}
-
-.bordure.actualites {
-    width: 0;
-    height: 2px;
-    animation: expand 4s 0.5s forwards;
-    border-bottom: solid $rose 3px;
-}
-
-@keyframes expand {
-    from { width: 0; }
-    to { width: 100%; }
-}
-
-@keyframes typing {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
 }

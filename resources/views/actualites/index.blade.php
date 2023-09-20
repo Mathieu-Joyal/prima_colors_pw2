@@ -21,7 +21,6 @@
 
             </div>
 
-
             @foreach ($actualitesRecentes as $actualite)
                 <article class="conteneur-articles-actualites">
 

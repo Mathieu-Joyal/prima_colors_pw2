@@ -1,3 +1,5 @@
+
+//
 .conteneur-activites {
     display: flex;
     flex-direction: column;
@@ -21,12 +23,45 @@
             }
         }
     }
+    .conteneur-bordure.titre{
+        margin-bottom: 100px;
+    }
 
-    .activites {
+    .titre h2 span {
+        opacity: 0;
+        animation: typing 2s forwards;
+        animation-delay: var(--delay);
+        display: inline-block;
+        padding-bottom: 20px;
+    }
+
+    .bordure.activites {
+        width: 0;
+        height: 2px;
+        animation: expand 4s 0.5s forwards;
+        border-bottom: solid $rose 3px;
+        margin-top: 36px;
+    }
+
+    @keyframes expand {
+        from { width: 0; }
+        to { width: 100%; }
+    }
+
+    @keyframes typing {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    //ARTICLE - ACTIVITÉS
+    article.activites {
         display: inline-flex;
         justify-content: space-between;
-        // border: 1px solid red;
         margin-bottom: 3em;
+        opacity: 0;
+        transform: translateX(-50px); /* Start offscreen to the left */
+        transition: opacity 2s ease, transform 2s ease;
+
 
         .conteneur-image {
             display: inline;
@@ -46,13 +81,8 @@
                 height: 200px;
                 background-color: $blanc;
                 color: $noir;
-
-
             }
         }
-        // .conteneur-image:hover .description{
-        //     display: block;
-        //         }
 
         .conteneur-titre {
             min-width: 300px;
@@ -78,26 +108,6 @@
                 text-align: left;
             }
         }
-
-
-    }
-
-    .activites.hidden {
-        display: none;
-    }
-
-    .hidden {
-        display: none;
-    }
-    .activites {
-        opacity: 0;
-        transform: translateX(-50px); /* Start offscreen to the left */
-        transition: opacity 2s ease, transform 2s ease;
-    }
-
-    .activites.visible {
-        opacity: 1;
-        transform: translateX(0); /* Move to original position */
     }
     .conteneur-image {
         opacity: 0;
@@ -110,4 +120,17 @@
         transform: translateX(0); /* Move to original position */
     }
 
+    //FONCTION SHOW MORE/LESS
+    .activites.hidden {
+        display: none;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .activites.visible {
+        opacity: 1;
+        transform: translateX(0); /* Move to original position */
+    }
 }
