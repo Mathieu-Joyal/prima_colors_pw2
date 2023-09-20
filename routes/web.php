@@ -3,6 +3,8 @@
 use App\Http\Controllers\AccueilController;
 use App\Http\Controllers\ActualiteController;
 use App\Http\Controllers\ActiviteController;
+use App\Http\Controllers\AdminActualiteController;
+// use App\Http\Controllers\AdminActiviteController;
 use App\Http\Controllers\ConnexionController;
 use App\Http\Controllers\EmployeController;
 use App\Http\Controllers\EnregistrementController;
@@ -116,18 +118,18 @@ Route::get("/utilisateurs/{id}/admin", [ReservationController::class, 'destroyBy
     //SECTION GESTIONS ACTUALITÉS
 
     //Affichage de la liste d'actualités
-Route::get('/admin/actualites/indexAdmin', [ActualiteController::class, 'indexAdmin'])
-    ->name('actualites.indexAdmin')
+Route::get('/admin/actualites/index', [AdminActualiteController::class, 'index'])
+    ->name('admin.actualites.index')
     ->middleware('auth:employe');
 
     //Affichage du formulaire d'ajout d'une actualités
-Route::get('/actualites/create', [ActualiteController::class, 'create'])
-    ->name('actualites.create')
+Route::get('/admin/actualites/create', [AdminActualiteController::class, 'create'])
+    ->name('admin.actualites.create')
     ->middleware('auth:employe');
 
 // Traitement du formulaire
-Route::post('/actualites', [ActualiteController::class, 'store'])
-    ->name('actualites.store')
+Route::post('admin/actualites/store', [AdminActualiteController::class, 'store'])
+    ->name('admin.actualites.store')
     ->middleware('auth:employe');
 
 // // Affichage du formulaire de modification d'une actualite
