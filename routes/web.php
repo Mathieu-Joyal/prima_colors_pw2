@@ -57,6 +57,7 @@ Route::post("/enregistrement", [EnregistrementController::class, 'store'])
     ->name('enregistrement.store')
     ->middleware('guest');
 
+
 // Traitement du formulaire d'enregistrement d'un nouveau compte employe
 Route::post("/enregistrement/employe", [EnregistrementController::class, 'storeEmploye'])
     ->name('enregistrement.storeEmploye')
@@ -100,7 +101,11 @@ Route::post('/utilisateurs/concours', [UtilisateurController::class, 'updateConc
 // Affichage de la page employé
 Route::get('/employes', [EmployeController::class, 'index'])
     ->name('employes.index')
-    ->middleware('employe');
+    ->middleware('auth:employe');
+// Affichage du formulaire création de compte employé
+Route::get('/employes/create', [EmployeController::class, 'create'])
+    ->name('employes.create')
+    ->middleware('auth:employe');
 
 // Traitement de la suppression par l'admininstrateur du forfait choisit par l'utilisateur
 Route::get("/utilisateurs/{id}/admin", [ReservationController::class, 'destroyByAdmin'])
@@ -109,6 +114,11 @@ Route::get("/utilisateurs/{id}/admin", [ReservationController::class, 'destroyBy
 
 
     //SECTION GESTIONS ACTUALITÉS
+
+    //Affichage de la liste d'actualités
+Route::get('/admin/actualites/indexAdmin', [ActualiteController::class, 'indexAdmin'])
+    ->name('actualites.indexAdmin')
+    ->middleware('auth:employe');
 
     //Affichage du formulaire d'ajout d'une actualités
 Route::get('/actualites/create', [ActualiteController::class, 'create'])

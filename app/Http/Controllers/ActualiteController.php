@@ -34,6 +34,19 @@ class ActualiteController extends Controller
     }
 
 /**
+     * Affiche la liste des actualités
+     *
+     * @return View
+     */
+
+public function indexAdmin(){
+    return view ('actualites.indexAdmin');
+}
+
+
+
+
+/**
      * Affiche le formulaire d'ajout
      *
      * @return View
