@@ -1,0 +1,104 @@
+[
+  {
+    "titre": "Zone de Détente Créative",
+    "image": "img\\activites\\what-if.png",
+    "endroit": "Groove Gallery",
+    "description": "Prenez une pause dans une oasis de détente spécialement conçue. Des sièges confortables, des hamacs et une ambiance musicale apaisante vous permettront de vous ressourcer tout en imprégnant l'atmosphère artistique."
+  },
+  {
+    "titre": "Événements Spéciaux en Soirée",
+    "image": "img\\activites\\painted-face.png",
+    "endroit": "Urban Beats Arena",
+    "description": "Les festivités continuent après le coucher du soleil avec des événements spéciaux en soirée. Profitez de projections de films liés au street art, de soirées thématiques animées par des DJ talentueux, et de performances artistiques nocturnes qui illumineront la nuit."
+  },
+  {
+    "titre": "Défis Artistiques",
+    "image": "img\\activites\\yellow-bug.png",
+    "endroit": "Graffiti Groove Stage",
+    "description": "Lancez des défis créatifs aux artistes en direct ou aux visiteurs audacieux. Les défis peuvent varier, de la création d'une oeuvre en un temps limité … la réalisation d'une fresque collaborative basée sur un thème surprise."
+  },
+  {
+    "titre": "Scènes Artistiques Mobiles",
+    "image": "img\\activites\\old-lady.png",
+    "endroit": "ColorSplash Sound Hub",
+    "description": "Prévoyez des scènes artistiques mobiles où des artistes peuvent se produire et créer des oeuvres sur des supports non conventionnels, tels que des voitures ou des conteneurs, ajoutant ainsi une touche d'imprévisibilité artistique au festival."
+  },
+  {
+    "titre": "Zone de Démonstration de Techniques",
+    "image": "img\\activites\\paint-brushes.png",
+    "endroit": "Artistic Beats Pavilion",
+    "description": "Offrez aux visiteurs la possibilité de voir de près comment les techniques de street art sont mises en oeuvre. Des démonstrations de pochoirs, de bombes de peinture et d'autres méthodes créatives seront au programme."
+  },
+  {
+    "titre": "Performance de Danse Urbaine",
+    "image": "img\\activites\\1.png",
+    "endroit": "Street Art Soundstage",
+    "description": "Faites place … des troupes de danseurs urbains qui exécuteront des chorégraphies contemporaines en harmonie avec l'ambiance du festival. Laissez-vous emporter par l'énergie du mouvement."
+  },
+  {
+    "titre": "Oeuvres Éphémères",
+    "image": "img\\activites\\color-throw.png",
+    "endroit": "Vibrant Vibes Arena",
+    "description": "Certaines oeuvres peuvent être éphémères par nature. Prévoyez des zones où les artistes peuvent expérimenter avec des matériaux temporaires, comme du sable coloré ou des craies, pour créer des oeuvres éphémères qui évoluent tout au long du festival."
+  },
+  {
+    "titre": "Expositions de Street Art Historique",
+    "image": "img\\activites\\expo-art.png",
+    "endroit": "Funky Graffiti Groove",
+    "description": "Explorez l'histoire du street art … travers des expositions qui mettent en valeur des oeuvres emblématiques du passé, permettant aux visiteurs de comprendre l'évolution de cet art urbain au fil du temps."
+  },
+  {
+    "titre": "Spectacles de Théâtre de Rue",
+    "image": "img\\activites\\costume-party.png",
+    "endroit": "The Creative Rhythm Zone",
+    "description": "Transformez les rues en scènes de théâtre vivantes. Des troupes de théâtre de rue présenteront des performances interactives, mélangeant comédie, improvisation et éléments visuels pour divertir les spectateurs."
+  },
+  {
+    "titre": "Zone de Projection de Documentaires",
+    "image": "img\\activites\\umbrellas2.png",
+    "endroit": "Epic Urban Art Beats",
+    "description": "Plongez dans l'univers du street art … travers des projections de documentaires qui explorent les artistes, les mouvements et l'impact du street art sur la culture contemporaine."
+  },
+  {
+    "titre": "Scène DJ en Plein Air",
+    "image": "img\\activites\\dj2.png",
+    "endroit": "ColorSplash Sound Hub",
+    "description": "Créez une scène dynamique où des DJs locaux et invités joueront des sets en direct. Ils fusionneront différents genres musicaux pour accompagner l'ambiance artistique du festival. Des espaces de danse seront aménagés pour permettre aux visiteurs de profiter pleinement de la musique."
+  },
+  {
+    "titre": "Food Trucks Gourmands",
+    "image": "img\\activites\\cereals.png",
+    "endroit": "Groove Gallery",
+    "description": "Découvrez une variété de délices culinaires proposés par une sélection de food trucks locaux. Des plats savoureux allant de la cuisine de rue internationale aux spécialités locales seront disponibles pour satisfaire tous les palais."
+  },
+  {
+    "titre": "",
+    "image": "",
+    "endroit": "",
+    "description": ""
+  },
+  {
+    "titre": "",
+    "image": "",
+    "endroit": "",
+    "description": ""
+  },
+  {
+    "titre": "",
+    "image": "",
+    "endroit": "",
+    "description": ""
+  },
+  {
+    "titre": "",
+    "image": "",
+    "endroit": "",
+    "description": ""
+  },
+  {
+    "titre": "",
+    "image": "",
+    "endroit": "",
+    "description": ""
+  }
+]

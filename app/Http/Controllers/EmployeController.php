@@ -17,12 +17,15 @@ class EmployeController extends Controller
      * @return View
      */
     public function index() {
+return view ('employes.index');
 
+    }
+    public function create(){
         $un_employe = auth()->guard('employe')->user();
 
         $employes = \App\Models\Employe::all();
 
-        return view('employes.index', [
+        return view('employes.create', [
             "un_employe" => $un_employe,
             "employes" => $employes,
             "roles" => Role::all(),
