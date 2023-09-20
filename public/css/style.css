@@ -653,6 +653,14 @@ body .un_concours img {
   background-color: #eca6d9;
 }
 
+@media (max-width: 1060px) {
+  .conteneur_connexion {
+    display: block;
+  }
+  .conteneur_connexion section:first-child::after {
+    display: none !important;
+  }
+}
 form select {
   padding: 1em 3em;
   border-radius: 0.25em;

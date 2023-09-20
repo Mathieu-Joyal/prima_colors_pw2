@@ -19,3 +19,15 @@
         }
     }
 }
+
+
+@media (max-width: 1060px) {
+
+    .conteneur_connexion {
+        display: block;
+
+        section:first-child::after {
+            display: none !important;
+        }
+    }
+}
