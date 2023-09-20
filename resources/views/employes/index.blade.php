@@ -6,6 +6,4 @@
     {{-- <a href="{{ route('activites.create') }}">Gestion de activités</a> --}}
     <a href=""></a>
 
-
-
 </x-layout>

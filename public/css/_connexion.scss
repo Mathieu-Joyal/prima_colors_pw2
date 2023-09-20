@@ -1,0 +1,33 @@
+.conteneur_connexion {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 5em 0;
+
+    section {
+        flex: 1;
+        position: relative;
+        max-width: 400px;
+
+        &:first-child::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 3px;
+            background-color: $rose;
+        }
+    }
+}
+
+
+@media (max-width: 1060px) {
+
+    .conteneur_connexion {
+        display: block;
+
+        section:first-child::after {
+            display: none !important;
+        }
+    }
+}
