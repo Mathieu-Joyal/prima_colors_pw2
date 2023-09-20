@@ -8,7 +8,7 @@
         <p>{{ session('email') }}</p>
     @endif --}}
 
-    <div class="conteneur">
+    <div class="conteneur_connexion">
 
         <section class="utilisateur">
 

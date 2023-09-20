@@ -609,6 +609,10 @@ p.slogan {
 body {
   color: #eeb15e;
 }
+body .presentation {
+  font-size: 1.25em;
+  margin: 0 5em;
+}
 body h3 {
   color: #eeb15e;
 }
@@ -621,12 +625,17 @@ body section img {
   margin-right: auto;
 }
 body article {
-  padding: 0.5em;
+  padding: 1em 0.5em;
+  margin: 1em 0;
+}
+body article .les_dates {
+  font-size: 1em;
 }
 body article div {
   color: white;
   margin: 1em 0;
 }
+
 
 .section_concours {
   position: relative;
@@ -806,4 +815,84 @@ body article div {
   height: 38px;
   background-color: #030303;
   z-index: 2;
+=======
+body article.une_reservation {
+  padding: 1em;
+}
+body article.une_reservation:hover {
+  background-color: #0B8A80;
+  transition: background-color 0.3s;
+}
+body article.une_reservation button {
+  padding: 0.5em 1em;
+  border-radius: 0.25em;
+  margin-top: 2em;
+  bottom: 0;
+  right: 1em;
+}
+body article.une_reservation button:hover {
+  background-color: red;
+  transition: background-color 0.3s;
+}
+body .notice {
+  font-size: 0.75em;
+  color: red;
+}
+body .un_concours {
+  margin: 0 0 5em 0;
+}
+body .un_concours h4 {
+  color: #eca6d9;
+  text-align: center;
+}
+body .un_concours img {
+  padding: 0.5em;
+  border: 0.1em solid #0B8A80;
+}
+
+.conteneur_connexion {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 5em 0;
+}
+.conteneur_connexion section {
+  flex: 1;
+  position: relative;
+  max-width: 400px;
+}
+.conteneur_connexion section:first-child::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 3px;
+  background-color: #eca6d9;
+}
+
+@media (max-width: 1060px) {
+  .conteneur_connexion {
+    display: block;
+  }
+  .conteneur_connexion section:first-child::after {
+    display: none !important;
+  }
+}
+form select {
+  padding: 1em 3em;
+  border-radius: 0.25em;
+  margin: 1em 0;
+  background-color: lightgray;
+}
+form input {
+  margin: 0 0 1em 0;
+}
+form button {
+  padding: 1em 2em;
+  border-radius: 0.25em;
+}
+form button:hover {
+  background-color: #0B8A80;
+  transition: background-color 0.3s;
+
 }/*# sourceMappingURL=style.css.map */

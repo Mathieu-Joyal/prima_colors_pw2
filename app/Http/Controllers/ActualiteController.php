@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Actualite;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class ActualiteController extends Controller
 {
@@ -16,7 +18,7 @@ class ActualiteController extends Controller
     public function index()
     {
         $actualitesRecentes = Actualite::whereYear('date_publication', 2023)
-            ->orderBy('date_publication', 'desc')
+            ->orderBy('date_publication', 'asc')
             ->take(5)
             ->get();
 
@@ -30,6 +32,19 @@ class ActualiteController extends Controller
             "actualitesAnciennes" => $actualitesAnciennes,
         ]);
     }
+
+/**
+     * Affiche la liste des actualités
+     *
+     * @return View
+     */
+
+public function indexAdmin(){
+    return view ('actualites.indexAdmin');
+}
+
+
+
 
 /**
      * Affiche le formulaire d'ajout
@@ -52,28 +67,36 @@ class ActualiteController extends Controller
         $valides = $request->validate([
             "titre" => "required|min:4|max:150",
             "description" => "required|min:50|max:350",
-            "image" => "required|",
+            "image" => "required|mimes:png,jpg,jpeg",
 
         ], [
             "titre.max" => "Le titre doit avoir un maximum de :max caractères",
             "titre.min" => "Le titre doit avoir un minimum de :min caractères",
-            "description.max" => "Le titre doit avoir un maximum de :max caractères",
-            "description.min" => "Le titre doit avoir un minimum de :min caractères",
+            "description.max" => "La description doit avoir un maximum de :max caractères",
+            "description.min" => "La description doit avoir un minimum de :min caractères",
             "image.required" => "Une image doit être téléchargé ",
 
         ]);
 
         // Ajouter à la BDD
         $actualite = new Actualite; // $actualite contient un objet "vide" du modèle (équivalent à une nouvelle entrée dans la table)
-        $actualite->titre = $valides["titre"] ?? now();
-        $actualite->descritpion = ""; // Le texte est initialisé à du texte vide pour commencer (pourrait être null)
-        // $actualite->employe_id = auth()->user()->id;
-        // $actualite->date_publication = $valides["categorie_id"];
+        $actualite->titre = $valides["titre"];
+        $actualite->description = $valides["description"];
+        $actualite->employe_id = auth()->guard('employe')->user()->id;
+        $actualite->date_publication = now()->format("Y-m-d");
+
+        // Traiter le téléversement
+        if($request->hasFile('image')){
+            // Déplacer
+            Storage::putFile("public/uploads", $request->image);
+            // Sauvegarder le "bon" chemin qui sera inséré dans la BDD et utilisé par le navigateur
+            $actualite->image = "/storage/uploads/" . $request->image->hashName();
+        }
         $actualite->save();
 
         // Rediriger
         return redirect()
-                ->route('actualites.index')
+                ->route('actualites.create')
                 ->with('succes', "L'actualité a été ajoutée avec succès!");
     }
 
