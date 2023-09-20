@@ -633,6 +633,26 @@ body .un_concours img {
   border: 0.1em solid #0B8A80;
 }
 
+.conteneur_connexion {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 5em 0;
+}
+.conteneur_connexion section {
+  flex: 1;
+  position: relative;
+  max-width: 400px;
+}
+.conteneur_connexion section:first-child::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 3px;
+  background-color: #eca6d9;
+}
+
 form select {
   padding: 1em 3em;
   border-radius: 0.25em;

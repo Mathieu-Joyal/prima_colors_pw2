@@ -14,20 +14,29 @@
                 <input type="submit" value="Déconnexion">
             </form>
         </div>
+
         <h2>
             Bonjour {{ $user->prenom }} {{ $user->nom }}!
         </h2>
-        <p class="presentation">Bienvenue à votre compte utilisateur. Ici, vous pourrez voir la liste des forfaits disponibles, en plus de réservez votre billet pour l'un de ceux-ci. Vous pouvez aussi participer au concours d'art numérique, nous serions heureux de voir vos talents. Bonne visite! </p>
+
+        <p class="presentation">Bienvenue à votre compte utilisateur. Ici, vous pourrez voir la liste des forfaits disponibles, en plus de réservez votre billet pour l'un de ceux-ci. Vous pouvez aussi participer au concours d'art numérique, nous serions heureux de voir vos talents. Bonne visite!</p>
+
         <section class="forfaits">
+
             <h3>Liste des forfaits disponibles</h3>
+
             @foreach ($forfaits as $forfait)
+
                 <article class="un_forfait">
+
                     <h4>
                         {{ $forfait->titre }}
                     </h4>
+
                     <p>
                         {{ $forfait->description }}
                     </p>
+
                     <div>
                         <p class="les_dates">
                             Date d'arrivé: {{ $forfait->date_arrive }}
@@ -36,12 +45,14 @@
                             Date de départ: {{ $forfait->date_depart }}
                         </p>
                     </div>
+
                     <p>
                        Coût du forfait: {{ $forfait->prix }}$
                     </p>
                 </article>
             @endforeach
         </section>
+
         <section class="selection_forfait">
             {{-- Devoir donner l'option de choisir plusieurs billets à la fois pour un forfait et l'implémenter --}}
             <h3>Choissisez votre forfait</h3>
@@ -55,9 +66,11 @@
                     class="decoration"
                 >
                     @foreach ($forfaits as $forfait)
+
                         <option value="{{ $forfait->id }}">{{ $forfait->titre }}</option>
                     @endforeach
                 </select>
+
                 <div>
                     <button type="submit">
                         Confirmer ce forfait
