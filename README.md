@@ -94,7 +94,7 @@ Le Festival Prima-Colors vise à offrir une expérience riche et diversifiée à
 ## Apport global des membres de l'équipe 
 
 >- Marie-Eve – contenu, front end, components et intégration/contenu du readme,  
->- Shanté – design du site et contenu du readme, front end, base de données  
+>- Shanté – design du site et contenu du readme, front end, base de données, back end des pages Actuality et Activité  
 >- Mathieu – organisation du click up, base de données, back end et front end de l'admin 
 
 
