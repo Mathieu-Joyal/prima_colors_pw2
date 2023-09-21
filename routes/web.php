@@ -106,9 +106,9 @@ Route::post('/utilisateurs/concours', [UtilisateurController::class, 'updateConc
 
     // SECTION COMPTE EMPLOYÉ
 // Affichage de la page accueil employé ***
-Route::get('/employes', [EmployeController::class, 'index'])
-    ->name('employes.index')
-    ->middleware('auth:employe');
+Route::get('/admin', [EmployeController::class, 'index'])
+    ->name('admin.index');
+    // ->middleware('auth:employe');
 
 // Affichage du formulaire création de compte employé
 Route::get('/employes/create', [EmployeController::class, 'create'])
@@ -124,33 +124,33 @@ Route::get("/utilisateurs/{id}/admin", [ReservationController::class, 'destroyBy
     //SECTION GESTIONS ACTUALITÉS
 
     //Affichage de la liste d'actualités
-Route::get('/admin/actualites/index', [AdminActualiteController::class, 'index'])
-    ->name('admin.actualites.index')
-    ->middleware('auth:employe');
+Route::get('/admin/actualites', [AdminActualiteController::class, 'index'])
+    ->name('admin.actualites.index');
+    // ->middleware('auth:employe');
 
     //Affichage du formulaire d'ajout d'une actualités
 Route::get('/admin/actualites/create', [AdminActualiteController::class, 'create'])
-    ->name('admin.actualites.create')
-    ->middleware('auth:employe');
+    ->name('admin.actualites.create');
+    // ->middleware('auth:employe');
 
 // Traitement du formulaire
 Route::post('admin/actualites/store', [AdminActualiteController::class, 'store'])
-    ->name('admin.actualites.store')
-    ->middleware('auth:employe');
+    ->name('admin.actualites.store');
+    // ->middleware('auth:employe');
 
-// // Affichage du formulaire de modification d'une actualite
-// Route::get("/actualites/edit/{id}", [ActualiteController::class, 'edit'])
-//     ->name('actualites.edit')
-//     ->middleware('auth');
+// Affichage du formulaire de modification d'une actualite
+Route::get("/admin/actualites/edit/{id}", [AdminActualiteController::class, 'edit'])
+    ->name('admin.actualites.edit');
+    // ->middleware('auth');
 
-// // Traitement du formulaire de modification
-// Route::post("/actualites/update", [ActualiteController::class, 'update'])
-//     ->name('actualites.update')
-//     ->middleware('auth');
+// Traitement du formulaire de modification
+Route::post("/admin/actualites/update", [AdminActualiteController::class, 'update'])
+    ->name('admin.actualites.update');
+    // ->middleware('auth');
 
 //     //Suppression d'une actualité
-// Route::post("/actualites/destroy", [ActualiteController::class, 'destroy'])
-//     ->name('actualites.destroy')
+Route::post("/admin/actualites/destroy", [AdminActualiteController::class, 'destroy'])
+    ->name('admin.actualites.destroy');
 //     ->middleware('auth');
 
     //SECTION GESTIONS ACTIVITÉS
