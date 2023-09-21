@@ -6,6 +6,7 @@ use App\Http\Controllers\ActiviteController;
 use App\Http\Controllers\AdminActualiteController;
 use App\Http\Controllers\AdminConnexionController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AdminUtilisateurController;
 // use App\Http\Controllers\AdminActiviteController;
 use App\Http\Controllers\ConnexionController;
 use App\Http\Controllers\EmployeController;
@@ -45,8 +46,8 @@ Route::get("/connexion", [ConnexionController::class, 'create'])
     ->middleware('guest');
 
 // Traitement du formulaire de connexion d'un compte utilisateur
-Route::post("/connexion", [ConnexionController::class, 'authentifierUser'])
-    ->name('connexion.authentifierUser')
+Route::post("/connexion", [ConnexionController::class, 'authentifier'])
+    ->name('connexion.authentifier')
     ->middleware('guest');
 
     // SECTION CRÉATION D'UN COMPTE
@@ -188,7 +189,8 @@ Route::post("/admin/deconnexion", [AdminConnexionController::class, 'deconnecter
     ->name('admin.deconnexion')
     ->middleware('auth:employe');
 
-// SECTION GESTIONS DES EMPLOYÉS
+
+// ADMIN SECTION GESTIONS DES EMPLOYÉS
 // Affichage de la page employé
 Route::get('/admin/employe', [EmployeController::class, 'index'])
     ->name('admin.employes.index')
@@ -202,4 +204,21 @@ Route::get("/admin/employe/edit/{id}", [EmployeController::class, 'edit'])
 // Traitement de la suppression de l'employé
 Route::get("/admin/employe/destroy/{id}", [EmployeController::class, 'destroy'])
     ->name('admin.employes.destroy')
+    ->middleware('auth:employe');
+
+
+// ADMIN SECTION GESTIONS DES UTILISATEURS
+// Affichage de la page utilisateurs
+Route::get('/admin/utilisateur', [AdminUtilisateurController::class, 'index'])
+    ->name('admin.utilisateurs.index')
+    ->middleware('auth:employe');
+
+// Affichage du formulaire de modification d'un employé
+Route::get("/admin/utilisateur/edit/{id}", [AdminUtilisateurController::class, 'edit'])
+    ->name('admin.utilisateurs.edit')
+    ->middleware('auth:employe');
+
+// Traitement de la suppression de l'employé
+Route::get("/admin/utilisateurs/destroy/{id}", [AdminUtilisateurController::class, 'destroy'])
+    ->name('admin.utilisateurs.destroy')
     ->middleware('auth:employe');
