@@ -1,4 +1,3 @@
-
 <div class="nav">
     <div class="contenu_nav">
         <img src="img/logo/logo-header.svg" alt="" class="logo-nav">
@@ -16,7 +15,7 @@
                 </div>
             </a>
             <a href="/apropos" class="item_nav">
-                <div class="nav">À Propos
+                <div class="nav">À&nbsp;Propos
                 </div>
             </a>
             <a href="/actualites" class="item_nav">
@@ -24,24 +23,24 @@
                 </div>
             </a>
         </div>
-    
-            <a href="/billets" class="billet">
-               <p class="texte">Billets</p> 
-            </a>
-    
+
+        <a href="/billets" class="billet">
+            <p class="texte">Billets</p>
+        </a>
+
         <div class="reseau">
             <img src="img/reseau/facebook/f_logo_RGB-Black_58.png" alt="" class="reseau-img">
             <img src="img/reseau/instagram/Instagram_Glyph_Black.png" alt="" class="reseau-img">
             <img src="img/reseau/youtube/okyoutube_social_icon_dark.png" alt="" class="reseau-img">
         </div>
-        
-        <div class="connection">
-            <a href="/connection" class="connection">Connection
-                <span class="material-icons">
-                    person_outline
-                    </span>
-            </a>
-        </div>
+
+
+        <a href="/connection" class="connection">Connection
+            <span class="material-icons">
+                person_outline
+            </span>
+        </a>
+
     </div>
     <div class="bg">
         <div class="background"></div>

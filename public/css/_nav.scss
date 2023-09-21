@@ -1,12 +1,14 @@
 .nav {
     position: relative;
 }
+
 .bg {
     position: absolute;
-    top:65px;
+    top:63px;
     z-index: 1;
     width: 100%;
 }
+
 .contenu_nav {
     position: relative;
    // background-color: $noir;
@@ -29,12 +31,13 @@
     background-color: $rose;
     height: 3px;
     position: absolute; 
-    top: 140px;
+    margin-top: 27px;
 }
 
 a{
     text-decoration: none;
 }
+
 .menu_nav  {
     height: 40px;
     transition: width 0.3s ease, background-color 0.3s ease;
@@ -42,20 +45,12 @@ a{
     flex-direction: row;
     align-items: center;
 }
-  
-.menu_nav .item_nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
 
-}
   
 .menu_nav .item_nav .nav {
     display: block;
-    width: 100%;
-    margin-right: 50px;
-    margin-left: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
     margin-top: 20px;
     font-size: 30px;
     font-family: "pf-venue", sans-serif;
@@ -71,9 +66,8 @@ a{
     border-right:none; 
 }
   
-.menu_nav .item_nav .nav:hover {
+.menu_nav .item_nav:hover  {
     color: $noir;
-    width: 100%;
     height: 70px;
     background-color: $rose;
     transition: width 0.3s ease; 
@@ -81,13 +75,15 @@ a{
     -moz-transition: background-color 1s ease-out;
     -o-transition: background-color 1s ease-out;
     transition: background-color 1s ease-out; 
+    margin-top: 20px;
 }
   
 .billet {
     width: 150px;
-    height: 180px;
+    height: 170px;
     background: url('../img/accueil/billet.jpg'); 
     background-repeat: no-repeat;
+    margin-right: 50px;
 }
 
 .billet:hover { 
@@ -109,32 +105,30 @@ p.texte{
 .reseau {
     display: flex;
     gap: 20px;  
-  
 }
   
-.reseau-img {
+img.reseau-img {
     max-width: 100%;
     margin-right: 40px;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .logo-nav{
    margin-left: 20px;
    margin-top: 40px;
-
 }
 
 a.connection .materiel-icon {
     margin-top:100px;
     color: $rose;
-    font-size: 20px;
-   
+    font-size: 40px; 
 }
 
 a.connection{
     font-family: "pf-venue", sans-serif;
-    font-size: 24px;
-    margin-top:100px;
-  
+    font-size: 36px;
+   margin-top:180px;
+   margin-right: 25px;
+    color: $rose;  
 }
   
