@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Storage;
 class UtilisateurController extends Controller
 {
     /**
-     * Affiche la liste des messages
+     * Affiche la liste des utilisateurs
      *
      * @return View
      */

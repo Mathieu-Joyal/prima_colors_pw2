@@ -14,7 +14,7 @@
 
             <h2>Section utilisateur</h2>
 
-            <form action="{{ route('connexion.authentifierUser') }}"
+            <form action="{{ route('connexion.authentifier') }}"
                     method="POST"
             >
                 @csrf
@@ -66,55 +66,6 @@
                     </a>
                 </p>
             </div>
-        </section>
-
-        <section class="employe">
-
-            <h2>Section employé</h2>
-
-            <form action="{{ route('connexion.authentifierEmploye') }}"
-                    method="POST"
-            >
-                @csrf
-
-                <div>
-                    <label for="email">
-                        Identifiant
-                    </label>
-
-                    <div>
-                        <input
-                        id="identifiant"
-                        name="identifiant"
-                        type="text"
-                        value="{{ old('identifiant') }}"
-                        >
-                    </div>
-                    <x-forms.erreur champ="identifiant" />
-                </div>
-
-                <div>
-                    <label for="password">
-                        Mot de passe
-                    </label>
-
-                    <div>
-                        <input
-                        id="password"
-                        name="password"
-                        type="password"
-                        {{-- autocomplete="current-password" --}}
-                        >
-                    </div>
-                    <x-forms.erreur champ="password" />
-                </div>
-
-                <div>
-                    <button type="submit">
-                        Connectez-vous!
-                    </button>
-                </div>
-            </form>
         </section>
     </div>
 

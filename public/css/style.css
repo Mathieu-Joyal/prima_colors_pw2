@@ -850,15 +850,6 @@ body .un_concours img {
   position: relative;
   max-width: 400px;
 }
-.conteneur_connexion section:first-child::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 3px;
-  background-color: #eca6d9;
-}
 
 @media (max-width: 1060px) {
   .conteneur_connexion {

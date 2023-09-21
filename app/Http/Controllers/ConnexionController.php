@@ -22,7 +22,7 @@ class ConnexionController extends Controller
      * @param Request $request
      * @return RedirectResponse
      */
-    public function authentifierUser(Request $request) {
+    public function authentifier(Request $request) {
 
         // Validation
         $valides = $request->validate([

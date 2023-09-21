@@ -19,7 +19,7 @@ class EmployeController extends Controller
      */
     public function index() {
 
-        return view ('employes.index');
+        return view ('admin.employes.index');
     }
 
     /**
@@ -32,7 +32,7 @@ class EmployeController extends Controller
 
         $employes = \App\Models\Employe::all();
 
-        return view('employes.create', [
+        return view('admin.employes.create', [
             "un_employe" => $un_employe,
             "employes" => $employes,
             "roles" => Role::all(),
@@ -48,6 +48,8 @@ class EmployeController extends Controller
      * @return void
      */
     public function edit($id){
+
+        return view('admin.employes.edit');
 
     }
 
