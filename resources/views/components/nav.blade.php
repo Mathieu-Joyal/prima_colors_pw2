@@ -1,53 +1,50 @@
-<div class="contenu_nav">
-    <div class="background"></div>
-    <div class="ligne_rose"></div>
-    <img src="img/logo/logo-header.svg" alt="" class="logo-nav">
-    <div class="menu_nav">
-        <div class="item_nav">
-            <a href="/" class="nav">
-                <div class="ligne_debut_nav"></div>
-                Accueil
-            </a>
-        </div>
-        <div class="item_nav">
-            <a href="/activites" class="nav">
-                <div class="ligne_nav"></div>
-                Activités
-            </a>
-        </div>
-        <div class="item_nav">
-            <a href="/concours" class="nav">
-                <div class="ligne_nav"></div>
-                Concours
-            </a>
-        </div>
-        <div class="item_nav">
-            <a href="/apropos" class="nav">
-                <div class="ligne_nav"></div>
-                À Propos
-            </a>
-        </div>
-        <div class="item_nav">
-            <a href="/actualites" class="nav">
-                <div class="ligne_nav"></div>
-                Actualités
-            </a>
-        </div>
-    </div>
 
-    <div class="billet">
-        <a href="/billets" class="nav">
-            <div class="billet-img-container">
-                <img src="img/accueil/billet.jpg" alt="" class="billet-img">
-            </div>
-            <div class="billet-text">Billets</div>
-        </a>
+<div class="nav">
+    <div class="contenu_nav">
+        <img src="img/logo/logo-header.svg" alt="" class="logo-nav">
+        <div class="menu_nav">
+            <a href="/" class="item_nav">
+                <div class="nav">Accueil
+                </div>
+            </a>
+            <a href="/activites" class="item_nav">
+                <div class="nav">Activités
+                </div>
+            </a>
+            <a href="/concours" class="item_nav">
+                <div class="nav">Concours
+                </div>
+            </a>
+            <a href="/apropos" class="item_nav">
+                <div class="nav">À Propos
+                </div>
+            </a>
+            <a href="/actualites" class="item_nav">
+                <div class="nav">Actualités
+                </div>
+            </a>
+        </div>
+    
+            <a href="/billets" class="billet">
+               <p class="texte">Billets</p> 
+            </a>
+    
+        <div class="reseau">
+            <img src="img/reseau/facebook/f_logo_RGB-Black_58.png" alt="" class="reseau-img">
+            <img src="img/reseau/instagram/Instagram_Glyph_Black.png" alt="" class="reseau-img">
+            <img src="img/reseau/youtube/okyoutube_social_icon_dark.png" alt="" class="reseau-img">
+        </div>
+        
+        <div class="connection">
+            <a href="/connection" class="connection">Connection
+                <span class="material-icons">
+                    person_outline
+                    </span>
+            </a>
+        </div>
     </div>
-    
-    
-    <div class="reseau">
-        <img src="img/reseau/facebook/f_logo_RGB-Black_58.png" alt="" class="reseau-img">
-        <img src="img/reseau/instagram/Instagram_Glyph_Black.png" alt="" class="reseau-img">
-        <img src="img/reseau/youtube/okyoutube_social_icon_dark.png" alt="" class="reseau-img">
+    <div class="bg">
+        <div class="background"></div>
+        <div class="ligne_rose"></div>
     </div>
 </div>
