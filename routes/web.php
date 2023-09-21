@@ -222,3 +222,5 @@ Route::get("/admin/utilisateur/edit/{id}", [AdminUtilisateurController::class, '
 Route::get("/admin/utilisateurs/destroy/{id}", [AdminUtilisateurController::class, 'destroy'])
     ->name('admin.utilisateurs.destroy')
     ->middleware('auth:employe');
+
+    // allo
