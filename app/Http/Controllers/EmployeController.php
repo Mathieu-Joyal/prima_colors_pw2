@@ -17,7 +17,7 @@ class EmployeController extends Controller
      * @return View
      */
     public function index() {
-return view ('employes.index');
+return view ('admin.index');
 
     }
     public function create(){
