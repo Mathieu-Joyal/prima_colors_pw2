@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 class EmployeController extends Controller
 {
     /**
-     * Affiche la liste des messages
+     * Affiche les liens de gestions
      *
      * @return View
      */

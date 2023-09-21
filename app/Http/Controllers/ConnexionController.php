@@ -75,7 +75,7 @@ class ConnexionController extends Controller
             $request->session()->regenerate();
 
             return redirect()
-                    ->intended(route('employes.index'))
+                    ->intended(route('admin.index'))
                     ->with('succes', 'Vous êtes connectés!');
         }
 

@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Storage;
 
 class AdminActualiteController extends Controller
 {
+
+//==================TOUTES LES ACTIVITÉS===========================//
     /**
      * Affiche la liste des actualites
      *
@@ -29,13 +31,15 @@ class AdminActualiteController extends Controller
         ->take(5)
         ->get();
 
-    return view("admin.actualites.create", [
+    return view("admin.actualites.index", [
         "actualitesRecentes" => $actualitesRecentes,
         "actualitesAnciennes" => $actualitesAnciennes,
     ]);
 
     }
 
+
+//===============AJOUTER UNE ACTUALITÉ=================================//
 /**
      * Affiche le formulaire d'ajout
      *
@@ -43,14 +47,9 @@ class AdminActualiteController extends Controller
      */
     public function create() {
 
-        $actualitesRecentes = Actualite::whereYear('date_publication', 2023)
-        ->orderBy('date_publication', 'asc')
-        ->take(5)
-        ->get();
+        return view('admin.actualites.create',
 
-        return view('admin.actualites.create', [
-            "actualitesRecentes" => $actualitesRecentes
-        ]);
+        );
     }
 
     /**
@@ -93,77 +92,78 @@ class AdminActualiteController extends Controller
 
         // Rediriger
         return redirect()
-                ->route('admin/actualites.create')
+                ->route('admin.actualites.index')
                 ->with('succes', "L'actualité a été ajoutée avec succès!");
     }
+//==========================MODIFIER UNE ACTUALITÉ===========================//
+    /**
+     * Affiche le formulaire de modification
+     *
+     * @param int $id Id de l'actualité à modifier
+     * @return View
+     */
+    public function edit($id) {
+        return view('admin.actualites.edit', [
+            "actualite" => actualite::findOrFail($id),
+            // "employe_id" => Employe::orderBy('nom', 'asc')
+            //                     ->get()
+        ]);
+    }
 
-    // /**
-    //  * Affiche le formulaire de modification
-    //  *
-    //  * @param int $id Id de la note à modifier
-    //  * @return View
-    //  */
-    // public function edit($id) {
-    //     return view('actualites.edit', [
-    //         "actualite" => actualite::findOrFail($id),
-    //         // "employe_id" => Employe::orderBy('nom', 'asc')
-    //         //                     ->get()
-    //     ]);
-    // }
+    /**
+     * Traite la modification
+     *
+     * @param Request $request Objet qui contient tous les champs reçus dans la requête
+     * @return RedirectResponse
+     */
+    public function update(Request $request) {
+        // Valider
+        $valides = $request->validate([
+            "id" => "required",
+            "titre" => "required|min:4|max:150",
+            // "image" => "required|",
+            // "date_publication" => "required|",
 
-    // /**
-    //  * Traite la modification
-    //  *
-    //  * @param Request $request Objet qui contient tous les champs reçus dans la requête
-    //  * @return RedirectResponse
-    //  */
-    // public function update(Request $request) {
-    //     // Valider
-    //     $valides = $request->validate([
-    //         "id" => "required",
-    //         "titre" => "required|min:4|max:150",
-    //         // "image" => "required|",
-    //         // "date_publication" => "required|",
+            "descritpion" => "required"
+        ], [
 
-    //         "descritpion" => "required"
-    //     ], [
-
-    //         "titre.max" => "Le titre doit avoir un maximum de :max caractères",
-    //         "titre.min" => "Le titre doit avoir un minimum de :min caractères",
-    //         "description.max" => "Le titre doit avoir un maximum de :max caractères",
-    //         "description.min" => "Le titre doit avoir un minimum de :min caractères",
-    //         "image" => "Une image doit être téléchargé ",
-    //         "date_publication" => "",
+            "titre.max" => "Le titre doit avoir un maximum de :max caractères",
+            "titre.min" => "Le titre doit avoir un minimum de :min caractères",
+            "description.max" => "Le titre doit avoir un maximum de :max caractères",
+            "description.min" => "Le titre doit avoir un minimum de :min caractères",
+            "image" => "Une image doit être téléchargé ",
+            "date_publication" => "",
 
 
-    //     ]);
+        ]);
 
-    //     // Récupération de la actualite à modifier, suivi de la modification et sauvegarde
-    //     $actualite = Actualite::findOrFail($valides["id"]);
-    //     $actualite->titre = $valides["titre"];
-    //     $actualite->description = $valides["descritpion"];
-    //     $actualite->employe_id = auth()->id();
-    //     $actualite->image =
+        // Récupération de la actualite à modifier, suivi de la modification et sauvegarde
+        $actualite = Actualite::findOrFail($valides["id"]);
+        $actualite->titre = $valides["titre"];
+        $actualite->description = $valides["descritpion"];
+        $actualite->employe_id = auth()->id();
+        $actualite->image =
 
-    //     $actualite->save();
+        $actualite->save();
 
-    //     // Rediriger
-    //     return redirect()
-    //             ->route('actualites.index')
-    //             ->with('succes', "La actualite a été modifiée avec succès!");
-    // }
+        // Rediriger
+        return redirect()
+                ->route('admin.actualites.index')
+                ->with('succes', "La actualite a été modifiée avec succès!");
+    }
 
+//=============================SUPPRIMER UNE ACTUALITÉ=============================//
     // /**
     //  * Traite la suppression
     //  *
     //  * @param Request $request
     //  * @return RedirectResponse
     //  */
-    // public function destroy(Request $request) {
-    //     Actualite::destroy($request->id);
+    public function destroy(Request $request) {
+        Actualite::destroy($request->id);
 
-    //     return redirect()->route('actualites.index')
-    //             ->with('succes', "La actualite a été supprimée!");
-    // }
+        return redirect()->route('admin.actualites.index')
+                ->with('succes', "La actualite a été supprimée!");
+    }
 
 }
