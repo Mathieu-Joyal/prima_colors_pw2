@@ -75,7 +75,7 @@ class AdminActualiteController extends Controller
         ]);
 
         // Ajouter à la BDD
-        $actualite = new Actualite; // $actualite contient un objet "vide" du modèle (équivalent à une nouvelle entrée dans la table)
+        $actualite = new Actualite;
         $actualite->titre = $valides["titre"];
         $actualite->description = $valides["description"];
         $actualite->employe_id = auth()->guard('employe')->user()->id;
@@ -121,9 +121,7 @@ class AdminActualiteController extends Controller
         $valides = $request->validate([
             "id" => "required",
             "titre" => "required|min:4|max:150",
-            // "image" => "required|",
-            // "date_publication" => "required|",
-
+            "image" => "required|",
             "descritpion" => "required"
         ], [
 
@@ -132,7 +130,7 @@ class AdminActualiteController extends Controller
             "description.max" => "Le titre doit avoir un maximum de :max caractères",
             "description.min" => "Le titre doit avoir un minimum de :min caractères",
             "image" => "Une image doit être téléchargé ",
-            "date_publication" => "",
+
 
 
         ]);
@@ -149,7 +147,7 @@ class AdminActualiteController extends Controller
         // Rediriger
         return redirect()
                 ->route('admin.actualites.index')
-                ->with('succes', "La actualite a été modifiée avec succès!");
+                ->with('succes', "L'actualité a été modifiée avec succès!");
     }
 
 //=============================SUPPRIMER UNE ACTUALITÉ=============================//
