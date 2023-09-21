@@ -4,6 +4,8 @@ use App\Http\Controllers\AccueilController;
 use App\Http\Controllers\ActualiteController;
 use App\Http\Controllers\ActiviteController;
 use App\Http\Controllers\AdminActualiteController;
+use App\Http\Controllers\AdminConnexionController;
+use App\Http\Controllers\AdminController;
 // use App\Http\Controllers\AdminActiviteController;
 use App\Http\Controllers\ConnexionController;
 use App\Http\Controllers\EmployeController;
@@ -47,12 +49,6 @@ Route::post("/connexion", [ConnexionController::class, 'authentifierUser'])
     ->name('connexion.authentifierUser')
     ->middleware('guest');
 
-// Traitement du formulaire de connexion d'un compte employé
-Route::post("/connexion/employe", [ConnexionController::class, 'authentifierEmploye'])
-    ->name('connexion.authentifierEmploye')
-    ->middleware('guest');
-
-
     // SECTION CRÉATION D'UN COMPTE
 // Affichage de l'enregistrement d'un nouveau compte utilisateur
 Route::get("/enregistrement",[EnregistrementController::class, 'create'])
@@ -76,11 +72,6 @@ Route::post("/enregistrement/employe", [EnregistrementController::class, 'storeE
 Route::post("/deconnexion", [ConnexionController::class, 'deconnecterUser'])
     ->name('deconnexion.user')
     ->middleware('auth');
-
-// Déconnexion du compte employé
-Route::post("/deconnexion/employe", [ConnexionController::class, 'deconnecterEmploye'])
-    ->name('deconnexion.employe')
-    ->middleware('auth:employe');
 
 
     // SECTION COMPTE UTILISATEUR
@@ -106,9 +97,9 @@ Route::post('/utilisateurs/concours', [UtilisateurController::class, 'updateConc
 
     // SECTION COMPTE EMPLOYÉ
 // Affichage de la page accueil employé ***
-Route::get('/admin', [EmployeController::class, 'index'])
-    ->name('admin.index');
-    // ->middleware('auth:employe');
+Route::get('/admin', [AdminController::class, 'index'])
+    ->name('admin.index')
+    ->middleware('auth:employe');
 
 // Affichage du formulaire création de compte employé
 Route::get('/employes/create', [EmployeController::class, 'create'])
@@ -178,3 +169,37 @@ Route::post("/admin/actualites/destroy", [AdminActualiteController::class, 'dest
 // Route::post("/activites/destroy", [ActiviteController::class, 'destroy'])
 // ->name('activites.destroy')
 // ->middleware('auth');
+
+
+// SECTION CONNEXION ADMINISTRATEUR
+
+// Affichage de la page de connexion des employés
+Route::get("/admin/connexion", [AdminConnexionController::class, 'index'])
+    ->name('admin.connexion.index')
+    ->middleware('guest');
+
+// Traitement du formulaire de connexion d'un compte employé
+Route::post("/admin/connexion", [AdminConnexionController::class, 'authentifier'])
+    ->name('admin.connexion.authentifier')
+    ->middleware('guest');
+
+// Déconnexion du compte employé
+Route::post("/admin/deconnexion", [AdminConnexionController::class, 'deconnecter'])
+    ->name('admin.deconnexion')
+    ->middleware('auth:employe');
+
+// SECTION GESTIONS DES EMPLOYÉS
+// Affichage de la page employé
+Route::get('/admin/employe', [EmployeController::class, 'index'])
+    ->name('admin.employes.index')
+    ->middleware('auth:employe');
+
+// Affichage du formulaire de modification d'un employé
+Route::get("/admin/employe/edit/{id}", [EmployeController::class, 'edit'])
+    ->name('admin.employes.edit')
+    ->middleware('auth:employe');
+
+// Traitement de la suppression de l'employé
+Route::get("/admin/employe/destroy/{id}", [EmployeController::class, 'destroy'])
+    ->name('admin.employes.destroy')
+    ->middleware('auth:employe');

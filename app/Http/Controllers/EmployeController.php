@@ -12,14 +12,21 @@ use Illuminate\Http\Request;
 class EmployeController extends Controller
 {
     /**
-     * Affiche les liens de gestions
+     * À MARIE-ÈVE
+     * Affichage de la liste des employés
      *
-     * @return View
+     * @return void
      */
     public function index() {
-return view ('admin.index');
 
+        return view ('employes.index');
     }
+
+    /**
+     * Undocumented function
+     *
+     * @return void
+     */
     public function create(){
         $un_employe = auth()->guard('employe')->user();
 
@@ -33,5 +40,23 @@ return view ('admin.index');
             "reservations" => Reservation::all(),
             "forfaits" => Forfait::all(),
         ]);
+    }
+
+    /**
+     * Undocumented function
+     *
+     * @return void
+     */
+    public function edit($id){
+
+    }
+
+    /**
+     * Undocumented function
+     *
+     * @return void
+     */
+    public function destroy($id){
+
     }
 }
