@@ -635,7 +635,39 @@ body article div {
   color: white;
   margin: 1em 0;
 }
-
+body article.une_reservation {
+  padding: 1em;
+}
+body article.une_reservation:hover {
+  background-color: #0B8A80;
+  transition: background-color 0.3s;
+}
+body article.une_reservation button {
+  padding: 0.5em 1em;
+  border-radius: 0.25em;
+  margin-top: 2em;
+  bottom: 0;
+  right: 1em;
+}
+body article.une_reservation button:hover {
+  background-color: red;
+  transition: background-color 0.3s;
+}
+body .notice {
+  font-size: 0.75em;
+  color: red;
+}
+body .un_concours {
+  margin: 0 0 5em 0;
+}
+body .un_concours h4 {
+  color: #eca6d9;
+  text-align: center;
+}
+body .un_concours img {
+  padding: 0.5em;
+  border: 0.1em solid #0B8A80;
+}
 
 .section_concours {
   position: relative;
@@ -815,39 +847,6 @@ body article div {
   height: 38px;
   background-color: #030303;
   z-index: 2;
-=======
-body article.une_reservation {
-  padding: 1em;
-}
-body article.une_reservation:hover {
-  background-color: #0B8A80;
-  transition: background-color 0.3s;
-}
-body article.une_reservation button {
-  padding: 0.5em 1em;
-  border-radius: 0.25em;
-  margin-top: 2em;
-  bottom: 0;
-  right: 1em;
-}
-body article.une_reservation button:hover {
-  background-color: red;
-  transition: background-color 0.3s;
-}
-body .notice {
-  font-size: 0.75em;
-  color: red;
-}
-body .un_concours {
-  margin: 0 0 5em 0;
-}
-body .un_concours h4 {
-  color: #eca6d9;
-  text-align: center;
-}
-body .un_concours img {
-  padding: 0.5em;
-  border: 0.1em solid #0B8A80;
 }
 
 .conteneur_connexion {
@@ -894,5 +893,4 @@ form button {
 form button:hover {
   background-color: #0B8A80;
   transition: background-color 0.3s;
-
 }/*# sourceMappingURL=style.css.map */

@@ -12,6 +12,9 @@ use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\UtilisateurController;
 use Illuminate\Support\Facades\Route;
 
+
+//SITE WEB
+
 /*ACCUEIL*/
 Route::get("/", [AccueilController::class, 'index'])
     ->name('accueil');
@@ -27,11 +30,13 @@ Route::get('/actualites', [ActualiteController::class, 'index'])
 /** PAGE À PROPOS*/
 /** PAGE BILLETERIE */
 /**PAGE CONCOURS */
+/**CONNEXION UTILISATEUR */
+/**COMPTE UTILISATEUR */
 
-
-
+//SECTION ADMINISTARTION
 
     // SECTION CONNEXION D'UN COMPTE
+
 // Affichage de la connexion d'un compte
 Route::get("/connexion", [ConnexionController::class, 'create'])
     ->name('connexion.create')
@@ -100,10 +105,11 @@ Route::post('/utilisateurs/concours', [UtilisateurController::class, 'updateConc
     ->middleware('auth');
 
     // SECTION COMPTE EMPLOYÉ
-// Affichage de la page employé
+// Affichage de la page accueil employé ***
 Route::get('/employes', [EmployeController::class, 'index'])
     ->name('employes.index')
     ->middleware('auth:employe');
+
 // Affichage du formulaire création de compte employé
 Route::get('/employes/create', [EmployeController::class, 'create'])
     ->name('employes.create')
