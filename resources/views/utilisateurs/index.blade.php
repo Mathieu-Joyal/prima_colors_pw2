@@ -84,33 +84,34 @@
             <h3>Vos forfaits réservés</h3>
 
             @foreach ($reservations as $reservation)
+            {{-- If no réservations, <p>Aucune réservation</p> --}}
 
-                <article class="une_reservation">
+                    <article class="une_reservation">
 
-                    <h4>
-                        {{ $forfait->titre }}
-                    </h4>
-                    <p>
-                        {{ $forfait->description }}
-                    </p>
-                    <div>
-                        <p class="les_dates">
-                            Date d'arrivé: {{ $forfait->date_arrive }}
+                        <h4>
+                            {{ $forfait->titre }}
+                        </h4>
+                        <p>
+                            {{ $forfait->description }}
                         </p>
-                        <p class="les_dates">
-                            Date de départ: {{ $forfait->date_depart }}
+                        <div>
+                            <p class="les_dates">
+                                Date d'arrivé: {{ $forfait->date_arrive }}
+                            </p>
+                            <p class="les_dates">
+                                Date de départ: {{ $forfait->date_depart }}
+                            </p>
+                        </div>
+                        <p>
+                        Coût du forfait: {{ $forfait->prix }}$
                         </p>
-                    </div>
-                    <p>
-                       Coût du forfait: {{ $forfait->prix }}$
-                    </p>
 
-                    <a href="{{ route('reservations.destroyByUser', ['id' => $reservation->id]) }}">
-                        <button>
-                            Annuler la réservation
-                        </button>
-                    </a>
-                </article>
+                        <a href="{{ route('reservations.destroy', ['id' => $reservation->id]) }}">
+                            <button>
+                                Annuler la réservation
+                            </button>
+                        </a>
+                    </article>
             @endforeach
         </section>
 

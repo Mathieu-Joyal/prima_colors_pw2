@@ -59,7 +59,7 @@ class ConnexionController extends Controller
      * @param Request $request
      * @return RedirectResponse
      */
-    public function deconnecterUser(Request $request) {
+    public function deconnecter(Request $request) {
         Auth::logout();
 
         // Enlever l'utilisateur de la session
