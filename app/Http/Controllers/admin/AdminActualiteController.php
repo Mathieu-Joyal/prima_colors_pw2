@@ -12,7 +12,7 @@ use App\Http\Controllers\Controller;
 class AdminActualiteController extends Controller
 {
 
-//==================TOUTES LES ACTIVITÉS===========================//
+//==================TOUTES LES ACTUALITÉS===========================//
     /**
      * Affiche la liste des actualites
      *
@@ -106,7 +106,7 @@ class AdminActualiteController extends Controller
      */
     public function edit($id) {
         return view('admin.actualites.edit', [
-            "actualite" => actualite::findOrFail($id),
+            "actualite" => Actualite::findOrFail($id),
             // "employe_id" => Employe::orderBy('nom', 'asc')
             //                     ->get()
         ]);
