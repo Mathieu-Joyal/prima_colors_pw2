@@ -50,6 +50,10 @@
                             <p>{{ $activite->description }}</p>
                             <p>{{ $activite->description }}</p>
                             <p>{{ $activite->description }}</p>
+
+                            <div class="fermer">
+                                <p>X</p>
+                            </div>
                         </div>
                     </div>
 
@@ -124,20 +128,19 @@
 
             // show description on click
             function toggleDescription(element) {
-    const description = element.querySelector('.description');
-    const nextElement = element.nextElementSibling;
+                const description = element.querySelector('.description');
+                const nextElement = element.nextElementSibling;
 
-    if (description && nextElement) {
-        if (description.style.display === 'none' || description.style.display === '') {
-            description.style.display = 'block';
-            nextElement.style.marginTop = description.clientHeight + 'px';
-        } else {
-            description.style.display = 'none';
-            nextElement.style.marginTop = '0';
-        }
-    }
-}
-
+                if (description && nextElement) {
+                    if (description.style.display === 'none' || description.style.display === '') {
+                        description.style.display = 'block';
+                        nextElement.style.marginTop = description.clientHeight + 'px';
+                    } else {
+                        description.style.display = 'none';
+                        nextElement.style.marginTop = '0';
+                    }
+                }
+            }
         </script>
 
         {{-- <x-ban_concours /> --}}

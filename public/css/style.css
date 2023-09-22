@@ -205,6 +205,7 @@ blockquote span.material-icons:first-child {
   height: 200px;
   width: calc(100% - 300px);
   margin-left: 0;
+  cursor: pointer;
 }
 .conteneur-activites article.activites .conteneur-image img {
   height: 100%;
@@ -224,6 +225,18 @@ blockquote span.material-icons:first-child {
 }
 .conteneur-activites article.activites .conteneur-image .description p {
   color: #030303;
+}
+.conteneur-activites article.activites .conteneur-image .description .fermer {
+  position: relative;
+  bottom: 0px;
+  right: -1285px;
+}
+.conteneur-activites article.activites .conteneur-image .description .fermer p {
+  font-family: "pf-venue-stencil", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 3em;
+  color: #eca6d9;
 }
 .conteneur-activites article.activites .conteneur-titre {
   min-width: 300px;

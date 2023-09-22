@@ -2,7 +2,8 @@
 .conteneur-activites {
     display: flex;
     flex-direction: column;
-    h1{
+
+    h1 {
         margin: 0;
     }
 
@@ -19,7 +20,8 @@
 
             h2 {
                 color: $blanc;
- margin-bottom: 0;
+                margin-bottom: 0;
+
                 &.selected {
                     color: $rose;
                 }
@@ -85,6 +87,7 @@
             height: 200px;
             width: calc(100% - 300px);
             margin-left: 0;
+            cursor: pointer;
 
 
             img {
@@ -101,10 +104,24 @@
                 background-color: $blanc;
                 margin: 0;
                 padding: 1em 3em;
-                p{
+
+                p {
                     color: $noir;
                 }
 
+                .fermer {
+                    position: relative;
+                    bottom: 0px;
+                    right: -1285px;
+
+                    p {
+                        font-family: "pf-venue-stencil", sans-serif;
+                        font-weight: 700;
+                        font-style: normal;
+                        font-size: 3em;
+                        color: $rose;
+                    }
+                }
             }
         }
 
