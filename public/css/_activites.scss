@@ -3,6 +3,10 @@
     display: flex;
     flex-direction: column;
 
+    h1 {
+        margin: 0;
+    }
+
     .conteneur-date {
         display: flex;
         flex-direction: column;
@@ -13,8 +17,10 @@
             flex-direction: row;
             width: 50%;
 
+
             h2 {
                 color: $blanc;
+                margin-bottom: 0;
 
                 &.selected {
                     color: $rose;
@@ -77,10 +83,12 @@
 
 
         .conteneur-image {
-            display: inline;
+            // display: inline;
             height: 200px;
             width: calc(100% - 300px);
             margin-left: 0;
+            cursor: pointer;
+
 
             img {
                 height: 100%;
@@ -92,9 +100,28 @@
 
             .description {
                 display: none;
-                height: 200px;
+                height: fit-content;
                 background-color: $blanc;
-                color: $noir;
+                margin: 0;
+                padding: 1em 3em;
+
+                p {
+                    color: $noir;
+                }
+
+                .fermer {
+                    position: relative;
+                    bottom: 0px;
+                    right: -1285px;
+
+                    p {
+                        font-family: "pf-venue-stencil", sans-serif;
+                        font-weight: 700;
+                        font-style: normal;
+                        font-size: 3em;
+                        color: $rose;
+                    }
+                }
             }
         }
 
@@ -152,3 +179,42 @@
         /* Move to original position */
     }
 }
+
+// @media only screen and (max-width: 480px) {
+//     .conteneur-activites {
+//         .conteneur-jours {
+//             h2:not(.selected) {
+//                 display: none;
+//             }
+//         }
+
+//         .thumbnail {
+//             width: 100%;
+//         }
+
+//         article.activites {
+//             flex-direction: column;
+
+//             .conteneur-image {
+//                 width: 100%;
+//                 margin-left: 0;
+//                 margin-right: 0;
+//             }
+
+//             .conteneur-titre {
+//                 min-width: initial;
+//                 text-align: left;
+//                 white-space: normal;
+//                 overflow: visible;
+//             }
+
+//             p.heure {
+//                 font-weight: normal;
+//             }
+//         }
+//     }
+// }
+
+
+
+
