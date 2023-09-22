@@ -106,11 +106,14 @@
                         Coût du forfait: {{ $forfait->prix }}$
                         </p>
 
-                        <a href="{{ route('reservations.destroy', ['id' => $reservation->id]) }}">
-                            <button>
+                        <form action="{{ route('reservations.destroy', ['id' => $reservation->id]) }}" method="POST">
+                            @csrf
+
+                            <button type="submit">
                                 Annuler la réservation
                             </button>
-                        </a>
+                        </form>
+
                     </article>
             @endforeach
         </section>
