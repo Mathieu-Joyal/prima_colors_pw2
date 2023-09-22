@@ -219,31 +219,31 @@ Route::post("/admin/actualites/destroy", [AdminActualiteController::class, 'dest
 //
 
     //Affichage de la liste d'activités
-    Route::get('/admin/activites', [AdminActualiteController::class, 'index'])
+    Route::get('/admin/activites', [AdminActiviteController::class, 'index'])
     ->name('admin.activites.index');
     // ->middleware('auth:employe');
 
      // Affichage du formulaire d'ajout d'une activités
-Route::get('/admin/activites/create', [ActiviteController::class, 'create'])
+Route::get('/admin/activites/create', [AdminActiviteController::class, 'create'])
 ->name('admin.activites.create');
 // ->middleware('auth');
 
 // // Traitement du formulaire
-Route::post('/admin/activites', [ActiviteController::class, 'store'])
+Route::post('/admin/activites', [AdminActiviteController::class, 'store'])
 ->name('admin.activites.store');
 // ->middleware('auth');
 
 // // Affichage du formulaire de modification d'une Activite
-Route::get("/admin/activites/edit/{id}", [ActiviteController::class, 'edit'])
+Route::get("/admin/activites/edit/{id}", [AdminActiviteController::class, 'edit'])
 ->name('admin.activites.edit');
 // ->middleware('auth');
 
 // // Traitement du formulaire de modification
-Route::post("/admin/activites/update", [ActiviteController::class, 'update'])
+Route::post("/admin/activites/update", [AdminActiviteController::class, 'update'])
 ->name('admin.activites.update');
 // ->middleware('auth');
 
 // //Suppression d'une activité
-Route::post("/admin/activites/destroy", [ActiviteController::class, 'destroy'])
+Route::post("/admin/activites/destroy", [AdminActiviteController::class, 'destroy'])
 ->name('admin.activites.destroy');
 // ->middleware('auth');

@@ -2,6 +2,9 @@
 .conteneur-activites {
     display: flex;
     flex-direction: column;
+    h1{
+        margin: 0;
+    }
 
     .conteneur-date {
         display: flex;
@@ -13,9 +16,10 @@
             flex-direction: row;
             width: 50%;
 
+
             h2 {
                 color: $blanc;
-
+ margin-bottom: 0;
                 &.selected {
                     color: $rose;
                 }
@@ -77,10 +81,11 @@
 
 
         .conteneur-image {
-            display: inline;
+            // display: inline;
             height: 200px;
             width: calc(100% - 300px);
             margin-left: 0;
+
 
             img {
                 height: 100%;
@@ -92,9 +97,14 @@
 
             .description {
                 display: none;
-                height: 200px;
+                height: fit-content;
                 background-color: $blanc;
-                color: $noir;
+                margin: 0;
+                padding: 1em 3em;
+                p{
+                    color: $noir;
+                }
+
             }
         }
 
@@ -151,4 +161,10 @@
         transform: translateX(0);
         /* Move to original position */
     }
+
+
+
+
+
+
 }

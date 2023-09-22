@@ -6,7 +6,7 @@
 
     </button>
     @foreach ($vendrediActivites as $key => $activite)
-                <article class="activites vendredi {{ $key >= 3 ? 'hidden' : '' }} ">
+
 
                     <div class="conteneur-image">
                         <img class="thumbnail" src="{{ $activite->image }}" alt="image de l'activite">

@@ -38,28 +38,33 @@
             @foreach ($vendrediActivites as $key => $activite)
                 <article class="activites vendredi {{ $key >= 3 ? 'hidden' : '' }} ">
 
-                    <div class="conteneur-image">
+                    <div class="conteneur-image" onmouseover="showDescription(this)" onmouseout="hideDescription(this)">
                         <img class="thumbnail" src="{{ $activite->image }}" alt="image de l'activite">
                         {{-- <img class="thumbnail" src="{{ asset('img\activites\cereals.png') }}" alt=""
                             loading="lazy"> --}}
 
                         <div class="description">
-                            <p> description {{ $activite->description }}</p>
+                            <p>{{ $activite->description }}</p>
+                            <p>{{ $activite->description }}</p>
+                            <p>{{ $activite->description }}</p>
+                            <p>{{ $activite->description }}</p>
+                            <p>{{ $activite->description }}</p>
+                            <p>{{ $activite->description }}</p>
                         </div>
                     </div>
 
                     <div class="conteneur-titre">
 
                         <div class="heure">
-                            <p class="heure">heure {{ $activite->heure }}</p>
+                            <p class="heure"> {{ $activite->heure }}</p>
                         </div>
 
                         <div class="titre">
-                            <p> titre {{ $activite->titre }}</p>
+                            <p> {{ $activite->titre }}</p>
                         </div>
 
                         <div class="endroit">
-                            <p>endroit {{ $activite->endroit }}</p>
+                            <p> {{ $activite->endroit }}</p>
                         </div>
                     </div>
                 </article>
@@ -115,6 +120,27 @@
 
                 const buttonText = button.innerText;
                 button.innerText = buttonText === 'VOIR PLUS' ? 'VOIR MOINS' : 'VOIR PLUS';
+            }
+
+            // show description on mouseover
+            function showDescription(element) {
+                const description = element.querySelector('.description');
+                const nextElement = element.nextElementSibling;
+
+                if (description && nextElement) {
+                    description.style.display = 'block';
+                    nextElement.style.marginTop = description.clientHeight + 'px';
+                }
+            }
+
+            function hideDescription(element) {
+                const description = element.querySelector('.description');
+                const nextElement = element.nextElementSibling;
+
+                if (description && nextElement) {
+                    description.style.display = 'none';
+                    nextElement.style.marginTop = '0';
+                }
             }
         </script>
 

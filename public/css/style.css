@@ -137,6 +137,9 @@ blockquote span.material-icons:first-child {
   display: flex;
   flex-direction: column;
 }
+.conteneur-activites h1 {
+  margin: 0;
+}
 .conteneur-activites .conteneur-date {
   display: flex;
   flex-direction: column;
@@ -149,6 +152,7 @@ blockquote span.material-icons:first-child {
 }
 .conteneur-activites .conteneur-date .conteneur-jours h2 {
   color: white;
+  margin-bottom: 0;
 }
 .conteneur-activites .conteneur-date .conteneur-jours h2.selected {
   color: #eca6d9;
@@ -198,7 +202,6 @@ blockquote span.material-icons:first-child {
   transition: opacity 2s ease, transform 2s ease;
 }
 .conteneur-activites article.activites .conteneur-image {
-  display: inline;
   height: 200px;
   width: calc(100% - 300px);
   margin-left: 0;
@@ -213,8 +216,13 @@ blockquote span.material-icons:first-child {
 }
 .conteneur-activites article.activites .conteneur-image .description {
   display: none;
-  height: 200px;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: white;
+  margin: 0;
+  padding: 1em 3em;
+}
+.conteneur-activites article.activites .conteneur-image .description p {
   color: #030303;
 }
 .conteneur-activites article.activites .conteneur-titre {

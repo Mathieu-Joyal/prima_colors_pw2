@@ -3,9 +3,10 @@
 namespace App\Http\Controllers\admin;
 
 use App\Models\Activite;
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+
+use App\Http\Controllers\Controller;
 class AdminActiviteController extends Controller
 {
     //==================TOUTES LES ACTIVITÉS===========================//
@@ -166,6 +167,6 @@ class AdminActiviteController extends Controller
          Activite::destroy($request->id);
 
          return redirect()->route('admin.activites.index')
-                 ->with('succes', "La activite a été supprimée!");
+                 ->with('succes', "L'activite a été supprimée!");
      }
 }
