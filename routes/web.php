@@ -125,7 +125,7 @@ Route::post('/utilisateurs', [ReservationController::class, 'store'])
     ->middleware('auth');
 
 // Traitement de la suppression du forfait choisit par l'utilisateur
-Route::get("/utilisateurs/{id}/user", [ReservationController::class, 'destroy'])
+Route::post("/utilisateurs/{id}/user", [ReservationController::class, 'destroy'])
     ->name('reservations.destroy')
     ->middleware('auth');
 
@@ -158,9 +158,9 @@ Route::get("/admin/employe/destroy/{id}", [AdminEmployeController::class, 'destr
     ->middleware('auth:employe');
 
 // Traitement de la suppression par l'admininstrateur du forfait choisit par l'utilisateur
-Route::get("/utilisateurs/{id}/admin", [AdminReservationController::class, 'destroy'])
-    ->name('reservations.destroy')
-    ->middleware('auth:employe');
+// Route::get("/utilisateurs/{id}/admin", [AdminReservationController::class, 'destroy'])
+//     ->name('reservations.destroy')
+//     ->middleware('auth:employe');
 
 // ************* SECTION ADMIN PAGE UTILISATEUR *************** //
 //

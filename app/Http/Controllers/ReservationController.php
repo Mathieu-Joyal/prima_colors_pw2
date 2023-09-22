@@ -46,6 +46,8 @@ class ReservationController extends Controller
      * @return RedirectResponse
      */
     public function destroy($id) {
+
+
         // Supprimer la réservation
         Reservation::destroy($id);
 
