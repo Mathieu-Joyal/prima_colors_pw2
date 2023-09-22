@@ -38,7 +38,7 @@
             @foreach ($vendrediActivites as $key => $activite)
                 <article class="activites vendredi {{ $key >= 3 ? 'hidden' : '' }} ">
 
-                    <div class="conteneur-image" onmouseover="showDescription(this)" onmouseout="hideDescription(this)">
+                    <div class="conteneur-image" onclick="toggleDescription(this)">
                         <img class="thumbnail" src="{{ $activite->image }}" alt="image de l'activite">
                         {{-- <img class="thumbnail" src="{{ asset('img\activites\cereals.png') }}" alt=""
                             loading="lazy"> --}}
@@ -122,26 +122,22 @@
                 button.innerText = buttonText === 'VOIR PLUS' ? 'VOIR MOINS' : 'VOIR PLUS';
             }
 
-            // show description on mouseover
-            function showDescription(element) {
-                const description = element.querySelector('.description');
-                const nextElement = element.nextElementSibling;
+            // show description on click
+            function toggleDescription(element) {
+    const description = element.querySelector('.description');
+    const nextElement = element.nextElementSibling;
 
-                if (description && nextElement) {
-                    description.style.display = 'block';
-                    nextElement.style.marginTop = description.clientHeight + 'px';
-                }
-            }
+    if (description && nextElement) {
+        if (description.style.display === 'none' || description.style.display === '') {
+            description.style.display = 'block';
+            nextElement.style.marginTop = description.clientHeight + 'px';
+        } else {
+            description.style.display = 'none';
+            nextElement.style.marginTop = '0';
+        }
+    }
+}
 
-            function hideDescription(element) {
-                const description = element.querySelector('.description');
-                const nextElement = element.nextElementSibling;
-
-                if (description && nextElement) {
-                    description.style.display = 'none';
-                    nextElement.style.marginTop = '0';
-                }
-            }
         </script>
 
         {{-- <x-ban_concours /> --}}
