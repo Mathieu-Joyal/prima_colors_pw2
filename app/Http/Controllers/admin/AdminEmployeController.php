@@ -28,26 +28,6 @@ class AdminEmployeController extends Controller
      *
      * @return void
      */
-    public function create(){
-        $un_employe = auth()->guard('employe')->user();
-
-        $employes = \App\Models\Employe::all();
-
-        return view('admin.employes.create', [
-            "un_employe" => $un_employe,
-            "employes" => $employes,
-            "roles" => Role::all(),
-            "users" => User::all(),
-            "reservations" => Reservation::all(),
-            "forfaits" => Forfait::all(),
-        ]);
-    }
-
-    /**
-     * Undocumented function
-     *
-     * @return void
-     */
     public function edit($id){
 
         return view('admin.employes.edit');
