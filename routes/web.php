@@ -3,18 +3,20 @@
 use App\Http\Controllers\AccueilController;
 use App\Http\Controllers\ActualiteController;
 use App\Http\Controllers\ActiviteController;
-use App\Http\Controllers\AdminActualiteController;
-use App\Http\Controllers\AdminConnexionController;
-use App\Http\Controllers\AdminController;
-use App\Http\Controllers\AdminUtilisateurController;
-// use App\Http\Controllers\AdminActiviteController;
 use App\Http\Controllers\ConnexionController;
-use App\Http\Controllers\EmployeController;
 use App\Http\Controllers\EnregistrementController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\UtilisateurController;
 use Illuminate\Support\Facades\Route;
 
+// Les routes d'administration
+use App\Http\Controllers\admin\AdminAccueilController;
+use App\Http\Controllers\admin\AdminEmployeController;
+use App\Http\Controllers\admin\AdminUtilisateurController;
+use App\Http\Controllers\admin\AdminActualiteController;
+use App\Http\Controllers\admin\AdminActiviteController;
+use App\Http\Controllers\admin\AdminConnexionController;
+use App\Http\Controllers\admin\AdminEnregistrementController;
 
 //SITE WEB
 
@@ -36,7 +38,10 @@ Route::get('/actualites', [ActualiteController::class, 'index'])
 /**CONNEXION UTILISATEUR */
 /**COMPTE UTILISATEUR */
 
-//SECTION ADMINISTARTION
+
+// ***************************************************** //
+// ************* SECTION ADMINISTRATION **************** //
+// ***************************************************** //
 
     // SECTION CONNEXION D'UN COMPTE
 
@@ -96,14 +101,16 @@ Route::post('/utilisateurs/concours', [UtilisateurController::class, 'updateConc
     ->name('utilisateurs.updateConcours')
     ->middleware('auth');
 
+
+
     // SECTION COMPTE EMPLOYÉ
 // Affichage de la page accueil employé ***
-Route::get('/admin', [AdminController::class, 'index'])
+Route::get('/admin', [AdminAccueilController::class, 'index'])
     ->name('admin.index')
     ->middleware('auth:employe');
 
 // Affichage du formulaire création de compte employé
-Route::get('/employes/create', [EmployeController::class, 'create'])
+Route::get('/employes/create', [AdminEmployeController::class, 'create'])
     ->name('employes.create')
     ->middleware('auth:employe');
 
@@ -192,17 +199,17 @@ Route::post("/admin/deconnexion", [AdminConnexionController::class, 'deconnecter
 
 // ADMIN SECTION GESTIONS DES EMPLOYÉS
 // Affichage de la page employé
-Route::get('/admin/employe', [EmployeController::class, 'index'])
+Route::get('/admin/employe', [AdminEmployeController::class, 'index'])
     ->name('admin.employes.index')
     ->middleware('auth:employe');
 
 // Affichage du formulaire de modification d'un employé
-Route::get("/admin/employe/edit/{id}", [EmployeController::class, 'edit'])
+Route::get("/admin/employe/edit/{id}", [AdminEmployeController::class, 'edit'])
     ->name('admin.employes.edit')
     ->middleware('auth:employe');
 
 // Traitement de la suppression de l'employé
-Route::get("/admin/employe/destroy/{id}", [EmployeController::class, 'destroy'])
+Route::get("/admin/employe/destroy/{id}", [AdminEmployeController::class, 'destroy'])
     ->name('admin.employes.destroy')
     ->middleware('auth:employe');
 
@@ -222,5 +229,3 @@ Route::get("/admin/utilisateur/edit/{id}", [AdminUtilisateurController::class, '
 Route::get("/admin/utilisateurs/destroy/{id}", [AdminUtilisateurController::class, 'destroy'])
     ->name('admin.utilisateurs.destroy')
     ->middleware('auth:employe');
-
-    // allo

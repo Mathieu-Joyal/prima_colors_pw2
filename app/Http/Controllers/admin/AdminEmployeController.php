@@ -1,15 +1,16 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\admin;
 
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use App\Http\Middleware\Employe;
 use App\Models\Forfait;
 use App\Models\Reservation;
 use App\Models\Role;
 use App\Models\User;
-use Illuminate\Http\Request;
 
-class EmployeController extends Controller
+class AdminEmployeController extends Controller
 {
     /**
      * À MARIE-ÈVE
