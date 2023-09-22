@@ -31,13 +31,15 @@ Route::get("/", [AccueilController::class, 'index'])
 Route::get('/activites', [ActiviteController::class, 'index'])
 ->name('activites.index');
 
+// ***************** PAGE CONCOURS ********************** //
+
+// ***************** PAGE À PROPOS ********************** //
+
 // **************** PAGE ACTUALITÉS ******************** //
 Route::get('/actualites', [ActualiteController::class, 'index'])
 ->name('actualites.index');
 
-// ***************** PAGE À PROPOS ********************** //
 // **************** PAGE BILLETERIE ********************* //
-// ***************** PAGE CONCOURS ********************** //
 
 
 
