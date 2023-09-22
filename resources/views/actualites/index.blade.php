@@ -72,6 +72,7 @@
 
         </section>
         <script>
+            //BOUTTON VOIR PLUS
             function voirPlus(button) {
                 const parent = button.parentElement.parentElement.parentElement;
                 const dots = parent.querySelector(".dots");
@@ -88,6 +89,8 @@
                     plusText.style.display = "inline";
                 }
             }
+
+
         </script>
         {{-- <x-ban_concours/> --}}
 
