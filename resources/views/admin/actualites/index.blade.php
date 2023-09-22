@@ -1,7 +1,7 @@
 <x-layout titre="Créez une actualité">
-    <button >
+    <button>
         <a href="/admin/actualites/create" class="nav">
-           Ajouter une actualité
+            Ajouter une actualité
         </a>
 
     </button>
@@ -24,22 +24,26 @@
                         </p>
                         <p>{{ $actualite->description }} </p>
                     </div>
-
+                    <div class="conteneur-image">
+                        <img class="thumbnail" src="{{ $actualite->image }}" alt="image de l'actualite">
+                        {{-- <img class="thumbnail" src="{{ asset('img\actualites\1.png') }}"
+                            alt=""> --}}
+                    </div>
                     <div class="conteneur-btn">
                         {{-- MODIFICATION --}}
                         <button>
-                            <a href="{{ route('admin.actualites.edit', ["id" => $actualite->id]) }}">
+                            <a href="{{ route('admin.actualites.edit', ['id' => $actualite->id]) }}">
                                 Modifier une actualité
-                             </a>
+                            </a>
                         </button>
-                         {{-- SUPPRESSION --}}
-                         <form action="{{ route('admin.actualites.destroy') }}" method="POST">
+                        {{-- SUPPRESSION --}}
+                        <form action="{{ route('admin.actualites.destroy') }}" method="POST">
                             @csrf
 
                             <input type="hidden" name="id" value="{{ $actualite->id }}">
                             <button type="submit">
 
-                                    Supprimer l'actualité
+                                Supprimer l'actualité
 
                             </button>
                         </form>
@@ -48,11 +52,7 @@
                 </div>
             </div>
 
-            <div class="conteneur-image">
-                <img class="thumbnail" src="{{ $actualite->image }}" alt="image de l'actualite">
-                {{-- <img class="thumbnail" src="{{ asset('img\actualites\1.png') }}"
-                            alt=""> --}}
-            </div>
+
 
         </article>
     @endforeach

@@ -182,12 +182,8 @@ Route::get("/admin/utilisateurs/destroy/{id}", [AdminUtilisateurController::clas
 
 
 
-
-// Section Shante pas touché
-
-
-    //SECTION GESTIONS ACTUALITÉS
-
+// *************** SECTION GESTIONS ACTUALITÉS***************** //
+//
     //Affichage de la liste d'actualités
 Route::get('/admin/actualites', [AdminActualiteController::class, 'index'])
     ->name('admin.actualites.index');
@@ -218,28 +214,30 @@ Route::post("/admin/actualites/destroy", [AdminActualiteController::class, 'dest
     ->name('admin.actualites.destroy');
 //     ->middleware('auth');
 
-    //SECTION GESTIONS ACTIVITÉS
 
+// *************** SECTION GESTIONS ACTIVITÉS ***************** //
+//
      // Affichage du formulaire d'ajout d'une activités
-// Route::get('/activites/create', [ActiviteController::class, 'create'])
-// ->name('activites.create')
+Route::get('/activites/create', [ActiviteController::class, 'create'])
+->name('activites.create');
 // ->middleware('auth');
 
 // // Traitement du formulaire
-// Route::post('/activites', [ActiviteController::class, 'store'])
-// ->name('activites.store')
+Route::post('/activites', [ActiviteController::class, 'store'])
+->name('activites.store');
 // ->middleware('auth');
 
 // // Affichage du formulaire de modification d'une Activite
-// Route::get("/activites/edit/{id}", [ActiviteController::class, 'edit'])
-// ->name('activites.edit')
+Route::get("/activites/edit/{id}", [ActiviteController::class, 'edit'])
+->name('activites.edit');
 // ->middleware('auth');
 
 // // Traitement du formulaire de modification
-// Route::post("/activites/update", [ActiviteController::class, 'update'])
-// ->name('activites.update')
+Route::post("/activites/update", [ActiviteController::class, 'update'])
+->name('activites.update');
 // ->middleware('auth');
+
 // //Suppression d'une activité
-// Route::post("/activites/destroy", [ActiviteController::class, 'destroy'])
-// ->name('activites.destroy')
+Route::post("/activites/destroy", [ActiviteController::class, 'destroy'])
+->name('activites.destroy');
 // ->middleware('auth');
