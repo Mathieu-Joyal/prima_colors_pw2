@@ -1,0 +1,44 @@
+ .activites-admin{
+   margin: 5em;
+}
+.conteneur-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.grid-item {
+    flex: 0 1 calc(25% - 10px);
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid $rose;
+}
+
+
+
+
+.description{
+    max-width: 100%;
+    border: 1px solid $rose;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.image img {
+
+    height: auto;
+    flex-basis: calc(66.66% - 10px);
+}
+
+.conteneur-btn{
+    display: flex;
+    justify-content: center;
+}
+hr{
+   color: $rose;
+   border: solid $rose 3px;
+margin: 2em;
+}
+
+
+

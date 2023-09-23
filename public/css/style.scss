@@ -171,6 +171,8 @@ blockquote {
 
 // Section administrateur
 @import "admin/utilisateurs.scss";
+@import "admin/activites/index";
+@import "admin/activites/form";
 
 // Les composantes
 @import "components/formulaire";
