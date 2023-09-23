@@ -672,6 +672,73 @@ body .un_concours img {
   border: 0.1em solid #0B8A80;
 }
 
+.activites-admin {
+  margin: 5em;
+}
+
+.conteneur-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.grid-item {
+  flex: 0 1 calc(25% - 10px);
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #eca6d9;
+}
+
+.description {
+  max-width: 100%;
+  border: 1px solid #eca6d9;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.image img {
+  height: auto;
+  flex-basis: calc(66.66% - 10px);
+}
+
+.conteneur-btn {
+  display: flex;
+  justify-content: center;
+}
+
+hr {
+  color: #eca6d9;
+  border: solid #eca6d9 3px;
+  margin: 2em;
+}
+
+.form {
+  margin: 5em;
+}
+.form label {
+  font-family: "pf-venue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 38px;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+.form .grid-item {
+  display: flex;
+  flex-direction: column;
+}
+.form .grid-item input {
+  height: 50px;
+  font-size: 24px;
+}
+.form .grid-item.description {
+  margin-bottom: 1.5em;
+}
+.form .btn-submit {
+  justify-content: center;
+}
+
 form select {
   padding: 1em 3em;
   border-radius: 0.25em;
