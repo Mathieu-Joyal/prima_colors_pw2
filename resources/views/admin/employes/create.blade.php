@@ -2,9 +2,6 @@
 
     <x-header />
 
-    {{-- Succès de la connexion à confimer après résoudre problème avec auth:employe --}}
-    {{-- <x-alertes.succes cle="succes" /> --}}
-
     {{-- Pourrait être une composante --}}
     <div class="deconnexion">
         <form action="{{ route('deconnexion.employe') }}"

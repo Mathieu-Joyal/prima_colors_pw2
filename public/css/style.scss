@@ -5,6 +5,7 @@ $vert: #0B8A80;
 $blanc: #ffff;
 $noir: #030303;
 $jaune: #eeb15e;
+$rouge: #df1f1f;
 
 //FONTS
 
@@ -174,8 +175,14 @@ blockquote {
 @import "admin/activites/index";
 @import "admin/activites/form";
 
+// Page d'accueil
+@import "admin/accueil/index";
+
 // Les composantes
 @import "components/formulaire";
 @import "components/footer.scss";
 @import "components/nav.scss";
+  //Les boutons
+@import 'components/boutons/deconnexion';
+@import 'components/boutons/creation';
 

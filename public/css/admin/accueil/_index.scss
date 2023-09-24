@@ -1,0 +1,34 @@
+.banniere_accueil {
+    width: 100%;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+        .conteneur_accueil {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+        a {
+            width: 10em;
+            text-decoration: none;
+            background-color: $vert;
+            padding: 1em 2em;
+            color: white;
+            margin: 1em;
+            border-radius: .25em;
+            text-align: center;
+            display: inline-block;
+            transition: background-color 0.3s;
+
+        &:hover {
+            background-color: $rose; /* Change to your desired hover background color */
+            border-color: $vert; /* Change to your desired hover border color */
+        }
+    }
+}

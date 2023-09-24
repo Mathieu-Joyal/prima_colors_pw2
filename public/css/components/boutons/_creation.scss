@@ -1,0 +1,19 @@
+.creation {
+    form {
+        margin: 2em;
+    }
+
+    input {
+        background-color: $vert;
+        padding: 1em 2em;
+        color: white;
+        border: none;
+        border-radius: .25em;
+        cursor: pointer;
+    }
+
+    input:hover {
+        background-color: $rose;
+        transition: background-color, 0.3s;
+    }
+}
