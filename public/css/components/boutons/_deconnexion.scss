@@ -1,0 +1,21 @@
+/* resources/sass/components/boutons/deconnexion.scss */
+.deconnexion {
+    form {
+        margin: 2em;
+        text-align: right;
+    }
+
+    input {
+        background-color: $rouge;
+        padding: 1em 2em;
+        color: white;
+        border: none;
+        border-radius: .25em;
+        cursor: pointer;
+    }
+
+    input:hover {
+        background-color: darken($rouge, 20%);
+        transition: background-color, 0.3s;
+    }
+}

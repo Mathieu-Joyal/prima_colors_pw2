@@ -5,6 +5,7 @@ $vert: #0B8A80;
 $blanc: #ffff;
 $noir: #030303;
 $jaune: #eeb15e;
+$rouge: #df1f1f;
 
 //FONTS
 
@@ -181,4 +182,5 @@ blockquote {
 @import "components/formulaire";
 @import "components/footer.scss";
 @import "components/nav.scss";
+@import 'components/boutons/deconnexion';
 
