@@ -7,7 +7,9 @@
     {{-- Succès de la connexion à confimer après résoudre problème avec auth:employe --}}
     {{-- <x-alertes.succes cle="succes" /> --}}
 
-    <x-boutons.deconnexion />
+    <x-boutons.deconnexion
+        route="{{ route('admin.deconnexion') }}"
+    />
 
     <h2>Bonjour {{ $un_employe->prenom }} {{ $un_employe->nom }}!</h2>
 
