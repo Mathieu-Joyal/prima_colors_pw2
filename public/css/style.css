@@ -1023,7 +1023,6 @@ a.connection {
   color: #eca6d9;
 }
 
-/* resources/sass/components/boutons/deconnexion.scss */
 .deconnexion form {
   margin: 2em;
   text-align: right;
@@ -1038,5 +1037,21 @@ a.connection {
 }
 .deconnexion input:hover {
   background-color: #851313;
+  transition: background-color, 0.3s;
+}
+
+.creation form {
+  margin: 2em;
+}
+.creation input {
+  background-color: #0B8A80;
+  padding: 1em 2em;
+  color: white;
+  border: none;
+  border-radius: 0.25em;
+  cursor: pointer;
+}
+.creation input:hover {
+  background-color: #eca6d9;
   transition: background-color, 0.3s;
 }/*# sourceMappingURL=style.css.map */

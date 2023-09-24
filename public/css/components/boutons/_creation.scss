@@ -1,11 +1,10 @@
-.deconnexion {
+.creation {
     form {
         margin: 2em;
-        text-align: right;
     }
 
     input {
-        background-color: $rouge;
+        background-color: $vert;
         padding: 1em 2em;
         color: white;
         border: none;
@@ -14,7 +13,7 @@
     }
 
     input:hover {
-        background-color: darken($rouge, 20%);
+        background-color: $rose;
         transition: background-color, 0.3s;
     }
 }
