@@ -14,6 +14,11 @@ class AdminAccueilController extends Controller
      */
     public function index() {
 
-        return view ('admin.index');
+    $un_employe = auth()->guard('employe')->user();
+
+        return view('admin.index', [
+            "un_employe" => $un_employe
+        ]);
     }
 }
+

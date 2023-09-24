@@ -739,6 +739,38 @@ hr {
   justify-content: center;
 }
 
+.banniere_accueil {
+  width: 100%;
+  overflow: hidden;
+}
+.banniere_accueil img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.conteneur_accueil {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.conteneur_accueil a {
+  width: 10em;
+  text-decoration: none;
+  background-color: #0B8A80;
+  padding: 1em 2em;
+  color: white;
+  margin: 1em;
+  border-radius: 0.25em;
+  text-align: center;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+.conteneur_accueil a:hover {
+  background-color: #eca6d9; /* Change to your desired hover background color */
+  border-color: #0B8A80; /* Change to your desired hover border color */
+}
+
 form select {
   padding: 1em 3em;
   border-radius: 0.25em;
