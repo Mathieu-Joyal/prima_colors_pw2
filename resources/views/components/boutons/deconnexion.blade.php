@@ -1,9 +1,6 @@
 <div class="deconnexion">
 
-    <form action="{{ route('admin.deconnexion') }}"
-
-            method="POST"
-    >
+    <form action="{{ $route }}" method="POST">
         @csrf
 
         <input type="submit" value="Déconnexion">
