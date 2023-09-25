@@ -1,0 +1,92 @@
+.section_billet {
+    position: relative;
+    background-image: url('img/accueil/ban_billet.png'); 
+    background-size: cover; 
+    background-position: center; 
+    width: auto;
+  height: auto;
+    padding-bottom: 500px; 
+}
+
+.rectangle_blanc {
+    position: absolute;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 150px;
+    transform: translate(25%, -101%);
+    width: 90px; 
+    height: 340px; 
+    background-color: $blanc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left; 
+    float: left;
+    z-index: 2;
+}
+
+.rectangle_blanc h1 {
+    color: $noir;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+    font-size: 95px;
+    writing-mode: vertical-rl; 
+    text-orientation: sideways-right; 
+    transform: rotate(180deg); 
+    transform-origin: center; 
+    position: absolute; 
+    top: -20%;
+    left: -35%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 3;
+}
+
+.rectangle_blanc .forfaits {
+    font-size: 32px;
+    text-decoration: none;
+    color: $jaune;
+    font-weight: bold;
+    z-index: 3;
+    border: 3px solid $jaune;
+    padding: 10px 50px;
+    text-align: right;
+}
+
+.rectangle_blanc .forfaits i {
+    color: $jaune; 
+}
+
+.forfaits {
+    font-family: "pf-venue", sans-serif;
+    text-decoration: none; 
+    display: inline-block; 
+    position: relative; 
+}
+
+.forfaits .material-icons {
+    font-size: 40px;
+    color: $noir;
+    position: relative;
+    top: 15%; 
+    left: 7.5%;
+    z-index: 4;
+}
+
+a .forfaits {
+    font-family: "pf-venue", sans-serif;
+    color: $noir;
+}
+
+.bg_billet {
+    float: right; 
+    font-family: "pf-venue", sans-serif;
+    font-size: 32px;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: $rose;
+    padding: 5px 60px;
+    margin-top: -50px; 
+    z-index: 50;
+}

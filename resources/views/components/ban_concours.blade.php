@@ -5,7 +5,7 @@
         <h3>CréARTive: Concours d'Art Visuel</h3>
         <a href="/concours" class="concours">Inscription à CréARTives 
             <span class="material-icons">
-                double_arrow
+                add
             </span>
         </a>
     </div>

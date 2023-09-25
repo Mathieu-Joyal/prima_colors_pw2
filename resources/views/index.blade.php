@@ -62,7 +62,7 @@
     </div>
 
     <x-ban_compte></x-ban_compte>
-    {{-- <x-ban_billet></x-ban_billet> --}}
+    <x-ban_billet></x-ban_billet>
     <x-footer></x-footer>
 
 </x-layout>
