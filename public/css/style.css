@@ -796,6 +796,7 @@ button:hover a {
   justify-content: center;
 }
 .conteneur_accueil a {
+  font-family: "pf-venue", sans-serif;
   width: 10em;
   text-decoration: none;
   background-color: #0B8A80;
