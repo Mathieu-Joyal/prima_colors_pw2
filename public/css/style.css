@@ -809,8 +809,8 @@ button:hover a {
   transition: background-color 0.3s;
 }
 .conteneur_accueil a:hover {
-  background-color: #eca6d9; /* Change to your desired hover background color */
-  border-color: #0B8A80; /* Change to your desired hover border color */
+  background-color: #eca6d9;
+  border-color: #0B8A80;
 }
 
 form select {
@@ -1082,10 +1082,10 @@ a.connection {
   transition: background-color, 0.3s;
 }
 
-.creation form {
+.soumettre form {
   margin: 2em;
 }
-.creation input {
+.soumettre input {
   background-color: #0B8A80;
   padding: 1em 2em;
   color: white;
@@ -1093,7 +1093,7 @@ a.connection {
   border-radius: 0.25em;
   cursor: pointer;
 }
-.creation input:hover {
+.soumettre input:hover {
   background-color: #eca6d9;
   transition: background-color, 0.3s;
 }/*# sourceMappingURL=style.css.map */

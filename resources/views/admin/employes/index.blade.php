@@ -4,11 +4,13 @@
 
     <x-alertes.succes cle="succes" />
 
-    <x-boutons.deconnexion />
+    <x-boutons.deconnexion
+        route="{{ route('admin.deconnexion') }}"
+    />
 
     <div class="conteneur">
 
-        <x-boutons.creation
+        <x-boutons.soumettre
             route="{{ route('admin.employes.create') }}"
             valeur="Création d'un employé"
         />
