@@ -88,21 +88,21 @@
                     <article class="une_reservation">
 
                         <h4>
-                            {{ $forfait->titre }}
+                            {{ $reservation->forfait->titre }}
                         </h4>
                         <p>
-                            {{ $forfait->description }}
+                            {{ $reservation->forfait->description }}
                         </p>
                         <div>
                             <p class="les_dates">
-                                Date d'arrivé: {{ $forfait->date_arrive }}
+                                Date d'arrivé: {{ $reservation->forfait->date_arrive }}
                             </p>
                             <p class="les_dates">
-                                Date de départ: {{ $forfait->date_depart }}
+                                Date de départ: {{ $reservation->forfait->date_depart }}
                             </p>
                         </div>
                         <p>
-                        Coût du forfait: {{ $forfait->prix }}$
+                        Coût du forfait: {{ $reservation->forfait->prix }}$
                         </p>
 
                         <form action="{{ route('reservations.destroy', ['id' => $reservation->id]) }}" method="POST">
