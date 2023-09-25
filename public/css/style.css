@@ -157,6 +157,9 @@ blockquote span.material-icons:first-child {
 .conteneur-activites .conteneur-date .conteneur-jours h2.selected {
   color: #eca6d9;
 }
+.conteneur-activites .conteneur-date .conteneur-jours h2:hover {
+  color: #eca6d9;
+}
 .conteneur-activites .conteneur-bordure.titre {
   margin-bottom: 100px;
 }
