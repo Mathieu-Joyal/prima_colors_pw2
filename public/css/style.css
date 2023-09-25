@@ -106,6 +106,7 @@ blockquote {
   text-align: center;
   margin: 20px;
   padding: 20px;
+  padding-bottom: 150px;
   position: relative;
   opacity: 0;
   animation: fade-in 1.5s ease-in-out forwards;
@@ -423,18 +424,18 @@ body article {
   background-position: center;
   width: 300px;
   height: 200px;
-  padding-bottom: 500px;
+  padding-bottom: 250px;
 }
 
 .carre_noir {
   position: absolute;
   padding-left: 15px;
-  padding-right: 15px;
-  top: 26%;
+  padding-right: 1px;
+  top: 40%;
   left: 100%;
   transform: translate(-50%, -50%);
   width: 450px;
-  height: 365px;
+  height: 370px;
   background-color: #030303;
   display: flex;
   flex-direction: column;
@@ -485,11 +486,11 @@ body article {
 }
 
 .concours .material-icons {
-  font-size: 36px;
+  font-size: 40px;
   color: #030303;
   position: relative;
-  top: 18%;
-  left: 7%;
+  top: 15%;
+  left: 7.5%;
   z-index: 4;
 }
 
@@ -520,33 +521,33 @@ body article {
   padding-left: 15px;
   padding-right: 15px;
   top: 26%;
-  left: 100%;
-  transform: translate(-50%, -50%);
+  right: 0;
+  transform: translate(320%, -50%);
   width: 450px;
-  height: 365px;
-  background-color: rgba(255, 255, 255, 0.3);
+  height: 366px;
+  background-color: rgba(255, 255, 255, 0.445);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   text-align: right;
   z-index: 2;
 }
 
 .carre_blanc h1 {
-  color: #eca6d9;
-  margin-top: -20px;
-  margin-bottom: 0;
-  padding-bottom: 10px;
-  font-size: 95px;
+  color: #eeb15e;
+  font-size: 55px;
   z-index: 3;
+  margin-right: 20px;
+  margin-bottom: 0px;
 }
 
 .carre_blanc h3 {
-  color: #eca6d9;
-  margin: 10px 0;
+  color: #030303;
   font-size: 40px;
-  padding-bottom: 100px;
   text-transform: none;
+  text-align: left;
+  margin-right: 40px;
+  margin-bottom: 20px;
+  line-height: 1.2;
   z-index: 3;
 }
 
@@ -569,17 +570,18 @@ body article {
   color: #030303;
 }
 
-.compte {
+a.compte {
   text-decoration: none;
   display: inline-block;
   position: relative;
+  font-size: 42px;
 }
 
 .compte .material-icons {
-  font-size: 36px;
+  font-size: 40px;
   color: #eca6d9;
   position: relative;
-  top: 18%;
+  top: 15%;
   left: 7%;
   z-index: 4;
 }
@@ -615,7 +617,104 @@ body article {
     display: none !important;
   }
 }
+
+.section_billet {
+  position: relative;
+  background-image: url("img/accueil/ban_billet.png");
+  background-size: cover;
+  background-position: center;
+  width: auto;
+  height: auto;
+  padding-bottom: 500px;
+}
+
+.rectangle_blanc {
+  position: absolute;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 150px;
+  transform: translate(25%, -101%);
+  width: 90px;
+  height: 340px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  float: left;
+  z-index: 2;
+}
+
+.rectangle_blanc h1 {
+  color: #030303;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+  font-size: 95px;
+  writing-mode: vertical-rl;
+  text-orientation: sideways-right;
+  transform: rotate(180deg);
+  transform-origin: center;
+  position: absolute;
+  top: -20%;
+  left: -35%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  z-index: 3;
+}
+
+.rectangle_blanc .forfaits {
+  font-size: 32px;
+  text-decoration: none;
+  color: #eeb15e;
+  font-weight: bold;
+  z-index: 3;
+  border: 3px solid #eeb15e;
+  padding: 10px 50px;
+  text-align: right;
+}
+
+.rectangle_blanc .forfaits i {
+  color: #eeb15e;
+}
+
+.forfaits {
+  font-family: "pf-venue", sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+.forfaits .material-icons {
+  font-size: 40px;
+  color: #030303;
+  position: relative;
+  top: 15%;
+  left: 7.5%;
+  z-index: 4;
+}
+
+a .forfaits {
+  font-family: "pf-venue", sans-serif;
+  color: #030303;
+}
+
+.bg_billet {
+  float: right;
+  font-family: "pf-venue", sans-serif;
+  font-size: 32px;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #eca6d9;
+  padding: 5px 60px;
+  margin-top: -50px;
+  z-index: 50;
+}
+
+body {
+
 .conteneur-utilisateur {
+
   color: #eeb15e;
   margin: 0;
 }
@@ -929,7 +1028,7 @@ p.slogan {
 
 .bg {
   position: absolute;
-  top: 63px;
+  top: 83px;
   z-index: 1;
   width: 100%;
 }
@@ -940,13 +1039,15 @@ p.slogan {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 50px;
+  padding-bottom: 70px;
+  margin-top: 0;
   z-index: 20;
 }
 
 .background {
   width: 100%;
   height: 70px;
+  margin-top: 10px;
   background-color: #0B8A80;
 }
 
@@ -963,18 +1064,18 @@ a {
 }
 
 .menu_nav {
-  height: 40px;
   transition: width 0.3s ease, background-color 0.3s ease;
   display: flex;
   flex-direction: row;
   align-items: center;
+  top: 0px;
 }
 
-.menu_nav .item_nav .nav {
+.menu_nav a.item_nav .nav {
   display: block;
   padding-right: 50px;
   padding-left: 50px;
-  margin-top: 20px;
+  padding-bottom: 10px;
   font-size: 30px;
   font-family: "pf-venue", sans-serif;
   text-transform: uppercase;
@@ -990,20 +1091,21 @@ a {
 }
 
 .menu_nav .item_nav:hover {
-  color: #030303;
-  height: 70px;
+  height: 100%;
   background-color: #eca6d9;
-  transition: width 0.3s ease;
+  transition: width 0.2s ease;
   transition: background-color 1s ease-out;
-  margin-top: 20px;
+}
+
+a.billet {
+  height: 270px;
 }
 
 .billet {
-  width: 150px;
+  width: 250px;
   height: 170px;
   background: url("../img/accueil/billet.jpg");
   background-repeat: no-repeat;
-  margin-right: 50px;
 }
 
 .billet:hover {
@@ -1019,37 +1121,39 @@ p.texte {
   text-transform: uppercase;
   font-weight: bold;
   margin-top: 55px;
-  margin-left: 27px;
+  margin-left: 17px;
 }
 
 .reseau {
   display: flex;
   gap: 20px;
+  padding-bottom: 10px;
+  padding-left: 100px;
 }
 
 img.reseau-img {
   max-width: 100%;
-  margin-right: 40px;
-  margin-top: 20px;
+  margin-right: 60px;
 }
 
 .logo-nav {
   margin-left: 20px;
-  margin-top: 40px;
-}
-
-a.connection .materiel-icon {
-  margin-top: 100px;
-  color: #eca6d9;
-  font-size: 40px;
+  margin-right: 50px;
 }
 
 a.connection {
   font-family: "pf-venue", sans-serif;
   font-size: 36px;
-  margin-top: 180px;
-  margin-right: 25px;
+  margin-top: 200px;
   color: #eca6d9;
+  display: flex; /* Utilisez flexbox */
+  align-items: center; /* Centrez le contenu verticalement */
+}
+
+a.connection .material-icons {
+  margin-bottom: 10px;
+  color: #eca6d9;
+  font-size: 40px;
 }
 
 .deconnexion form {
