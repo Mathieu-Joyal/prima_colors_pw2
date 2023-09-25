@@ -57,11 +57,12 @@
                                     <p>
                                         {{ $reservation->forfait->titre }}
                                     </p>
-                                    <form action="{{ route('reservations.destroy', ['id' => $reservation->id]) }}" method="POST">
+
+                                    <form action="{{ route('admin.reservations.destroy', ['id' => $reservation->id]) }}" method="POST">
                                         @csrf
-                                        <div class="bt_user_cancel" type="submit">
+                                        <button class="bt_user_cancel" type="submit">
                                             Annuler la réservation
-                                        </div>
+                                        </button>
                                     </form>
                                 </div>
                             @endif

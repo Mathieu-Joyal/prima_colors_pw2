@@ -830,6 +830,7 @@ button:hover a {
   color: white;
   padding: 0.25em 0.5em;
   border-radius: 0.25em;
+  cursor: pointer;
 }
 .un_utilisateur .une_reservation .bt_user_cancel:hover {
   background-color: #851313;

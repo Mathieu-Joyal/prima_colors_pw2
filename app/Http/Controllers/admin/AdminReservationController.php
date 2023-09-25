@@ -14,12 +14,13 @@ class AdminReservationController extends Controller
      * @param int $id Id de la réservation à supprimer
      * @return RedirectResponse
      */
-    public function destroyByAdmin($id) {
+    public function destroy($id) {
+
         // Supprimer la réservation
         Reservation::destroy($id);
 
         // Redirection
-        return redirect()->route('employes.index')
+        return redirect()->route('admin.utilisateurs.index')
             ->with('succes', "La réservation de l'utilisateur a été annulée");
     }
 }

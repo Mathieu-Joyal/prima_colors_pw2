@@ -56,6 +56,7 @@
             color: white;
             padding: .25em .5em;
             border-radius: .25em;
+            cursor: pointer;
 
             &:hover {
                 background-color: darken($rouge, 20%);
