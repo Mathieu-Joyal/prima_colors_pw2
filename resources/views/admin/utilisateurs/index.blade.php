@@ -10,42 +10,64 @@
 
             <h3>AFFICHAGE DE LA LISTE DES UTILISATEURS</h3>
 
-                {{-- <div class="conteneur-grid">
+            {{-- Best solution: barre de recherche
+            Fastest solution: orderby --}}
 
-                    <!-- Row 1 -->
-                    <div class="grid-item">
-                        <h3 class="grid-title">Titre</h3>
-                        <p>{{ $activite->titre }}</p>
+            <article class="un_utilisateur">
+                <div class="conteneur_user">
+                    <div class="infos_user">
+                        <p class="titre_user">Prénom</p>
+                        <p class="titre_user">Nom</p>
+                        <p class="titre_user">Adresse courriel</p>
+                    </div>
+                </div>
+            </article>
+
+            @foreach ($users as $user)
+
+                <article class="un_utilisateur">
+
+                    <div class="conteneur_user">
+
+                        <div class="infos_user">
+                            <p>{{ $user->prenom }}</p>
+                            <p>{{ $user->nom }}</p>
+                            <p>{{ $user->email }}</p>
+                        </div>
+
+                        <div class="boutons_user">
+                            <a href="{{ route('admin.utilisateurs.edit', ['id' => $user->id ]) }}">
+                                <span>
+                                    🅴🅳🅸🆃
+                                </span>
+                            </a>
+                            <a href="{{ route('admin.utilisateurs.destroy', ['id' => $user->id ]) }}">
+                                <span>
+                                    🅳🅴🅻🅴🆃🅴
+                                </span>
+                            </a>
+                        </div>
                     </div>
 
-                    <div class="grid-item">
-                        <h3 class="grid-title">Date</h3>
-                        <p>{{ $activite->date }}</p>
-                    </div>
+                        @foreach ($reservations as $reservation)
 
-                    <div class="grid-item">
-                        <h3 class="grid-title">Heure</h3>
-                        <p>{{ $activite->heure }}</p>
-                    </div>
+                            @if ($reservation->user_id === $user->id)
 
-
-                    <div class="grid-item">
-                        <h3 class="grid-title">Endroit</h3>
-                        <p>{{ $activite->endroit }}</p>
-                    </div>
-
-                </div> --}}
-
-                    <a href="{{ route('admin.utilisateurs.edit', ['id' => 1]) }}">
-                        <span>
-                            Modifier l'utilisateur
-                        </span>
-                    </a>
-                    <a href="{{ route('admin.utilisateurs.destroy', ['id' => 1]) }}">
-                        <span>
-                            Supprimer l'utilisateur
-                        </span>
-                    </a>
+                                <div class="une_reservation">
+                                    <p>
+                                        {{ $reservation->forfait->titre }}
+                                    </p>
+                                    <form action="{{ route('reservations.destroy', ['id' => $reservation->id]) }}" method="POST">
+                                        @csrf
+                                        <div class="bt_user_cancel" type="submit">
+                                            Annuler la réservation
+                                        </div>
+                                    </form>
+                                </div>
+                            @endif
+                        @endforeach
+                </article>
+            @endforeach
         </section>
 
 

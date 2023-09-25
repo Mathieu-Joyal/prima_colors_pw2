@@ -1,0 +1,67 @@
+.un_utilisateur {
+    margin: 0.1em 0;
+    padding: 0;
+    border: 1px solid $rose;
+
+    .conteneur_user {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+
+        .infos_user {
+            flex: 1;
+            display: flex;
+            align-items: center;
+
+            p {
+                margin: 0 0.5em;
+                min-width: 5em;
+            }
+
+            .titre_user {
+                font-weight: bold;
+                color: $jaune;
+            }
+        }
+
+
+        .boutons_user {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            a {
+                margin: 0 0.5em;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .une_reservation {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-top: 1px solid $rose;
+        margin: 0 5em;
+
+        p {
+            margin: 0;
+        }
+
+        .bt_user_cancel {
+            display: inline;
+            font-size: .75em;
+            background-color: $rouge;
+            color: white;
+            padding: .25em .5em;
+            border-radius: .25em;
+
+            &:hover {
+                background-color: darken($rouge, 20%);
+                transition: background-color, 0.3s;
+            }
+        }
+    }
+}
+

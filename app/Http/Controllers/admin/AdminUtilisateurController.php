@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Forfait;
+use App\Models\Reservation;
+use App\Models\User;
 
 class AdminUtilisateurController extends Controller
 {
@@ -14,10 +17,11 @@ class AdminUtilisateurController extends Controller
      */
     public function index() {
 
-        // Récupération de l'utilisateur connecté
-        $user = auth()->user();
-
-        return view('admin.utilisateurs.index');
+        return view('admin.utilisateurs.index', [
+            "users" => User::all(),
+            "forfaits" => Forfait::all(),
+            "reservations" => Reservation::all(),
+        ]);
     }
 
     /**

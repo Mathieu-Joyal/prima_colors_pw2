@@ -780,6 +780,62 @@ button:hover a {
   justify-content: center;
 }
 
+.un_utilisateur {
+  margin: 0.1em 0;
+  padding: 0;
+  border: 1px solid #eca6d9;
+}
+.un_utilisateur .conteneur_user {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.un_utilisateur .conteneur_user .infos_user {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.un_utilisateur .conteneur_user .infos_user p {
+  margin: 0 0.5em;
+  min-width: 5em;
+}
+.un_utilisateur .conteneur_user .infos_user .titre_user {
+  font-weight: bold;
+  color: #eeb15e;
+}
+.un_utilisateur .conteneur_user .boutons_user {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.un_utilisateur .conteneur_user .boutons_user a {
+  margin: 0 0.5em;
+  cursor: pointer;
+}
+.un_utilisateur .une_reservation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #eca6d9;
+  margin: 0 5em;
+}
+.un_utilisateur .une_reservation p {
+  margin: 0;
+}
+.un_utilisateur .une_reservation .bt_user_cancel {
+  display: inline;
+  font-size: 0.75em;
+  background-color: #df1f1f;
+  color: white;
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+}
+.un_utilisateur .une_reservation .bt_user_cancel:hover {
+  background-color: #851313;
+  transition: background-color, 0.3s;
+}
+
 .banniere_accueil {
   width: 100%;
   overflow: hidden;
