@@ -5,6 +5,7 @@ h1 {
   color: #eca6d9;
   font-size: 80px;
   color: #eeb15e;
+  margin: 0;
 }
 
 h2 {
@@ -50,12 +51,6 @@ html {
 section {
   margin-left: 3em;
   margin-right: 3em;
-  padding-bottom: 5em;
-}
-
-article {
-  margin-left: 10em;
-  margin-right: 10em;
 }
 
 button {
@@ -73,8 +68,12 @@ button {
   height: 70px;
 }
 
-button.voir {
-  font-size: 36px;
+button:hover {
+  background-color: #eeb15e;
+  color: #030303;
+}
+button:hover a {
+  color: #030303;
 }
 
 .conteneur-bordure {
@@ -153,6 +152,7 @@ blockquote span.material-icons:first-child {
 .conteneur-activites .conteneur-date .conteneur-jours h2 {
   color: white;
   margin-bottom: 0;
+  margin-top: 0;
 }
 .conteneur-activites .conteneur-date .conteneur-jours h2.selected {
   color: #eca6d9;
@@ -198,11 +198,11 @@ blockquote span.material-icons:first-child {
 .conteneur-activites article.activites {
   display: inline-flex;
   justify-content: space-between;
-  margin-bottom: 3em;
   opacity: 0;
   transform: translateX(-50px);
   /* Start offscreen to the left */
   transition: opacity 2s ease, transform 2s ease;
+  padding-bottom: 0;
 }
 .conteneur-activites article.activites .conteneur-image {
   height: 200px;
@@ -283,9 +283,11 @@ blockquote span.material-icons:first-child {
   /* Move to original position */
 }
 
-.conteneur-actualites h1 {
+body article {
   margin: 0;
+  padding: 0;
 }
+
 .conteneur-actualites .titre {
   margin-bottom: 100px;
 }
@@ -613,65 +615,65 @@ blockquote span.material-icons:first-child {
     display: none !important;
   }
 }
-body {
+.conteneur-utilisateur {
   color: #eeb15e;
   margin: 0;
 }
-body .presentation {
+.conteneur-utilisateur .presentation {
   font-size: 1.25em;
 }
-body h3 {
+.conteneur-utilisateur h3 {
   color: #eeb15e;
 }
-body section {
+.conteneur-utilisateur section {
   padding: 0.5em;
 }
-body section img {
+.conteneur-utilisateur section img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-body article {
+.conteneur-utilisateur article {
   padding: 1em 0.5em;
   margin: 1em 0;
 }
-body article .les_dates {
+.conteneur-utilisateur article .les_dates {
   font-size: 1em;
 }
-body article div {
+.conteneur-utilisateur article div {
   color: white;
   margin: 1em 0;
 }
-body article.une_reservation {
+.conteneur-utilisateur article.une_reservation {
   padding: 1em;
 }
-body article.une_reservation:hover {
+.conteneur-utilisateur article.une_reservation:hover {
   background-color: #0B8A80;
   transition: background-color 0.3s;
 }
-body article.une_reservation button {
+.conteneur-utilisateur article.une_reservation button {
   padding: 0.5em 1em;
   border-radius: 0.25em;
   margin-top: 2em;
   bottom: 0;
   right: 1em;
 }
-body article.une_reservation button:hover {
+.conteneur-utilisateur article.une_reservation button:hover {
   background-color: red;
   transition: background-color 0.3s;
 }
-body .notice {
+.conteneur-utilisateur .notice {
   font-size: 0.75em;
   color: red;
 }
-body .un_concours {
+.conteneur-utilisateur .un_concours {
   margin: 0 0 5em 0;
 }
-body .un_concours h4 {
+.conteneur-utilisateur .un_concours h4 {
   color: #eca6d9;
   text-align: center;
 }
-body .un_concours img {
+.conteneur-utilisateur .un_concours img {
   padding: 0.5em;
   border: 0.1em solid #0B8A80;
 }
@@ -738,13 +740,6 @@ button {
 }
 button a {
   color: #eeb15e;
-}
-
-button:hover {
-  background-color: #eeb15e;
-}
-button:hover a {
-  color: #030303;
 }
 
 .form {
