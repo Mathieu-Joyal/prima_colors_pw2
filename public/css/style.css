@@ -58,7 +58,7 @@ article {
   margin-right: 10em;
 }
 
-button.voir {
+button {
   font-family: "pf-venue", sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -155,6 +155,9 @@ blockquote span.material-icons:first-child {
   margin-bottom: 0;
 }
 .conteneur-activites .conteneur-date .conteneur-jours h2.selected {
+  color: #eca6d9;
+}
+.conteneur-activites .conteneur-date .conteneur-jours h2:hover {
   color: #eca6d9;
 }
 .conteneur-activites .conteneur-bordure.titre {
@@ -344,6 +347,7 @@ blockquote span.material-icons:first-child {
 }
 .conteneur-articles-actualites .conteneur-titre .description {
   margin: 0;
+  border: none;
 }
 .conteneur-articles-actualites .conteneur-titre .description p {
   margin: 0;
@@ -672,34 +676,43 @@ body .un_concours img {
   border: 0.1em solid #0B8A80;
 }
 
+.conteneur-titre-activites-admin {
+  display: flex;
+  justify-content: space-between;
+  margin: 5em;
+}
+.conteneur-titre-activites-admin h2 {
+  margin: 0;
+}
+
 .activites-admin {
   margin: 5em;
 }
-
-.conteneur-grid {
+.activites-admin .conteneur-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 20px;
 }
-
-.grid-item {
+.activites-admin .conteneur-grid .grid-item {
   flex: 0 1 calc(25% - 10px);
   padding: 10px;
   box-sizing: border-box;
   border: 1px solid #eca6d9;
 }
-
-.description {
+.activites-admin .conteneur-grid .description {
   max-width: 100%;
   border: 1px solid #eca6d9;
   padding: 10px;
   box-sizing: border-box;
 }
-
-.image img {
-  height: auto;
-  flex-basis: calc(66.66% - 10px);
+.activites-admin .conteneur-grid .image {
+  width: 600px;
+  height: 200px;
+}
+.activites-admin .conteneur-grid .image img {
+  width: 100%;
+  height: 100%;
 }
 
 .conteneur-btn {
@@ -711,6 +724,27 @@ hr {
   color: #eca6d9;
   border: solid #eca6d9 3px;
   margin: 2em;
+}
+
+button {
+  border: none;
+  margin: 0;
+  background-color: #030303;
+  border: #eeb15e 3px solid;
+  height: 70px;
+  text-align: center;
+  width: 500px;
+  margin-bottom: 3em;
+}
+button a {
+  color: #eeb15e;
+}
+
+button:hover {
+  background-color: #eeb15e;
+}
+button:hover a {
+  color: #030303;
 }
 
 .form {

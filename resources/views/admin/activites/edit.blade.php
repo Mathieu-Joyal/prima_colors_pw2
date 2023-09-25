@@ -1,5 +1,5 @@
 <x-layout titre="Modifiez une activité">
-    <div class="">
+    <div class="activites-admin">
         <header class="">
 
             <h2 class="">modifier une activité
@@ -68,23 +68,16 @@
                         value="{{ old('image') ?? $activite->image }}">
                 </div>
 
-                {{-- SUBMIT --}}
+                {{-- MODIFIER --}}
                 <div class="btn-submit">
                     <input type="submit"  value="Modifier!">
                 </div>
             </form>
 
             {{-- LIEN RETOUR --}}
-            <p class="">
+            <div class="button">
                 <a href="{{ route('admin.activites.index') }}" class="">Retour aux activités</a>
-            </p>
-
-
-
-
-
-
-
+            </div>
 
         </div>
     </div>

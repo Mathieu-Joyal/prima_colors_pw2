@@ -11,9 +11,13 @@
             <div class="conteneur-date">
 
                 <div class="conteneur-jours">
-                    <h2 class="selected">Vendredi</h2>
-                    <h2>Samedi</h2>
-                    <h2>Dimanche</h2>
+
+                        <a href="#vendredi"><h2 class="selected"> Vendredi</h2></a>
+
+                        <a href="#samedi"><h2>Samedi</h2></a>
+
+                        <a href="#dimanche"><h2> Dimanche</h2></a>
+
                 </div>
 
                 <div class="conteneur-bordure">
@@ -36,7 +40,7 @@
             </div>
 
             @foreach ($vendrediActivites as $key => $activite)
-                <article class="activites vendredi {{ $key >= 3 ? 'hidden' : '' }} ">
+                <article class="activites vendredi  {{ $key >= 3 ? 'hidden' : '' }} " id="vendredi">
 
                     <div class="conteneur-image" onclick="toggleDescription(this)">
                         <img class="thumbnail" src="{{ $activite->image }}" alt="image de l'activite">
@@ -148,9 +152,11 @@
             <div class="conteneur-date">
 
                 <div class="conteneur-jours">
-                    <h2>Vendredi</h2>
-                    <h2 class="selected">Samedi</h2>
-                    <h2>Dimanche</h2>
+                    <a href="#vendredi"><h2 > Vendredi</h2></a>
+
+                    <a href="#samedi"><h2 class="selected">Samedi</h2></a>
+
+                    <a href="#dimanche"><h2> Dimanche</h2></a>
                 </div>
 
                 <div class="conteneur-bordure">
@@ -161,7 +167,7 @@
                 </div>
             </div>
             @foreach ($samediActivites as $key => $activite)
-                <article class="activites samedi {{ $key >= 3 ? 'hidden' : '' }}">
+                <article class="activites samedi {{ $key >= 3 ? 'hidden' : '' }} "id="samedi">
 
                     <div class="conteneur-image">
                         <img class="thumbnail" src="{{ $activite->image }}" alt="image de l'activite">
@@ -201,9 +207,11 @@
             <div class="conteneur-date">
 
                 <div class="conteneur-jours">
-                    <h2>Vendredi</h2>
-                    <h2>Samedi</h2>
-                    <h2 class="selected">Dimanche</h2>
+                    <a href="#vendredi"><h2 > Vendredi</h2></a>
+
+                        <a href="#samedi"><h2>Samedi</h2></a>
+
+                        <a href="#dimanche"><h2 class="selected"> Dimanche</h2></a>
                 </div>
 
                 <div class="conteneur-bordure">
@@ -214,7 +222,7 @@
                 </div>
             </div>
             @foreach ($dimancheActivites as $key => $activite)
-                <article class="activites dimanche {{ $key >= 3 ? 'hidden' : '' }}">
+                <article class="activites dimanche {{ $key >= 3 ? 'hidden' : '' }}" id="dimanche">
 
                     <div class="conteneur-image">
                         <img class="thumbnail" src="{{ $activite->image }}" alt="image de l'activite">
