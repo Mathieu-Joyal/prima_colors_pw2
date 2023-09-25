@@ -1,4 +1,4 @@
-<div class="creation">
+<div class="soumettre">
 
     <form action="{{ $route }}" method="POST">
         @csrf

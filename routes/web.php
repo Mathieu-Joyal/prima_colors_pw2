@@ -12,14 +12,14 @@ use App\Http\Controllers\UtilisateurController;
 use Illuminate\Support\Facades\Route;
 
 // Les routes d'administration
-use App\Http\Controllers\admin\AdminAccueilController;
-use App\Http\Controllers\admin\AdminEmployeController;
-use App\Http\Controllers\admin\AdminUtilisateurController;
-use App\Http\Controllers\admin\AdminActualiteController;
-use App\Http\Controllers\admin\AdminActiviteController;
-use App\Http\Controllers\admin\AdminConnexionController;
-use App\Http\Controllers\admin\AdminEnregistrementController;
-use App\Http\Controllers\admin\AdminReservationController;
+use App\Http\Controllers\Admin\AdminAccueilController;
+use App\Http\Controllers\Admin\AdminEmployeController;
+use App\Http\Controllers\Admin\AdminUtilisateurController;
+use App\Http\Controllers\Admin\AdminActualiteController;
+use App\Http\Controllers\Admin\AdminActiviteController;
+use App\Http\Controllers\Admin\AdminConnexionController;
+use App\Http\Controllers\Admin\AdminEnregistrementController;
+use App\Http\Controllers\Admin\AdminReservationController;
 
 // ***************************************************** //
 // **************** SECTION SITE WEB ******************* //
@@ -169,9 +169,9 @@ Route::get("/admin/employe/destroy/{id}", [AdminEmployeController::class, 'destr
     ->middleware('auth:employe');
 
 // Traitement de la suppression par l'admininstrateur du forfait choisit par l'utilisateur
-// Route::get("/utilisateurs/{id}/admin", [AdminReservationController::class, 'destroy'])
-//     ->name('reservations.destroy')
-//     ->middleware('auth:employe');
+Route::post("/admin/utilisateur{id}/admin", [AdminReservationController::class, 'destroy'])
+    ->name('admin.reservations.destroy')
+    ->middleware('auth:employe');
 
 // ************* SECTION ADMIN PAGE UTILISATEUR *************** //
 //

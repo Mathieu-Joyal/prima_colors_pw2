@@ -172,6 +172,7 @@ blockquote {
 @import "admin/utilisateurs.scss";
 @import "admin/activites/index";
 @import "admin/activites/form";
+@import "admin/utilisateurs/index";
 
 // Page d'accueil
 @import "admin/accueil/index";
@@ -182,5 +183,5 @@ blockquote {
 @import "components/nav.scss";
   //Les boutons
 @import 'components/boutons/deconnexion';
-@import 'components/boutons/creation';
+@import 'components/boutons/soumettre';
 

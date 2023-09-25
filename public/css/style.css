@@ -718,13 +718,28 @@ body {
   color: #eeb15e;
   margin: 0;
 }
+
+body .conteneur {
+  margin: 0 3em;
+}
+body .presentation {
+
 .conteneur-utilisateur .presentation {
+
   font-size: 1.25em;
+  margin: 0 10em;
 }
 .conteneur-utilisateur h3 {
   color: #eeb15e;
 }
+
+body .activites-admin {
+  margin: 0;
+}
+body section {
+
 .conteneur-utilisateur section {
+
   padding: 0.5em;
 }
 .conteneur-utilisateur section img {
@@ -867,6 +882,63 @@ button a {
   justify-content: center;
 }
 
+.un_utilisateur {
+  margin: 0.1em 0;
+  padding: 0;
+  border: 1px solid #eca6d9;
+}
+.un_utilisateur .conteneur_user {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.un_utilisateur .conteneur_user .infos_user {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.un_utilisateur .conteneur_user .infos_user p {
+  margin: 0 0.5em;
+  min-width: 5em;
+}
+.un_utilisateur .conteneur_user .infos_user .titre_user {
+  font-weight: bold;
+  color: #eeb15e;
+}
+.un_utilisateur .conteneur_user .boutons_user {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.un_utilisateur .conteneur_user .boutons_user a {
+  margin: 0 0.5em;
+  cursor: pointer;
+}
+.un_utilisateur .une_reservation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #eca6d9;
+  margin: 0 5em;
+}
+.un_utilisateur .une_reservation p {
+  margin: 0;
+}
+.un_utilisateur .une_reservation .bt_user_cancel {
+  display: inline;
+  font-size: 0.75em;
+  background-color: #df1f1f;
+  color: white;
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+  cursor: pointer;
+}
+.un_utilisateur .une_reservation .bt_user_cancel:hover {
+  background-color: #851313;
+  transition: background-color, 0.3s;
+}
+
 .banniere_accueil {
   width: 100%;
   overflow: hidden;
@@ -883,6 +955,7 @@ button a {
   justify-content: center;
 }
 .conteneur_accueil a {
+  font-family: "pf-venue", sans-serif;
   width: 10em;
   text-decoration: none;
   background-color: #0B8A80;
@@ -895,8 +968,8 @@ button a {
   transition: background-color 0.3s;
 }
 .conteneur_accueil a:hover {
-  background-color: #eca6d9; /* Change to your desired hover background color */
-  border-color: #0B8A80; /* Change to your desired hover border color */
+  background-color: #eca6d9;
+  border-color: #0B8A80;
 }
 
 form select {
@@ -1173,10 +1246,10 @@ a.connection .material-icons {
   transition: background-color, 0.3s;
 }
 
-.creation form {
+.soumettre form {
   margin: 2em;
 }
-.creation input {
+.soumettre input {
   background-color: #0B8A80;
   padding: 1em 2em;
   color: white;
@@ -1184,7 +1257,7 @@ a.connection .material-icons {
   border-radius: 0.25em;
   cursor: pointer;
 }
-.creation input:hover {
+.soumettre input:hover {
   background-color: #eca6d9;
   transition: background-color, 0.3s;
 }/*# sourceMappingURL=style.css.map */
