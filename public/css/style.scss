@@ -65,15 +65,7 @@ html {
 section {
     margin-left: 3em;
     margin-right: 3em;
-    padding-bottom: 5em;
 }
-
-
-article{
-     margin-left: 10em;
-    margin-right: 10em;
-}
-
 
 //BOUTTONS
 button
@@ -90,12 +82,15 @@ button
     margin-left: 4.4em;
     margin-right: 4.4em;
     height: 70px;
+
 }
 
-button.voir {
-
-    font-size: 36px;
-
+button:hover{
+    background-color: $jaune;
+    color: $noir;
+    a{
+      color: $noir;
+    }
 }
 
 
