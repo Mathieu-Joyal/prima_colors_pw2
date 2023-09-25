@@ -65,11 +65,11 @@
                     </a>
                 </button>
                 {{-- SUPPRESSION --}}
-                <form action="{{ route('admin.activites.destroy') }}" method="POST">
+                <form >
                     @csrf
 
                     <input type="hidden" name="id" value="{{ $activite->id }}">
-                    <button type="submit">
+                    <button type="submit" action="{{ route('admin.activites.destroy') }}" method="POST">
 
                         Supprimer l'activité
 

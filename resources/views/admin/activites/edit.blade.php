@@ -1,5 +1,5 @@
 <x-layout titre="Modifiez une activité">
-    <div class="">
+    <div class="activites-admin">
         <header class="">
 
             <h2 class="">modifier une activité
@@ -78,13 +78,6 @@
             <p class="">
                 <a href="{{ route('admin.activites.index') }}" class="">Retour aux activités</a>
             </p>
-
-
-
-
-
-
-
 
         </div>
     </div>

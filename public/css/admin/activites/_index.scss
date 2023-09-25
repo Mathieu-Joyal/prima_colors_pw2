@@ -1,5 +1,6 @@
  .activites-admin{
    margin: 5em;
+
 }
 .conteneur-grid {
     display: flex;
@@ -15,19 +16,20 @@
     border: 1px solid $rose;
 }
 
-
-
-
 .description{
     max-width: 100%;
     border: 1px solid $rose;
     padding: 10px;
     box-sizing: border-box;
 }
-.image img {
-
-    height: auto;
-    flex-basis: calc(66.66% - 10px);
+.image {
+    width: 600px;
+    height: 200px;
+}
+    img {
+width: 100%;
+    height: 100%;
+    // flex-basis: calc(66.66% - 10px);
 }
 
 .conteneur-btn{
@@ -40,5 +42,7 @@ hr{
 margin: 2em;
 }
 
+button{
 
+}
 

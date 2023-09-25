@@ -58,7 +58,7 @@ article {
   margin-right: 10em;
 }
 
-button.voir {
+button {
   font-family: "pf-venue", sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -347,6 +347,7 @@ blockquote span.material-icons:first-child {
 }
 .conteneur-articles-actualites .conteneur-titre .description {
   margin: 0;
+  border: none;
 }
 .conteneur-articles-actualites .conteneur-titre .description p {
   margin: 0;
@@ -700,9 +701,14 @@ body .un_concours img {
   box-sizing: border-box;
 }
 
-.image img {
-  height: auto;
-  flex-basis: calc(66.66% - 10px);
+.image {
+  width: 600px;
+  height: 200px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
 }
 
 .conteneur-btn {
