@@ -2,12 +2,21 @@ body {
     color: $jaune;
     margin: 0;
 
+    .conteneur {
+        margin: 0 3em;
+    }
+
     .presentation {
         font-size: 1.25em;
+        margin: 0 10em;
     }
 
     h3 {
         color: $jaune;
+    }
+
+    .activites-admin {
+        margin: 0;
     }
 
     section {

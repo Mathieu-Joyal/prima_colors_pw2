@@ -6,14 +6,9 @@
 
     <div class="conteneur">
 
-        <div class="deconnexion">
-            <form action="{{ route('deconnexion.user') }}"
-                    method="POST"
-            >
-                @csrf
-                <input type="submit" value="Déconnexion">
-            </form>
-        </div>
+        <x-boutons.deconnexion
+            route="{{ route('deconnexion.user') }}"
+        />
 
         <h2>
             Bonjour {{ $user->prenom }} {{ $user->nom }}!
@@ -27,35 +22,40 @@
 
             @foreach ($forfaits as $forfait)
 
-                <article class="un_forfait">
+                <article class="activites-admin">
+                    <div class="conteneur-grid">
+                        <!-- Row 1 -->
+                        <div class="grid-item">
+                            <h3 class="grid-title">Titre</h3>
+                            <p>{{ $forfait->titre }}</p>
+                        </div>
 
-                    <h4>
-                        {{ $forfait->titre }}
-                    </h4>
+                        <div class="grid-item">
+                            <h3 class="grid-title">Date</h3>
+                            <p>{{ $forfait->date_arrive }}</p>
+                        </div>
 
-                    <p>
-                        {{ $forfait->description }}
-                    </p>
-
-                    <div>
-                        <p class="les_dates">
-                            Date d'arrivé: {{ $forfait->date_arrive }}
-                        </p>
-                        <p class="les_dates">
-                            Date de départ: {{ $forfait->date_depart }}
-                        </p>
+                        <div class="grid-item">
+                            <h3 class="grid-title">Date</h3>
+                            <p>{{ $forfait->prix }}</p>
+                        </div>
                     </div>
+                    <div class="conteneur-grid">
 
-                    <p>
-                       Coût du forfait: {{ $forfait->prix }}$
-                    </p>
+                        <div class="description">
+
+                            <h3 class="grid-title">Description</h3>
+                            <p>{{ $forfait->description }}</p>
+                        </div>
+                    </div>
                 </article>
             @endforeach
         </section>
 
         <section class="selection_forfait">
-            {{-- Devoir donner l'option de choisir plusieurs billets à la fois pour un forfait et l'implémenter --}}
+
             <h3>Choissisez votre forfait</h3>
+
             <form action="{{ route('reservations.store') }}"
                     method="POST"
             >
@@ -84,7 +84,6 @@
             <h3>Vos forfaits réservés</h3>
 
             @foreach ($reservations as $reservation)
-            {{-- If no réservations, <p>Aucune réservation</p> --}}
 
                     <article class="une_reservation">
 
@@ -116,9 +115,13 @@
 
                     </article>
             @endforeach
+
+            @if ($reservations->isEmpty())
+                <p>Aucune réservation pour le moment.</p>
+            @endif
         </section>
 
-        <section class="concours">
+        <section class="le_concours">
 
             <h3>Participer au concours!</h3>
 

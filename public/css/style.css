@@ -617,11 +617,18 @@ body {
   color: #eeb15e;
   margin: 0;
 }
+body .conteneur {
+  margin: 0 3em;
+}
 body .presentation {
   font-size: 1.25em;
+  margin: 0 10em;
 }
 body h3 {
   color: #eeb15e;
+}
+body .activites-admin {
+  margin: 0;
 }
 body section {
   padding: 0.5em;
