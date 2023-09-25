@@ -736,9 +736,14 @@ button {
   width: 500px;
   margin-bottom: 3em;
 }
+button a {
+  color: #eeb15e;
+}
 
 button:hover {
   background-color: #eeb15e;
+}
+button:hover a {
   color: #030303;
 }
 

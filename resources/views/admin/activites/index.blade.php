@@ -3,9 +3,9 @@
     <div class="conteneur-titre-activites-admin">
         <h2>les activitÉs</h2>
 
-            <button  href="/admin/activites/create">
-                Ajouter une activité
-            </button>
+        <button>
+            <a href="/admin/activites/create"> Ajouter une activité</a>
+        </button>
 
     </div>
 
@@ -61,20 +61,27 @@
             <div class="conteneur-btn">
 
                 {{-- MODIFICATION --}}
-                    <button href="{{ route('admin.activites.edit', ['id' => $activite->id]) }}">
-                        Modifier l'activité
-                    </button>
+                <button>
+                    <a href="{{ route('admin.activites.edit', ['id' => $activite->id]) }}">Modifier l'activité</a>
+                </button>
 
                 {{-- SUPPRESSION --}}
 
-                    <button name="id" value="{{ $activite->id }}"type="submit" action="{{ route('admin.activites.destroy') }}" method="POST">
+                <form >
+                    @csrf
+
+                    <input type="hidden" name="id" value="{{ $activite->id }}" action="{{ route('admin.activites.destroy') }}" method="POST">
+                    <button type="submit">
+
                         Supprimer l'activité
+
                     </button>
+                </form>
+
             </div>
 
             <hr>
         </div>
-
     @endforeach
 
     @foreach ($samediActivites as $key => $activite)
