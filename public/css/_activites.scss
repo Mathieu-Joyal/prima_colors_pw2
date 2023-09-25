@@ -1,4 +1,4 @@
-//
+
 .conteneur-activites {
     display: flex;
     flex-direction: column;
@@ -21,6 +21,7 @@
             h2 {
                 color: $blanc;
                 margin-bottom: 0;
+                margin-top: 0;
 
                 &.selected {
                     color: $rose;
@@ -78,11 +79,11 @@
     article.activites {
         display: inline-flex;
         justify-content: space-between;
-        margin-bottom: 3em;
         opacity: 0;
         transform: translateX(-50px);
         /* Start offscreen to the left */
         transition: opacity 2s ease, transform 2s ease;
+        padding-bottom: 0;
 
 
         .conteneur-image {
@@ -181,6 +182,10 @@
         transform: translateX(0);
         /* Move to original position */
     }
+}
+body article{
+    margin: 0;
+    padding: 0;
 }
 
 // @media only screen and (max-width: 480px) {

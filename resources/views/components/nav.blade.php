@@ -24,7 +24,7 @@
             </a>
         </div>
 
-        <a href="/billets" class="billet">
+        <a href="/forfaits" class="billet">
             <p class="texte">Billets</p>
         </a>
 

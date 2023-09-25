@@ -16,6 +16,7 @@ h1 {
     color: $rose;
     font-size: 80px;
     color: $jaune;
+    margin: 0;
 }
 
 h2 {
@@ -65,15 +66,7 @@ html {
 section {
     margin-left: 3em;
     margin-right: 3em;
-    padding-bottom: 5em;
 }
-
-
-article{
-     margin-left: 10em;
-    margin-right: 10em;
-}
-
 
 //BOUTTONS
 button
@@ -90,12 +83,15 @@ button
     margin-left: 4.4em;
     margin-right: 4.4em;
     height: 70px;
+
 }
 
-button.voir {
-
-    font-size: 36px;
-
+button:hover{
+    background-color: $jaune;
+    color: $noir;
+    a{
+      color: $noir;
+    }
 }
 
 
@@ -135,6 +131,7 @@ blockquote {
     text-align: center;
     margin: 20px;
     padding: 20px;
+    padding-bottom: 150px;
     position: relative;
     opacity: 0;
     animation: fade-in 1.5s ease-in-out forwards;
@@ -169,6 +166,7 @@ blockquote {
 @import "_ban-concours.scss";
 @import "_ban-compte.scss";
 @import "_connexion.scss";
+@import "_ban-billet.scss";
 
 // Section administrateur
 @import "admin/utilisateurs.scss";

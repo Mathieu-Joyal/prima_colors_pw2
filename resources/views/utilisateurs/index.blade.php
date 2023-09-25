@@ -4,7 +4,7 @@
 
     <x-alertes.succes cle="succes" />
 
-    <div class="conteneur">
+    <div class="conteneur-utilisateur">
 
         <x-boutons.deconnexion
             route="{{ route('deconnexion.user') }}"
