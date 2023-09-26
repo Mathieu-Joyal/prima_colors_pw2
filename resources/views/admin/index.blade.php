@@ -1,7 +1,7 @@
 <x-layout titre="employes">
 
     <div class="banniere_accueil">
-        <img src="{{ asset('img/activites/cereals.png') }}" alt="">
+        <img src="{{ asset('img/activites/cereals.png') }}" alt="céréales">
     </div>
 
     <x-alertes.succes cle="succes" />
@@ -19,7 +19,7 @@
         <a href="{{ route('admin.utilisateurs.index') }}">Gestion des utilisateurs</a>
         <a href="{{ route('admin.actualites.index') }}">Gestion des actualités</a>
         <a href="{{ route('admin.activites.index') }}">Gestion des activités</a>
-        {{-- <a href="{{ route('admin.reservations.index') }}">Gestion des réservations</a> --}}
+        <a href="{{ route('admin.reservations.index') }}">Gestion des réservations</a>
     </div>
 
 </x-layout>

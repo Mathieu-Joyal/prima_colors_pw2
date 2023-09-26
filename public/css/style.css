@@ -976,6 +976,10 @@ form button.supprimer-activite {
   color: #eeb15e;
 }
 
+.admin_reservation_conteneur_bouton button {
+  font-size: inherit;
+}
+
 .banniere_accueil {
   width: 100%;
   overflow: hidden;
@@ -1266,7 +1270,7 @@ a.connection .material-icons {
 }
 
 .deconnexion form {
-  margin: 3em;
+  margin: 1em;
   text-align: right;
 }
 .deconnexion input {

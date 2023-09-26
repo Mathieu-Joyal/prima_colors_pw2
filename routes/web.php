@@ -195,6 +195,15 @@ Route::get("/admin/utilisateurs/destroy/{id}", [AdminUtilisateurController::clas
     ->name('admin.utilisateurs.destroy')
     ->middleware('auth:employe');
 
+// *************** SECTION ADMIN PAGE RÉSERVATIOM ***************** //
+//
+// Affichage de la page des réservations
+Route::get('/admin/reservation', [AdminReservationController::class, 'index'])
+    ->name('admin.reservations.index')
+    ->middleware('auth:employe');
+
+
+
 
 
 
