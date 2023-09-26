@@ -1,7 +1,7 @@
 <x-layout titre="Les activites">
 
 
-    <x-nav />
+    <x-header />
     {{-- <x-hero/> --}}
 
     <main>
