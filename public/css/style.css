@@ -931,10 +931,10 @@ form button.supprimer-activite {
   justify-content: space-around;
   align-items: center;
   border-top: 1px solid #eca6d9;
-  margin: 0 5em;
+  margin: 1em 5em;
 }
 .un_utilisateur .une_reservation p {
-  margin: 0;
+  margin: 1em 0;
 }
 .un_utilisateur .une_reservation .bt_user_cancel {
   display: inline;
@@ -944,6 +944,9 @@ form button.supprimer-activite {
   padding: 0.25em 0.5em;
   border-radius: 0.25em;
   cursor: pointer;
+  height: 2em;
+  border: none;
+  margin: 1em 0;
 }
 .un_utilisateur .une_reservation .bt_user_cancel:hover {
   background-color: #851313;
