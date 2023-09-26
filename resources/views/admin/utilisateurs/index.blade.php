@@ -2,6 +2,8 @@
 
     <x-header />
 
+    <x-boutons.accueil_admin />
+
     <x-boutons.deconnexion
         route="{{ route('admin.deconnexion') }}"
     />
@@ -13,8 +15,6 @@
             {{ session('error') }}
         </div>
     @endif
-
-    <x-boutons.accueil_admin />
 
     <div class="conteneur_admin">
 

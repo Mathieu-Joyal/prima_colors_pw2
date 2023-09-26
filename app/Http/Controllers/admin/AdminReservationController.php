@@ -16,6 +16,9 @@ class AdminReservationController extends Controller {
      * @return View
      */
     public function index(){
+
+        // dd(session());
+
         return view('admin.reservations.index', [
             "users" => User::all(),
             "forfaits" => Forfait::all(),
@@ -35,7 +38,7 @@ class AdminReservationController extends Controller {
         Reservation::destroy($id);
 
         // Redirection
-        return redirect()->route('admin.utilisateurs.index')
+        return back()
             ->with('succes', "La réservation de l'utilisateur a été annulée");
     }
 }

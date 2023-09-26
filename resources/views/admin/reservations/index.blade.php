@@ -2,36 +2,36 @@
 
     <x-header />
 
-    <div class="conteneur_admin">
+    <x-boutons.accueil_admin />
 
     <x-boutons.deconnexion
         route="{{ route('admin.deconnexion') }}"
     />
 
-    <x-boutons.accueil_admin />
+    <div class="conteneur_admin">
 
-    <x-alertes.succes cle="succes" />
+        <x-alertes.succes cle="succes" />
 
-    @if(session('error'))
-        <div class="">
-            {{ session('error') }}
-        </div>
-    @endif
-
-    <h3 class="h3_user">LISTE DES RÉSERVATIONS</h3>
-
-        <article class="un_utilisateur">
-
-            <div class="conteneur_user">
-
-                <div class="infos_user">
-
-                    <p class="titre_user">Prénom</p>
-                    <p class="titre_user">Nom</p>
-                    <p class="titre_user">Adresse courriel</p>
-                </div>
+        @if(session('error'))
+            <div class="">
+                {{ session('error') }}
             </div>
-        </article>
+        @endif
+
+        <h3 class="h3_user">LISTE DES RÉSERVATIONS</h3>
+
+            <article class="un_utilisateur">
+
+                <div class="conteneur_user">
+
+                    <div class="infos_user">
+
+                        <p class="titre_user">Prénom</p>
+                        <p class="titre_user">Nom</p>
+                        <p class="titre_user">Adresse courriel</p>
+                    </div>
+                </div>
+            </article>
 
         @foreach ($reservations as $reservation)
 
