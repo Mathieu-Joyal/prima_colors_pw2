@@ -2,13 +2,25 @@
 
     <x-header />
 
+    <x-boutons.accueil_admin />
+
+    <x-boutons.deconnexion
+        route="{{ route('admin.deconnexion') }}"
+    />
+
     <x-alertes.succes cle="succes" />
 
-    <div class="conteneur">
+    @if(session('error'))
+        <div class="">
+            {{ session('error') }}
+        </div>
+    @endif
+
+    <div class="conteneur_admin">
 
         <section class="affichage-employes">
 
-            <h3>AFFICHAGE DE LA LISTE DES UTILISATEURS</h3>
+            <h3 class="h3_user">AFFICHAGE DE LA LISTE DES UTILISATEURS</h3>
 
             {{-- Best solution: barre de recherche
             Fastest solution: orderby --}}

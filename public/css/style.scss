@@ -368,6 +368,8 @@ img.img_apropos {
 @import "admin/activites/index";
 @import "admin/activites/form";
 @import "admin/utilisateurs/index";
+@import "admin/utilisateurs/edit";
+@import "admin/reservations/index";
 
 // Page d'accueil
 @import "admin/accueil/index";
@@ -376,6 +378,12 @@ img.img_apropos {
 @import "components/formulaire";
 @import "components/footer.scss";
 @import "components/nav.scss";
+
+  //Les boutons
+@import 'components/boutons/deconnexion';
+@import 'components/boutons/soumettre';
+@import 'components/boutons/accueil_admin';
+
 //Les boutons
 @import "components/boutons/deconnexion";
 @import "components/boutons/soumettre";

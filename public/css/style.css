@@ -787,6 +787,19 @@ a.compte {
   position: relative;
   max-width: 400px;
 }
+.conteneur_connexion .connexion_conteneur_membre {
+  margin: 2em 0 0 0;
+  padding: 0.5em 1em;
+  display: inline-block;
+}
+.conteneur_connexion .connexion_conteneur_membre a {
+  color: #0B8A80;
+}
+.conteneur_connexion .connexion_conteneur_membre a:hover {
+  transition: all 0.3s;
+  text-decoration: underline;
+  color: #eca6d9;
+}
 
 @media (max-width: 1060px) {
   .conteneur_connexion {
@@ -1071,6 +1084,10 @@ form button.supprimer-activite {
   justify-content: center;
 }
 
+.h3_user {
+  color: #eeb15e;
+}
+
 .un_utilisateur {
   margin: 0.1em 0;
   padding: 0;
@@ -1109,23 +1126,54 @@ form button.supprimer-activite {
   justify-content: space-around;
   align-items: center;
   border-top: 1px solid #eca6d9;
-  margin: 0 5em;
+  margin: 1em 5em;
 }
 .un_utilisateur .une_reservation p {
-  margin: 0;
+  margin: 1em 0;
 }
 .un_utilisateur .une_reservation .bt_user_cancel {
   display: inline;
   font-size: 0.75em;
   background-color: #df1f1f;
   color: white;
-  padding: 0.25em 0.5em;
+  padding: 0.5em 1em;
   border-radius: 0.25em;
   cursor: pointer;
+  height: 2em;
+  border: none;
+  margin: 1em 0;
 }
 .un_utilisateur .une_reservation .bt_user_cancel:hover {
   background-color: #851313;
   transition: background-color, 0.3s;
+}
+
+.formulaire_un_utilisateur {
+  margin: 1em 3em;
+}
+.formulaire_un_utilisateur label {
+  color: #eeb15e;
+}
+.formulaire_un_utilisateur button {
+  margin: 2em 0;
+}
+.formulaire_un_utilisateur .modification_mdp {
+  margin: 2em 0;
+  display: inline-block;
+  border: 1px solid #eca6d9;
+  padding: 1em 4em;
+}
+.formulaire_un_utilisateur .modification_mdp p {
+  color: #eeb15e;
+}
+
+.admin_reservation_conteneur_bouton button {
+  font-size: inherit;
+  transition: color 0.3s;
+}
+.admin_reservation_conteneur_bouton button:hover {
+  color: white;
+  background-color: #df1f1f;
 }
 
 .banniere_accueil {
@@ -1161,6 +1209,9 @@ form button.supprimer-activite {
   border-color: #0b8a80;
 }
 
+form label {
+  color: #eeb15e;
+}
 form select {
   padding: 1em 3em;
   border-radius: 0.25em;
@@ -1173,6 +1224,7 @@ form input {
 form button {
   padding: 1em 2em;
   border-radius: 0.25em;
+  font-size: inherit;
 }
 form button:hover {
   background-color: #0b8a80;
@@ -1418,7 +1470,7 @@ a.connection .material-icons {
 }
 
 .deconnexion form {
-  margin: 2em;
+  margin: 4em 3em 3em 3em;
   text-align: right;
 }
 .deconnexion input {
@@ -1447,5 +1499,29 @@ a.connection .material-icons {
 }
 .soumettre input:hover {
   background-color: #eca6d9;
+  transition: background-color, 0.3s;
+}
+
+.conteneur_bouton_accueil_admin {
+  position: relative;
+}
+.conteneur_bouton_accueil_admin .bouton_accueil_admin {
+  background-color: #0B8A80;
+  padding: 1em 2em;
+  color: white;
+  border: none;
+  border-radius: 0.25em;
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 3em;
+}
+.conteneur_bouton_accueil_admin .bouton_accueil_admin a {
+  font-size: 1em;
+  color: white;
+}
+.conteneur_bouton_accueil_admin .bouton_accueil_admin:hover {
+  background-color: #075b54;
   transition: background-color, 0.3s;
 }/*# sourceMappingURL=style.css.map */

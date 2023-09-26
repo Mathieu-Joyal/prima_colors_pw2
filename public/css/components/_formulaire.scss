@@ -1,5 +1,9 @@
 form {
 
+    label {
+        color: $jaune;
+    }
+
     select {
         padding: 1em 3em;
         border-radius: .25em;
@@ -14,6 +18,7 @@ form {
     button {
         padding: 1em 2em;
         border-radius: .25em;
+        font-size: inherit;
 
         &:hover {
             background-color: $vert;

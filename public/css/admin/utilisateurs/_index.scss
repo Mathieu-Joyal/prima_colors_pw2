@@ -1,3 +1,8 @@
+.h3_user {
+    color: $jaune;
+}
+
+
 .un_utilisateur {
     margin: 0.1em 0;
     padding: 0;
@@ -43,10 +48,10 @@
         justify-content: space-around;
         align-items: center;
         border-top: 1px solid $rose;
-        margin: 0 5em;
+        margin: 1em 5em;
 
         p {
-            margin: 0;
+            margin: 1em 0;
         }
 
         .bt_user_cancel {
@@ -54,9 +59,12 @@
             font-size: .75em;
             background-color: $rouge;
             color: white;
-            padding: .25em .5em;
+            padding: .5em 1em;
             border-radius: .25em;
             cursor: pointer;
+            height: 2em;
+            border: none;
+            margin: 1em 0;
 
             &:hover {
                 background-color: darken($rouge, 20%);

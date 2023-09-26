@@ -1,0 +1,22 @@
+.formulaire_un_utilisateur {
+    margin: 1em 3em;
+
+    label {
+        color: $jaune;
+    }
+
+    button {
+        margin: 2em 0;
+    }
+
+    .modification_mdp {
+        margin: 2em 0;
+        display: inline-block;
+        border: 1px solid $rose;
+        padding: 1em 4em;
+
+        p {
+            color: $jaune;
+        }
+    }
+}

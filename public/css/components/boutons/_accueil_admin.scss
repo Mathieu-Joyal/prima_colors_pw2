@@ -1,0 +1,27 @@
+.conteneur_bouton_accueil_admin {
+    position: relative;
+
+.bouton_accueil_admin {
+
+    background-color: $vert;
+    padding: 1em 2em;
+    color: white;
+    border: none;
+    border-radius: .25em;
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 3em;
+
+        a {
+            font-size: 1em;
+            color: white;
+        }
+
+        &:hover {
+            background-color: darken($vert, 10%);
+            transition: background-color, 0.3s;
+        }
+    }
+}

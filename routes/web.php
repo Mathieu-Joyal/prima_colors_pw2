@@ -183,15 +183,29 @@ Route::get('/admin/utilisateur', [AdminUtilisateurController::class, 'index'])
     ->name('admin.utilisateurs.index')
     ->middleware('auth:employe');
 
-// Affichage du formulaire de modification d'un employé
+// Affichage du formulaire de modification d'un utilisateur
 Route::get("/admin/utilisateur/edit/{id}", [AdminUtilisateurController::class, 'edit'])
     ->name('admin.utilisateurs.edit')
     ->middleware('auth:employe');
 
-// Traitement de la suppression de l'employé
+// Traitement de la modification de l'utilisateur
+Route::post("/admin/utilisateur/update/{id}", [AdminUtilisateurController::class, 'update'])
+    ->name('admin.utilisateurs.update')
+    ->middleware('auth:employe');
+
+// Traitement de la suppression de l'utilisateur
 Route::get("/admin/utilisateurs/destroy/{id}", [AdminUtilisateurController::class, 'destroy'])
     ->name('admin.utilisateurs.destroy')
     ->middleware('auth:employe');
+
+// *************** SECTION ADMIN PAGE RÉSERVATIOM ***************** //
+//
+// Affichage de la page des réservations
+Route::get('/admin/reservation', [AdminReservationController::class, 'index'])
+    ->name('admin.reservations.index')
+    ->middleware('auth:employe');
+
+
 
 
 
