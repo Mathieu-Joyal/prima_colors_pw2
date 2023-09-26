@@ -185,7 +185,7 @@ Route::get("/admin/utilisateur/edit/{id}", [AdminUtilisateurController::class, '
     ->name('admin.utilisateurs.edit')
     ->middleware('auth:employe');
 
-// Traitement de la suppression de l'employé
+// Traitement de la suppression de l'utilisateur
 Route::get("/admin/utilisateurs/destroy/{id}", [AdminUtilisateurController::class, 'destroy'])
     ->name('admin.utilisateurs.destroy')
     ->middleware('auth:employe');

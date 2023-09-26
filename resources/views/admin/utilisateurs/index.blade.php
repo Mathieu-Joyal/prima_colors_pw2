@@ -4,6 +4,12 @@
 
     <x-alertes.succes cle="succes" />
 
+    @if(session('error'))
+        <div class="">
+            {{ session('error') }}
+        </div>
+    @endif
+
     <div class="conteneur">
 
         <section class="affichage-employes">

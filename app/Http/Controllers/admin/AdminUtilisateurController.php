@@ -36,11 +36,28 @@ class AdminUtilisateurController extends Controller
     }
 
     /**
-     * Undocumented function
+     * Suppression de l'utilisateur
      *
-     * @return void
+     * @return View
      */
     public function destroy($id){
+
+        // Section pour regarder si l'utilisateur à une réservation à son actif
+        $user = User::find($id);
+        $reservations = $user->reservations;
+
+        if ($reservations->count() > 0) {
+            return redirect()->route('admin.utilisateurs.index')
+                ->with('error', "Vous ne pouvez supprimer un utilisateur qui à une ou plusieurs réservations à son nom.");
+        }
+
+
+        // Supprimer l'utilisateur
+        User::destroy($id);
+
+        // Redirection
+        return redirect()->route('admin.utilisateurs.index')
+            ->with('succes', "L'utilisateur a été supprimé");
 
     }
 }
