@@ -18,9 +18,14 @@
         </div>
     @endif
 
+    <h3 class="h3_user">LISTE DES RÉSERVATIONS</h3>
+
         <article class="un_utilisateur">
+
             <div class="conteneur_user">
+
                 <div class="infos_user">
+
                     <p class="titre_user">Prénom</p>
                     <p class="titre_user">Nom</p>
                     <p class="titre_user">Adresse courriel</p>

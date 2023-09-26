@@ -978,6 +978,11 @@ form button.supprimer-activite {
 
 .admin_reservation_conteneur_bouton button {
   font-size: inherit;
+  transition: color 0.3s;
+}
+.admin_reservation_conteneur_bouton button:hover {
+  color: white;
+  background-color: #df1f1f;
 }
 
 .banniere_accueil {

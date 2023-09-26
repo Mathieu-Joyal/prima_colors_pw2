@@ -23,7 +23,6 @@ class AdminReservationController extends Controller {
         ]);
     }
 
-
     /**
      * Suppression d'une réservation par un administrateur
      *
