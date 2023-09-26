@@ -1,6 +1,7 @@
 <x-layout titre="Les forfaits">
 
+    <x-header/>
 
-    <x-header />
+    <x-footer/>
 
 </x-layout>

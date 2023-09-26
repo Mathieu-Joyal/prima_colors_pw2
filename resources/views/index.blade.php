@@ -1,5 +1,5 @@
 <x-layout titre="Festival Prima-Colors | Accueil">
-    <x-header />
+    <x-header/>
     {{-- <video src=""></video> --}
         --}}
     <blockquote>
@@ -59,15 +59,16 @@
     <div class="section_apropos">
         <img src="../img/accueil/apropos_accueil.png" alt="" class="img_apropos">
         <div class="texte_droite_deux">
-            <h3 class="accueil_apropos">phrase d'accroche de qui sommes nous</h3>
-            <p class="accueil_apropos">En savoir plus!</p>
+            <h3 class="accueil_apropos">Qu'est ce que Prima-Colors?</h3>
+            <p class="accueil_apropos">Apprenez pour qui et en quoi consiste le festival. <br> Rajoutez une touche de joie coloré dans votre vie en nous connaissant</p>
             <a href="/apropos">Découvrez le festival! <span class="material-icons">
                     east
         </span></a> 
         </div>
     </div>
 
-    <x-ban_concours></x-ban_concours>
+    <x-ban_concours/>
+    
 
 
     <div class="section_actualités">
@@ -75,8 +76,8 @@
         <a href="/actualites"></a>
     </div>
 
-    <x-ban_compte></x-ban_compte>
-    <x-ban_billet></x-ban_billet>
-    <x-footer></x-footer>
+    <x-ban_compte/>
+    <x-ban_billet/>
+    <x-footer/>
 
 </x-layout>

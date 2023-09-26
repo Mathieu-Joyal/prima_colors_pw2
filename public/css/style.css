@@ -261,8 +261,6 @@ img.img_forfait {
 }
 
 img.img_apropos {
-  padding-bottom: 150px;
-  padding-right: 80px;
   max-width: 50%;
   margin-right: 20px;
 }
@@ -271,6 +269,7 @@ img.img_apropos {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding-left: 150px;
 }
 
 h3.accueil_apropos {
@@ -602,13 +601,14 @@ button.voir.activite {
   width: 300px;
   height: 200px;
   padding-bottom: 250px;
+  padding-top: 100px;
 }
 
 .carre_noir {
   position: absolute;
   padding-left: 15px;
   padding-right: 1px;
-  top: 40%;
+  top: 55%;
   left: 100%;
   transform: translate(-50%, -50%);
   width: 450px;
@@ -1242,15 +1242,14 @@ form button:hover {
 
 .logo {
   margin-left: 365px;
-  margin-top: 30px;
+  margin-top: 60px;
 }
 
 p.slogan {
   color: #eca6d9;
   text-transform: uppercase;
   text-align: center;
-  font-size: 36px;
-  font-weight: bold;
+  font-size: 54px;
 }
 
 .info {

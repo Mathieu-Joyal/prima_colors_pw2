@@ -303,8 +303,6 @@ img.img_forfait {
 }
 
 img.img_apropos {
-  padding-bottom: 150px;
-  padding-right: 80px;
   max-width: 50%;
   margin-right: 20px;
 }
@@ -313,6 +311,7 @@ img.img_apropos {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding-left: 150px;
 }
 
   h3.accueil_apropos {
