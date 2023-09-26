@@ -1,6 +1,5 @@
 .nav {
     position: relative;
-
 }
 
 .bg {
@@ -16,7 +15,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // padding-bottom: 70px;
     margin-top: 0;
     z-index: 20;
 }
@@ -76,7 +74,6 @@ a{
     -moz-transition: background-color 1s ease-out;
     -o-transition: background-color 1s ease-out;
     transition: background-color 1s ease-out;
-
 }
 
 a.billet{
@@ -88,7 +85,6 @@ a.billet{
     margin-left: 30px;
     background: url('../img/accueil/billet.jpg');
     background-repeat: no-repeat;
-
 }
 
 .billet:hover {
@@ -121,7 +117,6 @@ img.reseau-img {
 .logo-nav{
    margin-left: 20px;
    margin-right: 100px;
-
 }
 
 a.connection {

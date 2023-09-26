@@ -1,5 +1,7 @@
-<x-layout titre="CreARTive concours 2023">
+<x-layout titre="Qui sommes-nous?">
     
-    <x-header />
+    <x-header/>
+    
+    <x-footer/>
 
 </x-layout>

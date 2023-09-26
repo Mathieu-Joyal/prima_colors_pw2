@@ -34,7 +34,6 @@
             <img src="img/reseau/youtube/okyoutube_social_icon_dark.png" alt="" class="reseau-img">
         </div>
 
-
         <a href="/connection" class="connection">Connection
             <span class="material-icons">
                 person_outline
