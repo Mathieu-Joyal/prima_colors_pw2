@@ -8,6 +8,23 @@
         position: relative;
         max-width: 400px;
     }
+
+    .connexion_conteneur_membre {
+        margin: 2em 0 0 0;
+        padding: .5em 1em;
+        display: inline-block;
+
+        a {
+            color: $vert;
+
+            &:hover {
+                transition: all 0.3s;
+                text-decoration: underline;
+                color: $rose;
+            }
+
+        }
+    }
 }
 
 

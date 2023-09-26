@@ -59,12 +59,11 @@
                 </div>
             </form>
 
-            <div>
-                <p>
-                    <a href="{{ route('enregistrement.create') }}">
-                        Pas un membre?
-                    </a>
-                </p>
+            <div class="connexion_conteneur_membre">
+
+                <a href="{{ route('enregistrement.create') }}">
+                    Pas un membre?
+                </a>
             </div>
         </section>
     </div>

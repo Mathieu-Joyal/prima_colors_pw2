@@ -609,6 +609,19 @@ a.compte {
   position: relative;
   max-width: 400px;
 }
+.conteneur_connexion .connexion_conteneur_membre {
+  margin: 2em 0 0 0;
+  padding: 0.5em 1em;
+  display: inline-block;
+}
+.conteneur_connexion .connexion_conteneur_membre a {
+  color: #0B8A80;
+}
+.conteneur_connexion .connexion_conteneur_membre a:hover {
+  transition: all 0.3s;
+  text-decoration: underline;
+  color: #eca6d9;
+}
 
 @media (max-width: 1060px) {
   .conteneur_connexion {
@@ -1018,6 +1031,9 @@ form button.supprimer-activite {
   border-color: #0B8A80;
 }
 
+form label {
+  color: #eeb15e;
+}
 form select {
   padding: 1em 3em;
   border-radius: 0.25em;
@@ -1030,6 +1046,7 @@ form input {
 form button {
   padding: 1em 2em;
   border-radius: 0.25em;
+  font-size: inherit;
 }
 form button:hover {
   background-color: #0B8A80;
