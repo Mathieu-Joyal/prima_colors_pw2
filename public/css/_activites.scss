@@ -16,6 +16,7 @@
             justify-content: space-between;
             flex-direction: row;
             width: 50%;
+            margin-top: 1em;
 
 
             h2 {
@@ -183,9 +184,9 @@
         /* Move to original position */
     }
 }
-body article{
-    margin: 0;
-    padding: 0;
+button.voir.activite{
+margin-bottom: 4em;
+margin-top: 2em;
 }
 
 // @media only screen and (max-width: 480px) {

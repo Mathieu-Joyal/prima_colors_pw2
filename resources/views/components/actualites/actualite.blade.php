@@ -48,7 +48,7 @@
                         </p>
                     </div>
 
-                    <div class="conteneur-btn-voir actualite">
+                    <div class="conteneur-btn-voir">
                         <button onclick="voirPlus(this)" class="voir-plus">
                             Voir plus
                         </button>

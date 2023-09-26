@@ -149,6 +149,7 @@ blockquote span.material-icons:first-child {
   justify-content: space-between;
   flex-direction: row;
   width: 50%;
+  margin-top: 1em;
 }
 .conteneur-activites .conteneur-date .conteneur-jours h2 {
   color: white;
@@ -284,9 +285,9 @@ blockquote span.material-icons:first-child {
   /* Move to original position */
 }
 
-body article {
-  margin: 0;
-  padding: 0;
+button.voir.activite {
+  margin-bottom: 4em;
+  margin-top: 2em;
 }
 
 .conteneur-actualites .titre {
@@ -371,8 +372,12 @@ body article {
   }
 }
 
+.conteneur-articles-actualites:last-child {
+  margin-bottom: 2em;
+}
+
 .conteneur-image {
-  height: 260px;
+  height: 220px;
   width: 400px;
   padding-right: 2em;
 }
@@ -380,8 +385,6 @@ body article {
   height: 100%;
   width: 100%;
   margin: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
   animation: slide-up 3s forwards;
 }
 @keyframes slide-up {
@@ -399,22 +402,20 @@ body article {
   display: flex;
   justify-content: flex-end;
   margin: 0;
+  padding-top: 3em;
 }
 .conteneur-btn-voir button.voir-plus {
-  font-family: "pf-venue", sans-serif;
   font-weight: 500;
-  font-style: normal;
-  font-size: 36px;
+  margin: 0;
   color: #eeb15e;
   background-color: #030303;
   border: none;
   cursor: pointer;
 }
 .conteneur-btn-voir img {
-  margin: 0;
+  padding-top: 23px;
   height: 25px;
-  padding-top: 0.5em;
-  padding-left: 1em;
+  padding-left: 5px;
 }
 
 .section_concours {
