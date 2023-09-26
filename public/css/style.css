@@ -966,6 +966,15 @@ form button.supprimer-activite {
 .formulaire_un_utilisateur button {
   margin: 2em 0;
 }
+.formulaire_un_utilisateur .modification_mdp {
+  margin: 2em 0;
+  display: inline-block;
+  border: 1px solid #eca6d9;
+  padding: 1em 4em;
+}
+.formulaire_un_utilisateur .modification_mdp p {
+  color: #eeb15e;
+}
 
 .banniere_accueil {
   width: 100%;

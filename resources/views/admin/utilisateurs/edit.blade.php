@@ -93,38 +93,40 @@
                 <x-forms.erreur champ="age" />
             </div>
 
-            <div>
-                <div>
-                    <label for="password">
-                        Mot de passe
-                    </label>
-                </div>
+            <div class="modification_mdp">
+
+                <p>Facultatif</p>
 
                 <div>
-                    <input
-                        id="password"
-                        name="password"
-                        type="password"
-                    >
+                    <div>
+                        <label for="password">
+                            Mot de passe
+                        </label>
+                    </div>
+                    <div>
+                        <input
+                            id="password"
+                            name="password"
+                            type="password"
+                        >
+                    </div>
+                    <x-forms.erreur champ="password" />
                 </div>
-                <x-forms.erreur champ="password" />
-            </div>
-
-            <div>
                 <div>
-                    <label for="confirm-password">
-                        Confirmation du mot de passe
-                    </label>
+                    <div>
+                        <label for="confirm-password">
+                            Confirmation du mot de passe
+                        </label>
+                    </div>
+                    <div>
+                        <input
+                            id="confirm-password"
+                            name="confirmation_password"
+                            type="password"
+                        >
+                    </div>
+                    <x-forms.erreur champ="confirmation_password" />
                 </div>
-
-                <div>
-                    <input
-                        id="confirm-password"
-                        name="confirmation_password"
-                        type="password"
-                    >
-                </div>
-                <x-forms.erreur champ="confirmation_password" />
             </div>
 
             <div>
