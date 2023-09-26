@@ -1,6 +1,6 @@
 <x-layout titre="Les actualités">
 
-    <x-nav />
+    <x-header />
     {{-- <x-hero/> --}}
     <main id="app">
 

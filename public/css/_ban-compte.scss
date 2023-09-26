@@ -5,14 +5,14 @@
     background-position: center; 
     width: 300px; 
     height: 200px;
-    padding-bottom: 500px; 
+    padding-bottom: 300px; 
 }
 
 .carre_blanc {
     position: absolute;
     padding-left: 15px;
     padding-right: 15px;
-    top: 26%; 
+    top: 36.5%; 
     right:0;
     transform: translate(320%, -50%); 
     width: 450px; 
@@ -28,6 +28,7 @@
     color: $jaune;
     font-size: 55px;
     z-index: 3;
+    margin-top: 20px;
     margin-right: 20px;
     margin-bottom: 0px;
 }
@@ -50,7 +51,7 @@
     color: $noir;
     font-weight: bold;
     z-index: 3;
-    background-color: $rose;
+    background-color: rgba($rose, 0.8); 
     padding: 10px 50px;
    
 }

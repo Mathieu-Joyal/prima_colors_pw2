@@ -5,6 +5,7 @@ use App\Http\Controllers\ActualiteController;
 use App\Http\Controllers\ActiviteController;
 use App\Http\Controllers\ForfaitController;
 use App\Http\Controllers\ConcoursController;
+use App\Http\Controllers\AproposController;
 use App\Http\Controllers\ConnexionController;
 use App\Http\Controllers\EnregistrementController;
 use App\Http\Controllers\ReservationController;
@@ -37,8 +38,10 @@ Route::get('/activites', [ActiviteController::class, 'index'])
 Route::get('/concours', [ConcoursController::class, 'index'])
 ->name('concours.index');
 
-
 // ***************** PAGE À PROPOS ********************** //
+
+Route::get('/apropos', [ConcoursController::class, 'index'])
+->name('apropos.index');
 
 // **************** PAGE ACTUALITÉS ******************** //
 Route::get('/actualites', [ActualiteController::class, 'index'])
