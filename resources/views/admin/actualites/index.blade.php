@@ -1,11 +1,16 @@
 <x-layout titre="Créez une actualité">
-    <button >
+
+    <div class="conteneur-titre-actualites-admin">
+        <h2>les actualitÉs</h2>
+    <button class="ajouter-activite">
         <a href="/admin/actualites/create" class="nav">
            Ajouter une actualité
         </a>
-
-    </button>
+</button>
+    </div>
+<div class="actualites-admin">
     @foreach ($actualitesRecentes as $actualite)
+
         <article class="conteneur-articles-actualites">
 
             <div class="conteneur-gauche">
@@ -20,14 +25,14 @@
                     </div>
 
                     <div class="description">
-                        <p class="voir-moins">{{ $actualite->description }}
+                        <p class="">{{ $actualite->description }}
                         </p>
                         <p>{{ $actualite->description }} </p>
                     </div>
 
                     <div class="conteneur-btn">
                         {{-- MODIFICATION --}}
-                        <button>
+                        <button class="modifier-activite">
                             <a href="{{ route('admin.actualites.edit', ["id" => $actualite->id]) }}">
                                 Modifier une actualité
                              </a>
@@ -37,7 +42,7 @@
                             @csrf
 
                             <input type="hidden" name="id" value="{{ $actualite->id }}">
-                            <button type="submit">
+                            <button class="supprimer-activite" type="submit">
 
                                     Supprimer l'actualité
 
@@ -49,11 +54,12 @@
             </div>
 
             <div class="conteneur-image">
-                <img class="thumbnail" src="{{ $actualite->image }}" alt="image de l'actualite">
+                <img class="thumbnail" src="{{asset($actualite->image)  }}" alt="image de l'actualite">
                 {{-- <img class="thumbnail" src="{{ asset('img\actualites\1.png') }}"
                             alt=""> --}}
             </div>
 
         </article>
     @endforeach
+</div>
 </x-layout>

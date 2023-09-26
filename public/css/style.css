@@ -55,7 +55,7 @@ section {
 
 button {
   font-family: "pf-venue", sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-style: normal;
   font-size: 36px;
   text-transform: uppercase;
@@ -356,11 +356,13 @@ button.voir.activite {
 .conteneur-articles-actualites .conteneur-titre .description p {
   margin: 0;
   overflow: hidden;
-  animation: typingDescription 4s steps(40) backwards;
   max-width: 100%;
 }
 .conteneur-articles-actualites .conteneur-titre .description .plus {
   display: none;
+}
+.conteneur-articles-actualites .conteneur-titre .description .typingDescription {
+  animation: typingDescription 4s steps(40) backwards;
 }
 @keyframes typingDescription {
   from {
@@ -385,6 +387,8 @@ button.voir.activite {
   height: 100%;
   width: 100%;
   margin: 0;
+}
+.conteneur-image .slide-up {
   animation: slide-up 3s forwards;
 }
 @keyframes slide-up {
@@ -416,6 +420,10 @@ button.voir.activite {
   padding-top: 23px;
   height: 25px;
   padding-left: 5px;
+}
+
+.animate .conteneur-articles-actualites {
+  animation-play-state: running;
 }
 
 .section_concours {
@@ -779,6 +787,23 @@ a .forfaits {
 .conteneur-utilisateur .un_concours img {
   padding: 0.5em;
   border: 0.1em solid #0B8A80;
+}
+
+.conteneur-titre-actualites-admin {
+  display: flex;
+  justify-content: space-between;
+  margin: 5em;
+  height: 50px;
+}
+.conteneur-titre-actualites-admin h2 {
+  margin: 0;
+}
+
+.conteneur-articles-actualites {
+  margin: 5em;
+}
+.conteneur-articles-actualites .description {
+  width: 1000px;
 }
 
 .conteneur-titre-activites-admin {

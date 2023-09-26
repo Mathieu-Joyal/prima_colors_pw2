@@ -1,0 +1,17 @@
+.conteneur-titre-actualites-admin{
+    display: flex;
+    justify-content: space-between;
+    margin: 5em;
+    height: 50px;
+
+    h2 {
+        margin: 0;
+    }
+
+}
+.conteneur-articles-actualites{
+    margin: 5em;
+    .description{
+        width: 1000px;
+    }
+}

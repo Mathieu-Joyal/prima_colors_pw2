@@ -72,7 +72,7 @@ section {
 button
  {
     font-family: "pf-venue", sans-serif;
-    font-weight: 700;
+    font-weight: 500;
     font-style: normal;
     font-size: 36px;
     text-transform: uppercase;
@@ -170,8 +170,9 @@ blockquote {
 
 // Section administrateur
 @import "admin/utilisateurs.scss";
-@import "admin/activites/index";
-@import "admin/activites/form";
+@import "admin/actualites/index.scss";
+@import "admin/activites/index.scss";
+@import "admin/activites/form.scss";
 @import "admin/utilisateurs/index";
 
 // Page d'accueil

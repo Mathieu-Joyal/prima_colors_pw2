@@ -6,9 +6,9 @@
 
         <h1>ActualitÉs</h1>
         <x-actualites.actualite :actualites="$actualitesRecentes" annee="3" />
-        <x-ban_concours/>
+        <x-ban_concours />
         <x-actualites.actualite :actualites="$actualitesAnciennes" annee="2" />
-        <x-ban_billet/>
+        <x-ban_billet />
 
     </main>
     <script>
@@ -29,6 +29,33 @@
                 plusText.style.display = "inline";
             }
         }
+
+
+        //glide onto page and trigger animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver(glide, {
+                threshold: 0.2
+            });
+            const actualites = document.querySelectorAll('.conteneur-articles-actualites');
+            const images = document.querySelectorAll('.conteneur-image');
+
+            function glide(articles) {
+                articles.forEach(function(article) {
+                    if (article.isIntersecting) {
+                        article.target.classList.add('slide-up', 'typingDescription');
+                        observer.unobserve(article.target);
+                    }
+                });
+            }
+
+            actualites.forEach(function(actualite) {
+                observer.observe(actualite);
+            });
+
+            images.forEach(function(image) {
+                observer.observe(image);
+            });
+        });
     </script>
 
 
