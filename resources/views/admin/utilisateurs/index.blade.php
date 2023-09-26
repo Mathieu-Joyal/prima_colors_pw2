@@ -2,6 +2,10 @@
 
     <x-header />
 
+    <x-boutons.deconnexion
+        route="{{ route('admin.deconnexion') }}"
+    />
+
     <x-alertes.succes cle="succes" />
 
     @if(session('error'))
@@ -10,7 +14,9 @@
         </div>
     @endif
 
-    <div class="conteneur">
+    <x-boutons.accueil_admin />
+
+    <div class="conteneur_admin">
 
         <section class="affichage-employes">
 

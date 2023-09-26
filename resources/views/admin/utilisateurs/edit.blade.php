@@ -2,6 +2,8 @@
 
     <x-header />
 
+    <x-boutons.accueil_admin />
+
     <div class="conteneur">
 
         <form class="formulaire_un_utilisateur"
