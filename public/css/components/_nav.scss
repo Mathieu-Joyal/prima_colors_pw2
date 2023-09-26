@@ -1,22 +1,20 @@
 .nav {
     position: relative;
-
 }
 
 .bg {
     position: absolute;
     top:83px;
     z-index: 1;
-    width: 100%;
+    width:1652px;
 }
 
 .contenu_nav {
     position: relative;
-    width: 100%;
+    width: 1652px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // padding-bottom: 70px;
     margin-top: 0;
     z-index: 20;
 }
@@ -51,8 +49,8 @@ a{
 
 .menu_nav a.item_nav .nav {
     display: block;
-    padding-right: 50px;
-    padding-left: 50px;
+    padding-right: 30px;
+    padding-left: 30px;
     padding-bottom: 10px;
     font-size: 30px;
     font-family: "pf-venue", sans-serif;
@@ -76,18 +74,17 @@ a{
     -moz-transition: background-color 1s ease-out;
     -o-transition: background-color 1s ease-out;
     transition: background-color 1s ease-out;
-
 }
 
 a.billet{
     height: 270px;
 }
 .billet {
-    width: 250px;
-    height: 170px;
+    width:170px;
+    height: 200px;
+    margin-left: 30px;
     background: url('../img/accueil/billet.jpg');
     background-repeat: no-repeat;
-
 }
 
 .billet:hover {
@@ -108,29 +105,28 @@ p.texte{
 
 .reseau {
     display: flex;
-    gap: 20px;
     padding-bottom: 10px;
-   padding-left: 100px;
+    padding-left: 50px;   
 }
 
 img.reseau-img {
     max-width: 100%;
-    margin-right: 60px;
+    margin-right: 40px;
 }
 
 .logo-nav{
    margin-left: 20px;
-   margin-right: 50px;
-
+   margin-right: 100px;
 }
 
 a.connection {
     font-family: "pf-venue", sans-serif;
     font-size: 36px;
     margin-top: 200px;
+    margin-right: 50px;
     color: $rose;
     display: flex; /* Utilisez flexbox */
-    align-items: center; /* Centrez le contenu verticalement */
+    align-items: center; 
 }
 
 a.connection .material-icons {

@@ -133,6 +133,181 @@ blockquote span.material-icons:first-child {
     transform: translateY(0);
   }
 }
+.intro {
+  padding-left: 200px;
+  padding-right: 200px;
+  text-align: justify;
+}
+
+.section_activites {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+img.img_activite {
+  padding-top: 150px;
+  padding-bottom: 100px;
+  padding-right: 80px;
+  max-width: 50%;
+  margin-right: 20px;
+}
+
+.texte_droite {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.texte_droite h3.accueil_activite {
+  font-size: 54px;
+  margin-bottom: 30px;
+  color: #eca6d9;
+}
+.texte_droite p.accueil_activite {
+  font-size: 36px;
+  margin-bottom: 20px;
+  margin-bottom: 50px;
+  color: #eca6d9;
+}
+.texte_droite a {
+  text-decoration: none;
+  color: #eca6d9;
+  padding: 10px 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  align-items: center;
+  display: flex;
+  transition: 0.3s;
+}
+.texte_droite a span.material-icons {
+  color: #eca6d9;
+  font-size: 75px;
+  padding-left: 100px;
+  position: relative;
+  transition: 0.3s;
+}
+.texte_droite a:hover {
+  color: white;
+}
+.texte_droite a:hover span.material-icons {
+  color: white;
+}
+
+.section_forfaits {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+img.img_forfait {
+  padding-bottom: 100px;
+  padding-left: 80px;
+  max-width: 50%;
+  margin-right: 20px;
+}
+
+.texte_gauche {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.texte_gauche h3.accueil_forfait {
+  font-size: 54px;
+  margin-bottom: 30px;
+  color: #eeb15e;
+}
+.texte_gauche p.accueil_forfait {
+  font-size: 36px;
+  margin-bottom: 20px;
+  margin-bottom: 50px;
+  color: #eeb15e;
+}
+.texte_gauche a {
+  text-decoration: none;
+  color: #eeb15e;
+  padding: 10px 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  align-items: center;
+  display: flex;
+  transition: 0.3s;
+}
+.texte_gauche a span.material-icons {
+  color: #eeb15e;
+  font-size: 75px;
+  padding-left: 100px;
+  position: relative;
+  transition: 0.3s;
+}
+.texte_gauche a:hover {
+  color: white;
+}
+.texte_gauche a:hover span.material-icons {
+  color: white;
+}
+
+.section_apropos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+img.img_apropos {
+  max-width: 50%;
+  margin-right: 20px;
+}
+
+.texte_droite_deux {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 150px;
+}
+
+h3.accueil_apropos {
+  font-size: 54px;
+  color: #eca6d9;
+}
+
+p.accueil_apropos {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #eca6d9;
+}
+
+a {
+  text-decoration: none;
+  color: #eca6d9;
+  padding: 10px 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  align-items: center;
+  display: flex;
+  transition: 0.3s;
+}
+a span.material-icons {
+  color: #eca6d9;
+  font-size: 75px;
+  padding-left: 100px;
+  position: relative;
+  transition: 0.3s;
+}
+a:hover {
+  color: white;
+}
+a:hover span.material-icons {
+  color: white;
+}
+
 .conteneur-activites {
   display: flex;
   flex-direction: column;
@@ -426,13 +601,14 @@ button.voir.activite {
   width: 300px;
   height: 200px;
   padding-bottom: 250px;
+  padding-top: 100px;
 }
 
 .carre_noir {
   position: absolute;
   padding-left: 15px;
   padding-right: 1px;
-  top: 40%;
+  top: 55%;
   left: 100%;
   transform: translate(-50%, -50%);
   width: 450px;
@@ -454,6 +630,7 @@ button.voir.activite {
 }
 
 .carre_noir h3 {
+  color: #eeb15e;
   margin: 10px 0;
   font-size: 40px;
   padding-bottom: 100px;
@@ -514,14 +691,14 @@ button.voir.activite {
   background-position: center;
   width: 300px;
   height: 200px;
-  padding-bottom: 500px;
+  padding-bottom: 300px;
 }
 
 .carre_blanc {
   position: absolute;
   padding-left: 15px;
   padding-right: 15px;
-  top: 26%;
+  top: 36.5%;
   right: 0;
   transform: translate(320%, -50%);
   width: 450px;
@@ -537,6 +714,7 @@ button.voir.activite {
   color: #eeb15e;
   font-size: 55px;
   z-index: 3;
+  margin-top: 20px;
   margin-right: 20px;
   margin-bottom: 0px;
 }
@@ -559,7 +737,7 @@ button.voir.activite {
   color: #030303;
   font-weight: bold;
   z-index: 3;
-  background-color: #eca6d9;
+  background-color: rgba(236, 166, 217, 0.8);
   padding: 10px 50px;
 }
 
@@ -638,7 +816,7 @@ a.compte {
   background-position: center;
   width: auto;
   height: auto;
-  padding-bottom: 500px;
+  padding-bottom: 50px;
 }
 
 .rectangle_blanc {
@@ -764,7 +942,7 @@ a .forfaits {
   padding: 1em;
 }
 .conteneur-utilisateur article.une_reservation:hover {
-  background-color: #0B8A80;
+  background-color: #0b8a80;
   transition: background-color 0.3s;
 }
 .conteneur-utilisateur article.une_reservation button {
@@ -791,7 +969,7 @@ a .forfaits {
 }
 .conteneur-utilisateur .un_concours img {
   padding: 0.5em;
-  border: 0.1em solid #0B8A80;
+  border: 0.1em solid #0b8a80;
 }
 
 .conteneur-titre-activites-admin {
@@ -1017,7 +1195,7 @@ form button.supprimer-activite {
   font-family: "pf-venue", sans-serif;
   width: 10em;
   text-decoration: none;
-  background-color: #0B8A80;
+  background-color: #0b8a80;
   padding: 1em 2em;
   color: white;
   margin: 1em;
@@ -1028,7 +1206,7 @@ form button.supprimer-activite {
 }
 .conteneur_accueil a:hover {
   background-color: #eca6d9;
-  border-color: #0B8A80;
+  border-color: #0b8a80;
 }
 
 form label {
@@ -1049,12 +1227,12 @@ form button {
   font-size: inherit;
 }
 form button:hover {
-  background-color: #0B8A80;
+  background-color: #0b8a80;
   transition: background-color 0.3s;
 }
 
 .contenu {
-  background-color: #0B8A80;
+  background-color: #0b8a80;
   width: 100%;
 }
 
@@ -1116,15 +1294,14 @@ form button:hover {
 
 .logo {
   margin-left: 365px;
-  margin-top: 30px;
+  margin-top: 60px;
 }
 
 p.slogan {
   color: #eca6d9;
   text-transform: uppercase;
   text-align: center;
-  font-size: 36px;
-  font-weight: bold;
+  font-size: 54px;
 }
 
 .info {
@@ -1166,12 +1343,12 @@ p.slogan {
   position: absolute;
   top: 83px;
   z-index: 1;
-  width: 100%;
+  width: 1652px;
 }
 
 .contenu_nav {
   position: relative;
-  width: 100%;
+  width: 1652px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1183,7 +1360,7 @@ p.slogan {
   width: 100%;
   height: 70px;
   margin-top: 10px;
-  background-color: #0B8A80;
+  background-color: #0b8a80;
 }
 
 .ligne_rose {
@@ -1208,8 +1385,8 @@ a {
 
 .menu_nav a.item_nav .nav {
   display: block;
-  padding-right: 50px;
-  padding-left: 50px;
+  padding-right: 30px;
+  padding-left: 30px;
   padding-bottom: 10px;
   font-size: 30px;
   font-family: "pf-venue", sans-serif;
@@ -1237,8 +1414,9 @@ a.billet {
 }
 
 .billet {
-  width: 250px;
-  height: 170px;
+  width: 170px;
+  height: 200px;
+  margin-left: 30px;
   background: url("../img/accueil/billet.jpg");
   background-repeat: no-repeat;
 }
@@ -1261,28 +1439,28 @@ p.texte {
 
 .reseau {
   display: flex;
-  gap: 20px;
   padding-bottom: 10px;
-  padding-left: 100px;
+  padding-left: 50px;
 }
 
 img.reseau-img {
   max-width: 100%;
-  margin-right: 60px;
+  margin-right: 40px;
 }
 
 .logo-nav {
   margin-left: 20px;
-  margin-right: 50px;
+  margin-right: 100px;
 }
 
 a.connection {
   font-family: "pf-venue", sans-serif;
   font-size: 36px;
   margin-top: 200px;
+  margin-right: 50px;
   color: #eca6d9;
   display: flex; /* Utilisez flexbox */
-  align-items: center; /* Centrez le contenu verticalement */
+  align-items: center;
 }
 
 a.connection .material-icons {
@@ -1312,7 +1490,7 @@ a.connection .material-icons {
   margin: 2em;
 }
 .soumettre input {
-  background-color: #0B8A80;
+  background-color: #0b8a80;
   padding: 1em 2em;
   color: white;
   border: none;
