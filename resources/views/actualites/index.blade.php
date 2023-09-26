@@ -6,9 +6,9 @@
 
         <h1>ActualitÉs</h1>
         <x-actualites.actualite :actualites="$actualitesRecentes" annee="3" />
-        {{-- <x-ban_concours/> --}}
+        <x-ban_concours/>
         <x-actualites.actualite :actualites="$actualitesAnciennes" annee="2" />
-        {{-- <x-ban_billet/> --}}
+        <x-ban_billet/>
 
     </main>
     <script>

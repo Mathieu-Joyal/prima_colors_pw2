@@ -78,6 +78,6 @@
             </div>
         </article>
     @endforeach
-    <button class="voir" onclick="voirPlus(this)">Voir plus</button>
+    <button class="voir activite" onclick="voirPlus(this)">Voir plus</button>
 
 </section>

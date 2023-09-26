@@ -3,7 +3,7 @@
     <div class="conteneur-titre-activites-admin">
         <h2>les activitÉs</h2>
 
-        <button>
+        <button class="ajouter-activite">
             <a href="/admin/activites/create"> Ajouter une activité</a>
         </button>
 
@@ -50,35 +50,37 @@
 
             <!-- Row 3 -->
             <div class="conteneur-grid">
-
-                <div class="image">
                     <h3 class="grid-title">Image</h3>
-                    <img class="" src="{{ asset($activite->image) }}" alt="image de l'activite">
+                    <div class="image">
+                        <img class="" src="{{ asset($activite->image) }}" alt="image de l'activite">
+                    </div>
+            </div>
+
+            <!-- Row 4 -->
+
+                <div class="conteneur-btn">
+
+                    {{-- MODIFICATION --}}
+                    <button class="modifier-activite">
+                        <a href="{{ route('admin.activites.edit', ['id' => $activite->id]) }}">Modifier l'activité</a>
+                    </button>
+
+                    {{-- SUPPRESSION --}}
+
+                    <form>
+                        @csrf
+
+                        <input type="hidden" name="id" value="{{ $activite->id }}"
+                            action="{{ route('admin.activites.destroy') }}" method="POST">
+                        <button class="supprimer-activite" type="submit">
+
+                            Supprimer l'activité
+
+                        </button>
+                    </form>
+
                 </div>
 
-            </div>
-
-            <div class="conteneur-btn">
-
-                {{-- MODIFICATION --}}
-                <button>
-                    <a href="{{ route('admin.activites.edit', ['id' => $activite->id]) }}">Modifier l'activité</a>
-                </button>
-
-                {{-- SUPPRESSION --}}
-
-                <form >
-                    @csrf
-
-                    <input type="hidden" name="id" value="{{ $activite->id }}" action="{{ route('admin.activites.destroy') }}" method="POST">
-                    <button type="submit">
-
-                        Supprimer l'activité
-
-                    </button>
-                </form>
-
-            </div>
 
             <hr>
         </div>
