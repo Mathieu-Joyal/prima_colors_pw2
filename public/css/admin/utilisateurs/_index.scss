@@ -1,3 +1,8 @@
+.h3_user {
+    color: $jaune;
+}
+
+
 .un_utilisateur {
     margin: 0.1em 0;
     padding: 0;
@@ -54,7 +59,7 @@
             font-size: .75em;
             background-color: $rouge;
             color: white;
-            padding: .25em .5em;
+            padding: .5em 1em;
             border-radius: .25em;
             cursor: pointer;
             height: 2em;

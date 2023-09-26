@@ -893,6 +893,10 @@ form button.supprimer-activite {
   justify-content: center;
 }
 
+.h3_user {
+  color: #eeb15e;
+}
+
 .un_utilisateur {
   margin: 0.1em 0;
   padding: 0;
@@ -941,7 +945,7 @@ form button.supprimer-activite {
   font-size: 0.75em;
   background-color: #df1f1f;
   color: white;
-  padding: 0.25em 0.5em;
+  padding: 0.5em 1em;
   border-radius: 0.25em;
   cursor: pointer;
   height: 2em;
@@ -951,6 +955,16 @@ form button.supprimer-activite {
 .un_utilisateur .une_reservation .bt_user_cancel:hover {
   background-color: #851313;
   transition: background-color, 0.3s;
+}
+
+.formulaire_un_utilisateur {
+  margin: 1em 3em;
+}
+.formulaire_un_utilisateur label {
+  color: #eeb15e;
+}
+.formulaire_un_utilisateur button {
+  margin: 2em 0;
 }
 
 .banniere_accueil {
