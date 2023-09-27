@@ -1,4 +1,14 @@
 
+.conteneur-nav-admin{
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    h2 {
+        margin: 0;
+    }
+    background-color: $noir;
+}
 .conteneur-titre-activites-admin, .conteneur-titre-actualites-admin {
     display: flex;
     justify-content: space-between;
@@ -10,12 +20,9 @@
     padding-top: 2em;
     padding-bottom: 2em;
 
-    h2 {
-        margin: 0;
-    }
+
 
 }
-
 
 .activites-admin, .actualites-admin{
     margin: 5em;

@@ -1,10 +1,18 @@
 <x-layout titre="Modifiez une activité">
-    <div class="activites-admin">
-        <header class="">
 
-            <h2 class="">modifier une activité
-            </h2>
-        </header>
+    <div class="conteneur-nav-admin">
+        <h2 class="">Modifier une activitÉ </h2>
+
+        <div class="conteneur-bouton-accueil-admin">
+
+            <div class="bouton-accueil-admin">
+
+                <a href="{{ route('admin.index') }}">Accueil - Administration</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="activites-admin">
 
         {{-- MESSAGES --}}
         {{-- @if (session('echec'))
@@ -14,7 +22,8 @@
 
         <div class="form">
             {{-- FORMULAIRE --}}
-            <form class="" action="{{ route('admin.activites.store') }}" method="POST" enctype="multipart/form-data">
+            <form class="" action="{{ route('admin.activites.store') }}" method="POST"
+                enctype="multipart/form-data">
                 @csrf
 
                 <div class="conteneur-grid">

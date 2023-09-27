@@ -973,6 +973,17 @@ a .forfaits {
   border: 0.1em solid #0b8a80;
 }
 
+.conteneur-nav-admin {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background-color: #030303;
+}
+.conteneur-nav-admin h2 {
+  margin: 0;
+}
+
 .conteneur-titre-activites-admin, .conteneur-titre-actualites-admin {
   display: flex;
   justify-content: space-between;
@@ -983,9 +994,6 @@ a .forfaits {
   top: 0;
   padding-top: 2em;
   padding-bottom: 2em;
-}
-.conteneur-titre-activites-admin h2, .conteneur-titre-actualites-admin h2 {
-  margin: 0;
 }
 
 .activites-admin, .actualites-admin {
