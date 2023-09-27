@@ -1,27 +1,32 @@
 .section_compte {
     position: relative;
-    background-image: url('img/accueil/ban_compte.png'); 
+    background-image: url('../img/accueil/ban_compte.png'); 
     background-size: cover; 
     background-position: center; 
-    width: 300px; 
-    height: 200px;
-    padding-bottom: 300px; 
+    width: 100%; 
+    height: 365px;
+   
+}
+
+.section_compte img {
+    padding-top: 100px; 
+    padding-bottom: 100px;  
+
 }
 
 .carre_blanc {
     position: absolute;
     padding-left: 15px;
     padding-right: 15px;
-    top: 36.5%; 
+    top: 15px;
     right:0;
-    transform: translate(320%, -50%); 
     width: 450px; 
     height: 366px; 
     background-color: rgba(255, 255, 255, 0.445);
     display: flex;
     flex-direction: column;
     text-align: right; 
-    z-index: 2;
+  
 }
 
 .carre_blanc h1 {
@@ -41,7 +46,7 @@
     margin-right: 40px;
     margin-bottom: 20px;
     line-height: 1.2;
-    z-index: 3;
+  
 }
 
 .carre_blanc a {
@@ -50,7 +55,6 @@
     text-decoration: none;
     color: $noir;
     font-weight: bold;
-    z-index: 3;
     background-color: rgba($rose, 0.8); 
     padding: 10px 50px;
    
@@ -78,7 +82,7 @@ a.compte {
     position: relative;
     top: 15%; 
     left: 7%;
-    z-index: 4;
+    
 }
 
 .compte::before {
@@ -90,7 +94,7 @@ a.compte {
     width: 38px; 
     height: 38px; 
     background-color: $noir;
-    z-index: 2; 
+ 
 }
 
 

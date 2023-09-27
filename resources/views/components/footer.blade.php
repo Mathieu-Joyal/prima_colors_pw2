@@ -1,4 +1,5 @@
-<div class="contenu">
+<footer>
+    <div class="contenu">
     <div class="menu">
         <div class="item">
             <a href="accueil.index">
@@ -55,3 +56,4 @@
 
 
 <p class="copyright"> <span>&copy;</span> 2023 Festival Prima-Colors</p>
+</footer>
