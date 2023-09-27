@@ -1209,24 +1209,24 @@ form button.supprimer-activite {
   border-color: #0b8a80;
 }
 
-form label {
+form.administration label {
   color: #eeb15e;
 }
-form select {
+form.administration select {
   padding: 1em 3em;
   border-radius: 0.25em;
   margin: 1em 0;
   background-color: lightgray;
 }
-form input {
+form.administration input {
   margin: 0 0 1em 0;
 }
-form button {
+form.administration button {
   padding: 1em 2em;
   border-radius: 0.25em;
   font-size: inherit;
 }
-form button:hover {
+form.administration button:hover {
   background-color: #0b8a80;
   transition: background-color 0.3s;
 }
