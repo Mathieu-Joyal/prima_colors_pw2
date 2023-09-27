@@ -1,8 +1,15 @@
-.conteneur-titre-activites-admin {
+
+//SECTION ACTIVITES
+.conteneur-titre-activites-admin, .conteneur-titre-actualites-admin {
     display: flex;
     justify-content: space-between;
     margin: 5em;
     height: 50px;
+    background-color: $noir;
+    position: sticky;
+    top: 0;
+    padding-top: 2em;
+    padding-bottom: 2em;
 
     h2 {
         margin: 0;
@@ -51,6 +58,30 @@
     }
 }
 
+//SECTION ACTUALITES
+
+.conteneur-articles-actualites{
+    h2 {
+        margin: 0;
+    }
+    .conteneur-gauche{
+margin-left: 3em;
+    }
+
+   .description-actualites {
+    max-width: 1000px;
+   }
+   .conteneur-btn{
+    margin: 0;
+    .modifier{
+        margin-right: 3em;
+    }
+   }
+   .image{
+    margin-right: 5em;
+   }
+}
+
 
 //BOUTTONS
 .conteneur-btn {
@@ -66,28 +97,30 @@ hr {
     margin: 2em;
 }
 
-button.ajouter-activite, .modifier-activite, .supprimer-activite {
+button.ajouter, .modifier, .supprimer {
 
     margin: 0;
     background-color: $noir;
     border: $jaune 3px solid;
+    font-weight: 400;
+    font-size: 30px;
     height: 70px;
     text-align: center;
-    width: 500px;
+    width: 400px;
     margin-bottom: 3em;
 
     a {
         color: $jaune;
     }
 }
-button.ajouter-activite:hover, .modifier-activite:hover, .supprimer-activite:hover {
+button.ajouter:hover, .modifier:hover, .supprimer:hover {
     background-color: $jaune;
 border: none;
     a {
         color: $noir;
     }
 }
-form button.supprimer-activite{
+form button.supprimer{
     transition: 0;
     border-radius: 0;
     padding: 0;

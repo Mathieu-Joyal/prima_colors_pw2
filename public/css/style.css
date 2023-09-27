@@ -972,13 +972,18 @@ a .forfaits {
   border: 0.1em solid #0b8a80;
 }
 
-.conteneur-titre-activites-admin {
+.conteneur-titre-activites-admin, .conteneur-titre-actualites-admin {
   display: flex;
   justify-content: space-between;
   margin: 5em;
   height: 50px;
+  background-color: #030303;
+  position: sticky;
+  top: 0;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
-.conteneur-titre-activites-admin h2 {
+.conteneur-titre-activites-admin h2, .conteneur-titre-actualites-admin h2 {
   margin: 0;
 }
 
@@ -1017,6 +1022,25 @@ a .forfaits {
      object-fit: cover;
 }
 
+.conteneur-articles-actualites h2 {
+  margin: 0;
+}
+.conteneur-articles-actualites .conteneur-gauche {
+  margin-left: 3em;
+}
+.conteneur-articles-actualites .description-actualites {
+  max-width: 1000px;
+}
+.conteneur-articles-actualites .conteneur-btn {
+  margin: 0;
+}
+.conteneur-articles-actualites .conteneur-btn .modifier {
+  margin-right: 3em;
+}
+.conteneur-articles-actualites .image {
+  margin-right: 5em;
+}
+
 .conteneur-btn {
   display: flex;
   justify-content: space-between;
@@ -1030,28 +1054,30 @@ hr {
   margin: 2em;
 }
 
-button.ajouter-activite, .modifier-activite, .supprimer-activite {
+button.ajouter, .modifier, .supprimer {
   margin: 0;
   background-color: #030303;
   border: #eeb15e 3px solid;
+  font-weight: 400;
+  font-size: 30px;
   height: 70px;
   text-align: center;
-  width: 500px;
+  width: 400px;
   margin-bottom: 3em;
 }
-button.ajouter-activite a, .modifier-activite a, .supprimer-activite a {
+button.ajouter a, .modifier a, .supprimer a {
   color: #eeb15e;
 }
 
-button.ajouter-activite:hover, .modifier-activite:hover, .supprimer-activite:hover {
+button.ajouter:hover, .modifier:hover, .supprimer:hover {
   background-color: #eeb15e;
   border: none;
 }
-button.ajouter-activite:hover a, .modifier-activite:hover a, .supprimer-activite:hover a {
+button.ajouter:hover a, .modifier:hover a, .supprimer:hover a {
   color: #030303;
 }
 
-form button.supprimer-activite {
+form button.supprimer {
   transition: 0;
   border-radius: 0;
   padding: 0;
