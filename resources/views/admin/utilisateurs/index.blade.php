@@ -16,31 +16,45 @@
         </div>
     @endif
 
-    <form class="administration la_recherche"
-            action="{{ route('admin.utilisateurs.index') }}"
-            method="GET"
-    >
-        @csrf
+    <section class="formulaire_recherche">
 
-        <div class="barre_recherche">
-            <label for="user_recherche">
-                Recherche:
-            </label>
-                <input
-                    id="user_recherche"
-                    name="user_recherche"
-                    type="text"
-                    placeholder="Recherchez un utilisateur"
-                    autofocus
-                >
+        <form class="administration la_recherche"
+                action="{{ route('admin.utilisateurs.index') }}"
+                method="GET"
+        >
+            @csrf
+
+            <div class="barre_recherche">
+
+                <label for="user_recherche">
+                    Recherche:
+                </label>
+
+                    <input
+                        id="user_recherche"
+                        name="user_recherche"
+                        type="text"
+                        placeholder="Recherchez un utilisateur"
+                        autofocus
+                    >
+            </div>
+
+            {{-- <x-forms.erreur champ="user_recherche" /> --}}
+
+            <button type="submit">
+                Faire la recherche
+            </button>
+        </form>
+
+        <div class="bouton_liste_complete">
+
+            <x-boutons.liste_complete
+                route="{{ route('admin.utilisateurs.index') }}"
+                valeur="utilisateurs"
+            />
+
         </div>
-
-        {{-- <x-forms.erreur champ="user_recherche" /> --}}
-
-        <button type="submit">
-            Faire la recherche
-        </button>
-    </form>
+    </section>
 
     <div class="conteneur_admin">
 

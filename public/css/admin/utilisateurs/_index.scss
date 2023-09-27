@@ -2,7 +2,6 @@
     color: $jaune;
 }
 
-
 .un_utilisateur {
     margin: 0.1em 0;
     padding: 0;
@@ -74,3 +73,25 @@
     }
 }
 
+section.formulaire_recherche {
+    border: 1px solid $rose;
+    margin: 0 3em 5em 3em;
+    padding: 2em 4em;
+
+    .bouton_liste_complete {
+        margin: 2em 0 0 0 ;
+        text-align: center;
+
+        a {
+            color: $vert;
+
+            &:hover {
+                transition: all 0.3s;
+                color: $rose;
+                text-decoration: underline;
+            }
+        }
+
+    }
+
+}
