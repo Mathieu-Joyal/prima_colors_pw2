@@ -3,7 +3,15 @@
     <div class="conteneur-titre-activites-admin">
         <h2>les activitÉs</h2>
 
-        <button class="ajouter-activite">
+
+        <div class="conteneur-bouton-accueil-admin">
+
+            <div class="bouton-accueil-admin">
+
+                <a href="{{ route('admin.index') }}">Accueil - Administration</a>
+            </div>
+        </div>
+        <button class="ajouter">
             <a href="/admin/activites/create"> Ajouter une activité</a>
         </button>
 
@@ -61,7 +69,7 @@
                 <div class="conteneur-btn">
 
                     {{-- MODIFICATION --}}
-                    <button class="modifier-activite">
+                    <button class="modifier">
                         <a href="{{ route('admin.activites.edit', ['id' => $activite->id]) }}">Modifier l'activité</a>
                     </button>
 
@@ -72,7 +80,7 @@
 
                         <input type="hidden" name="id" value="{{ $activite->id }}"
                             action="{{ route('admin.activites.destroy') }}" method="POST">
-                        <button class="supprimer-activite" type="submit">
+                        <button class="supprimer" type="submit">
 
                             Supprimer l'activité
 

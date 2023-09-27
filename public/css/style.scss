@@ -82,8 +82,10 @@ button {
 }
 
 button:hover {
-  background-color: $jaune;
+
   color: $noir;
+  background-color: darken($jaune, 10%);
+  transition: background-color, 0.3s;
   a {
     color: $noir;
   }
@@ -218,10 +220,10 @@ img.img_activite {
 
     &:hover {
       color: $blanc;
-     
+
       span.material-icons {
         color: $blanc;
-      
+
       }
     }
   }
@@ -283,10 +285,10 @@ img.img_forfait {
 
     &:hover {
       color: $blanc;
-     
+
       span.material-icons {
         color: $blanc;
-      
+
       }
     }
   }
@@ -346,10 +348,10 @@ img.img_apropos {
 
     &:hover {
       color: $blanc;
-     
+
       span.material-icons {
         color: $blanc;
-      
+
       }
     }
   }
@@ -365,8 +367,8 @@ img.img_apropos {
 
 // Section administrateur
 @import "admin/utilisateurs.scss";
-@import "admin/activites/index";
-@import "admin/activites/form";
+@import "admin/activitesEtActualites/index";
+@import "admin/activitesEtActualites/form";
 @import "admin/utilisateurs/index";
 @import "admin/utilisateurs/edit";
 @import "admin/reservations/index";
