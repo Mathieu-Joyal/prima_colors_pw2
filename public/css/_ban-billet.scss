@@ -1,11 +1,20 @@
 .section_billet {
     position: relative;
-    background-image: url("img/accueil/ban_billet.png");
+    background-image: url("../img/accueil/ban_billet.png");
     background-size: cover;
     background-position: center;
-    width: auto;
-    height: auto;
-    padding-bottom: 50px;
+    width: 100%;
+    height:340px;
+   margin-top:100px;
+   margin-bottom: 100px;
+   
+
+}
+
+.section_billet img {
+    padding-top: 100px;
+  
+
 }
 
 .rectangle_blanc {
@@ -13,7 +22,6 @@
     padding-left: 15px;
     padding-right: 15px;
     margin-left: 150px;
-    transform: translate(25%, -101%);
     width: 90px;
     height: 340px;
     background-color: $blanc;
@@ -21,8 +29,8 @@
     flex-direction: column;
     justify-content: center;
     text-align: left;
-    float: left;
-    z-index: 2;
+  
+
 }
 
 .rectangle_blanc h1 {
@@ -40,7 +48,7 @@
     width: 100%;
     height: 100%;
     display: flex;
-    z-index: 3;
+ 
 }
 
 .rectangle_blanc .forfaits {
@@ -71,7 +79,7 @@
     position: relative;
     top: 15%;
     left: 7.5%;
-    z-index: 4;
+  
 }
 
 a .forfaits {
@@ -87,6 +95,6 @@ a .forfaits {
     font-weight: bold;
     background-color: $rose;
     padding: 5px 60px;
-    margin-top: -50px;
-    z-index: 50;
+   
+  
 }

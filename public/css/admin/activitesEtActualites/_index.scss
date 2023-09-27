@@ -1,0 +1,164 @@
+
+.conteneur-nav-admin{
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    h2 {
+        margin: 0;
+    }
+    background-color: $noir;
+}
+.conteneur-titre-activites-admin, .conteneur-titre-actualites-admin {
+    display: flex;
+    justify-content: space-between;
+    margin: 5em;
+    height: 50px;
+    background-color: $noir;
+    position: sticky;
+    top: 0;
+    padding-top: 2em;
+    padding-bottom: 2em;
+
+
+
+}
+
+.activites-admin, .actualites-admin{
+    margin: 5em;
+
+    .conteneur-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+
+        .grid-item {
+            flex: 0 1 calc(25% - 10px);
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid $rose;
+        }
+        h3.grid-title{
+            color: $rose;
+        }
+
+        .description {
+            max-width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .image {
+            height: 200px;
+            width: 1000px;
+
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+//SECTION ACTUALITES
+
+
+.conteneur-articles-actualites{
+    h2 {
+        margin: 0;
+    }
+    .conteneur-gauche{
+margin-left: 3em;
+    }
+
+   .description-actualites {
+    max-width: 1000px;
+   }
+   .conteneur-btn{
+    margin: 0;
+    .modifier{
+        margin-right: 3em;
+    }
+   }
+   .image{
+    margin-right: 5em;
+   }
+}
+
+
+//BOUTTONS
+.conteneur-btn {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20em;
+    margin-right: 20em;
+}
+
+hr {
+    color: $rose;
+    border: solid $rose 3px;
+    margin: 2em;
+}
+
+button.ajouter, .modifier, .supprimer {
+
+    margin: 0;
+    background-color: $noir;
+    border: $jaune 3px solid;
+    font-weight: 400;
+    font-size: 30px;
+    height: 70px;
+    text-align: center;
+    width: 400px;
+    margin-bottom: 3em;
+
+    a {
+        color: $jaune;
+    }
+}
+button.ajouter:hover, .modifier:hover, .supprimer:hover {
+    color: $noir;
+    background-color: darken($jaune, 10%);
+    transition: background-color, 0.3s;
+
+    a {
+        color: $noir;
+    }
+}
+form button.supprimer{
+    transition: 0;
+    border-radius: 0;
+    padding: 0;
+    padding-top: 10px;
+}
+
+.conteneur-bouton-accueil-admin {
+.bouton-accueil-admin {
+
+    border: solid $vert 2px;
+    padding-top: 1em;
+    color: white;
+    cursor: pointer;
+    width: 300px;
+    height: 35px;
+    text-align: center;
+
+    a {
+        color: white;
+        font-size: 1.5em;
+        font-family: "pf-venue", sans-serif;
+        text-transform: uppercase;
+
+    }
+
+    &:hover {
+        background-color: darken($vert, 10%);
+        transition: background-color, 0.3s;
+    }
+}
+}
+

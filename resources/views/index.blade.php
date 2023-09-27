@@ -1,5 +1,9 @@
-<x-layout titre="Festival Prima-Colors | Accueil">
+
+    <x-layout titre="Festival Prima-Colors | Accueil">
     <x-header/>
+
+        
+
     {{-- <video src=""></video> --}
         --}}
     <blockquote>
@@ -48,7 +52,7 @@
     <div class="section_forfaits">
         <div class="texte_gauche">
             <h3 class="accueil_forfait">Vivez Prima-Colors sous toutes ses teintes !</h3>
-            <p class="accueil_forfait"> Profitez pleinement du festival grâce à nos forfaits sur mesure</p>
+            <p class="accueil_forfait"> Profitez pleinement du festival grâce à nos forfaits sur mesure <br>Invitez vos amis pour une expérience des plus colorée.</p>
             <a href="/forfaits" class="accueil">Voir les forfaits! <span class="material-icons">
                     east
                 </span></a>
@@ -70,13 +74,23 @@
     <x-ban_concours/>
     
 
-    <div class="section_actualités">
-        <p>Actualités de nos éditions antérieurs</p>
-        <a href="/actualites"></a>
+    <div class="section_actualites">
+        <h1 class="accueil_actualite">Actualités de nos éditions antérieurs</h1>
+        <div class="titre_actualite">
+            <a href="actualite.index" class="vers_actualite">titre 1 </a> 
+            <a href="actualite.index" class="vers_actualite">titre 2 </a>
+            <a href="actualite.index" class="vers_actualite">titre 3 </a>
+            <a href="actualite.index" class="vers_actualite">titre 4 </a>
+            <a href="actualite.index" class="vers_actualite">titre 5 </a>
+            <a href="actualite.index" class="vers_actualite">titre 6 </a>
+            <a href="actualite.index" class="vers_actualite">titre 6 </a>
+            <a href="actualite.index" class="vers_actualite">titre 7 </a>
+            <a href="actualite.index" class="vers_actualite">titre 8 </a>
+            <a href="actualite.index" class="vers_actualite">titre 9 </a>
+        </div>
     </div>
 
     <x-ban_compte/>
     <x-ban_billet/>
-    <x-footer/>
 
 </x-layout>

@@ -14,7 +14,7 @@
 
             <h2>Section utilisateur</h2>
 
-            <form action="{{ route('connexion.authentifier') }}"
+            <form class="administration" action="{{ route('connexion.authentifier') }}"
                     method="POST"
             >
                 @csrf

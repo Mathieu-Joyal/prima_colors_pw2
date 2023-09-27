@@ -1,5 +1,4 @@
 <div class="section_compte">
-    <img src="img/accueil/ban_compte.png" alt="">
     <div class="carre_blanc">
         <h1>Pour ne rien manquer!</h1>
         <h3>Vous désirez tout savoir sur le festival et ne rien manquer? <br> Créez vous un compte!</h3>

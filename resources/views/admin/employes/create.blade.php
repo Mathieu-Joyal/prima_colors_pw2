@@ -4,7 +4,7 @@
 
     {{-- Pourrait être une composante --}}
     <div class="deconnexion">
-        <form action="{{ route('deconnexion.employe') }}"
+        <form class="administration" action="{{ route('deconnexion.employe') }}"
                 method="POST"
         >
             @csrf
@@ -18,7 +18,7 @@
         <section class="creation_employe">
 
             <h3>Création d'un nouvel employé</h3>
-            <form action="{{ route('enregistrement.storeEmploye') }}"
+            <form class="administration" action="{{ route('enregistrement.storeEmploye') }}"
                     method="POST"
             >
                 @csrf

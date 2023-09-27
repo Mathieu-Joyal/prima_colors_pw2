@@ -15,8 +15,6 @@ h1 {
   font-style: normal;
   color: $rose;
   font-size: 80px;
-  color: $jaune;
-  margin: 0;
 }
 
 h2 {
@@ -54,10 +52,17 @@ p {
 }
 
 //GENERAL
+body{
+  margin:0px;
+}
 html {
   background-color: $noir;
   margin: 0;
   padding: 0;
+}
+
+main{
+  width: 100%;
 }
 
 section {
@@ -82,8 +87,10 @@ button {
 }
 
 button:hover {
-  background-color: $jaune;
+
   color: $noir;
+  background-color: darken($jaune, 10%);
+  transition: background-color, 0.3s;
   a {
     color: $noir;
   }
@@ -169,6 +176,7 @@ blockquote span.material-icons:first-child {
   justify-content: center;
   padding-left: 200px;
   padding-right: 200px;
+  padding-bottom: 100px;
 }
 
 img.img_activite {
@@ -218,10 +226,10 @@ img.img_activite {
 
     &:hover {
       color: $blanc;
-     
+
       span.material-icons {
         color: $blanc;
-      
+
       }
     }
   }
@@ -235,6 +243,7 @@ img.img_activite {
   justify-content: center;
   padding-left: 200px;
   padding-right: 200px;
+  padding-bottom: 100px;
 }
 
 img.img_forfait {
@@ -262,7 +271,7 @@ img.img_forfait {
     color: $jaune;
   }
 
-  a.ccueil {
+  a.accueil {
     text-decoration: none;
     color: $jaune;
     padding: 10px 20px;
@@ -283,10 +292,10 @@ img.img_forfait {
 
     &:hover {
       color: $blanc;
-     
+
       span.material-icons {
         color: $blanc;
-      
+
       }
     }
   }
@@ -300,6 +309,7 @@ img.img_forfait {
   justify-content: center;
   padding-left: 200px;
   padding-right: 200px;
+  padding-bottom: 100px;
 }
 
 img.img_apropos {
@@ -312,6 +322,7 @@ img.img_apropos {
   flex-direction: column;
   align-items: flex-start;
   padding-left: 150px;
+ 
 }
 
   h3.accueil_apropos {
@@ -321,7 +332,7 @@ img.img_apropos {
 
   p.accueil_apropos {
     font-size: 36px;
-    margin-bottom: 20px;
+   
     color: $rose;
   }
 
@@ -346,14 +357,25 @@ img.img_apropos {
 
     &:hover {
       color: $blanc;
-     
+
       span.material-icons {
         color: $blanc;
-      
+
       }
     }
   }
 
+
+//section actualités page accueil
+
+h1.accueil_actualite{
+  padding-top: 150px;
+ 
+}
+
+.section_actualites{
+  padding-bottom:150px;
+}
 
 // Section site Web
 @import "_activites.scss";
@@ -365,8 +387,8 @@ img.img_apropos {
 
 // Section administrateur
 @import "admin/utilisateurs.scss";
-@import "admin/activites/index";
-@import "admin/activites/form";
+@import "admin/activitesEtActualites/index";
+@import "admin/activitesEtActualites/form";
 @import "admin/utilisateurs/index";
 @import "admin/utilisateurs/edit";
 @import "admin/reservations/index";
