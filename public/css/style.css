@@ -1231,6 +1231,32 @@ form button:hover {
   transition: background-color 0.3s;
 }
 
+form.la_recherche {
+  border: 1px solid #eca6d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 3em 5em 3em;
+  padding: 2em 4em;
+}
+form.la_recherche .barre_recherche {
+  display: flex;
+  align-items: center;
+}
+form.la_recherche .barre_recherche label {
+  margin: 0 0.5em 0 0;
+}
+form.la_recherche .barre_recherche input {
+  margin: 0;
+}
+form.la_recherche button {
+  display: flex;
+  align-items: center;
+  margin: 0 1em;
+  height: 2em;
+  border: 1px solid #eeb15e;
+}
+
 .contenu {
   background-color: #0b8a80;
   width: 100%;

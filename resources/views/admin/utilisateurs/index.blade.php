@@ -22,30 +22,24 @@
     >
         @csrf
 
-        <div>
+        <div class="barre_recherche">
             <label for="user_recherche">
-                Recherche
+                Recherche:
             </label>
-
-            <div>
                 <input
                     id="user_recherche"
                     name="user_recherche"
                     type="text"
+                    placeholder="Recherchez un utilisateur"
                     autofocus
                 >
-
-            </div>
-
-            <x-forms.erreur champ="user_recherche" />
-
         </div>
 
-        <div>
-            <button type="submit">
-                Faire la recherche
-            </button>
-        </div>
+        {{-- <x-forms.erreur champ="user_recherche" /> --}}
+
+        <button type="submit">
+            Faire la recherche
+        </button>
     </form>
 
     <div class="conteneur_admin">
