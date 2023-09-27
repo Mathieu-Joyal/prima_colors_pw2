@@ -1248,6 +1248,24 @@ form button.supprimer {
   transition: background-color, 0.3s;
 }
 
+section.formulaire_recherche {
+  border: 1px solid #eca6d9;
+  margin: 0 3em 5em 3em;
+  padding: 2em 4em;
+}
+section.formulaire_recherche .bouton_liste_complete {
+  margin: 2em 0 0 0;
+  text-align: center;
+}
+section.formulaire_recherche .bouton_liste_complete a {
+  color: #0b8a80;
+}
+section.formulaire_recherche .bouton_liste_complete a:hover {
+  transition: all 0.3s;
+  color: #eca6d9;
+  text-decoration: underline;
+}
+
 .formulaire_un_utilisateur {
   margin: 1em 3em;
 }
@@ -1329,6 +1347,29 @@ form.administration button {
 form.administration button:hover {
   background-color: #0b8a80;
   transition: background-color 0.3s;
+}
+
+form.la_recherche {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form.la_recherche .barre_recherche {
+  display: flex;
+  align-items: center;
+}
+form.la_recherche .barre_recherche label {
+  margin: 0 0.5em 0 0;
+}
+form.la_recherche .barre_recherche input {
+  margin: 0;
+}
+form.la_recherche button {
+  display: flex;
+  align-items: center;
+  margin: 0 1em;
+  height: 2em;
+  border: 1px solid #eeb15e;
 }
 
 .contenu {

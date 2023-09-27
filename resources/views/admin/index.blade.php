@@ -22,4 +22,11 @@
         <a href="{{ route('admin.reservations.index') }}">Gestion des réservations</a>
     </div>
 
+    <x-bannieres.countdown
+        font="92"
+    />
+
 </x-layout>
+
+
+

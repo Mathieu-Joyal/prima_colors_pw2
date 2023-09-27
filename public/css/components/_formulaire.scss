@@ -26,3 +26,30 @@ form.administration {
         }
     }
 }
+
+form.la_recherche {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .barre_recherche {
+        display: flex;
+        align-items: center;
+
+        label {
+            margin: 0 .5em 0 0 ;
+        }
+
+        input {
+            margin: 0;
+        }
+    }
+
+    button {
+        display: flex;
+        align-items: center;
+        margin: 0 1em;
+        height: 2em;
+        border: 1px solid $jaune;
+    }
+}
