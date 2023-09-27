@@ -4,8 +4,6 @@ h1 {
   font-style: normal;
   color: #eca6d9;
   font-size: 80px;
-  color: #eeb15e;
-  margin: 0;
 }
 
 h2 {
@@ -42,10 +40,18 @@ p {
   line-height: 1.5;
 }
 
+body {
+  margin: 0px;
+}
+
 html {
   background-color: #030303;
   margin: 0;
   padding: 0;
+}
+
+main {
+  width: 100%;
 }
 
 section {
@@ -146,6 +152,7 @@ blockquote span.material-icons:first-child {
   justify-content: center;
   padding-left: 200px;
   padding-right: 200px;
+  padding-bottom: 100px;
 }
 
 img.img_activite {
@@ -203,6 +210,7 @@ img.img_activite {
   justify-content: center;
   padding-left: 200px;
   padding-right: 200px;
+  padding-bottom: 100px;
 }
 
 img.img_forfait {
@@ -228,7 +236,7 @@ img.img_forfait {
   margin-bottom: 50px;
   color: #eeb15e;
 }
-.texte_gauche a.ccueil {
+.texte_gauche a.accueil {
   text-decoration: none;
   color: #eeb15e;
   padding: 10px 20px;
@@ -239,17 +247,17 @@ img.img_forfait {
   display: flex;
   transition: 0.3s;
 }
-.texte_gauche a.ccueil span.material-icons {
+.texte_gauche a.accueil span.material-icons {
   color: #eeb15e;
   font-size: 75px;
   padding-left: 100px;
   position: relative;
   transition: 0.3s;
 }
-.texte_gauche a.ccueil:hover {
+.texte_gauche a.accueil:hover {
   color: white;
 }
-.texte_gauche a.ccueil:hover span.material-icons {
+.texte_gauche a.accueil:hover span.material-icons {
   color: white;
 }
 
@@ -259,6 +267,7 @@ img.img_forfait {
   justify-content: center;
   padding-left: 200px;
   padding-right: 200px;
+  padding-bottom: 100px;
 }
 
 img.img_apropos {
@@ -280,7 +289,6 @@ h3.accueil_apropos {
 
 p.accueil_apropos {
   font-size: 36px;
-  margin-bottom: 20px;
   color: #eca6d9;
 }
 
@@ -307,6 +315,14 @@ a.accueil:hover {
 }
 a.accueil:hover span.material-icons {
   color: white;
+}
+
+h1.accueil_actualite {
+  padding-top: 150px;
+}
+
+.section_actualites {
+  padding-bottom: 150px;
 }
 
 .conteneur-activites {
@@ -596,24 +612,24 @@ button.voir.activite {
 
 .section_concours {
   position: relative;
-  background-image: url("img/accueil/ban_concours.png");
+  background-image: url("../img/accueil/ban_concours.png");
   background-size: cover;
   background-position: center;
-  width: 300px;
-  height: 200px;
-  padding-bottom: 250px;
+  width: 100%;
+  height: 365px;
+}
+
+.section_concours img {
   padding-top: 100px;
 }
 
 .carre_noir {
   position: absolute;
   padding-left: 15px;
-  padding-right: 1px;
-  top: 55%;
-  left: 100%;
-  transform: translate(-50%, -50%);
+  margin-bottom: 10px;
+  top: 0px;
   width: 450px;
-  height: 370px;
+  height: 350px;
   background-color: #030303;
   display: flex;
   flex-direction: column;
@@ -623,7 +639,6 @@ button.voir.activite {
 }
 
 .carre_noir h1 {
-  margin-top: -20px;
   margin-bottom: 0;
   padding-bottom: 10px;
   font-size: 95px;
@@ -632,9 +647,10 @@ button.voir.activite {
 
 .carre_noir h3 {
   color: #eeb15e;
-  margin: 10px 0;
+  margin: 10px;
+  margin-top: 35px;
   font-size: 40px;
-  padding-bottom: 100px;
+  padding-bottom: 20px;
   text-transform: none;
   z-index: 3;
 }
@@ -652,6 +668,7 @@ button.voir.activite {
 
 .carre_noir .concours {
   text-align: right;
+  margin-right: 10px;
 }
 
 .carre_noir .concours i {
@@ -687,28 +704,30 @@ button.voir.activite {
 
 .section_compte {
   position: relative;
-  background-image: url("img/accueil/ban_compte.png");
+  background-image: url("../img/accueil/ban_compte.png");
   background-size: cover;
   background-position: center;
-  width: 300px;
-  height: 200px;
-  padding-bottom: 300px;
+  width: 100%;
+  height: 365px;
+}
+
+.section_compte img {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .carre_blanc {
   position: absolute;
   padding-left: 15px;
   padding-right: 15px;
-  top: 36.5%;
+  top: 15px;
   right: 0;
-  transform: translate(320%, -50%);
   width: 450px;
   height: 366px;
   background-color: rgba(255, 255, 255, 0.445);
   display: flex;
   flex-direction: column;
   text-align: right;
-  z-index: 2;
 }
 
 .carre_blanc h1 {
@@ -728,7 +747,6 @@ button.voir.activite {
   margin-right: 40px;
   margin-bottom: 20px;
   line-height: 1.2;
-  z-index: 3;
 }
 
 .carre_blanc a {
@@ -737,7 +755,6 @@ button.voir.activite {
   text-decoration: none;
   color: #030303;
   font-weight: bold;
-  z-index: 3;
   background-color: rgba(236, 166, 217, 0.8);
   padding: 10px 50px;
 }
@@ -763,7 +780,6 @@ a.compte {
   position: relative;
   top: 15%;
   left: 7%;
-  z-index: 4;
 }
 
 .compte::before {
@@ -775,7 +791,6 @@ a.compte {
   width: 38px;
   height: 38px;
   background-color: #030303;
-  z-index: 2;
 }
 
 .conteneur_connexion {
@@ -812,12 +827,17 @@ a.compte {
 }
 .section_billet {
   position: relative;
-  background-image: url("img/accueil/ban_billet.png");
+  background-image: url("../img/accueil/ban_billet.png");
   background-size: cover;
   background-position: center;
-  width: auto;
-  height: auto;
-  padding-bottom: 50px;
+  width: 100%;
+  height: 340px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.section_billet img {
+  padding-top: 100px;
 }
 
 .rectangle_blanc {
@@ -825,7 +845,6 @@ a.compte {
   padding-left: 15px;
   padding-right: 15px;
   margin-left: 150px;
-  transform: translate(25%, -101%);
   width: 90px;
   height: 340px;
   background-color: white;
@@ -833,8 +852,6 @@ a.compte {
   flex-direction: column;
   justify-content: center;
   text-align: left;
-  float: left;
-  z-index: 2;
 }
 
 .rectangle_blanc h1 {
@@ -852,7 +869,6 @@ a.compte {
   width: 100%;
   height: 100%;
   display: flex;
-  z-index: 3;
 }
 
 .rectangle_blanc .forfaits {
@@ -883,7 +899,6 @@ a.compte {
   position: relative;
   top: 15%;
   left: 7.5%;
-  z-index: 4;
 }
 
 a .forfaits {
@@ -899,8 +914,6 @@ a .forfaits {
   font-weight: bold;
   background-color: #eca6d9;
   padding: 5px 60px;
-  margin-top: -50px;
-  z-index: 50;
 }
 
 .conteneur-utilisateur {
@@ -1325,9 +1338,9 @@ form.administration button:hover {
 
 .menu {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 
 .menu .item {
@@ -1340,30 +1353,25 @@ form.administration button:hover {
 .menu .item a {
   display: block;
   width: 100%;
-  margin-right: 10px;
   font-size: 40px;
   font-family: "pf-venue", sans-serif;
   text-transform: uppercase;
   color: white;
   text-decoration: none;
   cursor: pointer;
-  z-index: 2;
   position: relative;
-  margin-top: 30px;
-  margin-right: 50px;
+  margin: 30px 50px 0 0;
   padding-left: 50px;
   transition: color 0.3s ease;
 }
 
 .menu .item a:hover {
   color: #030303;
-  z-index: 3;
 }
 
 .menu .item a:hover .ligne {
   width: 100%;
   background-color: #eca6d9;
-  z-index: -1;
   transition: width 0.3s ease;
 }
 
@@ -1371,12 +1379,11 @@ form.administration button:hover {
   height: 65px;
   width: 3px;
   background-color: #eca6d9;
-  z-index: -1;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   transition: width 0.3s ease, background-color 0.3s ease;
-  margin-left: -50px;
+  left: -50px;
 }
 
 .logo {
@@ -1430,12 +1437,12 @@ p.slogan {
   position: absolute;
   top: 83px;
   z-index: 1;
-  width: 1652px;
+  width: 100%;
 }
 
 .contenu_nav {
   position: relative;
-  width: 1652px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1458,23 +1465,29 @@ p.slogan {
   margin-top: 27px;
 }
 
-a {
-  text-decoration: none;
-}
-
 .menu_nav {
-  transition: width 0.3s ease, background-color 0.3s ease;
   display: flex;
   flex-direction: row;
   align-items: center;
   top: 0px;
+  height: 70px;
+  margin-top: -14px;
 }
 
-.menu_nav a.item_nav .nav {
-  display: block;
+.menu_nav .item_nav {
+  text-decoration: none;
+  height: 70px;
+  line-height: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.menu_nav .item_nav .nav {
+  display: flex;
+  align-items: center;
   padding-right: 30px;
   padding-left: 30px;
-  padding-bottom: 10px;
+  height: 50px;
   font-size: 30px;
   font-family: "pf-venue", sans-serif;
   text-transform: uppercase;
@@ -1490,7 +1503,6 @@ a {
 }
 
 .menu_nav .item_nav:hover {
-  height: 100%;
   background-color: #eca6d9;
   transition: width 0.2s ease;
   transition: background-color 1s ease-out;
@@ -1498,12 +1510,14 @@ a {
 
 a.billet {
   height: 270px;
+  text-decoration: none;
 }
 
 .billet {
   width: 170px;
   height: 200px;
-  margin-left: 30px;
+  margin-left: 50px;
+  padding-right: 40px;
   background: url("../img/accueil/billet.jpg");
   background-repeat: no-repeat;
 }
@@ -1521,18 +1535,20 @@ p.texte {
   text-transform: uppercase;
   font-weight: bold;
   margin-top: 55px;
-  margin-left: 17px;
+  margin-left: 25px;
 }
 
 .reseau {
   display: flex;
+  justify-content: space-between;
   padding-bottom: 10px;
-  padding-left: 50px;
+  padding-left: 30px;
+  padding-right: 50px;
+  width: 15%;
 }
 
 img.reseau-img {
   max-width: 100%;
-  margin-right: 40px;
 }
 
 .logo-nav {
@@ -1540,20 +1556,24 @@ img.reseau-img {
   margin-right: 100px;
 }
 
-a.connection {
+a.connexion {
   font-family: "pf-venue", sans-serif;
   font-size: 36px;
   margin-top: 200px;
-  margin-right: 50px;
   color: #eca6d9;
-  display: flex; /* Utilisez flexbox */
+  display: flex;
   align-items: center;
+  text-decoration: none;
+  right: 50px;
+  position: absolute;
+  z-index: 45;
 }
 
-a.connection .material-icons {
+a.connexion .material-icons {
   margin-bottom: 10px;
   color: #eca6d9;
   font-size: 40px;
+  text-decoration: none;
 }
 
 .deconnexion form {
