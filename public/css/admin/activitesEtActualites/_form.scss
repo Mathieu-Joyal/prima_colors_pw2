@@ -8,6 +8,7 @@
         font-size: 38px;
         text-transform: uppercase;
         margin-bottom: 1em;
+        color: $rose;
     }
 
     .grid-item {
@@ -17,12 +18,53 @@
         input {
             height: 50px;
             font-size: 24px;
+            font-family: "pf-venue", sans-serif;
         }
+
     }
+
     .grid-item.description {
         margin-bottom: 1.5em;
     }
-    .btn-submit{
-       justify-content: center;
+
+}
+
+.conteneur-bouttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+}
+
+.boutton-retour {
+
+    border: solid $vert 2px;
+    padding-top: 1em;
+    color: white;
+    cursor: pointer;
+    width: 300px;
+    height: 35px;
+    text-align: center;
+
+    a {
+        color: white;
+        font-size: 1.5em;
+        font-family: "pf-venue", sans-serif;
+        text-transform: uppercase;
+
+    }
+
+    &:hover {
+        background-color: darken($vert, 10%);
+        transition: background-color, 0.3s;
+    }  }
+
+.actualites-admin{
+    .conteneur-grid{
+flex-direction: column;
+
+    }
+    .grid-item.description{
+        margin-top: 2em;
+
     }
 }

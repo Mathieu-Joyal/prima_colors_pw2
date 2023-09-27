@@ -1,10 +1,10 @@
 <x-layout titre="Créez une actualité">
-    <div class="">
-        <header class="">
+    <div class="actualites-admin">
 
-            <h2 class="">Créez une actualité
-                </h2>
-        </header>
+
+        <h2 class="">Créez une actualité
+        </h2>
+
 
         {{-- MESSAGES --}}
         {{-- @if (session('echec'))
@@ -12,55 +12,65 @@
                 {{ session('echec') }}</p>
         @endif --}}
 
-        <div class="">
+        <div class="form">
             {{-- FORMULAIRE --}}
-            <form class="" action="{{ route('admin.actualites.store')}}" method="POST" enctype="multipart/form-data">
+            <form class="create" action="{{ route('admin.actualites.store') }}" method="POST"
+                enctype="multipart/form-data">
                 @csrf
 
-                <div>
+                <div class="conteneur-grid">
+
                     {{-- TITRE --}}
-                    <label for="titre" class="">Titre</label>
-                    <div class="">
+                    <div class="grid-item titre">
+
+                        <label for="titre" class="grid-title">Titre</label>
 
                         <x-forms.erreur champ="titre" />
 
-                        <input id="titre" name="titre" type="text" autofocus
-                            class=" " value="{{ old('titre') }}">
+                        <input id="titre" name="titre" type="text" autofocus class=" "
+                            value="{{ old('titre') }}">
                     </div>
-                </div>
 
-                <div>
                     {{-- DÉSCRIPTION --}}
-                    <label for="description" class="">Déscription</label>
-                    <div>
+                    <div class="grid-item description">
+
+                        <label for="description" class="grid-title">Déscription</label>
+
                         <x-forms.erreur champ="description" />
-                        <input id="description" name="description" type="text" autofocus
-                            class=" " value="{{ old('description') }}">
-                    </div>
-                </div>
 
-                <div>
-                    {{-- {{-- IMAGE --hello}} --}}
-                    <label for="image" class="">Image</label>
-                    <div>
+                        <input id="description" name="description" type="text" autofocus class=" "
+                            value="{{ old('description') }}">
+
+                    </div>
+
+
+                </div>
+                {{-- {{-- IMAGE }} --}}
+                    <div class="grid-item">
+
+                        <label for="image" class="grid-title">Image</label>
+
                         <x-forms.erreur champ="image" />
-                        <input id="image" name="image" type="file"
-                            class=" " value="{{ old('image') }}">
-                    </div>
-                </div>
 
+                        <input id="image" name="image" type="file" class=" " value="{{ old('image') }}">
+                    </div>
+
+
+            <div class="conteneur-bouttons">
                 {{-- SUBMIT --}}
-                <div>
-                    <input type="submit"
-                        class=""
-                        value="Ajouter!">
+                <button class="ajouter" type="submit">
+                    Ajouter une activitÉ
+                </button>
+
+                {{-- LIEN RETOUR --}}
+                <div class="boutton-retour">
+                    <a href="{{ route('admin.activites.index') }}" class="">Retour aux actualitÉs</a>
                 </div>
+            </div>
+
             </form>
 
-           {{-- LIEN RETOUR --}}
-           <p class="">
-            <a href="{{ route('admin.actualites.index') }}" class="hover:text-indigo-600">Retour aux actualités</a>
-        </p>
+
 
 
         </div>

@@ -1,5 +1,4 @@
 
-//SECTION ACTIVITES
 .conteneur-titre-activites-admin, .conteneur-titre-actualites-admin {
     display: flex;
     justify-content: space-between;
@@ -17,7 +16,8 @@
 
 }
 
-.activites-admin {
+
+.activites-admin, .actualites-admin{
     margin: 5em;
 
     .conteneur-grid {
@@ -39,7 +39,6 @@
 
         .description {
             max-width: 100%;
-            border: 1px solid $rose;
             padding: 10px;
             box-sizing: border-box;
         }
@@ -59,6 +58,7 @@
 }
 
 //SECTION ACTUALITES
+
 
 .conteneur-articles-actualites{
     h2 {
@@ -114,8 +114,10 @@ button.ajouter, .modifier, .supprimer {
     }
 }
 button.ajouter:hover, .modifier:hover, .supprimer:hover {
-    background-color: $jaune;
-border: none;
+    color: $noir;
+    background-color: darken($jaune, 10%);
+    transition: background-color, 0.3s;
+
     a {
         color: $noir;
     }
@@ -126,3 +128,30 @@ form button.supprimer{
     padding: 0;
     padding-top: 10px;
 }
+
+.conteneur-bouton-accueil-admin {
+.bouton-accueil-admin {
+
+    border: solid $vert 2px;
+    padding-top: 1em;
+    color: white;
+    cursor: pointer;
+    width: 300px;
+    height: 35px;
+    text-align: center;
+
+    a {
+        color: white;
+        font-size: 1.5em;
+        font-family: "pf-venue", sans-serif;
+        text-transform: uppercase;
+
+    }
+
+    &:hover {
+        background-color: darken($vert, 10%);
+        transition: background-color, 0.3s;
+    }
+}
+}
+

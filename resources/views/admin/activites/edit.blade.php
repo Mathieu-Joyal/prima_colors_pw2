@@ -68,16 +68,20 @@
                         value="{{ old('image') ?? $activite->image }}">
                 </div>
 
-                {{-- MODIFIER --}}
-                <div class="btn-submit">
-                    <input type="submit"  value="Modifier!">
+                <div class="conteneur-bouttons">
+                    {{-- SUBMIT --}}
+                    <button class="ajouter" type="submit">
+                        Modifier l'activitÉ
+                    </button>
+
+                    {{-- LIEN RETOUR --}}
+                    <div class="boutton-retour">
+                        <a href="{{ route('admin.activites.index') }}" class="">Retour aux activités</a>
+                    </div>
                 </div>
             </form>
 
-            {{-- LIEN RETOUR --}}
-            <div class="button">
-                <a href="{{ route('admin.activites.index') }}" class="">Retour aux activités</a>
-            </div>
+
 
         </div>
     </div>

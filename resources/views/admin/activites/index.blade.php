@@ -3,6 +3,14 @@
     <div class="conteneur-titre-activites-admin">
         <h2>les activitÉs</h2>
 
+
+        <div class="conteneur-bouton-accueil-admin">
+
+            <div class="bouton-accueil-admin">
+
+                <a href="{{ route('admin.index') }}">Accueil - Administration</a>
+            </div>
+        </div>
         <button class="ajouter">
             <a href="/admin/activites/create"> Ajouter une activité</a>
         </button>

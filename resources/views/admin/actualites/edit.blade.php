@@ -49,21 +49,18 @@
                     </div>
                 </div>
 
-                {{-- SUBMIT --}}
-                <div>
-                    <input type="submit"
-                        class=""
-                        value="Modifier!">
+                <div class="conteneur-bouttons">
+                    {{-- SUBMIT --}}
+                    <button class="ajouter" type="submit">
+                        Ajouter une activitÉ
+                    </button>
+
+                    {{-- LIEN RETOUR --}}
+                    <div class="boutton-retour">
+                        <a href="{{ route('admin.activites.index') }}" class="">Retour aux actualitÉs</a>
+                    </div>
                 </div>
             </form>
-
-            {{-- LIEN RETOUR --}}
-            <p class="">
-                <a href="{{ route('admin.actualites.index') }}" class="hover:text-indigo-600">Retour aux actualités</a>
-            </p>
-
-
-
         </div>
     </div>
 

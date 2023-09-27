@@ -69,8 +69,9 @@ button {
 }
 
 button:hover {
-  background-color: #eeb15e;
   color: #030303;
+  background-color: #e99b30;
+  transition: background-color, 0.3s;
 }
 button:hover a {
   color: #030303;
@@ -987,35 +988,34 @@ a .forfaits {
   margin: 0;
 }
 
-.activites-admin {
+.activites-admin, .actualites-admin {
   margin: 5em;
 }
-.activites-admin .conteneur-grid {
+.activites-admin .conteneur-grid, .actualites-admin .conteneur-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 20px;
 }
-.activites-admin .conteneur-grid .grid-item {
+.activites-admin .conteneur-grid .grid-item, .actualites-admin .conteneur-grid .grid-item {
   flex: 0 1 calc(25% - 10px);
   padding: 10px;
   box-sizing: border-box;
   border: 1px solid #eca6d9;
 }
-.activites-admin .conteneur-grid h3.grid-title {
+.activites-admin .conteneur-grid h3.grid-title, .actualites-admin .conteneur-grid h3.grid-title {
   color: #eca6d9;
 }
-.activites-admin .conteneur-grid .description {
+.activites-admin .conteneur-grid .description, .actualites-admin .conteneur-grid .description {
   max-width: 100%;
-  border: 1px solid #eca6d9;
   padding: 10px;
   box-sizing: border-box;
 }
-.activites-admin .conteneur-grid .image {
+.activites-admin .conteneur-grid .image, .actualites-admin .conteneur-grid .image {
   height: 200px;
   width: 1000px;
 }
-.activites-admin .conteneur-grid .image img {
+.activites-admin .conteneur-grid .image img, .actualites-admin .conteneur-grid .image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -1070,8 +1070,9 @@ button.ajouter a, .modifier a, .supprimer a {
 }
 
 button.ajouter:hover, .modifier:hover, .supprimer:hover {
-  background-color: #eeb15e;
-  border: none;
+  color: #030303;
+  background-color: #e99b30;
+  transition: background-color, 0.3s;
 }
 button.ajouter:hover a, .modifier:hover a, .supprimer:hover a {
   color: #030303;
@@ -1084,6 +1085,26 @@ form button.supprimer {
   padding-top: 10px;
 }
 
+.conteneur-bouton-accueil-admin .bouton-accueil-admin {
+  border: solid #0b8a80 2px;
+  padding-top: 1em;
+  color: white;
+  cursor: pointer;
+  width: 300px;
+  height: 35px;
+  text-align: center;
+}
+.conteneur-bouton-accueil-admin .bouton-accueil-admin a {
+  color: white;
+  font-size: 1.5em;
+  font-family: "pf-venue", sans-serif;
+  text-transform: uppercase;
+}
+.conteneur-bouton-accueil-admin .bouton-accueil-admin:hover {
+  background-color: #075b54;
+  transition: background-color, 0.3s;
+}
+
 .form {
   margin: 5em;
 }
@@ -1094,6 +1115,7 @@ form button.supprimer {
   font-size: 38px;
   text-transform: uppercase;
   margin-bottom: 1em;
+  color: #eca6d9;
 }
 .form .grid-item {
   display: flex;
@@ -1102,12 +1124,43 @@ form button.supprimer {
 .form .grid-item input {
   height: 50px;
   font-size: 24px;
+  font-family: "pf-venue", sans-serif;
 }
 .form .grid-item.description {
   margin-bottom: 1.5em;
 }
-.form .btn-submit {
-  justify-content: center;
+
+.conteneur-bouttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+
+.boutton-retour {
+  border: solid #0b8a80 2px;
+  padding-top: 1em;
+  color: white;
+  cursor: pointer;
+  width: 300px;
+  height: 35px;
+  text-align: center;
+}
+.boutton-retour a {
+  color: white;
+  font-size: 1.5em;
+  font-family: "pf-venue", sans-serif;
+  text-transform: uppercase;
+}
+.boutton-retour:hover {
+  background-color: #075b54;
+  transition: background-color, 0.3s;
+}
+
+.actualites-admin .conteneur-grid {
+  flex-direction: column;
+}
+.actualites-admin .grid-item.description {
+  margin-top: 2em;
 }
 
 .h3_user {
