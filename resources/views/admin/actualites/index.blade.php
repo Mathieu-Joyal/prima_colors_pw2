@@ -1,5 +1,5 @@
 <x-layout titre="Créez une actualité">
-    <button >
+    <button class="ajouter-activite">
         <a href="/admin/actualites/create" class="nav">
            Ajouter une actualité
         </a>
@@ -27,7 +27,7 @@
 
                     <div class="conteneur-btn">
                         {{-- MODIFICATION --}}
-                        <button>
+                        <button class="modifier-activite">
                             <a href="{{ route('admin.actualites.edit', ["id" => $actualite->id]) }}">
                                 Modifier une actualité
                              </a>
@@ -37,7 +37,7 @@
                             @csrf
 
                             <input type="hidden" name="id" value="{{ $actualite->id }}">
-                            <button type="submit">
+                            <button class="supprimer-activite" type="submit">
 
                                     Supprimer l'actualité
 
