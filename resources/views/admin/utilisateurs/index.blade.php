@@ -16,6 +16,38 @@
         </div>
     @endif
 
+    <form class="administration la_recherche"
+            action="{{ route('admin.utilisateurs.index') }}"
+            method="GET"
+    >
+        @csrf
+
+        <div>
+            <label for="user_recherche">
+                Recherche
+            </label>
+
+            <div>
+                <input
+                    id="user_recherche"
+                    name="user_recherche"
+                    type="text"
+                    autofocus
+                >
+
+            </div>
+
+            <x-forms.erreur champ="user_recherche" />
+
+        </div>
+
+        <div>
+            <button type="submit">
+                Faire la recherche
+            </button>
+        </div>
+    </form>
+
     <div class="conteneur_admin">
 
         <section class="affichage-employes">
@@ -82,12 +114,6 @@
                 </article>
             @endforeach
         </section>
-
-
-
-
-
-
     </div>
 
     <x-footer />

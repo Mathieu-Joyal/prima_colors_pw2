@@ -14,12 +14,31 @@ class AdminUtilisateurController extends Controller
     /**
      * Affiche la liste des utilisateurs
      *
+     * @param Request $request
      * @return View
      */
-    public function index() {
+    public function index(Request $request) {
+
+        // Mettre la requête de la recherche
+        $requete = $request->input('user_recherche');
+
+        // Initialise la recherche
+        $requete_user = User::query();
+
+        // Si une recherche est fournie, filtrer le résultat
+        if (!empty($requete)) {
+            $requete_user->where(function ($la_requete) use ($requete) {
+                $la_requete->where('prenom', 'like', '%' . $requete . '%')
+                      ->orWhere('nom', 'like', '%' . $requete . '%')
+                      ->orWhere('email', 'like', '%' . $requete . '%');
+            });
+        }
+
+        // Récupérer les utilisateurs en fonction de la requête
+        $users = $requete_user->get();
 
         return view('admin.utilisateurs.index', [
-            "users" => User::all(),
+            "users" => $users,
             "forfaits" => Forfait::all(),
             "reservations" => Reservation::all(),
         ]);
