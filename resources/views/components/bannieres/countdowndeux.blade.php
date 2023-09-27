@@ -1,6 +1,8 @@
-<div id="compteur">
+@props(["font"])
 
-    <p id="label">Temps restant</p>
+<div id="compteur" style="--font-size: {{ $font }}px;">
+
+    <p>Temps restant</p>
 
     <div id="chiffres_et_lettres">
 
@@ -56,14 +58,18 @@ document.getElementById("countdown").innerHTML = `
 <style type="text/css">
 
     #compteur {
-        max-width: 750px
+        max-width: 750px;
     }
 
     #compteur p {
-        font-size: 92px;
         font-family: "PF Venue Stencil";
         text-align: center;
         margin: 0;
+        font-size: var(--font-size);
+    }
+
+    #chiffres_et_lettres {
+        font-size: 1em; /* Default font size for child elements */
     }
 
     #countdown {
@@ -75,7 +81,7 @@ document.getElementById("countdown").innerHTML = `
 
     #countdown p {
         margin: 0;
-        font-size: 166px;
+        font-size: calc(var(--font-size) * 1.804); /* Adjust the factor as needed */
         text-align: center;
     }
 
@@ -87,54 +93,66 @@ document.getElementById("countdown").innerHTML = `
     }
 
     #countdown_texte p {
-        font-size: 41px;
+        font-size: calc(var(--font-size) * 0.445); /* Adjust the factor as needed */
         margin: 0;
         text-align: center;
         text-transform: uppercase;
     }
 
+    /* Media queries for responsive font sizes */
     @media only screen and (max-width: 650px) {
-
-        #compteur #label {
-            font-size: 69px!important;
+        #compteur p {
+            font-size: calc(var(--font-size) * 0.75); /* Adjust the factor as needed */
         }
 
         #countdown p {
-            font-size: 124.5px;
+            font-size: calc(var(--font-size) * 1.36); /* Adjust the factor as needed */
         }
 
         #countdown_texte p {
-            font-size: 30.75px;
+            font-size: calc(var(--font-size) * 0.334); /* Adjust the factor as needed */
         }
     }
 
     @media only screen and (max-width: 500px) {
-
-        #compteur #label {
-            font-size: 51.75px!important;
+        #compteur p {
+            font-size: calc(var(--font-size) * 0.5625); /* Adjust the factor as needed */
         }
 
         #countdown p {
-            font-size: 93.375px;
+            font-size: calc(var(--font-size) * 1.0156); /* Adjust the factor as needed */
         }
 
         #countdown_texte p {
-            font-size: 23.06px;
+            font-size: calc(var(--font-size) * 0.253); /* Adjust the factor as needed */
         }
     }
 
-    @media only screen and (max-width: 450px) {
-
-        #compteur #label {
-            font-size: 38.81px;
+    @media only screen and (max-width: 449px) {
+        #compteur p {
+            font-size: calc(var(--font-size) * 0.5075); /* Adjust the factor as needed */
         }
 
         #countdown p {
-            font-size: 70.03px;
+            font-size: calc(var(--font-size) * 0.918); /* Adjust the factor as needed */
         }
 
         #countdown_texte p {
-            font-size: 17.3px;
+            font-size: calc(var(--font-size) * 0.228); /* Adjust the factor as needed */
+        }
+    }
+
+    @media only screen and (max-width: 400px) and (min-width: 300px) {
+        #compteur p {
+            font-size: calc(var(--font-size) * 0.4213); /* Adjust the factor as needed */
+        }
+
+        #countdown p {
+            font-size: calc(var(--font-size) * 0.7623); /* Adjust the factor as needed */
+        }
+
+        #countdown_texte p {
+            font-size: calc(var(--font-size) * 0.1892); /* Adjust the factor as needed */
         }
     }
 
