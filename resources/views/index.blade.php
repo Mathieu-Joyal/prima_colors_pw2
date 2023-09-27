@@ -39,7 +39,7 @@
             <h3 class="accueil_activite">Activités hautes en couleurs!</h3>
             <p class="accueil_activite"> Plongez dans un monde coloré lors du festival. <br> Plusieurs nouveautés se
                 sont rajoutés pour notre édition de 2023</p>
-            <a href="/activites">Voir les activités! <span class="material-icons">
+            <a href="/activites" class="accueil">Voir les activités! <span class="material-icons">
                     east
                 </span></a>
         </div>
@@ -49,7 +49,7 @@
         <div class="texte_gauche">
             <h3 class="accueil_forfait">Vivez Prima-Colors sous toutes ses teintes !</h3>
             <p class="accueil_forfait"> Profitez pleinement du festival grâce à nos forfaits sur mesure</p>
-            <a href="/forfaits">Voir les forfaits! <span class="material-icons">
+            <a href="/forfaits" class="accueil">Voir les forfaits! <span class="material-icons">
                     east
                 </span></a>
         </div>
@@ -61,7 +61,7 @@
         <div class="texte_droite_deux">
             <h3 class="accueil_apropos">Qu'est ce que Prima-Colors?</h3>
             <p class="accueil_apropos">Apprenez pour qui et en quoi consiste le festival. <br> Rajoutez une touche de joie coloré dans votre vie en nous connaissant</p>
-            <a href="/apropos">Découvrez le festival! <span class="material-icons">
+            <a href="/apropos" class="accueil">Découvrez le festival! <span class="material-icons">
                     east
         </span></a> 
         </div>
@@ -69,7 +69,6 @@
 
     <x-ban_concours/>
     
-
 
     <div class="section_actualités">
         <p>Actualités de nos éditions antérieurs</p>
