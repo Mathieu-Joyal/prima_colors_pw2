@@ -6,7 +6,7 @@
 
     <div class="conteneur">
 
-        <form class="formulaire_un_utilisateur"
+        <form class="administration"
                 action="{{ route('admin.utilisateurs.update', ['id' => $user->id ]) }}"
                 method="POST"
         >

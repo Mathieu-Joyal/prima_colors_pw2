@@ -56,7 +56,7 @@
 
             <h3>Choissisez votre forfait</h3>
 
-            <form action="{{ route('reservations.store') }}"
+            <form class="administration" action="{{ route('reservations.store') }}"
                     method="POST"
             >
                 @csrf
@@ -125,7 +125,7 @@
 
             <h3>Participer au concours!</h3>
 
-            <form action="{{ route('utilisateurs.updateConcours') }}"
+            <form class="administration" action="{{ route('utilisateurs.updateConcours') }}"
                     method="POST"
                     enctype="multipart/form-data"
             >

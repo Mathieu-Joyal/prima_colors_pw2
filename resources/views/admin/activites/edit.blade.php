@@ -1,10 +1,18 @@
 <x-layout titre="Modifiez une activité">
-    <div class="activites-admin">
-        <header class="">
 
-            <h2 class="">modifier une activité
-            </h2>
-        </header>
+    <div class="conteneur-nav-admin">
+        <h2 class="">Modifier une activitÉ </h2>
+
+        <div class="conteneur-bouton-accueil-admin">
+
+            <div class="bouton-accueil-admin">
+
+                <a href="{{ route('admin.index') }}">Accueil - Administration</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="activites-admin">
 
         {{-- MESSAGES --}}
         {{-- @if (session('echec'))
@@ -14,7 +22,8 @@
 
         <div class="form">
             {{-- FORMULAIRE --}}
-            <form class="" action="{{ route('admin.activites.store') }}" method="POST" enctype="multipart/form-data">
+            <form class="" action="{{ route('admin.activites.store') }}" method="POST"
+                enctype="multipart/form-data">
                 @csrf
 
                 <div class="conteneur-grid">
@@ -68,16 +77,20 @@
                         value="{{ old('image') ?? $activite->image }}">
                 </div>
 
-                {{-- MODIFIER --}}
-                <div class="btn-submit">
-                    <input type="submit"  value="Modifier!">
+                <div class="conteneur-bouttons">
+                    {{-- SUBMIT --}}
+                    <button class="ajouter" type="submit">
+                        Modifier l'activitÉ
+                    </button>
+
+                    {{-- LIEN RETOUR --}}
+                    <div class="boutton-retour">
+                        <a href="{{ route('admin.activites.index') }}" class="">Retour aux activités</a>
+                    </div>
                 </div>
             </form>
 
-            {{-- LIEN RETOUR --}}
-            <div class="button">
-                <a href="{{ route('admin.activites.index') }}" class="">Retour aux activités</a>
-            </div>
+
 
         </div>
     </div>
