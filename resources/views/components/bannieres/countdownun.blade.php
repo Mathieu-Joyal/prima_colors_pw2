@@ -1,4 +1,6 @@
-<div id="compteur">
+@props(["maximum"])
+
+<div id="compteur" style="max-width: {{ $maximum }}px;">
 
     <p id="label">Temps restant</p>
 
@@ -55,10 +57,6 @@ document.getElementById("countdown").innerHTML = `
 
 <style type="text/css">
 
-    #compteur {
-        max-width: 750px
-    }
-
     #compteur p {
         font-size: 92px;
         font-family: "PF Venue Stencil";
@@ -96,7 +94,7 @@ document.getElementById("countdown").innerHTML = `
     @media only screen and (max-width: 650px) {
 
         #compteur #label {
-            font-size: 69px!important;
+            font-size: 69px;
         }
 
         #countdown p {
@@ -111,7 +109,7 @@ document.getElementById("countdown").innerHTML = `
     @media only screen and (max-width: 500px) {
 
         #compteur #label {
-            font-size: 51.75px!important;
+            font-size: 51.75px;
         }
 
         #countdown p {
@@ -123,7 +121,7 @@ document.getElementById("countdown").innerHTML = `
         }
     }
 
-    @media only screen and (max-width: 450px) {
+    @media only screen and (max-width: 400px) {
 
         #compteur #label {
             font-size: 38.81px;
