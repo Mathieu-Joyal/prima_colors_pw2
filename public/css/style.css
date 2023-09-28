@@ -40,6 +40,10 @@ p {
   line-height: 1.5;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   margin: 0px;
 }
@@ -986,63 +990,6 @@ a .forfaits {
   border: 0.1em solid #0b8a80;
 }
 
-.conteneur-nav-admin {
-  display: flex;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
-  background-color: #030303;
-}
-.conteneur-nav-admin h2 {
-  margin: 0;
-}
-
-.conteneur-titre-activites-admin, .conteneur-titre-actualites-admin {
-  display: flex;
-  justify-content: space-between;
-  margin: 5em;
-  height: 50px;
-  background-color: #030303;
-  position: sticky;
-  top: 0;
-  padding-top: 2em;
-  padding-bottom: 2em;
-}
-
-.activites-admin, .actualites-admin {
-  margin: 5em;
-}
-.activites-admin .conteneur-grid, .actualites-admin .conteneur-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-.activites-admin .conteneur-grid .grid-item, .actualites-admin .conteneur-grid .grid-item {
-  flex: 0 1 calc(25% - 10px);
-  padding: 10px;
-  box-sizing: border-box;
-  border: 1px solid #eca6d9;
-}
-.activites-admin .conteneur-grid h3.grid-title, .actualites-admin .conteneur-grid h3.grid-title {
-  color: #eca6d9;
-}
-.activites-admin .conteneur-grid .description, .actualites-admin .conteneur-grid .description {
-  max-width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-}
-.activites-admin .conteneur-grid .image, .actualites-admin .conteneur-grid .image {
-  height: 200px;
-  width: 1000px;
-}
-.activites-admin .conteneur-grid .image img, .actualites-admin .conteneur-grid .image img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .conteneur-articles-actualites h2 {
   margin: 0;
 }
@@ -1058,8 +1005,8 @@ a .forfaits {
 .conteneur-articles-actualites .conteneur-btn .modifier {
   margin-right: 3em;
 }
-.conteneur-articles-actualites .image {
-  margin-right: 5em;
+.conteneur-articles-actualites .conteneur-image img {
+  animation: none;
 }
 
 .conteneur-btn {
@@ -1106,7 +1053,21 @@ form button.supprimer {
   padding-top: 10px;
 }
 
-.conteneur-bouton-accueil-admin .bouton-accueil-admin {
+.conteneur-nav-admin {
+  display: flex;
+  justify-content: space-between;
+  margin: 5em;
+  height: 50px;
+  background-color: #030303;
+  position: sticky;
+  top: 0;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+.conteneur-nav-admin h2 {
+  margin: 0;
+}
+.conteneur-nav-admin .bouton-accueil-admin {
   border: solid #0b8a80 2px;
   padding-top: 1em;
   color: white;
@@ -1115,13 +1076,13 @@ form button.supprimer {
   height: 35px;
   text-align: center;
 }
-.conteneur-bouton-accueil-admin .bouton-accueil-admin a {
+.conteneur-nav-admin .bouton-accueil-admin a {
   color: white;
   font-size: 1.5em;
   font-family: "pf-venue", sans-serif;
   text-transform: uppercase;
 }
-.conteneur-bouton-accueil-admin .bouton-accueil-admin:hover {
+.conteneur-nav-admin .bouton-accueil-admin:hover {
   background-color: #075b54;
   transition: background-color, 0.3s;
 }
@@ -1142,7 +1103,7 @@ form button.supprimer {
   display: flex;
   flex-direction: column;
 }
-.form .grid-item input {
+.form .grid-item input, .form .grid-item select#endroit {
   height: 50px;
   font-size: 24px;
   font-family: "pf-venue", sans-serif;
@@ -1150,11 +1111,65 @@ form button.supprimer {
 .form .grid-item.description {
   margin-bottom: 1.5em;
 }
+.form .actualites-admin .conteneur-grid {
+  flex-direction: column;
+}
+.form .actualites-admin .grid-item.description {
+  margin-top: 2em;
+}
+.form select#endroit {
+  height: 50px;
+  font-size: 24px;
+  font-family: "pf-venue", sans-serif;
+}
 
-.conteneur-bouttons {
+.conteneur-nav-admin {
   display: flex;
   justify-content: space-between;
-  margin-top: 2em;
+  position: sticky;
+  top: 0;
+  padding-top: 2em;
+  padding-left: 3em;
+  padding-right: 3em;
+  z-index: 100;
+  background-color: #030303;
+}
+.conteneur-nav-admin h2 {
+  margin: 0;
+}
+
+.activites-admin, .actualites-admin {
+  margin: 5em;
+}
+.activites-admin .conteneur-grid, .actualites-admin .conteneur-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.activites-admin .conteneur-grid .grid-item, .actualites-admin .conteneur-grid .grid-item {
+  flex: 0 1 calc(25% - 10px);
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #eca6d9;
+}
+.activites-admin .conteneur-grid h3.grid-title, .actualites-admin .conteneur-grid h3.grid-title {
+  color: #eca6d9;
+}
+.activites-admin .conteneur-grid .description, .actualites-admin .conteneur-grid .description {
+  max-width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.activites-admin .conteneur-grid .image, .actualites-admin .conteneur-grid .image {
+  height: 200px;
+  width: 1000px;
+}
+.activites-admin .conteneur-grid .image img, .actualites-admin .conteneur-grid .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .boutton-retour {
@@ -1175,13 +1190,6 @@ form button.supprimer {
 .boutton-retour:hover {
   background-color: #075b54;
   transition: background-color, 0.3s;
-}
-
-.actualites-admin .conteneur-grid {
-  flex-direction: column;
-}
-.actualites-admin .grid-item.description {
-  margin-top: 2em;
 }
 
 .h3_user {

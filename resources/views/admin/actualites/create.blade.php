@@ -1,17 +1,7 @@
 <x-layout titre="Créez une actualité">
     <div class="actualites-admin">
 
-<div class="conteneur-nav-admin">
-        <h2 class="">Créez une actualité </h2>
-
-        <div class="conteneur-bouton-accueil-admin">
-
-            <div class="bouton-accueil-admin">
-
-                <a href="{{ route('admin.index') }}">Accueil - Administration</a>
-            </div>
-        </div>
-</div>
+        <x-nav-admin titre=" Ajouter une ActualitÉs" route="route('admin.actualites.index')" valeur="Retour aux actualitÉs" />
 
         {{-- MESSAGES --}}
         {{-- @if (session('echec'))
@@ -69,10 +59,7 @@
                     Ajouter une activitÉ
                 </button>
 
-                {{-- LIEN RETOUR --}}
-                <div class="boutton-retour">
-                    <a href="{{ route('admin.activites.index') }}" class="">Retour aux actualitÉs</a>
-                </div>
+
             </div>
 
             </form>

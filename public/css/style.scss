@@ -50,6 +50,9 @@ p {
   color: $blanc;
   line-height: 1.5;
 }
+a{
+    text-decoration: none;
+}
 
 //GENERAL
 body{
@@ -385,6 +388,7 @@ h1.accueil_actualite{
 @import "_connexion.scss";
 @import "_ban-billet.scss";
 
+
 // Section administrateur
 @import "admin/utilisateurs.scss";
 @import "admin/activitesEtActualites/index";
@@ -392,6 +396,7 @@ h1.accueil_actualite{
 @import "admin/utilisateurs/index";
 @import "admin/utilisateurs/edit";
 @import "admin/reservations/index";
+@import "admin/_nav-admin.scss/index";
 
 // Page d'accueil
 @import "admin/accueil/index";
@@ -400,6 +405,7 @@ h1.accueil_actualite{
 @import "components/formulaire";
 @import "components/footer.scss";
 @import "components/nav.scss";
+@import "components/hero.scss";
 
   //Les boutons
 @import 'components/boutons/deconnexion';
