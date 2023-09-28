@@ -1199,6 +1199,20 @@ form button.supprimer {
   margin: 0;
   padding: 0;
 }
+.un_utilisateur .conteneur_user span.edit {
+  color: #0b8a80;
+}
+.un_utilisateur .conteneur_user span.edit:hover {
+  transition: all 0.3s;
+  color: #075b54;
+}
+.un_utilisateur .conteneur_user span.delete {
+  color: #df1f1f;
+}
+.un_utilisateur .conteneur_user span.delete:hover {
+  transition: all 0.3s;
+  color: #b21919;
+}
 .un_utilisateur .conteneur_user .infos_user {
   flex: 1;
   display: flex;

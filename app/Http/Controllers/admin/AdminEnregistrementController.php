@@ -16,11 +16,21 @@ class AdminEnregistrementController extends Controller
 {
 
     /**
-     * Undocumented function
+     * Affichage de la page de la création d'un employé
      *
      * @return void
      */
     public function create(){
+
+        // Redirection si ce n'est pas un administrateur qui se connecte
+        if(auth()->guard('employe')->user()->role_id !== 1) {
+
+            // Redirection
+            return redirect()
+            ->route('admin.employes.index')
+            ->with('succes', 'Seul un administrateur peut créer un employé');
+        }
+
         $un_employe = auth()->guard('employe')->user();
 
         $employes = \App\Models\Employe::all();
@@ -57,6 +67,7 @@ class AdminEnregistrementController extends Controller
             "nom.required" => "Le nom est requis",
             "nom.max" => "Vous devez avoir un maximum de :max caractères",
             "identifiant.required" => "L'identifiant est requis",
+            "identifiant.integer" => "L'identifiant doit être un nombre de sept chiffres ",
             "identifiant.min" => "L'identifiant doit être plus grand que :min",
             "identifiant.max" => "L'identifiant doit être plus petit que :min",
             "password.required" => "Le mot de passe est requis",
@@ -80,7 +91,7 @@ class AdminEnregistrementController extends Controller
 
         // Redirection
         return redirect()
-                ->route('employes.index')
+                ->route('admin.employes.index')
                 ->with('succes', 'Votre compte employé a été créé');
     }
 }

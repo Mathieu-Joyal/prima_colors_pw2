@@ -2,23 +2,20 @@
 
     <x-header />
 
-    {{-- Pourrait être une composante --}}
-    <div class="deconnexion">
-        <form class="administration" action="{{ route('deconnexion.employe') }}"
-                method="POST"
-        >
-            @csrf
+    <x-boutons.accueil_admin />
 
-            <input type="submit" value="Déconnexion">
-        </form>
-    </div>
+    <x-boutons.deconnexion
+        route="{{ route('admin.deconnexion') }}"
+    />
+
+    {{-- <x-alertes.succes cle="succes" /> --}}
 
     <div class="conteneur">
 
         <section class="creation_employe">
+            <h2>Enregistrez-vous</h2>
 
-            <h3>Création d'un nouvel employé</h3>
-            <form class="administration" action="{{ route('enregistrement.storeEmploye') }}"
+            <form class="administration" action="{{ route('admin.enregistrement.store') }}"
                     method="POST"
             >
                 @csrf
@@ -110,58 +107,6 @@
                 </div>
             </form>
         </section>
-
-        <section class="affichage-utilisateur">
-
-                {{-- @foreach ( as )
-
-                @endforeach --}}
-
-
-
-        </section>
-
-        <section class="utilisteurs">
-            <ul>
-
-                @foreach ($users as $user)
-                    <li>Prénom: {{$user->prenom}}</li>
-                    <li>Nom: {{$user->nom}}</li>
-
-                    @foreach ($reservations as $reservation)
-
-                        @if ($user->id === $reservation->user_id)
-
-                            @foreach ($forfaits as $forfait)
-
-                                @if ($forfait->id === $reservation->forfait_id)
-                                    <li>Titre du forfait: {{ $forfait->titre }}</li>
-
-                                    @if ($un_employe->role_id === 1)
-
-                                        <a href="{{ route('reservations.destroyByAdmin', ['id' => $reservation->id]) }}">
-                                            @csrf
-
-                                            <span>
-                                                Annuler la réservation
-                                            </span>
-                                        </a>
-                                    @endif
-                                @endif
-
-
-                            @endforeach
-
-                        @endif
-
-                    @endforeach
-                @endforeach
-
-            </ul>
-
-        </section>
-    </div>
-
 
     <x-footer />
 

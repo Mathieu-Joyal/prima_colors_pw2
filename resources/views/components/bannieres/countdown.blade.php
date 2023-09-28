@@ -52,4 +52,3 @@ document.getElementById("countdown").innerHTML = `
     }, 1000);
 
 </script>
-
