@@ -13,6 +13,24 @@
         margin: 0;
         padding: 0;
 
+        span.edit {
+            color: $vert;
+
+            &:hover {
+                transition: all 0.3s;
+                color: darken($vert, 10%);
+            }
+        }
+
+        span.delete {
+            color: $rouge;
+
+            &:hover {
+                transition: all 0.3s;
+                color: darken($rouge, 10%);
+            }
+        }
+
         .infos_user {
             flex: 1;
             display: flex;

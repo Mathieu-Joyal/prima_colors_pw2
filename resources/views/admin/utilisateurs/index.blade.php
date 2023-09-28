@@ -62,9 +62,6 @@
 
             <h3 class="h3_user">AFFICHAGE DE LA LISTE DES UTILISATEURS</h3>
 
-            {{-- Best solution: barre de recherche
-            Fastest solution: orderby --}}
-
             <article class="un_utilisateur">
                 <div class="conteneur_user">
                     <div class="infos_user">
@@ -89,12 +86,12 @@
 
                         <div class="boutons_user">
                             <a href="{{ route('admin.utilisateurs.edit', ['id' => $user->id ]) }}">
-                                <span>
+                                <span class="edit">
                                     🅴🅳🅸🆃
                                 </span>
                             </a>
                             <a href="{{ route('admin.utilisateurs.destroy', ['id' => $user->id ]) }}">
-                                <span>
+                                <span class="delete">
                                     🅳🅴🅻🅴🆃🅴
                                 </span>
                             </a>
