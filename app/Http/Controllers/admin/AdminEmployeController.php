@@ -4,23 +4,25 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Http\Middleware\Employe;
-use App\Models\Forfait;
-use App\Models\Reservation;
-use App\Models\Role;
-use App\Models\User;
+// use App\Http\Middleware\Employe;
+use App\Models\Employe;
 
 class AdminEmployeController extends Controller
 {
     /**
-     * À MARIE-ÈVE
      * Affichage de la liste des employés
      *
-     * @return void
+     * @return View
      */
     public function index() {
 
-        return view ('admin.employes.index');
+        $employes = \App\Models\Employe::all();
+
+        return view('admin.employes.index', [
+            "employes" => $employes,
+            // "forfaits" => Forfait::all(),
+            // "reservations" => Reservation::all(),
+        ]);
     }
 
     /**

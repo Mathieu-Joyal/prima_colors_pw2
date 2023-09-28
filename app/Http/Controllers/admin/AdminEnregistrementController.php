@@ -16,7 +16,7 @@ class AdminEnregistrementController extends Controller
 {
 
     /**
-     * Undocumented function
+     * UNDOCUMENTED FUNCTION !!!!
      *
      * @return void
      */

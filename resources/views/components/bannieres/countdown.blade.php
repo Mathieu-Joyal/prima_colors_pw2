@@ -111,7 +111,7 @@ document.getElementById("countdown").innerHTML = `
     @media only screen and (max-width: 500px) {
 
         #compteur #label {
-            font-size: 51.75px!important;
+            font-size: 51.75px;
         }
 
         #countdown p {

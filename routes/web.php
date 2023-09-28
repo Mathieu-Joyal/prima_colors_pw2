@@ -214,13 +214,13 @@ Route::get('/admin/reservation', [AdminReservationController::class, 'index'])
 //
     //Affichage de la liste d'actualités
 Route::get('/admin/actualites', [AdminActualiteController::class, 'index'])
-    ->name('admin.actualites.index');
-    // ->middleware('auth:employe');
+    ->name('admin.actualites.index')
+    ->middleware('auth:employe');
 
     //Affichage du formulaire d'ajout d'une actualités
 Route::get('/admin/actualites/create', [AdminActualiteController::class, 'create'])
-    ->name('admin.actualites.create');
-    // ->middleware('auth:employe');
+    ->name('admin.actualites.create')
+    ->middleware('auth:employe');
 
 // Traitement du formulaire
 Route::post('admin/actualites/store', [AdminActualiteController::class, 'store'])

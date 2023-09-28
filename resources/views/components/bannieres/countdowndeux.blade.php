@@ -1,5 +1,6 @@
 @props(["font"])
 
+
 <div id="compteur" style="--font-size: {{ $font }}px;">
 
     <p>Temps restant</p>
