@@ -11,6 +11,10 @@
                     <a href="{{ route('admin.index') }}">Accueil - Administration</a>
                 </div>
             </div>
+            {{-- LIEN RETOUR --}}
+            <div class="boutton-retour">
+                <a href="{{ route('admin.activites.index') }}" class="">Retour aux activités</a>
+            </div>
     </div>
 
 
@@ -44,7 +48,6 @@
                         <x-forms.erreur champ="date" />
                         <input id="date" name="date" type="date" autofocus class=" " value="{{ old('date') }}">
                     </div>
-
 
                     <script>
                         document.addEventListener('DOMContentLoaded', function() {
@@ -111,10 +114,7 @@
                     <button class="ajouter" type="submit">
                         Ajouter une activitÉ
                     </button>
-                    {{-- LIEN RETOUR --}}
-                    <div class="boutton-retour">
-                        <a href="{{ route('admin.activites.index') }}" class="">Retour aux activités</a>
-                    </div>
+
                 </div>
             </form>
         </div>

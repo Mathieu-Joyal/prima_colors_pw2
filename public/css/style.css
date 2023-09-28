@@ -995,6 +995,7 @@ a .forfaits {
   justify-content: space-between;
   position: sticky;
   top: 0;
+  padding-top: 2em;
   background-color: #030303;
 }
 .conteneur-nav-admin h2 {
@@ -1067,8 +1068,6 @@ a .forfaits {
 }
 
 .conteneur-btn {
-  display: flex;
-  justify-content: space-between;
   margin-left: 20em;
   margin-right: 20em;
 }
@@ -1146,7 +1145,7 @@ form button.supprimer {
   display: flex;
   flex-direction: column;
 }
-.form .grid-item input {
+.form .grid-item input, .form .grid-item select#endroit {
   height: 50px;
   font-size: 24px;
   font-family: "pf-venue", sans-serif;
@@ -1186,6 +1185,12 @@ form button.supprimer {
 }
 .actualites-admin .grid-item.description {
   margin-top: 2em;
+}
+
+select#endroit {
+  height: 50px;
+  font-size: 24px;
+  font-family: "pf-venue", sans-serif;
 }
 
 .h3_user {

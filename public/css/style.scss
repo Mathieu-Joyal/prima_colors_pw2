@@ -387,7 +387,7 @@ h1.accueil_actualite{
 @import "_ban-compte.scss";
 @import "_connexion.scss";
 @import "_ban-billet.scss";
-@import "_hero.scss";
+
 
 // Section administrateur
 @import "admin/utilisateurs.scss";
@@ -404,6 +404,7 @@ h1.accueil_actualite{
 @import "components/formulaire";
 @import "components/footer.scss";
 @import "components/nav.scss";
+@import "components/hero.scss";
 
   //Les boutons
 @import 'components/boutons/deconnexion';
