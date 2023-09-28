@@ -15,7 +15,7 @@
         display: flex;
         flex-direction: column;
 
-        input {
+        input, select#endroit {
             height: 50px;
             font-size: 24px;
             font-family: "pf-venue", sans-serif;
@@ -67,4 +67,9 @@ flex-direction: column;
         margin-top: 2em;
 
     }
+}
+select#endroit{
+    height: 50px;
+    font-size: 24px;
+    font-family: "pf-venue", sans-serif;
 }
