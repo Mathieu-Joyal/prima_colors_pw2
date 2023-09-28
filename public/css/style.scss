@@ -50,6 +50,9 @@ p {
   color: $blanc;
   line-height: 1.5;
 }
+a{
+    text-decoration: none;
+}
 
 //GENERAL
 body{
@@ -322,7 +325,7 @@ img.img_apropos {
   flex-direction: column;
   align-items: flex-start;
   padding-left: 150px;
- 
+
 }
 
   h3.accueil_apropos {
@@ -332,7 +335,7 @@ img.img_apropos {
 
   p.accueil_apropos {
     font-size: 36px;
-   
+
     color: $rose;
   }
 
@@ -370,7 +373,7 @@ img.img_apropos {
 
 h1.accueil_actualite{
   padding-top: 150px;
- 
+
 }
 
 .section_actualites{
@@ -384,6 +387,7 @@ h1.accueil_actualite{
 @import "_ban-compte.scss";
 @import "_connexion.scss";
 @import "_ban-billet.scss";
+@import "_hero.scss";
 
 // Section administrateur
 @import "admin/utilisateurs.scss";
