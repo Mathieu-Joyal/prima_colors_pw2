@@ -112,12 +112,12 @@ Route::post("/admin/deconnexion", [AdminConnexionController::class, 'deconnecter
 //
 // Affichage du formulaire de créatiom d'un nouveau compte employé
 Route::get('/admin/enregistrement', [AdminEnregistrementController::class, 'create'])
-    ->name('enregistrement.create')
+    ->name('admin.enregistrement.create')
     ->middleware('auth:employe');
 
 // Traitement du formulaire d'enregistrement d'un nouveau compte employe
 Route::post("/admin/enregistrement", [AdminEnregistrementController::class, 'store'])
-    ->name('enregistrement.store')
+    ->name('admin.enregistrement.store')
     ->middleware('auth:employe');
 
 
@@ -157,9 +157,9 @@ Route::get('/admin/employe', [AdminEmployeController::class, 'index'])
     ->middleware('auth:employe');
 
 // Affichage du formulaire d'ajout d'un employé
-Route::get('/admin/employe/create', [AdminEmployeController::class, 'create'])
-    ->name('admin.employes.create')
-    ->middleware('auth:employe');
+// Route::get('/admin/employe/create', [AdminEmployeController::class, 'create'])
+//     ->name('admin.employes.create')
+//     ->middleware('auth:employe');
 
 // Affichage du formulaire de modification d'un employé
 Route::get("/admin/employe/edit/{id}", [AdminEmployeController::class, 'edit'])

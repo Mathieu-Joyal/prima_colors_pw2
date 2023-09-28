@@ -1,8 +1,3 @@
-<div class="soumettre">
+@props(['route', 'valeur'])
 
-    <form action="{{ $route }}" method="POST">
-        @csrf
-
-        <input type="submit" value="{{ $valeur }}">
-    </form>
-</div>
+<a href="{{ $route }}">{{ $valeur }}</a>
