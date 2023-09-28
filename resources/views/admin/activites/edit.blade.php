@@ -1,17 +1,6 @@
 <x-layout titre="Modifiez une activité">
 
-    <div class="conteneur-nav-admin">
-        <h2 class="">Modifier une activitÉ </h2>
-
-        <div class="conteneur-bouton-accueil-admin">
-
-            <div class="bouton-accueil-admin">
-
-                <a href="{{ route('admin.index') }}">Accueil - Administration</a>
-            </div>
-        </div>
-    </div>
-
+    <x-nav-admin titre=" Modifier une ActivitÉ" route="route('admin.activites.index')" valeur="Retour aux activitÉs" />
     <div class="activites-admin">
 
         {{-- MESSAGES --}}
@@ -103,7 +92,7 @@
                         value="{{ old('image') ?? $activite->image }}">
                 </div>
 
-                <div class="conteneur-bouttons">
+                <div class="">
                     {{-- SUBMIT --}}
                     <button class="ajouter" type="submit">
                         Modifier l'activitÉ

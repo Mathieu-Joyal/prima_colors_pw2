@@ -1,21 +1,5 @@
 <x-layout titre="Créez une activité">
-    <div class="activites-admin">
-
-        <div class="conteneur-nav-admin">
-            <h2 class="">Créez une activité </h2>
-
-            <div class="conteneur-bouton-accueil-admin">
-
-                <div class="bouton-accueil-admin">
-
-                    <a href="{{ route('admin.index') }}">Accueil - Administration</a>
-                </div>
-            </div>
-            {{-- LIEN RETOUR --}}
-            <div class="boutton-retour">
-                <a href="{{ route('admin.activites.index') }}" class="">Retour aux activités</a>
-            </div>
-    </div>
+    <x-nav-admin titre=" Ajouter une ActivitÉs" route="route('admin.activités.index')" valeur="Retour aux activitÉs" />
 
 
         {{-- MESSAGES --}}
@@ -114,7 +98,10 @@
                     <button class="ajouter" type="submit">
                         Ajouter une activitÉ
                     </button>
-
+                    {{-- LIEN RETOUR --}}
+                    <div class="boutton-retour">
+                        <a href="{{ route('admin.activites.index') }}" class="">Retour aux activités</a>
+                    </div>
                 </div>
             </form>
         </div>
