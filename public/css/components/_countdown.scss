@@ -1,0 +1,101 @@
+.compteur {
+
+    &.grand {
+        max-width: 750px;
+        font-size: 16px;
+    }
+
+    &.petit {
+        max-width: 450px;
+        font-size: 8px;
+    }
+
+
+    p {
+        font-size: 5.75em;
+        font-family: "pf-venue-stencil";
+        text-align: center;
+        margin: 0;
+    }
+
+    #countdown {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+        justify-content: center;
+    }
+
+    #countdown p {
+        margin: 0;
+        font-size: 10.38em;
+        text-align: center;
+    }
+
+    #countdown_texte {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+        justify-content: center;
+    }
+
+    #countdown_texte p {
+        font-size: 2.56em;
+        margin: 0;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .compteur {
+        #label {
+            font-size: 4.3em;
+        }
+
+        #countdown p {
+            font-size: 7.78em;
+        }
+
+        #countdown_texte p {
+            font-size: 1.9em;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .compteur {
+        #label {
+            font-size: 3.2em;
+        }
+
+        #countdown p {
+            font-size: 5.84em;
+        }
+
+        #countdown_texte p {
+            font-size: 1.44em;
+        }
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .compteur {
+        #label {
+            font-size: 2.43em;
+        }
+
+        #countdown p {
+            font-size: 4.38em;
+        }
+
+        #countdown_texte p {
+            font-size: 1.08em;
+        }
+
+    }
+}
+
+.petit-compteur {
+    max-width: 450px;
+    font-size: .75rem;
+}
