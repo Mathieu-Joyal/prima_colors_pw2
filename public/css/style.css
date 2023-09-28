@@ -1280,22 +1280,22 @@ section.formulaire_recherche .bouton_liste_complete a:hover {
   text-decoration: underline;
 }
 
-.formulaire_un_utilisateur {
+.administration {
   margin: 1em 3em;
 }
-.formulaire_un_utilisateur label {
+.administration label {
   color: #eeb15e;
 }
-.formulaire_un_utilisateur button {
+.administration button {
   margin: 2em 0;
 }
-.formulaire_un_utilisateur .modification_mdp {
+.administration .modification_mdp {
   margin: 2em 0;
   display: inline-block;
   border: 1px solid #eca6d9;
   padding: 1em 4em;
 }
-.formulaire_un_utilisateur .modification_mdp p {
+.administration .modification_mdp p {
   color: #eeb15e;
 }
 

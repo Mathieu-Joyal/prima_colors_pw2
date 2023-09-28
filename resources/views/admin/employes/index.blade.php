@@ -8,10 +8,16 @@
         route="{{ route('admin.deconnexion') }}"
     />
 
-    <x-boutons.soumettre
-        route="{{ route('admin.enregistrement.create') }}"
-        valeur="Création d'un employé"
-    />
+
+
+    @if ( auth()->guard('employe')->user()->role_id === 1)
+
+        <x-boutons.soumettre
+            route="{{ route('admin.enregistrement.create') }}"
+            valeur="Création d'un employé"
+        />
+
+    @endif
 
     <x-alertes.succes cle="succes" />
 
@@ -48,7 +54,7 @@
         <div class="bouton_liste_complete">
 
             <x-boutons.liste_complete
-                route="{{ route('admin.utilisateurs.index') }}"
+                route="{{ route('admin.employes.index') }}"
                 valeur="utilisateurs"
             />
 
@@ -85,18 +91,21 @@
                         <p>{{ $employe->role_id }}</p>
                     </div>
 
-                    <div class="boutons_user">
-                        <a href="{{ route('admin.employes.edit', ['id' => $employe->id ]) }}">
-                            <span class="edit">
-                                🅴🅳🅸🆃
-                            </span>
-                        </a>
-                        <a href="{{ route('admin.employes.destroy', ['id' => $employe->id ]) }}">
-                            <span class="delete">
-                                🅳🅴🅻🅴🆃🅴
-                            </span>
-                        </a>
-                    </div>
+                    @if ( auth()->guard('employe')->user()->role_id === 1)
+
+                        <div class="boutons_user">
+                            <a href="{{ route('admin.employes.edit', ['id' => $employe->id ]) }}">
+                                <span class="edit">
+                                    🅴🅳🅸🆃
+                                </span>
+                            </a>
+                            <a href="{{ route('admin.employes.destroy', ['id' => $employe->id ]) }}">
+                                <span class="delete">
+                                    🅳🅴🅻🅴🆃🅴
+                                </span>
+                            </a>
+                        </div>
+                    @endif
                 </article>
             @endforeach
         </section>

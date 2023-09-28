@@ -156,14 +156,14 @@ Route::get('/admin/employe', [AdminEmployeController::class, 'index'])
     ->name('admin.employes.index')
     ->middleware('auth:employe');
 
-// Affichage du formulaire d'ajout d'un employé
-// Route::get('/admin/employe/create', [AdminEmployeController::class, 'create'])
-//     ->name('admin.employes.create')
-//     ->middleware('auth:employe');
-
 // Affichage du formulaire de modification d'un employé
 Route::get("/admin/employe/edit/{id}", [AdminEmployeController::class, 'edit'])
     ->name('admin.employes.edit')
+    ->middleware('auth:employe');
+
+// Traitement de la modification de l'employé
+Route::post("/admin/employe/update/{id}", [AdminEmployeController::class, 'update'])
+    ->name('admin.employes.update')
     ->middleware('auth:employe');
 
 // Traitement de la suppression de l'employé

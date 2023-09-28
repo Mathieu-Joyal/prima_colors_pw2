@@ -15,7 +15,7 @@
 
     <div class="conteneur_accueil">
 
-        <a href="{{ route('admin.employes.index') }}">Gestion des employée</a>
+        <a href="{{ route('admin.employes.index') }}">Gestion des employés</a>
         <a href="{{ route('admin.utilisateurs.index') }}">Gestion des utilisateurs</a>
         <a href="{{ route('admin.actualites.index') }}">Gestion des actualités</a>
         <a href="{{ route('admin.activites.index') }}">Gestion des activités</a>
@@ -24,17 +24,8 @@
 
     <h2>ORIGINAL</h2>
 
-    <x-bannieres.countdown class="petit" />
-
-    {{-- <h2>TEST 1 - Max-Width</h2>
-    <x-bannieres.countdownun
-        maximum="450"
-    /> --}}
-
-    {{-- <h2>TEST 2 - calc</h2>
-    <x-bannieres.countdowndeux
-        font="92"
-    /> --}}
+    {{-- class petit ou grand --}}
+    {{-- <x-bannieres.countdown class="petit" /> --}}
 
 </x-layout>
 
