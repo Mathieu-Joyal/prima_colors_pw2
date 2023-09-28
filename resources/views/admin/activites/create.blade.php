@@ -98,10 +98,7 @@
                     <button class="ajouter" type="submit">
                         Ajouter une activitÉ
                     </button>
-                    {{-- LIEN RETOUR --}}
-                    <div class="boutton-retour">
-                        <a href="{{ route('admin.activites.index') }}" class="">Retour aux activités</a>
-                    </div>
+
                 </div>
             </form>
         </div>

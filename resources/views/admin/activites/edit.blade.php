@@ -1,6 +1,7 @@
 <x-layout titre="Modifiez une activité">
 
     <x-nav-admin titre=" Modifier une ActivitÉ" route="route('admin.activites.index')" valeur="Retour aux activitÉs" />
+
     <div class="activites-admin">
 
         {{-- MESSAGES --}}
@@ -94,14 +95,11 @@
 
                 <div class="">
                     {{-- SUBMIT --}}
-                    <button class="ajouter" type="submit">
+                    <button class="modifier" type="submit">
                         Modifier l'activitÉ
                     </button>
 
-                    {{-- LIEN RETOUR --}}
-                    <div class="boutton-retour">
-                        <a href="{{ route('admin.activites.index') }}" class="">Retour aux activités</a>
-                    </div>
+
                 </div>
             </form>
 

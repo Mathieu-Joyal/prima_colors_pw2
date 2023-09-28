@@ -1,5 +1,5 @@
 
-@props(["titre", "route", "valeur"])
+@props(["titre", "route", "valeur", "routeDeconnexion"])
 
 <div class="conteneur-nav-admin">
     <h2>{{$titre}}</h2>
@@ -12,5 +12,8 @@
 
         <a href="{{ route('admin.index') }}">Accueil - Administration</a>
     </div>
+    <x-boutons.deconnexion
+    routeDeconnexion="{{ route('admin.deconnexion') }}"
+/>
 
 </div>
