@@ -22,7 +22,7 @@
 
             {{-- <x-forms.erreur champ="user_recherche" /> --}}
             <div class="conteneur-bouton">
-                <button class="recherche-activite" type="submit">
+                <button class="recherche activite" type="submit">
                     Faire la recherche
                 </button>
             </div>

@@ -75,7 +75,7 @@
 
 //SECTION RECHERCHE
 
-.formulaire_recherche.activite {
+.formulaire_recherche.activite, .formulaire_recherche.actualite {
     form {
 
         .conteneur-recherche {
@@ -84,13 +84,13 @@
         }
 
         label {
-            p.activite {
+            p.activite, p.actualite {
                 color: $vert;
                 padding-right: 1em;
             }
         }
 
-        button.recherche-activite,
+        button.recherche.activite, button.recherche.actualite,
         select {
 
             width: 300px;

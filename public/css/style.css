@@ -1053,16 +1053,17 @@ a .forfaits {
      object-fit: cover;
 }
 
-.formulaire_recherche.activite form .conteneur-recherche {
+.formulaire_recherche.activite form .conteneur-recherche, .formulaire_recherche.actualite form .conteneur-recherche {
   display: flex;
   flex-direction: row;
 }
-.formulaire_recherche.activite form label p.activite {
+.formulaire_recherche.activite form label p.activite, .formulaire_recherche.activite form label p.actualite, .formulaire_recherche.actualite form label p.activite, .formulaire_recherche.actualite form label p.actualite {
   color: #0b8a80;
   padding-right: 1em;
 }
-.formulaire_recherche.activite form button.recherche-activite,
-.formulaire_recherche.activite form select {
+.formulaire_recherche.activite form button.recherche.activite, .formulaire_recherche.activite form button.recherche.actualite,
+.formulaire_recherche.activite form select, .formulaire_recherche.actualite form button.recherche.activite, .formulaire_recherche.actualite form button.recherche.actualite,
+.formulaire_recherche.actualite form select {
   width: 300px;
   height: 55px;
   text-align: center;
@@ -1075,7 +1076,7 @@ a .forfaits {
   border: solid #0b8a80 2px;
   padding: 0.6em;
 }
-.formulaire_recherche.activite form select {
+.formulaire_recherche.activite form select, .formulaire_recherche.actualite form select {
   padding: 0.3em;
   background-color: #030303;
   color: white;
