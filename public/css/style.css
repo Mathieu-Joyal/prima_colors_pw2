@@ -990,6 +990,35 @@ a .forfaits {
   border: 0.1em solid #0b8a80;
 }
 
+.activites-admin,
+.actualites-admin {
+  margin: 5em;
+}
+.activites-admin .conteneur-grid,
+.actualites-admin .conteneur-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.activites-admin .conteneur-grid .grid-item,
+.actualites-admin .conteneur-grid .grid-item {
+  flex: 0 1 calc(25% - 10px);
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #eca6d9;
+}
+.activites-admin .conteneur-grid h3.grid-title,
+.actualites-admin .conteneur-grid h3.grid-title {
+  color: #eca6d9;
+}
+.activites-admin .conteneur-grid .description,
+.actualites-admin .conteneur-grid .description {
+  max-width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
 .conteneur-articles-actualites.admin {
   border-bottom: none;
 }
@@ -1024,56 +1053,47 @@ a .forfaits {
      object-fit: cover;
 }
 
-.conteneur-btn {
+.formulaire_recherche.activite form .conteneur-recherche {
   display: flex;
-  justify-content: space-between;
-  border-bottom: #eca6d9 solid 2px;
-  width: 1000px;
-  margin: auto;
+  flex-direction: row;
 }
-
-button.ajouter,
-.modifier,
-.supprimer {
-  background-color: #030303;
-  border: #eeb15e 2px solid;
-  font-weight: 400;
-  font-size: 24px;
+.formulaire_recherche.activite form label p.activite {
+  color: #0b8a80;
+  padding-right: 1em;
+}
+.formulaire_recherche.activite form button.recherche-activite,
+.formulaire_recherche.activite form select {
+  width: 300px;
   height: 55px;
   text-align: center;
-  width: 275px;
-  margin: 2em 0 3em;
-}
-button.ajouter a,
-.modifier a,
-.supprimer a {
-  color: #eeb15e;
-}
-
-button.ajouter:hover,
-.modifier:hover,
-.supprimer:hover {
-  color: #030303;
-  background-color: #efb86c;
-  transition: background-color, 0.3s;
-}
-button.ajouter:hover a,
-.modifier:hover a,
-.supprimer:hover a {
-  color: #030303;
-}
-
-form button.supprimer {
-  transition: 0;
   border-radius: 0;
-  padding: 0;
-  padding-top: 10px;
+  font-size: 1.5em;
+  font-weight: 400;
+  display: block;
+  color: white;
+  cursor: pointer;
+  border: solid #0b8a80 2px;
+  padding: 0.6em;
+}
+.formulaire_recherche.activite form select {
+  padding: 0.3em;
+  background-color: #030303;
+  color: white;
 }
 
-.form {
+form.create,
+form.edit {
   margin: 5em;
+  display: flex;
+  flex-direction: column;
 }
-.form label {
+form.create .conteneur-grid,
+form.edit .conteneur-grid {
+  display: flex;
+  justify-content: space-between;
+}
+form.create label,
+form.edit label {
   font-family: "pf-venue", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -1082,51 +1102,44 @@ form button.supprimer {
   margin-bottom: 1em;
   color: #eca6d9;
 }
-.form .grid-item {
+form.create input,
+form.edit input {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+form.create .grid-item,
+form.edit .grid-item {
   display: flex;
   flex-direction: column;
-}
-.form .grid-item input, .form .grid-item select#endroit {
-  height: 50px;
-  font-size: 24px;
-  font-family: "pf-venue", sans-serif;
-}
-.form .grid-item.description {
+  border: solid 1px #eca6d9;
+  width: 22%;
   margin-bottom: 1.5em;
+  padding: 1em;
 }
-.form .actualites-admin .conteneur-grid {
-  flex-direction: column;
-}
-.form .actualites-admin .grid-item.description {
-  margin-top: 2em;
-}
-.form select#endroit {
+form.create .grid-item input,
+form.create .grid-item select#endroit,
+form.edit .grid-item input,
+form.edit .grid-item select#endroit {
   height: 50px;
   font-size: 24px;
   font-family: "pf-venue", sans-serif;
+  border-radius: 0;
+  border: none;
 }
-
-.activites-admin, .actualites-admin {
-  margin: 5em;
-}
-.activites-admin .conteneur-grid, .actualites-admin .conteneur-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-.activites-admin .conteneur-grid .grid-item, .actualites-admin .conteneur-grid .grid-item {
-  flex: 0 1 calc(25% - 10px);
-  padding: 10px;
+form.create .grid-item.description,
+form.create .grid-item.image,
+form.edit .grid-item.description,
+form.edit .grid-item.image {
+  width: 100%;
   box-sizing: border-box;
-  border: 1px solid #eca6d9;
 }
-.activites-admin .conteneur-grid h3.grid-title, .actualites-admin .conteneur-grid h3.grid-title {
-  color: #eca6d9;
+form.create form.create.actualite,
+form.edit form.create.actualite {
+  flex-direction: column;
 }
-.activites-admin .conteneur-grid .description, .actualites-admin .conteneur-grid .description {
-  max-width: 100%;
-  padding: 10px;
+form.create .grid-item.titre.actualite,
+form.edit .grid-item.titre.actualite {
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -1631,6 +1644,52 @@ a.connexion .material-icons {
   color: #eca6d9;
   font-size: 40px;
   text-decoration: none;
+}
+
+.conteneur-btn {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: #eca6d9 solid 2px;
+  width: 1000px;
+  margin: auto;
+}
+
+button.ajouter,
+.modifier,
+.supprimer {
+  background-color: #030303;
+  border: #eeb15e 2px solid;
+  font-weight: 400;
+  font-size: 24px;
+  height: 55px;
+  text-align: center;
+  width: 275px;
+  margin: 2em 0 3em;
+}
+button.ajouter a,
+.modifier a,
+.supprimer a {
+  color: #eeb15e;
+}
+
+button.ajouter:hover,
+.modifier:hover,
+.supprimer:hover {
+  color: #030303;
+  background-color: #efb86c;
+  transition: background-color, 0.3s;
+}
+button.ajouter:hover a,
+.modifier:hover a,
+.supprimer:hover a {
+  color: #030303;
+}
+
+form button.supprimer {
+  transition: 0;
+  border-radius: 0;
+  padding: 0;
+  padding-top: 10px;
 }
 
 .deconnexion form {

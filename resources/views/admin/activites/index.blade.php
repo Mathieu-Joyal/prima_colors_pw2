@@ -1,16 +1,17 @@
 <x-layout titre="Créez une activité">
 
-    <x-nav-admin titre="Les ActivitÉs" route="{{route('admin.activites.index')}}" valeur="Retour aux activitÉs" />
+    <x-nav-admin titre="Les ActivitÉs" route="{{ route('admin.activites.index') }}" valeur="Retour aux activitÉs" />
 
-    <section class="formulaire_recherche">
+    <section class="formulaire_recherche activite">
 
         <form class="administration la_recherche" action="{{ route('admin.activites.filter') }}" method="GET">
             @csrf
 
-            <div class="recherche">
 
+            <div class="conteneur-recherche">
                 <label for="recherche">
-                    Recherche par date:
+                    <p class="activite">Recherche par date:</p>
+
                 </label>
                 <select id="date" name="date">
                     <option value="2023-10-13">2023-10-13</option>
@@ -20,10 +21,11 @@
             </div>
 
             {{-- <x-forms.erreur champ="user_recherche" /> --}}
-
-            <button type="submit">
-                Faire la recherche
-            </button>
+            <div class="conteneur-bouton">
+                <button class="recherche-activite" type="submit">
+                    Faire la recherche
+                </button>
+            </div>
         </form>
     </section>
 
@@ -81,10 +83,10 @@
 
                 </article>
 
-                <x-boutons.gestion_activites_actualites routeAjouter="{{route('admin.activites.create')}}"
-        routeModifier="{{route('admin.activites.edit', ['id'=>$activite->id])}}"
-        routeSupprimer="{{route('admin.activites.destroy')}}" valeur="{{ $activite->id }}" nom="activité"/>
-
+                <x-boutons.gestion_activites_actualites routeAjouter="{{ route('admin.activites.create') }}"
+                    routeModifier="{{ route('admin.activites.edit', ['id' => $activite->id]) }}"
+                    routeSupprimer="{{ route('admin.activites.destroy') }}" valeur="{{ $activite->id }}"
+                    nom="activité" />
             @endforeach
         @else
             <p>No activities found for the selected date.</p>

@@ -1,5 +1,13 @@
-.form {
+form.create,
+form.edit {
     margin: 5em;
+    display: flex;
+    flex-direction: column;
+
+    .conteneur-grid {
+        display: flex;
+        justify-content: space-between;
+    }
 
     label {
         font-family: "pf-venue", sans-serif;
@@ -11,67 +19,46 @@
         color: $rose;
     }
 
+    input {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
     .grid-item {
         display: flex;
         flex-direction: column;
+        border: solid 1px $rose;
+        width: 22%;
+        margin-bottom: 1.5em;
+        padding: 1em;
 
-        input, select#endroit {
+        input,
+        select#endroit {
             height: 50px;
             font-size: 24px;
             font-family: "pf-venue", sans-serif;
-        }
-
-    }
-
-    .grid-item.description {
-        margin-bottom: 1.5em;
-    }
-
-    .actualites-admin{
-        .conteneur-grid{
-    flex-direction: column;
-
-        }
-        .grid-item.description{
-            margin-top: 2em;
-
+            border-radius: 0;
+            border: none;
         }
     }
-    select#endroit{
-        height: 50px;
-        font-size: 24px;
-        font-family: "pf-venue", sans-serif;
+
+    .grid-item.description,
+    .grid-item.image {
+        width: 100%;
+        box-sizing: border-box;
     }
+
+    //SPÉCIFICATION FORM CREATE ACTUALITES
+    form.create.actualite {
+        flex-direction: column;
+    }
+
+    .grid-item.titre.actualite {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
+
 
 }
-
-
-.activites-admin, .actualites-admin{
-    margin: 5em;
-
-    .conteneur-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin-bottom: 20px;
-
-
-        .grid-item {
-            flex: 0 1 calc(25% - 10px);
-            padding: 10px;
-            box-sizing: border-box;
-            border: 1px solid $rose;
-        }
-        h3.grid-title{
-            color: $rose;
-        }
-
-        .description {
-            max-width: 100%;
-            padding: 10px;
-            box-sizing: border-box;
-        }
-
-
-    }   }
-

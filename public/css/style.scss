@@ -393,6 +393,7 @@ h1.accueil_actualite{
 @import "admin/utilisateurs.scss";
 @import "admin/activitesEtActualites/index";
 @import "admin/activitesEtActualites/form";
+
 @import "admin/utilisateurs/index";
 @import "admin/utilisateurs/edit";
 @import "admin/reservations/index";
@@ -406,6 +407,7 @@ h1.accueil_actualite{
 @import "components/footer.scss";
 @import "components/nav.scss";
 @import "components/hero.scss";
+@import "components/boutons/gestion-actualites-activites";
 
   //Les boutons
 @import 'components/boutons/deconnexion';

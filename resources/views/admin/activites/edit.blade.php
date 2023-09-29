@@ -1,18 +1,18 @@
 <x-layout titre="Modifiez une activité">
 
     <x-nav-admin titre=" Modifier une ActivitÉ" route="route('admin.activites.index')" valeur="Retour aux activitÉs" />
-
-    <div class="activites-admin">
-
-        {{-- MESSAGES --}}
+  {{-- MESSAGES --}}
         {{-- @if (session('echec'))
             <p class="">
                 {{ session('echec') }}</p>
         @endif --}}
+        <section>
 
-        <div class="form">
+
+
+
             {{-- FORMULAIRE --}}
-            <form class="" action="{{ route('admin.activites.store') }}" method="POST"
+            <form class="edit" action="{{ route('admin.activites.store') }}" method="POST"
                 enctype="multipart/form-data">
                 @csrf
 
@@ -85,7 +85,7 @@
                 </div>
 
                 <!-- Image -->
-                <div class=" grid-item">
+                <div class=" grid-item image">
                     <label for="image" class="grid-title">Image</label>
 
                     <x-forms.erreur champ="image" />
@@ -107,5 +107,5 @@
 
         </div>
     </div>
-
+</section>
 </x-layout>
