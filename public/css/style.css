@@ -1053,40 +1053,6 @@ form button.supprimer {
   padding-top: 10px;
 }
 
-.conteneur-nav-admin {
-  display: flex;
-  justify-content: space-between;
-  margin: 5em;
-  height: 50px;
-  background-color: #030303;
-  position: sticky;
-  top: 0;
-  padding-top: 2em;
-  padding-bottom: 2em;
-}
-.conteneur-nav-admin h2 {
-  margin: 0;
-}
-.conteneur-nav-admin .bouton-accueil-admin {
-  border: solid #0b8a80 2px;
-  padding-top: 1em;
-  color: white;
-  cursor: pointer;
-  width: 300px;
-  height: 35px;
-  text-align: center;
-}
-.conteneur-nav-admin .bouton-accueil-admin a {
-  color: white;
-  font-size: 1.5em;
-  font-family: "pf-venue", sans-serif;
-  text-transform: uppercase;
-}
-.conteneur-nav-admin .bouton-accueil-admin:hover {
-  background-color: #075b54;
-  transition: background-color, 0.3s;
-}
-
 .form {
   margin: 5em;
 }
@@ -1314,6 +1280,50 @@ section.formulaire_recherche .bouton_liste_complete a:hover {
 .admin_reservation_conteneur_bouton button:hover {
   color: white;
   background-color: #df1f1f;
+}
+
+.conteneur-nav-admin {
+  display: flex;
+  justify-content: space-between;
+  margin: 2em 5em;
+  height: 50px;
+  background-color: #030303;
+  position: sticky;
+  top: 0;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+.conteneur-nav-admin h2 {
+  margin: 0;
+}
+.conteneur-nav-admin .deconnexion form {
+  margin: 0;
+}
+.conteneur-nav-admin .deconnexion input {
+  border-radius: 0;
+  border: solid #df1f1f;
+  background-color: #030303;
+  font-family: "pf-venue", sans-serif;
+  font-size: 1em;
+}
+.conteneur-nav-admin .bouton-accueil-admin {
+  border: solid #0b8a80 2px;
+  padding-top: 1em;
+  color: white;
+  cursor: pointer;
+  width: 300px;
+  height: 35px;
+  text-align: center;
+}
+.conteneur-nav-admin .bouton-accueil-admin a {
+  color: white;
+  font-size: 1.5em;
+  font-family: "pf-venue", sans-serif;
+  text-transform: uppercase;
+}
+.conteneur-nav-admin .bouton-accueil-admin:hover {
+  background-color: #075b54;
+  transition: background-color, 0.3s;
 }
 
 .banniere_accueil {

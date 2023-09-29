@@ -2,7 +2,7 @@
 .conteneur-nav-admin {
     display: flex;
     justify-content: space-between;
-    margin: 5em;
+    margin: 2em 5em;
     height: 50px;
     background-color: $noir;
     position: sticky;
@@ -12,6 +12,19 @@
     h2{
         margin: 0;
     }
+    .deconnexion {
+        form{
+        margin: 0;
+    }
+    input{
+        border-radius: 0;
+        border: solid #df1f1f;
+        background-color: $noir;
+        font-family: "pf-venue", sans-serif;
+        font-size: 1em;
+    }
+    }
+
 .bouton-accueil-admin {
 
     border: solid $vert 2px;
