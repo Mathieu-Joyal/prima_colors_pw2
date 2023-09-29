@@ -1,6 +1,7 @@
 <x-layout titre="Créez une activité">
 
-    <x-nav-admin titre="Les ActivitÉs" route="route('admin.activites.index')" valeur="Retour aux activitÉs" />
+    <x-nav-admin titre="Les ActivitÉs" route="{{route('admin.activites.index')}}" valeur="Retour aux activitÉs" />
+
     <section class="formulaire_recherche">
 
         <form class="administration la_recherche" action="{{ route('admin.activites.filter') }}" method="GET">
@@ -80,9 +81,9 @@
 
                 </article>
 
-                <x-boutons.gestion_activites_actualites routeAjouter="route('admin.activites.create')"
-        routeModifier="route('admin.activites.edit', ['id'=>$activite->id])"
-        routeSupprimer="route('admin.activites.destroy')" valeur="{{ $activite->id }}"/>
+                <x-boutons.gestion_activites_actualites routeAjouter="{{route('admin.activites.create')}}"
+        routeModifier="{{route('admin.activites.edit', ['id'=>$activite->id])}}"
+        routeSupprimer="{{route('admin.activites.destroy')}}" valeur="{{ $activite->id }}" nom="activité"/>
 
             @endforeach
         @else

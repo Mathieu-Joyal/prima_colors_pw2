@@ -1,16 +1,16 @@
 
-@props(["routeAjouter", "routeModifier", "routeSupprimer", "valeur"])
+@props(["routeAjouter", "routeModifier", "routeSupprimer", "valeur", "nom"])
 <div class="conteneur-btn">
     {{-- AJOUTER --}}
     <button class="ajouter">
         <a href="{{$routeAjouter}}" class="">
-            Ajouter une activité
+            Ajouter une {{$nom}}
         </a>
     </button>
     {{-- MODIFICATION --}}
     <button class="modifier">
         <a href="{{ $routeModifier}}">
-            Modifier une activité
+            Modifier une {{$nom}}
         </a>
     </button>
     {{-- SUPPRESSION --}}
@@ -20,7 +20,7 @@
         <input type="hidden" name="id" value="{{ $valeur }}">
         <button class="supprimer" type="submit">
 
-            Supprimer l'activité
+            Supprimer l'{{$nom}}
         </button>
     </form>
 </div>

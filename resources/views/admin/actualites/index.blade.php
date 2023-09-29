@@ -1,7 +1,7 @@
 <x-layout titre="Créez une actualité">
 
 
-    <x-nav-admin titre="Les ActualitÉs" route="route('admin.actualites.index')" valeur="Retour aux actualitÉs" />
+    <x-nav-admin titre="Les ActualitÉs" route="route('admin.activites.index')" valeur="Voir les aux activitÉs" />
     <section>
         @foreach ($actualitesRecentes as $actualite)
             <article class="conteneur-articles-actualites admin">
@@ -30,31 +30,9 @@
                 </div>
             </article>
 
-            <div class="conteneur-btn">
-                {{-- AJOUTER --}}
-                <button class="ajouter">
-                    <a href="/admin/actualites/create" class="">
-                        Ajouter une actualité
-                    </a>
-                </button>
-                {{-- MODIFICATION --}}
-                <button class="modifier">
-                    <a href="{{ route('admin.actualites.edit', ['id' => $actualite->id]) }}">
-                        Modifier une actualité
-                    </a>
-                </button>
-                {{-- SUPPRESSION --}}
-                <form action="{{ route('admin.actualites.destroy') }}" method="POST">
-                    @csrf
-
-                    <input type="hidden" name="id" value="{{ $actualite->id }}">
-                    <button class="supprimer" type="submit">
-
-                        Supprimer l'actualité
-                    </button>
-                </form>
-
-            </div>
+            <x-boutons.gestion_activites_actualites routeAjouter="route('admin.actualites.create')"
+            routeModifier="route('admin.actualites.edit', ['id'=>$actualite->id])"
+            routeSupprimer="route('admin.actualites.destroy')" valeur="{{ $actualite->id }}" nom="actualité"/>
         @endforeach
     </section>
 </x-layout>
