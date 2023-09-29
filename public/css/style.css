@@ -990,48 +990,37 @@ a .forfaits {
   border: 0.1em solid #0b8a80;
 }
 
-.conteneur-articles-actualites h2 {
+.conteneur-articles-actualites.admin {
+  border-bottom: none;
+}
+.conteneur-articles-actualites.admin h2 {
   margin: 0;
 }
-.conteneur-articles-actualites .conteneur-gauche {
-  margin-left: 3em;
-}
-.conteneur-articles-actualites .description-actualites {
+.conteneur-articles-actualites.admin .description-actualites {
   max-width: 1000px;
 }
-.conteneur-articles-actualites .conteneur-btn {
-  margin: 0;
-}
-.conteneur-articles-actualites .conteneur-btn .modifier {
-  margin-right: 3em;
-}
-.conteneur-articles-actualites .conteneur-image img {
+
+.conteneur-image img {
   animation: none;
 }
 
 .conteneur-btn {
   display: flex;
   justify-content: space-between;
-  margin-left: 20em;
-  margin-right: 20em;
-}
-
-hr {
-  color: #eca6d9;
-  border: solid #eca6d9 3px;
-  margin: 2em;
+  border-bottom: #eca6d9 solid 2px;
+  width: 1000px;
+  margin-left: 16em;
 }
 
 button.ajouter, .modifier, .supprimer {
-  margin: 0;
   background-color: #030303;
-  border: #eeb15e 3px solid;
+  border: #eeb15e 2px solid;
   font-weight: 400;
-  font-size: 30px;
-  height: 70px;
+  font-size: 24px;
+  height: 55px;
   text-align: center;
-  width: 400px;
-  margin-bottom: 3em;
+  width: 275px;
+  margin: 2em 0 3em;
 }
 button.ajouter a, .modifier a, .supprimer a {
   color: #eeb15e;
@@ -1039,7 +1028,7 @@ button.ajouter a, .modifier a, .supprimer a {
 
 button.ajouter:hover, .modifier:hover, .supprimer:hover {
   color: #030303;
-  background-color: #e99b30;
+  background-color: #efb86c;
   transition: background-color, 0.3s;
 }
 button.ajouter:hover a, .modifier:hover a, .supprimer:hover a {
@@ -1298,13 +1287,6 @@ section.formulaire_recherche .bouton_liste_complete a:hover {
 }
 .conteneur-nav-admin .deconnexion form {
   margin: 0;
-}
-.conteneur-nav-admin .deconnexion input {
-  border-radius: 0;
-  border: solid #df1f1f;
-  background-color: #030303;
-  font-family: "pf-venue", sans-serif;
-  font-size: 1em;
 }
 .conteneur-nav-admin .bouton-accueil-admin {
   border: solid #0b8a80 2px;

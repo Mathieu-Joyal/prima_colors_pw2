@@ -1,6 +1,8 @@
 <x-layout titre="Créez une activité">
 
-    <div class="conteneur-titre-activites-admin">
+    <x-nav-admin titre="Les ActivitÉs" route="route('admin.activites.index')" valeur="Retour aux actualitÉs" />
+
+    {{-- <div class="conteneur-titre-activites-admin">
         <h2>les activitÉs</h2>
 
 
@@ -15,7 +17,7 @@
             <a href="/admin/activites/create"> Ajouter une activité</a>
         </button>
 
-    </div>
+    </div> --}}
 
     @foreach ($vendrediActivites as $key => $activite)
         <div class="activites-admin">
@@ -66,26 +68,31 @@
 
             <!-- Row 4 -->
 
-                <div class="conteneur-btn">
+            <div class="conteneur-btn">
+                {{-- AJOUTER --}}
+                <button class="ajouter">
+                    <a href="/admin/activites/create" class="">
+                        Ajouter une activité
+                    </a>
+                </button>
+                {{-- MODIFICATION --}}
+                <button class="modifier">
+                    <a href="{{ route('admin.activites.edit', ['id' => $activite->id]) }}">
+                        Modifier une activité
+                    </a>
+                </button>
+                {{-- SUPPRESSION --}}
+                <form action="{{ route('admin.activites.destroy') }}" method="POST">
+                    @csrf
 
-                    {{-- MODIFICATION --}}
-                    <button class="modifier">
-                        <a href="{{ route('admin.activites.edit', ['id' => $activite->id]) }}">Modifier l'activité</a>
+                    <input type="hidden" name="id" value="{{ $activite->id }}">
+                    <button class="supprimer" type="submit">
+
+                        Supprimer l'activité
                     </button>
+                </form>
 
-                    {{-- SUPPRESSION --}}
-
-                    <form>
-                        @csrf
-
-                        <input type="hidden" name="id" value="{{ $activite->id }}"
-                            action="{{ route('admin.activites.destroy') }}" method="POST">
-                        <button class="supprimer" type="submit">
-
-                            Supprimer l'activité
-
-                        </button>
-                    </form>
+            </div>
 
                 </div>
 
