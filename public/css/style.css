@@ -1004,15 +1004,37 @@ a .forfaits {
   animation: none;
 }
 
+.conteneur-titre-activites-admin .conteneur-image {
+  display: flex;
+  width: 850px;
+  height: 100px;
+  justify-content: space-between;
+}
+.conteneur-titre-activites-admin .conteneur-image .titre {
+  color: #eca6d9;
+}
+.conteneur-titre-activites-admin .conteneur-image .image {
+  height: 100px;
+  width: 750px;
+}
+.conteneur-titre-activites-admin .conteneur-image .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .conteneur-btn {
   display: flex;
   justify-content: space-between;
   border-bottom: #eca6d9 solid 2px;
   width: 1000px;
-  margin-left: 16em;
+  margin: auto;
 }
 
-button.ajouter, .modifier, .supprimer {
+button.ajouter,
+.modifier,
+.supprimer {
   background-color: #030303;
   border: #eeb15e 2px solid;
   font-weight: 400;
@@ -1022,16 +1044,22 @@ button.ajouter, .modifier, .supprimer {
   width: 275px;
   margin: 2em 0 3em;
 }
-button.ajouter a, .modifier a, .supprimer a {
+button.ajouter a,
+.modifier a,
+.supprimer a {
   color: #eeb15e;
 }
 
-button.ajouter:hover, .modifier:hover, .supprimer:hover {
+button.ajouter:hover,
+.modifier:hover,
+.supprimer:hover {
   color: #030303;
   background-color: #efb86c;
   transition: background-color, 0.3s;
 }
-button.ajouter:hover a, .modifier:hover a, .supprimer:hover a {
+button.ajouter:hover a,
+.modifier:hover a,
+.supprimer:hover a {
   color: #030303;
 }
 
@@ -1078,21 +1106,6 @@ form button.supprimer {
   font-family: "pf-venue", sans-serif;
 }
 
-.conteneur-nav-admin {
-  display: flex;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
-  padding-top: 2em;
-  padding-left: 3em;
-  padding-right: 3em;
-  z-index: 100;
-  background-color: #030303;
-}
-.conteneur-nav-admin h2 {
-  margin: 0;
-}
-
 .activites-admin, .actualites-admin {
   margin: 5em;
 }
@@ -1115,36 +1128,6 @@ form button.supprimer {
   max-width: 100%;
   padding: 10px;
   box-sizing: border-box;
-}
-.activites-admin .conteneur-grid .image, .actualites-admin .conteneur-grid .image {
-  height: 200px;
-  width: 1000px;
-}
-.activites-admin .conteneur-grid .image img, .actualites-admin .conteneur-grid .image img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.boutton-retour {
-  border: solid #0b8a80 2px;
-  padding-top: 1em;
-  color: white;
-  cursor: pointer;
-  width: 300px;
-  height: 35px;
-  text-align: center;
-}
-.boutton-retour a {
-  color: white;
-  font-size: 1.5em;
-  font-family: "pf-venue", sans-serif;
-  text-transform: uppercase;
-}
-.boutton-retour:hover {
-  background-color: #075b54;
-  transition: background-color, 0.3s;
 }
 
 .h3_user {
@@ -1304,6 +1287,25 @@ section.formulaire_recherche .bouton_liste_complete a:hover {
   text-transform: uppercase;
 }
 .conteneur-nav-admin .bouton-accueil-admin:hover {
+  background-color: #075b54;
+  transition: background-color, 0.3s;
+}
+.conteneur-nav-admin .boutton-retour {
+  border: solid #0b8a80 2px;
+  padding-top: 1em;
+  color: white;
+  cursor: pointer;
+  width: 300px;
+  height: 35px;
+  text-align: center;
+}
+.conteneur-nav-admin .boutton-retour a {
+  color: white;
+  font-size: 1.5em;
+  font-family: "pf-venue", sans-serif;
+  text-transform: uppercase;
+}
+.conteneur-nav-admin .boutton-retour:hover {
   background-color: #075b54;
   transition: background-color, 0.3s;
 }

@@ -34,6 +34,8 @@
                     </div>
 
                     <script>
+
+                        //Selected dates
                         document.addEventListener('DOMContentLoaded', function() {
                             const dateInput = document.getElementById('date');
 

@@ -250,6 +250,10 @@ Route::post("/admin/actualites/destroy", [AdminActualiteController::class, 'dest
     Route::get('/admin/activites', [AdminActiviteController::class, 'index'])
     ->name('admin.activites.index')
     ->middleware('auth:employe');
+    //filtrer les activités
+    Route::get('/admin/activites/filter', [AdminActiviteController::class, 'filter'])
+    ->name('admin.activites.filter');
+
 
      // Affichage du formulaire d'ajout d'une activités
 Route::get('/admin/activites/create', [AdminActiviteController::class, 'create'])

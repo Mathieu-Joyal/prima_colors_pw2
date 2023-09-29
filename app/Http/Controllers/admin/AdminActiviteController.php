@@ -33,6 +33,15 @@ class AdminActiviteController extends Controller
 
      }
 
+     public function filter(Request $request)
+     {
+         $selectedDate = $request->input('date');
+
+         // Assuming $activites is the list of all activities
+         $filter = Activite::where('date', $selectedDate)->get();
+
+         return view('admin.activites.index', compact('filter'));
+     }
 
  //===============AJOUTER UNE ACTIVITÉ=================================//
  /**

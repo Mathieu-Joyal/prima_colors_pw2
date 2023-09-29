@@ -1,43 +1,61 @@
-
-
 //SECTION ACTUALITES
 
-.conteneur-articles-actualites.admin{
+.conteneur-articles-actualites.admin {
     border-bottom: none;
+
     h2 {
         margin: 0;
     }
 
-   .description-actualites {
-    max-width: 1000px;
-   }
+    .description-actualites {
+        max-width: 1000px;
+    }
+}
+.conteneur-image img {
+    animation: none;
+}
 
-   }
-.conteneur-image img{
-animation: none;
+
+//SECTION ACTIVITÉS
+.conteneur-titre-activites-admin {
+    .conteneur-image {
+        display: flex;
+        width: 850px;
+        height: 100px;
+        justify-content: space-between;
+
+        .titre {
+            color: $rose;
+        }
+
+        .image {
+            height: 100px;
+            width: 750px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
 }
 
 
 
-// hr {
-//     color: $rose;
-//     border: solid $rose 3px;
-//     margin: 2em;
-// }
 
 //BOUTTONS
 .conteneur-btn {
     display: flex;
     justify-content: space-between;
     border-bottom: $rose solid 2px;
-
     width: 1000px;
-    margin-left: 16em;
+    margin: auto;
 }
 
-
-
-button.ajouter, .modifier, .supprimer {
+button.ajouter,
+.modifier,
+.supprimer {
 
     background-color: $noir;
     border: $jaune 2px solid;
@@ -46,13 +64,16 @@ button.ajouter, .modifier, .supprimer {
     height: 55px;
     text-align: center;
     width: 275px;
-    margin: 2em 0 3em ;
+    margin: 2em 0 3em;
 
     a {
         color: $jaune;
     }
 }
-button.ajouter:hover, .modifier:hover, .supprimer:hover {
+
+button.ajouter:hover,
+.modifier:hover,
+.supprimer:hover {
     color: $noir;
     background-color: lighten($jaune, 3%);
     transition: background-color, 0.3s;
@@ -61,11 +82,81 @@ button.ajouter:hover, .modifier:hover, .supprimer:hover {
         color: $noir;
     }
 }
-form button.supprimer{
+
+form button.supprimer {
     transition: 0;
     border-radius: 0;
     padding: 0;
     padding-top: 10px;
 }
 
+// .conteneur-articles-actualites{
+//     h2 {
+//         margin: 0;
+//     }
+//     .conteneur-gauche{
+// margin-left: 3em;
+//     }
 
+//    .description-actualites {
+//     max-width: 1000px;
+//    }
+//    .conteneur-btn{
+//     margin: 0;
+//     .modifier{
+//         margin-right: 3em;
+//     }
+//    }
+// .conteneur-image img{
+// animation: none;
+// }
+
+//    }
+
+
+
+// //BOUTTONS
+// .conteneur-btn {
+//     display: flex;
+//     justify-content: space-between;
+//     margin-left: 20em;
+//     margin-right: 20em;
+// }
+
+// hr {
+//     color: $rose;
+//     border: solid $rose 3px;
+//     margin: 2em;
+// }
+
+// button.ajouter, .modifier, .supprimer {
+
+//     margin: 0;
+//     background-color: $noir;
+//     border: $jaune 3px solid;
+//     font-weight: 400;
+//     font-size: 30px;
+//     height: 70px;
+//     text-align: center;
+//     width: 400px;
+//     margin-bottom: 3em;
+
+//     a {
+//         color: $jaune;
+//     }
+// }
+// button.ajouter:hover, .modifier:hover, .supprimer:hover {
+//     color: $noir;
+//     background-color: darken($jaune, 10%);
+//     transition: background-color, 0.3s;
+
+//     a {
+//         color: $noir;
+//     }
+// }
+// form button.supprimer{
+//     transition: 0;
+//     border-radius: 0;
+//     padding: 0;
+//     padding-top: 10px;
+// }
