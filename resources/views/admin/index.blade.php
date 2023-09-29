@@ -7,7 +7,7 @@
     <x-alertes.succes cle="succes" />
 
     <x-boutons.deconnexion
-        route="{{ route('admin.deconnexion') }}"
+        routeDeconnexion="{{ route('admin.deconnexion') }}"
     />
 
 
