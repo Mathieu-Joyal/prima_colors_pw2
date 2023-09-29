@@ -990,107 +990,111 @@ a .forfaits {
   border: 0.1em solid #0b8a80;
 }
 
-.conteneur-articles-actualites h2 {
+.activites-admin,
+.actualites-admin {
+  margin: 5em;
+}
+.activites-admin .conteneur-grid,
+.actualites-admin .conteneur-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.activites-admin .conteneur-grid .grid-item,
+.actualites-admin .conteneur-grid .grid-item {
+  flex: 0 1 calc(25% - 10px);
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #eca6d9;
+}
+.activites-admin .conteneur-grid h3.grid-title,
+.actualites-admin .conteneur-grid h3.grid-title {
+  color: #eca6d9;
+}
+.activites-admin .conteneur-grid .description,
+.actualites-admin .conteneur-grid .description {
+  max-width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.conteneur-articles-actualites.admin {
+  border-bottom: none;
+}
+.conteneur-articles-actualites.admin h2 {
   margin: 0;
 }
-.conteneur-articles-actualites .conteneur-gauche {
-  margin-left: 3em;
-}
-.conteneur-articles-actualites .description-actualites {
+.conteneur-articles-actualites.admin .description-actualites {
   max-width: 1000px;
 }
-.conteneur-articles-actualites .conteneur-btn {
-  margin: 0;
-}
-.conteneur-articles-actualites .conteneur-btn .modifier {
-  margin-right: 3em;
-}
-.conteneur-articles-actualites .conteneur-image img {
+
+.conteneur-image img {
   animation: none;
 }
 
-.conteneur-btn {
+.conteneur-titre-activites-admin .conteneur-image {
   display: flex;
+  width: 850px;
+  height: 100px;
   justify-content: space-between;
-  margin-left: 20em;
-  margin-right: 20em;
 }
-
-hr {
+.conteneur-titre-activites-admin .conteneur-image .titre {
   color: #eca6d9;
-  border: solid #eca6d9 3px;
-  margin: 2em;
+}
+.conteneur-titre-activites-admin .conteneur-image .image {
+  height: 100px;
+  width: 750px;
+}
+.conteneur-titre-activites-admin .conteneur-image .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-button.ajouter, .modifier, .supprimer {
-  margin: 0;
-  background-color: #030303;
-  border: #eeb15e 3px solid;
-  font-weight: 400;
-  font-size: 30px;
-  height: 70px;
-  text-align: center;
-  width: 400px;
-  margin-bottom: 3em;
-}
-button.ajouter a, .modifier a, .supprimer a {
-  color: #eeb15e;
-}
-
-button.ajouter:hover, .modifier:hover, .supprimer:hover {
-  color: #030303;
-  background-color: #e99b30;
-  transition: background-color, 0.3s;
-}
-button.ajouter:hover a, .modifier:hover a, .supprimer:hover a {
-  color: #030303;
-}
-
-form button.supprimer {
-  transition: 0;
-  border-radius: 0;
-  padding: 0;
-  padding-top: 10px;
-}
-
-.conteneur-nav-admin {
+.formulaire_recherche.activite form .conteneur-recherche, .formulaire_recherche.actualite form .conteneur-recherche {
   display: flex;
-  justify-content: space-between;
-  margin: 5em;
-  height: 50px;
-  background-color: #030303;
-  position: sticky;
-  top: 0;
-  padding-top: 2em;
-  padding-bottom: 2em;
+  flex-direction: row;
 }
-.conteneur-nav-admin h2 {
-  margin: 0;
+.formulaire_recherche.activite form label p.activite, .formulaire_recherche.activite form label p.actualite, .formulaire_recherche.actualite form label p.activite, .formulaire_recherche.actualite form label p.actualite {
+  color: #0b8a80;
+  padding-right: 1em;
 }
-.conteneur-nav-admin .bouton-accueil-admin {
-  border: solid #0b8a80 2px;
-  padding-top: 1em;
+.formulaire_recherche.activite form button.recherche.activite, .formulaire_recherche.activite form button.recherche.actualite,
+.formulaire_recherche.activite form select, .formulaire_recherche.actualite form button.recherche.activite, .formulaire_recherche.actualite form button.recherche.actualite,
+.formulaire_recherche.actualite form select {
+  width: 300px;
+  height: 55px;
+  text-align: center;
+  border-radius: 0;
+  font-size: 1.5em;
+  font-weight: 400;
+  display: block;
   color: white;
   cursor: pointer;
-  width: 300px;
-  height: 35px;
-  text-align: center;
+  border: solid #0b8a80 2px;
+  padding: 0.6em;
 }
-.conteneur-nav-admin .bouton-accueil-admin a {
+.formulaire_recherche.activite form select, .formulaire_recherche.actualite form select {
+  padding: 0.3em;
+  background-color: #030303;
   color: white;
-  font-size: 1.5em;
-  font-family: "pf-venue", sans-serif;
-  text-transform: uppercase;
-}
-.conteneur-nav-admin .bouton-accueil-admin:hover {
-  background-color: #075b54;
-  transition: background-color, 0.3s;
 }
 
-.form {
+form.create,
+form.edit {
   margin: 5em;
+  display: flex;
+  flex-direction: column;
 }
-.form label {
+form.create .conteneur-grid,
+form.edit .conteneur-grid {
+  display: flex;
+  justify-content: space-between;
+}
+form.create label,
+form.edit label {
   font-family: "pf-venue", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -1099,97 +1103,45 @@ form button.supprimer {
   margin-bottom: 1em;
   color: #eca6d9;
 }
-.form .grid-item {
+form.create input,
+form.edit input {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+form.create .grid-item,
+form.edit .grid-item {
   display: flex;
   flex-direction: column;
-}
-.form .grid-item input, .form .grid-item select#endroit {
-  height: 50px;
-  font-size: 24px;
-  font-family: "pf-venue", sans-serif;
-}
-.form .grid-item.description {
+  border: solid 1px #eca6d9;
+  width: 22%;
   margin-bottom: 1.5em;
+  padding: 1em;
 }
-.form .actualites-admin .conteneur-grid {
-  flex-direction: column;
-}
-.form .actualites-admin .grid-item.description {
-  margin-top: 2em;
-}
-.form select#endroit {
+form.create .grid-item input,
+form.create .grid-item select#endroit,
+form.edit .grid-item input,
+form.edit .grid-item select#endroit {
   height: 50px;
   font-size: 24px;
   font-family: "pf-venue", sans-serif;
+  border-radius: 0;
+  border: none;
 }
-
-.conteneur-nav-admin {
-  display: flex;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
-  padding-top: 2em;
-  padding-left: 3em;
-  padding-right: 3em;
-  z-index: 100;
-  background-color: #030303;
-}
-.conteneur-nav-admin h2 {
-  margin: 0;
-}
-
-.activites-admin, .actualites-admin {
-  margin: 5em;
-}
-.activites-admin .conteneur-grid, .actualites-admin .conteneur-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-.activites-admin .conteneur-grid .grid-item, .actualites-admin .conteneur-grid .grid-item {
-  flex: 0 1 calc(25% - 10px);
-  padding: 10px;
-  box-sizing: border-box;
-  border: 1px solid #eca6d9;
-}
-.activites-admin .conteneur-grid h3.grid-title, .actualites-admin .conteneur-grid h3.grid-title {
-  color: #eca6d9;
-}
-.activites-admin .conteneur-grid .description, .actualites-admin .conteneur-grid .description {
-  max-width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-}
-.activites-admin .conteneur-grid .image, .actualites-admin .conteneur-grid .image {
-  height: 200px;
-  width: 1000px;
-}
-.activites-admin .conteneur-grid .image img, .actualites-admin .conteneur-grid .image img {
+form.create .grid-item.description,
+form.create .grid-item.image,
+form.edit .grid-item.description,
+form.edit .grid-item.image {
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  box-sizing: border-box;
 }
-
-.boutton-retour {
-  border: solid #0b8a80 2px;
-  padding-top: 1em;
-  color: white;
-  cursor: pointer;
-  width: 300px;
-  height: 35px;
-  text-align: center;
+form.create form.create.actualite,
+form.edit form.create.actualite {
+  flex-direction: column;
 }
-.boutton-retour a {
-  color: white;
-  font-size: 1.5em;
-  font-family: "pf-venue", sans-serif;
-  text-transform: uppercase;
-}
-.boutton-retour:hover {
-  background-color: #075b54;
-  transition: background-color, 0.3s;
+form.create .grid-item.titre.actualite,
+form.edit .grid-item.titre.actualite {
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .h3_user {
@@ -1314,6 +1266,62 @@ section.formulaire_recherche .bouton_liste_complete a:hover {
 .admin_reservation_conteneur_bouton button:hover {
   color: white;
   background-color: #df1f1f;
+}
+
+.conteneur-nav-admin {
+  display: flex;
+  justify-content: space-between;
+  margin: 2em 5em;
+  height: 50px;
+  background-color: #030303;
+  position: sticky;
+  top: 0;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+.conteneur-nav-admin h2 {
+  margin: 0;
+}
+.conteneur-nav-admin .deconnexion form {
+  margin: 0;
+}
+.conteneur-nav-admin .bouton-accueil-admin {
+  border: solid #0b8a80 2px;
+  padding-top: 1em;
+  color: white;
+  cursor: pointer;
+  width: 300px;
+  height: 35px;
+  text-align: center;
+}
+.conteneur-nav-admin .bouton-accueil-admin a {
+  color: white;
+  font-size: 1.5em;
+  font-family: "pf-venue", sans-serif;
+  text-transform: uppercase;
+}
+.conteneur-nav-admin .bouton-accueil-admin:hover {
+  background-color: #075b54;
+  transition: background-color, 0.3s;
+}
+.conteneur-nav-admin .boutton-retour {
+  border: solid #0b8a80 2px;
+  padding-top: 1em;
+  color: white;
+  cursor: pointer;
+  width: 300px;
+  height: 35px;
+  text-align: center;
+}
+.conteneur-nav-admin .boutton-retour a {
+  color: white;
+  font-size: 1.5em;
+  font-family: "pf-venue", sans-serif;
+  text-transform: uppercase;
+}
+.conteneur-nav-admin .boutton-retour:hover {
+  background-color: #075b54;
+  transition: background-color, 0.3s;
 }
 
 .banniere_accueil {
@@ -1637,6 +1645,52 @@ a.connexion .material-icons {
   color: #eca6d9;
   font-size: 40px;
   text-decoration: none;
+}
+
+.conteneur-btn {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: #eca6d9 solid 2px;
+  width: 1000px;
+  margin: auto;
+}
+
+button.ajouter,
+.modifier,
+.supprimer {
+  background-color: #030303;
+  border: #eeb15e 2px solid;
+  font-weight: 400;
+  font-size: 24px;
+  height: 55px;
+  text-align: center;
+  width: 275px;
+  margin: 2em 0 3em;
+}
+button.ajouter a,
+.modifier a,
+.supprimer a {
+  color: #eeb15e;
+}
+
+button.ajouter:hover,
+.modifier:hover,
+.supprimer:hover {
+  color: #030303;
+  background-color: #efb86c;
+  transition: background-color, 0.3s;
+}
+button.ajouter:hover a,
+.modifier:hover a,
+.supprimer:hover a {
+  color: #030303;
+}
+
+form button.supprimer {
+  transition: 0;
+  border-radius: 0;
+  padding: 0;
+  padding-top: 10px;
 }
 
 .deconnexion form {

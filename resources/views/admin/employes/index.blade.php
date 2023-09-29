@@ -5,7 +5,7 @@
     <x-boutons.accueil_admin />
 
     <x-boutons.deconnexion
-        route="{{ route('admin.deconnexion') }}"
+        routeDeconnexion="{{ route('admin.deconnexion') }}"
     />
 
 

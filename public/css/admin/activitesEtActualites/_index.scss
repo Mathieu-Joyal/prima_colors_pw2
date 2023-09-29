@@ -1,77 +1,115 @@
+//GÉNÉRAL ACTUALITÉS ET ACTIVITÉES
 
+.activites-admin,
+.actualites-admin {
+    margin: 5em;
+
+    .conteneur-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        .grid-item {
+            flex: 0 1 calc(25% - 10px);
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid $rose;
+        }
+
+        h3.grid-title {
+            color: $rose;
+        }
+
+        .description {
+            max-width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    }
+}
 
 //SECTION ACTUALITES
 
+.conteneur-articles-actualites.admin {
+    border-bottom: none;
 
-.conteneur-articles-actualites{
     h2 {
         margin: 0;
     }
-    .conteneur-gauche{
-margin-left: 3em;
-    }
 
-   .description-actualites {
-    max-width: 1000px;
-   }
-   .conteneur-btn{
-    margin: 0;
-    .modifier{
-        margin-right: 3em;
-    }
-   }
-.conteneur-image img{
-animation: none;
-}
-
-   }
-
-
-
-//BOUTTONS
-.conteneur-btn {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 20em;
-    margin-right: 20em;
-}
-
-hr {
-    color: $rose;
-    border: solid $rose 3px;
-    margin: 2em;
-}
-
-button.ajouter, .modifier, .supprimer {
-
-    margin: 0;
-    background-color: $noir;
-    border: $jaune 3px solid;
-    font-weight: 400;
-    font-size: 30px;
-    height: 70px;
-    text-align: center;
-    width: 400px;
-    margin-bottom: 3em;
-
-    a {
-        color: $jaune;
+    .description-actualites {
+        max-width: 1000px;
     }
 }
-button.ajouter:hover, .modifier:hover, .supprimer:hover {
-    color: $noir;
-    background-color: darken($jaune, 10%);
-    transition: background-color, 0.3s;
 
-    a {
-        color: $noir;
+.conteneur-image img {
+    animation: none;
+}
+
+//SECTION ACTIVITÉS
+.conteneur-titre-activites-admin {
+    .conteneur-image {
+        display: flex;
+        width: 850px;
+        height: 100px;
+        justify-content: space-between;
+
+        .titre {
+            color: $rose;
+        }
+
+        .image {
+            height: 100px;
+            width: 750px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
     }
 }
-form button.supprimer{
-    transition: 0;
-    border-radius: 0;
-    padding: 0;
-    padding-top: 10px;
+
+
+//SECTION RECHERCHE
+
+.formulaire_recherche.activite, .formulaire_recherche.actualite {
+    form {
+
+        .conteneur-recherche {
+            display: flex;
+            flex-direction: row;
+        }
+
+        label {
+            p.activite, p.actualite {
+                color: $vert;
+                padding-right: 1em;
+            }
+        }
+
+        button.recherche.activite, button.recherche.actualite,
+        select {
+
+            width: 300px;
+            height: 55px;
+            text-align: center;
+            border-radius: 0;
+            font-size: 1.5em;
+            font-weight: 400;
+            display: block;
+            color: white;
+            cursor: pointer;
+            border: solid #0b8a80 2px;
+            padding: 0.6em;
+        }
+
+        select {
+            padding: 0.3em;
+            background-color: $noir;
+            color: $blanc;
+        }
+    }
 }
-
-

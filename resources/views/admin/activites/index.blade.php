@@ -1,97 +1,97 @@
 <x-layout titre="Créez une activité">
 
-    <div class="conteneur-titre-activites-admin">
-        <h2>les activitÉs</h2>
+    <x-nav-admin titre="Les ActivitÉs" route="{{ route('admin.activites.index') }}" valeur="Retour aux activitÉs" />
+
+    <section class="formulaire_recherche activite">
+
+        <form class="administration la_recherche" action="{{ route('admin.activites.filter') }}" method="GET">
+            @csrf
 
 
-        <div class="conteneur-bouton-accueil-admin">
+            <div class="conteneur-recherche">
+                <label for="recherche">
+                    <p class="activite">Recherche par date:</p>
 
-            <div class="bouton-accueil-admin">
-
-                <a href="{{ route('admin.index') }}">Accueil - Administration</a>
-            </div>
-        </div>
-        <button class="ajouter">
-            <a href="/admin/activites/create"> Ajouter une activité</a>
-        </button>
-
-    </div>
-
-    @foreach ($vendrediActivites as $key => $activite)
-        <div class="activites-admin">
-
-            <div class="conteneur-grid">
-
-                <!-- Row 1 -->
-                <div class="grid-item">
-                    <h3 class="grid-title">Titre</h3>
-                    <p>{{ $activite->titre }}</p>
-                </div>
-
-                <div class="grid-item">
-                    <h3 class="grid-title">Date</h3>
-                    <p>{{ $activite->date }}</p>
-                </div>
-
-                <div class="grid-item">
-                    <h3 class="grid-title">Heure</h3>
-                    <p>{{ $activite->heure }}</p>
-                </div>
-
-
-                <div class="grid-item">
-                    <h3 class="grid-title">Endroit</h3>
-                    <p>{{ $activite->endroit }}</p>
-                </div>
-
+                </label>
+                <select id="date" name="date">
+                    <option value="2023-10-13">2023-10-13</option>
+                    <option value="2023-10-14">2023-10-14</option>
+                    <option value="2023-10-15">2023-10-15</option>
+                </select>
             </div>
 
-            <!-- Row 2 -->
-            <div class="conteneur-grid">
-                <div class="description">
-                    <h3 class="grid-title">Description</h3>
-                    <p>{{ $activite->description }}</p>
-                    <p>{{ $activite->description }}</p>
-                    <p>{{ $activite->description }}</p>
-                </div>
+            {{-- <x-forms.erreur champ="user_recherche" /> --}}
+            <div class="conteneur-bouton">
+                <button class="recherche activite" type="submit">
+                    Faire la recherche
+                </button>
             </div>
+        </form>
+    </section>
 
-            <!-- Row 3 -->
-            <div class="conteneur-grid">
-                    <h3 class="grid-title">Image</h3>
-                    <div class="image">
-                        <img class="" src="{{ asset($activite->image) }}" alt="image de l'activite">
+
+    <section>
+        @if (isset($filter) && $filter->count() > 0)
+            @foreach ($filter as $key => $activite)
+                <article class="conteneur-titre-activites-admin">
+                    <div class="activites-admin">
+
+                        <div class="conteneur-grid">
+
+                            <!-- Row 1 -->
+                            <div class="grid-item">
+                                <h3 class="grid-title">Titre</h3>
+                                <p>{{ $activite->titre }}</p>
+                            </div>
+
+                            <div class="grid-item">
+                                <h3 class="grid-title">Date</h3>
+                                <p>{{ $activite->date }}</p>
+                            </div>
+
+                            <div class="grid-item">
+                                <h3 class="grid-title">Heure</h3>
+                                <p>{{ $activite->heure }}</p>
+                            </div>
+
+
+                            <div class="grid-item">
+                                <h3 class="grid-title">Endroit</h3>
+                                <p>{{ $activite->endroit }}</p>
+                            </div>
+
+                        </div>
+
+                        <!-- Row 2 -->
+                        <div class="conteneur-grid">
+                            <div class="description">
+                                <h3 class="grid-title">Description</h3>
+                                <p>{{ $activite->description }}</p>
+                                <p>{{ $activite->description }}</p>
+                                <p>{{ $activite->description }}</p>
+                            </div>
+                        </div>
+
+                        <!-- Row 3 -->
+                        <div class="conteneur-image">
+                            <h3 class="titre">Image</h3>
+                            <div class="image">
+                                <img class="" src="{{ asset($activite->image) }}" alt="image de l'activite">
+                            </div>
+                        </div>
                     </div>
-            </div>
 
-            <!-- Row 4 -->
+                </article>
 
-                <div class="conteneur-btn">
+                <x-boutons.gestion_activites_actualites routeAjouter="{{ route('admin.activites.create') }}"
+                    routeModifier="{{ route('admin.activites.edit', ['id' => $activite->id]) }}"
+                    routeSupprimer="{{ route('admin.activites.destroy') }}" valeur="{{ $activite->id }}"
+                    nom="activité" />
+            @endforeach
+        @else
+            <p>No activities found for the selected date.</p>
+        @endif
+    </section>
 
-                    {{-- MODIFICATION --}}
-                    <button class="modifier">
-                        <a href="{{ route('admin.activites.edit', ['id' => $activite->id]) }}">Modifier l'activité</a>
-                    </button>
-
-                    {{-- SUPPRESSION --}}
-
-                    <form>
-                        @csrf
-
-                        <input type="hidden" name="id" value="{{ $activite->id }}"
-                            action="{{ route('admin.activites.destroy') }}" method="POST">
-                        <button class="supprimer" type="submit">
-
-                            Supprimer l'activité
-
-                        </button>
-                    </form>
-
-                </div>
-
-
-            <hr>
-        </div>
-    @endforeach
 
 </x-layout>

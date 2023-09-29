@@ -12,7 +12,7 @@ use App\Http\Controllers\Controller;
 class AdminActualiteController extends Controller
 {
 
-//==================TOUTES LES ACTUALITÉS===========================//
+    //==================TOUTES LES ACTUALITÉS===========================//
     /**
      * Affiche la liste des actualites
      *
@@ -22,34 +22,48 @@ class AdminActualiteController extends Controller
     public function index()
     {
 
-        $actualitesRecentes = Actualite::whereYear('date_publication', 2023)
-        ->orderBy('date_publication', 'asc')
-        ->take(5)
-        ->get();
+        //     $actualitesRecentes = Actualite::whereYear('date_publication', 2023)
+        //     ->orderBy('date_publication', 'asc')
+        //     ->take(5)
+        //     ->get();
 
 
-    $actualitesAnciennes = Actualite::whereYear('date_publication', 2022)
-        ->orderBy('date_publication', 'desc')
-        ->take(5)
-        ->get();
+        // $actualitesAnciennes = Actualite::whereYear('date_publication', 2022)
+        //     ->orderBy('date_publication', 'desc')
+        //     ->take(5)
+        //     ->get();
+        $actualites = Actualite::all();
+        return view("admin.actualites.index", [
+            // "actualitesRecentes" => $actualitesRecentes,
+            // "actualitesAnciennes" => $actualitesAnciennes,
+            "actualites" => $actualites,
+        ]);
+    }
+    /**
+     * Filtrer les activites
+     *
+     * @return View
+     */
+    public function filter(Request $request)
+    {
+        $selectedYear = $request->input('date_publication');
+        $filter = Actualite::where('date_publication', 'LIKE', "%$selectedYear%")->get();
 
-    return view("admin.actualites.index", [
-        "actualitesRecentes" => $actualitesRecentes,
-        "actualitesAnciennes" => $actualitesAnciennes,
-    ]);
-
+        return view('admin.actualites.index', compact('filter'));
     }
 
 
-//===============AJOUTER UNE ACTUALITÉ=================================//
-/**
+    //===============AJOUTER UNE ACTUALITÉ=================================//
+    /**
      * Affiche le formulaire d'ajout
      *
      * @return View
      */
-    public function create() {
+    public function create()
+    {
 
-        return view('admin.actualites.create',
+        return view(
+            'admin.actualites.create',
 
         );
     }
@@ -59,8 +73,9 @@ class AdminActualiteController extends Controller
      *
      * @param Request $request
      * @return RedirectResponse
-    */
-    public function store(Request $request) {
+     */
+    public function store(Request $request)
+    {
         // Valider
         $valides = $request->validate([
             "titre" => "required|min:4|max:150",
@@ -84,7 +99,7 @@ class AdminActualiteController extends Controller
         $actualite->date_publication = now()->format("Y-m-d");
 
         // Traiter le téléversement
-        if($request->hasFile('image')){
+        if ($request->hasFile('image')) {
             // Déplacer
             Storage::putFile("public/uploads", $request->image);
             // Sauvegarder le "bon" chemin qui sera inséré dans la BDD et utilisé par le navigateur
@@ -94,17 +109,18 @@ class AdminActualiteController extends Controller
 
         // Rediriger
         return redirect()
-                ->route('admin.actualites.index')
-                ->with('succes', "L'actualité a été ajoutée avec succès!");
+            ->route('admin.actualites.index')
+            ->with('succes', "L'actualité a été ajoutée avec succès!");
     }
-//==========================MODIFIER UNE ACTUALITÉ===========================//
+    //==========================MODIFIER UNE ACTUALITÉ===========================//
     /**
      * Affiche le formulaire de modification
      *
      * @param int $id Id de l'actualité à modifier
      * @return View
      */
-    public function edit($id) {
+    public function edit($id)
+    {
         return view('admin.actualites.edit', [
             "actualite" => Actualite::findOrFail($id),
             // "employe_id" => Employe::orderBy('nom', 'asc')
@@ -118,7 +134,8 @@ class AdminActualiteController extends Controller
      * @param Request $request Objet qui contient tous les champs reçus dans la requête
      * @return RedirectResponse
      */
-    public function update(Request $request) {
+    public function update(Request $request)
+    {
         // Valider
         $valides = $request->validate([
             "id" => "required",
@@ -144,26 +161,26 @@ class AdminActualiteController extends Controller
         $actualite->employe_id = auth()->id();
         $actualite->image =
 
-        $actualite->save();
+            $actualite->save();
 
         // Rediriger
         return redirect()
-                ->route('admin.actualites.index')
-                ->with('succes', "L'actualité a été modifiée avec succès!");
+            ->route('admin.actualites.index')
+            ->with('succes', "L'actualité a été modifiée avec succès!");
     }
 
-//=============================SUPPRIMER UNE ACTUALITÉ=============================//
+    //=============================SUPPRIMER UNE ACTUALITÉ=============================//
     // /**
     //  * Traite la suppression
     //  *
     //  * @param Request $request
     //  * @return RedirectResponse
     //  */
-    public function destroy(Request $request) {
+    public function destroy(Request $request)
+    {
         Actualite::destroy($request->id);
 
         return redirect()->route('admin.actualites.index')
-                ->with('succes', "La actualite a été supprimée!");
+            ->with('succes', "La actualite a été supprimée!");
     }
-
 }

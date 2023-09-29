@@ -18,19 +18,34 @@ class AdminActiviteController extends Controller
 
      public function index()
      {
-        $vendrediActivites = Activite::whereDay('date', 13) ->get();
-        $samediActivites = Activite::whereDay('date', 14) ->get();
-        $dimancheActivites = Activite::whereDay('date', 15) ->get();
+        // $vendrediActivites = Activite::whereDay('date', 13) ->get();
+        // $samediActivites = Activite::whereDay('date', 14) ->get();
+        // $dimancheActivites = Activite::whereDay('date', 15) ->get();
+        $activites = Activite::all();
 
         return view ("admin.activites.index", [
-          "vendrediActivites" => $vendrediActivites,
-          "samediActivites" => $samediActivites,
-          "dimancheActivites" => $dimancheActivites,
+        //   "vendrediActivites" => $vendrediActivites,
+        //   "samediActivites" => $samediActivites,
+        //   "dimancheActivites" => $dimancheActivites,
+        "activites" => $activites,
         ]);
 
 
      }
 
+     /**
+     * Filtrer les activites
+     *
+     * @return View
+     */
+     public function filter(Request $request)
+     {
+         $selectedDate = $request->input('date');
+
+         $filter = Activite::where('date', $selectedDate)->get();
+
+         return view('admin.activites.index', compact('filter'));
+     }
 
  //===============AJOUTER UNE ACTIVITÉ=================================//
  /**

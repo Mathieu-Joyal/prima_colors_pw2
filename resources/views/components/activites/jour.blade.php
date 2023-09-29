@@ -45,8 +45,6 @@
 
             <div class="conteneur-image" onclick="toggleDescription(this)">
                 <img class="thumbnail" src="{{ $activite->image }}" alt="image de l'activite">
-                {{-- <img class="thumbnail" src="{{ asset('img\activites\cereals.png') }}" alt=""
-                    loading="lazy"> --}}
 
                 <div class="description">
                     <p>{{ $activite->description }}</p>

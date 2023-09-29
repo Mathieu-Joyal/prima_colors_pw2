@@ -1,39 +1,67 @@
-
 .conteneur-nav-admin {
     display: flex;
     justify-content: space-between;
-    margin: 5em;
+    margin: 2em 5em;
     height: 50px;
     background-color: $noir;
     position: sticky;
     top: 0;
     padding-top: 2em;
     padding-bottom: 2em;
-    h2{
+
+    h2 {
         margin: 0;
     }
-.bouton-accueil-admin {
 
-    border: solid $vert 2px;
-    padding-top: 1em;
-    color: white;
-    cursor: pointer;
-    width: 300px;
-    height: 35px;
-    text-align: center;
+    .deconnexion {
+        form {
+            margin: 0;
+        }
+    }
 
-    a {
+    .bouton-accueil-admin {
+
+        border: solid $vert 2px;
+        padding-top: 1em;
         color: white;
-        font-size: 1.5em;
-        font-family: "pf-venue", sans-serif;
-        text-transform: uppercase;
+        cursor: pointer;
+        width: 300px;
+        height: 35px;
+        text-align: center;
 
+        a {
+            color: white;
+            font-size: 1.5em;
+            font-family: "pf-venue", sans-serif;
+            text-transform: uppercase;
+
+        }
+
+        &:hover {
+            background-color: darken($vert, 10%);
+            transition: background-color, 0.3s;
+        }
     }
+    .boutton-retour {
 
-    &:hover {
-        background-color: darken($vert, 10%);
-        transition: background-color, 0.3s;
-    }
-}
-}
+        border: solid $vert 2px;
+        padding-top: 1em;
+        color: white;
+        cursor: pointer;
+        width: 300px;
+        height: 35px;
+        text-align: center;
 
+        a {
+            color: white;
+            font-size: 1.5em;
+            font-family: "pf-venue", sans-serif;
+            text-transform: uppercase;
+
+        }
+
+        &:hover {
+            background-color: darken($vert, 10%);
+            transition: background-color, 0.3s;
+        } }
+}
