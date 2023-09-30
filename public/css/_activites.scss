@@ -1,5 +1,5 @@
 
-.conteneur-activites {
+section.conteneur-activites {
     display: flex;
     flex-direction: column;
 
@@ -89,10 +89,11 @@
 
         .conteneur-image {
             // display: inline;
-            height: 200px;
+            height: 150px;
             width: calc(100% - 300px);
             margin-left: 0;
             cursor: pointer;
+            padding-top: 2em;
 
 
             img {
@@ -101,7 +102,24 @@
                 margin-left: 0;
                 margin-top: 0;
                 object-fit: cover;
+                &:hover{
+
+                    box-sizing: border-box;
+                    animation: glowing-border 0.2s forwards;
+
+                    @keyframes glowing-border {
+                        0% {
+                            border-color: transparent;
+                            box-shadow: none;
+                        }
+                        100% {
+                            border-color: $blanc 0.3px;
+                            box-shadow: 0 0 35px rgba(245, 195, 220, 0.5);
+                        }
+                    }
+                }
             }
+
 
             .description {
                 display: none;
@@ -115,9 +133,9 @@
                 }
 
                 .fermer {
-                    position: relative;
-                    bottom: 0px;
-                    right: -1285px;
+                    position: fixed;
+                    bottom:-765px;
+                    right: 63px;
 
                     p {
                         font-family: "pf-venue-stencil", sans-serif;
@@ -132,9 +150,11 @@
 
         .conteneur-titre {
             min-width: 300px;
+            height: 200px;
             white-space: nowrap;
             text-align: right;
             overflow: hidden;
+            margin-bottom: 2em;
         }
 
         p.heure {
@@ -167,6 +187,7 @@
         opacity: 1;
         transform: translateX(0);
         /* Move to original position */
+
     }
 
     //FONCTION SHOW MORE/LESS
@@ -188,6 +209,10 @@ button.voir.activite{
 margin-bottom: 4em;
 margin-top: 2em;
 }
+
+
+
+
 
 // @media only screen and (max-width: 480px) {
 //     .conteneur-activites {
