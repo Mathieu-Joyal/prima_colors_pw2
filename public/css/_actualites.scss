@@ -14,7 +14,6 @@ section.conteneur-actualites {
     }
 
     .bordure.actualites {
-        width: 0;
         height: 2px;
         animation: expand 4s 0.5s forwards;
         border-bottom: solid $rose 3px;
@@ -42,7 +41,6 @@ section.conteneur-actualites {
             transform: translateY(0);
         }
     }
-
 }
 
 //ARTICLE - ACTUALITÉS
@@ -51,9 +49,6 @@ section.conteneur-actualites {
     justify-content: space-between;
     border-bottom: 3px solid $rose;
     padding-top: 2em;
-
-
-
     h3,
     h4 {
         color: $rose;
@@ -69,8 +64,6 @@ section.conteneur-actualites {
         padding-left: 2em;
         padding-right: 2em;
         padding-top: 2em;
-
-
     }
 
     .conteneur-titre {
@@ -86,24 +79,12 @@ section.conteneur-actualites {
             p {
                 margin: 0;
                 overflow: hidden;
-                // animation: typingDescription 4s steps(40) backwards;
                 max-width: 100%;
             }
 
             .plus {
                 display: none;
             }
-
-            // @keyframes typingDescription {
-            //     from {
-            //         width: 0;
-            //         white-space: nowrap;
-            //     }
-
-            //     to {
-            //         width: 100%;
-            //     }
-            // }
         }
     }
 }
@@ -121,9 +102,7 @@ section.conteneur-actualites {
         height: 100%;
         width: 100%;
         margin: 0;
-
     }
-
 }
 
 @keyframes slide-up {
@@ -157,11 +136,6 @@ section.conteneur-actualites {
 .conteneur-image.slide-up {
     animation: slide-up 2s forwards; /* Adjust the duration as needed */
 }
-
-
-
-
-
 
 //BOUTTON VOIR PLUS
 .conteneur-btn-voir {

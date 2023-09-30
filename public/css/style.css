@@ -516,7 +516,6 @@ section.conteneur-actualites .titre h2 span {
   padding-bottom: 20px;
 }
 section.conteneur-actualites .bordure.actualites {
-  width: 0;
   height: 2px;
   animation: expand 4s 0.5s forwards;
   border-bottom: solid #eca6d9 3px;
