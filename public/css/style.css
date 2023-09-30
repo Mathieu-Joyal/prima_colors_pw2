@@ -4,6 +4,8 @@ h1 {
   font-style: normal;
   color: #eca6d9;
   font-size: 80px;
+  margin-left: 3rem;
+  margin-bottom: 0;
 }
 
 h2 {
@@ -59,8 +61,8 @@ main {
 }
 
 section {
-  margin-left: 3em;
-  margin-right: 3em;
+  margin-left: 10em;
+  margin-right: 10em;
 }
 
 button {
@@ -1662,6 +1664,21 @@ a.connexion .material-icons {
   color: #eca6d9;
   font-size: 40px;
   text-decoration: none;
+}
+
+section.hero {
+  margin: 0;
+}
+
+.conteneur-hero {
+  width: 100%;
+  height: 400px;
+}
+.conteneur-hero img.image-hero {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 400px;
 }
 
 .conteneur-btn {

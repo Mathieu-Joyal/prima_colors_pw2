@@ -4,7 +4,7 @@
     <x-header />
 
 
-    <main>
+
         <x-hero image="img\hero.png"/>
         <h1>activitÉs</h1>
         <x-activites.jour :activites="$vendrediActivites" journee="vendredi" id="vendredi"/>
@@ -14,7 +14,7 @@
         <x-activites.jour :activites="$dimancheActivites" journee="dimanche" id="dimanche"/>
         <x-ban_billet />
 
-    </main>
+
 
     <x-footer />
 
