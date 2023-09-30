@@ -1,8 +1,6 @@
-
-@props(["actualites", "annee"])
+@props(['actualites', 'annee'])
 
 <section class="conteneur-actualites">
-
 
     <div class="conteneur-bordure">
         <div class="bordure actualites"></div>
@@ -22,7 +20,7 @@
                     style="--delay: 2s">n</span><span style="--delay: 2.1s">e</span>
                 <span style="--delay: 2.2s"> </span><span style="--delay: 2.3s">2</span><span
                     style="--delay: 2.4s">0</span><span style="--delay: 2.5s">2</span><span
-                    style="--delay: 2.6s">{{$annee}}</span>
+                    style="--delay: 2.6s">{{ $annee }}</span>
             </h2>
         </div>
     </div>
@@ -30,7 +28,7 @@
     @foreach ($actualites as $actualite)
         <article class="conteneur-articles-actualites">
 
-            <div class="conteneur-gauche">
+            <div class="conteneur-gauche ">
 
                 <div class="date-publication">
                     <h4> {{ $actualite->date_publication }}</h4>
@@ -59,11 +57,65 @@
 
             <div class="conteneur-image">
                 <img class="thumbnail" src="{{ $actualite->image }}" alt="image de l'actualite">
-                {{-- <img class="thumbnail" src="{{ asset('img\actualites\1.png') }}"
-                    alt=""> --}}
-            </div>
 
         </article>
     @endforeach
 
 </section>
+
+
+
+<script>
+    //images slide up & text slides into page as we scroll
+    document.addEventListener('DOMContentLoaded', function() {
+        const observer = new IntersectionObserver(glide, {
+            threshold: 0.2
+        });
+
+        const images = document.querySelectorAll('.conteneur-image');
+        const titres = document.querySelectorAll('.conteneur-gauche');
+
+        function glide(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    if (entry.target.classList.contains('conteneur-image')) {
+                        entry.target.classList.add('slide-up');
+                    } else if (entry.target.classList.contains('conteneur-gauche')) {
+                        entry.target.classList.add('slide-in');
+                    }
+                    observer.unobserve(entry.target);
+                }
+            });
+        }
+
+        titres.forEach(function(titres) {
+            observer.observe(titres);
+        });
+
+        images.forEach(function(image) {
+            observer.observe(image);
+        });
+    });
+
+
+    //BOUTTON VOIR PLUS
+    function voirPlus(button) {
+        const parent = button.parentElement.parentElement.parentElement;
+        const dots = parent.querySelector(".dots");
+        const plusText = parent.querySelector(".plus");
+        const btnText = parent.querySelector(".voir-plus");
+
+        if (dots.style.display === "none" || dots.style.display === "") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Voir plus";
+            plusText.style.display = "none";
+        } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Voir moins";
+            plusText.style.display = "inline";
+        }
+    }
+</script>
+
+
+
