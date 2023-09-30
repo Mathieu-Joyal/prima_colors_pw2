@@ -1,5 +1,4 @@
 section.conteneur-actualites {
-    z-index: 1;
 
     //TITRE ANIMÉ
     .titre {
@@ -50,6 +49,9 @@ section.conteneur-actualites {
     justify-content: space-between;
     border-bottom: 3px solid $rose;
     padding-top: 2em;
+    &:last-child{
+        border: none;
+    }
     h3,
     h4 {
         color: $rose;

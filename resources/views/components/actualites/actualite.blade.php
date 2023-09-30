@@ -115,9 +115,6 @@
             plusText.style.display = "inline";
         }
     }
-
-
-
 </script>
 
 

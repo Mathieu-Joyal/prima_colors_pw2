@@ -545,9 +545,6 @@ button.voir.activite {
   margin-top: 2em;
 }
 
-section.conteneur-actualites {
-  z-index: 1;
-}
 section.conteneur-actualites .titre {
   margin-bottom: 100px;
 }
@@ -588,6 +585,9 @@ section.conteneur-actualites .bordure.actualites {
   justify-content: space-between;
   border-bottom: 3px solid #eca6d9;
   padding-top: 2em;
+}
+.conteneur-articles-actualites:last-child {
+  border: none;
 }
 .conteneur-articles-actualites h3,
 .conteneur-articles-actualites h4 {
