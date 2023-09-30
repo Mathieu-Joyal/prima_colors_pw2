@@ -5,7 +5,7 @@
 
 
 
-        <x-hero image="img\hero.png"/>
+        <x-hero image="img\hero\hero-activite.png"/>
         <h1>activitÉs</h1>
         <x-activites.jour :activites="$vendrediActivites" journee="vendredi" id="vendredi"/>
          <x-ban_concours />

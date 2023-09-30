@@ -1,5 +1,6 @@
-.conteneur-actualites {
+section.conteneur-actualites {
 
+    //TITRE ANIMÉ
     .titre {
         margin-bottom: 100px;
     }
@@ -19,7 +20,6 @@
         border-bottom: solid $rose 3px;
         margin-top: 36px;
     }
-
 
     @keyframes expand {
         from {
@@ -52,6 +52,8 @@
     border-bottom: 3px solid $rose;
     padding-top: 2em;
 
+
+
     h3,
     h4 {
         color: $rose;
@@ -60,9 +62,15 @@
 
     .conteneur-gauche {
         display: flex;
-        max-width: 1220px;
+        width: 1000px;
+        max-height: 500px;
+        min-height: 250px;
         justify-content: space-between;
         padding-left: 2em;
+        padding-right: 2em;
+        padding-top: 2em;
+
+
     }
 
     .conteneur-titre {
@@ -78,7 +86,7 @@
             p {
                 margin: 0;
                 overflow: hidden;
-                animation: typingDescription 4s steps(40) backwards;
+                // animation: typingDescription 4s steps(40) backwards;
                 max-width: 100%;
             }
 
@@ -86,47 +94,73 @@
                 display: none;
             }
 
-            @keyframes typingDescription {
-                from {
-                    width: 0;
-                    white-space: nowrap;
-                }
+            // @keyframes typingDescription {
+            //     from {
+            //         width: 0;
+            //         white-space: nowrap;
+            //     }
 
-                to {
-                    width: 100%;
-                }
-            }
+            //     to {
+            //         width: 100%;
+            //     }
+            // }
         }
     }
 }
-.conteneur-articles-actualites:last-child{
+
+.conteneur-articles-actualites:last-child {
     margin-bottom: 2em;
 }
 
 .conteneur-image {
-    height: 220px;
-    width: 400px;
-    padding-right: 2em;
+    height: 275px;
+    width: 425px;
+    margin-bottom: 2em;
 
     img {
         height: 100%;
         width: 100%;
         margin: 0;
-        animation: slide-up 3s forwards;
+
     }
 
-    @keyframes slide-up {
-        0% {
-            opacity: 0;
-            transform: translateY(50px);
-        }
+}
 
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        }
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
+
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.conteneur-gauche.slide-in {
+    animation: slide-in 2s forwards; /* Adjust the duration as needed */
+}
+
+.conteneur-image.slide-up {
+    animation: slide-up 2s forwards; /* Adjust the duration as needed */
+}
+
+
+
+
 
 
 //BOUTTON VOIR PLUS
@@ -134,8 +168,17 @@
     display: flex;
     justify-content: flex-end;
     margin: 0;
-    padding-top: 3em;
+    margin-right: 2em;
 
+    &:hover {
+        button.voir-plus {
+            font-weight: 525;
+        }
+
+        img {
+            height: 26px;
+        }
+    }
 
     button.voir-plus {
         font-weight: 500;

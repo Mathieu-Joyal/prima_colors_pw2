@@ -505,17 +505,17 @@ button.voir.activite {
   margin-top: 2em;
 }
 
-.conteneur-actualites .titre {
+section.conteneur-actualites .titre {
   margin-bottom: 100px;
 }
-.conteneur-actualites .titre h2 span {
+section.conteneur-actualites .titre h2 span {
   opacity: 0;
   animation: typing 2s forwards;
   animation-delay: var(--delay);
   display: inline-block;
   padding-bottom: 20px;
 }
-.conteneur-actualites .bordure.actualites {
+section.conteneur-actualites .bordure.actualites {
   width: 0;
   height: 2px;
   animation: expand 4s 0.5s forwards;
@@ -554,9 +554,13 @@ button.voir.activite {
 }
 .conteneur-articles-actualites .conteneur-gauche {
   display: flex;
-  max-width: 1220px;
+  width: 1000px;
+  max-height: 500px;
+  min-height: 250px;
   justify-content: space-between;
   padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 2em;
 }
 .conteneur-articles-actualites .conteneur-titre {
   display: flex;
@@ -571,20 +575,10 @@ button.voir.activite {
 .conteneur-articles-actualites .conteneur-titre .description p {
   margin: 0;
   overflow: hidden;
-  animation: typingDescription 4s steps(40) backwards;
   max-width: 100%;
 }
 .conteneur-articles-actualites .conteneur-titre .description .plus {
   display: none;
-}
-@keyframes typingDescription {
-  from {
-    width: 0;
-    white-space: nowrap;
-  }
-  to {
-    width: 100%;
-  }
 }
 
 .conteneur-articles-actualites:last-child {
@@ -592,16 +586,16 @@ button.voir.activite {
 }
 
 .conteneur-image {
-  height: 220px;
-  width: 400px;
-  padding-right: 2em;
+  height: 275px;
+  width: 425px;
+  margin-bottom: 2em;
 }
 .conteneur-image img {
   height: 100%;
   width: 100%;
   margin: 0;
-  animation: slide-up 3s forwards;
 }
+
 @keyframes slide-up {
   0% {
     opacity: 0;
@@ -612,12 +606,35 @@ button.voir.activite {
     transform: translateY(0);
   }
 }
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.conteneur-gauche.slide-in {
+  animation: slide-in 2s forwards; /* Adjust the duration as needed */
+}
+
+.conteneur-image.slide-up {
+  animation: slide-up 2s forwards; /* Adjust the duration as needed */
+}
 
 .conteneur-btn-voir {
   display: flex;
   justify-content: flex-end;
   margin: 0;
-  padding-top: 3em;
+  margin-right: 2em;
+}
+.conteneur-btn-voir:hover button.voir-plus {
+  font-weight: 525;
+}
+.conteneur-btn-voir:hover img {
+  height: 26px;
 }
 .conteneur-btn-voir button.voir-plus {
   font-weight: 500;
