@@ -2,7 +2,6 @@
 
 <section class="conteneur-actualites">
 
-
     <div class="conteneur-bordure">
         <div class="bordure actualites"></div>
         <div class="titre 2023">
@@ -64,6 +63,8 @@
 
 </section>
 
+
+
 <script>
     //images slide up & text slides into page as we scroll
     document.addEventListener('DOMContentLoaded', function() {
@@ -114,4 +115,10 @@
             plusText.style.display = "inline";
         }
     }
+
+
+
 </script>
+
+
+

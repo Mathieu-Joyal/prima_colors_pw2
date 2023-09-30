@@ -10,338 +10,394 @@ $rouge: #df1f1f;
 //FONTS
 
 h1 {
-  font-family: "pf-venue-stencil", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: $rose;
-  font-size: 80px;
-  margin-left: 3rem;
-  margin-bottom: 0;
+    font-family: "pf-venue-stencil", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: $rose;
+    font-size: 80px;
+    margin-left: 3rem;
+    margin-bottom: 0;
 }
 
 h2 {
-  font-family: "pf-venue", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 48px;
-  text-transform: uppercase;
-  color: $rose;
+    font-family: "pf-venue", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 48px;
+    text-transform: uppercase;
+    color: $rose;
 }
 
 h3 {
-  font-family: "pf-venue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 38px;
-  text-transform: uppercase;
+    font-family: "pf-venue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 38px;
+    text-transform: uppercase;
 }
 
 h4 {
-  font-family: "pf-venue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 30px;
-  text-transform: uppercase;
+    font-family: "pf-venue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    text-transform: uppercase;
 }
 
 p {
-  font-family: "pf-venue", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 27px;
-  color: $blanc;
-  line-height: 1.5;
+    font-family: "pf-venue", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 27px;
+    color: $blanc;
+    line-height: 1.5;
 }
-a{
+
+a {
     text-decoration: none;
 }
 
 //GENERAL
-body{
-  margin:0px;
-}
-html {
-  background-color: $noir;
-  margin: 0;
-  padding: 0;
+body {
+    margin: 0px;
 }
 
-main{
-  width: 100%;
+html {
+    background-color: $noir;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 100%;
 }
 
 section {
-  margin-left: 10em;
-  margin-right:10em;
+    margin-left: 10em;
+    margin-right: 10em;
 }
 
 //BOUTTONS
 button {
-  font-family: "pf-venue", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 36px;
-  text-transform: uppercase;
-  padding-top: 10px;
-  border: $jaune 3px solid;
-  background-color: $noir;
-  color: $jaune;
-  margin-left: 4.4em;
-  margin-right: 4.4em;
-  height: 70px;
+    font-family: "pf-venue", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 36px;
+    text-transform: uppercase;
+    padding-top: 10px;
+    border: $jaune 3px solid;
+    background-color: $noir;
+    color: $jaune;
+    margin-left: 4.4em;
+    margin-right: 4.4em;
+    height: 70px;
 }
 
 button:hover {
 
-  color: $noir;
-  background-color: darken($jaune, 10%);
-  transition: background-color, 0.3s;
-  a {
     color: $noir;
-  }
+    background-color: darken($jaune, 10%);
+    transition: background-color, 0.3s;
+
+    a {
+        color: $noir;
+    }
 }
 
 //BORDURE AVEC TITRE
 .conteneur-bordure {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: 45px;
-  margin-bottom: 3em;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 45px;
+    margin-bottom: 3em;
 
-  .bordure {
-    width: 60%;
-    border-bottom: solid $rose 3px;
-    height: 100%;
-  }
-
-  .titre {
-    width: 40%;
-    padding-left: 1em;
-    text-align: left;
-
-    h2 {
-      margin: 0;
+    .bordure {
+        width: 60%;
+        border-bottom: solid $rose 3px;
+        height: 100%;
     }
-  }
+
+    .titre {
+        width: 40%;
+        padding-left: 1em;
+        text-align: left;
+
+        h2 {
+            margin: 0;
+        }
+    }
 }
+
+
+//STYLIZED CURSOR
+body {
+    cursor: none;
+}
+
+.small {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+.big {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    margin-bottom: 20rem;
+    animation-name: stretch;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+
+@keyframes stretch {
+    0% {
+
+        opacity: 1;
+        background-color: $jaune;
+        border-radius: 100%;
+    }
+
+    50% {
+        background-color: $vert;
+    }
+
+    100% {
+        // transform: scale(2.0);
+        background-color: $rose;
+    }
+}
+
+
+
+
 
 // CITATION
 
 blockquote {
-  font-family: "pf-venue", sans-serif;
-  font-size: 48px;
-  font-weight: bold;
-  font-style: italic;
-  color: $rose;
-  text-align: center;
-  margin: 20px;
-  padding: 20px;
-  padding-bottom: 150px;
-  position: relative;
-  opacity: 0;
-  animation: fade-in 1.5s ease-in-out forwards;
+    font-family: "pf-venue", sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    font-style: italic;
+    color: $rose;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    padding-bottom: 150px;
+    position: relative;
+    opacity: 0;
+    animation: fade-in 1.5s ease-in-out forwards;
 }
 
 blockquote span.material-icons {
-  font-size: 36px;
-  vertical-align: middle;
-  position: relative;
-  top: -10px;
+    font-size: 36px;
+    vertical-align: middle;
+    position: relative;
+    top: -10px;
 }
 
 blockquote span.material-icons:first-child {
-  transform: scaleX(-1);
+    transform: scaleX(-1);
 }
 
 @keyframes fade-in {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 // intro
 
 .intro {
-  padding-left: 200px;
-  padding-right: 200px;
-  text-align: justify;
+    padding-left: 200px;
+    padding-right: 200px;
+    text-align: justify;
 }
 
 //Section activités page accueil
 
 .section_activites {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 200px;
-  padding-right: 200px;
-  padding-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 100px;
 }
 
 img.img_activite {
-  padding-top: 150px;
-  padding-bottom: 100px;
-  padding-right: 80px;
-  max-width: 50%;
-  margin-right: 20px;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    padding-right: 80px;
+    max-width: 50%;
+    margin-right: 20px;
 }
 
 .texte_droite {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  h3.accueil_activite {
-    font-size: 54px;
-    margin-bottom: 30px;
-    color: $rose;
-  }
-
-  p.accueil_activite {
-    font-size: 36px;
-    margin-bottom: 20px;
-    margin-bottom: 50px;
-    color: $rose;
-  }
-
-  a.accueil {
-    text-decoration: none;
-    color: $rose;
-    padding: 10px 20px;
-    font-size: 30px;
-    font-weight: bold;
-    text-transform: uppercase;
-    align-items: center;
     display: flex;
-    transition: 0.3s;
+    flex-direction: column;
+    align-items: flex-start;
 
-    span.material-icons {
-      color: $rose;
-      font-size: 75px;
-      padding-left: 100px;
-      position: relative;
-      transition: 0.3s;
+    h3.accueil_activite {
+        font-size: 54px;
+        margin-bottom: 30px;
+        color: $rose;
     }
 
-    &:hover {
-      color: $blanc;
-
-      span.material-icons {
-        color: $blanc;
-
-      }
+    p.accueil_activite {
+        font-size: 36px;
+        margin-bottom: 20px;
+        margin-bottom: 50px;
+        color: $rose;
     }
-  }
+
+    a.accueil {
+        text-decoration: none;
+        color: $rose;
+        padding: 10px 20px;
+        font-size: 30px;
+        font-weight: bold;
+        text-transform: uppercase;
+        align-items: center;
+        display: flex;
+        transition: 0.3s;
+
+        span.material-icons {
+            color: $rose;
+            font-size: 75px;
+            padding-left: 100px;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        &:hover {
+            color: $blanc;
+
+            span.material-icons {
+                color: $blanc;
+
+            }
+        }
+    }
 }
 
 //Section forfait page accueil
 
 .section_forfaits {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 200px;
-  padding-right: 200px;
-  padding-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 100px;
 }
 
 img.img_forfait {
-  padding-bottom: 100px;
-  padding-left: 80px;
-  max-width: 50%;
-  margin-right: 20px;
+    padding-bottom: 100px;
+    padding-left: 80px;
+    max-width: 50%;
+    margin-right: 20px;
 }
 
 .texte_gauche {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  h3.accueil_forfait {
-    font-size: 54px;
-    margin-bottom: 30px;
-    color: $jaune;
-  }
-
-  p.accueil_forfait {
-    font-size: 36px;
-    margin-bottom: 20px;
-    margin-bottom: 50px;
-    color: $jaune;
-  }
-
-  a.accueil {
-    text-decoration: none;
-    color: $jaune;
-    padding: 10px 20px;
-    font-size: 30px;
-    font-weight: bold;
-    text-transform: uppercase;
-    align-items: center;
     display: flex;
-    transition: 0.3s;
+    flex-direction: column;
+    align-items: flex-start;
 
-    span.material-icons {
-      color: $jaune;
-      font-size: 75px;
-      padding-left: 100px;
-      position: relative;
-      transition: 0.3s;
+    h3.accueil_forfait {
+        font-size: 54px;
+        margin-bottom: 30px;
+        color: $jaune;
     }
 
-    &:hover {
-      color: $blanc;
-
-      span.material-icons {
-        color: $blanc;
-
-      }
+    p.accueil_forfait {
+        font-size: 36px;
+        margin-bottom: 20px;
+        margin-bottom: 50px;
+        color: $jaune;
     }
-  }
+
+    a.accueil {
+        text-decoration: none;
+        color: $jaune;
+        padding: 10px 20px;
+        font-size: 30px;
+        font-weight: bold;
+        text-transform: uppercase;
+        align-items: center;
+        display: flex;
+        transition: 0.3s;
+
+        span.material-icons {
+            color: $jaune;
+            font-size: 75px;
+            padding-left: 100px;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        &:hover {
+            color: $blanc;
+
+            span.material-icons {
+                color: $blanc;
+
+            }
+        }
+    }
 }
 
 //section a propos page accueil
 
 .section_apropos {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 200px;
-  padding-right: 200px;
-  padding-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 100px;
 }
 
 img.img_apropos {
-  max-width: 50%;
-  margin-right: 20px;
+    max-width: 50%;
+    margin-right: 20px;
 }
 
 .texte_droite_deux {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-left: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 150px;
 
 }
 
-  h3.accueil_apropos {
+h3.accueil_apropos {
     font-size: 54px;
     color: $rose;
-  }
+}
 
-  p.accueil_apropos {
+p.accueil_apropos {
     font-size: 36px;
 
     color: $rose;
-  }
+}
 
-  a.accueil {
+a.accueil {
     text-decoration: none;
     color: $rose;
     padding: 10px 20px;
@@ -353,33 +409,33 @@ img.img_apropos {
     transition: 0.3s;
 
     span.material-icons {
-      color: $rose;
-      font-size: 75px;
-      padding-left: 100px;
-      position: relative;
-      transition: 0.3s;
+        color: $rose;
+        font-size: 75px;
+        padding-left: 100px;
+        position: relative;
+        transition: 0.3s;
     }
 
     &:hover {
-      color: $blanc;
-
-      span.material-icons {
         color: $blanc;
 
-      }
+        span.material-icons {
+            color: $blanc;
+
+        }
     }
-  }
+}
 
 
 //section actualités page accueil
 
-h1.accueil_actualite{
-  padding-top: 150px;
+h1.accueil_actualite {
+    padding-top: 150px;
 
 }
 
-.section_actualites{
-  padding-bottom:150px;
+.section_actualites {
+    padding-bottom: 150px;
 }
 
 // Section site Web
@@ -411,7 +467,7 @@ h1.accueil_actualite{
 @import "components/hero.scss";
 @import "components/boutons/gestion-actualites-activites";
 
-  //Les boutons
+//Les boutons
 @import 'components/boutons/deconnexion';
 @import 'components/boutons/soumettre';
 @import 'components/boutons/accueil_admin';
