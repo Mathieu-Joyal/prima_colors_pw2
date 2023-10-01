@@ -2,7 +2,7 @@
 
     {{-- <x-header /> --}}
 
-    <x-nav-admin titre="Les Utilisateurs" route="{{ route('admin.utilisateurs.index') }}" valeur="Retour aux utilisateurs" />
+    <x-nav-admin titre="Les employés" route="{{ route('admin.employes.index') }}" valeur="Retour aux employes" />
 
     {{-- <x-boutons.accueil_admin />
 
@@ -13,45 +13,10 @@
 
     <x-alertes.succes cle="succes" />
 
-    <section class="formulaire_recherche">
-
-        <form class="administration la_recherche"
-                action="{{ route('admin.employes.index') }}"
-                method="GET"
-        >
-            @csrf
-
-            <div class="barre_recherche">
-
-                <label for="user_recherche">
-                    Recherche:
-                </label>
-
-                    <input
-                        id="user_recherche"
-                        name="user_recherche"
-                        type="text"
-                        placeholder="Recherchez un utilisateur"
-                        autofocus
-                    >
-            </div>
-
-            {{-- <x-forms.erreur champ="user_recherche" /> --}}
-
-            <button type="submit">
-                Faire la recherche
-            </button>
-        </form>
-
-        <div class="bouton_liste_complete">
-
-            <x-boutons.liste_complete
-                route="{{ route('admin.employes.index') }}"
-                valeur="utilisateurs"
-            />
-
-        </div>
-    </section>
+    <x-forms.formulaire_recherche
+        route="{{ route('admin.employes.index') }}"
+        role="employé"
+    />
 
     <div class="conteneur_admin">
 
@@ -113,6 +78,6 @@
         </div>
     </div>
 
-    <x-footer />
+    {{-- <x-footer /> --}}
 
 </x-layout>
