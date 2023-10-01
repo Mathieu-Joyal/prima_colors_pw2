@@ -1,12 +1,14 @@
 <x-layout titre="Bienvenue!">
 
-    <x-header />
+    <x-nav-admin titre="Les employés" route="{{ route('admin.employes.index') }}" valeur="Retour aux employes" />
+
+    {{-- <x-header />
 
     <x-boutons.accueil_admin />
 
     <x-boutons.deconnexion
         route="{{ route('admin.deconnexion') }}"
-    />
+    /> --}}
 
     {{-- <x-alertes.succes cle="succes" /> --}}
 
@@ -108,6 +110,6 @@
             </form>
         </section>
 
-    <x-footer />
+    {{-- <x-footer /> --}}
 
 </x-layout>

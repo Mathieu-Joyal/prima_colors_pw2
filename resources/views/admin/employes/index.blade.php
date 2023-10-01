@@ -1,74 +1,40 @@
 <x-layout titre="Bienvenue!">
 
-    <x-header />
+    {{-- <x-header /> --}}
 
-    <x-boutons.accueil_admin />
+    <x-nav-admin titre="Les employés" route="{{ route('admin.employes.index') }}" valeur="Retour aux employes" />
+
+    {{-- <x-boutons.accueil_admin />
 
     <x-boutons.deconnexion
         routeDeconnexion="{{ route('admin.deconnexion') }}"
-    />
+    /> --}}
 
-
-
-    @if ( auth()->guard('employe')->user()->role_id === 1)
-
-        <x-boutons.soumettre
-            route="{{ route('admin.enregistrement.create') }}"
-            valeur="Création d'un employé"
-        />
-
-    @endif
 
     <x-alertes.succes cle="succes" />
 
-    <section class="formulaire_recherche">
-
-        <form class="administration la_recherche"
-                action="{{ route('admin.employes.index') }}"
-                method="GET"
-        >
-            @csrf
-
-            <div class="barre_recherche">
-
-                <label for="user_recherche">
-                    Recherche:
-                </label>
-
-                    <input
-                        id="user_recherche"
-                        name="user_recherche"
-                        type="text"
-                        placeholder="Recherchez un utilisateur"
-                        autofocus
-                    >
-            </div>
-
-            {{-- <x-forms.erreur champ="user_recherche" /> --}}
-
-            <button type="submit">
-                Faire la recherche
-            </button>
-        </form>
-
-        <div class="bouton_liste_complete">
-
-            <x-boutons.liste_complete
-                route="{{ route('admin.employes.index') }}"
-                valeur="utilisateurs"
-            />
-
-        </div>
-    </section>
+    <x-forms.formulaire_recherche
+        route="{{ route('admin.employes.index') }}"
+        role="employé"
+    />
 
     <div class="conteneur_admin">
 
         <section class="affichage-employes">
 
+            @if ( auth()->guard('employe')->user()->role_id === 1)
+
+                <x-boutons.soumettre
+                    route="{{ route('admin.enregistrement.create') }}"
+                    valeur="Création d'un employé"
+                />
+
+            @endif
+
             <h3 class="h3_user">AFFICHAGE DE LA LISTE DES EMPLOYÉS</h3>
 
             <article class="un_utilisateur">
-                <div class="conteneur_user">
+                <div class="conteneur_user"  style="background-color: transparent">
                     <div class="infos_user">
                         <p class="titre_user">Prénom</p>
                         <p class="titre_user">Nom</p>
@@ -112,6 +78,6 @@
         </div>
     </div>
 
-    <x-footer />
+    {{-- <x-footer /> --}}
 
 </x-layout>

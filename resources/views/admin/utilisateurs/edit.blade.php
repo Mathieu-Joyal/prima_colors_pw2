@@ -1,8 +1,10 @@
 <x-layout titre="Modification de l'utilisateur {{ $user->prenom }} {{ $user->nom }} ">
 
-    <x-header />
+    {{-- <x-header /> --}}
 
-    <x-boutons.accueil_admin />
+    <x-nav-admin titre="Les Utilisateurs" route="{{ route('admin.utilisateurs.index') }}" valeur="Retour aux utilisateurs" />
+
+    {{-- <x-boutons.accueil_admin /> --}}
 
     <div class="conteneur">
 
@@ -140,6 +142,6 @@
 
     </div>
 
-    <x-footer />
+    {{-- <x-footer /> --}}
 
 </x-layout>

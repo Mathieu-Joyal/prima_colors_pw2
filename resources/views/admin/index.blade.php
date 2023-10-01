@@ -22,8 +22,6 @@
         <a href="{{ route('admin.reservations.index') }}">Gestion des réservations</a>
     </div>
 
-    <h2>ORIGINAL</h2>
-
     {{-- class petit ou grand --}}
     {{-- <x-bannieres.countdown class="petit" /> --}}
 

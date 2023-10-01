@@ -26,7 +26,8 @@
 
 </html>
 <script>
-//STYLIZED CURSOR
+
+// STYLIZED CURSOR
 
     const smallCursor = document.querySelector('.small');
     const bigCursor = document.querySelector('.big');

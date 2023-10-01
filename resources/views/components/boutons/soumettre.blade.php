@@ -1,3 +1,5 @@
 @props(['route', 'valeur'])
 
-<a href="{{ $route }}">{{ $valeur }}</a>
+<div class="bouton_creation_employe">
+    <a href="{{ $route }}">{{ $valeur }}</a>
+</div>

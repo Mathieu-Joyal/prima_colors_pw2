@@ -1,5 +1,8 @@
 form.administration {
 
+    border: 1px solid $rose;
+    padding: 2em;
+
     label {
         color: $jaune;
     }
@@ -12,7 +15,7 @@ form.administration {
     }
 
     input {
-        margin: 0 0 1em 0;
+        margin: .25em 0 1em 0;
     }
 
     button {
@@ -31,6 +34,7 @@ form.la_recherche {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 10em;
 
     .barre_recherche {
         display: flex;
