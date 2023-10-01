@@ -1236,6 +1236,13 @@ form.edit .grid-item.titre.actualite {
   margin: 0;
   padding: 0;
 }
+.un_utilisateur .conteneur_user:first-child {
+  background-color: transparent;
+}
+.un_utilisateur .conteneur_user:hover {
+  transition: all 0.15s;
+  background-color: rgb(51, 51, 51);
+}
 .un_utilisateur .conteneur_user span.edit {
   color: #0b8a80;
 }

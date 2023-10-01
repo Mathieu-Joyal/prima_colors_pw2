@@ -34,7 +34,7 @@
             <h3 class="h3_user">AFFICHAGE DE LA LISTE DES EMPLOYÉS</h3>
 
             <article class="un_utilisateur">
-                <div class="conteneur_user">
+                <div class="conteneur_user"  style="background-color: transparent">
                     <div class="infos_user">
                         <p class="titre_user">Prénom</p>
                         <p class="titre_user">Nom</p>
