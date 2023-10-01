@@ -1,23 +1,15 @@
 <x-layout titre="Bienvenue!">
 
-    <x-header />
+    {{-- <x-header /> --}}
 
-    <x-boutons.accueil_admin />
+    <x-nav-admin titre="Les Utilisateurs" route="{{ route('admin.utilisateurs.index') }}" valeur="Retour aux utilisateurs" />
+
+    {{-- <x-boutons.accueil_admin />
 
     <x-boutons.deconnexion
         routeDeconnexion="{{ route('admin.deconnexion') }}"
-    />
+    /> --}}
 
-
-
-    @if ( auth()->guard('employe')->user()->role_id === 1)
-
-        <x-boutons.soumettre
-            route="{{ route('admin.enregistrement.create') }}"
-            valeur="Création d'un employé"
-        />
-
-    @endif
 
     <x-alertes.succes cle="succes" />
 
@@ -64,6 +56,15 @@
     <div class="conteneur_admin">
 
         <section class="affichage-employes">
+
+            @if ( auth()->guard('employe')->user()->role_id === 1)
+
+                <x-boutons.soumettre
+                    route="{{ route('admin.enregistrement.create') }}"
+                    valeur="Création d'un employé"
+                />
+
+            @endif
 
             <h3 class="h3_user">AFFICHAGE DE LA LISTE DES EMPLOYÉS</h3>
 
