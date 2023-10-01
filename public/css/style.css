@@ -1470,6 +1470,7 @@ form.la_recherche {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 10em;
 }
 form.la_recherche .barre_recherche {
   display: flex;
