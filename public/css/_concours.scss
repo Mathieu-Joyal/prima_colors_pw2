@@ -1,0 +1,32 @@
+.conteneur_concours {
+    background-color: white;
+
+    .conteneur_le_concours {
+        background-color: black;
+    }
+
+    .concours_bg {
+        margin: 0;
+        background-color: white;
+
+        h2 {
+            margin: 0;
+            padding: 1em 3em;
+            background-color: black;
+        }
+
+        p {
+            padding: 0 8em;
+            background-color: white;
+            color: black;
+            list-style: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+    }
+}
+
+
+

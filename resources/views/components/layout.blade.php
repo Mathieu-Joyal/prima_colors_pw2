@@ -13,6 +13,9 @@
       <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 
+<body class="concours_body">
+    <div class="small"></div>
+    <div class="big"></div>
 <body>
     {{-- <div class="small"></div>
     <div class="big"></div> --}}
@@ -28,3 +31,22 @@
 <script>
 
 // STYLIZED CURSOR
+
+    // const smallCursor = document.querySelector('.small');
+    // const bigCursor = document.querySelector('.big');
+
+
+    // const positionElement = (e) => {
+    //     const mouseY = e.clientY;
+    //     const mouseX = e.clientX;
+
+    //     smallCursor.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+
+    //     bigCursor.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+
+    // }
+
+    // window.addEventListener('mousemove', positionElement)
+    // smallCursor.style.zIndex = '1000';
+    // bigCursor.style.zIndex = '1000';
+</script>

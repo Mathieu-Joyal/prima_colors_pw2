@@ -7,7 +7,7 @@ class ConcoursController extends Controller
 {
     public function index()
     {
-        return view('concours.index'); 
+        return view('concours.index');
     }
-    
+
 }
