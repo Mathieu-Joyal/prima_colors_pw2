@@ -4,7 +4,6 @@ h1 {
   font-style: normal;
   color: #eca6d9;
   font-size: 80px;
-  margin-left: 3rem;
   margin-bottom: 0;
 }
 
@@ -110,45 +109,6 @@ button:hover a {
   margin: 0;
 }
 
-body {
-  cursor: none;
-}
-
-.small {
-  position: fixed;
-  width: 6px;
-  height: 6px;
-  border: 2px solid #fff;
-  border-radius: 50%;
-}
-
-.big {
-  position: fixed;
-  width: 50px;
-  height: 50px;
-  background-color: white;
-  border-radius: 50%;
-  margin-bottom: 20rem;
-  animation-name: stretch;
-  animation-duration: 2.5s;
-  animation-timing-function: ease-out;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
-  animation-play-state: running;
-}
-
-@keyframes stretch {
-  0% {
-    background-color: #eeb15e;
-    border-radius: 100%;
-  }
-  50% {
-    background-color: #0b8a80;
-  }
-  100% {
-    background-color: #eca6d9;
-  }
-}
 blockquote {
   font-family: "pf-venue", sans-serif;
   font-size: 48px;
@@ -801,7 +761,7 @@ section.conteneur-actualites .bordure.actualites {
   position: absolute;
   padding-left: 15px;
   padding-right: 15px;
-  top: 15px;
+  margin-right: 100px;
   right: 0;
   width: 450px;
   height: 366px;
@@ -811,16 +771,14 @@ section.conteneur-actualites .bordure.actualites {
   text-align: right;
 }
 
-.carre_blanc h1 {
+.carre_blanc h1.titre_compte {
   color: #eeb15e;
   font-size: 55px;
-  z-index: 3;
   margin-top: 20px;
-  margin-right: 20px;
   margin-bottom: 0px;
 }
 
-.carre_blanc h3 {
+.carre_blanc h3.texte_compte {
   color: #030303;
   font-size: 40px;
   text-transform: none;
@@ -972,29 +930,100 @@ a.compte {
   text-decoration: none;
   display: inline-block;
   position: relative;
+  margin-right: 10px;
+  color: #030303;
 }
 
 .forfaits .material-icons {
-  font-size: 40px;
+  font-size: 50px;
   color: #030303;
-  position: relative;
-  top: 15%;
-  left: 7.5%;
-}
-
-a .forfaits {
-  font-family: "pf-venue", sans-serif;
-  color: #030303;
+  vertical-align: middle; /* Aligner verticalement au centre */
+  left: 9%;
+  padding-left: 20px;
 }
 
 .bg_billet {
   float: right;
   font-family: "pf-venue", sans-serif;
-  font-size: 32px;
+  font-size: 40px;
   text-decoration: none;
   font-weight: bold;
-  background-color: #eca6d9;
-  padding: 5px 60px;
+  background-color: rgba(236, 166, 217, 0.8);
+  padding: 10px 60px;
+  margin-top: 250px;
+  margin-right: 50px;
+}
+
+.section_actualites {
+  width: 1500px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  text-align: left;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+h1.accueil_actualite {
+  color: #eeb15e;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-top: 0px;
+  padding-bottom: 50px;
+  margin: 0px;
+}
+
+.titre_actualite {
+  flex-wrap: wrap;
+  font-family: "pf-venue", sans-serif;
+  font-size: 30px;
+  padding-left: 30px;
+}
+
+a.vers_actualite {
+  display: inline-block;
+  background-color: #0b8a80;
+  padding: 15px 20px;
+  margin-right: 35px;
+  margin-bottom: 25px;
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+
+.titre_actualite a.vers_actualite img {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  z-index: 5;
+  width: 150px;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: opacity 0.5s ease;
+}
+
+.titre_actualite a.vers_actualite:hover img {
+  display: block;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 150px;
+  height: 250px;
+  background-color: #eeb15e;
+  margin-top: 20px;
+  display: none;
 }
 
 .conteneur-utilisateur {
@@ -1493,56 +1522,54 @@ form.la_recherche button {
 .contenu {
   background-color: #0b8a80;
   width: 100%;
-}
-
-.menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.menu .item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   position: relative;
 }
 
-.menu .item a {
-  display: block;
-  width: 100%;
+.contenu_footer {
+  position: relative;
+  width: 80%;
+  padding-left: 180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0;
+  z-index: 20;
+}
+
+.menu_footer {
+  flex-direction: row;
+  top: 25px;
+}
+
+.item_footer .menu_footer {
+  text-decoration: none;
+  line-height: 1em;
+}
+
+.contenu_footer .item_footer .menu_footer {
+  display: flex;
+  align-items: center;
+  padding-right: 70px;
+  padding-left: 70px;
+  height: 60px;
   font-size: 40px;
   font-family: "pf-venue", sans-serif;
   text-transform: uppercase;
   color: white;
-  text-decoration: none;
   cursor: pointer;
   position: relative;
-  margin: 30px 50px 0 0;
-  padding-left: 50px;
   transition: color 0.3s ease;
+  border-right: 3px solid #eca6d9;
 }
 
-.menu .item a:hover {
-  color: #030303;
+.contenu_footer .item_footer:last-child .menu_footer {
+  border-right: none;
 }
 
-.menu .item a:hover .ligne {
-  width: 100%;
+.contenu_footer .item_footer:hover .menu_footer {
   background-color: #eca6d9;
-  transition: width 0.3s ease;
-}
-
-.menu .ligne {
-  height: 65px;
-  width: 3px;
-  background-color: #eca6d9;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: width 0.3s ease, background-color 0.3s ease;
-  left: -50px;
+  transition: width 0.2s ease;
+  transition: background-color 1s ease-out;
 }
 
 .logo {
@@ -1562,7 +1589,7 @@ p.slogan {
   justify-content: space-between;
   align-items: center;
 }
-.info p {
+.info p.adresse, .info p.telephone {
   text-decoration: none;
   transition: -webkit-text-decoration 0.3s ease;
   transition: text-decoration 0.3s ease;
@@ -1570,8 +1597,12 @@ p.slogan {
   cursor: pointer;
   margin-left: 50px;
   font-size: 36px;
+  color: #030303;
+  font-weight: bold;
+  border-right: 3px solid #eca6d9;
+  padding-right: 260px;
 }
-.info p:hover {
+.info p.adresse:hover {
   text-decoration: underline;
 }
 .info .reseau {
@@ -1582,10 +1613,17 @@ p.slogan {
 }
 .info .reseau-img {
   margin-right: 30px;
+  border-right: 3px solid #eca6d9;
+  padding-right: 40px;
+  padding-left: 10px;
+}
+.info .reseau-img:last-child {
+  border-right: none;
 }
 
 .copyright {
   text-align: center;
+  color: #eca6d9;
 }
 
 .nav {
