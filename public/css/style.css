@@ -1888,77 +1888,90 @@ form button.supprimer {
   transition: background-color, 0.3s;
 }
 
-.compteur.grand {
+.petit {
+  max-width: 450px;
+}
+@media only screen and (max-width: 2500px) {
+  .petit #label {
+    font-size: 2.43em;
+  }
+  .petit #countdown p {
+    font-size: 4.38em;
+  }
+  .petit #countdown_texte p {
+    font-size: 1.08em;
+  }
+}
+
+.grand {
   max-width: 750px;
   font-size: 16px;
 }
-.compteur.petit {
-  max-width: 450px;
+@media only screen and (max-width: 650px) {
+  .grand #label {
+    font-size: 4.3em;
+  }
+  .grand #countdown p {
+    font-size: 7.78em;
+  }
+  .grand #countdown_texte p {
+    font-size: 1.9em;
+  }
 }
+@media only screen and (max-width: 500px) {
+  .grand #label {
+    font-size: 3.2em;
+  }
+  .grand #countdown p {
+    font-size: 5.84em;
+  }
+  .grand #countdown_texte p {
+    font-size: 1.44em;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .grand #label {
+    font-size: 2.43em;
+  }
+  .grand #countdown p {
+    font-size: 4.38em;
+  }
+  .grand #countdown_texte p {
+    font-size: 1.08em;
+  }
+}
+
+/* Common styles for both "petit" and "grand" classes */
 .compteur p {
   font-size: 5.75em;
   font-family: "pf-venue-stencil";
   text-align: center;
   margin: 0;
 }
-.compteur #countdown {
+
+#countdown {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0;
   justify-content: center;
 }
-.compteur #countdown p {
+
+#countdown p {
   margin: 0;
   font-size: 10.38em;
   text-align: center;
 }
-.compteur #countdown_texte {
+
+#countdown_texte {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0;
   justify-content: center;
 }
-.compteur #countdown_texte p {
+
+#countdown_texte p {
   font-size: 2.56em;
   margin: 0;
   text-align: center;
   text-transform: uppercase;
-}
-
-@media only screen and (max-width: 650px) {
-  .compteur #label {
-    font-size: 4.3em;
-  }
-  .compteur #countdown p {
-    font-size: 7.78em;
-  }
-  .compteur #countdown_texte p {
-    font-size: 1.9em;
-  }
-}
-@media only screen and (max-width: 500px) {
-  .compteur #label {
-    font-size: 3.2em;
-  }
-  .compteur #countdown p {
-    font-size: 5.84em;
-  }
-  .compteur #countdown_texte p {
-    font-size: 1.44em;
-  }
-}
-@media only screen and (max-width: 450px) {
-  .compteur #label {
-    font-size: 2.43em;
-  }
-  .compteur #countdown p {
-    font-size: 4.38em;
-  }
-  .compteur #countdown_texte p {
-    font-size: 1.08em;
-  }
-}
-.petit-compteur {
-  max-width: 450px;
-  font-size: 0.75rem;
 }/*# sourceMappingURL=style.css.map */
