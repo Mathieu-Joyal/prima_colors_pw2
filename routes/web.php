@@ -48,8 +48,8 @@ Route::get('/actualites', [ActualiteController::class, 'index'])
     ->name('actualites.index');
 
 // **************** PAGE BILLETERIE ********************* //
-Route::get('/billets', [ForfaitController::class, 'index'])
-    ->name('billets.index');
+Route::get('/forfaits', [ForfaitController::class, 'index'])
+    ->name('forfaits.index');
 
 
 
