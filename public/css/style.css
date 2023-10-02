@@ -1787,6 +1787,11 @@ section.hero {
   width: 100%;
   height: 400px;
 }
+.conteneur-hero .compteur.petit {
+  position: relative;
+  bottom: 220px;
+  left: 1200px;
+}
 
 .conteneur-btn {
   display: flex;

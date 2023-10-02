@@ -5,8 +5,6 @@
     <section class="formulaire_recherche activite">
 
         <form class="administration la_recherche" action="{{ route('admin.activites.filter') }}" method="GET">
-            @csrf
-
 
             <div class="conteneur-recherche">
                 <label for="recherche">
@@ -27,12 +25,20 @@
                 </button>
             </div>
         </form>
+        <div class="bouton_liste_complete">
+
+            <x-boutons.liste_complete
+                route="{{ route('admin.actualites.index') }}"
+                valeur="actualites"
+            />
+
+        </div>
     </section>
 
 
     <section>
-        @if (isset($filter) && $filter->count() > 0)
-            @foreach ($filter as $key => $activite)
+        @forelse ($activites as $key =>$activite)
+
                 <article class="conteneur-titre-activites-admin">
                     <div class="activites-admin">
 
@@ -87,10 +93,10 @@
                     routeModifier="{{ route('admin.activites.edit', ['id' => $activite->id]) }}"
                     routeSupprimer="{{ route('admin.activites.destroy') }}" valeur="{{ $activite->id }}"
                     nom="activité" />
-            @endforeach
-        @else
+            @empty
+
             <p>No activities found for the selected date.</p>
-        @endif
+        @endforelse
     </section>
 
 

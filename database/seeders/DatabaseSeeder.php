@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Employe;
 use App\Models\Actualite;
 use App\Models\Activite;
+use App\Models\Forfait;
 use Illuminate\Database\Seeder;
 use App\Models\Role;
 
@@ -43,9 +44,6 @@ class DatabaseSeeder extends Seeder
         // Ajout d'employés fictifs
         \App\Models\Employe::factory(25)->create();
 
-        // ajout des activités
-
-
 
         // Ajout des activites (préexistants, dans un fichier /storage/app/data)
         $activites = json_decode(
@@ -62,8 +60,6 @@ class DatabaseSeeder extends Seeder
         }
 
 
-
-
         // Ajout des actualités (préexistants, dans un fichier /storage/app/data)
         $actualites = json_decode(
             file_get_contents(storage_path("app/data/actualites.json"))
@@ -74,6 +70,21 @@ class DatabaseSeeder extends Seeder
                 "titre" => $actualite->titre,
                 "image" => $actualite->image,
                 "description" => $actualite->description,
+            ]);
+        }
+
+        // Ajout des forfaits (préexistants, dans un fichier /storage/app/data)
+        $forfaits = json_decode(
+            file_get_contents(storage_path("app/data/forfaits.json"))
+        );
+
+        foreach ($forfaits as $forfait) {
+            Forfait::factory()->create([
+                "titre" => $forfait->titre,
+                "description" => $forfait->description,
+                "prix" => $forfait->prix,
+                "date_arrive" => $forfait->date_arrive,
+                "date_depart" => $forfait->date_depart,
             ]);
         }
     }
