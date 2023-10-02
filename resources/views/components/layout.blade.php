@@ -13,7 +13,7 @@
       <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 
-<body>
+<body class="concours_body">
     <div class="small"></div>
     <div class="big"></div>
     <main>
