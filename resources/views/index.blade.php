@@ -1,11 +1,9 @@
-
-    <x-layout titre="Festival Prima-Colors | Accueil">
-    <x-header/>
-
-        
+<x-layout titre="Festival Prima-Colors | Accueil">
+    <x-header />
 
     {{-- <video src=""></video> --}
         --}}
+
     <blockquote>
         <span class="material-icons">
             format_quote
@@ -52,7 +50,8 @@
     <div class="section_forfaits">
         <div class="texte_gauche">
             <h3 class="accueil_forfait">Vivez Prima-Colors sous toutes ses teintes !</h3>
-            <p class="accueil_forfait"> Profitez pleinement du festival grâce à nos forfaits sur mesure <br>Invitez vos amis pour une expérience des plus colorée.</p>
+            <p class="accueil_forfait"> Profitez pleinement du festival grâce à nos forfaits sur mesure <br>Invitez vos
+                amis pour une expérience des plus colorée.</p>
             <a href="/forfaits" class="accueil">Voir les forfaits! <span class="material-icons">
                     east
                 </span></a>
@@ -64,33 +63,68 @@
         <img src="../img/accueil/apropos_accueil.png" alt="" class="img_apropos">
         <div class="texte_droite_deux">
             <h3 class="accueil_apropos">Qu'est ce que Prima-Colors?</h3>
-            <p class="accueil_apropos">Apprenez pour qui et en quoi consiste le festival. <br> Rajoutez une touche de joie coloré dans votre vie en nous connaissant</p>
+            <p class="accueil_apropos">Apprenez pour qui et en quoi consiste le festival. <br> Rajoutez une touche de
+                joie coloré dans votre vie en nous connaissant</p>
             <a href="/apropos" class="accueil">Découvrez le festival! <span class="material-icons">
                     east
-        </span></a> 
+                </span></a>
         </div>
     </div>
 
-    <x-ban_concours/>
-    
+    <x-ban_concours />
+
 
     <div class="section_actualites">
-        <h1 class="accueil_actualite">Actualités de nos éditions antérieurs</h1>
+        <h1 class="accueil_actualite">ActualitÉs de nos Éditions antÉrieures</h1>
         <div class="titre_actualite">
-            <a href="actualite.index" class="vers_actualite">titre 1 </a> 
-            <a href="actualite.index" class="vers_actualite">titre 2 </a>
-            <a href="actualite.index" class="vers_actualite">titre 3 </a>
-            <a href="actualite.index" class="vers_actualite">titre 4 </a>
-            <a href="actualite.index" class="vers_actualite">titre 5 </a>
-            <a href="actualite.index" class="vers_actualite">titre 6 </a>
-            <a href="actualite.index" class="vers_actualite">titre 6 </a>
-            <a href="actualite.index" class="vers_actualite">titre 7 </a>
-            <a href="actualite.index" class="vers_actualite">titre 8 </a>
-            <a href="actualite.index" class="vers_actualite">titre 9 </a>
+            <a href="/actualites" class="vers_actualite">
+                <span>Vibrations Urbaines 2</span>
+                <img src="../img/actualites/1.png" alt="">
+            </a>
+            <a href="/actualites" class="vers_actualite">
+                <span> Nouvelle Édition Explosive de "Vibrations Urbaines</span>
+                <img src="../img/actualites/2.png" alt="">
+            </a>
+            <a href="/actualites" class="vers_actualite">
+                <span>Ateliers Artistiques et Éducatifs</span>
+                <img src="../img/actualites/3.png" alt="">
+            </a>
+            <a href="/actualites" class="vers_actualite">
+                <span>Nos Artistes et Musiciens</span>
+                <img src="../img/actualites/4.png" alt="">
+            </a>
+            <a href="/actualites" class="vers_actualite">
+                <span>Artistes Internationaux Confirmés</span>
+                <img src="../img/actualites/5.png" alt="">
+            </a>
+            <a href="/actualites" class="vers_actualite">
+                <span>Innovation Technologique au Service de l'Art Urbain</span>
+                <img src="../img/actualites/6.jpg" alt="">
+            </a>
+            <a href="/actualites" class="vers_actualite">
+                <span>Événements Spéciaux en Soirée qui ont Enflammé la Nuit</span>
+                <img src="../img/actualites/7.png" alt="">
+            </a>
+            <a href="/actualites" class="vers_actualite">
+                <span>Fusion Culturelle Exceptionnelle</span>
+                <img src="../img/actualites/8.png" alt="">
+            </a>
+            <a href="/actualites" class="vers_actualite">
+                <span>Programme Musical</span>
+                <img src="../img/actualites/9.png" alt="">
+            </a>
+        </div>
+        <div class="images">
+            <div class="image"></div>
         </div>
     </div>
+    </div>
 
-    <x-ban_compte/>
-    <x-ban_billet/>
+
+    <x-ban_compte />
+    <x-ban_billet />
+
+    <x-footer />
+
 
 </x-layout>

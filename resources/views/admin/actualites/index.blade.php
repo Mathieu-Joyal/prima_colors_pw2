@@ -1,12 +1,11 @@
 <x-layout titre="Créez une actualité">
 
 
-    <x-nav-admin titre="Les ActualitÉs" route="route('admin.activites.index')" valeur="Voir les activitÉs" />
+    <x-nav-admin titre="Les ActualitÉs" route="{{route('admin.activites.index')}}" valeur="Voir les activitÉs" />
 
     <section class="formulaire_recherche actualite">
 
         <form class="administration la_recherche" action="{{ route('admin.actualites.filter') }}" method="GET">
-            @csrf
 
 
             <div class="conteneur-recherche">
@@ -18,6 +17,7 @@
                     <option value="2023">2023</option>
                     <option value="2022">2022</option>
                 </select>
+
             </div>
 
             {{-- <x-forms.erreur champ="user_recherche" /> --}}
@@ -27,12 +27,19 @@
                 </button>
             </div>
         </form>
-        {{-- <x-boutons.liste_complete/> --}}
+        <div class="bouton_liste_complete">
+
+            <x-boutons.liste_complete
+                route="{{ route('admin.actualites.index') }}"
+                valeur="actualites"
+            />
+
+        </div>
+
     </section>
 
     <section>
-        @if (isset($filter) && $filter->count() > 0)
-        @foreach ($filter as $actualite)
+        @forelse ($actualites as $actualite)
             <article class="conteneur-articles-actualites admin">
 
                 <div class="conteneur-gauche">
@@ -62,9 +69,8 @@
             <x-boutons.gestion_activites_actualites routeAjouter="route('admin.actualites.create')"
             routeModifier="route('admin.actualites.edit', ['id'=>$actualite->id])"
             routeSupprimer="route('admin.actualites.destroy')" valeur="{{ $actualite->id }}" nom="actualité"/>
-        @endforeach
-        @else
-        <p>No activities found for the selected date.</p>
-    @endif
+        @empty
+            <p>No activities found for the selected date.</p>
+        @endforelse
     </section>
 </x-layout>

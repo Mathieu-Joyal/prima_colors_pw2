@@ -47,9 +47,9 @@ class AdminActualiteController extends Controller
     public function filter(Request $request)
     {
         $selectedYear = $request->input('date_publication');
-        $filter = Actualite::where('date_publication', 'LIKE', "%$selectedYear%")->get();
+        $actualites = Actualite::where('date_publication', 'LIKE', "%$selectedYear%")->get();
 
-        return view('admin.actualites.index', compact('filter'));
+        return view('admin.actualites.index', compact('actualites'));
     }
 
 

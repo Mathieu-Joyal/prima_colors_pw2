@@ -16,6 +16,9 @@
 <body class="concours_body">
     <div class="small"></div>
     <div class="big"></div>
+<body>
+    {{-- <div class="small"></div>
+    <div class="big"></div> --}}
     <main>
 
         {{ $slot }}
