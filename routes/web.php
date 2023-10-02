@@ -39,8 +39,7 @@ Route::get('/concours', [ConcoursController::class, 'index'])
     ->name('concours.index');
 
 // ***************** PAGE À PROPOS ********************** //
-
-Route::get('/apropos', [ConcoursController::class, 'index'])
+Route::get('/apropos', [AProposController::class, 'index'])
     ->name('apropos.index');
 
 // **************** PAGE ACTUALITÉS ******************** //
