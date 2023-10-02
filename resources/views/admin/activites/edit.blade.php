@@ -1,6 +1,6 @@
 <x-layout titre="Modifiez une activité">
 
-    <x-nav-admin titre=" Modifier une ActivitÉ" route="route('admin.activites.index')" valeur="Retour aux activitÉs" />
+    <x-nav-admin titre=" Modifier une ActivitÉ" route="{{route('admin.activites.index')}}" valeur="Retour aux activitÉs" />
     {{-- MESSAGES --}}
     {{-- @if (session('echec'))
             <p class="">
