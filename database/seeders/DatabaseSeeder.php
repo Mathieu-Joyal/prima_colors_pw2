@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Employe;
 use App\Models\Actualite;
 use App\Models\Activite;
+use App\Models\Forfait;
 use Illuminate\Database\Seeder;
 use App\Models\Role;
 
@@ -74,6 +75,20 @@ class DatabaseSeeder extends Seeder
                 "titre" => $actualite->titre,
                 "image" => $actualite->image,
                 "description" => $actualite->description,
+            ]);
+        }
+
+        // Ajout des forfaits (préexistants, dans un fichier /storage/app/data)
+        $forfaits = json_decode(
+            file_get_contents(storage_path("app/data/activites.json"))
+        );
+
+        foreach ($forfaits as $forfaits) {
+            Forfait::factory()->create([
+                "titre" => $forfaits->titre,
+                "description" => $forfaits->description,
+                "date_arrive" => $forfaits->date_arrive,
+                "date_depart" => $forfaits->date_depart,
             ]);
         }
     }

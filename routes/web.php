@@ -8,7 +8,7 @@ use App\Http\Controllers\ConcoursController;
 use App\Http\Controllers\AproposController;
 use App\Http\Controllers\ConnexionController;
 use App\Http\Controllers\EnregistrementController;
-use App\Http\Controllers\ReservationController;
+// use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\UtilisateurController;
 use Illuminate\Support\Facades\Route;
 
@@ -48,8 +48,8 @@ Route::get('/actualites', [ActualiteController::class, 'index'])
     ->name('actualites.index');
 
 // **************** PAGE BILLETERIE ********************* //
-Route::get('/forfaits', [ForfaitController::class, 'index'])
-    ->name('forfaits.index');
+Route::get('/billets', [ForfaitController::class, 'index'])
+    ->name('billets.index');
 
 
 
