@@ -8,7 +8,7 @@ use App\Http\Controllers\ConcoursController;
 use App\Http\Controllers\AproposController;
 use App\Http\Controllers\ConnexionController;
 use App\Http\Controllers\EnregistrementController;
-use App\Http\Controllers\ReservationController;
+// use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\UtilisateurController;
 use Illuminate\Support\Facades\Route;
 

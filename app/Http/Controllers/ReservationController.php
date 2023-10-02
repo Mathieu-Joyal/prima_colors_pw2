@@ -19,7 +19,7 @@ class ReservationController extends Controller
         // Validation
         $valides = $request->validate([
             "forfait" => "required",
-
+//
         ],[
             "forfait.required" => "",
         ]);

@@ -1,6 +1,6 @@
 <x-layout titre="Créez une actualité">
 
-    <x-nav-admin titre=" Ajouter une ActualitÉs" route="route('admin.actualites.index')"
+    <x-nav-admin titre=" Ajouter une ActualitÉs" route="{{route('admin.actualites.index')}}"
         valeur="Retour aux actualitÉs" />
 
     {{-- MESSAGES --}}
