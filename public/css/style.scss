@@ -15,7 +15,6 @@ h1 {
     font-style: normal;
     color: $rose;
     font-size: 80px;
-    margin-left: 3rem;
     margin-bottom: 0;
 }
 
@@ -443,6 +442,7 @@ h1.accueil_actualite {
 @import "_ban-compte.scss";
 @import "_connexion.scss";
 @import "_ban-billet.scss";
+@import "_actualites-accueil.scss";
 
 
 // Section administrateur

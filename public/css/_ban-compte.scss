@@ -4,21 +4,19 @@
     background-size: cover; 
     background-position: center; 
     width: 100%; 
-    height: 365px;
-   
+    height: 365px;  
 }
 
 .section_compte img {
     padding-top: 100px; 
     padding-bottom: 100px;  
-
 }
 
 .carre_blanc {
     position: absolute;
     padding-left: 15px;
     padding-right: 15px;
-    top: 15px;
+    margin-right: 100px;
     right:0;
     width: 450px; 
     height: 366px; 
@@ -26,27 +24,24 @@
     display: flex;
     flex-direction: column;
     text-align: right; 
+}
+
+.carre_blanc h1.titre_compte {
+    color: $jaune;
+    font-size: 55px;
+    margin-top: 20px;
+    margin-bottom: 0px;
   
 }
 
-.carre_blanc h1 {
-    color: $jaune;
-    font-size: 55px;
-    z-index: 3;
-    margin-top: 20px;
-    margin-right: 20px;
-    margin-bottom: 0px;
-}
-
-.carre_blanc h3 {
+.carre_blanc h3.texte_compte {
     color: $noir;
     font-size: 40px;
     text-transform: none;
     text-align: left;
     margin-right: 40px;
     margin-bottom: 20px;
-    line-height: 1.2;
-  
+    line-height: 1.2; 
 }
 
 .carre_blanc a {
@@ -56,8 +51,7 @@
     color: $noir;
     font-weight: bold;
     background-color: rgba($rose, 0.8); 
-    padding: 10px 50px;
-   
+    padding: 10px 50px;  
 }
 
 .carre_blanc .compte {
