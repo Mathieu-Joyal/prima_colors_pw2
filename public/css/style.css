@@ -2041,38 +2041,8 @@ form button.supprimer {
   transition: background-color, 0.3s;
 }
 
-.deconnexion form {
-  margin: 4em 3em 3em 3em;
-  text-align: right;
-}
-.deconnexion input {
-  background-color: #df1f1f;
-  padding: 1em 2em;
-  color: white;
-  border: none;
-  border-radius: 0.25em;
-  cursor: pointer;
-}
-.deconnexion input:hover {
-  background-color: #851313;
-  transition: background-color, 0.3s;
-}
-
-.bouton_creation_employe {
-  margin: 2em 0;
-  text-align: right;
-}
-.bouton_creation_employe a {
-  background-color: #0b8a80;
-  padding: 1em 2em;
-  color: white;
-  border: none;
-  border-radius: 0.25em;
-  cursor: pointer;
-}
-.bouton_creation_employe a:hover {
-  background-color: #eca6d9;
-  transition: background-color, 0.3s;
+.alerte_succes p {
+  color: #0b8a80;
 }
 
 .petit {

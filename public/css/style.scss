@@ -478,9 +478,8 @@ h1.accueil_actualite {
 @import 'components/boutons/soumettre';
 @import 'components/boutons/accueil_admin';
 
-//Les boutons ???
-@import "components/boutons/deconnexion";
-@import "components/boutons/soumettre";
+// Les alertes
+@import "components/alertes/succes";
 
 // Countdown
 @import "components/countdown";
