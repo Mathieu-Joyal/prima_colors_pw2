@@ -1,7 +1,4 @@
-@props(["route", "role"])
-
-{{-- Employes: --}}
-{{-- route = {{ route('admin.employes.index') }} --}}
+@props(["route", "placeholder", "valeur"])
 
 <section class="formulaire_recherche">
 
@@ -21,7 +18,7 @@
                     id="user_recherche"
                     name="user_recherche"
                     type="text"
-                    placeholder="Recherchez un {{ $role }}"
+                    placeholder="{{ $placeholder }}"
                     autofocus
                 >
         </div>
@@ -34,8 +31,8 @@
     <div class="bouton_liste_complete">
 
         <x-boutons.liste_complete
-            route="{{ route('admin.employes.index') }}"
-            valeur="utilisateurs"
+            route="{{ $route }}"
+            valeur="{{ $valeur }}"
         />
 
     </div>

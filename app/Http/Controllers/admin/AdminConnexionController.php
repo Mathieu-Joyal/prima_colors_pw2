@@ -14,6 +14,8 @@ class AdminConnexionController extends Controller
      * @return View
      */
     public function index() {
+
+        // Retourne la vue
         return view('auth.admin.connexion.index');
     }
 
@@ -28,28 +30,29 @@ class AdminConnexionController extends Controller
         // Validation
         $valides = $request->validate([
             "identifiant" => "required",
-            "password" => "required"
+            "password" => "required",
         ], [
             "identifiant.required" => "L'identifiant est requis.",
-            "password.required" => "Le mot de passe est requis."
+            "password.required" => "Le mot de passe est requis.",
         ]);
 
-        // Ajouter l'employé à la session
+        // Ajouter l'employé à la session si la connexion est valide
         if(Auth::guard('employe')->attempt($valides)){
+
             $request->session()->regenerate();
 
+            // Redirection
             return redirect()
                     ->intended(route('admin.index'))
                     ->with('succes', 'Vous êtes connectés!');
         }
 
-        // Redirection
+        // Redirection si erreur dans la connexion
         return back()
-                ->withErrors([
-                    "identifiant" => "Les informations fournies ne sont pas valides"
-                ])
-                ->onlyInput('identifiant');
-
+            ->withErrors([
+                "erreur_connexion" => "Les informations fournies ne sont pas valides"
+            ])
+            ->onlyInput('identifiant');
     }
 
     /**

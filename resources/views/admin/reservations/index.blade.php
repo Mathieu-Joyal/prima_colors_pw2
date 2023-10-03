@@ -1,24 +1,22 @@
 <x-layout titre="Liste des réservations">
 
-    {{-- <x-header />
-
-    <x-boutons.accueil_admin />
-
-    <x-boutons.deconnexion
-        route="{{ route('admin.deconnexion') }}"
-    /> --}}
-
     <x-nav-admin titre="les réservations" route="{{ route('admin.reservations.index') }}" valeur="Retour aux réservations" />
 
     <div class="conteneur_admin">
 
-        <x-alertes.succes cle="succes" />
+        <x-alertes cle="succes" />
 
         @if(session('error'))
             <div class="">
                 {{ session('error') }}
             </div>
         @endif
+
+        <x-forms.formulaire_recherche
+            route="{{ route('admin.reservations.index') }}"
+            placeholder="Recherchez une réservation"
+            valeur="réservations"
+        />
 
         <section class="affichage-employes">
 

@@ -479,6 +479,12 @@ h1.accueil_actualite {
 @import "components/boutons/gestion-actualites-activites";
 @import "components/boutons/reserver";
 
+// Les messages
+// -- alertes succes
+@import "components/alertes/succes";
+// -- alertes erreur
+@import "components/alertes/erreur";
+
 @import "components/boutons/deconnexion";
 @import "components/boutons/soumettre";
 

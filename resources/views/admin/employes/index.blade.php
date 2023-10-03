@@ -1,21 +1,13 @@
 <x-layout titre="Bienvenue!">
 
-    {{-- <x-header /> --}}
-
     <x-nav-admin titre="Les employés" route="{{ route('admin.employes.index') }}" valeur="Retour aux employes" />
 
-    {{-- <x-boutons.accueil_admin />
-
-    <x-boutons.deconnexion
-        routeDeconnexion="{{ route('admin.deconnexion') }}"
-    /> --}}
-
-
-    <x-alertes.succes cle="succes" />
+    <x-alertes cle="succes" />
 
     <x-forms.formulaire_recherche
         route="{{ route('admin.employes.index') }}"
-        role="employé"
+        placeholder="Recherchez un employé"
+        valeur="employés"
     />
 
     <div class="conteneur_admin">
@@ -54,7 +46,20 @@
                         <p>{{ $employe->prenom }}</p>
                         <p>{{ $employe->nom }}</p>
                         <p>{{ $employe->identifiant }}</p>
-                        <p>{{ $employe->role_id }}</p>
+
+
+                        @foreach ($roles as $role )
+
+                        @if ($employe->role_id === $role->id)
+
+                        <p>{{ $role->nom }}</p>
+                        @endif
+
+                        @endforeach
+
+
+
+
                     </div>
 
                     @if ( auth()->guard('employe')->user()->role_id === 1)

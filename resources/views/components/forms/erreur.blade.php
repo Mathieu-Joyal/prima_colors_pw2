@@ -1,5 +1,9 @@
 @props(["champ"])
 
 @error($champ)
-    <p style="color: red;">{{ $message }}</p>
+
+    <div class="form_erreur">
+        <p>{{ $message }}</p>
+    </div>
+
 @enderror

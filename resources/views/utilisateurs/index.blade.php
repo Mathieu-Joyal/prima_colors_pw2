@@ -2,13 +2,11 @@
 
     <x-header />
 
-    <x-alertes.succes cle="succes" />
+    <x-alertes cle="succes" />
 
     <div class="conteneur-utilisateur">
 
-        <x-boutons.deconnexion
-            route="{{ route('deconnexion.user') }}"
-        />
+        <x-boutons.deconnexion routeDeconnexion="{{ route('deconnexion') }}" />
 
         <h2>
             Bonjour {{ $user->prenom }} {{ $user->nom }}!

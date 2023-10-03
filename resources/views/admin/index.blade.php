@@ -4,7 +4,7 @@
         <img src="{{ asset('img/activites/cereals.png') }}" alt="céréales">
     </div>
 
-    <x-alertes.succes cle="succes" />
+    <x-alertes cle="succes" />
 
     <x-boutons.deconnexion
         routeDeconnexion="{{ route('admin.deconnexion') }}"
@@ -21,9 +21,6 @@
         <a href="{{ route('admin.activites.index') }}">Gestion des activités</a>
         <a href="{{ route('admin.reservations.index') }}">Gestion des réservations</a>
     </div>
-
-        {{-- class petit ou grand --}}
-        <x-bannieres.countdown class="petit" />
 
 </x-layout>
 
