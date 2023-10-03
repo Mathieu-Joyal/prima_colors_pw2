@@ -14,14 +14,14 @@
       "description": "Profitez d'une journée complète d'immersion totale dans le monde des couleurs et de la créativité au festival Prima-Colors. Découvrez des expositions artistiques inspirantes, participez à des ateliers interactifs et assistez à des performances live éblouissantes. Ce forfait vous offre un accès complet à toutes les activités du festival pour une journée mémorable."
     },
     {
-      "titre": "Forfait Vendredi",
+      "titre": "Forfait Dimanche",
       "date_arrive": "2023-10-15",
       "date_depart": "2023-10-15",
       "prix": "75",
       "description": "Une journée de plaisir en famille vous attend au festival Prima-Colors. Ce forfait est conçu pour les familles qui veulent partager des moments créatifs ensemble. Il offre un accès complet à toutes les activités du festival, y compris des zones spécialement aménagées pour les enfants, des ateliers adaptés à tous les âges et des expositions interactives."
     },
     {
-      "titre": "Forfait Vendredi",
+      "titre": "Forfait VIP 3 jours",
       "date_arrive": "2023-10-13",
       "date_depart": "2023-10-15",
       "prix": "150",
