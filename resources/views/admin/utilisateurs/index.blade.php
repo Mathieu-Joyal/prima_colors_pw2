@@ -20,7 +20,7 @@
 
     <x-forms.formulaire_recherche
         route="{{ route('admin.utilisateurs.index') }}"
-        role="utilisateur"
+        placeholder="Recherchez un utilisateur"
     />
 
     <div class="conteneur_admin">

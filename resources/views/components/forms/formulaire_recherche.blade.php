@@ -1,4 +1,4 @@
-@props(["route", "role"])
+@props(["route", "placeholder"])
 
 {{-- Employes: --}}
 {{-- route = {{ route('admin.employes.index') }} --}}
@@ -21,7 +21,7 @@
                     id="user_recherche"
                     name="user_recherche"
                     type="text"
-                    placeholder="Recherchez un {{ $role }}"
+                    placeholder="{{ $placeholder }}"
                     autofocus
                 >
         </div>
