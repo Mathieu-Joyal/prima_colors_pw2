@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-// use App\Http\Middleware\Employe;
 use App\Models\Employe;
 use App\Models\Role;
 use Illuminate\Support\Facades\Hash;
@@ -14,11 +13,12 @@ class AdminEmployeController extends Controller
     /**
      * Affichage de la liste des employés
      *
+     * @param Request $request
      * @return View
      */
     public function index(Request $request) {
 
-        // Mettre la requête de la recherche
+        // Allez chercher la requête de la recherche
         $requete = $request->input('user_recherche');
 
         // Initialise la recherche
@@ -36,26 +36,25 @@ class AdminEmployeController extends Controller
         // Récupérer les utilisateurs en fonction de la requête
         $employes = $requete_user->get();
 
-        // $employes = \App\Models\Employe::all();
-
+        // Retourne la vue
         return view('admin.employes.index', [
             "employes" => $employes,
-            // "forfaits" => Forfait::all(),
-            // "reservations" => Reservation::all(),
+            "roles" => Role::all()
         ]);
     }
 
     /**
      * Affichage de la page de modification d'un employé
      *
+     * @param int $id
      * @return View
      */
-    public function edit($id){
+    public function edit(int $id){
 
         // Retrouver les informations de l'employé
         $un_employe = Employe::find($id);
 
-        // Pass the user data to the edit view
+        // Retourne la vue
         return view('admin.employes.edit', [
             'un_employe' => $un_employe,
             'roles' => Role::all()
@@ -63,7 +62,7 @@ class AdminEmployeController extends Controller
     }
 
     /**
-     * Insertion de la modification de l'utilisateur
+     * Insertion de la modification de l'employé
      *
      * @return View
      */
@@ -78,25 +77,25 @@ class AdminEmployeController extends Controller
             ->with('succes', 'Seul un administrateur peut supprimer un employé');
         }
 
-        // Retrieve the user by ID
+        // Rechercher l'employé
         $un_employe = Employe::find($id);
 
         // Validation
         $valides = $request->validate([
             "prenom" => "required|max:255",
             "nom" => "required|max:255",
-            'identifiant' => 'required|integer|min:1000000|max:9999999"|unique:employes,identifiant,' . $un_employe->id,
+            'identifiant' => 'required|integer|min:1000000|max:9999999|unique:employes,identifiant,' . $un_employe->id,
             "password" => "nullable|min:8",
-            "confirmation_password" => "nullable|same:password"
+            "confirmation_password" => "same:password"
         ],[
             "prenom.required" => "Le prénom est requis",
-            "prenom.max" => "Vous devez avoir un maximum de :max caractères",
+            "prenom.max" => "Le prénom doit avoir un maximum de :max caractères",
             "nom.required" => "Le nom est requis",
-            "nom.max" => "Vous devez avoir un maximum de :max caractères",
+            "nom.max" => "Le nom doit avoir un maximum de :max caractères",
             "identifiant.required" => "L'identifiant est requis",
             "identifiant.unique" => "Cet identifiant ne peut pas être utilisé",
             "identifiant.min" => "L'identifiant doit être plus grand que :min",
-            "identifiant.max" => "L'identifiant doit être plus petit que :min",
+            "identifiant.max" => "L'identifiant doit être plus petit que :max",
             "password.min" => "Le mot de passe doit avoir une longueur de :min caractères",
             "confirmation_password.same" => "Le mot de passe n'a pu être confirmé"
         ]);
@@ -110,7 +109,7 @@ class AdminEmployeController extends Controller
         if (!empty($valides["password"])) {
 
             $un_employe->password = Hash::make($valides["password"]);
-    }
+        }
 
         // Sauvegarder toutes les informations dans la BDD
         $un_employe->save();
@@ -122,11 +121,12 @@ class AdminEmployeController extends Controller
     }
 
     /**
-     * Undocumented function
+     * Suppression d'un employé
      *
-     * @return void
+     * @param int $id
+     * @return RedirectResponse
      */
-    public function destroy($id){
+    public function destroy(int $id){
 
         // Redirection si ce n'est pas un administrateur qui se connecte
         if(auth()->guard('employe')->user()->role_id !== 1) {

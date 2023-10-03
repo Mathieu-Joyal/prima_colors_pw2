@@ -19,7 +19,7 @@ class AdminUtilisateurController extends Controller
      */
     public function index(Request $request) {
 
-        // Mettre la requête de la recherche
+        // Allez chercher la requête de la recherche
         $requete = $request->input('user_recherche');
 
         // Initialise la recherche
@@ -37,6 +37,7 @@ class AdminUtilisateurController extends Controller
         // Récupérer les utilisateurs en fonction de la requête
         $users = $requete_user->get();
 
+        // Retourne la vue
         return view('admin.utilisateurs.index', [
             "users" => $users,
             "forfaits" => Forfait::all(),
@@ -47,14 +48,15 @@ class AdminUtilisateurController extends Controller
     /**
      * Affichage de la page de modification d'un utilisateur
      *
+     * @param id
      * @return View
      */
-    public function edit($id){
+    public function edit(int $id){
 
         // Retrouver les informations de l'utilisateur
         $user = User::find($id);
 
-        // Pass the user data to the edit view
+        // Retourne la vue
         return view('admin.utilisateurs.edit', [
             'user' => $user
         ]);
@@ -63,11 +65,13 @@ class AdminUtilisateurController extends Controller
     /**
      * Insertion de la modification de l'utilisateur
      *
+     * @param Request $request
+     * @param id
      * @return View
      */
     public function update(Request $request, $id){
 
-        // Retrieve the user by ID
+        // Récupérer l'utilisateur par son Id
         $user = User::find($id);
 
         // Validation
@@ -81,9 +85,9 @@ class AdminUtilisateurController extends Controller
             "confirmation_password" => "nullable|same:password"
         ],[
             "prenom.required" => "Le prénom est requis",
-            "prenom.max" => "Vous devez avoir un maximum de :max caractères",
+            "prenom.max" => "Le prénom doit avoir un maximum de :max caractères",
             "nom.required" => "Le nom est requis",
-            "nom.max" => "Vous devez avoir un maximum de :max caractères",
+            "nom.max" => "Le nom doit avoir un maximum de :max caractères",
             "email.required" => "Le courriel est requis",
             "email.email" => "Le courriel doit avoir un format valide",
             "email.unique" => "Ce courriel ne peut pas être utilisé",
@@ -123,9 +127,10 @@ class AdminUtilisateurController extends Controller
     /**
      * Suppression de l'utilisateur
      *
+     * @param int $id
      * @return View
      */
-    public function destroy($id){
+    public function destroy(int $id){
 
         // Section pour regarder si l'utilisateur à une réservation à son actif
         $user = User::find($id);
@@ -133,9 +138,8 @@ class AdminUtilisateurController extends Controller
 
         if ($reservations->count() > 0) {
             return redirect()->route('admin.utilisateurs.index')
-                ->with('error', "Vous ne pouvez supprimer un utilisateur qui à une ou plusieurs réservations à son nom.");
+                ->with('erreur', "Vous ne pouvez pas supprimer un utilisateur qui à une ou plusieurs réservations à son nom.");
         }
-
 
         // Supprimer l'utilisateur
         User::destroy($id);
@@ -143,6 +147,5 @@ class AdminUtilisateurController extends Controller
         // Redirection
         return redirect()->route('admin.utilisateurs.index')
             ->with('succes', "L'utilisateur a été supprimé");
-
     }
 }

@@ -15,6 +15,7 @@ class AdminAccueilController extends Controller
 
     $un_employe = auth()->guard('employe')->user();
 
+        // Retourne la vue
         return view('admin.index', [
 
             "un_employe" => $un_employe

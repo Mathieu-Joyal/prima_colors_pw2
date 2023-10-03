@@ -36,9 +36,10 @@ class ConnexionController extends Controller
 
         // Ajouter l'utilisateur à la session
         if(Auth::attempt($valides)){
+
             $request->session()->regenerate();
 
-            // Redirection s'il y a succes de la connexion
+            // Redirection s'il y a succès de la connexion
             return redirect()
                     ->intended(route('utilisateurs.index'))
                     ->with('succes', 'Vous êtes connectés!');
@@ -60,6 +61,7 @@ class ConnexionController extends Controller
      * @return RedirectResponse
      */
     public function deconnecter(Request $request) {
+
         Auth::logout();
 
         // Enlever l'utilisateur de la session
@@ -68,7 +70,7 @@ class ConnexionController extends Controller
 
         // Redirection
         return redirect()
-                ->route('connexion.create')
+                ->route('connexion.index')
                 ->with('succes', "Vous êtes déconnectés!");
     }
 }

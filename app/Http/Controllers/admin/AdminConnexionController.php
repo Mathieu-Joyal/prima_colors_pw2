@@ -15,6 +15,7 @@ class AdminConnexionController extends Controller
      */
     public function index() {
 
+        // Retourne la vue
         return view('auth.admin.connexion.index');
     }
 

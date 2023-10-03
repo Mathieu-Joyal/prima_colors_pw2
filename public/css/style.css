@@ -1482,9 +1482,6 @@ section.formulaire_recherche .bouton_liste_complete a:hover {
   border: 1px solid #eca6d9;
   padding: 1em 4em;
 }
-.administration .modification_mdp p {
-  color: #eeb15e;
-}
 
 .admin_reservation_conteneur_bouton button {
   font-size: inherit;
@@ -2043,6 +2040,10 @@ form button.supprimer {
 
 .alerte_succes p {
   color: #0b8a80;
+}
+
+.alerte_erreur p {
+  color: #df1f1f;
 }
 
 .petit {

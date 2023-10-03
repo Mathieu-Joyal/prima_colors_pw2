@@ -1,8 +1,8 @@
-@props(["cle"])
+@props(["cle", "attributes"])
 
 @if (session($cle))
 
-    <div class="alerte_succes">
+    <div {{ $attributes }}>
         <p>{{ session($cle) }}</p>
     </div>
 

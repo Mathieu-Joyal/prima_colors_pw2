@@ -478,8 +478,12 @@ h1.accueil_actualite {
 @import 'components/boutons/soumettre';
 @import 'components/boutons/accueil_admin';
 
-// Les alertes
+// Les messages
+// -- alertes succes
 @import "components/alertes/succes";
+// -- alertes erreur
+@import "components/alertes/erreur";
+
 
 // Countdown
 @import "components/countdown";

@@ -2,11 +2,12 @@
 
     <x-nav-admin titre="Les employés" route="{{ route('admin.employes.index') }}" valeur="Retour aux employes" />
 
-    <x-alertes.succes cle="succes" />
+    <x-alertes cle="succes" />
 
     <x-forms.formulaire_recherche
         route="{{ route('admin.employes.index') }}"
         placeholder="Recherchez un employé"
+        valeur="employés"
     />
 
     <div class="conteneur_admin">

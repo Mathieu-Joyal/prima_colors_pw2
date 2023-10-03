@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-// use App\Http\Middleware\Employe;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Employe;
 use App\Models\Forfait;
@@ -30,10 +29,13 @@ class AdminEnregistrementController extends Controller
             ->with('succes', 'Seul un administrateur peut créer un employé');
         }
 
+        // Récupère l'employé actuellement connecté
         $un_employe = auth()->guard('employe')->user();
 
+        // Récupération de tous les employés
         $employes = \App\Models\Employe::all();
 
+        // Retourne la vue
         return view('admin.employes.create', [
             "un_employe" => $un_employe,
             "employes" => $employes,

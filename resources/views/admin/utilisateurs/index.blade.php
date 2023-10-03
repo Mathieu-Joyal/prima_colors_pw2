@@ -1,26 +1,18 @@
 <x-layout titre="Bienvenue!">
 
-    {{-- <x-header /> --}}
+    <x-nav-admin
+        titre="Les Utilisateurs"
+        route="{{ route('admin.utilisateurs.index') }}"
+        valeur="Retour aux utilisateurs"
+    />
 
-    <x-nav-admin titre="Les Utilisateurs" route="{{ route('admin.utilisateurs.index') }}" valeur="Retour aux utilisateurs" />
-
-    {{-- <x-boutons.accueil_admin />
-
-    <x-boutons.deconnexion
-        route="{{ route('admin.deconnexion') }}"
-    /> --}}
-
-    <x-alertes.succes cle="succes" />
-
-    @if(session('error'))
-        <div class="">
-            {{ session('error') }}
-        </div>
-    @endif
+    <x-alertes cle="succes" class="alerte_succes"/>
+    <x-alertes cle="erreur" class="alerte_erreur" />
 
     <x-forms.formulaire_recherche
         route="{{ route('admin.utilisateurs.index') }}"
         placeholder="Recherchez un utilisateur"
+        valeur="utilisateurs"
     />
 
     <div class="conteneur_admin">

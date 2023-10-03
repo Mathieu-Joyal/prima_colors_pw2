@@ -4,15 +4,15 @@
 
     <h2>Connectez-vous</h2>
 
-    {{-- @if(session('email'))
-        <p>{{ session('email') }}</p>
-    @endif --}}
-
     <div class="conteneur_connexion">
 
         <section class="employe">
 
             <h2>Section employé</h2>
+
+            <div style="text-align: center">
+                <x-forms.erreur champ="erreur_connexion" />
+            </div>
 
             <form class="administration" action="{{ route('admin.connexion.authentifier') }}"
                     method="POST"
@@ -45,7 +45,6 @@
                         id="password"
                         name="password"
                         type="password"
-                        {{-- autocomplete="current-password" --}}
                         >
                     </div>
                     <x-forms.erreur champ="password" />
