@@ -36,8 +36,9 @@
                 </div>
             </article>
         @endforeach
+
     </section>
-    <x-ban_concours />
+    <x-bannieres.concours :url="url('img/concours/ours.jpg')" />
     <x-footer />
     <script>
         function voirPlus(event) {

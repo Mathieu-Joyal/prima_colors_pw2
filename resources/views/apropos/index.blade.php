@@ -13,6 +13,7 @@
                 <p>Milk kopi-luwak id dripper carajillo strong blue mountain ristretto, crema, whipped, macchiato dark aged, et breve, beans robusta id medium espresso shop. Plunger pot acerbic percolator cappuccino, cream id, sugar, affogato whipped white eu latte kopi-luwak cinnamon foam. Latte french press instant body, aroma wings milk, siphon at, lungo, chicory ristretto mug percolator shop white, saucer ut as siphon fair trade. Arabica, qui steamed, grinder plunger pot robusta froth macchiato galão mazagran extraction half and half turkish viennese whipped. Caramelization plunger pot, a to go, percolator at roast arabica in extraction latte decaffeinated beans. Fair trade, café au lait robust white, body, turkish acerbic, dripper, robusta qui, filter est instant strong sweet. Café au lait iced doppio aromatic coffee, single origin blue mountain pumpkin spice ut single origin americano brewed milk aged medium cappuccino redeye. Espresso at dark cappuccino grounds café au lait redeye ut eu dark caramelization americano filter. Aroma crema, caffeine, sugar americano, mug extra  french press, affogato café au lait body and lungo pumpkin spice macchiato whipped kopi-luwak caramelization as froth est cup redeye. Caffeine turkish blue mountain plunger pot cultivar so qui java, chicory body pumpkin spice ristretto sweet wings macchiato.</p>
             </article>
         </section>
+        <x-bannieres.concours :url="url('img/concours/umbrellas.png')" />
 
         <h2>nous joindre</h2>
 
@@ -39,7 +40,7 @@
             </div>
         </div>
 
-        <x-ban_concours />
+        <x-bannieres.billet />
 
     </div>
 

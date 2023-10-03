@@ -9,7 +9,7 @@
 
     <x-activites.jour :activites="$vendrediActivites" journee="vendredi" id="vendredi" />
 
-    <x-bannieres.concours />
+    <x-bannieres.concours :url="url('img/concours/mouth.png')" />
 
     <x-activites.jour :activites="$samediActivites" journee="samedi" id="samedi" />
 

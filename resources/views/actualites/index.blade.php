@@ -8,11 +8,11 @@
         <h1>ActualitÉs</h1>
         <x-actualites.actualite :actualites="$actualitesRecentes" annee="3" />
 
-        <x-banniere.concours/>
+        <x-bannieres.concours :url="url('img/concours/pink-wood.jpg')" />
 
         <x-actualites.actualite :actualites="$actualitesAnciennes" annee="2" />
 
-        <x-banniere.billet/>
+        <x-bannieres.billet/>
 
 
     <x-footer />
