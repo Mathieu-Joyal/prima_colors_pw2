@@ -12,8 +12,8 @@ class ConnexionController extends Controller
      *
      * @return View
      */
-    public function create() {
-        return view('auth.connexion.create');
+    public function index() {
+        return view('auth.connexion.index');
     }
 
     /**

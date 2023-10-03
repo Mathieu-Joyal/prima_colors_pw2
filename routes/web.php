@@ -61,8 +61,8 @@ Route::get('/forfaits', [ForfaitController::class, 'index'])
 // **** SECTION CONNEXION D'UN COMPTE UTILISATEUR ****** //
 //
 // Affichage de la page de connexion d'un compte utilisateur
-Route::get("/connexion", [ConnexionController::class, 'create'])
-    ->name('connexion.create')
+Route::get("/connexion", [ConnexionController::class, 'index'])
+    ->name('connexion.index')
     ->middleware('guest');
 
 // Traitement du formulaire de connexion du compte utilisateur
