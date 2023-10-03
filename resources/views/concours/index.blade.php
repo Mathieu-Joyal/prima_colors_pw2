@@ -1,6 +1,7 @@
 <x-layout titre="Festival Prima-Colors | CreARTive concours 2023">
 
     <x-header />
+    <x-hero image="img\hero\hero-concours.png" />
 
     <div class="conteneur_concours">
 
@@ -90,6 +91,7 @@
                 </ul>
             </div>
         </section>
+        <x-bannieres.concours :url="url('img/concours/ga.png')"  />
         <section class="description_concours concours_bg">
 
             <h2>prix</h2>
@@ -112,7 +114,10 @@
             </div>
         </section>
 
-        <x-ban_concours />
+
+
+        {{-- <x-bannieres.compte /> --}}
+        <x-bannieres.billet />
 
     </div>
 

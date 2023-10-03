@@ -71,7 +71,7 @@
         </div>
     </div>
 
-    <x-ban_concours />
+    <x-bannieres.concours :url="url('img/accueil/ban_concours.png')"/>
 
 
     <section class="section_actualites">
@@ -95,8 +95,8 @@
    
 
 
-    <x-ban_compte />
-    <x-ban_billet />
+    <x-bannieres.compte />
+    <x-bannieres.billet />
 
     <x-footer />
 

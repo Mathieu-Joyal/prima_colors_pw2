@@ -55,6 +55,7 @@
                 </p>
             </article>
         </section>
+        <x-bannieres.concours :url="url('img/concours/umbrellas.png')" />
 
         <h2>nous joindre</h2>
 
@@ -85,7 +86,7 @@
             </div>
         </div>
 
-        <x-ban_concours />
+        <x-bannieres.billet />
 
     </div>
 

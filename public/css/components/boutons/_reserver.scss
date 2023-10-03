@@ -8,7 +8,8 @@
     margin-bottom: 1rem;
     position: relative;
     left: 670px;
-
+    border: solid $rose 3px;
+    box-sizing: border-box;
     a {
         color: $noir;
         font-size: 1.5em;
@@ -21,8 +22,8 @@
     &:hover {
         background-color: $noir;
         transition: background-color, 0.3s;
-        border: solid $rose 2px;
-        box-sizing: border-box;
+        border: solid $rose 3px;
+
 
         a,
         span {
