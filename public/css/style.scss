@@ -16,6 +16,7 @@ h1 {
     color: $rose;
     font-size: 80px;
     margin-bottom: 0;
+    margin-left: 2rem;
 }
 
 h2 {
@@ -442,6 +443,7 @@ h1.accueil_actualite {
 @import "_ban-compte.scss";
 @import "_connexion.scss";
 @import "_ban-billet.scss";
+@import "_forfaits.scss";
 
 @import "_a-propos.scss";
 @import "_concours.scss";
@@ -469,6 +471,7 @@ h1.accueil_actualite {
 @import "components/nav.scss";
 @import "components/hero.scss";
 @import "components/boutons/gestion-actualites-activites";
+@import "components/boutons/reserver";
 
 //Les boutons
 @import 'components/boutons/deconnexion';

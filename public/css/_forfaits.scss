@@ -1,0 +1,62 @@
+h1.billetterie {
+    color: $jaune;
+}
+
+section.billetterie {
+
+    h3,
+    p {
+        color: $jaune;
+    }
+
+    span {
+        color: $jaune;
+        cursor: pointer;
+    }
+
+    article.conteneur-forfaits {
+        margin: auto;
+        max-width: 1000px;
+        margin-bottom: 3rem;
+    }
+
+    .conteneur-titre {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $jaune;
+
+        .fleche {
+            padding-top: 2rem;
+        }
+    }
+
+    .conteneur-description {
+        display: flex;
+
+        flex-direction: column;
+        border-bottom: 1px solid $jaune;
+
+        .conteneur-description-prix {
+            display: flex;
+            justify-content: space-between;
+
+            .description {
+                max-width: 850px;
+            }
+
+            .prix p {
+                font-size: 3.5em;
+            }
+        }
+
+    }
+
+    .conteneur-titre.border-visible {
+        border-bottom: none;
+    }
+
+    .conteneur-description.voir-plus {
+        display: none;
+    }
+
+}
