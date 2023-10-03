@@ -71,7 +71,7 @@
         </div>
     </div>
 
-    <x-ban_concours />
+    <x-bannieres.concours />
 
 
     <div class="section_actualites">
@@ -121,8 +121,8 @@
     </div>
 
 
-    <x-ban_compte />
-    <x-ban_billet />
+    <x-bannieres.compte />
+    <x-bannieres.billet />
 
     <x-footer />
 

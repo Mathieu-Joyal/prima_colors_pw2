@@ -1,0 +1,45 @@
+.section_concours {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 310px;
+}
+.section_concours img {
+    padding-top: 100px;
+}
+
+.carre_noir {
+    position: absolute;
+    margin-left: 4rem;
+    padding-left: 2rem;
+    top:0px;
+    width: 450px;
+    height: 310px;
+    background-color: $noir;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+}
+
+.carre_noir h1 {
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 95px;
+    z-index: 3;
+    color: $jaune;
+}
+
+.carre_noir h3 {
+    color: $jaune;
+    margin: 0px ;
+    font-size: 40px;
+    padding-bottom: 20px;
+    text-transform: none;
+    z-index: 3;
+}
+
+
+
+

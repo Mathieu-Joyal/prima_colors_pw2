@@ -1,0 +1,59 @@
+.btn-concours {
+    background-color: $noir;
+    color: $jaune;
+    cursor: pointer;
+    width: 350px;
+    height: 65px;
+    padding-right: 1em;
+    border: solid $jaune 3px;
+    box-sizing: border-box;
+    display: inline-block;
+
+    a {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    p {
+        color: $jaune;
+        margin: 0;
+        font-family: "pf-venue", sans-serif;
+        text-transform: uppercase;
+        padding-top: 12px;
+        padding-left: 10px;
+    }
+
+    .conteneur-span {
+        background-color: $jaune;
+        height: 30px;
+        width: 30px;
+        border-radius: 5px;
+        display: inline-block;
+        margin-top: 11px;
+        margin-right: 42px;
+
+        span {
+            color: $noir;
+            font-weight: 500;
+            font-size: 2em;
+        }
+    }
+
+    &:hover {
+        background-color: $jaune;
+        transition: background-color, 0.3s;
+        border: solid $jaune 3px;
+
+        p {
+            color: $noir;
+        }
+
+        .conteneur-span {
+            background-color: $noir;
+
+            span {
+                color: $jaune;
+            }
+        }
+    }
+}
