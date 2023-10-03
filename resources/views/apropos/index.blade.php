@@ -1,4 +1,4 @@
-<x-layout titre="Qui sommes-nous?">
+<x-layout titre="Festival Prima-Colors | Qui sommes-nous?">
 
     <x-header/>
 

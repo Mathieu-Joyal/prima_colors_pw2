@@ -1,4 +1,4 @@
-<x-layout titre="Les actualités">
+<x-layout titre="Festival Prima-Colors | Actualités">
 
     <x-header />
 

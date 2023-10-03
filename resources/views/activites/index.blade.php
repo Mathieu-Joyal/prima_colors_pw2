@@ -1,4 +1,4 @@
-<x-layout titre="Les activites">
+<x-layout titre="Festival Prima-Colors | Activites">
 
 
     <x-header />

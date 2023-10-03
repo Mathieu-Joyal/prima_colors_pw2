@@ -10,6 +10,7 @@
   padding-top: 150px;
   padding-bottom: 150px;
 }
+
 h1.accueil_actualite{
   color: $jaune;
   display: flex;
@@ -17,8 +18,7 @@ h1.accueil_actualite{
   text-align: left;
   padding-top: 0px;
   padding-bottom: 50px;
-  margin: 0px;
-    
+  margin: 0px;   
 }
 
 .titre_actualite{
@@ -26,8 +26,6 @@ h1.accueil_actualite{
   font-family: "pf-venue", sans-serif;
   font-size: 30px;
   padding-left: 30px;
-
-
 }
  
 a.vers_actualite {
@@ -45,10 +43,10 @@ a.vers_actualite {
   display: none;
   position: absolute;
   top: 100%;
-  left: 50%;
+  left: 0%;
   z-index: 5;
-  width: 150px;
-  height: 250px;
+  width: 200px;
+  height: 135px;
   object-fit: cover;
   transition: opacity 0.5s ease; 
 }
@@ -66,8 +64,7 @@ a.vers_actualite {
 
 .image {
   width: 150px;
-  height: 250px;
-  background-color: $jaune;
+  height: 150px;
   margin-top: 20px;
   display: none; 
 }

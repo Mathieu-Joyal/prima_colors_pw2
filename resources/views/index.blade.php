@@ -74,51 +74,25 @@
     <x-ban_concours />
 
 
-    <div class="section_actualites">
+    <section class="section_actualites">
         <h1 class="accueil_actualite">ActualitÉs de nos Éditions antÉrieures</h1>
-        <div class="titre_actualite">
-            <a href="/actualites" class="vers_actualite">
-                <span>Vibrations Urbaines 2</span>
-                <img src="../img/actualites/1.png" alt="">
-            </a>
-            <a href="/actualites" class="vers_actualite">
-                <span> Nouvelle Édition Explosive de "Vibrations Urbaines</span>
-                <img src="../img/actualites/2.png" alt="">
-            </a>
-            <a href="/actualites" class="vers_actualite">
-                <span>Ateliers Artistiques et Éducatifs</span>
-                <img src="../img/actualites/3.png" alt="">
-            </a>
-            <a href="/actualites" class="vers_actualite">
-                <span>Nos Artistes et Musiciens</span>
-                <img src="../img/actualites/4.png" alt="">
-            </a>
-            <a href="/actualites" class="vers_actualite">
-                <span>Artistes Internationaux Confirmés</span>
-                <img src="../img/actualites/5.png" alt="">
-            </a>
-            <a href="/actualites" class="vers_actualite">
-                <span>Innovation Technologique au Service de l'Art Urbain</span>
-                <img src="../img/actualites/6.jpg" alt="">
-            </a>
-            <a href="/actualites" class="vers_actualite">
-                <span>Événements Spéciaux en Soirée qui ont Enflammé la Nuit</span>
-                <img src="../img/actualites/7.png" alt="">
-            </a>
-            <a href="/actualites" class="vers_actualite">
-                <span>Fusion Culturelle Exceptionnelle</span>
-                <img src="../img/actualites/8.png" alt="">
-            </a>
-            <a href="/actualites" class="vers_actualite">
-                <span>Programme Musical</span>
-                <img src="../img/actualites/9.png" alt="">
-            </a>
-        </div>
+        <article class="titre_actualite">
+
+            @foreach ($actualites as $actualite)
+           
+                <a href="/actualites" class="vers_actualite">
+                    <span>{{$actualite->titre}}</span>
+                    <img src="../{{$actualite->image}}" alt="{{$actualite->titre}}">
+                </a>
+
+            @endforeach
+ 
+            </article>
         <div class="images">
             <div class="image"></div>
         </div>
-    </div>
-    </div>
+    </section>
+   
 
 
     <x-ban_compte />
