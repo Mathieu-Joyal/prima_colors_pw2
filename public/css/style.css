@@ -501,7 +501,6 @@ section.conteneur-activites .activites.visible {
 }
 
 button.voir.activite {
-  margin-bottom: 4em;
   margin-top: 2em;
 }
 
@@ -871,7 +870,7 @@ a.compte {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 340px;
+  height: 310px;
   margin-top: 100px;
   margin-bottom: 100px;
 }
@@ -886,7 +885,7 @@ a.compte {
   padding-right: 15px;
   margin-left: 150px;
   width: 90px;
-  height: 340px;
+  height: 310px;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -905,7 +904,7 @@ a.compte {
   transform-origin: center;
   position: absolute;
   top: -20%;
-  left: -35%;
+  left: -6%;
   width: 100%;
   height: 100%;
   display: flex;
@@ -938,21 +937,17 @@ a.compte {
 .forfaits .material-icons {
   font-size: 50px;
   color: #030303;
-  vertical-align: middle; /* Aligner verticalement au centre */
+  vertical-align: middle;
+  /* Aligner verticalement au centre */
   left: 9%;
   padding-left: 20px;
 }
 
-.bg_billet {
-  float: right;
-  font-family: "pf-venue", sans-serif;
-  font-size: 40px;
-  text-decoration: none;
-  font-weight: bold;
-  background-color: rgba(236, 166, 217, 0.8);
-  padding: 10px 60px;
-  margin-top: 250px;
-  margin-right: 50px;
+.reserver.banniere {
+  position: relative;
+  left: 1350px;
+  top: 215px;
+  right: 0px;
 }
 
 h1.billetterie {
@@ -1964,6 +1959,8 @@ form button.supprimer {
   margin-bottom: 1rem;
   position: relative;
   left: 670px;
+  border: solid #eca6d9 3px;
+  box-sizing: border-box;
 }
 .reserver a {
   color: #030303;
@@ -1975,8 +1972,7 @@ form button.supprimer {
 .reserver:hover {
   background-color: #030303;
   transition: background-color, 0.3s;
-  border: solid #eca6d9 2px;
-  box-sizing: border-box;
+  border: solid #eca6d9 3px;
 }
 .reserver:hover a,
 .reserver:hover span {
