@@ -38,9 +38,15 @@
     <div class="info">
         <p class="adresse">Prima-Colors@info.ca</p>
         <p class="telephone">514-612-3636</p>
-        <img src="img/reseau/facebook/f_logo_RGB-Black_58.png" alt="" class="reseau-img">
-        <img src="img/reseau/instagram/Instagram_Glyph_Black.png" alt="" class="reseau-img">
-        <img src="img/reseau/youtube/okyoutube_social_icon_dark.png" alt="" class="reseau-img">
+        <a href="https://www.facebook.com/">
+            <img src="img/reseau/facebook/f_logo_RGB-Black_58.png" alt="" class="reseau-img-footer">
+        </a>
+        <a href="https://www.instagram.com/">
+            <img src="img/reseau/instagram/Instagram_Glyph_Black.png" alt="" class="reseau-img-footer">
+        </a>
+        <a href="https://www.youtube.com/">
+            <img src="img/reseau/youtube/okyoutube_social_icon_dark.png" alt="" class="reseau-img-footer">
+        </a>
     </div>
 
 </div>

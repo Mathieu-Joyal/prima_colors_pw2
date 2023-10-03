@@ -1665,6 +1665,17 @@ form.la_recherche button {
   line-height: 1em;
   display: flex;
   align-items: center;
+  position: relative;
+}
+
+.contenu_footer .item_footer::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 3px;
+  background-color: transparent;
+  position: absolute;
+  left: -3px;
 }
 
 .contenu_footer .item_footer .menu_footer {
@@ -1687,9 +1698,14 @@ form.la_recherche button {
   border-right: none;
 }
 
-.menu_footer .item_footer:hover {
+.contenu_footer .item_footer:hover {
   background-color: #eca6d9;
   transition: width 0.2s ease;
+  transition: background-color 1s ease-out;
+}
+
+.contenu_footer .item_footer:hover::before {
+  background-color: #eca6d9;
   transition: background-color 1s ease-out;
 }
 
@@ -1726,7 +1742,11 @@ p.slogan {
   border-right: 3px solid #eca6d9;
 }
 
-.info:last-child {
+.info {
+  border-right: none;
+}
+
+.info a:last-child img {
   border-right: none;
 }
 
@@ -1790,6 +1810,17 @@ p.adresse:hover {
   line-height: 1em;
   display: flex;
   align-items: center;
+  position: relative;
+}
+
+.menu_nav .item_nav::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 3px;
+  background-color: transparent;
+  position: absolute;
+  left: -3px;
 }
 
 .menu_nav .item_nav .nav {
@@ -1815,6 +1846,11 @@ p.adresse:hover {
 .menu_nav .item_nav:hover {
   background-color: #eca6d9;
   transition: width 0.2s ease;
+  transition: background-color 1s ease-out;
+}
+
+.menu_nav .item_nav:hover::before {
+  background-color: #eca6d9;
   transition: background-color 1s ease-out;
 }
 
