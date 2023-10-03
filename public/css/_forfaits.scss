@@ -32,15 +32,25 @@ section.billetterie {
 
     .conteneur-description {
         display: flex;
-        justify-content: space-between;
+
+        flex-direction: column;
         border-bottom: 1px solid $jaune;
-        .description {
-            max-width: 850px;
+
+        .conteneur-description-prix {
+            display: flex;
+            justify-content: space-between;
+
+            .description {
+                max-width: 850px;
+            }
+
+            .prix p {
+                font-size: 3.5em;
+            }
         }
-        .prix p {
-            font-size: 3.5em;
-        }
+
     }
+
     .conteneur-titre.border-visible {
         border-bottom: none;
     }
@@ -48,4 +58,5 @@ section.billetterie {
     .conteneur-description.voir-plus {
         display: none;
     }
+
 }

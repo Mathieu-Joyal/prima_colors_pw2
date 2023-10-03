@@ -1,0 +1,33 @@
+.reserver {
+    background-color: $rose;
+    color: $noir;
+    cursor: pointer;
+    width: 325px;
+    height: 65px;
+    text-align: center;
+    margin-bottom: 1rem;
+    position: relative;
+    left: 670px;
+
+    a {
+        color: $noir;
+        font-size: 1.5em;
+        font-family: "pf-venue", sans-serif;
+        text-transform: uppercase;
+        padding-top: 0.6rem;
+
+    }
+
+    &:hover {
+        background-color: $noir;
+        transition: background-color, 0.3s;
+        border: solid $rose 2px;
+        box-sizing: border-box;
+
+        a,
+        span {
+            color: $rose;
+        }
+
+    }
+}

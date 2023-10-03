@@ -982,13 +982,17 @@ section.billetterie .conteneur-titre .fleche {
 }
 section.billetterie .conteneur-description {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   border-bottom: 1px solid #eeb15e;
 }
-section.billetterie .conteneur-description .description {
+section.billetterie .conteneur-description .conteneur-description-prix {
+  display: flex;
+  justify-content: space-between;
+}
+section.billetterie .conteneur-description .conteneur-description-prix .description {
   max-width: 850px;
 }
-section.billetterie .conteneur-description .prix p {
+section.billetterie .conteneur-description .conteneur-description-prix .prix p {
   font-size: 3.5em;
 }
 section.billetterie .conteneur-titre.border-visible {
@@ -1948,6 +1952,35 @@ form button.supprimer {
   border-radius: 0;
   padding: 0;
   padding-top: 10px;
+}
+
+.reserver {
+  background-color: #eca6d9;
+  color: #030303;
+  cursor: pointer;
+  width: 325px;
+  height: 65px;
+  text-align: center;
+  margin-bottom: 1rem;
+  position: relative;
+  left: 670px;
+}
+.reserver a {
+  color: #030303;
+  font-size: 1.5em;
+  font-family: "pf-venue", sans-serif;
+  text-transform: uppercase;
+  padding-top: 0.6rem;
+}
+.reserver:hover {
+  background-color: #030303;
+  transition: background-color, 0.3s;
+  border: solid #eca6d9 2px;
+  box-sizing: border-box;
+}
+.reserver:hover a,
+.reserver:hover span {
+  color: #eca6d9;
 }
 
 .deconnexion form {

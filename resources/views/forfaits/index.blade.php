@@ -22,20 +22,24 @@
 
                 </div>
                 <div class="conteneur-description voir-plus">
-                    <div class="description">
-                        <p>{{ $forfait->description }}</p>
+                    <div class="conteneur-description-prix">
+                        <div class="description">
+                            <p>{{ $forfait->description }}</p>
+                        </div>
+                        <div class="prix">
+                            <p>{{ $forfait->prix }}$
+                            </p>
+                        </div>
                     </div>
-                    <div class="prix">
-                        <p>{{ $forfait->prix }}$
-                        </p>
-                    </div>
+                    <x-boutons.reserver/>
+
                 </div>
             </article>
         @endforeach
     </section>
     <x-ban_concours />
     <x-footer />
- <script>
+    <script>
         function voirPlus(event) {
             const description = event.target.closest('.conteneur-forfaits')
                 .querySelector('.conteneur-description');
