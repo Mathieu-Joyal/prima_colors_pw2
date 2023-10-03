@@ -43,16 +43,18 @@ a.vers_actualite {
   display: none;
   position: absolute;
   top: 100%;
-  left: 0%;
+  left: 50%;
   z-index: 5;
   width: 200px;
   height: 135px;
   object-fit: cover;
-  transition: opacity 0.5s ease; 
+  transform: translateX(-50%);
 }
 
 .titre_actualite a.vers_actualite:hover img {
   display: block;
+
+
   
 }
 

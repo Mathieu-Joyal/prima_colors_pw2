@@ -66,48 +66,28 @@ p.slogan {
   font-size: 54px;
 }
 
-.info {
+.info, .info p.adresse, .info p.telephone, .info img{
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  p.adresse, p.telephone {
     text-decoration: none;
     transition: text-decoration 0.3s ease;
     cursor: pointer;
-    margin-left: 50px;
-    font-size: 36px;
+    margin-left: 30px;
+    padding-right: 150px;
+    font-size: 24px;
     color: $noir;
     font-weight: bold ;
-    border-right: 3px solid $rose;
-    padding-right: 260px;
-   
-   
-   
+    border-right: 3px solid $rose; 
+  }
+
+  .info:last-child{
+    border-right: none;
   }
 
   p.adresse:hover {
     text-decoration: underline;
   }
-
-  .reseau {
-    display: flex;
-    justify-content: flex-end;
-    gap: 50px;
-    margin-right: 30px;
-  }
-
-  .reseau-img {
-    margin-right: 30px;
-    border-right: 3px solid $rose;
-    padding-right: 40px;
-  padding-left: 10px;
-  }
-
-  .reseau-img:last-child {
-    border-right: none
-  }
-}
 
 .copyright {
   text-align: center;
