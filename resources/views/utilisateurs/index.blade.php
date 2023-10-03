@@ -6,9 +6,7 @@
 
     <div class="conteneur-utilisateur">
 
-        <x-boutons.deconnexion
-            route="{{ route('deconnexion.user') }}"
-        />
+        <x-boutons.deconnexion routeDeconnexion="{{ route('deconnexion') }}" />
 
         <h2>
             Bonjour {{ $user->prenom }} {{ $user->nom }}!

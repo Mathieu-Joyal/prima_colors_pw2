@@ -72,7 +72,7 @@ Route::post("/connexion", [ConnexionController::class, 'authentifier'])
 
 // Traitement de la déconnexion du compte utilisateur
 Route::post("/deconnexion", [ConnexionController::class, 'deconnecter'])
-    ->name('deconnexion.user')
+    ->name('deconnexion')
     ->middleware('auth');
 
 
