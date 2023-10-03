@@ -4,6 +4,13 @@
         margin: 2em 1em 0 2em;
     }
 
+    p.titre {
+        text-transform: capitalize;
+        margin: 0;
+        padding: 0;
+        color: $jaune;
+    }
+
     .conteneur_nous_joindre {
         display: flex;
         justify-content: center;
@@ -15,21 +22,12 @@
             padding: 0 1em;
 
             h3 {
-                color: orange;
+                color: $jaune;
                 margin: 0 0 1rem 0;
             }
-
-            p {
-                text-transform: capitalize;
-                margin: 0;
-                padding: 0;
-            }
-
             .contact {
                 margin: 1em 0 0 0 ;
             }
-
-
         }
 
         .conteneur_map {

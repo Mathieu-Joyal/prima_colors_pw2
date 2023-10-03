@@ -1005,6 +1005,12 @@ section.billetterie .conteneur-description.voir-plus {
 .conteneur-a_propos h2 {
   margin: 2em 1em 0 2em;
 }
+.conteneur-a_propos p.titre {
+  text-transform: capitalize;
+  margin: 0;
+  padding: 0;
+  color: #eeb15e;
+}
 .conteneur-a_propos .conteneur_nous_joindre {
   display: flex;
   justify-content: center;
@@ -1016,13 +1022,8 @@ section.billetterie .conteneur-description.voir-plus {
   padding: 0 1em;
 }
 .conteneur-a_propos .conteneur_nous_joindre .conteneur_texte h3 {
-  color: orange;
+  color: #eeb15e;
   margin: 0 0 1rem 0;
-}
-.conteneur-a_propos .conteneur_nous_joindre .conteneur_texte p {
-  text-transform: capitalize;
-  margin: 0;
-  padding: 0;
 }
 .conteneur-a_propos .conteneur_nous_joindre .conteneur_texte .contact {
   margin: 1em 0 0 0;
@@ -1634,9 +1635,9 @@ form.la_recherche button {
 }
 
 .contenu {
-  background-color: #0b8a80;
-  width: 100%;
   position: relative;
+  width: 100%;
+  background-color: #0b8a80;
 }
 
 .contenu_footer {
@@ -1651,22 +1652,28 @@ form.la_recherche button {
 }
 
 .menu_footer {
+  display: flex;
   flex-direction: row;
-  top: 25px;
+  align-items: center;
+  top: 0px;
+  height: 70px;
 }
 
-.item_footer .menu_footer {
+.contenu_footer .item_footer {
   text-decoration: none;
+  height: 70px;
   line-height: 1em;
+  display: flex;
+  align-items: center;
 }
 
 .contenu_footer .item_footer .menu_footer {
   display: flex;
   align-items: center;
   padding-right: 70px;
-  padding-left: 70px;
-  height: 60px;
-  font-size: 40px;
+  padding-left: 80px;
+  height: 50px;
+  font-size: 35px;
   font-family: "pf-venue", sans-serif;
   text-transform: uppercase;
   color: white;
@@ -1680,7 +1687,7 @@ form.la_recherche button {
   border-right: none;
 }
 
-.contenu_footer .item_footer:hover .menu_footer {
+.menu_footer .item_footer:hover {
   background-color: #eca6d9;
   transition: width 0.2s ease;
   transition: background-color 1s ease-out;
@@ -1689,6 +1696,7 @@ form.la_recherche button {
 .logo {
   margin-left: 365px;
   margin-top: 60px;
+  z-index: 2;
 }
 
 p.slogan {
@@ -1698,7 +1706,10 @@ p.slogan {
   font-size: 54px;
 }
 
-.info, .info p.adresse, .info p.telephone, .info img {
+.info,
+.info p.adresse,
+.info p.telephone,
+.info img {
   display: flex;
   justify-content: space-between;
   align-items: center;
