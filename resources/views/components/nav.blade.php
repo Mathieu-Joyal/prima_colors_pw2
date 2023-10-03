@@ -6,7 +6,7 @@
     </a>
     <div class="contenu_nav">
         <img src="img/logo/logo-header.svg" alt="" class="logo-nav">
-        
+
         <div class="menu_nav">
             <a href="/" class="item_nav">
                 <div class="nav">Accueil
@@ -35,9 +35,15 @@
         </a>
 
         <div class="reseau">
-            <img src="img/reseau/facebook/f_logo_RGB-Black_58.png" alt="" class="reseau-img">
-            <img src="img/reseau/instagram/Instagram_Glyph_Black.png" alt="" class="reseau-img">
-            <img src="img/reseau/youtube/okyoutube_social_icon_dark.png" alt="" class="reseau-img">
+            <a href="https://www.facebook.com/">
+                <img src="img/reseau/facebook/f_logo_RGB-Black_58.png" alt="" class="reseau-img">
+            </a>
+            <a href="https://www.instagram.com/">
+                <img src="img/reseau/instagram/Instagram_Glyph_Black.png" alt="" class="reseau-img">
+            </a>
+            <a href="https://www.youtube.com/">
+                <img src="img/reseau/youtube/okyoutube_social_icon_dark.png" alt="" class="reseau-img">
+            </a>
         </div>
     </div>
 

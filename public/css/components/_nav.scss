@@ -49,6 +49,18 @@ text-decoration:none;
    line-height: 1em;
    display: flex;
    align-items: center;
+   position: relative;
+}
+
+.menu_nav .item_nav::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 3px;
+    background-color: transparent;
+    position: absolute;
+    left: -3px;
+
 }
 
 .menu_nav .item_nav .nav {
@@ -79,6 +91,11 @@ text-decoration:none;
     -o-transition: background-color 1s ease-out;
     transition: background-color 1s ease-out;
 }
+
+.menu_nav .item_nav:hover::before {
+    background-color: $rose;
+    transition: background-color 1s ease-out;    
+} 
 
 a.billet{
     height: 270px;

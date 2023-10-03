@@ -683,6 +683,99 @@ section.conteneur-actualites .bordure.actualites {
     display: none !important;
   }
 }
+<<<<<<< HEAD
+.section_billet {
+  position: relative;
+  background-image: url("../img/accueil/ban_billet.png");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 340px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.section_billet img {
+  padding-top: 100px;
+}
+
+.rectangle_blanc {
+  position: absolute;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 150px;
+  width: 90px;
+  height: 340px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.rectangle_blanc h1 {
+  color: #030303;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+  font-size: 95px;
+  writing-mode: vertical-rl;
+  text-orientation: sideways-right;
+  transform: rotate(180deg);
+  transform-origin: center;
+  position: absolute;
+  top: -20%;
+  left: -7%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.rectangle_blanc .forfaits {
+  font-size: 32px;
+  text-decoration: none;
+  color: #eeb15e;
+  font-weight: bold;
+  z-index: 3;
+  border: 3px solid #eeb15e;
+  padding: 10px 50px;
+  text-align: right;
+}
+
+.rectangle_blanc .forfaits i {
+  color: #eeb15e;
+}
+
+.forfaits {
+  font-family: "pf-venue", sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+  color: #030303;
+}
+
+.forfaits .material-icons {
+  font-size: 50px;
+  color: #030303;
+  vertical-align: middle;
+  left: 9%;
+  padding-left: 20px;
+}
+
+.bg_billet {
+  float: right;
+  font-family: "pf-venue", sans-serif;
+  font-size: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: rgba(236, 166, 217, 0.8);
+  padding: 10px 60px;
+  margin-top: 250px;
+  margin-right: 50px;
+}
+
+=======
+>>>>>>> origin/main
 h1.billetterie {
   color: #eeb15e;
 }
@@ -733,6 +826,12 @@ section.billetterie .conteneur-description.voir-plus {
 .conteneur-a_propos h2 {
   margin: 2em 1em 0 2em;
 }
+.conteneur-a_propos p.titre {
+  text-transform: capitalize;
+  margin: 0;
+  padding: 0;
+  color: #eeb15e;
+}
 .conteneur-a_propos .conteneur_nous_joindre {
   display: flex;
   justify-content: center;
@@ -744,13 +843,8 @@ section.billetterie .conteneur-description.voir-plus {
   padding: 0 1em;
 }
 .conteneur-a_propos .conteneur_nous_joindre .conteneur_texte h3 {
-  color: orange;
+  color: #eeb15e;
   margin: 0 0 1rem 0;
-}
-.conteneur-a_propos .conteneur_nous_joindre .conteneur_texte p {
-  text-transform: capitalize;
-  margin: 0;
-  padding: 0;
 }
 .conteneur-a_propos .conteneur_nous_joindre .conteneur_texte .contact {
   margin: 1em 0 0 0;
@@ -844,11 +938,11 @@ a.vers_actualite {
   top: 100%;
   left: 50%;
   z-index: 5;
-  width: 150px;
-  height: 250px;
+  width: 200px;
+  height: 135px;
   -o-object-fit: cover;
      object-fit: cover;
-  transition: opacity 0.5s ease;
+  transform: translateX(-50%);
 }
 
 .titre_actualite a.vers_actualite:hover img {
@@ -863,8 +957,7 @@ a.vers_actualite {
 
 .image {
   width: 150px;
-  height: 250px;
-  background-color: #eeb15e;
+  height: 150px;
   margin-top: 20px;
   display: none;
 }
@@ -1363,9 +1456,9 @@ form.la_recherche button {
 }
 
 .contenu {
-  background-color: #0b8a80;
-  width: 100%;
   position: relative;
+  width: 100%;
+  background-color: #0b8a80;
 }
 
 .contenu_footer {
@@ -1380,22 +1473,39 @@ form.la_recherche button {
 }
 
 .menu_footer {
+  display: flex;
   flex-direction: row;
-  top: 25px;
+  align-items: center;
+  top: 0px;
+  height: 70px;
 }
 
-.item_footer .menu_footer {
+.contenu_footer .item_footer {
   text-decoration: none;
+  height: 70px;
   line-height: 1em;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.contenu_footer .item_footer::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 3px;
+  background-color: transparent;
+  position: absolute;
+  left: -3px;
 }
 
 .contenu_footer .item_footer .menu_footer {
   display: flex;
   align-items: center;
   padding-right: 70px;
-  padding-left: 70px;
-  height: 60px;
-  font-size: 40px;
+  padding-left: 80px;
+  height: 50px;
+  font-size: 35px;
   font-family: "pf-venue", sans-serif;
   text-transform: uppercase;
   color: white;
@@ -1409,15 +1519,21 @@ form.la_recherche button {
   border-right: none;
 }
 
-.contenu_footer .item_footer:hover .menu_footer {
+.contenu_footer .item_footer:hover {
   background-color: #eca6d9;
   transition: width 0.2s ease;
+  transition: background-color 1s ease-out;
+}
+
+.contenu_footer .item_footer:hover::before {
+  background-color: #eca6d9;
   transition: background-color 1s ease-out;
 }
 
 .logo {
   margin-left: 365px;
   margin-top: 60px;
+  z-index: 2;
 }
 
 p.slogan {
@@ -1427,41 +1543,36 @@ p.slogan {
   font-size: 54px;
 }
 
-.info {
+.info,
+.info p.adresse,
+.info p.telephone,
+.info img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.info p.adresse, .info p.telephone {
   text-decoration: none;
   transition: -webkit-text-decoration 0.3s ease;
   transition: text-decoration 0.3s ease;
   transition: text-decoration 0.3s ease, -webkit-text-decoration 0.3s ease;
   cursor: pointer;
-  margin-left: 50px;
-  font-size: 36px;
+  margin-left: 30px;
+  padding-right: 150px;
+  font-size: 24px;
   color: #030303;
   font-weight: bold;
   border-right: 3px solid #eca6d9;
-  padding-right: 260px;
 }
-.info p.adresse:hover {
-  text-decoration: underline;
-}
-.info .reseau {
-  display: flex;
-  justify-content: flex-end;
-  gap: 50px;
-  margin-right: 30px;
-}
-.info .reseau-img {
-  margin-right: 30px;
-  border-right: 3px solid #eca6d9;
-  padding-right: 40px;
-  padding-left: 10px;
-}
-.info .reseau-img:last-child {
+
+.info {
   border-right: none;
+}
+
+.info a:last-child img {
+  border-right: none;
+}
+
+p.adresse:hover {
+  text-decoration: underline;
 }
 
 .copyright {
@@ -1520,6 +1631,17 @@ p.slogan {
   line-height: 1em;
   display: flex;
   align-items: center;
+  position: relative;
+}
+
+.menu_nav .item_nav::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 3px;
+  background-color: transparent;
+  position: absolute;
+  left: -3px;
 }
 
 .menu_nav .item_nav .nav {
@@ -1545,6 +1667,11 @@ p.slogan {
 .menu_nav .item_nav:hover {
   background-color: #eca6d9;
   transition: width 0.2s ease;
+  transition: background-color 1s ease-out;
+}
+
+.menu_nav .item_nav:hover::before {
+  background-color: #eca6d9;
   transition: background-color 1s ease-out;
 }
 

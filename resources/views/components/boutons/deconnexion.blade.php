@@ -1,4 +1,5 @@
 @props(["routeDeconnexion"])
+
 <div class="deconnexion">
 
     <form action="{{ $routeDeconnexion }}" method="POST">
