@@ -1,4 +1,4 @@
-<x-layout titre="Bienvenue!">
+<x-layout titre="Festival Prima-Colors | Mon compte: Bienvenue!">
 
     <x-header />
 

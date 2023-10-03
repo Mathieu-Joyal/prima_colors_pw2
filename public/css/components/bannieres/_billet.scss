@@ -4,9 +4,9 @@
     background-size: cover;
     background-position: center;
     width: 100%;
-    height:340px;
-   margin-top:100px;
-   margin-bottom: 100px;
+    height: 310px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .section_billet img {
@@ -19,7 +19,7 @@
     padding-right: 15px;
     margin-left: 150px;
     width: 90px;
-    height: 340px;
+    height: 310px;
     background-color: $blanc;
     display: flex;
     flex-direction: column;
@@ -38,10 +38,14 @@
     transform-origin: center;
     position: absolute;
     top: -20%;
-    left: -35%;
+<<<<<<< HEAD:public/css/_ban-billet.scss
+    left: -7%;
+=======
+    left: -6%;
+>>>>>>> origin/main:public/css/components/bannieres/_billet.scss
     width: 100%;
     height: 100%;
-    display: flex; 
+    display: flex;
 }
 
 .rectangle_blanc .forfaits {
@@ -71,11 +75,17 @@
 .forfaits .material-icons {
     font-size: 50px;
     color: $noir;
-    vertical-align: middle; /* Aligner verticalement au centre */
+<<<<<<< HEAD:public/css/_ban-billet.scss
+    vertical-align: middle; 
+=======
+    vertical-align: middle;
+    /* Aligner verticalement au centre */
+>>>>>>> origin/main:public/css/components/bannieres/_billet.scss
     left: 9%;
     padding-left: 20px;
 }
 
+<<<<<<< HEAD:public/css/_ban-billet.scss
 .bg_billet {
     float: right;
     font-family: "pf-venue", sans-serif;
@@ -86,5 +96,23 @@
     padding: 10px 60px;
     margin-top:250px;
     margin-right: 50px;  
-  
+=======
+// .bg_billet {
+//     float: right;
+//     font-family: "pf-venue", sans-serif;
+//     font-size: 40px;
+//     text-decoration: none;
+//     font-weight: bold;
+//     background-color: rgba($rose, 0.8);
+//     padding: 10px 60px;
+//     margin-top:250px;
+//     margin-right: 50px;
+
+// }
+.reserver.banniere {
+    position: relative;
+    left: 1350px;
+    top: 215px;
+    right: 0px;
+>>>>>>> origin/main:public/css/components/bannieres/_billet.scss
 }

@@ -1,4 +1,4 @@
-<x-layout titre="La billetterie Prima-colors">
+<x-layout titre="Festival Prima-Colors | Billetterie">
 
     <x-header />
     <x-hero image="img\hero\hero-forfaits.png" />
@@ -36,8 +36,9 @@
                 </div>
             </article>
         @endforeach
+
     </section>
-    <x-ban_concours />
+    <x-bannieres.concours :url="url('img/concours/ours.jpg')" />
     <x-footer />
     <script>
         function voirPlus(event) {

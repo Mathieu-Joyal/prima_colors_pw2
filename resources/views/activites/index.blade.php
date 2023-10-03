@@ -1,4 +1,4 @@
-<x-layout titre="Les activites">
+<x-layout titre="Festival Prima-Colors | Activites">
 
 
     <x-header />
@@ -9,15 +9,15 @@
 
     <x-activites.jour :activites="$vendrediActivites" journee="vendredi" id="vendredi" />
 
-    <x-ban_concours />
+    <x-bannieres.concours :url="url('img/concours/mouth.png')" />
 
     <x-activites.jour :activites="$samediActivites" journee="samedi" id="samedi" />
 
-    <x-ban_compte />
+    <x-bannieres.compte />
 
     <x-activites.jour :activites="$dimancheActivites" journee="dimanche" id="dimanche" />
 
-    <x-ban_billet />
+    <x-bannieres.billet />
 
     <x-footer />
 

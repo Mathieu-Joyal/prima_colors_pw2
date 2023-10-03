@@ -12,9 +12,15 @@ section.hero {
         height: 400px;
     }
 
-    .compteur.petit{
+    .reserver.hero {
         position: relative;
-        bottom: 220px;
-        left: 1200px;
+        top: -124px;
+        left: 1344px;
+    }
+
+    .compteur.petit {
+        position: relative;
+        top: -316px;
+        left: 24px;
     }
 }

@@ -1,7 +1,7 @@
 .contenu {
-  background-color: $vert;
-  width: 100%;
   position: relative;
+  width: 100%;
+  background-color: $vert;
 }
 
 .contenu_footer {
@@ -16,22 +16,42 @@
 }
 
 .menu_footer {
+  display: flex;
   flex-direction: row;
-  top: 25px;
+  align-items: center;
+  top: 0px;
+  height: 70px;
 }
 
-.item_footer .menu_footer {
-  text-decoration: none;
+
+
+.contenu_footer .item_footer  {
+  text-decoration:none;
+  height: 70px;
   line-height: 1em;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.contenu_footer .item_footer::before {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 3px;
+  background-color: transparent;
+  position: absolute;
+  left: -3px;
+
 }
 
 .contenu_footer .item_footer .menu_footer {
   display: flex;
   align-items: center;
   padding-right: 70px;
-  padding-left: 70px;
-  height: 60px;
-  font-size: 40px;
+  padding-left: 80px;
+  height: 50px;
+  font-size: 35px;
   font-family: "pf-venue", sans-serif;
   text-transform: uppercase;
   color: $blanc;
@@ -45,7 +65,7 @@
   border-right: none;
 }
 
-.contenu_footer .item_footer:hover .menu_footer {
+.contenu_footer .item_footer:hover  {
   background-color: $rose;
   transition: width 0.2s ease;
   -webkit-transition: background-color 1s ease-out;
@@ -54,9 +74,16 @@
   transition: background-color 1s ease-out;
 }
 
+
+.contenu_footer .item_footer:hover::before {
+  background-color: $rose;
+  transition: background-color 1s ease-out;    
+} 
+
 .logo {
   margin-left: 365px;
   margin-top: 60px;
+  z-index: 2;
 }
 
 p.slogan {
@@ -66,47 +93,35 @@ p.slogan {
   font-size: 54px;
 }
 
-.info {
+.info,
+.info p.adresse,
+.info p.telephone,
+.info img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-decoration: none;
+  transition: text-decoration 0.3s ease;
+  cursor: pointer;
+  margin-left: 30px;
+  padding-right: 150px;
+  font-size: 24px;
+  color: $noir;
+  font-weight: bold;
+  border-right: 3px solid $rose;
+}
 
-  p.adresse, p.telephone {
-    text-decoration: none;
-    transition: text-decoration 0.3s ease;
-    cursor: pointer;
-    margin-left: 50px;
-    font-size: 36px;
-    color: $noir;
-    font-weight: bold ;
-    border-right: 3px solid $rose;
-    padding-right: 260px;
-   
-   
-   
-  }
+.info {
+  border-right: none;
+}
 
-  p.adresse:hover {
-    text-decoration: underline;
-  }
 
-  .reseau {
-    display: flex;
-    justify-content: flex-end;
-    gap: 50px;
-    margin-right: 30px;
-  }
+.info a:last-child img {
+  border-right: none;
+}
 
-  .reseau-img {
-    margin-right: 30px;
-    border-right: 3px solid $rose;
-    padding-right: 40px;
-  padding-left: 10px;
-  }
-
-  .reseau-img:last-child {
-    border-right: none
-  }
+p.adresse:hover {
+  text-decoration: underline;
 }
 
 .copyright {
