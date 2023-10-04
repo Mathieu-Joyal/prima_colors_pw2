@@ -1,10 +1,10 @@
-<x-layout titre="Modification de l'utilisateur {{ $un_employe->prenom }} {{ $un_employe->nom }} ">
+<x-layout titre="Modification de {{ $un_employe->prenom }} {{ $un_employe->nom }} ">
 
-    <x-nav-admin titre="Les employés" route="{{ route('admin.employes.index') }}" valeur="Retour aux employes" />
-
-    {{-- <x-header /> --}}
-
-    {{-- <x-boutons.accueil_admin /> --}}
+    <x-nav-admin
+        titre="Les employés"
+        route="{{ route('admin.employes.index') }}"
+        valeur="Retour aux employes"
+    />
 
     <div class="conteneur">
 

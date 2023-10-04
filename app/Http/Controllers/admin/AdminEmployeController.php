@@ -28,8 +28,8 @@ class AdminEmployeController extends Controller
         if (!empty($requete)) {
             $requete_user->where(function ($la_requete) use ($requete) {
                 $la_requete->where('prenom', 'like', '%' . $requete . '%')
-                        ->orWhere('nom', 'like', '%' . $requete . '%')
-                        ->orWhere('identifiant', 'like', '%' . $requete . '%');
+                            ->orWhere('nom', 'like', '%' . $requete . '%')
+                            ->orWhere('identifiant', 'like', '%' . $requete . '%');
             });
         }
 
@@ -73,8 +73,8 @@ class AdminEmployeController extends Controller
 
             // Redirection
             return redirect()
-            ->route('admin.employes.index')
-            ->with('succes', 'Seul un administrateur peut supprimer un employé');
+                    ->route('admin.employes.index')
+                    ->with('erreur', 'Seul un administrateur peut modifier un employé');
         }
 
         // Rechercher l'employé
@@ -133,15 +133,16 @@ class AdminEmployeController extends Controller
 
             // Redirection
             return redirect()
-            ->route('admin.employes.index')
-            ->with('succes', 'Seul un administrateur peut supprimer un employé');
+                    ->route('admin.employes.index')
+                    ->with('erreur', 'Seul un administrateur peut supprimer un employé');
         }
 
         // Supprimer l'employé
         Employe::destroy($id);
 
         // Redirection
-        return redirect()->route('admin.employes.index')
-            ->with('succes', "L'employé a été supprimé");
+        return redirect()
+                ->route('admin.employes.index')
+                ->with('succes', "L'employé a été supprimé");
     }
 }

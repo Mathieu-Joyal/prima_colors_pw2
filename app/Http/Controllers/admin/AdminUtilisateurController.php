@@ -29,8 +29,8 @@ class AdminUtilisateurController extends Controller
         if (!empty($requete)) {
             $requete_user->where(function ($la_requete) use ($requete) {
                 $la_requete->where('prenom', 'like', '%' . $requete . '%')
-                      ->orWhere('nom', 'like', '%' . $requete . '%')
-                      ->orWhere('email', 'like', '%' . $requete . '%');
+                        ->orWhere('nom', 'like', '%' . $requete . '%')
+                        ->orWhere('email', 'like', '%' . $requete . '%');
             });
         }
 
@@ -71,6 +71,15 @@ class AdminUtilisateurController extends Controller
      */
     public function update(Request $request, $id){
 
+        // Redirection si ce n'est pas un administrateur qui se connecte
+        if(auth()->guard('employe')->user()->role_id !== 1) {
+
+            // Redirection
+            return redirect()
+                    ->route('admin.utilisateurs.index')
+                    ->with('erreur', 'Seul un administrateur peut modifier un utilisateur');
+        }
+
         // Récupérer l'utilisateur par son Id
         $user = User::find($id);
 
@@ -82,7 +91,7 @@ class AdminUtilisateurController extends Controller
             "ville" => "required",
             "age" =>"required|integer|min:18|max:99",
             "password" => "nullable|min:8",
-            "confirmation_password" => "nullable|same:password"
+            "confirmation_password" => "same:password"
         ],[
             "prenom.required" => "Le prénom est requis",
             "prenom.max" => "Le prénom doit avoir un maximum de :max caractères",
@@ -109,8 +118,8 @@ class AdminUtilisateurController extends Controller
         // Insérer le mot de passe seulement si insérer dans le formulaire
         if (!empty($valides["password"])) {
 
-            $user->password = Hash::make($valides["password"]);
-    }
+                $user->password = Hash::make($valides["password"]);
+        }
 
         // Sauvegarder toutes les informations dans la BDD
         $user->save();
@@ -121,9 +130,6 @@ class AdminUtilisateurController extends Controller
                 ->with('succes', "L'utilisateur à été modifié avec succès");
     }
 
-
-
-
     /**
      * Suppression de l'utilisateur
      *
@@ -132,20 +138,31 @@ class AdminUtilisateurController extends Controller
      */
     public function destroy(int $id){
 
+        // Redirection si ce n'est pas un administrateur qui se connecte
+        if(auth()->guard('employe')->user()->role_id !== 1) {
+
+            // Redirection
+            return redirect()
+                    ->route('admin.utilisateurs.index')
+                    ->with('erreur', 'Seul un administrateur peut supprimer un employé');
+        }
+
         // Section pour regarder si l'utilisateur à une réservation à son actif
         $user = User::find($id);
         $reservations = $user->reservations;
 
         if ($reservations->count() > 0) {
-            return redirect()->route('admin.utilisateurs.index')
-                ->with('erreur', "Vous ne pouvez pas supprimer un utilisateur qui à une ou plusieurs réservations à son nom.");
+            return redirect()
+                    ->route('admin.utilisateurs.index')
+                    ->with('erreur', "Vous ne pouvez pas supprimer un utilisateur qui à une ou plusieurs réservations à son nom.");
         }
 
         // Supprimer l'utilisateur
         User::destroy($id);
 
         // Redirection
-        return redirect()->route('admin.utilisateurs.index')
-            ->with('succes', "L'utilisateur a été supprimé");
+        return redirect()
+                ->route('admin.utilisateurs.index')
+                ->with('succes', "L'utilisateur a été supprimé");
     }
 }

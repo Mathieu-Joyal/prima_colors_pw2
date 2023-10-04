@@ -25,8 +25,8 @@ class AdminEnregistrementController extends Controller
         if(auth()->guard('employe')->user()->role_id !== 1) {
 
             return redirect()
-            ->route('admin.employes.index')
-            ->with('succes', 'Seul un administrateur peut créer un employé');
+                    ->route('admin.employes.index')
+                    ->with('erreur', 'Seul un administrateur peut créer un employé');
         }
 
         // Récupère l'employé actuellement connecté

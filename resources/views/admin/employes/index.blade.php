@@ -3,6 +3,7 @@
     <x-nav-admin titre="Les employés" route="{{ route('admin.employes.index') }}" valeur="Retour aux employes" />
 
     <x-alertes cle="succes" />
+    <x-alertes cle="erreur" />
 
     <x-forms.formulaire_recherche
         route="{{ route('admin.employes.index') }}"
@@ -14,14 +15,14 @@
 
         <section class="affichage-employes">
 
-            @if ( auth()->guard('employe')->user()->role_id === 1)
+            {{-- @if ( auth()->guard('employe')->user()->role_id === 1) --}}
 
                 <x-boutons.soumettre
                     route="{{ route('admin.enregistrement.create') }}"
                     valeur="Création d'un employé"
                 />
 
-            @endif
+            {{-- @endif --}}
 
             <h3 class="h3_user">AFFICHAGE DE LA LISTE DES EMPLOYÉS</h3>
 
@@ -62,7 +63,7 @@
 
                     </div>
 
-                    @if ( auth()->guard('employe')->user()->role_id === 1)
+                    {{-- @if ( auth()->guard('employe')->user()->role_id === 1) --}}
 
                         <div class="boutons_user">
                             <a href="{{ route('admin.employes.edit', ['id' => $employe->id ]) }}">
@@ -76,7 +77,7 @@
                                 </span>
                             </a>
                         </div>
-                    @endif
+                    {{-- @endif --}}
                 </article>
             @endforeach
         </section>
