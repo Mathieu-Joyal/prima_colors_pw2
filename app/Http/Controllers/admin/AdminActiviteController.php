@@ -18,16 +18,11 @@ class AdminActiviteController extends Controller
 
      public function index()
      {
-        // $vendrediActivites = Activite::whereDay('date', 13) ->get();
-        // $samediActivites = Activite::whereDay('date', 14) ->get();
-        // $dimancheActivites = Activite::whereDay('date', 15) ->get();
+
         $activites = Activite::all();
 
         return view ("admin.activites.index", [
-        //   "vendrediActivites" => $vendrediActivites,
-        //   "samediActivites" => $samediActivites,
-        //   "dimancheActivites" => $dimancheActivites,
-        "activites" => $activites,
+            "activites" => $activites,
         ]);
 
 
@@ -47,8 +42,8 @@ class AdminActiviteController extends Controller
          return view('admin.activites.index', compact('activites'));
      }
 
- //===============AJOUTER UNE ACTIVITÉ=================================//
- /**
+    //===============AJOUTER UNE ACTIVITÉ=================================//
+    /**
       * Affiche le formulaire d'ajout
       *
       * @return View
@@ -60,128 +55,148 @@ class AdminActiviteController extends Controller
          );
      }
 
-     /**
-      * Traite l'ajout
-      *
-      * @param Request $request
-      * @return RedirectResponse
-     */
-     public function store(Request $request) {
-         // Valider
-         $valides = $request->validate([
-             "titre" => "required|min:4|max:150",
-             "date" => "required",
-             "heure" => "required",
-             "description" => "required|min:50|max:350",
-             "image" => "required|mimes:png,jpg,jpeg",
-             "endroit" => "required",
+    /**
+     * Traite l'ajout
+    *
+    * @param Request $request
+    * @return RedirectResponse
+    */
+    public function store(Request $request) {
 
-         ], [
-             "titre.max" => "Le titre doit avoir un maximum de :max caractères",
-             "titre.min" => "Le titre doit avoir un minimum de :min caractères",
-             "date" => "Une date doit être choisie",
-             "heure" => "Une heure doit être choisie",
-             "description.max" => "La description doit avoir un maximum de :max caractères",
-             "description.min" => "La description doit avoir un minimum de :min caractères",
-             "image.required" => "Une image doit être téléchargé ",
+        // Validation
+        $valides = $request->validate([
+            "titre" => "required|min:4|max:150",
+            "date" => "required",
+            "heure" => "required",
+            "description" => "required|min:50|max:350",
+            "image" => "required|mimes:png,jpg,jpeg",
+            "endroit" => "required",
 
-         ]);
+        ], [
+            "titre.max" => "Le titre doit avoir un maximum de :max caractères",
+            "titre.min" => "Le titre doit avoir un minimum de :min caractères",
+            "date" => "Une date doit être choisie",
+            "heure" => "Une heure doit être choisie",
+            "description.max" => "La description doit avoir un maximum de :max caractères",
+            "description.min" => "La description doit avoir un minimum de :min caractères",
+            "image.required" => "Une image doit être téléchargé ",
 
-         // Ajouter à la BDD
-         $activite = new Activite;
-         $activite->titre = $valides["titre"];
-         $activite->date = $valides["date"];
-         $activite->heure = $valides["heure"];
-         $activite->description = $valides["description"];
-         $activite->endroit = $valides["endroit"];
-         $activite->employe_id = auth()->guard('employe')->user()->id;
+        ]);
+
+        // Ajouter à la BDD
+        $activite = new Activite;
+        $activite->titre = $valides["titre"];
+        $activite->date = $valides["date"];
+        $activite->heure = $valides["heure"];
+        $activite->description = $valides["description"];
+        $activite->endroit = $valides["endroit"];
+        $activite->employe_id = auth()->guard('employe')->user()->id;
 
 
-         // Traiter le téléversement
-         if($request->hasFile('image')){
-             // Déplacer
-             Storage::putFile("public/uploads", $request->image);
-             // Sauvegarder le "bon" chemin qui sera inséré dans la BDD et utilisé par le navigateur
-             $activite->image = "/storage/uploads/" . $request->image->hashName();
-         }
-         $activite->save();
+        // Traiter le téléversement
+        if($request->hasFile('image')){
+            // Déplacer
+            Storage::putFile("public/uploads", $request->image);
+            // Sauvegarder le "bon" chemin qui sera inséré dans la BDD et utilisé par le navigateur
+            $activite->image = "/storage/uploads/" . $request->image->hashName();
+        }
 
-         // Rediriger
-         return redirect()
-                 ->route('admin.activites.index')
-                 ->with('succes', "L'actualité a été ajoutée avec succès!");
+        $activite->save();
+
+        // Rediriger
+        return redirect()
+                ->route('admin.activites.index')
+                ->with('succes', "L'actualité a été ajoutée avec succès!");
+    }
+
+    //==========================MODIFIER UNE ACTUALITÉ===========================//
+    /**
+    * Affiche le formulaire de modification
+    *
+    * @param int $id Id de l'actualité à modifier
+    * @return View
+    */
+    public function edit($id) {
+
+        return view('admin.activites.edit', [
+            "activite" => Activite::findOrFail($id),
+        ]);
+    }
+
+    /**
+     * Traite la modification
+    *
+    * @param Request $request Objet qui contient tous les champs reçus dans la requête
+    * @return RedirectResponse
+    */
+    public function update(Request $request) {
+
+        // Redirection si ce n'est pas un administrateur
+        if(auth()->guard('employe')->user()->role_id !== 1) {
+
+            return redirect()
+                    ->route('admin.activites.index')
+                    ->with('erreur', 'Seul un administrateur peut modifier une activité');
+        }
+
+        // Validation
+        $valides = $request->validate([
+
+            "titre" => "required|min:4|max:150",
+            "date" => "required",
+            "heure" => "required",
+            "description" => "required|min:50|max:350",
+            "image" => "required|mimes:png,jpg,jpeg",
+            "endroit" => "required",
+
+        ], [
+            "titre.max" => "Le titre doit avoir un maximum de :max caractères",
+            "titre.min" => "Le titre doit avoir un minimum de :min caractères",
+            "date" => "Une date doit être choisie",
+            "heure" => "Une heure doit être choisie",
+            "description.max" => "La description doit avoir un maximum de :max caractères",
+            "description.min" => "La description doit avoir un minimum de :min caractères",
+            "image.required" => "Une image doit être téléchargé ",
+
+        ]);
+
+        // Récupération de la activite à modifier, suivi de la modification et sauvegarde
+        $activite = Activite::findOrFail($valides["id"]);
+        $activite->titre = $valides["titre"];
+        $activite->date = $valides["date"];
+        $activite->heure = $valides["heure"];
+        $activite->description = $valides["descritpion"];
+        $activite->employe_id = auth()->id();
+        $activite->image =
+
+        $activite->save();
+
+        // Rediriger
+        return redirect()
+                ->route('admin.activites.index')
+                ->with('succes', "L'actualité a été modifiée avec succès!");
      }
- //==========================MODIFIER UNE ACTUALITÉ===========================//
-     /**
-      * Affiche le formulaire de modification
-      *
-      * @param int $id Id de l'actualité à modifier
-      * @return View
-      */
-     public function edit($id) {
-         return view('admin.activites.edit', [
-             "activite" => Activite::findOrFail($id),
-             // "employe_id" => Employe::orderBy('nom', 'asc')
-             //                     ->get()
-         ]);
-     }
 
-     /**
-      * Traite la modification
-      *
-      * @param Request $request Objet qui contient tous les champs reçus dans la requête
-      * @return RedirectResponse
-      */
-     public function update(Request $request) {
-         // Valider
-         $valides = $request->validate([
+    //=============================SUPPRIMER UNE ACTUALITÉ=============================//
+    // /**
+    //  * Traite la suppression
+    //  *
+    //  * @param Request $request
+    //  * @return RedirectResponse
+    //  */
+    public function destroy(Request $request) {
 
-                "titre" => "required|min:4|max:150",
-                "date" => "required",
-                "heure" => "required",
-                "description" => "required|min:50|max:350",
-                "image" => "required|mimes:png,jpg,jpeg",
-                "endroit" => "required",
+        // Redirection si ce n'est pas un administrateur
+        if(auth()->guard('employe')->user()->role_id !== 1) {
 
-            ], [
-                "titre.max" => "Le titre doit avoir un maximum de :max caractères",
-                "titre.min" => "Le titre doit avoir un minimum de :min caractères",
-                "date" => "Une date doit être choisie",
-                "heure" => "Une heure doit être choisie",
-                "description.max" => "La description doit avoir un maximum de :max caractères",
-                "description.min" => "La description doit avoir un minimum de :min caractères",
-                "image.required" => "Une image doit être téléchargé ",
+            return redirect()
+                    ->route('admin.activites.index')
+                    ->with('erreur', 'Seul un administrateur peut supprimer une activité');
+        }
 
-            ]);
+        Activite::destroy($request->id);
 
-         // Récupération de la activite à modifier, suivi de la modification et sauvegarde
-         $activite = Activite::findOrFail($valides["id"]);
-         $activite->titre = $valides["titre"];
-         $activite->date = $valides["date"];
-         $activite->heure = $valides["heure"];
-         $activite->description = $valides["descritpion"];
-         $activite->employe_id = auth()->id();
-         $activite->image =
-
-         $activite->save();
-
-         // Rediriger
-         return redirect()
-                 ->route('admin.activites.index')
-                 ->with('succes', "L'actualité a été modifiée avec succès!");
-     }
-
- //=============================SUPPRIMER UNE ACTUALITÉ=============================//
-     // /**
-     //  * Traite la suppression
-     //  *
-     //  * @param Request $request
-     //  * @return RedirectResponse
-     //  */
-     public function destroy(Request $request) {
-         Activite::destroy($request->id);
-
-         return redirect()->route('admin.activites.index')
-                 ->with('succes', "L'activite a été supprimée!");
-     }
+        return redirect()->route('admin.activites.index')
+                ->with('succes', "L'activite a été supprimée!");
+    }
 }
