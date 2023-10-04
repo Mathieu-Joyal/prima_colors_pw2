@@ -236,7 +236,7 @@ Route::get("/admin/actualites/edit/{id}", [AdminActualiteController::class, 'edi
     ->middleware('auth:employe');
 
 // Traitement du formulaire de modification
-Route::post("/admin/actualites/update", [AdminActualiteController::class, 'update'])
+Route::post("/admin/actualites/update/{id}", [AdminActualiteController::class, 'update'])
     ->name('admin.actualites.update')
     ->middleware('auth:employe');
 
@@ -275,7 +275,7 @@ Route::get("/admin/activites/edit/{id}", [AdminActiviteController::class, 'edit'
     ->middleware('auth:employe');
 
 // // Traitement du formulaire de modification
-Route::post("/admin/activites/update", [AdminActiviteController::class, 'update'])
+Route::post("/admin/activites/update/{id}", [AdminActiviteController::class, 'update'])
     ->name('admin.activites.update')
     ->middleware('auth:employe');
 

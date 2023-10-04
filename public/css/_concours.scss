@@ -1,25 +1,20 @@
 .conteneur_concours {
+
     background-color: $noir;
 
     .conteneur_le_concours {
         background-color: $noir; 
         padding-bottom: 50px;
         position: relative;
+
     }
 
     .concours_bg {
         margin: 0;
+
         background-color: rgba(255, 255, 255, 0.90); /* Blanc avec 50 % de transparence */
         position: relative;
 
-        h2 {
-            margin: 0;
-            padding: 1em 3em;
-            background-color: $noir
-        }
-
-        p {
-            padding: 0 8em;
             color: $noir;
             list-style: none;
         }
@@ -28,7 +23,11 @@
             list-style: none;
         }
     }
+    .section_compte, .section_concours{
+        margin-bottom: 0;
+    }
 }
+
 
 
 

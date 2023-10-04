@@ -4,7 +4,7 @@
 
 .bg {
     position: absolute;
-    top:83px;
+    top:33px;
     z-index: 1;
     width: 100%;
 }
@@ -40,7 +40,6 @@
     align-items: center;
     top: 0px;
     height: 70px;
-    margin-top: -14px;
 }
 
 .menu_nav .item_nav {
@@ -60,7 +59,6 @@ text-decoration:none;
     background-color: transparent;
     position: absolute;
     left: -3px;
-
 }
 
 .menu_nav .item_nav .nav {
@@ -94,16 +92,16 @@ text-decoration:none;
 
 .menu_nav .item_nav:hover::before {
     background-color: $rose;
-    transition: background-color 1s ease-out;    
-} 
+    transition: background-color 1s ease-out;
+}
 
 a.billet{
-    height: 270px;
+    // height: 270px;
     text-decoration:none ;
 }
 .billet {
     width:170px;
-    height: 200px;
+    // height: 200px;
     margin-left: 50px;
     padding-right: 40px;
     background: url('../img/accueil/billet.jpg');
@@ -123,15 +121,14 @@ p.texte{
     text-transform: uppercase;
     font-weight: bold;
     margin-top: 55px;
-    margin-left: 25px;
+    margin-left: 29px;
 }
 
 .reseau {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 10px;
-    padding-left: 30px;   
-    padding-right: 50px; 
+    padding-left: 30px;
+    padding-right: 50px;
     width: 15%;
 }
 
@@ -149,9 +146,9 @@ a.connexion {
     font-size: 36px;
     margin-top: 200px;
     color: $rose;
-    display: flex; 
+    display: flex;
     align-items: center;
-    text-decoration: none; 
+    text-decoration: none;
     right:50px;
     position: absolute;
     z-index: 45;

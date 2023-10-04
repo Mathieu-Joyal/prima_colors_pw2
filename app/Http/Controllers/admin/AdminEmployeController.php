@@ -28,8 +28,8 @@ class AdminEmployeController extends Controller
         if (!empty($requete)) {
             $requete_user->where(function ($la_requete) use ($requete) {
                 $la_requete->where('prenom', 'like', '%' . $requete . '%')
-                        ->orWhere('nom', 'like', '%' . $requete . '%')
-                        ->orWhere('identifiant', 'like', '%' . $requete . '%');
+                            ->orWhere('nom', 'like', '%' . $requete . '%')
+                            ->orWhere('identifiant', 'like', '%' . $requete . '%');
             });
         }
 
@@ -64,17 +64,18 @@ class AdminEmployeController extends Controller
     /**
      * Insertion de la modification de l'employé
      *
+     * @param $id
      * @return View
      */
-    public function update(Request $request, $id){
+    public function update(Request $request, int $id){
 
         // Redirection si ce n'est pas un administrateur qui se connecte
         if(auth()->guard('employe')->user()->role_id !== 1) {
 
             // Redirection
             return redirect()
-            ->route('admin.employes.index')
-            ->with('succes', 'Seul un administrateur peut supprimer un employé');
+                    ->route('admin.employes.index')
+                    ->with('erreur', 'Seul un administrateur peut modifier un employé');
         }
 
         // Rechercher l'employé
@@ -133,15 +134,16 @@ class AdminEmployeController extends Controller
 
             // Redirection
             return redirect()
-            ->route('admin.employes.index')
-            ->with('succes', 'Seul un administrateur peut supprimer un employé');
+                    ->route('admin.employes.index')
+                    ->with('erreur', 'Seul un administrateur peut supprimer un employé');
         }
 
         // Supprimer l'employé
         Employe::destroy($id);
 
         // Redirection
-        return redirect()->route('admin.employes.index')
-            ->with('succes', "L'employé a été supprimé");
+        return redirect()
+                ->route('admin.employes.index')
+                ->with('succes', "L'employé a été supprimé");
     }
 }

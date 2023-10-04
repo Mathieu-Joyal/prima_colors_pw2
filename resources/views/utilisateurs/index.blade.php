@@ -2,7 +2,7 @@
 
     <x-header />
 
-    <x-alertes cle="succes" />
+    <x-alertes cle="succes" class="alerte_succes"/>
 
     <div class="conteneur-utilisateur">
 

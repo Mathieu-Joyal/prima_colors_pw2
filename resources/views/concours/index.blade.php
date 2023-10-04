@@ -66,7 +66,7 @@
             <h2>Informations sur le concours CréARTive</h2>
             <p>Explorez la créativité infinie et l'expression artistique au Festival Prima-Colors. Notre concours d'art est une ode à l'originalité, offrant aux artistes une scène pour exposer leurs œuvres captivantes. Plongez dans un monde d'émotions visuelles, où chaque coup de pinceau, chaque note de musique et chaque éclat de couleur vous emmèneront dans un voyage inoubliable. Que vous soyez un amateur d'art passionné ou simplement à la recherche d'inspiration, le Festival Prima-Colors est l'endroit où vous pouvez découvrir de nouvelles perspectives artistiques, rencontrer des artistes talentueux et vous immerger dans un univers de créativité débordante. Rejoignez-nous et laissez-vous emporter par cette célébration artistique unique en son genre.</p>
         </section>
-
+        <x-bannieres.compte :url="url('img/accueil/ban_compte.png')"/>
         <section class="concours_critere_participation concours_bg">
 
             <h2>critÈre de participation</h2>

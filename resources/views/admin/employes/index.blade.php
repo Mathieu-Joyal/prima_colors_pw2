@@ -2,7 +2,8 @@
 
     <x-nav-admin titre="Les employés" route="{{ route('admin.employes.index') }}" valeur="Retour aux employes" />
 
-    <x-alertes cle="succes" />
+    <x-alertes cle="succes" class="alerte_succes"/>
+    <x-alertes cle="erreur" class="alerte_erreur"/>
 
     <x-forms.formulaire_recherche
         route="{{ route('admin.employes.index') }}"
@@ -82,7 +83,5 @@
         </section>
         </div>
     </div>
-
-    {{-- <x-footer /> --}}
 
 </x-layout>

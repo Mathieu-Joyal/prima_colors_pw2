@@ -51,6 +51,14 @@ class AdminReservationController extends Controller {
      */
     public function destroy(int $id) {
 
+        // Redirection si ce n'est pas un administrateur qui se connecte
+        if(auth()->guard('employe')->user()->role_id !== 1) {
+
+            return redirect()
+                    ->route('admin.employes.index')
+                    ->with('erreur', 'Seul un administrateur peut supprimer une réservation');
+        }
+
         // Supprimer la réservation
         Reservation::destroy($id);
 

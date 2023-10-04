@@ -82,13 +82,11 @@ section.conteneur-activites {
         justify-content: space-between;
         opacity: 0;
         transform: translateX(-50px);
-        /* Start offscreen to the left */
         transition: opacity 2s ease, transform 2s ease;
         padding-bottom: 0;
 
 
         .conteneur-image {
-            // display: inline;
             height: 150px;
             width: calc(100% - 300px);
             margin-left: 0;
@@ -121,7 +119,6 @@ section.conteneur-activites {
                     }
                 }
             }
-
 
             .description {
                 display: none;
@@ -157,6 +154,7 @@ section.conteneur-activites {
             text-align: right;
             overflow: hidden;
             margin-bottom: 2em;
+            padding-right: 2em;
         }
 
         p.heure {
@@ -164,7 +162,6 @@ section.conteneur-activites {
         }
 
         &:nth-child(even) {
-            // border: 1px solid blue;
             flex-direction: row-reverse;
 
             .conteneur-image {
@@ -181,15 +178,12 @@ section.conteneur-activites {
     .conteneur-image {
         opacity: 0;
         transform: translateX(-50px);
-        /* Start offscreen to the left */
         transition: opacity 0.5s ease, transform 0.5s ease;
     }
 
     .conteneur-image.visible {
         opacity: 1;
         transform: translateX(0);
-        /* Move to original position */
-
     }
 
     //FONCTION SHOW MORE/LESS
@@ -204,13 +198,11 @@ section.conteneur-activites {
     .activites.visible {
         opacity: 1;
         transform: translateX(0);
-        /* Move to original position */
     }
 }
 
 button.voir.activite {
-
-    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 

@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class ForfaitFactory extends Factory
+class ReservationFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -14,7 +14,7 @@ class ForfaitFactory extends Factory
     public function definition()
     {
         return [
-
+            //
         ];
     }
 }

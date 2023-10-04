@@ -146,6 +146,7 @@ button:hover {
 
         h2 {
             margin: 0;
+            // font-size: 36px
         }
     }
 }
@@ -198,6 +199,8 @@ button:hover {
 @import "components/alertes/succes";
 // -- alertes erreur
 @import "components/alertes/erreur";
+// -- forms erreur
+@import "components/forms/erreur";
 
 @import "components/boutons/deconnexion";
 @import "components/boutons/soumettre";

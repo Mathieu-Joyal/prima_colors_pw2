@@ -13,7 +13,7 @@
 
     <x-activites.jour :activites="$samediActivites" journee="samedi" id="samedi" />
 
-    <x-bannieres.compte />
+    <x-bannieres.compte :url="url('img/activites/ban_chalkface.jpg')"/>
 
     <x-activites.jour :activites="$dimancheActivites" journee="dimanche" id="dimanche" />
 
