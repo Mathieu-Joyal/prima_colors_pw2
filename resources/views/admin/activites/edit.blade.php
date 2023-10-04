@@ -6,7 +6,11 @@
 
         {{-- FORMULAIRE --}}
         {{-- ******************* Ajout pour recevoir l'id ******************** --}}
-        <form class="edit" action="{{ route('admin.activites.update', ['id' => $activite->id] ) }}" method="POST" enctype="multipart/form-data">
+        <form class="edit"
+                action="{{ route('admin.activites.update', ['id' => $activite->id] ) }}"
+                method="POST"
+                enctype="multipart/form-data"
+        >
             @csrf
         {{-- ******************************** --}}
 

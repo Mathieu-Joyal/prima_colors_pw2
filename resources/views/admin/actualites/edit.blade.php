@@ -7,7 +7,7 @@
 
         {{-- FORMULAIRE --}}
         <form class="edit actualite"
-                action="{{ route('admin.actualites.update') }}"
+                action="{{ route('admin.actualites.update', ['id' => $actualite->id] ) }}"
                 method="POST"
                 enctype="multipart/form-data"
         >

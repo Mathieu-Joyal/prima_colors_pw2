@@ -128,12 +128,12 @@ class AdminActualiteController extends Controller
     /**
      * Traite la modification d'une actualité
      *
+     * @param $id
      * @param Request $request Objet qui contient tous les champs reçus dans la requête
      * @return RedirectResponse
      */
-    public function update(Request $request)
+    public function update(Request $request, int $id)
     {
-
         // Redirection si ce n'est pas un administrateur
         if(auth()->guard('employe')->user()->role_id !== 1) {
 
@@ -142,12 +142,11 @@ class AdminActualiteController extends Controller
                     ->with('erreur', 'Seul un administrateur peut modifier une actualité');
         }
 
-        // Validation
         $valides = $request->validate([
-            "id" => "required",
             "titre" => "required|min:4|max:150",
-            "image" => "required|",
-            "descritpion" => "required"
+            "description" => "required|min:50|max:350",
+            "image" => "required|mimes:png,jpg,jpeg",
+
         ], [
             "titre.required" => "Le titre est requis",
             "titre.max" => "Le titre doit avoir un maximum de :max caractères",
@@ -160,11 +159,12 @@ class AdminActualiteController extends Controller
         ]);
 
         // Récupération de l'actualité à modifier, suivi de la modification et sauvegarde
-        $actualite = Actualite::findOrFail($valides["id"]);
+        $actualite = Actualite::findOrFail($id);
+
         $actualite->titre = $valides["titre"];
-        $actualite->description = $valides["descritpion"];
+        $actualite->description = $valides["description"];
         $actualite->employe_id = auth()->id();
-        $actualite->image =
+        $actualite->image = $valides["image"];
 
         $actualite->save();
 

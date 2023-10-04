@@ -139,7 +139,8 @@ class AdminActiviteController extends Controller
      * @param Request $request Objet qui contient tous les champs reçus dans la requête
      * @return RedirectResponse
      */
-    public function update(Request $request, int $id) {
+    public function update(Request $request, int $id)
+    {
 
         // Redirection si ce n'est pas un administrateur
         if(auth()->guard('employe')->user()->role_id !== 1) {
