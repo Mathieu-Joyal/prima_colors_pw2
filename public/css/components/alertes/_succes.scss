@@ -1,6 +1,8 @@
 .alerte_succes {
-
-    p {
-        color: $vert;
-    }
+        p {
+            font-weight: bold;
+            text-decoration: underline;
+            text-align: center;
+            color: $vert;
+        }
 }

@@ -993,9 +993,7 @@ section.billetterie .conteneur-description.voir-plus {
 .conteneur_concours .concours_bg ul {
   list-style: none;
 }
-.conteneur_concours .section_compte, .conteneur_concours .section_concours {
-  margin-bottom: 0;
-}
+
 
 .conteneur-utilisateur {
   color: #eeb15e;
@@ -1986,13 +1984,45 @@ form button.supprimer {
 }
 
 .alerte_succes p {
+  font-weight: bold;
+  text-decoration: underline;
+  text-align: center;
   color: #0b8a80;
 }
 
 .alerte_erreur p {
+  font-weight: bold;
+  text-decoration: underline;
+  text-align: center;
   color: #df1f1f;
 }
 
+.form_erreur p {
+  color: #df1f1f;
+  font-size: 1em;
+  margin: 0.5em 0;
+}
+
+/*
+.administration {
+    div {
+
+        p {
+            color: $rouge;
+            font-size: 1em;
+            font-weight: normal;
+            margin: .5em 0;
+        }
+
+        &:focus-within {
+
+            p {
+                font-weight: normal;
+            }
+        }
+    }
+}
+*/
 .deconnexion form {
   margin: 4em 3em 3em 3em;
   text-align: right;

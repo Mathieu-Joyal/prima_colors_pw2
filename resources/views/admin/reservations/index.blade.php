@@ -4,7 +4,7 @@
 
     <div class="conteneur_admin">
 
-        <x-alertes cle="succes" />
+        <x-alertes cle="succes" class="alerte_succes"/>
 
         @if(session('error'))
             <div class="">

@@ -1,4 +1,4 @@
-<x-layout titre="Modification de l'utilisateur {{ $user->prenom }} {{ $user->nom }} ">
+<x-layout titre="Modification de {{ $user->prenom }} {{ $user->nom }} ">
 
     {{-- <x-header /> --}}
 

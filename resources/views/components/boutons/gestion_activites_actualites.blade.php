@@ -1,5 +1,5 @@
-
 @props(["routeAjouter", "routeModifier", "routeSupprimer", "valeur", "nom"])
+
 <div class="conteneur-btn">
     {{-- AJOUTER --}}
     <button class="ajouter">
@@ -24,6 +24,4 @@
         </button>
     </form>
 </div>
-{{-- route('admin.activites.edit', ['id' => $activite->id])
-route('admin.activites.destroy')
-$activite->id --}}
+

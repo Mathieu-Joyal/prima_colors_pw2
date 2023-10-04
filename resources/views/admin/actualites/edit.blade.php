@@ -3,17 +3,14 @@
     <x-nav-admin titre=" Modifier une ActualitÉs" route="{{route('admin.actualites.index')}}"
         valeur="Retour aux actualitÉs" />
 
-    {{-- MESSAGES --}}
-    {{-- @if (session('echec'))
-            <p class="">
-                {{ session('echec') }}</p>
-        @endif --}}
-
     <section>
 
         {{-- FORMULAIRE --}}
-        <form class="edit actualite" action="{{ route('admin.actualites.store') }}" method="POST"
-            enctype="multipart/form-data">
+        <form class="edit actualite"
+                action="{{ route('admin.actualites.update', ['id' => $actualite->id] ) }}"
+                method="POST"
+                enctype="multipart/form-data"
+        >
             @csrf
 
             {{-- TITRE --}}
@@ -27,10 +24,10 @@
                     value="{{ old('titre') ?? $actualite->titre }}">
             </div>
 
-            {{-- DÉSCRIPTION --}}
+            {{-- DESCRIPTION --}}
             <div class="grid-item description">
 
-                <label for="description" class="grid-title">Déscription</label>
+                <label for="description" class="grid-title">Description</label>
 
                 <x-forms.erreur champ="description" />
                 <input id="description" name="description" type="text" autofocus class=" "

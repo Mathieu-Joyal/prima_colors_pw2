@@ -4,7 +4,7 @@
         <img src="{{ asset('img/activites/cereals.png') }}" alt="céréales">
     </div>
 
-    <x-alertes cle="succes" />
+    <x-alertes cle="succes" class="alerte_succes" />
 
     <x-boutons.deconnexion
         routeDeconnexion="{{ route('admin.deconnexion') }}"
