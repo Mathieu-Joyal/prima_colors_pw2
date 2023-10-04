@@ -78,14 +78,17 @@ class AdminActiviteController extends Controller
             "image" => "required|mimes:png,jpg,jpeg",
             "endroit" => "required",
         ], [
+            "titre.required" => "Le titre est requis",
             "titre.max" => "Le titre doit avoir un maximum de :max caractères",
             "titre.min" => "Le titre doit avoir un minimum de :min caractères",
-            "date" => "Une date doit être choisie",
-            "heure" => "Une heure doit être choisie",
+            "date.required" => "Une date doit être choisie",
+            "heure.required" => "Une heure doit être choisie",
+            "description.required" => "La description est requise",
             "description.max" => "La description doit avoir un maximum de :max caractères",
             "description.min" => "La description doit avoir un minimum de :min caractères",
             "image.required" => "Une image doit être téléchargé ",
-
+            "image.mimes" => "Le format de l'image doit être l'un des suivants :png, jpg, jpeg",
+            "endroit.required" => "L'endroit est requis",
         ]);
 
         // Ajouter à la BDD
@@ -156,14 +159,17 @@ class AdminActiviteController extends Controller
             "endroit" => "required",
 
         ], [
+            "titre.required" => "Le titre est requis",
             "titre.max" => "Le titre doit avoir un maximum de :max caractères",
             "titre.min" => "Le titre doit avoir un minimum de :min caractères",
-            "date" => "Une date doit être choisie",
-            "heure" => "Une heure doit être choisie",
+            "date.required" => "Une date doit être choisie",
+            "heure.required" => "Une heure doit être choisie",
+            "description.required" => "La description est requise",
             "description.max" => "La description doit avoir un maximum de :max caractères",
             "description.min" => "La description doit avoir un minimum de :min caractères",
             "image.required" => "Une image doit être téléchargé ",
-
+            "image.mimes" => "Le format de l'image doit être l'un des suivants :png, jpg, jpeg",
+            "endroit.required" => "L'endroit est requis",
         ]);
 
         // Récupération de la activite à modifier, suivi de la modification et sauvegarde
