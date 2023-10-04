@@ -79,23 +79,23 @@
         <article class="titre_actualite">
 
             @foreach ($actualites as $actualite)
-           
+
                 <a href="/actualites" class="vers_actualite">
                     <span>{{$actualite->titre}}</span>
                     <img src="../{{$actualite->image}}" alt="{{$actualite->titre}}">
                 </a>
 
             @endforeach
- 
+
             </article>
         <div class="images">
             <div class="image"></div>
         </div>
     </section>
-   
 
 
-    <x-bannieres.compte />
+
+    <x-bannieres.compte :url="url('img/accueil/ban_compte.png')"/>
     <x-bannieres.billet />
 
     <x-footer />

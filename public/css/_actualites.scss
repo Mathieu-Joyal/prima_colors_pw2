@@ -55,7 +55,9 @@ section.conteneur-actualites {
     h3,
     h4 {
         color: $rose;
-        margin: 0;
+    }
+    .date-publication{
+        width: 300px;
     }
 
     .conteneur-gauche {
@@ -64,7 +66,6 @@ section.conteneur-actualites {
         max-height: 500px;
         min-height: 250px;
         justify-content: space-between;
-        padding-left: 2em;
         padding-right: 2em;
         padding-top: 2em;
     }
@@ -72,8 +73,7 @@ section.conteneur-actualites {
     .conteneur-titre {
         display: flex;
         flex-direction: column;
-        padding-left: 6em;
-        margin: 0;
+        margin-left: 3rem;
 
         .description {
             margin: 0;

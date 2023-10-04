@@ -599,7 +599,6 @@ section.conteneur-activites article.activites {
   justify-content: space-between;
   opacity: 0;
   transform: translateX(-50px);
-  /* Start offscreen to the left */
   transition: opacity 2s ease, transform 2s ease;
   padding-bottom: 0;
 }
@@ -662,6 +661,7 @@ section.conteneur-activites article.activites .conteneur-titre {
   text-align: right;
   overflow: hidden;
   margin-bottom: 2em;
+  padding-right: 2em;
 }
 section.conteneur-activites article.activites p.heure {
   font-weight: bold;
@@ -679,13 +679,11 @@ section.conteneur-activites article.activites:nth-child(even) .conteneur-titre {
 section.conteneur-activites .conteneur-image {
   opacity: 0;
   transform: translateX(-50px);
-  /* Start offscreen to the left */
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 section.conteneur-activites .conteneur-image.visible {
   opacity: 1;
   transform: translateX(0);
-  /* Move to original position */
 }
 section.conteneur-activites .activites.hidden {
   display: none;
@@ -696,11 +694,10 @@ section.conteneur-activites .hidden {
 section.conteneur-activites .activites.visible {
   opacity: 1;
   transform: translateX(0);
-  /* Move to original position */
 }
 
 button.voir.activite {
-  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 section.conteneur-actualites .titre {
@@ -750,7 +747,9 @@ section.conteneur-actualites .bordure.actualites {
 .conteneur-articles-actualites h3,
 .conteneur-articles-actualites h4 {
   color: #eca6d9;
-  margin: 0;
+}
+.conteneur-articles-actualites .date-publication {
+  width: 300px;
 }
 .conteneur-articles-actualites .conteneur-gauche {
   display: flex;
@@ -758,15 +757,13 @@ section.conteneur-actualites .bordure.actualites {
   max-height: 500px;
   min-height: 250px;
   justify-content: space-between;
-  padding-left: 2em;
   padding-right: 2em;
   padding-top: 2em;
 }
 .conteneur-articles-actualites .conteneur-titre {
   display: flex;
   flex-direction: column;
-  padding-left: 6em;
-  margin: 0;
+  margin-left: 3rem;
 }
 .conteneur-articles-actualites .conteneur-titre .description {
   margin: 0;
@@ -976,7 +973,7 @@ section.billetterie .conteneur-description.voir-plus {
   background-color: white;
 }
 .conteneur_concours .conteneur_le_concours {
-  background-color: black;
+  background-color: #030303;
 }
 .conteneur_concours .concours_bg {
   margin: 0;
@@ -990,12 +987,13 @@ section.billetterie .conteneur-description.voir-plus {
 .conteneur_concours .concours_bg p {
   padding: 0 8em;
   background-color: white;
-  color: black;
+  color: #030303;
   list-style: none;
 }
 .conteneur_concours .concours_bg ul {
   list-style: none;
 }
+
 
 .conteneur-utilisateur {
   color: #eeb15e;
@@ -1563,7 +1561,7 @@ form.la_recherche button {
 }
 
 .logo {
-  margin-left: 365px;
+  margin-left: 300px;
   margin-top: 60px;
   z-index: 2;
 }
@@ -1618,7 +1616,7 @@ p.adresse:hover {
 
 .bg {
   position: absolute;
-  top: 83px;
+  top: 33px;
   z-index: 1;
   width: 100%;
 }
@@ -1654,7 +1652,6 @@ p.adresse:hover {
   align-items: center;
   top: 0px;
   height: 70px;
-  margin-top: -14px;
 }
 
 .menu_nav .item_nav {
@@ -1708,13 +1705,11 @@ p.adresse:hover {
 }
 
 a.billet {
-  height: 270px;
   text-decoration: none;
 }
 
 .billet {
   width: 170px;
-  height: 200px;
   margin-left: 50px;
   padding-right: 40px;
   background: url("../img/accueil/billet.jpg");
@@ -1734,13 +1729,12 @@ p.texte {
   text-transform: uppercase;
   font-weight: bold;
   margin-top: 55px;
-  margin-left: 25px;
+  margin-left: 29px;
 }
 
 .reseau {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 10px;
   padding-left: 30px;
   padding-right: 50px;
   width: 15%;
@@ -1777,11 +1771,13 @@ a.connexion .material-icons {
 
 section.hero {
   margin: 0;
+  margin-top: 2em;
 }
 
 .conteneur-hero {
   width: 100%;
   height: 400px;
+  position: relative;
 }
 .conteneur-hero img.image-hero {
   -o-object-fit: cover;
@@ -1790,14 +1786,14 @@ section.hero {
   height: 400px;
 }
 .conteneur-hero .reserver.hero {
-  position: relative;
-  top: -124px;
-  left: 1344px;
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
 }
 .conteneur-hero .compteur.petit {
   position: relative;
-  top: -316px;
-  left: 24px;
+  bottom: 240px;
+  left: 40px;
 }
 
 .deconnexion form {
@@ -1858,7 +1854,7 @@ section.hero {
   transition: background-color, 0.3s;
 }
 
-.btn-concours {
+.btn-concours, .btn-compte {
   background-color: #030303;
   color: #eeb15e;
   cursor: pointer;
@@ -1869,45 +1865,50 @@ section.hero {
   box-sizing: border-box;
   display: inline-block;
 }
-.btn-concours a {
+.btn-concours a, .btn-compte a {
   display: flex;
   justify-content: space-between;
 }
-.btn-concours p {
+.btn-concours p, .btn-compte p {
   color: #eeb15e;
   margin: 0;
   font-family: "pf-venue", sans-serif;
   text-transform: uppercase;
   padding-top: 12px;
-  padding-left: 10px;
+  padding-left: 26px;
 }
-.btn-concours .conteneur-span {
+.btn-concours .conteneur-span, .btn-compte .conteneur-span {
   background-color: #eeb15e;
   height: 30px;
   width: 30px;
   border-radius: 5px;
   display: inline-block;
-  margin-top: 15px;
-  margin-right: 42px;
+  margin-top: 14px;
+  margin-right: 13px;
 }
-.btn-concours .conteneur-span span {
+.btn-concours .conteneur-span span, .btn-compte .conteneur-span span {
   color: #030303;
   font-weight: 500;
   font-size: 2em;
 }
-.btn-concours:hover {
+.btn-concours:hover, .btn-compte:hover {
   background-color: #eeb15e;
   transition: background-color, 0.3s;
   border: solid #eeb15e 3px;
 }
-.btn-concours:hover p {
+.btn-concours:hover p, .btn-compte:hover p {
   color: #030303;
 }
-.btn-concours:hover .conteneur-span {
+.btn-concours:hover .conteneur-span, .btn-compte:hover .conteneur-span {
   background-color: #030303;
 }
-.btn-concours:hover .conteneur-span span {
+.btn-concours:hover .conteneur-span span, .btn-compte:hover .conteneur-span span {
   color: #eeb15e;
+}
+
+.btn-compte {
+  position: relative;
+  right: -101px;
 }
 
 .conteneur-btn {
@@ -1964,9 +1965,6 @@ form button.supprimer {
   height: 65px;
   text-align: center;
   margin-bottom: 1rem;
-  position: relative;
-  left: 670px;
-  border: solid #eca6d9 3px;
   box-sizing: border-box;
 }
 .reserver a {
@@ -1979,7 +1977,6 @@ form button.supprimer {
 .reserver:hover {
   background-color: #030303;
   transition: background-color, 0.3s;
-  border: solid #eca6d9 3px;
 }
 .reserver:hover a,
 .reserver:hover span {
@@ -2090,8 +2087,8 @@ form button.supprimer {
 
 .carre_noir h1 {
   margin: 0;
-  padding-bottom: 10px;
-  font-size: 95px;
+  padding-bottom: 40px;
+  font-size: 55px;
   z-index: 3;
   color: #eeb15e;
 }
@@ -2099,19 +2096,20 @@ form button.supprimer {
 .carre_noir h3 {
   color: #eeb15e;
   margin: 0px;
-  font-size: 40px;
-  padding-bottom: 20px;
+  font-size: 30px;
+  padding-bottom: 40px;
   text-transform: none;
   z-index: 3;
 }
 
 .section_compte {
   position: relative;
-  background-image: url("../img/accueil/ban_compte.png");
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 365px;
+  height: 310px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .section_compte img {
@@ -2122,12 +2120,12 @@ form button.supprimer {
 .carre_blanc {
   position: absolute;
   padding-left: 15px;
-  padding-right: 15px;
+  padding-right: 30px;
   margin-right: 100px;
   right: 0;
   width: 450px;
-  height: 366px;
-  background-color: rgba(255, 255, 255, 0.445);
+  height: 310px;
+  background-color: #030303;
   display: flex;
   flex-direction: column;
   text-align: right;
@@ -2136,62 +2134,16 @@ form button.supprimer {
 .carre_blanc h1.titre_compte {
   color: #eeb15e;
   font-size: 55px;
-  margin-top: 20px;
+  margin-top: 27px;
   margin-bottom: 0px;
 }
 
 .carre_blanc h3.texte_compte {
-  color: #030303;
-  font-size: 40px;
+  font-size: 30px;
   text-transform: none;
-  text-align: left;
-  margin-right: 40px;
   margin-bottom: 20px;
   line-height: 1.2;
-}
-
-.carre_blanc a {
-  font-family: "pf-venue", sans-serif;
-  font-size: 32px;
-  text-decoration: none;
-  color: #030303;
-  font-weight: bold;
-  background-color: rgba(236, 166, 217, 0.8);
-  padding: 10px 50px;
-}
-
-.carre_blanc .compte {
-  text-align: right;
-}
-
-.carre_blanc .compte i {
-  color: #030303;
-}
-
-a.compte {
-  text-decoration: none;
-  display: inline-block;
-  position: relative;
-  font-size: 42px;
-}
-
-.compte .material-icons {
-  font-size: 40px;
-  color: #eca6d9;
-  position: relative;
-  top: 15%;
-  left: 7%;
-}
-
-.compte::before {
-  content: "";
-  position: absolute;
-  top: 55%;
-  left: 90%;
-  transform: translate(-50%, -50%);
-  width: 38px;
-  height: 38px;
-  background-color: #030303;
+  color: #eeb15e;
 }
 
 .section_billet {
@@ -2201,8 +2153,8 @@ a.compte {
   background-position: center;
   width: 100%;
   height: 310px;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .section_billet img {
@@ -2268,16 +2220,14 @@ a.compte {
   font-size: 50px;
   color: #030303;
   vertical-align: middle;
-  /* Aligner verticalement au centre */
   left: 9%;
   padding-left: 20px;
 }
 
 .reserver.banniere {
-  position: relative;
-  left: 1350px;
-  top: 215px;
-  right: 0px;
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
 }
 
 .petit {

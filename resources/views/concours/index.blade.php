@@ -66,7 +66,7 @@
             <h2>description</h2>
             <p>Le concours d'art du Festival Prima-Colors est une célébration de la créativité et de l'expression artistique. Il offre aux artistes une plateforme pour présenter leurs œuvres originales et captivantes.</p>
         </section>
-
+        <x-bannieres.compte :url="url('img/accueil/ban_compte.png')"/>
         <section class="concours_critere_participation concours_bg">
 
             <h2>critÈre de participation</h2>
