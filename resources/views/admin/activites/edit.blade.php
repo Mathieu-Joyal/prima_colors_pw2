@@ -1,16 +1,11 @@
 <x-layout titre="Modifiez une activité">
 
     <x-nav-admin titre=" Modifier une ActivitÉ" route="{{route('admin.activites.index')}}" valeur="Retour aux activitÉs" />
-    {{-- MESSAGES --}}
-    {{-- @if (session('echec'))
-            <p class="">
-                {{ session('echec') }}</p>
-        @endif --}}
 
     <section>
 
         {{-- FORMULAIRE --}}
-        <form class="edit" action="{{ route('admin.activites.store') }}" method="POST" enctype="multipart/form-data">
+        <form class="edit" action="{{ route('admin.activites.update') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
             <div class="conteneur-grid">
@@ -82,7 +77,7 @@
 
                 <x-forms.erreur champ="image" />
                 <input id="image" name="image" type="file" class=" "
-                    value="{{ old('image') ?? $activite->image }}">
+                    value="{{ $activite->image }}">
             </div>
 
             <div class="conteneur-bouttons">

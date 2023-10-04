@@ -93,20 +93,16 @@
 
                 </article>
 
-                {{-- *************** --}}
-                {{-- @if ( auth()->guard('employe')->user()->role_id === 1) --}}
+                @if ( auth()->guard('employe')->user()->role_id === 1)
 
                     <x-boutons.gestion_activites_actualites routeAjouter="{{ route('admin.activites.create') }}"
                         routeModifier="{{ route('admin.activites.edit', ['id' => $activite->id]) }}"
                         routeSupprimer="{{ route('admin.activites.destroy') }}" valeur="{{ $activite->id }}"
                         nom="activité" />
-                {{-- @endif --}}
-                {{-- **************** --}}
+                @endif
             @empty
 
-            {{-- ************** --}}
             <p>Aucune activité trouvé pour cette date</p>
-            {{-- ************* --}}
 
         @endforelse
     </section>

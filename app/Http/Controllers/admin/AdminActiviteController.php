@@ -11,25 +11,21 @@ class AdminActiviteController extends Controller
 {
     //==================TOUTES LES ACTIVITÉS===========================//
     /**
-     * Affiche la liste des activites
-     *
-     * @return View
-     */
-
-     public function index()
-     {
-
+    * Affiche la liste des activités
+    *
+    * @return View
+    */
+    public function index()
+    {
         $activites = Activite::all();
 
         return view ("admin.activites.index", [
             "activites" => $activites,
         ]);
-
-
-     }
+    }
 
      /**
-     * Filtrer les activites
+     * Filtre les activités
      *
      * @return View
      */
@@ -44,24 +40,33 @@ class AdminActiviteController extends Controller
 
     //===============AJOUTER UNE ACTIVITÉ=================================//
     /**
-      * Affiche le formulaire d'ajout
-      *
-      * @return View
-      */
-     public function create() {
+    * Affiche le formulaire d'ajout
+    *
+    * @return View
+    */
+    public function create() {
 
-         return view('admin.activites.create',
+        return view('admin.activites.create',
 
-         );
-     }
+        );
+    }
 
     /**
-     * Traite l'ajout
+     * Traite de l'ajout d'une activité
     *
     * @param Request $request
     * @return RedirectResponse
     */
     public function store(Request $request) {
+
+        // Redirection si ce n'est pas un administrateur qui se connecte
+        if(auth()->guard('employe')->user()->role_id !== 1) {
+
+            // Redirection
+            return redirect()
+                    ->route('admin.activites.index')
+                    ->with('erreur', 'Seul un administrateur peut ajouter une activités');
+        }
 
         // Validation
         $valides = $request->validate([
@@ -71,7 +76,6 @@ class AdminActiviteController extends Controller
             "description" => "required|min:50|max:350",
             "image" => "required|mimes:png,jpg,jpeg",
             "endroit" => "required",
-
         ], [
             "titre.max" => "Le titre doit avoir un maximum de :max caractères",
             "titre.min" => "Le titre doit avoir un minimum de :min caractères",
@@ -101,6 +105,7 @@ class AdminActiviteController extends Controller
             $activite->image = "/storage/uploads/" . $request->image->hashName();
         }
 
+        // Sauvegarder toutes les informations dans la BDD
         $activite->save();
 
         // Rediriger
@@ -124,7 +129,7 @@ class AdminActiviteController extends Controller
     }
 
     /**
-     * Traite la modification
+    * Traite de la modification d'une activité
     *
     * @param Request $request Objet qui contient tous les champs reçus dans la requête
     * @return RedirectResponse
@@ -167,23 +172,24 @@ class AdminActiviteController extends Controller
         $activite->heure = $valides["heure"];
         $activite->description = $valides["descritpion"];
         $activite->employe_id = auth()->id();
-        $activite->image =
+        $activite->image = $valides["image"];
 
+        // Sauvegarder toutes les informations dans la BDD
         $activite->save();
 
-        // Rediriger
+        // Redirection
         return redirect()
                 ->route('admin.activites.index')
                 ->with('succes', "L'actualité a été modifiée avec succès!");
      }
 
     //=============================SUPPRIMER UNE ACTUALITÉ=============================//
-    // /**
-    //  * Traite la suppression
-    //  *
-    //  * @param Request $request
-    //  * @return RedirectResponse
-    //  */
+    /**
+    * Traite de la suppression d'une activité
+    *
+    * @param Request $request
+    * @return RedirectResponse
+    */
     public function destroy(Request $request) {
 
         // Redirection si ce n'est pas un administrateur
@@ -194,9 +200,12 @@ class AdminActiviteController extends Controller
                     ->with('erreur', 'Seul un administrateur peut supprimer une activité');
         }
 
+        // Supprimer l'activité
         Activite::destroy($request->id);
 
-        return redirect()->route('admin.activites.index')
+        // Redirection
+        return redirect()
+                ->route('admin.activites.index')
                 ->with('succes', "L'activite a été supprimée!");
     }
 }
