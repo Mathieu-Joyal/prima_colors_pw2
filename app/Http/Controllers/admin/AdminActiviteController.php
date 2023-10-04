@@ -135,10 +135,11 @@ class AdminActiviteController extends Controller
     /**
      * Traite de la modification d'une activité
      *
+     * @param $id
      * @param Request $request Objet qui contient tous les champs reçus dans la requête
      * @return RedirectResponse
      */
-    public function update(Request $request) {
+    public function update(Request $request, int $id) {
 
         // Redirection si ce n'est pas un administrateur
         if(auth()->guard('employe')->user()->role_id !== 1) {
@@ -157,7 +158,6 @@ class AdminActiviteController extends Controller
             "description" => "required|min:50|max:350",
             "image" => "required|mimes:png,jpg,jpeg",
             "endroit" => "required",
-
         ], [
             "titre.required" => "Le titre est requis",
             "titre.max" => "Le titre doit avoir un maximum de :max caractères",
@@ -173,11 +173,12 @@ class AdminActiviteController extends Controller
         ]);
 
         // Récupération de la activite à modifier, suivi de la modification et sauvegarde
-        $activite = Activite::findOrFail($valides["id"]);
+        $activite = Activite::findOrFail($id);
+
         $activite->titre = $valides["titre"];
         $activite->date = $valides["date"];
         $activite->heure = $valides["heure"];
-        $activite->description = $valides["descritpion"];
+        $activite->description = $valides["description"];
         $activite->employe_id = auth()->id();
         $activite->image = $valides["image"];
 

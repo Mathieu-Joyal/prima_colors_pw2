@@ -77,12 +77,14 @@ class AdminActualiteController extends Controller
             "image" => "required|mimes:png,jpg,jpeg",
 
         ], [
+            "titre.required" => "Le titre est requis",
             "titre.max" => "Le titre doit avoir un maximum de :max caractères",
             "titre.min" => "Le titre doit avoir un minimum de :min caractères",
+            "description.required" => "La description est requise",
             "description.max" => "La description doit avoir un maximum de :max caractères",
             "description.min" => "La description doit avoir un minimum de :min caractères",
             "image.required" => "Une image doit être téléchargé ",
-
+            "image.mimes" => "Le format de l'image doit être l'un des suivants :png, jpg, jpeg",
         ]);
 
         // Préparation à l'ajout à la BDD
@@ -147,11 +149,14 @@ class AdminActualiteController extends Controller
             "image" => "required|",
             "descritpion" => "required"
         ], [
+            "titre.required" => "Le titre est requis",
             "titre.max" => "Le titre doit avoir un maximum de :max caractères",
             "titre.min" => "Le titre doit avoir un minimum de :min caractères",
-            "description.max" => "Le titre doit avoir un maximum de :max caractères",
-            "description.min" => "Le titre doit avoir un minimum de :min caractères",
-            "image" => "Une image doit être téléchargé ",
+            "description.required" => "La description est requise",
+            "description.max" => "La description doit avoir un maximum de :max caractères",
+            "description.min" => "La description doit avoir un minimum de :min caractères",
+            "image.required" => "Une image doit être téléchargé ",
+            "image.mimes" => "Le format de l'image doit être l'un des suivants :png, jpg, jpeg",
         ]);
 
         // Récupération de l'actualité à modifier, suivi de la modification et sauvegarde

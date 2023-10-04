@@ -274,10 +274,18 @@ Route::get("/admin/activites/edit/{id}", [AdminActiviteController::class, 'edit'
     ->name('admin.activites.edit')
     ->middleware('auth:employe');
 
+
+
+//  *****************************
+
 // // Traitement du formulaire de modification
-Route::post("/admin/activites/update", [AdminActiviteController::class, 'update'])
+Route::post("/admin/activites/update/{id}", [AdminActiviteController::class, 'update'])
     ->name('admin.activites.update')
     ->middleware('auth:employe');
+
+
+
+// *****************************
 
 // //Suppression d'une activité
 Route::post("/admin/activites/destroy", [AdminActiviteController::class, 'destroy'])

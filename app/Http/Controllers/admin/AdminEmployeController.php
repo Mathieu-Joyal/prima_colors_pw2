@@ -64,9 +64,10 @@ class AdminEmployeController extends Controller
     /**
      * Insertion de la modification de l'employé
      *
+     * @param $id
      * @return View
      */
-    public function update(Request $request, $id){
+    public function update(Request $request, int $id){
 
         // Redirection si ce n'est pas un administrateur qui se connecte
         if(auth()->guard('employe')->user()->role_id !== 1) {

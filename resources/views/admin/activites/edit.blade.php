@@ -5,8 +5,10 @@
     <section>
 
         {{-- FORMULAIRE --}}
-        <form class="edit" action="{{ route('admin.activites.update') }}" method="POST" enctype="multipart/form-data">
+        {{-- ******************* Ajout pour recevoir l'id ******************** --}}
+        <form class="edit" action="{{ route('admin.activites.update', ['id' => $activite->id] ) }}" method="POST" enctype="multipart/form-data">
             @csrf
+        {{-- ******************************** --}}
 
             <div class="conteneur-grid">
                 <!-- Titre -->
