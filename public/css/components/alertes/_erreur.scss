@@ -1,6 +1,9 @@
 .alerte_erreur {
 
     p {
+        font-weight: bold;
+        text-decoration: underline;
+        text-align: center;
         color: $rouge;
     }
 }
