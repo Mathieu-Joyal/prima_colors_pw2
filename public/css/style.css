@@ -1874,7 +1874,7 @@ section.hero {
   font-family: "pf-venue", sans-serif;
   text-transform: uppercase;
   padding-top: 12px;
-  padding-left: 10px;
+  padding-left: 26px;
 }
 .btn-concours .conteneur-span, .btn-compte .conteneur-span {
   background-color: #eeb15e;
@@ -1882,8 +1882,8 @@ section.hero {
   width: 30px;
   border-radius: 5px;
   display: inline-block;
-  margin-top: 15px;
-  margin-right: 42px;
+  margin-top: 14px;
+  margin-right: 13px;
 }
 .btn-concours .conteneur-span span, .btn-compte .conteneur-span span {
   color: #030303;
@@ -1966,7 +1966,6 @@ form button.supprimer {
   margin-bottom: 1rem;
   position: relative;
   left: 670px;
-  border: solid #eca6d9 3px;
   box-sizing: border-box;
 }
 .reserver a {
@@ -1979,7 +1978,6 @@ form button.supprimer {
 .reserver:hover {
   background-color: #030303;
   transition: background-color, 0.3s;
-  border: solid #eca6d9 3px;
 }
 .reserver:hover a,
 .reserver:hover span {
