@@ -186,6 +186,7 @@ img.img_activite {
   color: #eca6d9;
 }
 .texte_droite a.accueil {
+  font-family: "pf-venue-stencil", sans-serif;
   text-decoration: none;
   color: #eca6d9;
   padding: 10px 20px;
@@ -243,6 +244,7 @@ img.img_forfait {
   color: #eeb15e;
 }
 .texte_gauche a.accueil {
+  font-family: "pf-venue-stencil", sans-serif;
   text-decoration: none;
   color: #eeb15e;
   padding: 10px 20px;
@@ -299,9 +301,9 @@ p.accueil_apropos {
 }
 
 a.accueil {
+  font-family: "pf-venue-stencil", sans-serif;
   text-decoration: none;
   color: #eca6d9;
-  padding: 10px 20px;
   font-size: 30px;
   font-weight: bold;
   text-transform: uppercase;
@@ -312,7 +314,6 @@ a.accueil {
 a.accueil span.material-icons {
   color: #eca6d9;
   font-size: 75px;
-  padding-left: 100px;
   position: relative;
   transition: 0.3s;
 }
@@ -329,6 +330,204 @@ h1.accueil_actualite {
 
 .section_actualites {
   padding-bottom: 150px;
+}
+
+.section_actualites {
+  width: 1500px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  text-align: left;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+h1.accueil_actualite {
+  color: #eeb15e;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-top: 0px;
+  padding-bottom: 50px;
+  margin: 0px;
+}
+
+.titre_actualite {
+  flex-wrap: wrap;
+  font-family: "pf-venue", sans-serif;
+  font-size: 30px;
+  padding-left: 30px;
+}
+
+a.vers_actualite {
+  display: inline-block;
+  background-color: #0b8a80;
+  padding: 15px 20px;
+  margin-right: 35px;
+  margin-bottom: 25px;
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+a.vers_actualite .section_actualites {
+  width: 1500px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  text-align: left;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+a.vers_actualite h1.accueil_actualite {
+  color: #eeb15e;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-top: 0px;
+  padding-bottom: 50px;
+  margin: 0px;
+}
+a.vers_actualite .titre_actualite {
+  flex-wrap: wrap;
+  font-family: "pf-venue", sans-serif;
+  font-size: 30px;
+  padding-left: 30px;
+}
+a.vers_actualite a.vers_actualite {
+  display: inline-block;
+  background-color: #0b8a80;
+  padding: 15px 20px;
+  margin-right: 35px;
+  margin-bottom: 25px;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  transition: 0.3s;
+}
+a.vers_actualite a.vers_actualite .section_actualites {
+  width: 1500px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  text-align: left;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+a.vers_actualite a.vers_actualite h1.accueil_actualite {
+  color: #eeb15e;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-top: 0px;
+  padding-bottom: 50px;
+  margin: 0px;
+}
+a.vers_actualite a.vers_actualite .titre_actualite {
+  flex-wrap: wrap;
+  font-family: "pf-venue", sans-serif;
+  font-size: 30px;
+  padding-left: 30px;
+}
+a.vers_actualite a.vers_actualite a.vers_actualite {
+  display: inline-block;
+  background-color: #0b8a80;
+  padding: 15px 20px;
+  margin-right: 35px;
+  margin-bottom: 25px;
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+a.vers_actualite a.vers_actualite .titre_actualite a.vers_actualite img {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  z-index: 5;
+  width: 200px;
+  height: 135px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: translateX(-50%);
+}
+a.vers_actualite a.vers_actualite .titre_actualite a.vers_actualite:hover img {
+  display: block;
+}
+a.vers_actualite a.vers_actualite .images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a.vers_actualite a.vers_actualite .image {
+  width: 150px;
+  height: 150px;
+  margin-top: 20px;
+  display: none;
+}
+a.vers_actualite .titre_actualite a.vers_actualite img {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  z-index: 5;
+  width: 200px;
+  height: 135px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: translateX(-50%);
+}
+a.vers_actualite .titre_actualite a.vers_actualite:hover img {
+  display: block;
+}
+a.vers_actualite .images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a.vers_actualite .image {
+  width: 150px;
+  height: 150px;
+  margin-top: 20px;
+  display: none;
+}
+
+.titre_actualite a.vers_actualite img {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  z-index: 5;
+  width: 200px;
+  height: 135px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: translateX(-50%);
+}
+
+.titre_actualite a.vers_actualite:hover img {
+  display: block;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 150px;
+  height: 150px;
+  margin-top: 20px;
+  display: none;
 }
 
 section.conteneur-activites {
@@ -400,7 +599,6 @@ section.conteneur-activites article.activites {
   justify-content: space-between;
   opacity: 0;
   transform: translateX(-50px);
-  /* Start offscreen to the left */
   transition: opacity 2s ease, transform 2s ease;
   padding-bottom: 0;
 }
@@ -480,13 +678,11 @@ section.conteneur-activites article.activites:nth-child(even) .conteneur-titre {
 section.conteneur-activites .conteneur-image {
   opacity: 0;
   transform: translateX(-50px);
-  /* Start offscreen to the left */
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 section.conteneur-activites .conteneur-image.visible {
   opacity: 1;
   transform: translateX(0);
-  /* Move to original position */
 }
 section.conteneur-activites .activites.hidden {
   display: none;
@@ -497,11 +693,10 @@ section.conteneur-activites .hidden {
 section.conteneur-activites .activites.visible {
   opacity: 1;
   transform: translateX(0);
-  /* Move to original position */
 }
 
 button.voir.activite {
-  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 section.conteneur-actualites .titre {
@@ -777,7 +972,7 @@ section.billetterie .conteneur-description.voir-plus {
   background-color: white;
 }
 .conteneur_concours .conteneur_le_concours {
-  background-color: black;
+  background-color: #030303;
 }
 .conteneur_concours .concours_bg {
   margin: 0;
@@ -791,82 +986,14 @@ section.billetterie .conteneur-description.voir-plus {
 .conteneur_concours .concours_bg p {
   padding: 0 8em;
   background-color: white;
-  color: black;
+  color: #030303;
   list-style: none;
 }
 .conteneur_concours .concours_bg ul {
   list-style: none;
 }
-
-.section_actualites {
-  width: 1500px;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  text-align: left;
-  padding-top: 150px;
-  padding-bottom: 150px;
-}
-
-h1.accueil_actualite {
-  color: #eeb15e;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  padding-top: 0px;
-  padding-bottom: 50px;
-  margin: 0px;
-}
-
-.titre_actualite {
-  flex-wrap: wrap;
-  font-family: "pf-venue", sans-serif;
-  font-size: 30px;
-  padding-left: 30px;
-}
-
-a.vers_actualite {
-  display: inline-block;
-  background-color: #0b8a80;
-  padding: 15px 20px;
-  margin-right: 35px;
-  margin-bottom: 25px;
-  text-decoration: none;
-  color: white;
-  position: relative;
-}
-
-.titre_actualite a.vers_actualite img {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  z-index: 5;
-  width: 200px;
-  height: 135px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  transform: translateX(-50%);
-}
-
-.titre_actualite a.vers_actualite:hover img {
-  display: block;
-}
-
-.images {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.image {
-  width: 150px;
-  height: 150px;
-  margin-top: 20px;
-  display: none;
+.conteneur_concours .section_compte, .conteneur_concours .section_concours {
+  margin-bottom: 0;
 }
 
 .conteneur-utilisateur {
@@ -1490,7 +1617,7 @@ p.adresse:hover {
 
 .bg {
   position: absolute;
-  top: 83px;
+  top: 33px;
   z-index: 1;
   width: 100%;
 }
@@ -1526,7 +1653,6 @@ p.adresse:hover {
   align-items: center;
   top: 0px;
   height: 70px;
-  margin-top: -14px;
 }
 
 .menu_nav .item_nav {
@@ -1580,13 +1706,11 @@ p.adresse:hover {
 }
 
 a.billet {
-  height: 270px;
   text-decoration: none;
 }
 
 .billet {
   width: 170px;
-  height: 200px;
   margin-left: 50px;
   padding-right: 40px;
   background: url("../img/accueil/billet.jpg");
@@ -1606,13 +1730,12 @@ p.texte {
   text-transform: uppercase;
   font-weight: bold;
   margin-top: 55px;
-  margin-left: 25px;
+  margin-left: 29px;
 }
 
 .reseau {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 10px;
   padding-left: 30px;
   padding-right: 50px;
   width: 15%;
@@ -1730,7 +1853,7 @@ section.hero {
   transition: background-color, 0.3s;
 }
 
-.btn-concours {
+.btn-concours, .btn-compte {
   background-color: #030303;
   color: #eeb15e;
   cursor: pointer;
@@ -1741,11 +1864,11 @@ section.hero {
   box-sizing: border-box;
   display: inline-block;
 }
-.btn-concours a {
+.btn-concours a, .btn-compte a {
   display: flex;
   justify-content: space-between;
 }
-.btn-concours p {
+.btn-concours p, .btn-compte p {
   color: #eeb15e;
   margin: 0;
   font-family: "pf-venue", sans-serif;
@@ -1753,7 +1876,7 @@ section.hero {
   padding-top: 12px;
   padding-left: 10px;
 }
-.btn-concours .conteneur-span {
+.btn-concours .conteneur-span, .btn-compte .conteneur-span {
   background-color: #eeb15e;
   height: 30px;
   width: 30px;
@@ -1762,24 +1885,29 @@ section.hero {
   margin-top: 15px;
   margin-right: 42px;
 }
-.btn-concours .conteneur-span span {
+.btn-concours .conteneur-span span, .btn-compte .conteneur-span span {
   color: #030303;
   font-weight: 500;
   font-size: 2em;
 }
-.btn-concours:hover {
+.btn-concours:hover, .btn-compte:hover {
   background-color: #eeb15e;
   transition: background-color, 0.3s;
   border: solid #eeb15e 3px;
 }
-.btn-concours:hover p {
+.btn-concours:hover p, .btn-compte:hover p {
   color: #030303;
 }
-.btn-concours:hover .conteneur-span {
+.btn-concours:hover .conteneur-span, .btn-compte:hover .conteneur-span {
   background-color: #030303;
 }
-.btn-concours:hover .conteneur-span span {
+.btn-concours:hover .conteneur-span span, .btn-compte:hover .conteneur-span span {
   color: #eeb15e;
+}
+
+.btn-compte {
+  position: relative;
+  right: -101px;
 }
 
 .conteneur-btn {
@@ -1930,8 +2058,8 @@ form button.supprimer {
 
 .carre_noir h1 {
   margin: 0;
-  padding-bottom: 10px;
-  font-size: 95px;
+  padding-bottom: 40px;
+  font-size: 55px;
   z-index: 3;
   color: #eeb15e;
 }
@@ -1939,19 +2067,20 @@ form button.supprimer {
 .carre_noir h3 {
   color: #eeb15e;
   margin: 0px;
-  font-size: 40px;
-  padding-bottom: 20px;
+  font-size: 30px;
+  padding-bottom: 40px;
   text-transform: none;
   z-index: 3;
 }
 
 .section_compte {
   position: relative;
-  background-image: url("../img/accueil/ban_compte.png");
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 365px;
+  height: 310px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .section_compte img {
@@ -1962,12 +2091,12 @@ form button.supprimer {
 .carre_blanc {
   position: absolute;
   padding-left: 15px;
-  padding-right: 15px;
+  padding-right: 30px;
   margin-right: 100px;
   right: 0;
   width: 450px;
-  height: 366px;
-  background-color: rgba(255, 255, 255, 0.445);
+  height: 310px;
+  background-color: #030303;
   display: flex;
   flex-direction: column;
   text-align: right;
@@ -1976,62 +2105,16 @@ form button.supprimer {
 .carre_blanc h1.titre_compte {
   color: #eeb15e;
   font-size: 55px;
-  margin-top: 20px;
+  margin-top: 27px;
   margin-bottom: 0px;
 }
 
 .carre_blanc h3.texte_compte {
-  color: #030303;
-  font-size: 40px;
+  font-size: 30px;
   text-transform: none;
-  text-align: left;
-  margin-right: 40px;
   margin-bottom: 20px;
   line-height: 1.2;
-}
-
-.carre_blanc a {
-  font-family: "pf-venue", sans-serif;
-  font-size: 32px;
-  text-decoration: none;
-  color: #030303;
-  font-weight: bold;
-  background-color: rgba(236, 166, 217, 0.8);
-  padding: 10px 50px;
-}
-
-.carre_blanc .compte {
-  text-align: right;
-}
-
-.carre_blanc .compte i {
-  color: #030303;
-}
-
-a.compte {
-  text-decoration: none;
-  display: inline-block;
-  position: relative;
-  font-size: 42px;
-}
-
-.compte .material-icons {
-  font-size: 40px;
-  color: #eca6d9;
-  position: relative;
-  top: 15%;
-  left: 7%;
-}
-
-.compte::before {
-  content: "";
-  position: absolute;
-  top: 55%;
-  left: 90%;
-  transform: translate(-50%, -50%);
-  width: 38px;
-  height: 38px;
-  background-color: #030303;
+  color: #eeb15e;
 }
 
 .section_billet {
@@ -2041,8 +2124,8 @@ a.compte {
   background-position: center;
   width: 100%;
   height: 310px;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .section_billet img {
@@ -2108,7 +2191,6 @@ a.compte {
   font-size: 50px;
   color: #030303;
   vertical-align: middle;
-  /* Aligner verticalement au centre */
   left: 9%;
   padding-left: 20px;
 }

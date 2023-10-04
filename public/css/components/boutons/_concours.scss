@@ -1,4 +1,4 @@
-.btn-concours {
+.btn-concours, .btn-compte {
     background-color: $noir;
     color: $jaune;
     cursor: pointer;
@@ -56,4 +56,9 @@
             }
         }
     }
+}
+.btn-compte{
+position: relative;
+right: -101px;
+
 }

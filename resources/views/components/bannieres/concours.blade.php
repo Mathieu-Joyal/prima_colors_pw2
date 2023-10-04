@@ -6,7 +6,7 @@
         <h3>CréARTive: Concours d'Art Visuel</h3>
 
 
-      <x-boutons.concours/>
+      <x-boutons.concours />
 
 
     </div>
