@@ -2006,6 +2006,26 @@ form button.supprimer {
   margin: 0.5em 0;
 }
 
+/*
+.administration {
+    div {
+
+        p {
+            color: $rouge;
+            font-size: 1em;
+            font-weight: normal;
+            margin: .5em 0;
+        }
+
+        &:focus-within {
+
+            p {
+                font-weight: normal;
+            }
+        }
+    }
+}
+*/
 .deconnexion form {
   margin: 4em 3em 3em 3em;
   text-align: right;

@@ -11,10 +11,10 @@ class AdminActiviteController extends Controller
 {
     //==================TOUTES LES ACTIVITÉS===========================//
     /**
-    * Affiche la liste des activités
-    *
-    * @return View
-    */
+     * Affiche la liste des activités
+     *
+     * @return View
+     */
     public function index()
     {
         $activites = Activite::all();
@@ -24,7 +24,7 @@ class AdminActiviteController extends Controller
         ]);
     }
 
-     /**
+    /**
      * Filtre les activités
      *
      * @return View
@@ -40,10 +40,10 @@ class AdminActiviteController extends Controller
 
     //===============AJOUTER UNE ACTIVITÉ=================================//
     /**
-    * Affiche le formulaire d'ajout
-    *
-    * @return View
-    */
+     * Affiche le formulaire d'ajout
+     *
+     * @return View
+     */
     public function create() {
 
         return view('admin.activites.create',
@@ -53,13 +53,13 @@ class AdminActiviteController extends Controller
 
     /**
      * Traite de l'ajout d'une activité
-    *
-    * @param Request $request
-    * @return RedirectResponse
-    */
+     *
+     * @param Request $request
+     * @return RedirectResponse
+     */
     public function store(Request $request) {
 
-        // Redirection si ce n'est pas un administrateur qui se connecte
+        // Redirection si ce n'est pas un administrateur
         if(auth()->guard('employe')->user()->role_id !== 1) {
 
             // Redirection
@@ -67,6 +67,7 @@ class AdminActiviteController extends Controller
                     ->route('admin.activites.index')
                     ->with('erreur', 'Seul un administrateur peut ajouter une activités');
         }
+
 
         // Validation
         $valides = $request->validate([
@@ -116,11 +117,11 @@ class AdminActiviteController extends Controller
 
     //==========================MODIFIER UNE ACTUALITÉ===========================//
     /**
-    * Affiche le formulaire de modification
-    *
-    * @param int $id Id de l'actualité à modifier
-    * @return View
-    */
+     * Affiche le formulaire de modification
+     *
+     * @param int $id Id de l'actualité à modifier
+     * @return View
+     */
     public function edit($id) {
 
         return view('admin.activites.edit', [
@@ -129,11 +130,11 @@ class AdminActiviteController extends Controller
     }
 
     /**
-    * Traite de la modification d'une activité
-    *
-    * @param Request $request Objet qui contient tous les champs reçus dans la requête
-    * @return RedirectResponse
-    */
+     * Traite de la modification d'une activité
+     *
+     * @param Request $request Objet qui contient tous les champs reçus dans la requête
+     * @return RedirectResponse
+     */
     public function update(Request $request) {
 
         // Redirection si ce n'est pas un administrateur
@@ -185,11 +186,11 @@ class AdminActiviteController extends Controller
 
     //=============================SUPPRIMER UNE ACTUALITÉ=============================//
     /**
-    * Traite de la suppression d'une activité
-    *
-    * @param Request $request
-    * @return RedirectResponse
-    */
+     * Traite de la suppression d'une activité
+     *
+     * @param Request $request
+     * @return RedirectResponse
+     */
     public function destroy(Request $request) {
 
         // Redirection si ce n'est pas un administrateur
