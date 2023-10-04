@@ -1,7 +1,7 @@
 <x-layout titre="Festival Prima-Colors | CreARTive concours 2023">
 
     <x-header />
-    <x-hero image="img\hero\hero-concours.png" />
+    <x-hero image="img\hero\hero-concours.png"/>
 
     <div class="conteneur_concours">
 
@@ -63,8 +63,8 @@
         </div>
 
         <section class="concours_description concours_bg" >
-            <h2>description</h2>
-            <p>Le concours d'art du Festival Prima-Colors est une célébration de la créativité et de l'expression artistique. Il offre aux artistes une plateforme pour présenter leurs œuvres originales et captivantes.</p>
+            <h2>Informations sur le concours CréARTive</h2>
+            <p>Explorez la créativité infinie et l'expression artistique au Festival Prima-Colors. Notre concours d'art est une ode à l'originalité, offrant aux artistes une scène pour exposer leurs œuvres captivantes. Plongez dans un monde d'émotions visuelles, où chaque coup de pinceau, chaque note de musique et chaque éclat de couleur vous emmèneront dans un voyage inoubliable. Que vous soyez un amateur d'art passionné ou simplement à la recherche d'inspiration, le Festival Prima-Colors est l'endroit où vous pouvez découvrir de nouvelles perspectives artistiques, rencontrer des artistes talentueux et vous immerger dans un univers de créativité débordante. Rejoignez-nous et laissez-vous emporter par cette célébration artistique unique en son genre.</p>
         </section>
 
         <section class="concours_critere_participation concours_bg">
@@ -101,13 +101,13 @@
                 <p>Les lauréats seront annoncés lors de la cérémonie de clôture du Festival Prima-Colors. Les prix seront attribués aux trois meilleures œuvres en fonction des critères de sélection.</p>
                 <ul>
                     <li>
-                        <p><strong>1. Premier Prix:</strong> Description du premier prix</p>
+                        <p><strong>1. Premier Prix:</strong> 1000$ en argent comptant</p>
                     </li>
                     <li>
-                        <p><strong>2. Deuxième Prix:</strong> Description du deuxième prix</p>
+                        <p><strong>2. Deuxième Prix:</strong> Une trousse d'artiste d'une valeur de 500$ offert par Omer De serre</p>
                     </li>
                     <li>
-                        <p><strong>3. Prix du Public:</strong> Le public aura également l'opportunité de voter pour leur œuvre préférée lors de l'exposition.</p>
+                        <p><strong>3. Prix du Public:</strong> 300$ en argent comptant sera remis au gagnant du choix du public. Le public aura également l'opportunité de voter pour leur œuvre préférée lors de l'exposition.</p>
                     </li>
                 </ul>
                 <p>Nous sommes impatients de découvrir vos créations originales et de célébrer l'art avec vous lors du Festival Prima-Colors !</p>

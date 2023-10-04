@@ -1,20 +1,26 @@
-// CITATION
+/***********************************************
+ *                                          
+ *           STYLES POUR LA CITATION           
+ *                                             
+ ***********************************************/
 
+/* Styles communs pour blockquote */
 blockquote {
+    color: $rose;
     font-family: "pf-venue", sans-serif;
     font-size: 48px;
     font-weight: bold;
     font-style: italic;
-    color: $rose;
     text-align: center;
     margin: 20px;
     padding: 20px;
-    padding-bottom: 150px;
+    padding-bottom: 100px;
     position: relative;
     opacity: 0;
     animation: fade-in 1.5s ease-in-out forwards;
 }
 
+/* Styles spécifiques pour span.material-icons */
 blockquote span.material-icons {
     font-size: 36px;
     vertical-align: middle;
@@ -22,6 +28,7 @@ blockquote span.material-icons {
     top: -10px;
 }
 
+/* Style spécifique pour le premier span.material-icons */
 blockquote span.material-icons:first-child {
     transform: scaleX(-1);
 }
@@ -38,218 +45,224 @@ blockquote span.material-icons:first-child {
     }
 }
 
-// Intro
 
-.intro {
-    padding-left: 200px;
-    padding-right: 200px;
+/***********************************************
+ *                                          
+ *           STYLES POUR L'INTRO          
+ *                                             
+ ***********************************************/
+
+ .intro {
+    padding: 0 200px 100px;
     text-align: justify;
 }
 
-//Section activités page accueil
 
-.section_activites {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 200px;
-    padding-right: 200px;
-    padding-bottom: 100px;
-}
+/***********************************************
+ *                                          
+ *           STYLES POUR LES SECTIONS       
+ *                                             
+ ***********************************************/
 
-img.img_activite {
-    padding-top: 150px;
-    padding-bottom: 100px;
-    padding-right: 80px;
-    max-width: 50%;
-    margin-right: 20px;
-}
-
-.texte_droite {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    h3.accueil_activite {
-        font-size: 54px;
-        margin-bottom: 30px;
-        color: $rose;
-    }
-
-    p.accueil_activite {
-        font-size: 36px;
-        margin-bottom: 20px;
-        margin-bottom: 50px;
-        color: $rose;
-    }
-
-    a.accueil {
-        font-family: "pf-venue-stencil", sans-serif;
-        text-decoration: none;
-        color: $rose;
-        padding: 10px 20px;
-        font-size: 30px;
-        font-weight: bold;
-        text-transform: uppercase;
-        align-items: center;
-        display: flex;
-        transition: 0.3s;
-
-        span.material-icons {
-            color: $rose;
-            font-size: 75px;
-            padding-left: 100px;
-            position: relative;
-            transition: 0.3s;
-        }
-
-        &:hover {
-            color: $blanc;
-
-            span.material-icons {
-                color: $blanc;
-            }
-        }
-    }
-}
-
-//Section forfait page accueil
-
-.section_forfaits {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 200px;
-    padding-right: 200px;
-    padding-bottom: 100px;
-}
-
-img.img_forfait {
-    padding-bottom: 100px;
-    padding-left: 80px;
-    max-width: 50%;
-    margin-right: 20px;
-}
-
-.texte_gauche {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    h3.accueil_forfait {
-        font-size: 54px;
-        margin-bottom: 30px;
-        color: $jaune;
-    }
-
-    p.accueil_forfait {
-        font-size: 36px;
-        margin-bottom: 20px;
-        margin-bottom: 50px;
-        color: $jaune;
-    }
-
-    a.accueil {
-        font-family: "pf-venue-stencil", sans-serif;
-        text-decoration: none;
-        color: $jaune;
-        padding: 10px 20px;
-        font-size: 30px;
-        font-weight: bold;
-        text-transform: uppercase;
-        align-items: center;
-        display: flex;
-        transition: 0.3s;
-
-        span.material-icons {
-            color: $jaune;
-            font-size: 75px;
-            padding-left: 100px;
-            position: relative;
-            transition: 0.3s;
-        }
-
-        &:hover {
-            color: $blanc;
-
-            span.material-icons {
-                color: $blanc;
-            }
-        }
-    }
-}
-
-//section a propos page accueil
-
+ /* Styles communs pour les sections */
+.section_activites,
+.section_forfaits,
 .section_apropos {
     display: flex;
     align-items: center;
     justify-content: center;
     padding-left: 200px;
     padding-right: 200px;
-    padding-bottom: 100px;
+    padding-bottom: 100px;  
 }
 
+
+/* Styles communs pour les images */
+img.img_activite,
+img.img_forfait,
 img.img_apropos {
     max-width: 50%;
     margin-right: 20px;
+    animation: CouleurImage 4.5s ease-in-out;
 }
 
-.texte_droite_deux {
+/* Styles communs pour les textes */
+.texte_droite,
+.texte_gauche{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-left: 150px;
 }
 
+.texte_droite{
+    padding-left: 50px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.texte_gauche{
+    padding-right: 50px;
+    animation: fadeInDeux 2s ease-in-out;
+}
+
+/* Styles communs pour les titres */
+h3.accueil_activite,
+h3.accueil_forfait,
 h3.accueil_apropos {
     font-size: 54px;
-    color: $rose;
+    margin-bottom: 30px;
+    position: relative; 
+    overflow: hidden;
 }
 
+h3.accueil_activite::after,
+h3.accueil_forfait::after,
+h3.accueil_apropos::after {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px; 
+    background-color: $blanc; 
+    overflow: hidden; 
+    animation: underlineEffect 3s ease-in 1.5 forwards; /* Durée et animation */
+}
+   
+
+/* Styles communs pour les paragraphes */
+p.accueil_activite,
+p.accueil_forfait,
 p.accueil_apropos {
     font-size: 36px;
-    color: $rose;
+    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
-a.accueil {
+/* Styles communs pour les liens */
+a.accueil, a.accueil_forfait {
     font-family: "pf-venue-stencil", sans-serif;
+    color: $jaune;
     text-decoration: none;
-    color: $rose;
-    font-size: 30px;
+    font-size: 50px;
     font-weight: bold;
     text-transform: uppercase;
     align-items: center;
     display: flex;
     transition: 0.3s;
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid $blanc;
 
-    span.material-icons {
-        color: $rose;
-        font-size: 75px;
+}
+a.accueil_forfait{
+    color: $rose;
+}
 
-        position: relative;
-        transition: 0.3s;
+
+a.accueil span.material-icons, a.accueil_forfait span.material-icons {
+    font-size: 60px;
+    padding-left: 200px;
+    padding-bottom: 7px;
+    position: relative;
+    transition: 0.3s;
+}
+
+a.accueil:hover, a.accueil_forfait:hover  {
+    color: $blanc;
+}
+
+a.accueil:hover span.material-icons {
+    color: $blanc;
+}
+
+/* Styles spécifiques pour les couleurs */
+h3.accueil_activite {
+    color: $rose;
+}
+
+p.accueil_activite {
+    color: $rose;
+}
+
+h3.accueil_forfait {
+    color: $jaune;
+}
+
+p.accueil_forfait {
+    color: $jaune;
+}
+
+h3.accueil_apropos {
+    color: $rose;
+}
+
+p.accueil_apropos {
+    color: $rose;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px); /* ou la valeur souhaitée */
     }
-
-    &:hover {
-        color: $blanc;
-
-        span.material-icons {
-            color: $blanc;
-        }
+    to {
+        opacity: 1;
+        transform: translatex(0);
     }
 }
 
-//section actualités page accueil
-
-h1.accueil_actualite {
-    padding-top: 150px;
+@keyframes fadeInDeux {
+    from {
+        opacity: 0;
+        transform: translateX(50px); /* ou la valeur souhaitée */
+    }
+    to {
+        opacity: 1;
+        transform: translatex(0);
+    }
 }
 
-.section_actualites {
-    padding-bottom: 150px;
+@keyframes CouleurImage {
+    0% {
+        filter: grayscale(100%); /* Démarre en noir et blanc */
+    }
+    100% {
+        filter: grayscale(0%); /* Se termine en couleur */
+    }
 }
 
+@keyframes underlineEffect {
+    0% {
+        width: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    40% {
+        width: 100%;
+        left: 0;
+        transform: translateX(0);
+    }
+    60% {
+        width: 100%;
+        left: 0;
+        transform: translateX(0);
+    }
+    100% {
+        width: 0;
+        left: 50%;
+        transform: translateX(100%);
+    }
+}
+/***********************************************
+ *                                          
+ *           STYLES POUR LE MUR DE BRIQUE          
+ *                                             
+ ***********************************************/
+
+
+/* Styles communs pour la section actualités */
 .section_actualites {
     width: 1500px;
     height: 300px;
@@ -263,7 +276,16 @@ h1.accueil_actualite {
     padding-bottom: 150px;
 }
 
+
+.titre_actualite {
+    font-family: "pf-venue", sans-serif;
+    font-size: 30px;
+    padding-left: 30px; 
+}
+
 h1.accueil_actualite {
+    font-size: 60px;
+    text-transform: uppercase;
     color: $jaune;
     display: flex;
     flex-direction: column;
@@ -273,14 +295,7 @@ h1.accueil_actualite {
     margin: 0px;
 }
 
-.titre_actualite {
-    flex-wrap: wrap;
-    font-family: "pf-venue", sans-serif;
-    font-size: 30px;
-    padding-left: 30px;
-}
-
-a.vers_actualite {
+.titre_actualite a.vers_actualite {
     display: inline-block;
     background-color: $vert;
     padding: 15px 20px;
@@ -289,150 +304,10 @@ a.vers_actualite {
     text-decoration: none;
     color: $blanc;
     position: relative;
-    .section_actualites {
-        width: 1500px;
-        height: 300px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        text-align: left;
-        padding-top: 150px;
-        padding-bottom: 150px;
-    }
-
-    h1.accueil_actualite {
-        color: $jaune;
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        padding-top: 0px;
-        padding-bottom: 50px;
-        margin: 0px;
-    }
-
-    .titre_actualite {
-        flex-wrap: wrap;
-        font-family: "pf-venue", sans-serif;
-        font-size: 30px;
-        padding-left: 30px;
-    }
-
-    a.vers_actualite {
-        display: inline-block;
-        background-color: $vert;
-        padding: 15px 20px;
-        margin-right: 35px;
-        margin-bottom: 25px;
-        text-decoration: none;
-        color: $blanc;
-        position: relative;
-        transition: 0.3s;
-        
-        .section_actualites {
-            width: 1500px;
-            height: 300px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin: 0 auto;
-            text-align: left;
-            padding-top: 150px;
-            padding-bottom: 150px;
-        }
-
-        h1.accueil_actualite {
-            color: $jaune;
-            display: flex;
-            flex-direction: column;
-            text-align: left;
-            padding-top: 0px;
-            padding-bottom: 50px;
-            margin: 0px;
-        }
-
-        .titre_actualite {
-            flex-wrap: wrap;
-            font-family: "pf-venue", sans-serif;
-            font-size: 30px;
-            padding-left: 30px;
-        }
-
-        a.vers_actualite {
-            display: inline-block;
-            background-color: $vert;
-            padding: 15px 20px;
-            margin-right: 35px;
-            margin-bottom: 25px;
-            text-decoration: none;
-            color: $blanc;
-            position: relative;
-        }
-
-        .titre_actualite a.vers_actualite img {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            z-index: 5;
-            width: 200px;
-            height: 135px;
-            object-fit: cover;
-            transform: translateX(-50%);
-        }
-
-        .titre_actualite a.vers_actualite:hover img {
-            display: block;
-        }
-
-        .images {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .image {
-            width: 150px;
-            height: 150px;
-            margin-top: 20px;
-            display: none;
-        }
-    }
-
-    .titre_actualite a.vers_actualite img {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        z-index: 5;
-        width: 200px;
-        height: 135px;
-        object-fit: cover;
-        transform: translateX(-50%);
-    }
-
-    .titre_actualite a.vers_actualite:hover img {
-        display: block;
-    }
-
-    .images {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .image {
-        width: 150px;
-        height: 150px;
-        margin-top: 20px;
-        display: none;
-    }
 }
 
 .titre_actualite a.vers_actualite img {
-    display: none;
+
     position: absolute;
     top: 100%;
     left: 50%;
@@ -441,10 +316,13 @@ a.vers_actualite {
     height: 135px;
     object-fit: cover;
     transform: translateX(-50%);
+    opacity: 0;
 }
 
 .titre_actualite a.vers_actualite:hover img {
-    display: block;
+   transition: opacity 0.5s;
+   opacity: 1;
+
 }
 
 .images {

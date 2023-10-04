@@ -1,4 +1,8 @@
-//COULEURS
+/***********************************************
+ *                                          
+ *           STYLES POUR LES COULEURS      
+ *                                             
+ ***********************************************/
 
 $rose: #eca6d9;
 $vert: #0b8a80;
@@ -7,7 +11,11 @@ $noir: #030303;
 $jaune: #eeb15e;
 $rouge: #df1f1f;
 
-//FONTS
+/***********************************************
+ *                                          
+ *           STYLES POUR LES FONTS       
+ *                                             
+ ***********************************************/
 
 h1 {
     font-family: "pf-venue-stencil", sans-serif;
@@ -50,14 +58,19 @@ p {
     font-style: normal;
     font-size: 27px;
     color: $blanc;
-    line-height: 1.5;
+    line-height: 1.2;
+    margin-top: 10px;
 }
 
 a {
     text-decoration: none;
 }
 
-//GENERAL
+/***********************************************
+ *                                          
+ *           STYLES GENERAL POUR LE SITE        
+ *                                             
+ ***********************************************/
 body {
     margin: 0px;
 }
@@ -77,7 +90,11 @@ section {
     margin-right: 10em;
 }
 
-//BOUTTONS
+/***********************************************
+ *                                          
+ *           STYLES POUR LES BOUTONS       
+ *                                             
+ ***********************************************/
 button {
     font-family: "pf-venue", sans-serif;
     font-weight: 700;
@@ -104,7 +121,11 @@ button:hover {
     }
 }
 
-//BORDURE AVEC TITRE
+/***********************************************
+ *                                          
+ *           STYLES POUR LES BORDURES AVEC TITRE      
+ *                                             
+ ***********************************************/
 .conteneur-bordure {
     display: flex;
     justify-content: space-between;

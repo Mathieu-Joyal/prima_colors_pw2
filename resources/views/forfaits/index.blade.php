@@ -1,7 +1,7 @@
 <x-layout titre="Festival Prima-Colors | Billetterie">
 
     <x-header />
-    <x-hero image="img\hero\hero-forfaits.png" />
+    <x-hero image="img\hero\hero-billeterie.png" />
     <h1 class="billetterie">La billetterie</h1>
     <section class="billetterie">
 

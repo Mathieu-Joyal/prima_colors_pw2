@@ -2,7 +2,7 @@
 
     <x-header />
 
-    <x-hero image="img\a-propos\hero.png" />
+    <x-hero image="img\hero\hero-apropos.png" />
 
     <div class="conteneur-a_propos">
 
