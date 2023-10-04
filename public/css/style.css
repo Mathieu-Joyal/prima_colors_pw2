@@ -661,6 +661,7 @@ section.conteneur-activites article.activites .conteneur-titre {
   text-align: right;
   overflow: hidden;
   margin-bottom: 2em;
+  padding-right: 2em;
 }
 section.conteneur-activites article.activites p.heure {
   font-weight: bold;
@@ -746,7 +747,9 @@ section.conteneur-actualites .bordure.actualites {
 .conteneur-articles-actualites h3,
 .conteneur-articles-actualites h4 {
   color: #eca6d9;
-  margin: 0;
+}
+.conteneur-articles-actualites .date-publication {
+  width: 300px;
 }
 .conteneur-articles-actualites .conteneur-gauche {
   display: flex;
@@ -754,15 +757,13 @@ section.conteneur-actualites .bordure.actualites {
   max-height: 500px;
   min-height: 250px;
   justify-content: space-between;
-  padding-left: 2em;
   padding-right: 2em;
   padding-top: 2em;
 }
 .conteneur-articles-actualites .conteneur-titre {
   display: flex;
   flex-direction: column;
-  padding-left: 6em;
-  margin: 0;
+  margin-left: 3rem;
 }
 .conteneur-articles-actualites .conteneur-titre .description {
   margin: 0;
@@ -1562,7 +1563,7 @@ form.la_recherche button {
 }
 
 .logo {
-  margin-left: 365px;
+  margin-left: 300px;
   margin-top: 60px;
   z-index: 2;
 }
@@ -1772,11 +1773,13 @@ a.connexion .material-icons {
 
 section.hero {
   margin: 0;
+  margin-top: 2em;
 }
 
 .conteneur-hero {
   width: 100%;
   height: 400px;
+  position: relative;
 }
 .conteneur-hero img.image-hero {
   -o-object-fit: cover;
@@ -1785,14 +1788,14 @@ section.hero {
   height: 400px;
 }
 .conteneur-hero .reserver.hero {
-  position: relative;
-  top: -124px;
-  left: 1344px;
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
 }
 .conteneur-hero .compteur.petit {
   position: relative;
-  top: -316px;
-  left: 24px;
+  bottom: 240px;
+  left: 40px;
 }
 
 .deconnexion form {
@@ -1964,8 +1967,6 @@ form button.supprimer {
   height: 65px;
   text-align: center;
   margin-bottom: 1rem;
-  position: relative;
-  left: 670px;
   box-sizing: border-box;
 }
 .reserver a {
@@ -2194,10 +2195,9 @@ form button.supprimer {
 }
 
 .reserver.banniere {
-  position: relative;
-  left: 1350px;
-  top: 215px;
-  right: 0px;
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
 }
 
 .petit {
