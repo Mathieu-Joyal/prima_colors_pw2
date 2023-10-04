@@ -43,28 +43,33 @@
                             <p>{{ $user->email }}</p>
                         </div>
 
-                        <div class="boutons_user">
-                            <a href="{{ route('admin.utilisateurs.edit', ['id' => $user->id ]) }}">
-                                <span class="edit">
-                                    🅴🅳🅸🆃
-                                </span>
-                            </a>
-                            <a href="{{ route('admin.utilisateurs.destroy', ['id' => $user->id ]) }}">
-                                <span class="delete">
-                                    🅳🅴🅻🅴🆃🅴
-                                </span>
-                            </a>
-                        </div>
+                        @if ( auth()->guard('employe')->user()->role_id === 1)
+
+                            <div class="boutons_user">
+                                <a href="{{ route('admin.utilisateurs.edit', ['id' => $user->id ]) }}">
+                                    <span class="edit">
+                                        🅴🅳🅸🆃
+                                    </span>
+                                </a>
+                                <a href="{{ route('admin.utilisateurs.destroy', ['id' => $user->id ]) }}">
+                                    <span class="delete">
+                                        🅳🅴🅻🅴🆃🅴
+                                    </span>
+                                </a>
+                            </div>
+                        @endif
                     </div>
 
-                        @foreach ($reservations as $reservation)
+                    @foreach ($reservations as $reservation)
 
-                            @if ($reservation->user_id === $user->id)
+                        @if ($reservation->user_id === $user->id)
 
-                                <div class="une_reservation">
-                                    <p>
-                                        {{ $reservation->forfait->titre }}
-                                    </p>
+                            <div class="une_reservation">
+                                <p>
+                                    {{ $reservation->forfait->titre }}
+                                </p>
+
+                                @if ( auth()->guard('employe')->user()->role_id === 1)
 
                                     <form action="{{ route('admin.reservations.destroy', ['id' => $reservation->id]) }}" method="POST">
                                         @csrf
@@ -72,14 +77,13 @@
                                             Annuler la réservation
                                         </button>
                                     </form>
-                                </div>
-                            @endif
-                        @endforeach
+                                @endif
+                            </div>
+                        @endif
+                    @endforeach
                 </article>
             @endforeach
         </section>
     </div>
-
-    {{-- <x-footer /> --}}
 
 </x-layout>

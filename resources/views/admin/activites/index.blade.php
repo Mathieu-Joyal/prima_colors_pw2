@@ -1,6 +1,13 @@
 <x-layout titre="Créez une activité">
 
-    <x-nav-admin titre="Les ActivitÉs" route="{{ route('admin.activites.index') }}" valeur="Retour aux activitÉs" />
+    <x-nav-admin
+        titre="Les ActivitÉs"
+        route="{{ route('admin.activites.index') }}"
+        valeur="Retour aux activitÉs"
+    />
+
+    <x-alertes cle="succes" class="alerte_succes"/>
+    <x-alertes cle="erreur" class="alerte_erreur"/>
 
     <section class="formulaire_recherche activite">
 
@@ -18,7 +25,6 @@
                 </select>
             </div>
 
-            {{-- <x-forms.erreur champ="user_recherche" /> --}}
             <div class="conteneur-bouton">
                 <button class="recherche activite" type="submit">
                     Faire la recherche
@@ -73,8 +79,6 @@
                             <div class="description">
                                 <h3 class="grid-title">Description</h3>
                                 <p>{{ $activite->description }}</p>
-                                <p>{{ $activite->description }}</p>
-                                <p>{{ $activite->description }}</p>
                             </div>
                         </div>
 
@@ -89,13 +93,17 @@
 
                 </article>
 
-                <x-boutons.gestion_activites_actualites routeAjouter="{{ route('admin.activites.create') }}"
-                    routeModifier="{{ route('admin.activites.edit', ['id' => $activite->id]) }}"
-                    routeSupprimer="{{ route('admin.activites.destroy') }}" valeur="{{ $activite->id }}"
-                    nom="activité" />
+                @if ( auth()->guard('employe')->user()->role_id === 1)
+
+                    <x-boutons.gestion_activites_actualites routeAjouter="{{ route('admin.activites.create') }}"
+                        routeModifier="{{ route('admin.activites.edit', ['id' => $activite->id]) }}"
+                        routeSupprimer="{{ route('admin.activites.destroy') }}" valeur="{{ $activite->id }}"
+                        nom="activité" />
+                @endif
             @empty
 
-            <p>No activities found for the selected date.</p>
+            <p>Aucune activité trouvé pour cette date</p>
+
         @endforelse
     </section>
 

@@ -18,24 +18,11 @@ class AdminActualiteController extends Controller
      *
      * @return View
      */
-
     public function index()
     {
-
-        //     $actualitesRecentes = Actualite::whereYear('date_publication', 2023)
-        //     ->orderBy('date_publication', 'asc')
-        //     ->take(5)
-        //     ->get();
-
-
-        // $actualitesAnciennes = Actualite::whereYear('date_publication', 2022)
-        //     ->orderBy('date_publication', 'desc')
-        //     ->take(5)
-        //     ->get();
         $actualites = Actualite::all();
+
         return view("admin.actualites.index", [
-            // "actualitesRecentes" => $actualitesRecentes,
-            // "actualitesAnciennes" => $actualitesAnciennes,
             "actualites" => $actualites,
         ]);
     }
@@ -55,43 +42,52 @@ class AdminActualiteController extends Controller
 
     //===============AJOUTER UNE ACTUALITÉ=================================//
     /**
-     * Affiche le formulaire d'ajout
+     * Affiche le formulaire d'ajout d'une activité
      *
      * @return View
      */
     public function create()
     {
-
         return view(
             'admin.actualites.create',
-
         );
     }
 
     /**
-     * Traite l'ajout
+     * Traite l'ajout d'une activité
      *
      * @param Request $request
      * @return RedirectResponse
      */
     public function store(Request $request)
     {
-        // Valider
+        // Redirection si ce n'est pas un administrateur qui se connecte
+        if(auth()->guard('employe')->user()->role_id !== 1) {
+
+            // Redirection
+            return redirect()
+                    ->route('admin.actualites.index')
+                    ->with('erreur', 'Seul un administrateur peut ajouter une actualité');
+        }
+
+        // Validation
         $valides = $request->validate([
             "titre" => "required|min:4|max:150",
             "description" => "required|min:50|max:350",
             "image" => "required|mimes:png,jpg,jpeg",
 
         ], [
+            "titre.required" => "Le titre est requis",
             "titre.max" => "Le titre doit avoir un maximum de :max caractères",
             "titre.min" => "Le titre doit avoir un minimum de :min caractères",
+            "description.required" => "La description est requise",
             "description.max" => "La description doit avoir un maximum de :max caractères",
             "description.min" => "La description doit avoir un minimum de :min caractères",
             "image.required" => "Une image doit être téléchargé ",
-
+            "image.mimes" => "Le format de l'image doit être l'un des suivants :png, jpg, jpeg",
         ]);
 
-        // Ajouter à la BDD
+        // Préparation à l'ajout à la BDD
         $actualite = new Actualite;
         $actualite->titre = $valides["titre"];
         $actualite->description = $valides["description"];
@@ -105,13 +101,16 @@ class AdminActualiteController extends Controller
             // Sauvegarder le "bon" chemin qui sera inséré dans la BDD et utilisé par le navigateur
             $actualite->image = "/storage/uploads/" . $request->image->hashName();
         }
+
+        // Ajout à la BDD
         $actualite->save();
 
-        // Rediriger
+        // Redirection
         return redirect()
             ->route('admin.actualites.index')
             ->with('succes', "L'actualité a été ajoutée avec succès!");
     }
+
     //==========================MODIFIER UNE ACTUALITÉ===========================//
     /**
      * Affiche le formulaire de modification
@@ -123,47 +122,53 @@ class AdminActualiteController extends Controller
     {
         return view('admin.actualites.edit', [
             "actualite" => Actualite::findOrFail($id),
-            // "employe_id" => Employe::orderBy('nom', 'asc')
-            //                     ->get()
         ]);
     }
 
     /**
-     * Traite la modification
+     * Traite la modification d'une actualité
      *
+     * @param $id
      * @param Request $request Objet qui contient tous les champs reçus dans la requête
      * @return RedirectResponse
      */
-    public function update(Request $request)
+    public function update(Request $request, int $id)
     {
-        // Valider
-        $valides = $request->validate([
-            "id" => "required",
-            "titre" => "required|min:4|max:150",
-            "image" => "required|",
-            "descritpion" => "required"
-        ], [
+        // Redirection si ce n'est pas un administrateur
+        if(auth()->guard('employe')->user()->role_id !== 1) {
 
+            return redirect()
+                    ->route('admin.actualites.index')
+                    ->with('erreur', 'Seul un administrateur peut modifier une actualité');
+        }
+
+        $valides = $request->validate([
+            "titre" => "required|min:4|max:150",
+            "description" => "required|min:50|max:350",
+            "image" => "required|mimes:png,jpg,jpeg",
+
+        ], [
+            "titre.required" => "Le titre est requis",
             "titre.max" => "Le titre doit avoir un maximum de :max caractères",
             "titre.min" => "Le titre doit avoir un minimum de :min caractères",
-            "description.max" => "Le titre doit avoir un maximum de :max caractères",
-            "description.min" => "Le titre doit avoir un minimum de :min caractères",
-            "image" => "Une image doit être téléchargé ",
-
-
-
+            "description.required" => "La description est requise",
+            "description.max" => "La description doit avoir un maximum de :max caractères",
+            "description.min" => "La description doit avoir un minimum de :min caractères",
+            "image.required" => "Une image doit être téléchargé ",
+            "image.mimes" => "Le format de l'image doit être l'un des suivants :png, jpg, jpeg",
         ]);
 
-        // Récupération de la actualite à modifier, suivi de la modification et sauvegarde
-        $actualite = Actualite::findOrFail($valides["id"]);
+        // Récupération de l'actualité à modifier, suivi de la modification et sauvegarde
+        $actualite = Actualite::findOrFail($id);
+
         $actualite->titre = $valides["titre"];
-        $actualite->description = $valides["descritpion"];
+        $actualite->description = $valides["description"];
         $actualite->employe_id = auth()->id();
-        $actualite->image =
+        $actualite->image = $valides["image"];
 
-            $actualite->save();
+        $actualite->save();
 
-        // Rediriger
+        // Redirection
         return redirect()
             ->route('admin.actualites.index')
             ->with('succes', "L'actualité a été modifiée avec succès!");
@@ -178,6 +183,15 @@ class AdminActualiteController extends Controller
     //  */
     public function destroy(Request $request)
     {
+
+        // Redirection si ce n'est pas un administrateur
+        if(auth()->guard('employe')->user()->role_id !== 1) {
+
+            return redirect()
+                    ->route('admin.actualites.index')
+                    ->with('erreur', 'Seul un administrateur peut supprimer une actualité');
+        }
+
         Actualite::destroy($request->id);
 
         return redirect()->route('admin.actualites.index')

@@ -1,6 +1,6 @@
 <x-layout titre="Créez une activité">
 
-    <x-nav-admin titre=" Ajouter une ActivitÉs" route="{{route('admin.activités.index')}}" valeur="Retour aux activitÉs" />
+    <x-nav-admin titre=" Ajouter une ActivitÉs" route="{{route('admin.activites.index')}}" valeur="Retour aux activitÉs" />
 
 
     {{-- MESSAGES --}}
@@ -21,18 +21,19 @@
 
                     <label for="titre" class="grid-title">Titre</label>
 
-                    <x-forms.erreur champ="titre" />
-
                     <input id="titre" name="titre" type="text" autofocus class=" "
-                        value="{{ old('titre') }}">
+                    value="{{ old('titre') }}">
+
+                    <x-forms.erreur champ="titre" />
                 </div>
 
                 <!-- Date -->
                 <div class="grid-item">
                     <label for="date" class="grid-title">Date</label>
-                    <x-forms.erreur champ="date" />
                     <input id="date" name="date" type="date" min="2023-10-01" max="2023-10-31" autofocus class=" "
-                        value="{{ old('date') }}">
+                    value="{{ old('date') }}">
+
+                    <x-forms.erreur champ="date" />
                 </div>
 
                 <script>
@@ -56,15 +57,15 @@
                 <!-- Heure -->
                 <div class="grid-item">
                     <label for="heure" class="grid-title">Heure</label>
-                    <x-forms.erreur champ="heure" />
                     <input id="heure" name="heure" type="time" autofocus class=" "
-                        value="{{ old('heure') }}">
+                    value="{{ old('heure') }}">
+
+                    <x-forms.erreur champ="heure" />
                 </div>
                 <!-- Endroit -->
 
                 <div class="grid-item">
                     <label for="endroit" class="grid-title">Endroit</label>
-                    <x-forms.erreur champ="endroit" />
                     <select id="endroit" name="endroit">
                         <option value="Groove Gallery">Groove Gallery</option>
                         <option value="Urban Beats Arena">Urban Beats Arena</option>
@@ -77,23 +78,27 @@
                         <option value="The Creative Rhythm Zone">The Creative Rhythm Zone</option>
                         <option value="Epic Urban Art Beats">Epic Urban Art Beats</option>
                     </select>
+
+                    <x-forms.erreur champ="endroit" />
                 </div>
             </div>
 
             <!-- Description -->
             <div class=" grid-item description">
                 <label for="description" class="grid-title">Description</label>
-                <x-forms.erreur champ="description" />
                 <input id="description" name="description" type="text" autofocus class=" "
-                    value="{{ old('description') }}">
+                value="{{ old('description') }}">
+
+                <x-forms.erreur champ="description" />
             </div>
 
             <!-- Image -->
             <div class=" grid-item image">
                 <label for="image" class="grid-title">Image</label>
 
-                <x-forms.erreur champ="image" />
                 <input id="image" name="image" type="file" class=" " value="{{ 'image' }}">
+
+                <x-forms.erreur champ="image" />
             </div>
             <div class="conteneur-bouttons">
                 {{-- SUBMIT --}}
