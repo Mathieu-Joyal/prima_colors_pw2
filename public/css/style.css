@@ -1,13 +1,13 @@
 @charset "UTF-8";
 /***********************************************
- *                                          
- *           STYLES POUR LES COULEURS      
- *                                             
+ *
+ *           STYLES POUR LES COULEURS
+ *
  ***********************************************/
 /***********************************************
- *                                          
- *           STYLES POUR LES FONTS       
- *                                             
+ *
+ *           STYLES POUR LES FONTS
+ *
  ***********************************************/
 h1 {
   font-family: "pf-venue-stencil", sans-serif;
@@ -59,9 +59,9 @@ a {
 }
 
 /***********************************************
- *                                          
- *           STYLES GENERAL POUR LE SITE        
- *                                             
+ *
+ *           STYLES GENERAL POUR LE SITE
+ *
  ***********************************************/
 body {
   margin: 0px;
@@ -83,9 +83,9 @@ section {
 }
 
 /***********************************************
- *                                          
- *           STYLES POUR LES BOUTONS       
- *                                             
+ *
+ *           STYLES POUR LES BOUTONS
+ *
  ***********************************************/
 button {
   font-family: "pf-venue", sans-serif;
@@ -112,9 +112,9 @@ button:hover a {
 }
 
 /***********************************************
- *                                          
- *           STYLES POUR LES BORDURES AVEC TITRE      
- *                                             
+ *
+ *           STYLES POUR LES BORDURES AVEC TITRE
+ *
  ***********************************************/
 .conteneur-bordure {
   display: flex;
@@ -122,16 +122,12 @@ button:hover a {
   width: 100%;
   height: 45px;
   margin-bottom: 3em;
-}
-.conteneur-bordure .bordure {
-  width: 60%;
-  border-bottom: solid #eca6d9 3px;
-  height: 100%;
+  flex-wrap: nowrap;
 }
 .conteneur-bordure .titre {
-  width: 40%;
   padding-left: 1em;
   text-align: left;
+  transition: width 0.3s;
 }
 .conteneur-bordure .titre h2 {
   margin: 0;
@@ -491,6 +487,7 @@ section.conteneur-activites .conteneur-date .conteneur-jours h2:hover {
 }
 section.conteneur-activites .conteneur-bordure.titre {
   margin-bottom: 100px;
+  width: 700px;
 }
 section.conteneur-activites .titre h2 span {
   opacity: 0;
@@ -632,6 +629,7 @@ button.voir.activite {
 
 section.conteneur-actualites .titre {
   margin-bottom: 100px;
+  width: 946px;
 }
 section.conteneur-actualites .titre h2 span {
   opacity: 0;
