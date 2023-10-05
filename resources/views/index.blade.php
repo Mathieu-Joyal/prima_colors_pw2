@@ -61,7 +61,7 @@
         </article>
 
 
-          
+
 
         <div class="images">
             <div class="image"></div>
@@ -73,5 +73,5 @@
     <x-bannieres.compte :url="url('img/accueil/ban_compte.png')"/>
     <x-bannieres.billet />
     <x-footer />
- 
+
 </x-layout>
