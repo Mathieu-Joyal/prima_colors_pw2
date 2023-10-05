@@ -123,7 +123,7 @@ button:hover {
 
 /***********************************************
  *
- *           STYLES POUR LES BORDURES AVEC TITRE
+ *    STYLES POUR LES BORDURES AVEC TITRE
  *
  ***********************************************/
 .conteneur-bordure {
@@ -177,7 +177,7 @@ button:hover {
 
 
 
-// **** SECTION SITE WEB****
+// ****SECTION SITE WEB****
 @import "_accueil.scss";
 @import "_activites.scss";
 @import "_actualites.scss";
@@ -189,7 +189,11 @@ button:hover {
 @import "_a-propos.scss";
 @import "_concours.scss";
 
-
+//Les bannieres
+@import "components/bannieres/concours";
+@import "components/bannieres/compte";
+@import "components/bannieres/countdown";
+@import "components/bannieres/billet";
 
 // ****SECTION ADMINISTRATEUR****
 @import "admin/utilisateurs.scss";
@@ -217,6 +221,8 @@ button:hover {
 @import 'components/boutons/concours';
 @import "components/boutons/gestion-actualites-activites";
 @import "components/boutons/reserver";
+@import "components/boutons/deconnexion";
+@import "components/boutons/soumettre";
 
 // Les messages
 // -- alertes succes
@@ -225,14 +231,3 @@ button:hover {
 @import "components/alertes/erreur";
 // -- forms erreur
 @import "components/forms/erreur";
-
-@import "components/boutons/deconnexion";
-@import "components/boutons/soumettre";
-
-//Les bannieres
-@import "components/bannieres/concours";
-@import "components/bannieres/compte";
-
-@import "components/bannieres/billet";
-// Countdown
-@import "components/countdown";

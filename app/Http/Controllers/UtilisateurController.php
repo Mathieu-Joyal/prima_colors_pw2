@@ -34,7 +34,7 @@ class UtilisateurController extends Controller
      * @param Request $request
      * @return RedirectResponse
      */
-    public function updateConcours(Request $request) {
+    public function storeConcours(Request $request) {
 
         // Validation
         $valides = $request->validate([

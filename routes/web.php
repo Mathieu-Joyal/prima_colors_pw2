@@ -52,7 +52,6 @@ Route::get('/forfaits', [ForfaitController::class, 'index'])
 
 
 
-
 // ***************************************************** //
 // ************* SECTION ADMINISTRATION **************** //
 // ***************************************************** //
@@ -138,8 +137,8 @@ Route::post("/utilisateurs/{id}/user", [ReservationController::class, 'destroy']
     ->middleware('auth');
 
 // Traitement du formulaire d'ajout du concours
-Route::post('/utilisateurs/concours', [UtilisateurController::class, 'updateConcours'])
-    ->name('utilisateurs.updateConcours')
+Route::post('/utilisateurs/concours', [UtilisateurController::class, 'storeConcours'])
+    ->name('utilisateurs.storeConcours')
     ->middleware('auth');
 
 

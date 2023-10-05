@@ -1,9 +1,17 @@
 .petit {
-    max-width: 450px;
+    max-width: 400px;
 
     @media only screen and (max-width: 2500px) {
         #label {
             font-size: 2.43em;
+        }
+
+        #countdown {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        #countdown_texte {
+            grid-template-columns: repeat(4, 1fr);
         }
 
         #countdown p {

@@ -1,6 +1,3 @@
-{{-- class petit ou grand --}}
-{{-- <x-bannieres.countdown class="???" /> --}}
-
 <div id="compteur" {{ $attributes->merge(["class" => "compteur"]) }}>
 
     <p id="label">Temps restant</p>
