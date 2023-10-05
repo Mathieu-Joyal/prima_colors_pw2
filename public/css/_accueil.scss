@@ -8,9 +8,8 @@ video {
     width: 100%; 
     filter: brightness(1);
     max-height: 100%;
-    object-fit: cover;
-    
-   
+    height: 100%;
+    object-fit: cover;  
 }
 
 .video-container {
@@ -19,7 +18,8 @@ video {
     justify-content: center; 
     align-items: center; 
     height: 70vh; 
-    width: 100%; 
+    width: 100%;
+
 }
 
 /***********************************************
@@ -38,7 +38,7 @@ blockquote {
     text-align: center;
     margin: 20px;
     padding-bottom: 100px;
-    margin-top: -350px;
+    margin-top: -550px;
     position: relative;
     opacity: 0;
     animation: fade-in 1.5s ease-in-out forwards;
@@ -61,7 +61,7 @@ blockquote span.material-icons:first-child {
 @keyframes fade-in {
     0% {
         opacity: 0;
-        transform: translateY(-20px);
+        transform: translateY(-50px);
     }
 
     100% {
@@ -193,6 +193,11 @@ a.accueil_forfait span.material-icons {
 a.accueil:hover,
 a.accueil_forfait:hover {
     color: $blanc;
+    border-color: $jaune;
+}
+
+a.accueil_forfait:hover{
+    border-color: $rose;
 }
 
 a.accueil:hover span.material-icons {

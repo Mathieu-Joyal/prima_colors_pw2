@@ -3,7 +3,7 @@
 
 
     <div class="video-container">
-        <video controls autoplay>
+        <video muted autoplay>
             <source src="../video\prima-colors_video_low.mp4" type="video/mp4">
             Votre navigateur ne prend pas en charge la lecture vidéo.
         </video>
