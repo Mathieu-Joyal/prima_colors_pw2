@@ -1,23 +1,23 @@
 /***********************************************
- *                                          
- *           STYLES POUR LE VIDEO         
- *                                             
+ *
+ *           STYLES POUR LE VIDEO
+ *
  ***********************************************/
 
 video {
-    width: 100%; 
+    width: 100%;
     filter: brightness(1);
     max-height: 100%;
     height: 100%;
-    object-fit: cover;  
+    object-fit: cover;
 }
 
 .video-container {
     position: relative;
     display: flex;
-    justify-content: center; 
-    align-items: center; 
-    height: 70vh; 
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
     width: 100%;
 }
 
@@ -26,14 +26,14 @@ video {
     margin-right: auto;
     display: flex;
     margin-left: 0;
-  
+
     span.material-icons{
         border: none;
         color: $blanc;
         margin-right: auto;
         font-size: 16px;
-    
-    } 
+
+    }
 }
 
 .volume:hover{
@@ -43,9 +43,9 @@ video {
 
 
 /***********************************************
- *                                          
- *           STYLES POUR LA CITATION           
- *                                             
+ *
+ *           STYLES POUR LA CITATION
+ *
  ***********************************************/
 
 /* Styles communs pour blockquote */
@@ -62,7 +62,7 @@ blockquote {
     position: relative;
     opacity: 0;
     animation: fade-in 1.5s ease-in-out forwards;
-   
+
 }
 
 /* Styles spécifiques pour span.material-icons */
@@ -91,9 +91,9 @@ blockquote span.material-icons:first-child {
 }
 
 /***********************************************
- *                                          
- *           STYLES POUR L'INTRO          
- *                                             
+ *
+ *           STYLES POUR L'INTRO
+ *
  ***********************************************/
 
 .intro {
@@ -102,9 +102,9 @@ blockquote span.material-icons:first-child {
 }
 
 /***********************************************
- *                                          
- *           STYLES POUR LES SECTIONS       
- *                                             
+ *
+ *           STYLES POUR LES SECTIONS
+ *
  ***********************************************/
 
 /* Styles communs pour les sections */
@@ -125,6 +125,9 @@ img.img_forfait,
 img.img_apropos {
     max-width: 50%;
     margin-right: 20px;
+}
+
+img.couleur-image {
     animation: CouleurImage 4.5s ease-in-out;
 }
 
@@ -138,13 +141,23 @@ img.img_apropos {
 
 .texte_droite {
     padding-left: 50px;
-    animation: fadeIn 2s ease-in-out;
+    opacity: 0;
+
+    &.fade-in {
+        animation: fadeIn 2s ease-in-out forwards;
+    }
 }
+
 
 .texte_gauche {
     padding-right: 50px;
-    animation: fadeInDeux 2s ease-in-out;
+    opacity: 0;
+
+    &.fade-in-2 {
+        animation: fadeInDeux 2s ease-in-out forwards;
+    }
 }
+
 
 /* Styles communs pour les titres */
 h3.accueil_activite,
@@ -252,7 +265,7 @@ p.accueil_apropos {
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateX(-50px); 
+        transform: translateX(-50px);
     }
     to {
         opacity: 1;
@@ -263,7 +276,7 @@ p.accueil_apropos {
 @keyframes fadeInDeux {
     from {
         opacity: 0;
-        transform: translateX(50px); 
+        transform: translateX(50px);
     }
     to {
         opacity: 1;
@@ -273,10 +286,10 @@ p.accueil_apropos {
 
 @keyframes CouleurImage {
     0% {
-        filter: grayscale(100%); 
+        filter: grayscale(100%);
     }
     100% {
-        filter: grayscale(0%); 
+        filter: grayscale(0%);
     }
 }
 
@@ -303,9 +316,9 @@ p.accueil_apropos {
     }
 }
 /***********************************************
- *                                          
- *           STYLES POUR LE MUR DE BRIQUE          
- *                                             
+ *
+ *           STYLES POUR LE MUR DE BRIQUE
+ *
  ***********************************************/
 
 /* Styles communs pour la section actualités */
