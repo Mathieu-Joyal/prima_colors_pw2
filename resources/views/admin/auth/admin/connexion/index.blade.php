@@ -1,4 +1,4 @@
-<x-layout titre="Connectez-vous">
+<x-layout titre="Connectez-vous!!!!!">
 
     <x-header />
 

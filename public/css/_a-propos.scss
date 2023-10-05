@@ -1,7 +1,11 @@
 .conteneur-a_propos {
 
+    h1 {
+        margin: 1em;
+    }
+
     h2 {
-        margin: 2em 1em 0 2em;
+        margin: 2em 1rem 0 2em;
     }
 
     p.titre {
@@ -9,6 +13,7 @@
         margin: 0;
         padding: 0;
         color: $jaune;
+        margin: 0 0 1em 0;
     }
 
     .conteneur_nous_joindre {
@@ -19,21 +24,26 @@
 
         .conteneur_texte {
             min-width: 250px;
-            padding: 0 1em;
 
             h3 {
                 color: $jaune;
                 margin: 0 0 1rem 0;
             }
+
+            p {
+                margin: .25em 0;
+                text-transform: capitalize;
+            }
+
             .contact {
-                margin: 1em 0 0 0 ;
+                margin: 2em 0 0 0 ;
             }
         }
 
         .conteneur_map {
             position: relative;
 
-            max-width: 1000px;
+            max-width: 800px;
             overflow: hidden;
             width: 100%;
             height: 500px;
@@ -48,6 +58,40 @@
                 height: 100%;
                 width: 100%;
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .conteneur-a_propos {
+
+        .conteneur_texte {
+            margin: 0 1em;
+        }
+
+        .responsive-iframe {
+            max-width: 600px;
+        }
+    }
+}
+
+@media only screen and (max-width: 925px) {
+
+    .conteneur-a_propos {
+
+        .responsive-iframe {
+            max-width: 400px;
+        }
+    }
+}
+
+@media only screen and (max-width: 725px) {
+
+    .conteneur-a_propos {
+
+        .responsive-iframe {
+            display: none;
         }
     }
 }
