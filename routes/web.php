@@ -56,7 +56,6 @@ Route::get('/forfaits', [ForfaitController::class, 'index'])
 // ************* SECTION ADMINISTRATION **************** //
 // ***************************************************** //
 
-
 // **** SECTION CONNEXION D'UN COMPTE UTILISATEUR ****** //
 //
 // Affichage de la page de connexion d'un compte utilisateur
@@ -142,13 +141,16 @@ Route::post('/utilisateurs/concours', [UtilisateurController::class, 'storeConco
     ->middleware('auth');
 
 
-// *************** SECTION ADMIN PAGE EMPLOYÉ ***************** //
+// *************** SECTION ADMIN PAGE ACCUEIL ***************** //
 //
 // Affichage de la page d'accueil employé
 Route::get('/admin', [AdminAccueilController::class, 'index'])
     ->name('admin.index')
     ->middleware('auth:employe');
 
+
+// *************** SECTION ADMIN PAGE EMPLOYÉ ***************** //
+//
 // Affichage de la page liste des employés
 Route::get('/admin/employe', [AdminEmployeController::class, 'index'])
     ->name('admin.employes.index')
@@ -169,10 +171,6 @@ Route::get("/admin/employe/destroy/{id}", [AdminEmployeController::class, 'destr
     ->name('admin.employes.destroy')
     ->middleware('auth:employe');
 
-// Traitement de la suppression par l'admininstrateur du forfait choisit par l'utilisateur
-Route::post("/admin/utilisateur{id}/admin", [AdminReservationController::class, 'destroy'])
-    ->name('admin.reservations.destroy')
-    ->middleware('auth:employe');
 
 // ************* SECTION ADMIN PAGE UTILISATEUR *************** //
 //
@@ -196,6 +194,7 @@ Route::get("/admin/utilisateurs/destroy/{id}", [AdminUtilisateurController::clas
     ->name('admin.utilisateurs.destroy')
     ->middleware('auth:employe');
 
+
 // *************** SECTION ADMIN PAGE RÉSERVATIOM ***************** //
 //
 // Affichage de la page des réservations
@@ -203,9 +202,10 @@ Route::get('/admin/reservation', [AdminReservationController::class, 'index'])
     ->name('admin.reservations.index')
     ->middleware('auth:employe');
 
-
-
-
+// Traitement de la suppression par l'admininstrateur du forfait choisit par l'utilisateur
+Route::post("/admin/utilisateur{id}/admin", [AdminReservationController::class, 'destroy'])
+    ->name('admin.reservations.destroy')
+    ->middleware('auth:employe');
 
 
 // *************** SECTION GESTIONS ACTUALITÉS***************** //
@@ -247,7 +247,6 @@ Route::post("/admin/actualites/destroy", [AdminActualiteController::class, 'dest
 
 // *************** SECTION GESTIONS ACTIVITÉS ***************** //
 //
-
 //Affichage de la liste d'activités
 Route::get('/admin/activites', [AdminActiviteController::class, 'index'])
     ->name('admin.activites.index')
