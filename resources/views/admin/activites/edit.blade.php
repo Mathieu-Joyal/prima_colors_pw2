@@ -1,25 +1,23 @@
 <x-layout titre="Modifier {{ $activite->titre }}">
 
-    <x-nav-admin titre=" Modifier une ActivitÉ" route="{{route('admin.activites.index')}}" valeur="Retour aux activitÉs" />
+    <x-nav-admin titre=" Modifier une ActivitÉ" route="{{ route('admin.activites.index') }}"
+        valeur="Retour aux activitÉs" />
 
     <section>
 
         {{-- FORMULAIRE --}}
         {{-- ******************* Ajout pour recevoir l'id ******************** --}}
-        <form class="edit"
-                action="{{ route('admin.activites.update', ['id' => $activite->id] ) }}"
-                method="POST"
-                enctype="multipart/form-data"
-        >
+        <form class="edit" action="{{ route('admin.activites.update', ['id' => $activite->id]) }}" method="POST"
+            enctype="multipart/form-data">
             @csrf
-        {{-- ******************************** --}}
+            {{-- ******************************** --}}
 
             <div class="conteneur-grid">
                 <!-- Titre -->
                 <div class="grid-item">
                     <label for="titre" class="grid-title">Titre</label>
                     <input id="titre" name="titre" type="text" autofocus class=" "
-                    value="{{ old('titre') ?? $activite->titre }}">
+                        value="{{ old('titre') ?? $activite->titre }}">
 
                     <x-forms.erreur champ="titre" />
                 </div>
@@ -28,7 +26,7 @@
                 <div class="grid-item">
                     <label for="date" class="grid-title">Date</label>
                     <input id="date" name="date" type="date" autofocus class=" "
-                    value="{{ old('date') ?? $activite->date }}">
+                        value="{{ old('date') ?? $activite->date }}">
 
                     <x-forms.erreur champ="date" />
                 </div>
@@ -37,7 +35,7 @@
                 <div class="grid-item">
                     <label for="heure" class="grid-title">Heure</label>
                     <input id="heure" name="heure" type="time" autofocus class=" "
-                    value="{{ old('heure') ?? $activite->heure }}">
+                        value="{{ old('heure') ?? $activite->heure }}">
 
                     <x-forms.erreur champ="heure" />
                 </div>
@@ -77,7 +75,7 @@
             <div class=" grid-item description">
                 <label for="description" class="grid-title">Description</label>
                 <input id="description" name="description" type="text" autofocus class=" "
-                value="{{ old('description') ?? $activite->description }}">
+                    value="{{ old('description') ?? $activite->description }}">
 
                 <x-forms.erreur champ="description" />
             </div>
@@ -87,8 +85,9 @@
                 <label for="image" class="grid-title">Image</label>
 
                 <input id="image" name="image" type="file">
-                <img src="{{asset($activite->image)}}" alt="">
-
+                <div class="conteneur-image">
+                    <img src="{{ asset($activite->image) }}" alt="">
+                </div>
                 <x-forms.erreur champ="image" />
             </div>
 
