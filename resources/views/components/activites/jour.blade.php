@@ -54,9 +54,6 @@
                     <p>{{ $activite->description }}</p>
                     <p>{{ $activite->description }}</p>
 
-                    <div class="fermer">
-                        <p>X</p>
-                    </div>
                 </div>
             </div>
 
@@ -126,7 +123,7 @@
     // show description on click
     function toggleDescription(element) {
         const description = element.querySelector('.description');
-        const nextElement = element.nextElementSibling;
+        const nextElement = element.parentElement.nextElementSibling;
 
         if (description && nextElement) {
             if (description.style.display === 'none' || description.style.display === '') {
