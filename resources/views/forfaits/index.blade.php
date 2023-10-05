@@ -39,6 +39,7 @@
 
     </section>
     <x-bannieres.concours :url="url('img/concours/ours.jpg')" />
+    <x-bannieres.compte :url="url('img/accueil/ban_compte.png')"/>
     <x-footer />
     <script>
         function voirPlus(event) {
