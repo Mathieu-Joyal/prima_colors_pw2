@@ -123,7 +123,7 @@
 
             <h3>Participer au concours!</h3>
 
-            <form class="administration" action="{{ route('utilisateurs.updateConcours') }}"
+            <form class="administration" action="{{ route('utilisateurs.storeConcours') }}"
                     method="POST"
                     enctype="multipart/form-data"
             >

@@ -21,15 +21,18 @@ class AdminEmployeController extends Controller
         // Allez chercher la requête de la recherche
         $requete = $request->input('user_recherche');
 
-        // Initialise la recherche
+        // Initialise la recherche à partir d'Employe
         $requete_user = Employe::query();
 
-        // Si une recherche est fournie, filtrer le résultat
+        // Récupération en fonction de leur prénom, nom et identifiant, en plus de leurs roles
         if (!empty($requete)) {
             $requete_user->where(function ($la_requete) use ($requete) {
                 $la_requete->where('prenom', 'like', '%' . $requete . '%')
                             ->orWhere('nom', 'like', '%' . $requete . '%')
-                            ->orWhere('identifiant', 'like', '%' . $requete . '%');
+                            ->orWhere('identifiant', 'like', '%' . $requete . '%')
+                            ->orWhereHas('role', function ($roleQuery) use ($requete) {
+                                $roleQuery->where('nom', 'like', '%' . $requete . '%');
+                            });
             });
         }
 

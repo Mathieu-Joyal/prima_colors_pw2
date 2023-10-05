@@ -1,4 +1,4 @@
-<x-layout titre="Modifiez une actualité">
+<x-layout titre="Modifier {{ $actualite->titre }}">
 
     <x-nav-admin titre=" Modifier une ActualitÉs" route="{{route('admin.actualites.index')}}"
         valeur="Retour aux actualitÉs" />
