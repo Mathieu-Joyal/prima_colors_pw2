@@ -1,4 +1,4 @@
-<x-layout titre="Bienvenue!">
+<x-layout titre="Liste des utilisateurs">
 
     <x-nav-admin
         titre="Les Utilisateurs"

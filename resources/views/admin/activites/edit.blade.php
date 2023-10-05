@@ -1,4 +1,4 @@
-<x-layout titre="Modifiez une activité">
+<x-layout titre="Modifier {{ $activite->titre }}">
 
     <x-nav-admin titre=" Modifier une ActivitÉ" route="{{route('admin.activites.index')}}" valeur="Retour aux activitÉs" />
 
