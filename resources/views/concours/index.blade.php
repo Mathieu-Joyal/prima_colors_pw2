@@ -64,7 +64,7 @@
 
         <section class="concours_description concours_bg" >
             <h2>Informations sur le concours CréARTive</h2>
-            <p>Explorez la créativité infinie et l'expression artistique au Festival Prima-Colors. Notre concours d'art est une ode à l'originalité, offrant aux artistes une scène pour exposer leurs œuvres captivantes. Plongez dans un monde d'émotions visuelles, où chaque coup de pinceau, chaque note de musique et chaque éclat de couleur vous emmèneront dans un voyage inoubliable. Que vous soyez un amateur d'art passionné ou simplement à la recherche d'inspiration, le Festival Prima-Colors est l'endroit où vous pouvez découvrir de nouvelles perspectives artistiques, rencontrer des artistes talentueux et vous immerger dans un univers de créativité débordante. Rejoignez-nous et laissez-vous emporter par cette célébration artistique unique en son genre.</p>
+            <p class="concours"> Explorez la créativité infinie et l'expression artistique au Festival Prima-Colors. Notre concours d'art est une ode à l'originalité, offrant aux artistes une scène pour exposer leurs œuvres captivantes. Plongez dans un monde d'émotions visuelles, où chaque coup de pinceau, chaque note de musique et chaque éclat de couleur vous emmèneront dans un voyage inoubliable. Que vous soyez un amateur d'art passionné ou simplement à la recherche d'inspiration, le Festival Prima-Colors est l'endroit où vous pouvez découvrir de nouvelles perspectives artistiques, rencontrer des artistes talentueux et vous immerger dans un univers de créativité débordante. Rejoignez-nous et laissez-vous emporter par cette célébration artistique unique en son genre.</p>
         </section>
         <x-bannieres.compte :url="url('img/accueil/ban_compte.png')"/>
         <section class="concours_critere_participation concours_bg">
@@ -74,19 +74,19 @@
             <div>
                 <ul>
                     <li>
-                        <p><strong>1. Oeuvre originale:</strong> Les participants doivent soumettre une œuvre entièrement originale qui n'a jamais été présentée auparavant dans un autre concours ou exposition.</p>
+                        <p class="concours"><strong>1. Oeuvre originale:</strong> Les participants doivent soumettre une œuvre entièrement originale qui n'a jamais été présentée auparavant dans un autre concours ou exposition.</p>
                     </li>
                     <li>
-                        <p><strong>2. Thème:</strong> Les participants sont encouragés à explorer le thème central du Festival Prima-Colors, qui évolue chaque année. Le thème de cette année est "Harmonie en Mouvement".</p>
+                        <p class="concours"><strong>2. Thème:</strong> Les participants sont encouragés à explorer le thème central du Festival Prima-Colors, qui évolue chaque année. Le thème de cette année est "Harmonie en Mouvement".</p>
                     </li>
                     <li>
-                        <p><strong>3. Techniques acceptées:</strong> Toutes les formes d'expression artistique sont les bienvenues, y compris la peinture, la sculpture, la photographie, la performance, l'art numérique, etc.</p>
+                        <p class="concours"><strong>3. Techniques acceptées:</strong> Toutes les formes d'expression artistique sont les bienvenues, y compris la peinture, la sculpture, la photographie, la performance, l'art numérique, etc.</p>
                     </li>
                     <li>
-                        <p><strong>4. Titre original:</strong> Chaque œuvre doit être accompagnée d'un titre original qui reflète l'intention et le message de l'artiste.</p>
+                        <p class="concours"><strong>4. Titre original:</strong> Chaque œuvre doit être accompagnée d'un titre original qui reflète l'intention et le message de l'artiste.</p>
                     </li>
                     <li>
-                        <p><strong>5. Taille et format:</strong> Il n'y a pas de restrictions spécifiques concernant la taille de l'œuvre, mais veillez à ce qu'elle puisse être facilement exposée dans le cadre du festival.</p>
+                        <p class="concours"><strong>5. Taille et format:</strong> Il n'y a pas de restrictions spécifiques concernant la taille de l'œuvre, mais veillez à ce qu'elle puisse être facilement exposée dans le cadre du festival.</p>
                     </li>
                 </ul>
             </div>
@@ -98,25 +98,24 @@
 
             <div>
 
-                <p>Les lauréats seront annoncés lors de la cérémonie de clôture du Festival Prima-Colors. Les prix seront attribués aux trois meilleures œuvres en fonction des critères de sélection.</p>
+                <p class="concours">Les lauréats seront annoncés lors de la cérémonie de clôture du Festival Prima-Colors. Les prix seront attribués aux trois meilleures œuvres en fonction des critères de sélection.</p>
                 <ul>
                     <li>
-                        <p><strong>1. Premier Prix:</strong> 1000$ en argent comptant</p>
+                        <p class="concours"><strong>1. Premier Prix:</strong> 1000$ en argent comptant</p>
                     </li>
                     <li>
-                        <p><strong>2. Deuxième Prix:</strong> Une trousse d'artiste d'une valeur de 500$ offert par Omer De serre</p>
+                        <p class="concours"><strong>2. Deuxième Prix:</strong> Une trousse d'artiste d'une valeur de 500$ offert par Omer De serre</p>
                     </li>
                     <li>
-                        <p><strong>3. Prix du Public:</strong> 300$ en argent comptant sera remis au gagnant du choix du public. Le public aura également l'opportunité de voter pour leur œuvre préférée lors de l'exposition.</p>
+                        <p class="concours"><strong>3. Prix du Public:</strong> 300$ en argent comptant sera remis au gagnant du choix du public. Le public aura également l'opportunité de voter pour leur œuvre préférée lors de l'exposition.</p>
                     </li>
                 </ul>
-                <p>Nous sommes impatients de découvrir vos créations originales et de célébrer l'art avec vous lors du Festival Prima-Colors !</p>
+                <p class="concours">Nous sommes impatients de découvrir vos créations originales et de célébrer l'art avec vous lors du Festival Prima-Colors !</p>
             </div>
         </section>
 
 
-
-        {{-- <x-bannieres.compte /> --}}
+        <x-bannieres.compte :url="url('img/accueil/ban_compte.png')"/>
         <x-bannieres.billet />
 
     </div>

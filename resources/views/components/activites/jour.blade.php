@@ -7,15 +7,15 @@
 
         <div class="conteneur-jours">
 
-            <a href="#vendredi">
+            <a href="#vendredi" @class(["selected" => $journee == "vendredi"]) >
                 <h2 @class(["selected" => $journee == "vendredi"])> Vendredi</h2>
             </a>
 
-            <a href="#samedi">
+            <a href="#samedi" @class(["selected" => $journee == "samedi"])>
                 <h2 @class(["selected" => $journee == "samedi"])>Samedi</h2>
             </a>
 
-            <a href="#dimanche">
+            <a href="#dimanche" @class(["selected" => $journee == "dimanche"])>
                 <h2 @class(["selected" => $journee == "dimanche"])> Dimanche</h2>
             </a>
 

@@ -1,32 +1,49 @@
 .conteneur_concours {
-
     background-color: $noir;
+
+ 
+    h2{
+        color: $rose;
+        margin-left: 100px;
+        padding-top: 30px;
+     }
+
+    p.concours {
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-bottom: 0px;
+     
+    }
 
     .conteneur_le_concours {
         background-color: $noir;
         padding-bottom: 50px;
         position: relative;
-
     }
 
+    .concours_bg,
+    p.concours {
+        background-color: $blanc;
+        position: relative;
+        color: $noir;
+        list-style: none;
+    }
+    
     .concours_bg {
         margin: 0;
-
-        background-color: rgba(255, 255, 255, 0.90); /* Blanc avec 50 % de transparence */
-        position: relative;
-
-            color: $noir;
-            list-style: none;
-        }
-
-        ul {
-            list-style: none;
-        }
+        padding-bottom: 20px;
     }
-    .section_compte, .section_concours{
-        margin-bottom: 0;
+
+    ul {
+        list-style: none;
+        margin: 0px;
+    }
 }
 
+.section_compte,
+.section_concours {
+    margin-bottom: 0;
+}
 
 
 
