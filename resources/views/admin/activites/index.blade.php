@@ -1,4 +1,4 @@
-<x-layout titre="Créez une activité">
+<x-layout titre="Liste des activités">
 
     <x-nav-admin
         titre="Les ActivitÉs"

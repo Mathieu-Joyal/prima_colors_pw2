@@ -1,4 +1,4 @@
-<x-layout titre="Modification de {{ $un_employe->prenom }} {{ $un_employe->nom }} ">
+<x-layout titre="Modifier {{ $un_employe->prenom }} {{ $un_employe->nom }} ">
 
     <x-nav-admin
         titre="Les employés"

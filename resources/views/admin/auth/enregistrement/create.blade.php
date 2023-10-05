@@ -1,4 +1,4 @@
-<x-layout titre="Enregistrez-vous">
+<x-layout titre="Créer votre compte!!! ">
 
     <x-header />
 

@@ -1,4 +1,4 @@
-<x-layout titre="employes">
+<x-layout titre="Gestion {{ $un_employe->prenom }} {{ $un_employe->nom }}">
 
     <div class="banniere_accueil">
         <img src="{{ asset('img/activites/cereals.png') }}" alt="céréales">

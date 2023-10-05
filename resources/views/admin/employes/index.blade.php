@@ -1,6 +1,10 @@
-<x-layout titre="Bienvenue!">
+<x-layout titre="Liste des employés">
 
-    <x-nav-admin titre="Les employés" route="{{ route('admin.employes.index') }}" valeur="Retour aux employes" />
+    <x-nav-admin
+        titre="Les employés"
+        route="{{ route('admin.employes.index') }}"
+        valeur="Retour aux employes"
+    />
 
     <x-alertes cle="succes" class="alerte_succes"/>
     <x-alertes cle="erreur" class="alerte_erreur"/>

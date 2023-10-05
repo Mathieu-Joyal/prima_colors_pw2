@@ -1,4 +1,4 @@
-<x-layout titre="Bienvenue!">
+<x-layout titre="Créer un employé">
 
     <x-nav-admin titre="Les employés" route="{{ route('admin.employes.index') }}" valeur="Retour aux employes" />
 
