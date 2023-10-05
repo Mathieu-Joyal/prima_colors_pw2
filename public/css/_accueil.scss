@@ -1,5 +1,29 @@
 /***********************************************
  *                                          
+ *           STYLES POUR LE VIDEO         
+ *                                             
+ ***********************************************/
+
+video {
+    width: 100%; 
+    filter: brightness(1);
+    max-height: 100%;
+    height: 100%;
+    object-fit: cover;  
+}
+
+.video-container {
+    position: relative;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 70vh; 
+    width: 100%;
+
+}
+
+/***********************************************
+ *                                          
  *           STYLES POUR LA CITATION           
  *                                             
  ***********************************************/
@@ -13,11 +37,12 @@ blockquote {
     font-style: italic;
     text-align: center;
     margin: 20px;
-    padding: 20px;
     padding-bottom: 100px;
+    margin-top: -550px;
     position: relative;
     opacity: 0;
     animation: fade-in 1.5s ease-in-out forwards;
+   
 }
 
 /* Styles spécifiques pour span.material-icons */
@@ -36,7 +61,7 @@ blockquote span.material-icons:first-child {
 @keyframes fade-in {
     0% {
         opacity: 0;
-        transform: translateY(-20px);
+        transform: translateY(-50px);
     }
 
     100% {
@@ -45,18 +70,16 @@ blockquote span.material-icons:first-child {
     }
 }
 
-
 /***********************************************
  *                                          
  *           STYLES POUR L'INTRO          
  *                                             
  ***********************************************/
 
- .intro {
+.intro {
     padding: 0 200px 100px;
     text-align: justify;
 }
-
 
 /***********************************************
  *                                          
@@ -64,7 +87,7 @@ blockquote span.material-icons:first-child {
  *                                             
  ***********************************************/
 
- /* Styles communs pour les sections */
+/* Styles communs pour les sections */
 .section_activites,
 .section_forfaits,
 .section_apropos {
@@ -73,9 +96,8 @@ blockquote span.material-icons:first-child {
     justify-content: center;
     padding-left: 200px;
     padding-right: 200px;
-    padding-bottom: 100px;  
+    padding-bottom: 100px;
 }
-
 
 /* Styles communs pour les images */
 img.img_activite,
@@ -88,18 +110,18 @@ img.img_apropos {
 
 /* Styles communs pour les textes */
 .texte_droite,
-.texte_gauche{
+.texte_gauche {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.texte_droite{
+.texte_droite {
     padding-left: 50px;
     animation: fadeIn 2s ease-in-out;
 }
 
-.texte_gauche{
+.texte_gauche {
     padding-right: 50px;
     animation: fadeInDeux 2s ease-in-out;
 }
@@ -110,7 +132,7 @@ h3.accueil_forfait,
 h3.accueil_apropos {
     font-size: 54px;
     margin-bottom: 30px;
-    position: relative; 
+    position: relative;
     overflow: hidden;
 }
 
@@ -123,12 +145,11 @@ h3.accueil_apropos::after {
     left: 50%;
     transform: translateX(-50%);
     width: 0;
-    height: 2px; 
-    background-color: $blanc; 
-    overflow: hidden; 
+    height: 2px;
+    background-color: $blanc;
+    overflow: hidden;
     animation: underlineEffect 3s ease-in 1.5 forwards; /* Durée et animation */
 }
-   
 
 /* Styles communs pour les paragraphes */
 p.accueil_activite,
@@ -140,7 +161,8 @@ p.accueil_apropos {
 }
 
 /* Styles communs pour les liens */
-a.accueil, a.accueil_forfait {
+a.accueil,
+a.accueil_forfait {
     font-family: "pf-venue-stencil", sans-serif;
     color: $jaune;
     text-decoration: none;
@@ -151,17 +173,16 @@ a.accueil, a.accueil_forfait {
     display: flex;
     transition: 0.3s;
     padding-top: 10px;
-    padding-left: 5px;
+    padding-left: 10px;
     padding-right: 5px;
     border: 1px solid $blanc;
-
 }
-a.accueil_forfait{
+a.accueil_forfait {
     color: $rose;
 }
 
-
-a.accueil span.material-icons, a.accueil_forfait span.material-icons {
+a.accueil span.material-icons,
+a.accueil_forfait span.material-icons {
     font-size: 60px;
     padding-left: 200px;
     padding-bottom: 7px;
@@ -169,8 +190,14 @@ a.accueil span.material-icons, a.accueil_forfait span.material-icons {
     transition: 0.3s;
 }
 
-a.accueil:hover, a.accueil_forfait:hover  {
+a.accueil:hover,
+a.accueil_forfait:hover {
     color: $blanc;
+    border-color: $jaune;
+}
+
+a.accueil_forfait:hover{
+    border-color: $rose;
 }
 
 a.accueil:hover span.material-icons {
@@ -205,7 +232,7 @@ p.accueil_apropos {
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateX(-50px); /* ou la valeur souhaitée */
+        transform: translateX(-50px); 
     }
     to {
         opacity: 1;
@@ -216,7 +243,7 @@ p.accueil_apropos {
 @keyframes fadeInDeux {
     from {
         opacity: 0;
-        transform: translateX(50px); /* ou la valeur souhaitée */
+        transform: translateX(50px); 
     }
     to {
         opacity: 1;
@@ -226,10 +253,10 @@ p.accueil_apropos {
 
 @keyframes CouleurImage {
     0% {
-        filter: grayscale(100%); /* Démarre en noir et blanc */
+        filter: grayscale(100%); 
     }
     100% {
-        filter: grayscale(0%); /* Se termine en couleur */
+        filter: grayscale(0%); 
     }
 }
 
@@ -261,7 +288,6 @@ p.accueil_apropos {
  *                                             
  ***********************************************/
 
-
 /* Styles communs pour la section actualités */
 .section_actualites {
     width: 1500px;
@@ -276,11 +302,10 @@ p.accueil_apropos {
     padding-bottom: 150px;
 }
 
-
 .titre_actualite {
     font-family: "pf-venue", sans-serif;
     font-size: 30px;
-    padding-left: 30px; 
+    padding-left: 30px;
 }
 
 h1.accueil_actualite {
@@ -307,7 +332,6 @@ h1.accueil_actualite {
 }
 
 .titre_actualite a.vers_actualite img {
-
     position: absolute;
     top: 100%;
     left: 50%;
@@ -320,9 +344,8 @@ h1.accueil_actualite {
 }
 
 .titre_actualite a.vers_actualite:hover img {
-   transition: opacity 0.5s;
-   opacity: 1;
-
+    transition: opacity 0.5s;
+    opacity: 1;
 }
 
 .images {

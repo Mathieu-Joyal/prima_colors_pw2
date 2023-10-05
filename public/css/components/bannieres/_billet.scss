@@ -81,3 +81,9 @@
     right: 40px;
     bottom: 40px;
 }
+
+.section_billet:hover  {
+    filter: grayscale(100%) sepia(100%) hue-rotate(300deg);
+    filter: grayscale(100%) sepia(100%) hue-rotate(300deg) brightness(100%) saturate(100%);
+    transition: .5s;
+}

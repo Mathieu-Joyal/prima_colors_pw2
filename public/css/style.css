@@ -135,6 +135,29 @@ button:hover a {
 
 /***********************************************
  *                                          
+ *           STYLES POUR LE VIDEO         
+ *                                             
+ ***********************************************/
+video {
+  width: 100%;
+  filter: brightness(1);
+  max-height: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.video-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  width: 100%;
+}
+
+/***********************************************
+ *                                          
  *           STYLES POUR LA CITATION           
  *                                             
  ***********************************************/
@@ -147,8 +170,8 @@ blockquote {
   font-style: italic;
   text-align: center;
   margin: 20px;
-  padding: 20px;
   padding-bottom: 100px;
+  margin-top: -550px;
   position: relative;
   opacity: 0;
   animation: fade-in 1.5s ease-in-out forwards;
@@ -170,7 +193,7 @@ blockquote span.material-icons:first-child {
 @keyframes fade-in {
   0% {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-50px);
   }
   100% {
     opacity: 1;
@@ -266,7 +289,8 @@ p.accueil_apropos {
 }
 
 /* Styles communs pour les liens */
-a.accueil, a.accueil_forfait {
+a.accueil,
+a.accueil_forfait {
   font-family: "pf-venue-stencil", sans-serif;
   color: #eeb15e;
   text-decoration: none;
@@ -277,7 +301,7 @@ a.accueil, a.accueil_forfait {
   display: flex;
   transition: 0.3s;
   padding-top: 10px;
-  padding-left: 5px;
+  padding-left: 10px;
   padding-right: 5px;
   border: 1px solid white;
 }
@@ -286,7 +310,8 @@ a.accueil_forfait {
   color: #eca6d9;
 }
 
-a.accueil span.material-icons, a.accueil_forfait span.material-icons {
+a.accueil span.material-icons,
+a.accueil_forfait span.material-icons {
   font-size: 60px;
   padding-left: 200px;
   padding-bottom: 7px;
@@ -294,8 +319,14 @@ a.accueil span.material-icons, a.accueil_forfait span.material-icons {
   transition: 0.3s;
 }
 
-a.accueil:hover, a.accueil_forfait:hover {
+a.accueil:hover,
+a.accueil_forfait:hover {
   color: white;
+  border-color: #eeb15e;
+}
+
+a.accueil_forfait:hover {
+  border-color: #eca6d9;
 }
 
 a.accueil:hover span.material-icons {
@@ -330,7 +361,7 @@ p.accueil_apropos {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateX(-50px); /* ou la valeur souhaitée */
+    transform: translateX(-50px);
   }
   to {
     opacity: 1;
@@ -340,7 +371,7 @@ p.accueil_apropos {
 @keyframes fadeInDeux {
   from {
     opacity: 0;
-    transform: translateX(50px); /* ou la valeur souhaitée */
+    transform: translateX(50px);
   }
   to {
     opacity: 1;
@@ -349,10 +380,10 @@ p.accueil_apropos {
 }
 @keyframes CouleurImage {
   0% {
-    filter: grayscale(100%); /* Démarre en noir et blanc */
+    filter: grayscale(100%);
   }
   100% {
-    filter: grayscale(0%); /* Se termine en couleur */
+    filter: grayscale(0%);
   }
 }
 @keyframes underlineEffect {
@@ -944,23 +975,39 @@ section.billetterie .conteneur-description.voir-plus {
 .conteneur_concours {
   background-color: #030303;
 }
+.conteneur_concours h2 {
+  color: #eca6d9;
+  margin-left: 100px;
+  padding-top: 30px;
+}
+.conteneur_concours p.concours {
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 0px;
+}
 .conteneur_concours .conteneur_le_concours {
   background-color: #030303;
   padding-bottom: 50px;
   position: relative;
 }
-.conteneur_concours .concours_bg {
-  margin: 0;
-  background-color: rgba(255, 255, 255, 0.9); /* Blanc avec 50 % de transparence */
+.conteneur_concours .concours_bg,
+.conteneur_concours p.concours {
+  background-color: white;
   position: relative;
   color: #030303;
   list-style: none;
 }
+.conteneur_concours .concours_bg {
+  margin: 0;
+  padding-bottom: 20px;
+}
 .conteneur_concours ul {
   list-style: none;
+  margin: 0px;
 }
 
-.section_compte, .section_concours {
+.section_compte,
+.section_concours {
   margin-bottom: 0;
 }
 
@@ -1054,7 +1101,6 @@ section.billetterie .conteneur-description.voir-plus {
 }
 
 #compteur {
-  display: none;
   opacity: 0;
 }
 
@@ -1082,6 +1128,9 @@ section.billetterie .conteneur-description.voir-plus {
 .grand {
   max-width: 750px;
   font-size: 16px;
+  position: relative;
+  top: -450px;
+  opacity: 0.8;
 }
 @media only screen and (max-width: 650px) {
   .grand #label {
@@ -1152,6 +1201,18 @@ section.billetterie .conteneur-description.voir-plus {
   text-transform: uppercase;
 }
 
+.fade-in {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .section_billet {
   position: relative;
   background-image: url("../img/accueil/ban_billet.png");
@@ -1234,6 +1295,12 @@ section.billetterie .conteneur-description.voir-plus {
   position: absolute;
   right: 40px;
   bottom: 40px;
+}
+
+.section_billet:hover {
+  filter: grayscale(100%) sepia(100%) hue-rotate(300deg);
+  filter: grayscale(100%) sepia(100%) hue-rotate(300deg) brightness(100%) saturate(100%);
+  transition: 0.5s;
 }
 
 .conteneur-utilisateur {
