@@ -142,6 +142,7 @@ video {
   width: 100%;
   filter: brightness(1);
   max-height: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -170,7 +171,7 @@ blockquote {
   text-align: center;
   margin: 20px;
   padding-bottom: 100px;
-  margin-top: -350px;
+  margin-top: -550px;
   position: relative;
   opacity: 0;
   animation: fade-in 1.5s ease-in-out forwards;
@@ -192,7 +193,7 @@ blockquote span.material-icons:first-child {
 @keyframes fade-in {
   0% {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-50px);
   }
   100% {
     opacity: 1;
@@ -321,6 +322,11 @@ a.accueil_forfait span.material-icons {
 a.accueil:hover,
 a.accueil_forfait:hover {
   color: white;
+  border-color: #eeb15e;
+}
+
+a.accueil_forfait:hover {
+  border-color: #eca6d9;
 }
 
 a.accueil:hover span.material-icons {
@@ -1289,6 +1295,12 @@ section.billetterie .conteneur-description.voir-plus {
   position: absolute;
   right: 40px;
   bottom: 40px;
+}
+
+.section_billet:hover {
+  filter: grayscale(100%) sepia(100%) hue-rotate(300deg);
+  filter: grayscale(100%) sepia(100%) hue-rotate(300deg) brightness(100%) saturate(100%);
+  transition: 0.5s;
 }
 
 .conteneur-utilisateur {

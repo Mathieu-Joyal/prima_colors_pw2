@@ -4,6 +4,7 @@
 
     {{-- Ajouter le id mon_video --}}
     <div class="video-container">
+
         <video id="mon_video" autoplay muted>
             <source src="../video\prima-colors_video_low.mp4" type="video/mp4">
             Votre navigateur ne prend pas en charge la lecture vidéo.
