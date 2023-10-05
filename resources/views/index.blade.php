@@ -2,12 +2,16 @@
     <x-header />
 
 
+    {{-- Ajouter le id mon_video --}}
     <div class="video-container">
-        <video controls autoplay>
+        <video id="mon_video" autoplay muted>
             <source src="../video\prima-colors_video_low.mp4" type="video/mp4">
             Votre navigateur ne prend pas en charge la lecture vidéo.
         </video>
     </div>
+
+    {{-- Ajout d'un bouton toggle pour le son --}}
+    <button id="basculer_son" onclick="basculerSon()">Son on</button>
 
     <x-bannieres.countdown class="grand" />
     <blockquote>
@@ -98,18 +102,35 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add(
-                        'animate'); 
+                        'animate');
                         observer.unobserve(entry
-                        .target); 
+                        .target);
                     }
                 });
             }, options);
 
             const elementsToAnimate = document.querySelectorAll(
-            '.element-to-animate'); 
+            '.element-to-animate');
 
             elementsToAnimate.forEach(element => {
                 observer.observe(element);
             });
         });
+
+    // Javascript pour le toggle du son
+
+    // Initialisation des variables
+    const video = document.getElementById("mon_video");
+    const soundButton = document.getElementById("basculer_son");
+
+    // Fonction pour basculer le son
+    function basculerSon() {
+        if (video.muted) {
+            video.muted = false;
+            soundButton.textContent = "Son off";
+        } else {
+            video.muted = true;
+            soundButton.textContent = "Son on";
+        }
+    }
 </script>

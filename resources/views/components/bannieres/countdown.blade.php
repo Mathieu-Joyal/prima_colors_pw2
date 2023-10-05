@@ -28,7 +28,6 @@
     // Mise à jour du compte à chaque seconde
     let  x = setInterval(function() {
 
-        console.log(document.getElementById("countdown").height)
         // Aller rechercher la date et le temps actuel
         let now = new Date().getTime();
 
