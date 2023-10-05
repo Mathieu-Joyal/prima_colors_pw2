@@ -1034,6 +1034,11 @@ section.billetterie .conteneur-description.voir-plus {
   color: #eeb15e;
 }
 
+#compteur {
+  display: none;
+  opacity: 0;
+}
+
 .petit {
   max-width: 400px;
 }

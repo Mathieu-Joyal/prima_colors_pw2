@@ -24,31 +24,52 @@
     // Mise à jour du compte à chaque seconde
     let  x = setInterval(function() {
 
-    // Aller rechercher la date et le temps actuel
-    let now = new Date().getTime();
+        // Aller rechercher la date et le temps actuel
+        let now = new Date().getTime();
 
-    // Trouver la distance entre le temps actuel et la date du countdown
-    let distance = countDownDate - now;
+        // Trouver la distance entre le temps actuel et la date du countdown
+        let distance = countDownDate - now;
 
-    // Calcul du temps pour les journées, les heures les minutes et les secondes
-    let date = Math.floor(distance / (1000 * 60 * 60 * 24));
-    let heures = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    let secondes = Math.floor((distance % (1000 * 60)) / 1000);
+        // Calcul du temps pour les journées, les heures les minutes et les secondes
+        let date = Math.floor(distance / (1000 * 60 * 60 * 24));
+        let heures = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        let secondes = Math.floor((distance % (1000 * 60)) / 1000);
 
-// Mise à jour du résultat dans l'élément id="countdown"
-document.getElementById("countdown").innerHTML = `
-    <p>${date.toString().padStart(2, '0')}</p>
-    <p>${heures.toString().padStart(2, '0')}</p>
-    <p>${minutes.toString().padStart(2, '0')}</p>
-    <p>${secondes.toString().padStart(2, '0')}</p>
-    `;
+        // Mise à jour du résultat dans l'élément id="countdown"
+        document.getElementById("countdown").innerHTML = `
+            <p>${date.toString().padStart(2, '0')}</p>
+            <p>${heures.toString().padStart(2, '0')}</p>
+            <p>${minutes.toString().padStart(2, '0')}</p>
+            <p>${secondes.toString().padStart(2, '0')}</p>
+            `;
 
-    // Si le compteur se termine, affichez un message
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("countdown").innerHTML = "Bienvenue au festival Prima-Colors 2023!";
-        }
+        // Enlever la classe le display none du compteur après que les chiffres sont chargés
+        document.getElementById("compteur").style.display = "block";
+
+        // Si le compteur se termine, affichez un message
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("countdown").innerHTML = "Bienvenue au festival Prima-Colors 2023!";
+            }
     }, 1000);
+
+    // Déclaration des variables
+    let opacity = 0;
+    const interval = 100;
+
+    // Augmenter l'opacité selon l'interval
+    function fondu() {
+        opacity += interval / 3000;
+        document.getElementById("compteur").style.opacity = opacity;
+
+        // Actif jusqu'à temps que l'opacité soit à 1
+        if (opacity < 1) {
+            setTimeout(fondu, interval);
+        }
+    }
+
+    // Exécution du fondu selon l'interval
+    setTimeout(fondu, interval);
 
 </script>
