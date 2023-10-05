@@ -1,4 +1,4 @@
-<x-layout titre="Enregistrez-vous">
+<x-layout titre="Créer votre compte">
 
     <x-header />
 
@@ -137,7 +137,7 @@
 
         <div>
             <p>
-                <a href="{{ route('connexion.create') }}">
+                <a href="{{ route('connexion.index') }}">
                     Déjà un membre?
                 </a>
             </p>

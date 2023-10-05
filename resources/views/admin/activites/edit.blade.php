@@ -1,4 +1,4 @@
-<x-layout titre="Modifiez une activité">
+<x-layout titre="Modifier {{ $activite->titre }}">
 
     <x-nav-admin titre=" Modifier une ActivitÉ" route="{{route('admin.activites.index')}}" valeur="Retour aux activitÉs" />
 
@@ -86,8 +86,8 @@
             <div class=" grid-item image">
                 <label for="image" class="grid-title">Image</label>
 
-                <input id="image" name="image" type="file" class=" "
-                value="{{ $activite->image }}">
+                <input id="image" name="image" type="file">
+                <img src="{{asset($activite->image)}}" alt="">
 
                 <x-forms.erreur champ="image" />
             </div>

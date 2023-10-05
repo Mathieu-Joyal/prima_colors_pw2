@@ -1,4 +1,4 @@
-<x-layout titre="Modifiez une actualité">
+<x-layout titre="Modifier {{ $actualite->titre }}">
 
     <x-nav-admin titre=" Modifier une ActualitÉs" route="{{route('admin.actualites.index')}}"
         valeur="Retour aux actualitÉs" />
@@ -41,7 +41,8 @@
 
                 <x-forms.erreur champ="image" />
                 <input id="image" name="image" type="file" class=" "
-                    value="{{ old('image') ?? $actualite->image }}">
+                >
+                <img src="{{asset($actualite->image)}}" alt="">
             </div>
 
             <div class="conteneur-bouttons">

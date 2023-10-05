@@ -1,4 +1,4 @@
-<x-layout titre="Créez une actualité">
+<x-layout titre="Liste des actualités">
 
 
     {{-- ******************** changement route activites pour actualites et valeur même chose ******************** --}}

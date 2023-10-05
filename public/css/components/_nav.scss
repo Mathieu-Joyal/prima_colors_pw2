@@ -40,6 +40,7 @@
     align-items: center;
     top: 0px;
     height: 70px;
+    padding-bottom: 45px;
 }
 
 .menu_nav .item_nav {
@@ -96,12 +97,11 @@ text-decoration:none;
 }
 
 a.billet{
-    // height: 270px;
     text-decoration:none ;
 }
 .billet {
     width:170px;
-    // height: 200px;
+    height: 200px;
     margin-left: 50px;
     padding-right: 40px;
     background: url('../img/accueil/billet.jpg');
@@ -130,6 +130,7 @@ p.texte{
     padding-left: 30px;
     padding-right: 50px;
     width: 15%;
+    padding-bottom: 45px;
 }
 
 img.reseau-img {
@@ -144,7 +145,7 @@ img.reseau-img {
 a.connexion {
     font-family: "pf-venue", sans-serif;
     font-size: 36px;
-    margin-top: 200px;
+    margin-top: 150px;
     color: $rose;
     display: flex;
     align-items: center;
@@ -161,3 +162,16 @@ a.connexion .material-icons {
     text-decoration: none;
 }
 
+@media only screen and (max-width: 1200px) {
+    .billet{
+        display: none;
+    }
+    .menu_nav{
+        padding-top: 12px;
+        padding-bottom: 0px;
+    }
+    .logo-nav{
+        padding-top: 16px;
+    }
+
+}
