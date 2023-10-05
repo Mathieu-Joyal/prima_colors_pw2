@@ -21,6 +21,10 @@
     // Enregistrer la date que le compte final se dirige
     const countDownDate = new Date("Nov 30, 2023 23:59:59").getTime();
 
+    // Déclaration des variables
+    let opacity = 0;
+    const interval = 100;
+
     // Mise à jour du compte à chaque seconde
     let  x = setInterval(function() {
 
@@ -44,8 +48,7 @@
             <p>${secondes.toString().padStart(2, '0')}</p>
             `;
 
-        // Enlever la classe le display none du compteur après que les chiffres sont chargés
-        document.getElementById("compteur").style.display = "block";
+        document.getElementById("compteur").classList.add("fade-in")
 
         // Si le compteur se termine, affichez un message
         if (distance < 0) {
@@ -53,23 +56,5 @@
             document.getElementById("countdown").innerHTML = "Bienvenue au festival Prima-Colors 2023!";
             }
     }, 1000);
-
-    // Déclaration des variables
-    let opacity = 0;
-    const interval = 100;
-
-    // Augmenter l'opacité selon l'interval
-    function fondu() {
-        opacity += interval / 3000;
-        document.getElementById("compteur").style.opacity = opacity;
-
-        // Actif jusqu'à temps que l'opacité soit à 1
-        if (opacity < 1) {
-            setTimeout(fondu, interval);
-        }
-    }
-
-    // Exécution du fondu selon l'interval
-    setTimeout(fondu, interval);
 
 </script>

@@ -1,9 +1,10 @@
 // *********
 
 #compteur {
-    display: none;
     opacity: 0;
+
 }
+
 
 // **********
 
@@ -47,6 +48,7 @@
 
         #countdown p {
             font-size: 7.78em;
+
         }
 
         #countdown_texte p {
@@ -116,4 +118,13 @@
     margin: 0;
     text-align: center;
     text-transform: uppercase;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn  {
+    from {opacity: 0;}
+    to { opacity: 1;}
 }

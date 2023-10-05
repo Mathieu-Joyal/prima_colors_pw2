@@ -1101,7 +1101,6 @@ section.billetterie .conteneur-description.voir-plus {
 }
 
 #compteur {
-  display: none;
   opacity: 0;
 }
 
@@ -1202,6 +1201,18 @@ section.billetterie .conteneur-description.voir-plus {
   text-transform: uppercase;
 }
 
+.fade-in {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .section_billet {
   position: relative;
   background-image: url("../img/accueil/ban_billet.png");
