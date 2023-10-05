@@ -12,7 +12,7 @@
     </div>
 
     {{-- Ajout d'un bouton toggle pour le son --}}
-    <button id="basculer_son" onclick="basculerSon()">Son on</button>
+    <button id= <span class="material-icons">volume_up </span> onclick="basculerSon()">Son on</button>
 
     <x-bannieres.countdown class="grand" />
     <blockquote>
@@ -93,30 +93,30 @@
     <x-footer />
 
 </x-layout>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const options = {
-                threshold: 0.2
-            };
+<script>
+    document.addEventListener('DOMContentLoaded', function(fadeIn, fadeInDeux, CouleurImage, underlineEffect) {
+        const options = {
+            threshold: 0.2
+        };
 
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add(
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add(
                         'animate');
-                        observer.unobserve(entry
+                    observer.unobserve(entry
                         .target);
-                    }
-                });
-            }, options);
+                }
+            });
+        }, options);
 
-            const elementsToAnimate = document.querySelectorAll(
+        const elementsToAnimate = document.querySelectorAll(
             '.element-to-animate');
 
-            elementsToAnimate.forEach(element => {
-                observer.observe(element);
-            });
+        elementsToAnimate.forEach(element => {
+            observer.observe(element);
         });
+    });
 
     // Javascript pour le toggle du son
 
@@ -128,10 +128,10 @@
     function basculerSon() {
         if (video.muted) {
             video.muted = false;
-            soundButton.textContent = "Son off";
+            soundButton.textContent = <span class="material-icons">volume_off</span>;
         } else {
             video.muted = true;
-            soundButton.textContent = "Son on";
+            soundButton.textContent = <span class="material-icons">volume_up</span>;
         }
     }
 </script>
