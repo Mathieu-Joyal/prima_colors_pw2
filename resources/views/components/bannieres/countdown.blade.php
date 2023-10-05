@@ -19,7 +19,8 @@
 <script>
 
     // Enregistrer la date que le compte final se dirige
-    const countDownDate = new Date("Nov 30, 2023 23:59:59").getTime();
+    // const countDownDate = new Date("Oct 03, 2023 23:59:59").getTime();
+    const countDownDate = new Date("Dec 30, 2023 23:59:59").getTime();
 
     // Déclaration des variables
     let opacity = 0;
