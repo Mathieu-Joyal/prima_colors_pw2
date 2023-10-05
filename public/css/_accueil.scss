@@ -19,12 +19,28 @@ video {
     align-items: center; 
     height: 70vh; 
     width: 100%;
-
 }
 
-button span.material-icons{
-    border: none;
+.volume{
+    border:none;
+    margin-right: auto;
+    display: flex;
+    margin-left: 0;
+  
+    span.material-icons{
+        border: none;
+        color: $blanc;
+        margin-right: auto;
+        font-size: 16px;
+    
+    } 
 }
+
+.volume:hover{
+    background-color: transparent;
+}
+
+
 
 /***********************************************
  *                                          
