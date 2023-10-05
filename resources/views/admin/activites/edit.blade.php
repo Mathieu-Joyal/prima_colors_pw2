@@ -86,8 +86,8 @@
             <div class=" grid-item image">
                 <label for="image" class="grid-title">Image</label>
 
-                <input id="image" name="image" type="file" class=" "
-                value="{{ $activite->image }}">
+                <input id="image" name="image" type="file">
+                <img src="{{asset($activite->image)}}" alt="">
 
                 <x-forms.erreur champ="image" />
             </div>
