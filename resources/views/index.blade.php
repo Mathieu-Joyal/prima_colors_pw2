@@ -12,14 +12,13 @@
     </div>
 
     {{-- Ajout d'un bouton toggle pour le son --}}
-    <button id= <span class="material-icons">volume_up </span> onclick="basculerSon()">Son on</button>
+    <button class="volume"><span class="material-icons">volume_up</span></button>
 
     <x-bannieres.countdown class="grand" />
     <blockquote>
-        <span class="material-icons">format_quote</span>
-        Prima-Colors : L'art, la musique, et la couleur fusionnent en une <br> explosion de créativité pour une
+        <span class="material-icons">format_quote</span>Prima-Colors : L'art, la musique, et la couleur fusionnent en une <br> explosion de créativité pour une
         expérience inoubliable!
-        <span class="material-icons">format_quote</span>
+       <span class="material-icons">format_quote</span>
     </blockquote>
 
     <div class="intro">
