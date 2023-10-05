@@ -3,7 +3,7 @@ section.conteneur-actualites {
     //TITRE ANIMÉ
     .titre {
         margin-bottom: 100px;
-        width: 946px;
+        width: 970px;
     }
 
     .titre h2 span {
@@ -58,7 +58,7 @@ section.conteneur-actualites {
         color: $rose;
     }
     .date-publication{
-        width: 300px;
+        width: 500px;
     }
 
     .conteneur-gauche {
@@ -68,7 +68,6 @@ section.conteneur-actualites {
         min-height: 250px;
         justify-content: space-between;
         padding-right: 2em;
-        padding-top: 2em;
     }
 
     .conteneur-titre {

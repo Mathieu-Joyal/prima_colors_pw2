@@ -17,7 +17,6 @@ section.conteneur-activites {
             width: 50%;
             margin-top: 1em;
 
-
             h2 {
                 color: $blanc;
                 margin-bottom: 0;
@@ -34,7 +33,7 @@ section.conteneur-activites {
         }
     }
 
-    .conteneur-bordure.titre {
+    .conteneur-bordure .titre {
         margin-bottom: 100px;
         width: 700px;
     }
@@ -154,7 +153,7 @@ section.conteneur-activites {
             white-space: nowrap;
             text-align: right;
             overflow: hidden;
-            margin-bottom: 2em;
+            margin-top: 1.5em;
             padding-right: 2em;
         }
 
@@ -205,6 +204,40 @@ section.conteneur-activites {
 button.voir.activite {
     margin-bottom: 2em;
 }
+
+
+@media only screen and (max-width: 1200px) {
+.conteneur-activites {
+    .conteneur-jours {
+        a:not(.selected) {
+            display: none;
+        }
+    }
+}
+section.conteneur-activites article.activites .conteneur-titre{
+
+    display: none;
+}
+section.conteneur-activites article.activites .conteneur-image{
+      width: 100%;
+  }
+
+button.voir.activite{
+    margin-left:0;
+    margin-right: 0;
+}
+}
+
+
+
+@media only screen and (max-width: 768px) {
+.bordure.activites{
+    display: none;
+  }
+
+}
+
+
 
 
 

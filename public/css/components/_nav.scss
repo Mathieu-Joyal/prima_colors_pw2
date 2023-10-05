@@ -162,3 +162,16 @@ a.connexion .material-icons {
     text-decoration: none;
 }
 
+@media only screen and (max-width: 1200px) {
+    .billet{
+        display: none;
+    }
+    .menu_nav{
+        padding-top: 12px;
+        padding-bottom: 0px;
+    }
+    .logo-nav{
+        padding-top: 16px;
+    }
+
+}
