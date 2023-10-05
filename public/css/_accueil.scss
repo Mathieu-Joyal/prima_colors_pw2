@@ -22,6 +22,10 @@ video {
 
 }
 
+button span.material-icons{
+    border: none;
+}
+
 /***********************************************
  *                                          
  *           STYLES POUR LA CITATION           
@@ -38,7 +42,7 @@ blockquote {
     text-align: center;
     margin: 20px;
     padding-bottom: 100px;
-    margin-top: -550px;
+    margin-top: -420px;
     position: relative;
     opacity: 0;
     animation: fade-in 1.5s ease-in-out forwards;
@@ -61,12 +65,12 @@ blockquote span.material-icons:first-child {
 @keyframes fade-in {
     0% {
         opacity: 0;
-        transform: translateY(-50px);
+        transform: translateY(0px);
     }
 
     100% {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(50px);
     }
 }
 
