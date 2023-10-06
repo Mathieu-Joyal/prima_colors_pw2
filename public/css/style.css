@@ -1736,6 +1736,17 @@ section.formulaire_recherche .bouton_liste_complete a:hover {
   transition: background-color, 0.3s;
 }
 
+.footer_admin {
+  margin: 2em 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+.footer_admin p {
+  margin: 0;
+}
+
 .banniere_accueil {
   width: 100%;
   overflow: hidden;

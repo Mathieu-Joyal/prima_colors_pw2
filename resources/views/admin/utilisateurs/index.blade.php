@@ -86,4 +86,6 @@
         </section>
     </div>
 
+    <x-footer-admin />
+
 </x-layout>
