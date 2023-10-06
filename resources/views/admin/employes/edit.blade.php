@@ -126,4 +126,6 @@
             </form>
     </div>
 
+    <x-footer-admin />
+
 </x-layout>

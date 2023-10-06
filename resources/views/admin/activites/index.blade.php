@@ -107,5 +107,6 @@
         @endforelse
     </section>
 
+    <x-footer-admin />
 
 </x-layout>
