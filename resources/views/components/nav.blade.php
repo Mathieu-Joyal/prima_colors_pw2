@@ -4,10 +4,10 @@
             person_outline
         </span>
     </a>
-    <div class="contenu_nav">
+    <div class="contenu_nav" id="conteneur-mobile">
         <img src="img/logo/logo-header.svg" alt="" class="logo-nav">
 
-        <div class="menu_nav">
+        <div class="menu_nav" id="menu_nav">
             <a href="/" class="item_nav">
                 <div class="nav">Accueil
                 </div>
@@ -44,7 +44,14 @@
             <a href="https://www.youtube.com/">
                 <img src="img/reseau/youtube/okyoutube_social_icon_dark.png" alt="" class="reseau-img">
             </a>
+            <div class="menu-hamburger" >
+
+                <span class="material-icons">
+                    menu
+                </span>
+            </div>
         </div>
+
     </div>
 
     <div class="bg">
@@ -52,3 +59,8 @@
         <div class="ligne_rose"></div>
     </div>
 </div>
+<script>
+
+
+
+</script>
