@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Reservation;
 use App\Models\Employe;
 use App\Models\Actualite;
 use App\Models\Activite;
@@ -31,8 +32,8 @@ class DatabaseSeeder extends Seeder
 
         // Ajout d'un administrateur
         Employe::factory()->create([
-            "prenom" => "Prénom-admin",
-            "nom" => "Nom-admin",
+            "prenom" => "Éric",
+            "nom" => "Gagné",
             "identifiant" => "1234567",
             "password" => "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi", // password
             "role_id" => 1
@@ -87,5 +88,8 @@ class DatabaseSeeder extends Seeder
                 "date_depart" => $forfait->date_depart,
             ]);
         }
+
+        // Ajout de réservations fictives
+        \App\Models\Reservation::factory(50)->create();
     }
 }
