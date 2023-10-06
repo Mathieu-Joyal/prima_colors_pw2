@@ -91,4 +91,7 @@
             <p>Aucune activités trouvé pour la cette date</p>
         @endforelse
     </section>
+
+    <x-footer-admin />
+
 </x-layout>

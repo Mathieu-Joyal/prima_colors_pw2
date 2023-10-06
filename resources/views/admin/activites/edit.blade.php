@@ -100,6 +100,10 @@
         </form>
     </section>
 
+    <x-footer-admin />
+
+</x-layout>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const dateInput = document.getElementById('date');
@@ -116,4 +120,4 @@
             dateInput.setAttribute('max', endDateString);
         });
     </script>
-</x-layout>
+

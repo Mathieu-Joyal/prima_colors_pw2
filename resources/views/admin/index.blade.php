@@ -22,6 +22,8 @@
         <a href="{{ route('admin.reservations.index') }}">Gestion des réservations</a>
     </div>
 
+    <x-footer-admin />
+
 </x-layout>
 
 

@@ -110,6 +110,6 @@
             </form>
         </section>
 
-    {{-- <x-footer /> --}}
+        <x-footer-admin />
 
 </x-layout>

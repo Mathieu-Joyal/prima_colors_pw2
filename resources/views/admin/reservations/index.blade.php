@@ -67,6 +67,6 @@
 
     </div>
 
-    {{-- <x-footer /> --}}
+    <x-footer-admin />
 
 </x-layout>

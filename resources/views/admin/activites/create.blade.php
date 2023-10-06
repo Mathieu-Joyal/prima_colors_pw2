@@ -111,4 +111,7 @@
         </div>
 
     </section>
+
+    <x-footer-admin />
+
 </x-layout>
