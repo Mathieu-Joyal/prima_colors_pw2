@@ -183,4 +183,5 @@
 
     <x-footer />
 
+
 </x-layout>
