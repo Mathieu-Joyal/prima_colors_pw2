@@ -3,12 +3,6 @@
     <x-nav-admin titre=" Ajouter une ActualitÉs" route="{{route('admin.actualites.index')}}"
         valeur="Retour aux actualitÉs" />
 
-    {{-- MESSAGES --}}
-    {{-- @if (session('echec'))
-            <p class="">
-                {{ session('echec') }}</p>
-        @endif --}}
-
     <section>
 
         {{-- FORMULAIRE --}}
@@ -57,6 +51,4 @@
         </form>
     </section>
 
-    <x-footer-admin />
-
-</x-layout>
+</x-layout-admin>

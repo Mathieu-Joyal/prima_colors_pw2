@@ -54,6 +54,4 @@
         </form>
     </section>
 
-    <x-footer-admin />
-
-</x-layout>
+</x-layout-admin>

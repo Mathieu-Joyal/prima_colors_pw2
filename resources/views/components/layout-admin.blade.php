@@ -14,8 +14,6 @@
     <title>{{ $titre }}</title>
 </head>
 
-<x-header />
-
 <body class="concours_body">
 
     <main>
@@ -26,6 +24,5 @@
 
 </body>
 
-<x-footer />
-
+<x-footer-admin />
 </html>

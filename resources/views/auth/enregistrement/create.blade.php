@@ -1,7 +1,5 @@
 <x-layout titre="Créer votre compte">
 
-    <x-header />
-
     <h2 class="h2_enregistrement">Enregistrez-vous</h2>
 
     <div class="conteneur conteneur_enregistrement">
@@ -163,8 +161,5 @@
         </section>
 
     </div>
-
-
-    <x-footer />
 
 </x-layout>

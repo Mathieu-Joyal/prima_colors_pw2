@@ -100,9 +100,7 @@
         </form>
     </section>
 
-    <x-footer-admin />
-
-</x-layout>
+</x-layout-admin>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {

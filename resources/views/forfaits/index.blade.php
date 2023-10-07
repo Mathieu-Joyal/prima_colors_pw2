@@ -1,6 +1,5 @@
 <x-layout titre="Festival Prima-Colors | Billetterie">
 
-    <x-header />
     <x-hero image="img\hero\hero-billeterie.png" />
     <h1 class="billetterie">La billetterie</h1>
     <section class="billetterie">
@@ -40,15 +39,16 @@
     </section>
     <x-bannieres.concours :url="url('img/concours/ours.jpg')" />
     <x-bannieres.compte :url="url('img/accueil/ban_compte.png')"/>
-    <x-footer />
-    <script>
-        function voirPlus(event) {
-            const description = event.target.closest('.conteneur-forfaits')
-                .querySelector('.conteneur-description');
-            description.classList.toggle('voir-plus');
 
-            const titre = event.target.closest('.conteneur-titre');
-            titre.classList.toggle('border-visible');
-        }
-    </script>
 </x-layout>
+
+<script>
+    function voirPlus(event) {
+        const description = event.target.closest('.conteneur-forfaits')
+            .querySelector('.conteneur-description');
+        description.classList.toggle('voir-plus');
+
+        const titre = event.target.closest('.conteneur-titre');
+        titre.classList.toggle('border-visible');
+    }
+</script>
