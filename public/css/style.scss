@@ -181,14 +181,12 @@ button:hover {
 @import "_accueil.scss";
 @import "_activites.scss";
 @import "_actualites.scss";
+@import "_forfaits.scss";
+@import "_a-propos.scss";
+@import "_concours.scss";
 
 @import "_connexion.scss";
 @import "_enregistrement.scss";
-
-@import "_forfaits.scss";
-
-@import "_a-propos.scss";
-@import "_concours.scss";
 
 //Les bannieres
 @import "components/bannieres/concours";
@@ -196,22 +194,33 @@ button:hover {
 @import "components/bannieres/countdown";
 @import "components/bannieres/billet";
 
-// ****SECTION ADMINISTRATEUR****
+// Les utilisateurs
 @import "admin/utilisateurs.scss";
-@import "admin/activitesEtActualites/index";
-@import "admin/activitesEtActualites/form";
 
-@import "admin/utilisateurs/index";
-@import "admin/utilisateurs/edit";
-@import "admin/reservations/index";
-@import "admin/_nav-admin.scss";
-@import "admin/_footer-admin.scss";
-
-@import "admin/employe/edit";
-@import "admin/employe/create";
+// ****SECTION ADMINISTRATEUR****
 
 // Page d'accueil
 @import "admin/accueil/index";
+
+// Les employés
+@import "admin/employe/edit";
+@import "admin/employe/create";
+
+// Les utilisateurs
+@import "admin/utilisateurs/index";
+@import "admin/utilisateurs/edit";
+
+// Activités et actualités
+@import "admin/activitesEtActualites/index";
+@import "admin/activitesEtActualites/form";
+
+// Les réservations
+@import "admin/reservations/index";
+
+// Entête et pied de page
+@import "admin/_nav-admin.scss";
+@import "admin/_footer-admin.scss";
+
 
 // Les composantes
 @import "components/formulaire";

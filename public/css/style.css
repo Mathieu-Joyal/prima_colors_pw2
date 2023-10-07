@@ -842,73 +842,6 @@ section.conteneur-actualites .bordure.actualites {
   padding-left: 5px;
 }
 
-.h2_connexion {
-  margin: 0 0 0 2em;
-}
-
-.conteneur_connexion {
-  display: flex;
-  justify-content: center;
-  margin: 0 0 5em 0;
-}
-.conteneur_connexion h3 {
-  color: #eeb15e;
-}
-.conteneur_connexion section {
-  flex: 1;
-  position: relative;
-  max-width: 400px;
-}
-.conteneur_connexion .connexion_conteneur_membre {
-  padding: 0.5em 1em;
-  display: inline-block;
-}
-.conteneur_connexion .connexion_conteneur_membre a {
-  color: #0b8a80;
-}
-.conteneur_connexion .connexion_conteneur_membre a:hover {
-  transition: all 0.3s;
-  text-decoration: underline;
-  color: #eca6d9;
-}
-
-@media (max-width: 1060px) {
-  .conteneur_connexion {
-    display: block;
-  }
-  .conteneur_connexion section:first-child::after {
-    display: none !important;
-  }
-}
-.h2_enregistrement {
-  margin: 0 0 0 2em;
-}
-
-.conteneur_enregistrement {
-  display: flex;
-  justify-content: center;
-  margin: 0 0 5em 0;
-}
-.conteneur_enregistrement h3 {
-  color: #eeb15e;
-}
-.conteneur_enregistrement .administration {
-  padding: 2em 4em;
-}
-
-.connexion_conteneur_membre {
-  padding: 0.5em 1em;
-  display: inline-block;
-}
-.connexion_conteneur_membre a {
-  color: #0b8a80;
-}
-.connexion_conteneur_membre a:hover {
-  transition: all 0.3s;
-  text-decoration: underline;
-  color: #eca6d9;
-}
-
 h1.billetterie {
   color: #eeb15e;
 }
@@ -1061,6 +994,73 @@ section.billetterie .conteneur-description.voir-plus {
 .section_compte,
 .section_concours {
   margin-bottom: 0;
+}
+
+.h2_connexion {
+  margin: 0 0 0 2em;
+}
+
+.conteneur_connexion {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 5em 0;
+}
+.conteneur_connexion h3 {
+  color: #eeb15e;
+}
+.conteneur_connexion section {
+  flex: 1;
+  position: relative;
+  max-width: 400px;
+}
+.conteneur_connexion .connexion_conteneur_membre {
+  padding: 0.5em 1em;
+  display: inline-block;
+}
+.conteneur_connexion .connexion_conteneur_membre a {
+  color: #0b8a80;
+}
+.conteneur_connexion .connexion_conteneur_membre a:hover {
+  transition: all 0.3s;
+  text-decoration: underline;
+  color: #eca6d9;
+}
+
+@media (max-width: 1060px) {
+  .conteneur_connexion {
+    display: block;
+  }
+  .conteneur_connexion section:first-child::after {
+    display: none !important;
+  }
+}
+.h2_enregistrement {
+  margin: 0 0 0 2em;
+}
+
+.conteneur_enregistrement {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 5em 0;
+}
+.conteneur_enregistrement h3 {
+  color: #eeb15e;
+}
+.conteneur_enregistrement .administration {
+  padding: 2em 4em;
+}
+
+.connexion_conteneur_membre {
+  padding: 0.5em 1em;
+  display: inline-block;
+}
+.connexion_conteneur_membre a {
+  color: #0b8a80;
+}
+.connexion_conteneur_membre a:hover {
+  transition: all 0.3s;
+  text-decoration: underline;
+  color: #eca6d9;
 }
 
 .section_concours {
@@ -1464,6 +1464,186 @@ section.billetterie .conteneur-description.voir-plus {
   border: 0.1em solid #0b8a80;
 }
 
+.banniere_accueil {
+  width: 100%;
+  overflow: hidden;
+}
+.banniere_accueil img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.conteneur_admin_accueil {
+  margin: 0 2rem;
+}
+.conteneur_admin_accueil .conteneur_accueil {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 3rem 0;
+}
+.conteneur_admin_accueil .conteneur_accueil a {
+  font-family: "pf-venue", sans-serif;
+  width: 10em;
+  text-decoration: none;
+  background-color: #0b8a80;
+  padding: 1em 2em;
+  color: white;
+  margin: 1em;
+  border-radius: 0.25em;
+  text-align: center;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+.conteneur_admin_accueil .conteneur_accueil a:hover {
+  background-color: #eca6d9;
+  border-color: #0b8a80;
+}
+
+.conteneur_employe_edit {
+  display: flex;
+  justify-content: center;
+}
+
+.h2_creation_employe {
+  margin: 0 5rem;
+}
+
+.creation_employe {
+  display: flex;
+  justify-content: center;
+}
+
+.h3_user {
+  color: #eeb15e;
+}
+
+.un_utilisateur {
+  margin: 1rem 0;
+  padding: 0;
+  border: 1px solid #eca6d9;
+}
+.un_utilisateur .conteneur_user {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.un_utilisateur .conteneur_user:first-child {
+  margin: 0.25rem 0;
+  background-color: transparent;
+}
+.un_utilisateur .conteneur_user:hover {
+  transition: all 0.15s;
+  background-color: rgb(51, 51, 51);
+}
+.un_utilisateur .conteneur_user span.edit {
+  color: #0b8a80;
+}
+.un_utilisateur .conteneur_user span.edit:hover {
+  transition: all 0.3s;
+  color: #075b54;
+}
+.un_utilisateur .conteneur_user span.delete {
+  color: #df1f1f;
+}
+.un_utilisateur .conteneur_user span.delete:hover {
+  transition: all 0.3s;
+  color: #b21919;
+}
+.un_utilisateur .conteneur_user .infos_user {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.un_utilisateur .conteneur_user .infos_user p {
+  margin: 0 0.5em;
+  min-width: 5em;
+}
+.un_utilisateur .conteneur_user .infos_user .titre_user {
+  font-weight: bold;
+  color: #eeb15e;
+}
+.un_utilisateur .conteneur_user .boutons_user {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.un_utilisateur .conteneur_user .boutons_user a {
+  font-size: 1.5em;
+  margin: 0 0.5rem;
+  padding: 0.25em;
+  cursor: pointer;
+}
+.un_utilisateur .une_reservation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #eca6d9;
+  margin: 0 5rem;
+}
+.un_utilisateur .une_reservation p {
+  margin: 0.5rem 0;
+}
+.un_utilisateur .une_reservation .bt_user_cancel {
+  display: inline;
+  font-size: 0.75em;
+  background-color: #df1f1f;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 0.25em;
+  cursor: pointer;
+  height: 2em;
+  border: none;
+  margin: 1em 0;
+}
+.un_utilisateur .une_reservation .bt_user_cancel:hover {
+  background-color: #851313;
+  transition: background-color, 0.3s;
+}
+
+section.formulaire_recherche {
+  margin: 0 3em 5em 3em;
+  padding: 2em 4em;
+}
+section.formulaire_recherche .bouton_liste_complete {
+  margin: 2em 0 0 0;
+  text-align: center;
+}
+section.formulaire_recherche .bouton_liste_complete a {
+  color: #0b8a80;
+}
+section.formulaire_recherche .bouton_liste_complete a:hover {
+  transition: all 0.3s;
+  color: #eca6d9;
+  text-decoration: underline;
+}
+
+.admin_user_edit {
+  display: flex;
+  justify-content: center;
+}
+
+.administration {
+  margin: 1em 3em;
+}
+.administration label {
+  color: #eeb15e;
+}
+.administration button {
+  margin: 2em 0;
+}
+.administration .modification_mdp {
+  margin: 2em 0;
+  display: inline-block;
+  border: 1px solid #eca6d9;
+  padding: 1em 4em;
+}
+.administration .modification_mdp p {
+  color: #eeb15e;
+}
+
 .activites-admin,
 .actualites-admin {
   margin: 5em;
@@ -1624,135 +1804,6 @@ form.edit .grid-item.titre.actualite {
   box-sizing: border-box;
 }
 
-.h3_user {
-  color: #eeb15e;
-}
-
-.un_utilisateur {
-  margin: 1rem 0;
-  padding: 0;
-  border: 1px solid #eca6d9;
-}
-.un_utilisateur .conteneur_user {
-  display: flex;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-}
-.un_utilisateur .conteneur_user:first-child {
-  margin: 0.25rem 0;
-  background-color: transparent;
-}
-.un_utilisateur .conteneur_user:hover {
-  transition: all 0.15s;
-  background-color: rgb(51, 51, 51);
-}
-.un_utilisateur .conteneur_user span.edit {
-  color: #0b8a80;
-}
-.un_utilisateur .conteneur_user span.edit:hover {
-  transition: all 0.3s;
-  color: #075b54;
-}
-.un_utilisateur .conteneur_user span.delete {
-  color: #df1f1f;
-}
-.un_utilisateur .conteneur_user span.delete:hover {
-  transition: all 0.3s;
-  color: #b21919;
-}
-.un_utilisateur .conteneur_user .infos_user {
-  flex: 1;
-  display: flex;
-  align-items: center;
-}
-.un_utilisateur .conteneur_user .infos_user p {
-  margin: 0 0.5em;
-  min-width: 5em;
-}
-.un_utilisateur .conteneur_user .infos_user .titre_user {
-  font-weight: bold;
-  color: #eeb15e;
-}
-.un_utilisateur .conteneur_user .boutons_user {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-.un_utilisateur .conteneur_user .boutons_user a {
-  font-size: 1.5em;
-  margin: 0 0.5rem;
-  padding: 0.25em;
-  cursor: pointer;
-}
-.un_utilisateur .une_reservation {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border-top: 1px solid #eca6d9;
-  margin: 0 5rem;
-}
-.un_utilisateur .une_reservation p {
-  margin: 0.5rem 0;
-}
-.un_utilisateur .une_reservation .bt_user_cancel {
-  display: inline;
-  font-size: 0.75em;
-  background-color: #df1f1f;
-  color: white;
-  padding: 0.5em 1em;
-  border-radius: 0.25em;
-  cursor: pointer;
-  height: 2em;
-  border: none;
-  margin: 1em 0;
-}
-.un_utilisateur .une_reservation .bt_user_cancel:hover {
-  background-color: #851313;
-  transition: background-color, 0.3s;
-}
-
-section.formulaire_recherche {
-  margin: 0 3em 5em 3em;
-  padding: 2em 4em;
-}
-section.formulaire_recherche .bouton_liste_complete {
-  margin: 2em 0 0 0;
-  text-align: center;
-}
-section.formulaire_recherche .bouton_liste_complete a {
-  color: #0b8a80;
-}
-section.formulaire_recherche .bouton_liste_complete a:hover {
-  transition: all 0.3s;
-  color: #eca6d9;
-  text-decoration: underline;
-}
-
-.admin_user_edit {
-  display: flex;
-  justify-content: center;
-}
-
-.administration {
-  margin: 1em 3em;
-}
-.administration label {
-  color: #eeb15e;
-}
-.administration button {
-  margin: 2em 0;
-}
-.administration .modification_mdp {
-  margin: 2em 0;
-  display: inline-block;
-  border: 1px solid #eca6d9;
-  padding: 1em 4em;
-}
-.administration .modification_mdp p {
-  color: #eeb15e;
-}
-
 .liste_des_reservations {
   display: flex;
   justify-content: space-between;
@@ -1843,57 +1894,6 @@ section.formulaire_recherche .bouton_liste_complete a:hover {
 }
 .footer_admin p {
   margin: 0;
-}
-
-.conteneur_employe_edit {
-  display: flex;
-  justify-content: center;
-}
-
-.h2_creation_employe {
-  margin: 0 5rem;
-}
-
-.creation_employe {
-  display: flex;
-  justify-content: center;
-}
-
-.banniere_accueil {
-  width: 100%;
-  overflow: hidden;
-}
-.banniere_accueil img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.conteneur_admin_accueil {
-  margin: 0 2rem;
-}
-.conteneur_admin_accueil .conteneur_accueil {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 3rem 0;
-}
-.conteneur_admin_accueil .conteneur_accueil a {
-  font-family: "pf-venue", sans-serif;
-  width: 10em;
-  text-decoration: none;
-  background-color: #0b8a80;
-  padding: 1em 2em;
-  color: white;
-  margin: 1em;
-  border-radius: 0.25em;
-  text-align: center;
-  display: inline-block;
-  transition: background-color 0.3s;
-}
-.conteneur_admin_accueil .conteneur_accueil a:hover {
-  background-color: #eca6d9;
-  border-color: #0b8a80;
 }
 
 form.administration {
