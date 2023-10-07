@@ -21,7 +21,51 @@ section.hero {
 
     .compteur.petit {
         position: relative;
-        bottom: 240px;
+        bottom: 210px;
         left: 40px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .conteneur-hero{
+
+            img.image-hero {
+                object-fit: cover;
+                width: 100%;
+                height: 300px;
+            }
+            .reserver.hero {
+             right: 2em;
+            top: 22em;
+             margin: auto;
+         }
+           .compteur.petit {
+             position: relative;
+             bottom: 180px;
+             left: 4px;
+         }
+     }
+    }
+
+@media only screen and (max-width: 375px) {
+    .conteneur-hero {
+        img.image-hero {
+            object-fit: cover;
+            width: 100%;
+            height: 200px;
+        }
+
+        .reserver.hero {
+            right: 24px;
+            bottom: 0;
+            top: 9em;
+            margin: auto;
+        }
+
+        .compteur.petit {
+            position: relative;
+            bottom: 10.5rem;
+            left: 0rem;
+        }
     }
 }

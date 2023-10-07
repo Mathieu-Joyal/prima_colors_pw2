@@ -44,12 +44,12 @@
             <a href="https://www.youtube.com/">
                 <img src="img/reseau/youtube/okyoutube_social_icon_dark.png" alt="" class="reseau-img">
             </a>
-
         </div>
 
         <a class="hamburger">
             <span class="menuIcon material-icons">menu</span>
         </a>
+
     </div>
 
     <div class="bg">
@@ -74,6 +74,7 @@
 </section>
 
 <script>
+    //MENU HAMBURGER
 document.addEventListener('DOMContentLoaded', function() {
     const menuIcon = document.querySelector('.menuIcon');
     const closeIcon = document.querySelector('.closeIcon');
@@ -87,6 +88,5 @@ document.addEventListener('DOMContentLoaded', function() {
         menu.style.display = 'none';
     });
 });
-
 
 </script>
