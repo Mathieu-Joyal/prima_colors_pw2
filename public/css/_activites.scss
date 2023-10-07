@@ -206,6 +206,9 @@ button.voir.activite {
 }
 //RESPONSIVE
 @media only screen and (max-width: 1200px) {
+    section{
+        margin: 4rem;
+    }
     .conteneur-activites {
         .conteneur-jours {
             a:not(.selected) {
@@ -231,6 +234,7 @@ button.voir.activite {
 @media only screen and (max-width: 768px) {
     section {
         margin: 3rem;
+
     }
 
     .conteneur-bordure {
@@ -257,6 +261,7 @@ button.voir.activite {
     p {
         font-size: 20px;
     }
+
 }
 
 

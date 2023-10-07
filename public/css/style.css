@@ -676,6 +676,9 @@ button.voir.activite {
 }
 
 @media only screen and (max-width: 1200px) {
+  section {
+    margin: 4rem;
+  }
   .conteneur-activites .conteneur-jours a:not(.selected) {
     display: none;
   }
@@ -1093,6 +1096,51 @@ section.billetterie .conteneur-description.voir-plus {
   z-index: 3;
 }
 
+@media only screen and (max-width: 375px) {
+  .carre_noir {
+    background-color: transparent;
+  }
+  .carre_noir h3 {
+    display: none;
+  }
+  .carre_noir h1 {
+    position: relative;
+    bottom: 4rem;
+    right: 13rem;
+  }
+  .carre_noir .btn-concours {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    bottom: 4rem;
+    right: 6rem;
+    background-color: transparent;
+    border: none;
+  }
+  .carre_noir .btn-concours a {
+    flex-direction: column;
+  }
+  .carre_noir .btn-concours p {
+    font-size: 36px;
+    font-weight: 700;
+    background-color: #030303;
+  }
+  .carre_noir .btn-concours .conteneur-span {
+    width: 9rem;
+    height: 9rem;
+    margin-left: 13rem;
+  }
+  .carre_noir .btn-concours .conteneur-span span {
+    font-size: 9em;
+  }
+  .carre_noir:hover .btn-concours {
+    background-color: transparent;
+    border: none;
+  }
+  .carre_noir:hover .btn-concours p {
+    color: #eeb15e;
+  }
+}
 .section_compte {
   position: relative;
   background-size: cover;
@@ -1137,6 +1185,50 @@ section.billetterie .conteneur-description.voir-plus {
   color: #eeb15e;
 }
 
+@media only screen and (max-width: 375px) {
+  .carre_blanc {
+    background-color: transparent;
+    text-align: left;
+  }
+  .carre_blanc h3 {
+    display: none;
+  }
+  .carre_blanc h1 {
+    display: none;
+  }
+  .carre_blanc .btn-compte {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 2rem;
+    left: 12rem;
+    background-color: transparent;
+    border: none;
+  }
+  .carre_blanc .btn-compte a {
+    flex-direction: column;
+  }
+  .carre_blanc .btn-compte p {
+    font-size: 36px;
+    font-weight: 700;
+    background-color: #030303;
+  }
+  .carre_blanc .btn-compte .conteneur-span {
+    width: 9rem;
+    height: 9rem;
+    margin-left: 13rem;
+  }
+  .carre_blanc .btn-compte .conteneur-span span {
+    font-size: 9em;
+  }
+  .carre_blanc:hover .btn-compte {
+    background-color: transparent;
+    border: none;
+  }
+  .carre_blanc:hover .btn-compte p {
+    color: #eeb15e;
+  }
+}
 #compteur {
   opacity: 0;
 }
