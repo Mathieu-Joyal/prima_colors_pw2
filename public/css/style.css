@@ -842,10 +842,17 @@ section.conteneur-actualites .bordure.actualites {
   padding-left: 5px;
 }
 
+.h2_connexion {
+  margin: 0 0 0 2em;
+}
+
 .conteneur_connexion {
   display: flex;
   justify-content: center;
   margin: 0 0 5em 0;
+}
+.conteneur_connexion h3 {
+  color: #eeb15e;
 }
 .conteneur_connexion section {
   flex: 1;
@@ -853,7 +860,6 @@ section.conteneur-actualites .bordure.actualites {
   max-width: 400px;
 }
 .conteneur_connexion .connexion_conteneur_membre {
-  margin: 2em 0 0 0;
   padding: 0.5em 1em;
   display: inline-block;
 }
@@ -874,6 +880,35 @@ section.conteneur-actualites .bordure.actualites {
     display: none !important;
   }
 }
+.h2_enregistrement {
+  margin: 0 0 0 2em;
+}
+
+.conteneur_enregistrement {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 5em 0;
+}
+.conteneur_enregistrement h3 {
+  color: #eeb15e;
+}
+.conteneur_enregistrement .administration {
+  padding: 2em 4em;
+}
+
+.connexion_conteneur_membre {
+  padding: 0.5em 1em;
+  display: inline-block;
+}
+.connexion_conteneur_membre a {
+  color: #0b8a80;
+}
+.connexion_conteneur_membre a:hover {
+  transition: all 0.3s;
+  text-decoration: underline;
+  color: #eca6d9;
+}
+
 h1.billetterie {
   color: #eeb15e;
 }
@@ -1325,14 +1360,21 @@ section.billetterie .conteneur-description.voir-plus {
 
 .conteneur-utilisateur {
   color: #eeb15e;
-  margin: 0;
+  margin: 0 2rem;
+}
+.conteneur-utilisateur .forfaits {
+  margin: 0 5rem;
+}
+.conteneur-utilisateur .forfaits .activites-admin {
+  border: 1px solid #eca6d9;
+  margin: 0.5rem;
 }
 .conteneur-utilisateur .conteneur {
-  margin: 0 3em;
+  margin: 0 3rem;
 }
 .conteneur-utilisateur .presentation {
   font-size: 1.25em;
-  margin: 0 10em;
+  margin: 0 10rem;
 }
 .conteneur-utilisateur h3 {
   color: #eeb15e;
@@ -1350,16 +1392,31 @@ section.billetterie .conteneur-description.voir-plus {
 }
 .conteneur-utilisateur article {
   padding: 1em 0.5em;
-  margin: 1em 0;
+  margin: 1rem 0;
 }
 .conteneur-utilisateur article .les_dates {
   font-size: 1em;
 }
 .conteneur-utilisateur article div {
   color: white;
-  margin: 1em 0;
+  margin: 1rem 0;
+}
+.conteneur-utilisateur section.selection_forfait {
+  margin: 0 5rem;
+}
+.conteneur-utilisateur section.selection_forfait .conteneur_selection_forfait {
+  display: flex;
+  justify-content: center;
+}
+.conteneur-utilisateur section.selection_forfait .conteneur_selection_forfait .administration {
+  display: inline-block;
+  padding: 4em 8em;
+}
+.conteneur-utilisateur section.forfaits_reserve {
+  margin: 0 5rem;
 }
 .conteneur-utilisateur article.une_reservation {
+  margin: 0 5rem;
   padding: 1em;
 }
 .conteneur-utilisateur article.une_reservation:hover {
@@ -1367,29 +1424,43 @@ section.billetterie .conteneur-description.voir-plus {
   transition: background-color 0.3s;
 }
 .conteneur-utilisateur article.une_reservation button {
+  cursor: pointer;
+  font-size: 1.25em;
   padding: 0.5em 1em;
   border-radius: 0.25em;
-  margin-top: 2em;
-  bottom: 0;
-  right: 1em;
+  margin-top: 2rem;
 }
 .conteneur-utilisateur article.une_reservation button:hover {
   background-color: red;
   transition: background-color 0.3s;
+}
+.conteneur-utilisateur section.le_concours {
+  margin: 0 5rem;
+}
+.conteneur-utilisateur section.le_concours .conteneur_participer_concours {
+  display: flex;
+  justify-content: center;
+}
+.conteneur-utilisateur section.le_concours .conteneur_participer_concours .administration {
+  display: inline-block;
+  padding: 4em 8em;
 }
 .conteneur-utilisateur .notice {
   font-size: 0.75em;
   color: red;
 }
 .conteneur-utilisateur .un_concours {
-  margin: 0 0 5em 0;
+  margin: 3rem 0 5rem 0;
+}
+.conteneur-utilisateur .un_concours h3 {
+  margin: 0 5rem;
 }
 .conteneur-utilisateur .un_concours h4 {
   color: #eca6d9;
   text-align: center;
 }
 .conteneur-utilisateur .un_concours img {
-  padding: 0.5em;
+  padding: 2em;
   border: 0.1em solid #0b8a80;
 }
 
@@ -1797,9 +1868,11 @@ form.administration input {
   margin: 0.25em 0 1em 0;
 }
 form.administration button {
+  cursor: pointer;
   padding: 1em 2em;
   border-radius: 0.25em;
   font-size: inherit;
+  margin: 2em 0 0 0;
 }
 form.administration button:hover {
   background-color: #0b8a80;
@@ -2532,11 +2605,18 @@ form button.supprimer {
   transition: background-color, 0.3s;
 }
 
+.alerte_succes {
+  display: inline-block;
+}
 .alerte_succes p {
+  font-size: 1em;
+  padding: 0.5em 1em;
   font-weight: bold;
-  text-decoration: underline;
   text-align: center;
   color: #0b8a80;
+  border: 1px solid #0b8a80;
+  background-color: rgb(193, 255, 193);
+  margin: 0 0 0 2em;
 }
 
 .alerte_erreur p {
