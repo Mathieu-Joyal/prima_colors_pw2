@@ -11,7 +11,7 @@
 
     a {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     p {
@@ -19,14 +19,14 @@
         margin: 0;
         font-family: "pf-venue", sans-serif;
         text-transform: uppercase;
-        padding-top: 12px;
+        padding-top: 18px;
         padding-left: 26px;
     }
 
     .conteneur-span {
         background-color: $jaune;
-        height: 30px;
-        width: 30px;
+        height: 2rem;
+        width: 2rem;
         border-radius: 5px;
         display: inline-block;
         margin-top: 14px;
@@ -35,7 +35,7 @@
         span {
             color: $noir;
             font-weight: 500;
-            font-size: 2em;
+            font-size: 2rem;
         }
     }
 

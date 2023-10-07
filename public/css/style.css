@@ -2502,20 +2502,20 @@ section.hero {
 }
 .btn-concours a, .btn-compte a {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .btn-concours p, .btn-compte p {
   color: #eeb15e;
   margin: 0;
   font-family: "pf-venue", sans-serif;
   text-transform: uppercase;
-  padding-top: 12px;
+  padding-top: 18px;
   padding-left: 26px;
 }
 .btn-concours .conteneur-span, .btn-compte .conteneur-span {
   background-color: #eeb15e;
-  height: 30px;
-  width: 30px;
+  height: 2rem;
+  width: 2rem;
   border-radius: 5px;
   display: inline-block;
   margin-top: 14px;
@@ -2524,7 +2524,7 @@ section.hero {
 .btn-concours .conteneur-span span, .btn-compte .conteneur-span span {
   color: #030303;
   font-weight: 500;
-  font-size: 2em;
+  font-size: 2rem;
 }
 .btn-concours:hover, .btn-compte:hover {
   background-color: #eeb15e;
@@ -2609,7 +2609,6 @@ form button.supprimer {
   font-size: 1.5em;
   font-family: "pf-venue", sans-serif;
   text-transform: uppercase;
-  padding-top: 0.6rem;
 }
 .reserver:hover {
   background-color: #030303;
