@@ -134,9 +134,9 @@ button:hover a {
 }
 
 /***********************************************
- *                                          
- *           STYLES POUR LE VIDEO         
- *                                             
+ *
+ *           STYLES POUR LE VIDEO
+ *
  ***********************************************/
 video {
   width: 100%;
@@ -174,9 +174,9 @@ video {
 }
 
 /***********************************************
- *                                          
- *           STYLES POUR LA CITATION           
- *                                             
+ *
+ *           STYLES POUR LA CITATION
+ *
  ***********************************************/
 /* Styles communs pour blockquote */
 blockquote {
@@ -218,9 +218,9 @@ blockquote span.material-icons:first-child {
   }
 }
 /***********************************************
- *                                          
- *           STYLES POUR L'INTRO          
- *                                             
+ *
+ *           STYLES POUR L'INTRO
+ *
  ***********************************************/
 .intro {
   padding: 0 200px 100px;
@@ -228,9 +228,9 @@ blockquote span.material-icons:first-child {
 }
 
 /***********************************************
- *                                          
- *           STYLES POUR LES SECTIONS       
- *                                             
+ *
+ *           STYLES POUR LES SECTIONS
+ *
  ***********************************************/
 /* Styles communs pour les sections */
 .section_activites,
@@ -351,30 +351,6 @@ a.accueil:hover span.material-icons {
 }
 
 /* Styles spécifiques pour les couleurs */
-h3.accueil_activite {
-  color: #eca6d9;
-}
-
-p.accueil_activite {
-  color: #eca6d9;
-}
-
-h3.accueil_forfait {
-  color: #eeb15e;
-}
-
-p.accueil_forfait {
-  color: #eeb15e;
-}
-
-h3.accueil_apropos {
-  color: #eca6d9;
-}
-
-p.accueil_apropos {
-  color: #eca6d9;
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -426,9 +402,9 @@ p.accueil_apropos {
   }
 }
 /***********************************************
- *                                          
- *           STYLES POUR LE MUR DE BRIQUE          
- *                                             
+ *
+ *           STYLES POUR LE MUR DE BRIQUE
+ *
  ***********************************************/
 /* Styles communs pour la section actualités */
 .section_actualites {
@@ -1096,7 +1072,7 @@ section.billetterie .conteneur-description.voir-plus {
   z-index: 3;
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 450px) {
   .carre_noir {
     background-color: transparent;
   }
@@ -1185,7 +1161,7 @@ section.billetterie .conteneur-description.voir-plus {
   color: #eeb15e;
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 450px) {
   .carre_blanc {
     background-color: transparent;
     text-align: left;
@@ -1356,12 +1332,10 @@ section.billetterie .conteneur-description.voir-plus {
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
-
-.section_billet img {
+.section_billet .section_billet img {
   padding-top: 100px;
 }
-
-.rectangle_blanc {
+.section_billet .rectangle_blanc {
   position: absolute;
   padding-left: 15px;
   padding-right: 15px;
@@ -1374,8 +1348,7 @@ section.billetterie .conteneur-description.voir-plus {
   justify-content: center;
   text-align: left;
 }
-
-.rectangle_blanc h1 {
+.section_billet .rectangle_blanc h1 {
   color: #030303;
   margin-bottom: 0;
   padding-bottom: 10px;
@@ -1391,37 +1364,10 @@ section.billetterie .conteneur-description.voir-plus {
   height: 100%;
   display: flex;
 }
-
-.rectangle_blanc .forfaits {
-  font-size: 32px;
-  text-decoration: none;
-  color: #eeb15e;
-  font-weight: bold;
-  z-index: 3;
-  border: 3px solid #eeb15e;
-  padding: 10px 50px;
-  text-align: right;
-}
-
-.rectangle_blanc .forfaits i {
-  color: #eeb15e;
-}
-
-.forfaits {
-  font-family: "pf-venue", sans-serif;
-  text-decoration: none;
-  display: inline-block;
-  position: relative;
-  margin-right: 10px;
-  color: #030303;
-}
-
-.forfaits .material-icons {
-  font-size: 50px;
-  color: #030303;
-  vertical-align: middle;
-  left: 9%;
-  padding-left: 20px;
+.section_billet .reserver.banniere {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
 }
 
 .reserver.banniere {
@@ -1435,6 +1381,19 @@ section.billetterie .conteneur-description.voir-plus {
   transition: 0.5s;
 }
 
+@media only screen and (max-width: 450px) {
+  .section_billet {
+    height: 200px;
+  }
+  .section_billet .rectangle_blanc {
+    display: none;
+  }
+  .section_billet .reserver.banniere {
+    position: absolute;
+    right: 20px;
+    bottom: 50px;
+  }
+}
 .conteneur-utilisateur {
   color: #eeb15e;
   margin: 0;
@@ -2634,6 +2593,8 @@ form button.supprimer {
 }
 
 .reserver {
+  display: flex;
+  justify-content: space-around;
   background-color: #eca6d9;
   color: #030303;
   cursor: pointer;
@@ -2655,8 +2616,14 @@ form button.supprimer {
   transition: background-color, 0.3s;
 }
 .reserver:hover a,
-.reserver:hover span {
+.reserver:hover span.material-icons {
   color: #eca6d9;
+}
+.reserver .btn-reserver .material-icons {
+  font-size: 50px;
+  color: #030303;
+  vertical-align: middle;
+  padding-left: 2rem;
 }
 
 .deconnexion form {
