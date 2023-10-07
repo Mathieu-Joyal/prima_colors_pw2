@@ -1629,7 +1629,7 @@ form.edit .grid-item.titre.actualite {
 }
 
 .un_utilisateur {
-  margin: 0.1em 0;
+  margin: 1rem 0;
   padding: 0;
   border: 1px solid #eca6d9;
 }
@@ -1640,6 +1640,7 @@ form.edit .grid-item.titre.actualite {
   padding: 0;
 }
 .un_utilisateur .conteneur_user:first-child {
+  margin: 0.25rem 0;
   background-color: transparent;
 }
 .un_utilisateur .conteneur_user:hover {
@@ -1679,7 +1680,9 @@ form.edit .grid-item.titre.actualite {
   justify-content: flex-end;
 }
 .un_utilisateur .conteneur_user .boutons_user a {
-  margin: 0 0.5em;
+  font-size: 1.5em;
+  margin: 0 0.5rem;
+  padding: 0.25em;
   cursor: pointer;
 }
 .un_utilisateur .une_reservation {
@@ -1687,10 +1690,10 @@ form.edit .grid-item.titre.actualite {
   justify-content: space-around;
   align-items: center;
   border-top: 1px solid #eca6d9;
-  margin: 1em 5em;
+  margin: 0 5rem;
 }
 .un_utilisateur .une_reservation p {
-  margin: 1em 0;
+  margin: 0.5rem 0;
 }
 .un_utilisateur .une_reservation .bt_user_cancel {
   display: inline;
@@ -1726,6 +1729,11 @@ section.formulaire_recherche .bouton_liste_complete a:hover {
   text-decoration: underline;
 }
 
+.admin_user_edit {
+  display: flex;
+  justify-content: center;
+}
+
 .administration {
   margin: 1em 3em;
 }
@@ -1741,14 +1749,33 @@ section.formulaire_recherche .bouton_liste_complete a:hover {
   border: 1px solid #eca6d9;
   padding: 1em 4em;
 }
+.administration .modification_mdp p {
+  color: #eeb15e;
+}
 
-.admin_reservation_conteneur_bouton button {
+.liste_des_reservations {
+  display: flex;
+  justify-content: space-between;
+}
+.liste_des_reservations .un_forfait {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.liste_des_reservations .un_forfait p {
+  margin: 0;
+}
+.liste_des_reservations .un_forfait .admin_reservation_conteneur_bouton button {
+  font-size: 1.5em !important;
+  margin: 0 1rem;
   font-size: inherit;
   transition: color 0.3s;
+  color: #df1f1f;
+  border: none;
+  background-color: transparent;
 }
-.admin_reservation_conteneur_bouton button:hover {
-  color: white;
-  background-color: #df1f1f;
+.liste_des_reservations .un_forfait .admin_reservation_conteneur_bouton button:hover {
+  color: #851313;
 }
 
 .conteneur-nav-admin {
@@ -1818,6 +1845,20 @@ section.formulaire_recherche .bouton_liste_complete a:hover {
   margin: 0;
 }
 
+.conteneur_employe_edit {
+  display: flex;
+  justify-content: center;
+}
+
+.h2_creation_employe {
+  margin: 0 5rem;
+}
+
+.creation_employe {
+  display: flex;
+  justify-content: center;
+}
+
 .banniere_accueil {
   width: 100%;
   overflow: hidden;
@@ -1828,12 +1869,16 @@ section.formulaire_recherche .bouton_liste_complete a:hover {
   display: block;
 }
 
-.conteneur_accueil {
+.conteneur_admin_accueil {
+  margin: 0 2rem;
+}
+.conteneur_admin_accueil .conteneur_accueil {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 3rem 0;
 }
-.conteneur_accueil a {
+.conteneur_admin_accueil .conteneur_accueil a {
   font-family: "pf-venue", sans-serif;
   width: 10em;
   text-decoration: none;
@@ -1846,7 +1891,7 @@ section.formulaire_recherche .bouton_liste_complete a:hover {
   display: inline-block;
   transition: background-color 0.3s;
 }
-.conteneur_accueil a:hover {
+.conteneur_admin_accueil .conteneur_accueil a:hover {
   background-color: #eca6d9;
   border-color: #0b8a80;
 }
@@ -2606,6 +2651,7 @@ form button.supprimer {
 }
 
 .alerte_succes {
+  margin: 0.5em;
   display: inline-block;
 }
 .alerte_succes p {

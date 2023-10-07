@@ -1,12 +1,8 @@
-<x-layout titre="Connectez-vous!!!!!">
+{{-- <x-layout titre="Connectez-vous!!!!!">
 
     <x-header />
 
     <h2>Connectez-vous</h2>
-
-    {{-- @if(session('email'))
-        <p>{{ session('email') }}</p>
-    @endif --}}
 
     <div class="conteneur_connexion">
 
@@ -45,7 +41,6 @@
                         id="password"
                         name="password"
                         type="password"
-                        {{-- autocomplete="current-password" --}}
                         >
                     </div>
                     <x-forms.erreur champ="password" />
@@ -62,4 +57,4 @@
 
     <x-footer-admin />
 
-</x-layout>
+</x-layout> --}}

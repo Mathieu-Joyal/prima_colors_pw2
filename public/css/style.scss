@@ -207,6 +207,9 @@ button:hover {
 @import "admin/_nav-admin.scss";
 @import "admin/_footer-admin.scss";
 
+@import "admin/employe/edit";
+@import "admin/employe/create";
+
 // Page d'accueil
 @import "admin/accueil/index";
 

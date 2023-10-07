@@ -1,12 +1,35 @@
-.admin_reservation_conteneur_bouton {
+.liste_des_reservations {
 
-    button {
-        font-size: inherit;
-        transition: color 0.3s;
+    display: flex;
+    justify-content: space-between;
 
-        &:hover {
-            color: white;
-            background-color: $rouge;
+    .un_forfait  {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+            margin: 0;
+
+        }
+
+        .admin_reservation_conteneur_bouton {
+
+            button {
+                font-size: 1.5em !important;
+                margin: 0 1rem;
+                font-size: inherit;
+                transition: color 0.3s;
+                color: $rouge;
+                border: none;
+                background-color: transparent;
+
+                &:hover {
+                    color: darken($rouge, 20%);
+                }
+            }
         }
     }
 }
+

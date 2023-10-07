@@ -4,10 +4,6 @@
 
     <h2>Connectez-vous</h2>
 
-    {{-- @if(session('email'))
-        <p>{{ session('email') }}</p>
-    @endif --}}
-
     <div class="conteneur_connexion">
 
         <section class="utilisateur">
