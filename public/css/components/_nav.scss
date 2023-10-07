@@ -215,7 +215,6 @@ a.connexion .material-icons {
         a.hamburger {
             margin-bottom: 45px;
             margin-top: 5px;
-
         }
     }
 
@@ -224,7 +223,6 @@ a.connexion .material-icons {
 @media only screen and (max-width: 1480px) {
     .billet {
         display: none;
-
     }
 
     .menu_nav {
@@ -238,7 +236,6 @@ a.connexion .material-icons {
     .logo-nav {
         margin-bottom: 0;
         margin-top: 20px;
-
     }
 }
 
@@ -254,7 +251,6 @@ a.connexion .material-icons {
     img.reseau-img {
         width: 80%;
     }
-
 }
 
 @media only screen and (max-width: 1180px) {
@@ -273,8 +269,6 @@ a.connexion .material-icons {
     .menu_nav .item_nav .nav {
         font-size: 24px;
     }
-
-
 }
 
 
@@ -293,7 +287,6 @@ a.connexion .material-icons {
     section.menu.showMenu ul {
         margin-left: 2em;
     }
-
 }
 
 @media only screen and (max-width: 452px) {
@@ -306,7 +299,24 @@ a.connexion .material-icons {
     .contenu_nav a.hamburger {
         margin-top: 20px;
     }
+}
 
+@media only screen and (max-width: 375px) {
+
+    .contenu_nav {
+        .reseau {
+            display: none;
+        }
+
+        a.hamburger {
+            margin-top: 20px;
+            margin-right: 20px;
+        }
+    }
+
+    .menu img {
+        padding-top: 5em;
+    }
 }
 
 a.hamburger {
@@ -314,8 +324,6 @@ a.hamburger {
     border: none;
     color: $rose;
     background-color: $vert;
-
-
     margin: 0px;
     margin-bottom: 34px;
     margin-right: 3.5rem;
@@ -323,27 +331,25 @@ a.hamburger {
 
     &:hover {
         background-color: $vert;
-
     }
-
 }
 
 span.menuIcon.material-icons {
     font-size: 54px;
-
 }
 
 .menu {
     margin: 0;
     position: fixed;
-    transform: translateY(-100%);
-    transition: transform 0.2s;
+    display: none;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     z-index: 99;
     background: $noir;
+    width: 100%;
+    height: 100%;
 
     img {
         margin-top: 3em;
@@ -374,10 +380,9 @@ span.menuIcon.material-icons {
 }
 
 .closeIcon {
-    display: none;
-    color: $rose;
-}
-
-.showMenu {
-    transform: translateY(0);
+    font-size: 3em;
+    cursor: pointer;
+    position: absolute;
+    top: 1em;
+    right: 1em;
 }

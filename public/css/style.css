@@ -2224,6 +2224,18 @@ a.connexion .material-icons {
     margin-top: 20px;
   }
 }
+@media only screen and (max-width: 375px) {
+  .contenu_nav .reseau {
+    display: none;
+  }
+  .contenu_nav a.hamburger {
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+  .menu img {
+    padding-top: 5em;
+  }
+}
 a.hamburger {
   border: none;
   color: #eca6d9;
@@ -2244,14 +2256,15 @@ span.menuIcon.material-icons {
 .menu {
   margin: 0;
   position: fixed;
-  transform: translateY(-100%);
-  transition: transform 0.2s;
+  display: none;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 99;
   background: #030303;
+  width: 100%;
+  height: 100%;
 }
 .menu img {
   margin-top: 3em;
@@ -2277,12 +2290,11 @@ span.menuIcon.material-icons {
 }
 
 .closeIcon {
-  display: none;
-  color: #eca6d9;
-}
-
-.showMenu {
-  transform: translateY(0);
+  font-size: 3em;
+  cursor: pointer;
+  position: absolute;
+  top: 1em;
+  right: 1em;
 }
 
 section.hero {
