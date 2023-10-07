@@ -1,21 +1,15 @@
 <x-layout titre="Créer un employé">
 
-    <x-nav-admin titre="Les employés" route="{{ route('admin.employes.index') }}" valeur="Retour aux employes" />
-
-    {{-- <x-header />
-
-    <x-boutons.accueil_admin />
-
-    <x-boutons.deconnexion
-        route="{{ route('admin.deconnexion') }}"
-    /> --}}
-
-    {{-- <x-alertes cle="succes" class="alerte_succes"/> --}}
+    <x-nav-admin titre="Les employés"
+                    route="{{ route('admin.employes.index') }}"
+                    valeur="Retour aux employes"
+    />
 
     <div class="conteneur">
 
+        <h2 class="h2_creation_employe">Créer un nouvel employé</h2>
+
         <section class="creation_employe">
-            <h2>Enregistrez-vous</h2>
 
             <form class="administration" action="{{ route('admin.enregistrement.store') }}"
                     method="POST"

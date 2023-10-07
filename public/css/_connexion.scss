@@ -1,7 +1,15 @@
+.h2_connexion {
+    margin: 0 0 0 2em;
+}
 .conteneur_connexion {
     display: flex;
     justify-content: center;
     margin: 0 0 5em 0;
+
+    h3 {
+        color: $jaune;
+    }
+
 
     section {
         flex: 1;
@@ -10,7 +18,6 @@
     }
 
     .connexion_conteneur_membre {
-        margin: 2em 0 0 0;
         padding: .5em 1em;
         display: inline-block;
 

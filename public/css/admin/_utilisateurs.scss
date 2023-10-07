@@ -1,14 +1,24 @@
 .conteneur-utilisateur {
     color: $jaune;
-    margin: 0;
+    margin: 0 2rem;
+
+    .forfaits {
+
+        margin: 0 5rem;
+
+        .activites-admin {
+            border: 1px solid $rose;
+            margin: .5rem;
+        }
+    }
 
     .conteneur {
-        margin: 0 3em;
+        margin: 0 3rem;
     }
 
     .presentation {
         font-size: 1.25em;
-        margin: 0 10em;
+        margin: 0 10rem;
     }
 
     h3 {
@@ -31,7 +41,7 @@
 
     article {
         padding: 1em .5em;
-        margin: 1em 0;
+        margin: 1rem 0;
 
         .les_dates {
             font-size: 1em;
@@ -39,12 +49,31 @@
 
         div {
             color: $blanc;
-            margin: 1em 0;
+            margin: 1rem 0;
         }
 
     }
 
+    section.selection_forfait {
+        margin: 0 5rem;
+
+        .conteneur_selection_forfait {
+            display: flex;
+            justify-content: center;
+
+            .administration {
+                display: inline-block;
+                padding: 4em 8em;
+            }
+        }
+    }
+
+    section.forfaits_reserve {
+        margin: 0 5rem;
+    }
+
     article.une_reservation {
+        margin: 0 5rem;
         padding: 1em;
 
         &:hover {
@@ -53,15 +82,29 @@
         }
 
         button {
+            cursor: pointer;
+            font-size: 1.25em;
             padding: 0.5em 1em;
             border-radius: .25em;
-            margin-top: 2em;
-            bottom: 0;
-            right: 1em;
+            margin-top: 2rem;
 
             &:hover {
                 background-color: red;
                 transition: background-color 0.3s;
+            }
+        }
+    }
+
+    section.le_concours{
+        margin: 0 5rem;
+
+        .conteneur_participer_concours {
+            display: flex;
+            justify-content: center;
+
+            .administration {
+                display: inline-block;
+                padding: 4em 8em;
             }
         }
     }
@@ -72,7 +115,11 @@
     }
 
     .un_concours {
-        margin: 0 0 5em 0;
+        margin: 3rem 0 5rem 0;
+
+        h3 {
+            margin: 0 5rem;
+        }
 
         h4 {
             color: $rose;
@@ -80,7 +127,7 @@
         }
 
         img {
-            padding: 0.5em;
+            padding: 2em;
             border: .1em solid $vert
         }
     }

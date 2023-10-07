@@ -1,12 +1,8 @@
 <x-layout titre="Modifier {{ $user->prenom }} {{ $user->nom }} ">
 
-    {{-- <x-header /> --}}
-
     <x-nav-admin titre="Les Utilisateurs" route="{{ route('admin.utilisateurs.index') }}" valeur="Retour aux utilisateurs" />
 
-    {{-- <x-boutons.accueil_admin /> --}}
-
-    <div class="conteneur">
+    <div class="conteneur admin_user_edit">
 
         <form class="administration"
                 action="{{ route('admin.utilisateurs.update', ['id' => $user->id ]) }}"

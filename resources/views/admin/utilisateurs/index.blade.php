@@ -48,12 +48,12 @@
                             <div class="boutons_user">
                                 <a href="{{ route('admin.utilisateurs.edit', ['id' => $user->id ]) }}">
                                     <span class="edit">
-                                        🅴🅳🅸🆃
+                                        ✐
                                     </span>
                                 </a>
                                 <a href="{{ route('admin.utilisateurs.destroy', ['id' => $user->id ]) }}">
                                     <span class="delete">
-                                        🅳🅴🅻🅴🆃🅴
+                                        ♵
                                     </span>
                                 </a>
                             </div>

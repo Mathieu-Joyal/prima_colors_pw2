@@ -1,0 +1,33 @@
+.h2_enregistrement {
+    margin: 0 0 0 2em;
+}
+
+.conteneur_enregistrement {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 5em 0;
+
+    h3 {
+        color: $jaune;
+    }
+
+    .administration {
+        padding: 2em 4em;
+    }
+}
+
+.connexion_conteneur_membre {
+    padding: .5em 1em;
+    display: inline-block;
+
+    a {
+        color: $vert;
+
+        &:hover {
+            transition: all 0.3s;
+            text-decoration: underline;
+            color: $rose;
+        }
+
+    }
+}

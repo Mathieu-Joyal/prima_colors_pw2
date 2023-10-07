@@ -1,8 +1,15 @@
 .alerte_succes {
+    margin: .5em;
+    display: inline-block;
+
         p {
+            font-size: 1em;
+            padding: .5em 1em;
             font-weight: bold;
-            text-decoration: underline;
             text-align: center;
             color: $vert;
+            border: 1px solid $vert;
+            background-color: rgb(193, 255, 193);
+            margin: 0 0 0 2em;
         }
 }

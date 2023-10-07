@@ -8,11 +8,9 @@
 
         <x-boutons.deconnexion routeDeconnexion="{{ route('deconnexion') }}" />
 
-        <h2>
-            Bonjour {{ $user->prenom }} {{ $user->nom }}!
-        </h2>
+        <h2>Bonjour {{ $user->prenom }} {{ $user->nom }}!</h2>
 
-        <p class="presentation">Bienvenue à votre compte utilisateur. Ici, vous pourrez voir la liste des forfaits disponibles, en plus de réservez votre billet pour l'un de ceux-ci. Vous pouvez aussi participer au concours d'art numérique, nous serions heureux de voir vos talents. Bonne visite!</p>
+        <p class="presentation">Bienvenue à votre compte utilisateur. Ici, vous pourrez voir la liste des forfaits disponibles, en plus de réserver votre billet pour l'un de ceux-ci. Vous pouvez aussi participer au concours d'art numérique, nous serions heureux de voir vos talents. Bonne visite!</p>
 
         <section class="forfaits">
 
@@ -34,8 +32,8 @@
                         </div>
 
                         <div class="grid-item">
-                            <h3 class="grid-title">Date</h3>
-                            <p>{{ $forfait->prix }}</p>
+                            <h3 class="grid-title">Prix</h3>
+                            <p>{{ $forfait->prix }}$</p>
                         </div>
                     </div>
                     <div class="conteneur-grid">
@@ -54,27 +52,28 @@
 
             <h3>Choissisez votre forfait</h3>
 
-            <form class="administration" action="{{ route('reservations.store') }}"
-                    method="POST"
-            >
-                @csrf
-                <select
-                    name="forfait"
-                    id="forfait"
-                    class="decoration"
+            <div class="conteneur_selection_forfait">
+
+                <form class="administration" action="{{ route('reservations.store') }}"
+                        method="POST"
                 >
-                    @foreach ($forfaits as $forfait)
-
-                        <option value="{{ $forfait->id }}">{{ $forfait->titre }}</option>
-                    @endforeach
-                </select>
-
-                <div>
-                    <button type="submit">
-                        Confirmer ce forfait
-                    </button>
-                </div>
-            </form>
+                    @csrf
+                    <select
+                        name="forfait"
+                        id="forfait"
+                        class="decoration"
+                    >
+                        @foreach ($forfaits as $forfait)
+                            <option value="{{ $forfait->id }}">{{ $forfait->titre }}</option>
+                        @endforeach
+                    </select>
+                    <div>
+                        <button type="submit">
+                            Confirmer ce forfait
+                        </button>
+                    </div>
+                </form>
+            </div>
         </section>
 
         <section class="forfaits_reserve">
@@ -123,53 +122,48 @@
 
             <h3>Participer au concours!</h3>
 
-            <form class="administration" action="{{ route('utilisateurs.storeConcours') }}"
-                    method="POST"
-                    enctype="multipart/form-data"
-            >
-                @csrf
+            <div class="conteneur_participer_concours">
 
-                <div>
-
-                    <label for="titre_oeuvre">
-                        Titre de l'oeuvre
-                    </label>
-
+                <form class="administration" action="{{ route('utilisateurs.storeConcours') }}"
+                        method="POST"
+                        enctype="multipart/form-data"
+                >
+                    @csrf
                     <div>
-                        <input
-                            id="titre_oeuvre"
-                            name="titre_oeuvre"
-                            type="text"
-                            value="{{ old('titre') }}"
-                        >
+                        <label for="titre_oeuvre">
+                            Titre de l'oeuvre
+                        </label>
+                        <div>
+                            <input
+                                id="titre_oeuvre"
+                                name="titre_oeuvre"
+                                type="text"
+                                value="{{ old('titre') }}"
+                            >
+                        </div>
+                        <x-forms.erreur champ="titre" />
                     </div>
-                    <x-forms.erreur champ="titre" />
-                </div>
-
-                <div>
-
-                    <label for="image_oeuvre">
-                        Fichier de l'oeuvre
-                    </label>
-
                     <div>
-                        <input
-                            id="image_oeuvre"
-                            name="image_oeuvre"
-                            type="file"
-                        >
+                        <label for="image_oeuvre">
+                            Fichier de l'oeuvre
+                        </label>
+                        <div>
+                            <input
+                                id="image_oeuvre"
+                                name="image_oeuvre"
+                                type="file"
+                            >
+                        </div>
+                        <p class="notice">Seul les fichiers PNG, JPG et JPEG sont acceptés</p>
+                        <x-forms.erreur champ="image_oeuvre" />
                     </div>
-                    <p class="notice">Seul les fichiers PNG, JPG et JPEG sont acceptés</p>
-
-                    <x-forms.erreur champ="image_oeuvre" />
-                </div>
-
-                <div>
-                    <button type="submit">
-                        Soumettez votre oeuvre!
-                    </button>
-                </div>
-            </form>
+                    <div>
+                        <button type="submit">
+                            Soumettez votre oeuvre!
+                        </button>
+                    </div>
+                </form>
+            </div>
         </section>
 
         @if ($user->image_oeuvre != null)

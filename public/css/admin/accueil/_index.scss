@@ -9,10 +9,14 @@
     }
 }
 
-        .conteneur_accueil {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+.conteneur_admin_accueil {
+    margin: 0 2rem;
+
+    .conteneur_accueil {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 3rem 0;
 
         a {
             font-family: "pf-venue", sans-serif;
@@ -27,9 +31,10 @@
             display: inline-block;
             transition: background-color 0.3s;
 
-        &:hover {
-            background-color: $rose;
-            border-color: $vert;
+            &:hover {
+                background-color: $rose;
+                border-color: $vert;
+            }
         }
     }
 }

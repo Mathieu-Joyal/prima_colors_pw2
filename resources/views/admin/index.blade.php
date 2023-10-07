@@ -11,15 +11,18 @@
     />
 
 
-    <h2>Bonjour {{ $un_employe->prenom }} {{ $un_employe->nom }}!</h2>
+    <div class="conteneur_admin_accueil">
 
-    <div class="conteneur_accueil">
+        <h2>Bonjour {{ $un_employe->prenom }} {{ $un_employe->nom }}!</h2>
 
-        <a href="{{ route('admin.employes.index') }}">Gestion des employés</a>
-        <a href="{{ route('admin.utilisateurs.index') }}">Gestion des utilisateurs</a>
-        <a href="{{ route('admin.actualites.index') }}">Gestion des actualités</a>
-        <a href="{{ route('admin.activites.index') }}">Gestion des activités</a>
-        <a href="{{ route('admin.reservations.index') }}">Gestion des réservations</a>
+        <div class="conteneur_accueil">
+
+            <a href="{{ route('admin.employes.index') }}">Gestion des employés</a>
+            <a href="{{ route('admin.utilisateurs.index') }}">Gestion des utilisateurs</a>
+            <a href="{{ route('admin.actualites.index') }}">Gestion des actualités</a>
+            <a href="{{ route('admin.activites.index') }}">Gestion des activités</a>
+            <a href="{{ route('admin.reservations.index') }}">Gestion des réservations</a>
+        </div>
     </div>
 
     <x-footer-admin />

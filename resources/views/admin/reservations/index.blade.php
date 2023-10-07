@@ -38,8 +38,7 @@
 
                 <article class="un_utilisateur">
 
-                    <div class="conteneur_user">
-
+                    <div class="conteneur_user liste_des_reservations">
 
                         <div class="infos_user">
 
@@ -49,16 +48,17 @@
                         </div>
 
                         <div class="un_forfait">
-                            <p>{{ $reservation->forfait->titre }}</p>
-                        </div>
-
-                        <div class="admin_reservation_conteneur_bouton">
-                            <form action="{{ route('admin.reservations.destroy', ['id' => $reservation->id]) }}" method="POST">
-                                @csrf
-                                <button class="bt_user_cancel" type="submit">
-                                    Annuler la réservation
-                                </button>
-                            </form>
+                            <div>
+                                <p>{{ $reservation->forfait->titre }}</p>
+                            </div>
+                            <div class="admin_reservation_conteneur_bouton">
+                                <form action="{{ route('admin.reservations.destroy', ['id' => $reservation->id]) }}" method="POST">
+                                    @csrf
+                                    <button class="bt_user_cancel" type="submit">
+                                        ♵
+                                    </button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </article>
