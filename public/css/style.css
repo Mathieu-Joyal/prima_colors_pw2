@@ -134,9 +134,9 @@ button:hover a {
 }
 
 /***********************************************
- *                                          
- *           STYLES POUR LE VIDEO         
- *                                             
+ *
+ *           STYLES POUR LE VIDEO
+ *
  ***********************************************/
 video {
   width: 100%;
@@ -174,9 +174,9 @@ video {
 }
 
 /***********************************************
- *                                          
- *           STYLES POUR LA CITATION           
- *                                             
+ *
+ *           STYLES POUR LA CITATION
+ *
  ***********************************************/
 /* Styles communs pour blockquote */
 blockquote {
@@ -218,9 +218,9 @@ blockquote span.material-icons:first-child {
   }
 }
 /***********************************************
- *                                          
- *           STYLES POUR L'INTRO          
- *                                             
+ *
+ *           STYLES POUR L'INTRO
+ *
  ***********************************************/
 .intro {
   padding: 0 200px 100px;
@@ -228,9 +228,9 @@ blockquote span.material-icons:first-child {
 }
 
 /***********************************************
- *                                          
- *           STYLES POUR LES SECTIONS       
- *                                             
+ *
+ *           STYLES POUR LES SECTIONS
+ *
  ***********************************************/
 /* Styles communs pour les sections */
 .section_activites,
@@ -351,30 +351,6 @@ a.accueil:hover span.material-icons {
 }
 
 /* Styles spécifiques pour les couleurs */
-h3.accueil_activite {
-  color: #eca6d9;
-}
-
-p.accueil_activite {
-  color: #eca6d9;
-}
-
-h3.accueil_forfait {
-  color: #eeb15e;
-}
-
-p.accueil_forfait {
-  color: #eeb15e;
-}
-
-h3.accueil_apropos {
-  color: #eca6d9;
-}
-
-p.accueil_apropos {
-  color: #eca6d9;
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -426,9 +402,9 @@ p.accueil_apropos {
   }
 }
 /***********************************************
- *                                          
- *           STYLES POUR LE MUR DE BRIQUE          
- *                                             
+ *
+ *           STYLES POUR LE MUR DE BRIQUE
+ *
  ***********************************************/
 /* Styles communs pour la section actualités */
 .section_actualites {
@@ -676,6 +652,9 @@ button.voir.activite {
 }
 
 @media only screen and (max-width: 1200px) {
+  section {
+    margin: 4rem;
+  }
   .conteneur-activites .conteneur-jours a:not(.selected) {
     display: none;
   }
@@ -691,8 +670,28 @@ button.voir.activite {
   }
 }
 @media only screen and (max-width: 768px) {
-  .bordure.activites {
+  section {
+    margin: 3rem;
+  }
+  .conteneur-bordure .titre {
+    padding-left: 0;
+  }
+  .conteneur-bordure .bordure.activites {
     display: none;
+  }
+}
+@media only screen and (max-width: 768px) and (max-width: 375px) {
+  section {
+    margin: 3rem;
+  }
+  h1 {
+    margin: 0;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 768px) {
+  p {
+    font-size: 20px;
   }
 }
 section.conteneur-actualites .titre {
@@ -1073,6 +1072,51 @@ section.billetterie .conteneur-description.voir-plus {
   z-index: 3;
 }
 
+@media only screen and (max-width: 450px) {
+  .carre_noir {
+    background-color: transparent;
+  }
+  .carre_noir h3 {
+    display: none;
+  }
+  .carre_noir h1 {
+    position: relative;
+    bottom: 4rem;
+    right: 13rem;
+  }
+  .carre_noir .btn-concours {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    bottom: 4rem;
+    right: 6rem;
+    background-color: transparent;
+    border: none;
+  }
+  .carre_noir .btn-concours a {
+    flex-direction: column;
+  }
+  .carre_noir .btn-concours p {
+    font-size: 36px;
+    font-weight: 700;
+    background-color: #030303;
+  }
+  .carre_noir .btn-concours .conteneur-span {
+    width: 9rem;
+    height: 9rem;
+    margin-left: 13rem;
+  }
+  .carre_noir .btn-concours .conteneur-span span {
+    font-size: 9em;
+  }
+  .carre_noir:hover .btn-concours {
+    background-color: transparent;
+    border: none;
+  }
+  .carre_noir:hover .btn-concours p {
+    color: #eeb15e;
+  }
+}
 .section_compte {
   position: relative;
   background-size: cover;
@@ -1117,6 +1161,50 @@ section.billetterie .conteneur-description.voir-plus {
   color: #eeb15e;
 }
 
+@media only screen and (max-width: 450px) {
+  .carre_blanc {
+    background-color: transparent;
+    text-align: left;
+  }
+  .carre_blanc h3 {
+    display: none;
+  }
+  .carre_blanc h1 {
+    display: none;
+  }
+  .carre_blanc .btn-compte {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 2rem;
+    left: 12rem;
+    background-color: transparent;
+    border: none;
+  }
+  .carre_blanc .btn-compte a {
+    flex-direction: column;
+  }
+  .carre_blanc .btn-compte p {
+    font-size: 36px;
+    font-weight: 700;
+    background-color: #030303;
+  }
+  .carre_blanc .btn-compte .conteneur-span {
+    width: 9rem;
+    height: 9rem;
+    margin-left: 13rem;
+  }
+  .carre_blanc .btn-compte .conteneur-span span {
+    font-size: 9em;
+  }
+  .carre_blanc:hover .btn-compte {
+    background-color: transparent;
+    border: none;
+  }
+  .carre_blanc:hover .btn-compte p {
+    color: #eeb15e;
+  }
+}
 #compteur {
   opacity: 0;
 }
@@ -1244,12 +1332,10 @@ section.billetterie .conteneur-description.voir-plus {
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
-
-.section_billet img {
+.section_billet .section_billet img {
   padding-top: 100px;
 }
-
-.rectangle_blanc {
+.section_billet .rectangle_blanc {
   position: absolute;
   padding-left: 15px;
   padding-right: 15px;
@@ -1262,8 +1348,7 @@ section.billetterie .conteneur-description.voir-plus {
   justify-content: center;
   text-align: left;
 }
-
-.rectangle_blanc h1 {
+.section_billet .rectangle_blanc h1 {
   color: #030303;
   margin-bottom: 0;
   padding-bottom: 10px;
@@ -1279,37 +1364,10 @@ section.billetterie .conteneur-description.voir-plus {
   height: 100%;
   display: flex;
 }
-
-.rectangle_blanc .forfaits {
-  font-size: 32px;
-  text-decoration: none;
-  color: #eeb15e;
-  font-weight: bold;
-  z-index: 3;
-  border: 3px solid #eeb15e;
-  padding: 10px 50px;
-  text-align: right;
-}
-
-.rectangle_blanc .forfaits i {
-  color: #eeb15e;
-}
-
-.forfaits {
-  font-family: "pf-venue", sans-serif;
-  text-decoration: none;
-  display: inline-block;
-  position: relative;
-  margin-right: 10px;
-  color: #030303;
-}
-
-.forfaits .material-icons {
-  font-size: 50px;
-  color: #030303;
-  vertical-align: middle;
-  left: 9%;
-  padding-left: 20px;
+.section_billet .reserver.banniere {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
 }
 
 .reserver.banniere {
@@ -1323,6 +1381,19 @@ section.billetterie .conteneur-description.voir-plus {
   transition: 0.5s;
 }
 
+@media only screen and (max-width: 450px) {
+  .section_billet {
+    height: 200px;
+  }
+  .section_billet .rectangle_blanc {
+    display: none;
+  }
+  .section_billet .reserver.banniere {
+    position: absolute;
+    right: 20px;
+    bottom: 50px;
+  }
+}
 .conteneur-utilisateur {
   color: #eeb15e;
   margin: 0;
@@ -2224,6 +2295,18 @@ a.connexion .material-icons {
     margin-top: 20px;
   }
 }
+@media only screen and (max-width: 375px) {
+  .contenu_nav .reseau {
+    display: none;
+  }
+  .contenu_nav a.hamburger {
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+  .menu img {
+    padding-top: 5em;
+  }
+}
 a.hamburger {
   border: none;
   color: #eca6d9;
@@ -2244,14 +2327,15 @@ span.menuIcon.material-icons {
 .menu {
   margin: 0;
   position: fixed;
-  transform: translateY(-100%);
-  transition: transform 0.2s;
+  display: none;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 99;
   background: #030303;
+  width: 100%;
+  height: 100%;
 }
 .menu img {
   margin-top: 3em;
@@ -2277,12 +2361,11 @@ span.menuIcon.material-icons {
 }
 
 .closeIcon {
-  display: none;
-  color: #eca6d9;
-}
-
-.showMenu {
-  transform: translateY(0);
+  font-size: 3em;
+  cursor: pointer;
+  position: absolute;
+  top: 1em;
+  right: 1em;
 }
 
 section.hero {
@@ -2307,10 +2390,47 @@ section.hero {
 }
 .conteneur-hero .compteur.petit {
   position: relative;
-  bottom: 240px;
+  bottom: 210px;
   left: 40px;
 }
 
+@media only screen and (max-width: 768px) {
+  .conteneur-hero img.image-hero {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 300px;
+  }
+  .conteneur-hero .reserver.hero {
+    right: 2em;
+    top: 22em;
+    margin: auto;
+  }
+  .conteneur-hero .compteur.petit {
+    position: relative;
+    bottom: 180px;
+    left: 4px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .conteneur-hero img.image-hero {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 200px;
+  }
+  .conteneur-hero .reserver.hero {
+    right: 24px;
+    bottom: 0;
+    top: 9em;
+    margin: auto;
+  }
+  .conteneur-hero .compteur.petit {
+    position: relative;
+    bottom: 10.5rem;
+    left: 0rem;
+  }
+}
 .deconnexion form {
   margin: 4em 3em 3em 3em;
   text-align: right;
@@ -2382,20 +2502,20 @@ section.hero {
 }
 .btn-concours a, .btn-compte a {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .btn-concours p, .btn-compte p {
   color: #eeb15e;
   margin: 0;
   font-family: "pf-venue", sans-serif;
   text-transform: uppercase;
-  padding-top: 12px;
+  padding-top: 18px;
   padding-left: 26px;
 }
 .btn-concours .conteneur-span, .btn-compte .conteneur-span {
   background-color: #eeb15e;
-  height: 30px;
-  width: 30px;
+  height: 2rem;
+  width: 2rem;
   border-radius: 5px;
   display: inline-block;
   margin-top: 14px;
@@ -2404,7 +2524,7 @@ section.hero {
 .btn-concours .conteneur-span span, .btn-compte .conteneur-span span {
   color: #030303;
   font-weight: 500;
-  font-size: 2em;
+  font-size: 2rem;
 }
 .btn-concours:hover, .btn-compte:hover {
   background-color: #eeb15e;
@@ -2473,6 +2593,8 @@ form button.supprimer {
 }
 
 .reserver {
+  display: flex;
+  justify-content: space-around;
   background-color: #eca6d9;
   color: #030303;
   cursor: pointer;
@@ -2487,15 +2609,20 @@ form button.supprimer {
   font-size: 1.5em;
   font-family: "pf-venue", sans-serif;
   text-transform: uppercase;
-  padding-top: 0.6rem;
 }
 .reserver:hover {
   background-color: #030303;
   transition: background-color, 0.3s;
 }
 .reserver:hover a,
-.reserver:hover span {
+.reserver:hover span.material-icons {
   color: #eca6d9;
+}
+.reserver .btn-reserver .material-icons {
+  font-size: 50px;
+  color: #030303;
+  vertical-align: middle;
+  padding-left: 2rem;
 }
 
 .deconnexion form {
