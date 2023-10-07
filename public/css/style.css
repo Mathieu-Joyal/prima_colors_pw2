@@ -691,8 +691,28 @@ button.voir.activite {
   }
 }
 @media only screen and (max-width: 768px) {
-  .bordure.activites {
+  section {
+    margin: 3rem;
+  }
+  .conteneur-bordure .titre {
+    padding-left: 0;
+  }
+  .conteneur-bordure .bordure.activites {
     display: none;
+  }
+}
+@media only screen and (max-width: 768px) and (max-width: 375px) {
+  section {
+    margin: 3rem;
+  }
+  h1 {
+    margin: 0;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 768px) {
+  p {
+    font-size: 20px;
   }
 }
 section.conteneur-actualites .titre {

@@ -204,41 +204,60 @@ section.conteneur-activites {
 button.voir.activite {
     margin-bottom: 2em;
 }
-
-
+//RESPONSIVE
 @media only screen and (max-width: 1200px) {
-.conteneur-activites {
-    .conteneur-jours {
-        a:not(.selected) {
+    .conteneur-activites {
+        .conteneur-jours {
+            a:not(.selected) {
+                display: none;
+            }
+        }
+    }
+
+    section.conteneur-activites article.activites .conteneur-titre {
+        display: none;
+    }
+
+    section.conteneur-activites article.activites .conteneur-image {
+        width: 100%;
+    }
+
+    button.voir.activite {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    section {
+        margin: 3rem;
+    }
+
+    .conteneur-bordure {
+        .titre {
+            padding-left: 0;
+        }
+
+        .bordure.activites {
             display: none;
         }
     }
+
+    @media only screen and (max-width: 375px) {
+        section {
+            margin: 3rem;
+        }
+
+        h1 {
+            margin: 0;
+            text-align: center;
+        }
+    }
+
+    p {
+        font-size: 20px;
+    }
 }
-section.conteneur-activites article.activites .conteneur-titre{
-
-    display: none;
-}
-section.conteneur-activites article.activites .conteneur-image{
-      width: 100%;
-  }
-
-button.voir.activite{
-    margin-left:0;
-    margin-right: 0;
-}
-}
-
-
-
-@media only screen and (max-width: 768px) {
-.bordure.activites{
-    display: none;
-  }
-
-}
-
-
-
 
 
 
