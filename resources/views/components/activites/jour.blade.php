@@ -120,7 +120,7 @@
     }
 
 
-    // show description on click
+    //show description on click
     function toggleDescription(element) {
         const description = element.querySelector('.description');
         const nextElement = element.parentElement.nextElementSibling;

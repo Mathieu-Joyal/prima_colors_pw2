@@ -233,13 +233,16 @@ button.voir.activite {
 
 @media only screen and (max-width: 768px) {
     section {
-        margin: 3rem;
+        margin: 0;
+        .conteneur-jours{
+            padding-left: 3rem;
+        }
 
     }
 
     .conteneur-bordure {
         .titre {
-            padding-left: 0;
+            padding-left: 3rem;
         }
 
         .bordure.activites {
@@ -247,14 +250,14 @@ button.voir.activite {
         }
     }
 }
-@media only screen and (max-width: 375px) {
-        section {
-            margin: 3rem;
-        }
+@media only screen and (max-width: 450px) {
 
         h1 {
             margin: 0;
-            text-align: center;
+            padding-left: 3rem;
+        }
+        .conteneur-jours{
+            padding-left: 1rem;
         }
     }
 
