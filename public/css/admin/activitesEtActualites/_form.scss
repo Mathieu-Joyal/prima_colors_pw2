@@ -41,7 +41,8 @@ form.edit {
             border: none;
         }
     }
-    .grid-item.image.conteneur-image{
+
+    .grid-item.image.conteneur-image {
         position: relative;
         bottom: 0;
         right: 0;
@@ -56,14 +57,10 @@ form.edit {
     //SPÉCIFICATION FORM CREATE ACTUALITES
     form.create.actualite {
         flex-direction: column;
+
+        .grid-item.titre.actualite {
+            width: 100%;
+            box-sizing: border-box;
+        }
     }
-
-    .grid-item.titre.actualite {
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-
-
-
 }

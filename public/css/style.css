@@ -467,19 +467,6 @@ h1.accueil_actualite {
   opacity: 1;
 }
 
-.images {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.image {
-  width: 150px;
-  height: 150px;
-  margin-top: 20px;
-  display: none;
-}
-
 section.conteneur-activites {
   display: flex;
   flex-direction: column;
@@ -1888,8 +1875,8 @@ form.create form.create.actualite,
 form.edit form.create.actualite {
   flex-direction: column;
 }
-form.create .grid-item.titre.actualite,
-form.edit .grid-item.titre.actualite {
+form.create form.create.actualite .grid-item.titre.actualite,
+form.edit form.create.actualite .grid-item.titre.actualite {
   width: 100%;
   box-sizing: border-box;
 }

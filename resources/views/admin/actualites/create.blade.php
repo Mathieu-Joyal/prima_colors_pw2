@@ -1,6 +1,6 @@
-<x-layout titre="Créer une actualité">
+<x-layout-admin titre="Créer une actualité">
 
-    <x-nav-admin titre=" Ajouter une ActualitÉs" route="{{route('admin.actualites.index')}}"
+    <x-nav-admin titre=" Ajouter une ActualitÉs" route="{{ route('admin.actualites.index') }}"
         valeur="Retour aux actualitÉs" />
 
     <section>
@@ -51,4 +51,4 @@
         </form>
     </section>
 
-</x-layout-admin>
+    </x-layout-admin>

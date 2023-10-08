@@ -1,20 +1,18 @@
-<x-layout titre="Liste des actualités">
+<x-layout-admin titre="Liste des actualités">
 
 
-    <x-nav-admin
-        titre="Les ActualitÉs"
-        route="{{route('admin.actualites.index')}}"
-        valeur="Voir les actualitÉs"
-    />
+    <x-nav-admin titre="Les ActualitÉs" route="{{ route('admin.actualites.index') }}" valeur="Voir les actualitÉs" />
 
-    <x-alertes cle="succes" class="alerte_succes"/>
-    <x-alertes cle="erreur" class="alerte_erreur"/>
+    <x-alertes cle="succes" class="alerte_succes" />
+    <x-alertes cle="erreur" class="alerte_erreur" />
 
 
     <section class="formulaire_recherche actualite">
 
+        {{-- FORMULAIRE --}}
         <form class="administration la_recherche" action="{{ route('admin.actualites.filter') }}" method="GET">
 
+            <!-- Recherche -->
             <div class="conteneur-recherche">
                 <label for="recherche">
                     <p class="actualite">Recherche par date:</p>
@@ -35,10 +33,7 @@
         </form>
         <div class="bouton_liste_complete">
 
-            <x-boutons.liste_complete
-                route="{{ route('admin.actualites.index') }}"
-                valeur="actualites"
-            />
+            <x-boutons.liste_complete route="{{ route('admin.actualites.index') }}" valeur="actualites" />
 
         </div>
 
@@ -72,21 +67,16 @@
                 </div>
             </article>
 
-            @if ( auth()->guard('employe')->user()->role_id === 1)
-
-                <x-boutons.gestion_activites_actualites
-                    routeAjouter=" {{ route('admin.actualites.create') }}"
-                    routeModifier=" {{ route('admin.actualites.edit', ['id'=>$actualite->id]) }}"
-                    routeSupprimer=" {{ route('admin.actualites.destroy') }}"
-                    valeur="{{ $actualite->id }}"
-                    nom="actualité"
-                />
+            @if (auth()->guard('employe')->user()->role_id === 1)
+                <x-boutons.gestion_activites_actualites routeAjouter=" {{ route('admin.actualites.create') }}"
+                    routeModifier=" {{ route('admin.actualites.edit', ['id' => $actualite->id]) }}"
+                    routeSupprimer=" {{ route('admin.actualites.destroy') }}" valeur="{{ $actualite->id }}"
+                    nom="actualité" />
             @endif
         @empty
 
             <p>Aucune activités trouvé pour la cette date</p>
-
         @endforelse
     </section>
 
-</x-layout-admin>
+    </x-layout-admin>
