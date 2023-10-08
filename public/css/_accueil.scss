@@ -125,6 +125,9 @@ img.img_forfait,
 img.img_apropos {
     max-width: 50%;
     margin-right: 20px;
+}
+
+img.couleur-image {
     animation: CouleurImage 4.5s ease-in-out;
 }
 
@@ -138,13 +141,23 @@ img.img_apropos {
 
 .texte_droite {
     padding-left: 50px;
-    animation: fadeIn 2s ease-in-out;
+    opacity: 0;
+
+    &.fade-in {
+        animation: fadeIn 2s ease-in-out forwards;
+    }
 }
+
 
 .texte_gauche {
     padding-right: 50px;
-    animation: fadeInDeux 2s ease-in-out;
+    opacity: 0;
+
+    &.fade-in-2 {
+        animation: fadeInDeux 2s ease-in-out forwards;
+    }
 }
+
 
 /* Styles communs pour les titres */
 h3.accueil_activite,
