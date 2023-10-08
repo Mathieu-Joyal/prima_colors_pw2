@@ -57,4 +57,4 @@
         </section>
     </div>
 
-</x-layout-admin>
+</x-layout>
