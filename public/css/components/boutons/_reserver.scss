@@ -1,38 +1,40 @@
 .reserver {
-    display: flex;
-    justify-content: space-around;
+
+    flex-direction: row;
     background-color: $rose;
     color: $noir;
     cursor: pointer;
     width: 325px;
     height: 65px;
-    text-align: center;
-    margin-bottom: 1rem;
     box-sizing: border-box;
-    a {
-        color: $noir;
-        font-size: 1.5em;
+
+    a.btn-reserver {
+        display: flex;
+        justify-content: space-around;
         font-family: "pf-venue", sans-serif;
         text-transform: uppercase;
+
+        p {
+            padding-top: 0.7rem;
+            color: $noir;
+            padding-left: 1rem;
+        }
     }
 
     &:hover {
         background-color: $noir;
-        transition: background-color, 0.3s;
+        transition: background-color 0.3s;
 
-        a,
+        a.btn-reserver p,
         span.material-icons {
             color: $rose;
         }
     }
+
     .btn-reserver .material-icons {
         font-size: 50px;
         color: $noir;
-        vertical-align: middle;
+        padding-top: 0.5rem;
         padding-left: 2rem;
-
-
     }
 }
-
-

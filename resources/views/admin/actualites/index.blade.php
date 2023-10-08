@@ -1,18 +1,15 @@
 <x-layout titre="Liste des actualités">
 
 
-    {{-- ******************** changement route activites pour actualites et valeur même chose ******************** --}}
     <x-nav-admin
         titre="Les ActualitÉs"
         route="{{route('admin.actualites.index')}}"
         valeur="Voir les actualitÉs"
     />
-    {{-- ***************** --}}
 
-    {{-- ************************ --}}
     <x-alertes cle="succes" class="alerte_succes"/>
     <x-alertes cle="erreur" class="alerte_erreur"/>
-    {{-- ************************ --}}
+
 
     <section class="formulaire_recherche actualite">
 
@@ -85,13 +82,11 @@
                     nom="actualité"
                 />
             @endif
-
         @empty
 
             <p>Aucune activités trouvé pour la cette date</p>
+
         @endforelse
     </section>
 
-    <x-footer-admin />
-
-</x-layout>
+</x-layout-admin>

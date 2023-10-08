@@ -1,7 +1,5 @@
 <x-layout titre="Festival Prima-Colors | Qui sommes-nous?">
 
-    <x-header />
-
     <x-hero image="img\hero\hero-apropos.png" />
 
     <div class="conteneur-a_propos">
@@ -89,7 +87,5 @@
         <x-bannieres.billet />
 
     </div>
-
-    <x-footer />
 
 </x-layout>

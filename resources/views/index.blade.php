@@ -1,6 +1,4 @@
 <x-layout titre="Festival Prima-Colors | Accueil">
-    <x-header />
-
 
     {{-- Ajouter le id mon_video --}}
     <div class="video-container">
@@ -89,7 +87,6 @@
 
     <x-bannieres.compte :url="url('img/accueil/ban_compte.png')" />
     <x-bannieres.billet />
-    <x-footer />
 
 </x-layout>
 <script>

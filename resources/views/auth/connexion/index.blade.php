@@ -1,7 +1,5 @@
 <x-layout titre="Connectez-vous">
 
-    <x-header />
-
     <h2 class="h2_connexion">Connectez-vous</h2>
 
     <div class="conteneur_connexion">
@@ -69,7 +67,4 @@
             </div>
         </section>
     </div>
-
-    <x-footer />
-
 </x-layout>
