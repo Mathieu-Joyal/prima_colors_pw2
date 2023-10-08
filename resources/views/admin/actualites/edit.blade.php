@@ -36,6 +36,7 @@
 
                 <div class="conteneur-input-image">
                     <label for="image" class="grid-title">Image</label>
+                    <p class="notice">Seul les fichiers PNG, JPG et JPEG sont acceptés</p>
                     <x-forms.erreur champ="image" />
                     <input id="image" name="image" type="file" class=" ">
                 </div>

@@ -756,20 +756,19 @@ section.conteneur-actualites .bordure.actualites {
 .conteneur-articles-actualites .conteneur-titre .description .plus {
   display: none;
 }
-
-.conteneur-articles-actualites:last-child {
-  margin-bottom: 2em;
-}
-
-.conteneur-image {
+.conteneur-articles-actualites .conteneur-image {
   height: 275px;
   width: 425px;
   margin-bottom: 2em;
 }
-.conteneur-image img {
+.conteneur-articles-actualites .conteneur-image img {
   height: 100%;
   width: 100%;
   margin: 0;
+}
+
+.conteneur-articles-actualites:last-child {
+  margin-bottom: 2em;
 }
 
 @keyframes slide-up {
@@ -1857,12 +1856,6 @@ form.edit .grid-item select#endroit {
   font-family: "pf-venue", sans-serif;
   border-radius: 0;
   border: none;
-}
-form.create .grid-item.image.conteneur-image,
-form.edit .grid-item.image.conteneur-image {
-  position: relative;
-  bottom: 0;
-  right: 0;
 }
 form.create .grid-item.description,
 form.create .grid-item.image,
