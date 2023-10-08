@@ -984,38 +984,33 @@ section.billetterie .conteneur-description.voir-plus {
   list-style: none;
   margin: 0px;
 }
-
-.section_compte,
-.section_concours {
+.conteneur_concours section.concours {
   margin-bottom: 0;
+  margin-top: 0;
+  margin-left: 3rem;
+}
+.conteneur_concours section.conteneur-activites .conteneur-bordure {
+  margin-bottom: 1rem;
+}
+.conteneur_concours section.conteneur-activites .conteneur-bordure .titre.date {
+  width: 1300px;
+}
+.conteneur_concours section.conteneur-activites .conteneur-bordure .titre.date h2 {
+  padding-top: 0;
+}
+.conteneur_concours section.conteneur-activites .conteneur-bordure .titre.scene {
+  width: 900px;
+}
+.conteneur_concours section.conteneur-activites .conteneur-bordure .titre.scene h2 {
+  padding-top: 0;
+}
+.conteneur_concours section.conteneur-activites .conteneur-bordure .titre.heure {
+  width: 400px;
+}
+.conteneur_concours section.conteneur-activites .conteneur-bordure .titre.heure h2 {
+  padding-top: 0;
 }
 
-@media only screen and (max-width: 1200px) {
-  section.concours {
-    margin: 0;
-  }
-  section.conteneur-activites .conteneur-bordure {
-    margin-bottom: 1rem;
-  }
-  section.conteneur-activites .conteneur-bordure .titre.date {
-    width: 1300px;
-  }
-  section.conteneur-activites .conteneur-bordure .titre.date h2 {
-    padding-top: 0;
-  }
-  section.conteneur-activites .conteneur-bordure .titre.scene {
-    width: 900px;
-  }
-  section.conteneur-activites .conteneur-bordure .titre.scene h2 {
-    padding-top: 0;
-  }
-  section.conteneur-activites .conteneur-bordure .titre.heure {
-    width: 400px;
-  }
-  section.conteneur-activites .conteneur-bordure .titre.heure h2 {
-    padding-top: 0;
-  }
-}
 .h2_connexion {
   margin: 0 0 0 2em;
 }
@@ -2648,7 +2643,7 @@ section.hero {
   margin: 0;
   font-family: "pf-venue", sans-serif;
   text-transform: uppercase;
-  padding-top: 0.8rem;
+  padding-top: 1rem;
   padding-left: 26px;
 }
 .btn-concours .conteneur-span, .btn-compte .conteneur-span {
@@ -2748,6 +2743,7 @@ form button.supprimer {
 .reserver a.btn-reserver p {
   padding-top: 0.8rem;
   color: #030303;
+  padding-left: 1rem;
 }
 .reserver:hover {
   background-color: #030303;

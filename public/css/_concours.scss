@@ -38,37 +38,33 @@
         list-style: none;
         margin: 0px;
     }
+    section.concours{
+                margin-bottom: 0;
+                margin-top: 0;
+                margin-left: 3rem;
+            }
+    section.conteneur-activites .conteneur-bordure {
+        margin-bottom: 1rem;
+    }
+    section.conteneur-activites .conteneur-bordure .titre.date{
+        width: 1300px;
+        h2{
+            padding-top: 0;
+        }
+    }
+    section.conteneur-activites .conteneur-bordure .titre.scene{
+        width: 900px;
+        h2{
+            padding-top: 0;
+        }
+    }
+    section.conteneur-activites .conteneur-bordure .titre.heure{
+        width: 400px;
+        h2{
+            padding-top: 0;
+        }
+    }
 }
 
-.section_compte,
-.section_concours {
-    margin-bottom: 0;
-}
-@media only screen and (max-width: 1200px){
-    section.concours{
-        margin: 0;
-    }
-    section.conteneur-activites .conteneur-bordure {
-    margin-bottom: 1rem;
-}
-section.conteneur-activites .conteneur-bordure .titre.date{
-    width: 1300px;
-    h2{
-        padding-top: 0;
-    }
-}
-section.conteneur-activites .conteneur-bordure .titre.scene{
-    width: 900px;
-    h2{
-        padding-top: 0;
-    }
-}
-section.conteneur-activites .conteneur-bordure .titre.heure{
-    width: 400px;
-    h2{
-        padding-top: 0;
-    }
-}
-}
 
 
