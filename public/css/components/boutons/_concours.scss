@@ -19,7 +19,7 @@
         margin: 0;
         font-family: "pf-venue", sans-serif;
         text-transform: uppercase;
-        padding-top: 15px;
+        padding-top: 0.8rem;
         padding-left: 26px;
     }
 
@@ -29,8 +29,7 @@
         width: 2rem;
         border-radius: 5px;
         display: inline-block;
-        margin-top: 14px;
-        margin-right: 13px;
+        margin-top: 0.7rem;
 
         span {
             color: $noir;

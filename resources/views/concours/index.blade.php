@@ -6,12 +6,12 @@
 
         <div class="conteneur_le_concours">
             <h1>concours</h1>
-            <section class="conteneur-activites">
+            <section class="conteneur-activites concours">
                 <div class="conteneur-date">
                     <div class="conteneur-bordure">
                         <div class="bordure activites">
                         </div>
-                        <div class="titre">
+                        <div class="titre date">
                             <h2>
                                 <span style="animation-delay: 0.6s">2</span>
                                 <span style="animation-delay: 0.8s">0</span>
@@ -29,7 +29,7 @@
                     <div class="conteneur-bordure">
                         <div class="bordure activites">
                         </div>
-                        <div class="titre">
+                        <div class="titre scene">
                             <h2>
                                 <span style="animation-delay: 0.6s">S</span>
                                 <span style="animation-delay: 0.8s">C</span>
@@ -47,7 +47,7 @@
                     <div class="conteneur-bordure">
                         <div class="bordure activites">
                         </div>
-                        <div class="titre">
+                        <div class="titre heure">
                             <h2>
                                 <span style="animation-delay: 0.6s">1</span>
                                 <span style="animation-delay: 0.8s">8</span>

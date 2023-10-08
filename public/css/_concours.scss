@@ -1,18 +1,18 @@
 .conteneur_concours {
     background-color: $noir;
 
- 
+
     h2{
         color: $rose;
-        margin-left: 100px;
         padding-top: 30px;
+        margin-left: 50px;
      }
 
     p.concours {
         margin-left: 50px;
         margin-right: 50px;
         margin-bottom: 0px;
-     
+
     }
 
     .conteneur_le_concours {
@@ -28,7 +28,7 @@
         color: $noir;
         list-style: none;
     }
-    
+
     .concours_bg {
         margin: 0;
         padding-bottom: 20px;
@@ -44,6 +44,31 @@
 .section_concours {
     margin-bottom: 0;
 }
-
+@media only screen and (max-width: 1200px){
+    section.concours{
+        margin: 0;
+    }
+    section.conteneur-activites .conteneur-bordure {
+    margin-bottom: 1rem;
+}
+section.conteneur-activites .conteneur-bordure .titre.date{
+    width: 1300px;
+    h2{
+        padding-top: 0;
+    }
+}
+section.conteneur-activites .conteneur-bordure .titre.scene{
+    width: 900px;
+    h2{
+        padding-top: 0;
+    }
+}
+section.conteneur-activites .conteneur-bordure .titre.heure{
+    width: 400px;
+    h2{
+        padding-top: 0;
+    }
+}
+}
 
 

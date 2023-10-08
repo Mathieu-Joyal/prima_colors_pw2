@@ -680,18 +680,13 @@ button.voir.activite {
     display: none;
   }
 }
-@media only screen and (max-width: 768px) and (max-width: 375px) {
+@media only screen and (max-width: 375px) {
   section {
     margin: 3rem;
   }
   h1 {
     margin: 0;
     text-align: center;
-  }
-}
-@media only screen and (max-width: 768px) {
-  p {
-    font-size: 20px;
   }
 }
 section.conteneur-actualites .titre {
@@ -961,8 +956,8 @@ section.billetterie .conteneur-description.voir-plus {
 }
 .conteneur_concours h2 {
   color: #eca6d9;
-  margin-left: 100px;
   padding-top: 30px;
+  margin-left: 50px;
 }
 .conteneur_concours p.concours {
   margin-left: 50px;
@@ -995,6 +990,32 @@ section.billetterie .conteneur-description.voir-plus {
   margin-bottom: 0;
 }
 
+@media only screen and (max-width: 1200px) {
+  section.concours {
+    margin: 0;
+  }
+  section.conteneur-activites .conteneur-bordure {
+    margin-bottom: 1rem;
+  }
+  section.conteneur-activites .conteneur-bordure .titre.date {
+    width: 1300px;
+  }
+  section.conteneur-activites .conteneur-bordure .titre.date h2 {
+    padding-top: 0;
+  }
+  section.conteneur-activites .conteneur-bordure .titre.scene {
+    width: 900px;
+  }
+  section.conteneur-activites .conteneur-bordure .titre.scene h2 {
+    padding-top: 0;
+  }
+  section.conteneur-activites .conteneur-bordure .titre.heure {
+    width: 400px;
+  }
+  section.conteneur-activites .conteneur-bordure .titre.heure h2 {
+    padding-top: 0;
+  }
+}
 .h2_connexion {
   margin: 0 0 0 2em;
 }
@@ -2627,7 +2648,7 @@ section.hero {
   margin: 0;
   font-family: "pf-venue", sans-serif;
   text-transform: uppercase;
-  padding-top: 15px;
+  padding-top: 0.8rem;
   padding-left: 26px;
 }
 .btn-concours .conteneur-span, .btn-compte .conteneur-span {
@@ -2636,8 +2657,7 @@ section.hero {
   width: 2rem;
   border-radius: 5px;
   display: inline-block;
-  margin-top: 14px;
-  margin-right: 13px;
+  margin-top: 0.7rem;
 }
 .btn-concours .conteneur-span span, .btn-compte .conteneur-span span {
   color: #030303;
@@ -2711,35 +2731,36 @@ form button.supprimer {
 }
 
 .reserver {
-  display: flex;
-  justify-content: space-around;
+  flex-direction: row;
   background-color: #eca6d9;
   color: #030303;
   cursor: pointer;
   width: 325px;
   height: 65px;
-  text-align: center;
-  margin-bottom: 1rem;
   box-sizing: border-box;
 }
-.reserver a {
-  color: #030303;
-  font-size: 1.5em;
+.reserver a.btn-reserver {
+  display: flex;
+  justify-content: space-around;
   font-family: "pf-venue", sans-serif;
   text-transform: uppercase;
 }
+.reserver a.btn-reserver p {
+  padding-top: 0.8rem;
+  color: #030303;
+}
 .reserver:hover {
   background-color: #030303;
-  transition: background-color, 0.3s;
+  transition: background-color 0.3s;
 }
-.reserver:hover a,
+.reserver:hover a.btn-reserver p,
 .reserver:hover span.material-icons {
   color: #eca6d9;
 }
 .reserver .btn-reserver .material-icons {
   font-size: 50px;
   color: #030303;
-  vertical-align: middle;
+  padding-top: 0.5rem;
   padding-left: 2rem;
 }
 

@@ -25,4 +25,5 @@
 </body>
 
 <x-footer-admin />
+
 </html>

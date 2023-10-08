@@ -246,8 +246,8 @@ button.voir.activite {
             display: none;
         }
     }
-
-    @media only screen and (max-width: 375px) {
+}
+@media only screen and (max-width: 375px) {
         section {
             margin: 3rem;
         }
@@ -258,11 +258,6 @@ button.voir.activite {
         }
     }
 
-    p {
-        font-size: 20px;
-    }
-
-}
 
 
 
