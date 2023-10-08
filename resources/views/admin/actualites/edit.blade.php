@@ -49,7 +49,10 @@
             <div class="conteneur-bouttons">
 
                 <button class="modifier" type="submit">
-                    Modifier une activitÉ
+                    Modifier l'actualité
+                    <span class="edit">
+                        ✐
+                    </span>
                 </button>
             </div>
         </form>

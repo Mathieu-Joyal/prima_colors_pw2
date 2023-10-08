@@ -95,6 +95,9 @@
 
                 <button class="modifier" type="submit">
                     Modifier l'activitÉ
+                    <span class="edit">
+                        ✐
+                    </span>
                 </button>
             </div>
         </form>
