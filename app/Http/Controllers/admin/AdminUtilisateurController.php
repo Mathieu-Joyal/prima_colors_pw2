@@ -88,7 +88,7 @@ class AdminUtilisateurController extends Controller
             "prenom" => "required|max:255",
             "nom" => "required|max:255",
             'email' => 'required|email|unique:users,email,' . $user->id,
-            "ville" => "required",
+            "ville" => "nullable",
             "age" =>"required|integer|min:18|max:99",
             "password" => "nullable|min:8",
             "confirmation_password" => "same:password"
@@ -100,7 +100,6 @@ class AdminUtilisateurController extends Controller
             "email.required" => "Le courriel est requis",
             "email.email" => "Le courriel doit avoir un format valide",
             "email.unique" => "Ce courriel ne peut pas être utilisé",
-            "ville.required" => "La ville est requise",
             "age.required" => "L'âge est requise",
             "age.min" => "Vous devez avoir un minimum de :min ans",
             "age.max" => "Vous devez avoir un maximum de :max ans",

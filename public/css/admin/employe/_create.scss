@@ -5,4 +5,11 @@
 .creation_employe  {
     display: flex;
     justify-content: center;
+
+    .notice {
+        font-size: 0.75em;
+        color: red;
+        margin: 0 0 .25rem 0;
+    }
 }
+

@@ -71,6 +71,10 @@
                             type="password"
                         >
                     </div>
+                    <p class="notice">Le mot de passe doit contenir au moins: </p>
+                    <p class="notice">- une lettre majuscule </p>
+                    <p class="notice">- un chiffre </p>
+                    <p class="notice">- un caractère spécial (@, $, !, *, %, ?, &)</p>
                     <x-forms.erreur champ="password" />
                 </div>
                 <div>

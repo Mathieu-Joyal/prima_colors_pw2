@@ -59,7 +59,7 @@ class AdminEnregistrementController extends Controller
             "prenom" => "required|max:255",
             "nom" => "required|max:255",
             "identifiant" => "required|integer|min:1000000|max:9999999|unique:employes,identifiant",
-            "password" => "required|min:8",
+            "password" => "required|min:8|regex:/^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%?&]+$/",
             "confirmation_password" => "required|same:password",
             "roles" => "required"
         ],[
@@ -74,6 +74,7 @@ class AdminEnregistrementController extends Controller
             "identifiant.unique" => "Cet identifiant ne peut pas être utilisé",
             "password.required" => "Le mot de passe est requis",
             "password.min" => "Le mot de passe doit avoir une longueur minimum de :min caractères",
+            "password.regex" => "Le mot de passe doit contenir au moins une lettre majuscule, un chiffre et un caractère spécial (@, $, !, %, ?, &)",
             "confirmation_password.required" => "La confirmation du mot de passe est requise",
             "confirmation_password.same" => "Le mot de passe n'a pu être confirmé",
             "roles.required" => "Le role est requis",

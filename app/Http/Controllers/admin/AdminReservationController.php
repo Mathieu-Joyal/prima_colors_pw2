@@ -33,6 +33,9 @@ class AdminReservationController extends Controller {
                         ->orWhere('email', 'like', '%' . $requete . '%');
         });
 
+        // Placer en order croissant de journée de réservation
+        $requete_user->orderBy('forfait_id');
+
         // Récupérer les réservations en fonction de la requête
         $users = $requete_user->get();
 

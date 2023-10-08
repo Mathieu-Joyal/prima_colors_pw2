@@ -1053,6 +1053,11 @@ section.billetterie .conteneur-description.voir-plus {
 .conteneur_enregistrement .administration {
   padding: 2em 4em;
 }
+.conteneur_enregistrement .notice {
+  font-size: 0.75em;
+  color: red;
+  margin: 0 0 0.25rem 0;
+}
 
 .connexion_conteneur_membre {
   padding: 0.5em 1em;
@@ -1589,6 +1594,11 @@ section.billetterie .conteneur-description.voir-plus {
 .creation_employe {
   display: flex;
   justify-content: center;
+}
+.creation_employe .notice {
+  font-size: 0.75em;
+  color: red;
+  margin: 0 0 0.25rem 0;
 }
 
 .h3_user {
