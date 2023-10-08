@@ -1,6 +1,4 @@
-<x-layout titre="Connectez-vousAAAAA">
-
-    <x-header />
+<x-layout titre="Connectez-vous">
 
     <h2>Connectez-vous</h2>
 

@@ -35,8 +35,17 @@ class DatabaseSeeder extends Seeder
             "prenom" => "Éric",
             "nom" => "Gagné",
             "identifiant" => "1234567",
-            "password" => "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi", // password
+            "password" => "$2y$10$8XVDG3VFfQJWJJDCglk0d.miBi6sugcbVKEdfOxsSCFik01bccrdy",
             "role_id" => 1
+        ]);
+
+        // Ajout d'un employé
+        Employe::factory()->create([
+            "prenom" => "Marie",
+            "nom" => "Bertrand",
+            "identifiant" => "1234568",
+            "password" => "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+            "role_id" => 2
         ]);
 
         // Ajout d'utilisateurs fictifs

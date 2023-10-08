@@ -2,6 +2,8 @@
 
     <h2 class="h2_connexion">Connectez-vous</h2>
 
+    <x-alertes cle="succes" class="alerte_succes"/>
+
     <div class="conteneur_connexion">
 
         <section class="utilisateur">

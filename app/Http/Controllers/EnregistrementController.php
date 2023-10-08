@@ -32,9 +32,9 @@ class EnregistrementController extends Controller
             "prenom" => "required|max:255",
             "nom" => "required|max:255",
             "email" => "required|email|unique:users,email",
-            "ville" => "required",
+            "ville" => "nullable",
             "age" =>"required|integer|min:18|max:99",
-            "password" => "required|min:8",
+            "password" => "required|min:8|regex:/^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/",
             "confirmation_password" => "required|same:password"
         ],[
             "prenom.required" => "Le prénom est requis",
@@ -44,12 +44,12 @@ class EnregistrementController extends Controller
             "email.required" => "Le courriel est requis",
             "email.email" => "Le courriel doit avoir un format valide",
             "email.unique" => "Ce courriel ne peut pas être utilisé",
-            "ville.required" => "La ville est requise",
             "age.required" => "L'âge est requise",
             "age.min" => "Vous devez avoir un minimum de :min ans",
             "age.max" => "Vous devez avoir un maximum de :max ans",
             "password.required" => "Le mot de passe est requis",
             "password.min" => "Le mot de passe doit avoir une longueur de :min caractères",
+            "password.regex" => "Le mot de passe doit contenir au moins une lettre majuscule, un chiffre et un caractère spécial (@, $, !, *, %, ?, &)",
             "confirmation_password.required" => "La confirmation du mot de passe est requise",
             "confirmation_password.same" => "Le mot de passe n'a pu être confirmé"
         ]);
@@ -74,7 +74,7 @@ class EnregistrementController extends Controller
 
         // Redirection
         return redirect()
-                ->route('connexion.create')
+                ->route('connexion.index')
                 ->with('succes', 'Votre compte a été créé');
     }
 }
