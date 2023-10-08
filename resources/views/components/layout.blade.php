@@ -12,6 +12,17 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <title>{{ $titre }}</title>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-Y"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-XXXXXXXXX-Y');
+    </script> -->
+
 </head>
 
 <x-header />
