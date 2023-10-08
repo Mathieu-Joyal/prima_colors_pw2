@@ -1,4 +1,4 @@
-<x-layout titre="Modifier {{ $user->prenom }} {{ $user->nom }} ">
+<x-layout-admin titre="Modifier {{ $user->prenom }} {{ $user->nom }} ">
 
     <x-nav-admin titre="Les Utilisateurs" route="{{ route('admin.utilisateurs.index') }}" valeur="Retour aux utilisateurs" />
 

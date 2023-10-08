@@ -1,4 +1,4 @@
-<x-layout titre="Liste des actualités">
+<x-layout-admin titre="Liste des actualités">
 
 
     <x-nav-admin titre="Les ActualitÉs" route="{{ route('admin.actualites.index') }}" valeur="Voir les actualitÉs" />

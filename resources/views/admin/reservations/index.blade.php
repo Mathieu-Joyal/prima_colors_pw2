@@ -1,4 +1,4 @@
-<x-layout titre="Liste des réservations">
+<x-layout-admin titre="Liste des réservations">
 
     <x-nav-admin
         titre="les réservations"

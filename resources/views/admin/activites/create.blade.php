@@ -1,4 +1,4 @@
-<x-layout titre="Créer une activité">
+<x-layout-admin titre="Créer une activité">
 
     <x-nav-admin titre=" Ajouter une ActivitÉs" route="{{ route('admin.activites.index') }}"
         valeur="Retour aux activitÉs" />

@@ -1,4 +1,4 @@
-<x-layout titre="Liste des activités">
+<x-layout-admin titre="Liste des activités">
 
     <x-nav-admin titre="Les ActivitÉs" route="{{ route('admin.activites.index') }}" valeur="Retour aux activitÉs" />
 

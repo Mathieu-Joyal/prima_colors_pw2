@@ -1,4 +1,4 @@
-<x-layout titre="Modifier {{ $actualite->titre }}">
+<x-layout-admin titre="Modifier {{ $actualite->titre }}">
 
     <x-nav-admin titre=" Modifier une ActualitÉs" route="{{ route('admin.actualites.index') }}"
         valeur="Retour aux actualitÉs" />
@@ -34,11 +34,15 @@
             {{-- IMAGE --}}
             <div class="grid-item image">
 
-                <label for="image" class="grid-title">Image</label>
+                <div class="conteneur-input-image">
+                    <label for="image" class="grid-title">Image</label>
+                    <x-forms.erreur champ="image" />
+                    <input id="image" name="image" type="file" class=" ">
+                </div>
 
-                <x-forms.erreur champ="image" />
-                <input id="image" name="image" type="file" class=" ">
-                <img src="{{ asset($actualite->image) }}" alt="">
+                <div class="conteneur-image edit">
+                    <img src="{{ asset($actualite->image) }}" alt="">
+                </div>
             </div>
 
             {{-- SUBMIT --}}
@@ -51,4 +55,4 @@
         </form>
     </section>
 
-    </x-layout-admin>
+</x-layout-admin>

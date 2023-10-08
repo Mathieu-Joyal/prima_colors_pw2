@@ -1,4 +1,4 @@
-<x-layout titre="Liste des employés">
+<x-layout-admin titre="Liste des employés">
 
     <x-nav-admin
         titre="Les employés"
