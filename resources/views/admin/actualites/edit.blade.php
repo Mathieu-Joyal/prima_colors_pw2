@@ -1,16 +1,13 @@
 <x-layout titre="Modifier {{ $actualite->titre }}">
 
-    <x-nav-admin titre=" Modifier une ActualitÉs" route="{{route('admin.actualites.index')}}"
+    <x-nav-admin titre=" Modifier une ActualitÉs" route="{{ route('admin.actualites.index') }}"
         valeur="Retour aux actualitÉs" />
 
     <section>
 
         {{-- FORMULAIRE --}}
-        <form class="edit actualite"
-                action="{{ route('admin.actualites.update', ['id' => $actualite->id] ) }}"
-                method="POST"
-                enctype="multipart/form-data"
-        >
+        <form class="edit actualite" action="{{ route('admin.actualites.update', ['id' => $actualite->id]) }}"
+            method="POST" enctype="multipart/form-data">
             @csrf
 
             {{-- TITRE --}}
@@ -40,13 +37,13 @@
                 <label for="image" class="grid-title">Image</label>
 
                 <x-forms.erreur champ="image" />
-                <input id="image" name="image" type="file" class=" "
-                >
-                <img src="{{asset($actualite->image)}}" alt="">
+                <input id="image" name="image" type="file" class=" ">
+                <img src="{{ asset($actualite->image) }}" alt="">
             </div>
 
+            {{-- SUBMIT --}}
             <div class="conteneur-bouttons">
-                {{-- SUBMIT --}}
+
                 <button class="modifier" type="submit">
                     Modifier une activitÉ
                 </button>
@@ -54,4 +51,4 @@
         </form>
     </section>
 
-</x-layout-admin>
+    </x-layout-admin>

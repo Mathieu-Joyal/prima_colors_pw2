@@ -1,13 +1,8 @@
 <x-layout titre="Créer une activité">
 
-    <x-nav-admin titre=" Ajouter une ActivitÉs" route="{{route('admin.activites.index')}}" valeur="Retour aux activitÉs" />
+    <x-nav-admin titre=" Ajouter une ActivitÉs" route="{{ route('admin.activites.index') }}"
+        valeur="Retour aux activitÉs" />
 
-
-    {{-- MESSAGES --}}
-    {{-- @if (session('echec'))
-            <p class="">
-                {{ session('echec') }}</p>
-        @endif --}}
     <section>
 
         {{-- FORMULAIRE --}}
@@ -22,7 +17,7 @@
                     <label for="titre" class="grid-title">Titre</label>
 
                     <input id="titre" name="titre" type="text" autofocus class=" "
-                    value="{{ old('titre') }}">
+                        value="{{ old('titre') }}">
 
                     <x-forms.erreur champ="titre" />
                 </div>
@@ -30,40 +25,22 @@
                 <!-- Date -->
                 <div class="grid-item">
                     <label for="date" class="grid-title">Date</label>
-                    <input id="date" name="date" type="date" min="2023-10-01" max="2023-10-31" autofocus class=" "
-                    value="{{ old('date') }}">
+                    <input id="date" name="date" type="date" min="2023-10-01" max="2023-10-31" autofocus
+                        class=" " value="{{ old('date') }}">
 
                     <x-forms.erreur champ="date" />
                 </div>
-
-                <script>
-                    //Selected dates
-                    document.addEventListener('DOMContentLoaded', function() {
-                        const dateInput = document.getElementById('date');
-
-                        // Define the range of allowed dates
-                        const startDate = new Date('2023-10-13');
-                        const endDate = new Date('2023-10-15');
-
-                        // Convert dates to string format YYYY-MM-DD
-                        const startDateString = startDate.toISOString().split('T')[0];
-                        const endDateString = endDate.toISOString().split('T')[0];
-
-                        dateInput.setAttribute('min', startDateString);
-                        dateInput.setAttribute('max', endDateString);
-                    });
-                </script>
 
                 <!-- Heure -->
                 <div class="grid-item">
                     <label for="heure" class="grid-title">Heure</label>
                     <input id="heure" name="heure" type="time" autofocus class=" "
-                    value="{{ old('heure') }}">
+                        value="{{ old('heure') }}">
 
                     <x-forms.erreur champ="heure" />
                 </div>
-                <!-- Endroit -->
 
+                <!-- Endroit -->
                 <div class="grid-item">
                     <label for="endroit" class="grid-title">Endroit</label>
                     <select id="endroit" name="endroit">
@@ -87,7 +64,7 @@
             <div class=" grid-item description">
                 <label for="description" class="grid-title">Description</label>
                 <input id="description" name="description" type="text" autofocus class=" "
-                value="{{ old('description') }}">
+                    value="{{ old('description') }}">
 
                 <x-forms.erreur champ="description" />
             </div>
@@ -112,4 +89,22 @@
 
     </section>
 
-</x-layout-admin>
+    </x-layout-admin>
+
+    <script>
+        //Selected dates
+        document.addEventListener('DOMContentLoaded', function() {
+            const dateInput = document.getElementById('date');
+
+            // Define the range of allowed dates
+            const startDate = new Date('2023-10-13');
+            const endDate = new Date('2023-10-15');
+
+            // Convert dates to string format YYYY-MM-DD
+            const startDateString = startDate.toISOString().split('T')[0];
+            const endDateString = endDate.toISOString().split('T')[0];
+
+            dateInput.setAttribute('min', startDateString);
+            dateInput.setAttribute('max', endDateString);
+        });
+    </script>

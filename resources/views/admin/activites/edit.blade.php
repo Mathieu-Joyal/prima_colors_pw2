@@ -6,13 +6,13 @@
     <section>
 
         {{-- FORMULAIRE --}}
-        {{-- ******************* Ajout pour recevoir l'id ******************** --}}
+
         <form class="edit" action="{{ route('admin.activites.update', ['id' => $activite->id]) }}" method="POST"
             enctype="multipart/form-data">
             @csrf
-            {{-- ******************************** --}}
 
             <div class="conteneur-grid">
+
                 <!-- Titre -->
                 <div class="grid-item">
                     <label for="titre" class="grid-title">Titre</label>
@@ -90,9 +90,9 @@
                 </div>
                 <x-forms.erreur champ="image" />
             </div>
-
+            {{-- SUBMIT --}}
             <div class="conteneur-bouttons">
-                {{-- SUBMIT --}}
+
                 <button class="modifier" type="submit">
                     Modifier l'activitÉ
                 </button>
@@ -100,7 +100,7 @@
         </form>
     </section>
 
-</x-layout-admin>
+    </x-layout-admin>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -118,4 +118,3 @@
             dateInput.setAttribute('max', endDateString);
         });
     </script>
-
