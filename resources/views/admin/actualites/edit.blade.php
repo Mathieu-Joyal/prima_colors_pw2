@@ -36,6 +36,7 @@
 
                 <div class="conteneur-input-image">
                     <label for="image" class="grid-title">Image</label>
+                    <p class="notice">Seul les fichiers PNG, JPG et JPEG sont acceptés</p>
                     <x-forms.erreur champ="image" />
                     <input id="image" name="image" type="file" class=" ">
                 </div>
@@ -49,7 +50,10 @@
             <div class="conteneur-bouttons">
 
                 <button class="modifier" type="submit">
-                    Modifier une activitÉ
+                    Modifier l'actualité
+                    <span class="edit">
+                        ✐
+                    </span>
                 </button>
             </div>
         </form>

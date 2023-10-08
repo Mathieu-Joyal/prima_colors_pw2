@@ -6,14 +6,20 @@
     <button class="ajouter">
         <a href="{{$routeAjouter}}" class="">
             Ajouter une {{$nom}}
+            <span class="material-icons">
+                add
+            </span>
         </a>
     </button>
 
     {{-- MODIFICATION --}}
     <button class="modifier">
         <a href="{{ $routeModifier}}">
-            Modifier une {{$nom}}
+            Modifier l' {{$nom}}
         </a>
+        <span class="edit">
+            ✐
+        </span>
     </button>
 
     {{-- SUPPRESSION --}}
@@ -23,6 +29,9 @@
         <input type="hidden" name="id" value="{{ $valeur }}">
         <button class="supprimer" type="submit">
             Supprimer l'{{$nom}}
+            <span class="delete">
+                ♵
+            </span>
         </button>
     </form>
 </div>

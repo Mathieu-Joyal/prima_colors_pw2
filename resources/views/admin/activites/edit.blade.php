@@ -83,7 +83,7 @@
             <!-- Image -->
             <div class=" grid-item image">
                 <label for="image" class="grid-title">Image</label>
-
+                <p class="notice">Seul les fichiers PNG, JPG et JPEG sont acceptés</p>
                 <input id="image" name="image" type="file">
                 <div class="conteneur-image">
                     <img src="{{ asset($activite->image) }}" alt="">
@@ -95,6 +95,9 @@
 
                 <button class="modifier" type="submit">
                     Modifier l'activitÉ
+                    <span class="edit">
+                        ✐
+                    </span>
                 </button>
             </div>
         </form>
