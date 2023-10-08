@@ -250,6 +250,9 @@ img.img_forfait,
 img.img_apropos {
   max-width: 50%;
   margin-right: 20px;
+}
+
+img.couleur-image {
   animation: CouleurImage 4.5s ease-in-out;
 }
 
@@ -263,12 +266,18 @@ img.img_apropos {
 
 .texte_droite {
   padding-left: 50px;
-  animation: fadeIn 2s ease-in-out;
+  opacity: 0;
+}
+.texte_droite.fade-in {
+  animation: fadeIn 2s ease-in-out forwards;
 }
 
 .texte_gauche {
   padding-right: 50px;
-  animation: fadeInDeux 2s ease-in-out;
+  opacity: 0;
+}
+.texte_gauche.fade-in-2 {
+  animation: fadeInDeux 2s ease-in-out forwards;
 }
 
 /* Styles communs pour les titres */
@@ -286,6 +295,11 @@ h3.accueil_forfait {
   color: #eca6d9;
 }
 
+h3.accueil_activite,
+h3.accueil_forfait,
+h3.accueil_apropos {
+  position: relative;
+}
 h3.accueil_activite::after,
 h3.accueil_forfait::after,
 h3.accueil_apropos::after {
@@ -298,7 +312,11 @@ h3.accueil_apropos::after {
   height: 2px;
   background-color: white;
   overflow: hidden;
-  animation: underlineEffect 3s ease-in 1.5 forwards; /* Durée et animation */
+}
+h3.accueil_activite:hover::after,
+h3.accueil_forfait:hover::after,
+h3.accueil_apropos:hover::after {
+  animation: underlineEffect 3s ease-in 1.5 forwards;
 }
 
 /* Styles communs pour les paragraphes */
@@ -355,7 +373,6 @@ a.accueil:hover span.material-icons {
   color: white;
 }
 
-/* Styles spécifiques pour les couleurs */
 @keyframes fadeIn {
   from {
     opacity: 0;
