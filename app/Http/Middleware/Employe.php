@@ -21,7 +21,7 @@ class Employe {
             return $next($request);
         }
 
-        return redirect()->route('connexion.create');
+        return redirect()->route('connexion.index');
     }
 }
 
