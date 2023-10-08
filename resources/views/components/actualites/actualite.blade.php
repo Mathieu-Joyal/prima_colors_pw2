@@ -56,7 +56,7 @@
             </div>
 
             <div class="conteneur-image">
-                <img class="thumbnail" src="{{ $actualite->image }}" alt="image de l'actualite">
+                <img class="thumbnail" src="{{ asset($actualite->image) }}" alt="image de l'actualite">
 
         </article>
     @endforeach
