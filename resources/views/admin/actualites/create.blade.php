@@ -46,6 +46,10 @@
 
                 <button class="ajouter" type="submit">
                     Ajouter une activitÉ
+                    <span class="material-icons">
+                        add
+                    </span>
+                </a>
                 </button>
             </div>
         </form>

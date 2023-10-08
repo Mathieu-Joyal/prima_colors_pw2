@@ -90,23 +90,24 @@ section.conteneur-actualites {
             }
         }
     }
+    .conteneur-image {
+        height: 275px;
+        width: 425px;
+        margin-bottom: 2em;
+
+        img {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+        }
+    }
 }
 
 .conteneur-articles-actualites:last-child {
     margin-bottom: 2em;
 }
 
-.conteneur-image {
-    height: 275px;
-    width: 425px;
-    margin-bottom: 2em;
 
-    img {
-        height: 100%;
-        width: 100%;
-        margin: 0;
-    }
-}
 
 @keyframes slide-up {
     0% {
