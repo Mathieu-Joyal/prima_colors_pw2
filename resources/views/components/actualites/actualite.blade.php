@@ -26,7 +26,7 @@
     </div>
 
     @foreach ($actualites as $actualite)
-        <article class="conteneur-articles-actualites">
+        <article class="conteneur-articles-actualites" id="{{ $actualite->id }}">
 
             <div class="conteneur-gauche ">
 

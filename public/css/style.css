@@ -279,6 +279,11 @@ h3.accueil_apropos {
   margin-bottom: 30px;
   position: relative;
   overflow: hidden;
+  color: #eeb15e;
+}
+
+h3.accueil_forfait {
+  color: #eca6d9;
 }
 
 h3.accueil_activite::after,

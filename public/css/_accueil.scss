@@ -154,6 +154,12 @@ h3.accueil_apropos {
     margin-bottom: 30px;
     position: relative;
     overflow: hidden;
+    color: $jaune;
+
+}
+
+h3.accueil_forfait{
+    color: $rose;
 }
 
 h3.accueil_activite::after,
@@ -178,6 +184,7 @@ p.accueil_apropos {
     font-size: 36px;
     margin-bottom: 20px;
     margin-bottom: 50px;
+   
 }
 
 /* Styles communs pour les liens */

@@ -1,15 +1,13 @@
 <x-layout titre="Festival Prima-Colors | Accueil">
 
-    {{-- Ajouter le id mon_video --}}
     <div class="video-container">
 
         <video id="mon_video" autoplay muted>
-            <source src="../video\prima-colors_video_low.mp4" type="video/mp4">
+            <source src="../video\prima-colors_video_modif.mp4"type="video/mp4">
             Votre navigateur ne prend pas en charge la lecture vidéo.
         </video>
     </div>
 
-    {{-- Ajout d'un bouton toggle pour le son --}}
     <button class="volume"><span class="material-icons">volume_up</span></button>
 
     <x-bannieres.countdown class="grand" />
@@ -72,7 +70,7 @@
         <h1 class="accueil_actualite">Actualités de nos éditions antérieures</h1>
         <article class="titre_actualite">
             @foreach ($actualites as $actualite)
-                <a href="/actualites" class="vers_actualite">
+                <a href="/actualites#{{ $actualite->id }}" class="vers_actualite">
                     <span>{{ $actualite->titre }}</span>
                     <img src="../{{ $actualite->image }}" alt="{{ $actualite->titre }}">
                 </a>
