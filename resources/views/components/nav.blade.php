@@ -5,28 +5,27 @@
         </span>
     </a>
     <div class="contenu_nav ">
-    <img src="{{ asset('img/logo/logo-header.svg') }}" alt="" class="logo-nav">
+        <img src="{{ asset('img/logo/logo-header.svg') }}" alt="" class="logo-nav">
 
-    <div class="menu_nav">
-    <a href="{{ route ('accueil') }}" class="item_nav menu-item">
-        <div class="nav">Accueil</div>
-    </a>
-    <a href="{{ route ('/activites') }}" class="item_nav menu-item">
-        <div class="nav">Activités</div>
-    </a>
-    <a href="{{ route ('/concours') }}" class="item_nav menu-item">
-        <div class="nav">Concours</div>
-    </a>
-    <a href="{{ route ('/apropos') }}" class="item_nav menu-item">
-        <div class="nav">À Propos</div>
-    </a>
-    <a href="{{ route ('/actualites') }}" class="item_nav menu-item">
-        <div class="nav">Actualités</div>
-    </a>
-</div>
+        <div class="menu_nav">
+            <a href="{{ route ('accueil') }}" class="item_nav menu-item">
+                <div class="nav">Accueil</div>
+            </a>
+            <a href="{{ route ('activites.index') }}" class="item_nav menu-item">
+                <div class="nav">Activités</div>
+            </a>
+            <a href="{{ route ('concours.index') }}" class="item_nav menu-item">
+                <div class="nav">Concours</div>
+            </a>
+            <a href="{{ route ('apropos.index') }}" class="item_nav menu-item">
+                <div class="nav">À Propos</div>
+            </a>
+            <a href="{{ route ('actualites.index') }}" class="item_nav menu-item">
+                <div class="nav">Actualités</div>
+            </a>
+        </div>
 
-
-        <a href="/forfaits" class="billet">
+        <a href="{{ route ('forfaits.index') }}" class="billet">
             <p class="texte">Billets</p>
         </a>
 
@@ -70,7 +69,6 @@
 </section>
 
 <script>
-    
     //MENU HAMBURGER
     document.addEventListener('DOMContentLoaded', function() {
         const menuIcon = document.querySelector('.menuIcon');
