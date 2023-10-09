@@ -5,9 +5,9 @@
 
     {{-- Montrer le lien de façon conditionelle  --}}
     @if (!Str::endsWith(Route::currentRouteName(), '.index'))
-        <div class="boutton-retour">
-            <a href="{{ $route }}" class="">{{ $valeur }}</a>
-        </div>
+    <div class="boutton-retour">
+        <a href="{{ $route }}" class="">{{ $valeur }}</a>
+    </div>
     @endif
 
     {{-- LIEN RETOUR --}}
@@ -16,7 +16,5 @@
         <a href="{{ route('admin.index') }}">Accueil - Administration</a>
     </div>
 
-        <x-boutons.deconnexion routeDeconnexion="{{ route('admin.deconnexion') }}" />
-
-
+    <x-boutons.deconnexion routeDeconnexion="{{ route('admin.deconnexion') }}" />
 </div>

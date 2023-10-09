@@ -42,7 +42,6 @@
         @forelse ($activites as $key =>$activite)
             <article class="conteneur-titre-activites-admin">
                 <div class="activites-admin">
-
                     <div class="conteneur-grid">
 
                         <!-- Row 1 -->
@@ -99,5 +98,5 @@
             <p>Aucune activité trouvé pour cette date</p>
         @endforelse
     </section>
-
-    </x-layout-admin>
+    
+</x-layout-admin>

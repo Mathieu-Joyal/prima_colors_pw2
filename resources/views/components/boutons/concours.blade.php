@@ -1,5 +1,3 @@
-
-
 <div class="btn-concours">
     <a href="/concours" class="concours">
             <p>Inscription à CréARTives</p>
@@ -8,6 +6,5 @@
                 add
             </span>
         </div>
-
     </a>
 </div>

@@ -85,14 +85,12 @@ section.conteneur-activites {
         transition: opacity 2s ease, transform 2s ease;
         padding-bottom: 0;
 
-
         .conteneur-image {
             height: 150px;
             width: calc(100% - 300px);
             margin-left: 0;
             cursor: pointer;
             padding-top: 2em;
-
 
             img {
                 height: 100%;
@@ -204,6 +202,7 @@ section.conteneur-activites {
 button.voir.activite {
     margin-bottom: 2em;
 }
+
 //RESPONSIVE
 @media only screen and (max-width: 1200px) {
     section{
@@ -237,7 +236,6 @@ button.voir.activite {
         .conteneur-jours{
             padding-left: 3rem;
         }
-
     }
 
     .conteneur-bordure {
@@ -250,6 +248,7 @@ button.voir.activite {
         }
     }
 }
+
 @media only screen and (max-width: 450px) {
 
         h1 {

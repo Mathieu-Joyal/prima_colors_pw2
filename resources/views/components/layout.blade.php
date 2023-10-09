@@ -28,13 +28,11 @@
 <x-header />
 
 <body class="concours_body">
-
     <main>
 
         {{ $slot }}
 
     </main>
-
 </body>
 
 <x-footer />

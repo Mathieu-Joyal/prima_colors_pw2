@@ -1,11 +1,9 @@
 <x-layout-admin titre="Liste des actualités">
 
-
     <x-nav-admin titre="Les ActualitÉs" route="{{ route('admin.actualites.index') }}" valeur="Voir les actualitÉs" />
 
     <x-alertes cle="succes" class="alerte_succes" />
     <x-alertes cle="erreur" class="alerte_erreur" />
-
 
     <section class="formulaire_recherche actualite">
 
@@ -32,19 +30,14 @@
             </div>
         </form>
         <div class="bouton_liste_complete">
-
             <x-boutons.liste_complete route="{{ route('admin.actualites.index') }}" valeur="actualites" />
-
         </div>
-
     </section>
 
     <section>
         @forelse ($actualites as $actualite)
             <article class="conteneur-articles-actualites admin">
-
                 <div class="conteneur-gauche">
-
                     <div class="date-publication">
                         <h4> {{ $actualite->date_publication }}</h4>
                     </div>
@@ -55,9 +48,8 @@
                         </div>
 
                         <div class="description-actualites">
-                            <p class="">{{ $actualite->description }}
-                            </p>
-                            <p>{{ $actualite->description }} </p>
+                            <p class="">{{ $actualite->description }}</p>
+                            <p>{{ $actualite->description }}</p>
                         </div>
                     </div>
                 </div>

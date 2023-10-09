@@ -1,4 +1,3 @@
-
 <div class="btn-compte">
     <a href="/connexion" class="compte">
             <p>Créer compte</p>
@@ -7,6 +6,5 @@
                 add
             </span>
         </div>
-
     </a>
 </div>

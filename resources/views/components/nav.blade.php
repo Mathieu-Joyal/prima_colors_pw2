@@ -74,19 +74,19 @@
 </section>
 
 <script>
+    
     //MENU HAMBURGER
-document.addEventListener('DOMContentLoaded', function() {
-    const menuIcon = document.querySelector('.menuIcon');
-    const closeIcon = document.querySelector('.closeIcon');
-    const menu = document.querySelector('.menu');
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuIcon = document.querySelector('.menuIcon');
+        const closeIcon = document.querySelector('.closeIcon');
+        const menu = document.querySelector('.menu');
 
-    menuIcon.addEventListener('click', function() {
-        menu.style.display = 'block';
+        menuIcon.addEventListener('click', function() {
+            menu.style.display = 'block';
+        });
+
+        closeIcon.addEventListener('click', function() {
+            menu.style.display = 'none';
+        });
     });
-
-    closeIcon.addEventListener('click', function() {
-        menu.style.display = 'none';
-    });
-});
-
 </script>

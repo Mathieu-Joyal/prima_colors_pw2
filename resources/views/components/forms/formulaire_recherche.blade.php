@@ -2,10 +2,7 @@
 
 <section class="formulaire_recherche">
 
-    <form class="administration la_recherche"
-            action="{{ $route }}"
-            method="GET"
-    >
+    <form class="administration la_recherche" action="{{ $route }}" method="GET">
         @csrf
 
         <div class="barre_recherche">
@@ -14,13 +11,7 @@
                 Recherche:
             </label>
 
-                <input
-                    id="user_recherche"
-                    name="user_recherche"
-                    type="text"
-                    placeholder="{{ $placeholder }}"
-                    autofocus
-                >
+            <input id="user_recherche" name="user_recherche" type="text" placeholder="{{ $placeholder }}" autofocus>
         </div>
 
         <button type="submit">
@@ -30,10 +21,7 @@
 
     <div class="bouton_liste_complete">
 
-        <x-boutons.liste_complete
-            route="{{ $route }}"
-            valeur="{{ $valeur }}"
-        />
+        <x-boutons.liste_complete route="{{ $route }}" valeur="{{ $valeur }}" />
 
     </div>
 </section>

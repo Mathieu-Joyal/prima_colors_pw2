@@ -28,10 +28,9 @@
                 </div>
             </a>
         </div>
-
     </div>
 
-    <img src="img/logo/logo.png" alt="" class="logo">
+    <img src="img/logo/logo.png" alt="logo festival" class="logo">
 
     <p class="slogan">Prima-Colors : L'Art de Vivre, Peint en Mille Couleurs !</p>
 
