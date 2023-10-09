@@ -201,6 +201,7 @@ section.conteneur-activites {
 
 button.voir.activite {
     margin-bottom: 2em;
+    margin-top: 2em;
 }
 
 //RESPONSIVE
@@ -214,6 +215,10 @@ button.voir.activite {
                 display: none;
             }
         }
+    }
+    button.voir.activite {
+        margin-bottom: 2em;
+        margin-top: 2em;
     }
 
     section.conteneur-activites article.activites .conteneur-titre {

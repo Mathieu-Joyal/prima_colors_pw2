@@ -48,6 +48,12 @@
 
                 <div class="description">
                     <p>{{ $activite->description }}</p>
+                    <p>{{ $activite->description }}</p>
+                    <p>{{ $activite->description }}</p>
+                    <p>{{ $activite->description }}</p>
+                    <p>{{ $activite->description }}</p>
+                    <p>{{ $activite->description }}</p>
+                    <p>{{ $activite->description }}</p>
                 </div>
             </div>
 
@@ -130,18 +136,9 @@
             }
         }
     }
-  // // Toggle for the last article
-    // const lastArticle = document.querySelector('.conteneur-activites article:last-of-type');
-    // const lastElement = lastArticle.nextElementSibling;
 
-    // if (lastArticle && lastElement) {
-    //     if (lastArticle.style.display === 'none' || lastArticle.style.display === '') {
-    //         lastArticle.style.display = 'block';
-    //         lastElement.style.marginTop = lastArticle.clientHeight + 'px';
-    //     } else {
-    //         lastArticle.style.display = 'none';
-    //         lastElement.style.marginTop = '0';
-    //     }
-    // }
+
 </script>
+
+
 
