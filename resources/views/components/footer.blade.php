@@ -6,23 +6,23 @@
                 <div class="menu_footer">Accueil
                 </div>
             </a>
-            <a href="{{ route ('/forfaits') }}"   class="item_footer">
+            <a href="{{ route ('forfaits.index') }}"   class="item_footer">
                 <div class="menu_footer">Billets
                 </div>
             </a>
-            <a href="{{ route ('/activites') }}"  class="item_footer">
+            <a href="{{ route ('activites.index') }}"  class="item_footer">
                 <div class="menu_footer">Activités
                 </div>
             </a>
-            <a href="{{ route ('/concours') }}" class="item_footer">
+            <a href="{{ route ('concours.index') }}" class="item_footer">
                 <div class="menu_footer">Concours
                 </div>
             </a>
-            <a href="{{ route ('/actualites') }}" class="item_footer">
+            <a href="{{ route ('actualites.index') }}" class="item_footer">
                 <div class="menu_footer">Actualités
                 </div>
             </a>
-            <a href="{{ route ('/apropos') }}" class="item_footer">
+            <a href="{{ route ('apropos.index') }}" class="item_footer">
                 <div class="menu_footer">À&nbsp;Propos
                 </div>
             </a>
