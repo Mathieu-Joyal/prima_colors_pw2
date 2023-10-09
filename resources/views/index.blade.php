@@ -3,7 +3,7 @@
     <div class="video-container">
 
         <video id="mon_video" autoplay muted>
-            <source src="../video\prima-colors_video_low.mp4"type="video/mp4">
+            <source src="../video\prima-color_video_modif.mp4"type="video/mp4">
             Votre navigateur ne prend pas en charge la lecture vidéo.
         </video>
     </div>
@@ -195,10 +195,10 @@
     function basculerSon() {
         if (video.muted) {
             video.muted = false;
-            soundButton.innerHTML = '<span class="material-icons">volume_off</span>';
+            soundButton.innerHTML = '<span class="material-icons">volume_up</span>';
         } else {
             video.muted = true;
-            soundButton.innerHTML = '<span class="material-icons">volume_up</span>';
+            soundButton.innerHTML = '<span class="material-icons">volume_off</span>';
         }
     }
 
