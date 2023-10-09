@@ -50,4 +50,7 @@
     </div>
 
 </div>
+<div class="conteneur-copyright">
 <p class="copyright"> <span>&copy;</span> 2023 Festival Prima-Colors</p>
+<a href="/connexion" class="connexion-admin">Administration</a>
+</div>

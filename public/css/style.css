@@ -2175,9 +2175,19 @@ p.adresse:hover {
   text-decoration: underline;
 }
 
-.copyright {
+.conteneur-copyright {
+  display: flex;
+  flex-direction: column;
+}
+.conteneur-copyright .copyright {
   text-align: center;
   color: #eca6d9;
+  margin-bottom: 1rem;
+}
+.conteneur-copyright .connexion-admin {
+  color: #eca6d9;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 /***********************************************
