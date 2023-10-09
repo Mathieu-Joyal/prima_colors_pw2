@@ -136,11 +136,60 @@
         })
     });
 
+    document.addEventListener('DOMContentLoaded', function() {
+        const observer = new IntersectionObserver(grayscale, {
+            threshold: 0.2
+        });
+
+        const observer2 = new IntersectionObserver(fadeIn, {
+            threshold: 0.2
+        });
+
+        const images = document.querySelectorAll('img.img_activite, img.img_forfait, img.img_apropos');
+
+        const textes = document.querySelectorAll('.texte_droite, .texte_gauche')
+
+        function grayscale(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add(
+                        'couleur-image');
+                    this.unobserve(entry
+                        .target);
+                }
+            });
+        };
+
+        function fadeIn(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (entry.target.classList.contains('texte_droite')) {
+                    entry.target.classList.add(
+                        'fade-in');
+                    this.unobserve(entry
+                        .target);
+                    } else if (entry.target.classList.contains('texte_gauche')) {
+                        entry.target.classList.add('fade-in-2');
+                    }
+                }
+            });
+        };
+
+
+        images.forEach(function(image) {
+            observer.observe(image);
+        });
+        textes.forEach(function(texte){
+            observer2.observe(texte)
+        })
+    });
+
+
     // Javascript pour le toggle du son
 
     // Initialisation des variables
     const video = document.getElementById("mon_video");
-    const soundButton = document.getElementById("basculer_son");
+    const soundButton = document.querySelector(".volume");
 
     // Fonction pour basculer le son
     function basculerSon() {
@@ -152,4 +201,6 @@
             soundButton.textContent = '<span class="material-icons">volume_up</span>';
         }
     }
+
+    soundButton.addEventListener('click', basculerSon);
 </script>

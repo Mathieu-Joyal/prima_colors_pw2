@@ -174,6 +174,7 @@ h3.accueil_forfait{
     color: $rose;
 }
 
+
 h3.accueil_activite,
 h3.accueil_forfait,
 h3.accueil_apropos {
@@ -194,6 +195,7 @@ h3.accueil_apropos {
     &:hover::after {
         animation: underlineEffect 3s ease-in 1.5 forwards; 
     }
+
 }
 
 
