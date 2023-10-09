@@ -9,8 +9,7 @@
     <x-boutons.deconnexion
         routeDeconnexion="{{ route('admin.deconnexion') }}"
     />
-
-
+    
     <div class="conteneur_admin_accueil">
 
         <h2>Bonjour {{ $un_employe->prenom }} {{ $un_employe->nom }}!</h2>

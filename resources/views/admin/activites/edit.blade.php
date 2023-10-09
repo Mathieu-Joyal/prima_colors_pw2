@@ -121,3 +121,4 @@
             dateInput.setAttribute('max', endDateString);
         });
     </script>
+</x-layout-admin>

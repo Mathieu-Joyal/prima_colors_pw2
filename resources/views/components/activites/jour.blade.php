@@ -48,12 +48,6 @@
 
                 <div class="description">
                     <p>{{ $activite->description }}</p>
-                    <p>{{ $activite->description }}</p>
-                    <p>{{ $activite->description }}</p>
-                    <p>{{ $activite->description }}</p>
-                    <p>{{ $activite->description }}</p>
-                    <p>{{ $activite->description }}</p>
-
                 </div>
             </div>
 

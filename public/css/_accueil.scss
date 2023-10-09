@@ -41,7 +41,6 @@ video {
 }
 
 
-
 /***********************************************
  *
  *           STYLES POUR LA CITATION
@@ -62,7 +61,6 @@ blockquote {
     position: relative;
     opacity: 0;
     animation: fade-in 1.5s ease-in-out forwards;
-
 }
 
 /* Styles spécifiques pour span.material-icons */
@@ -148,7 +146,6 @@ img.couleur-image {
     }
 }
 
-
 .texte_gauche {
     padding-right: 50px;
     opacity: 0;
@@ -157,7 +154,6 @@ img.couleur-image {
         animation: fadeInDeux 2s ease-in-out forwards;
     }
 }
-
 
 /* Styles communs pour les titres */
 h3.accueil_activite,
@@ -173,7 +169,6 @@ h3.accueil_apropos {
 h3.accueil_forfait{
     color: $rose;
 }
-
 
 h3.accueil_activite,
 h3.accueil_forfait,
@@ -198,15 +193,13 @@ h3.accueil_apropos {
 
 }
 
-
 /* Styles communs pour les paragraphes */
 p.accueil_activite,
 p.accueil_forfait,
 p.accueil_apropos {
     font-size: 36px;
     margin-bottom: 20px;
-    margin-bottom: 50px;
-   
+    margin-bottom: 50px; 
 }
 
 /* Styles communs pour les liens */
@@ -226,6 +219,7 @@ a.accueil_forfait {
     padding-right: 5px;
     border: 1px solid $blanc;
 }
+
 a.accueil_forfait {
     color: $rose;
 }
@@ -252,7 +246,6 @@ a.accueil_forfait:hover{
 a.accueil:hover span.material-icons {
     color: $blanc;
 }
-
 
 @keyframes fadeIn {
     from {

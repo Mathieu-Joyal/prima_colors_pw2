@@ -174,8 +174,6 @@ button:hover {
 //         width: 155%;}
 // }
 
-
-
 // ****SECTION SITE WEB****
 @import "_accueil.scss";
 @import "_activites.scss";
@@ -196,7 +194,9 @@ button:hover {
 // Les utilisateurs
 @import "admin/utilisateurs.scss";
 
+
 // ****SECTION ADMINISTRATEUR****
+
 
 // Page d'accueil
 @import "admin/accueil/index";
@@ -219,7 +219,6 @@ button:hover {
 // Entête et pied de page
 @import "admin/_nav-admin.scss";
 @import "admin/_footer-admin.scss";
-
 
 // Les composantes
 @import "components/formulaire";

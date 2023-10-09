@@ -6,9 +6,9 @@
 
     <div class="conteneur">
 
-        <form class="administration" action="{{ route('enregistrement.store') }}"
+        <form class="administration" action="{{ route('enregistrement.store') }}">
                 method="POST"
-        >
+ 
             @csrf
 
             <div>

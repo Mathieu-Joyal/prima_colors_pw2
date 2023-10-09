@@ -53,10 +53,12 @@ section.conteneur-actualites {
     &:last-child{
         border: none;
     }
+
     h3,
     h4 {
         color: $rose;
     }
+
     .date-publication{
         width: 500px;
     }
@@ -90,6 +92,7 @@ section.conteneur-actualites {
             }
         }
     }
+
     .conteneur-image {
         height: 275px;
         width: 425px;
@@ -106,8 +109,6 @@ section.conteneur-actualites {
 .conteneur-articles-actualites:last-child {
     margin-bottom: 2em;
 }
-
-
 
 @keyframes slide-up {
     0% {

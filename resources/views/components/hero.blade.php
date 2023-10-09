@@ -1,4 +1,3 @@
-
 @props(["image"])
 
 <section class="hero">
