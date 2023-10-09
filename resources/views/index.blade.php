@@ -34,7 +34,7 @@
     </div>
 
     <div class="section_activites element-to-animate">
-        <img src="../img/accueil/activite_accueil.png" alt="" class="img_activite">
+        <img src="../img/accueil/activite_accueil.png" alt="murale_de_grafitis" class="img_activite">
         <div class="texte_droite">
             <h3 class="accueil_activite">Activités hautes en couleurs!</h3>
             <p class="accueil_activite">Plongez dans un monde coloré lors du festival. Plusieurs nouveautés se sont
@@ -50,11 +50,11 @@
                 pour une expérience des plus colorée.</p>
             <a href="/forfaits" class="accueil_forfait">Voir les forfaits! <span class="material-icons">east</span></a>
         </div>
-        <img src="../img/accueil/forfait_accueil.png" alt="" class="img_forfait">
+        <img src="../img/accueil/forfait_accueil.png" alt="enseigne_neon" class="img_forfait">
     </div>
 
     <div class="section_apropos element-to-animate">
-        <img src="../img/accueil/apropos_accueil.png" alt="" class="img_apropos">
+        <img src="../img/accueil/apropos_accueil.png" alt="peinture_abstraite" class="img_apropos">
         <div class="texte_droite">
             <h3 class="accueil_apropos">Qu'est-ce que Prima-Colors?</h3>
             <p class="accueil_apropos">Apprenez pour qui et en quoi consiste le festival. Rajoutez une touche de joie

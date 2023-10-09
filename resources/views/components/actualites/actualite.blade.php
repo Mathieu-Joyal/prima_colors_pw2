@@ -50,7 +50,7 @@
                         <button onclick="voirPlus(this)" class="voir-plus">
                             Voir plus
                         </button>
-                        <img class="arrow-image" src="{{ asset('img\arrow-jaune.png') }}" alt="">
+                        <img class="arrow-image" src="{{ asset('img\arrow-jaune.png') }}" alt="fleche">
                     </div>
                 </div>
             </div>

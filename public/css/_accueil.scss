@@ -168,27 +168,36 @@ h3.accueil_apropos {
     position: relative;
     overflow: hidden;
     color: $jaune;
-
 }
 
 h3.accueil_forfait{
     color: $rose;
 }
 
-h3.accueil_activite::after,
-h3.accueil_forfait::after,
-h3.accueil_apropos::after {
-    content: " ";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 2px;
-    background-color: $blanc;
-    overflow: hidden;
-    animation: underlineEffect 3s ease-in 1.5 forwards; 
+
+h3.accueil_activite,
+h3.accueil_forfait,
+h3.accueil_apropos {
+    position: relative;   
+
+    &::after {
+        content: " ";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: $blanc;
+        overflow: hidden;
+    }
+
+    &:hover::after {
+        animation: underlineEffect 3s ease-in 1.5 forwards; 
+    }
+
 }
+
 
 /* Styles communs pour les paragraphes */
 p.accueil_activite,
@@ -244,30 +253,6 @@ a.accueil:hover span.material-icons {
     color: $blanc;
 }
 
-/* Styles spécifiques pour les couleurs */
-// h3.accueil_activite {
-//     color: $rose;
-// }
-
-// p.accueil_activite {
-//     color: $rose;
-// }
-
-// h3.accueil_forfait {
-//     color: $jaune;
-// }
-
-// p.accueil_forfait {
-//     color: $jaune;
-// }
-
-// h3.accueil_apropos {
-//     color: $rose;
-// }
-
-// p.accueil_apropos {
-//     color: $rose;
-// }
 
 @keyframes fadeIn {
     from {
