@@ -23,8 +23,6 @@
     height: 70px;
 }
 
-
-
 .contenu_footer .item_footer {
     text-decoration: none;
     height: 70px;
@@ -42,7 +40,6 @@
     background-color: transparent;
     position: absolute;
     left: -3px;
-
 }
 
 .contenu_footer .item_footer .menu_footer {
@@ -73,7 +70,6 @@
     -o-transition: background-color 1s ease-out;
     transition: background-color 1s ease-out;
 }
-
 
 .contenu_footer .item_footer:hover::before {
     background-color: $rose;
@@ -115,7 +111,6 @@ p.slogan {
     border-right: none;
 }
 
-
 .info a:last-child img {
     border-right: none;
 }
@@ -143,10 +138,11 @@ p.adresse:hover {
 
 /***********************************************
  *
- *           STYLES POUR LE RESPONSIVE
+ *           STYLES POUR LE RESPONSIVE 1200
  *
  ***********************************************/
- @media screen and (max-width: 1200px) {
+
+@media only screen and (max-width: 1200px) {
     .contenu_footer {
         width: 90%;
         padding-left: 0px;
@@ -183,24 +179,24 @@ p.adresse:hover {
     }
 }
 
+/***********************************************
+ *
+ *           STYLES POUR LE RESPONSIVE 768
+ *
+ ***********************************************/
 
-
-
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     .contenu_footer {
         width: 60%;
-       
     }
 
     .menu_footer {
-      
         padding-left: 35px;
         height: auto;
     }
 
     .contenu_footer .item_footer .menu_footer {
         font-size: 25px;
-        border-right: none;
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -209,11 +205,10 @@ p.adresse:hover {
         margin-top: 30px;
         width: auto;
         max-width: 62%;
-       
     }
 
     p.slogan {
-   font-size: 30px;
+        font-size: 30px;
     }
 
     .info,
@@ -226,18 +221,22 @@ p.adresse:hover {
         border-right: none;
     }
 
-    img.reseau-img-footer{
-        width:auto;
+    img.reseau-img-footer {
+        width: auto;
         max-width: 50%;
         margin-bottom: 20px;
     }
 }
 
+/***********************************************
+ *
+ *           STYLES POUR LE RESPONSIVE 450
+ *
+ ***********************************************/
 
-@media screen and (max-width: 450px) {
+@media only screen and (max-width: 450px) {
     .contenu_footer {
-        width: 100%;
-        padding-left: 10px;
+        width: 40%;
     }
 
     .menu_footer {
@@ -248,6 +247,8 @@ p.adresse:hover {
         padding-right: 10px;
         padding-left: 10px;
         font-size: 16px;
+        color: blue;
+
     }
 
     .logo {
@@ -257,6 +258,7 @@ p.adresse:hover {
 
     p.slogan {
         font-size: 32px;
+        color: red;
     }
 
     .info,
@@ -268,5 +270,3 @@ p.adresse:hover {
         font-size: 16px;
     }
 }
-
-
