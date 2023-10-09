@@ -2,35 +2,34 @@
     <div class="contenu_footer">
 
         <div class="menu_footer">
-            <a href="/" class="item_footer">
+        <a href="{{ route ('accueil') }}"  class="item_footer">
                 <div class="menu_footer">Accueil
                 </div>
             </a>
-            <a href="/forfaits" class="item_footer">
+            <a href="{{ route ('/forfaits') }}"   class="item_footer">
                 <div class="menu_footer">Billets
                 </div>
             </a>
-            <a href="/activites" class="item_footer">
+            <a href="{{ route ('/activites') }}"  class="item_footer">
                 <div class="menu_footer">Activités
                 </div>
             </a>
-            <a href="/concours" class="item_footer">
+            <a href="{{ route ('/concours') }}" class="item_footer">
                 <div class="menu_footer">Concours
                 </div>
             </a>
-
-            <a href="/actualites" class="item_footer">
+            <a href="{{ route ('/actualites') }}" class="item_footer">
                 <div class="menu_footer">Actualités
                 </div>
             </a>
-            <a href="/apropos" class="item_footer">
+            <a href="{{ route ('/apropos') }}" class="item_footer">
                 <div class="menu_footer">À&nbsp;Propos
                 </div>
             </a>
         </div>
     </div>
 
-    <img src="img/logo/logo.png" alt="logo festival" class="logo">
+    <img src="{{ asset('img/logo/logo.png') }}" alt="logo festival" class="logo">
 
     <p class="slogan">Prima-Colors : L'Art de Vivre, Peint en Mille Couleurs !</p>
 
