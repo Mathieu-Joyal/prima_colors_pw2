@@ -163,12 +163,15 @@ a.connexion .material-icons {
     text-decoration: none;
 }
 
-
+.hamburger span.menuIcon.material-icons{
+    display: none;
+}
 //NAV RESPONSIVE
 @media only screen and (max-width: 1750px) {
     img.reseau-img {
         width: 95%;
     }
+
 }
 
 @media only screen and (max-width: 1700px) {
@@ -189,8 +192,8 @@ a.connexion .material-icons {
         margin-top: 8px;
     }
 
-    .reseau a {
-        display: none;
+    .reseau a img{
+        padding-bottom:3rem ;
     }
 
     .menu_nav {
@@ -237,6 +240,9 @@ a.connexion .material-icons {
         margin-bottom: 0;
         margin-top: 20px;
     }
+    .reseau a img{
+       padding-top: 3rem;
+     }
 }
 
 @media only screen and (max-width: 1250px) {
@@ -249,7 +255,10 @@ a.connexion .material-icons {
     }
 
     img.reseau-img {
-        width: 80%;
+       display: none;
+    }
+    .hamburger span.menuIcon.material-icons{
+        display: block;
     }
 }
 
