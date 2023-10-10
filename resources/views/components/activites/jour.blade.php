@@ -106,17 +106,19 @@
     });
 
 
-    //see more / less @button click
-    function voirPlus(button) {
+ //see more / less @button click
+ function voirPlus(button) {
         const buttonText = button.innerText;
         const parentSection = button.closest('section');
 
-        const articles = parentSection.querySelectorAll('.activites');
+        const articles = parentSection.querySelectorAll('article.activites');
 
         articles.forEach(function(article) {
+            article.querySelector(".description").style.display = "none"
             article.classList.toggle('hidden');
         });
 
+        button.style.marginTop = "72px";
         button.innerText = buttonText === 'VOIR PLUS' ? 'VOIR MOINS' : 'VOIR PLUS';
     }
 
@@ -124,7 +126,11 @@
     //show description on click
     function toggleDescription(element) {
         const description = element.querySelector('.description');
-        const nextElement = element.parentElement.nextElementSibling;
+        let nextElement = element.parentElement.nextElementSibling;
+
+        while(nextElement.classList.contains("hidden")){
+            nextElement = nextElement.nextElementSibling
+        }
 
         if (description && nextElement) {
             if (description.style.display === 'none' || description.style.display === '') {
@@ -132,11 +138,10 @@
                 nextElement.style.marginTop = description.clientHeight + 'px';
             } else {
                 description.style.display = 'none';
-                nextElement.style.marginTop = '0';
+                nextElement.style.marginTop = nextElement.tagName == "button" ? '72px': '0';
             }
         }
     }
-
 
 </script>
 
