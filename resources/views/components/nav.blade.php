@@ -18,7 +18,7 @@
                 <div class="nav">Concours</div>
             </a>
             <a href="{{ route ('apropos.index') }}" class="item_nav menu-item">
-                <div class="nav">À Propos</div>
+                <div class="nav">À&nbsp;Propos</div>
             </a>
             <a href="{{ route ('actualites.index') }}" class="item_nav menu-item">
                 <div class="nav">Actualités</div>
@@ -31,13 +31,13 @@
 
         <div class="reseau">
             <a href="https://www.facebook.com/profile.php?id=61552009479006" target="_blank">
-                <img src="img/reseau/facebook/f_logo_RGB-Black_58.png" alt="logo facebook" class="reseau-img">
+                <img src="{{ asset('img/reseau/facebook/f_logo_RGB-Black_58.png') }}" alt="logo facebook" class="reseau-img">
             </a>
             <a href="https://www.instagram.com/festival_prima_colors/" target="_blank">
-                <img src="img/reseau/instagram/Instagram_Glyph_Black.png" alt="logo instagram" class="reseau-img">
+                <img src="{{ asset('img/reseau/instagram/Instagram_Glyph_Black.png') }}" alt="logo instagram" class="reseau-img">
             </a>
             <a href="https://youtu.be/9KYyMd28mzQ" target="_blank">
-                <img src="img/reseau/youtube/okyoutube_social_icon_dark.png" alt="logo youtube" class="reseau-img">
+                <img src="{{ asset('img/reseau/youtube/okyoutube_social_icon_dark.png') }}"  alt="logo youtube" class="reseau-img">
             </a>
         </div>
 
