@@ -21,25 +21,23 @@ video {
     width: 100%;
 }
 
-.volume{
-    border:none;
+.volume {
+    border: none;
     margin-right: auto;
     display: flex;
     margin-left: 0;
 
-    span.material-icons{
+    span.material-icons {
         border: none;
         color: $blanc;
         margin-right: auto;
         font-size: 16px;
-
     }
 }
 
-.volume:hover{
+.volume:hover {
     background-color: transparent;
 }
-
 
 /***********************************************
  *
@@ -166,14 +164,14 @@ h3.accueil_apropos {
     color: $jaune;
 }
 
-h3.accueil_forfait{
+h3.accueil_forfait {
     color: $rose;
 }
 
 h3.accueil_activite,
 h3.accueil_forfait,
 h3.accueil_apropos {
-    position: relative;   
+    position: relative;
 
     &::after {
         content: " ";
@@ -188,9 +186,8 @@ h3.accueil_apropos {
     }
 
     &:hover::after {
-        animation: underlineEffect 3s ease-in 1.5 forwards; 
+        animation: underlineEffect 3s ease-in 1.5 forwards;
     }
-
 }
 
 /* Styles communs pour les paragraphes */
@@ -199,7 +196,7 @@ p.accueil_forfait,
 p.accueil_apropos {
     font-size: 36px;
     margin-bottom: 20px;
-    margin-bottom: 50px; 
+    margin-bottom: 50px;
 }
 
 /* Styles communs pour les liens */
@@ -239,7 +236,7 @@ a.accueil_forfait:hover {
     border-color: $jaune;
 }
 
-a.accueil_forfait:hover{
+a.accueil_forfait:hover {
     border-color: $rose;
 }
 
@@ -365,5 +362,3 @@ h1.accueil_actualite {
     transition: opacity 0.5s;
     opacity: 1;
 }
-
-

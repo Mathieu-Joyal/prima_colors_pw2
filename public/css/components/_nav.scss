@@ -1,3 +1,8 @@
+/***********************************************
+ *
+ *           STYLES POUR LE MENU DU NAV
+ *
+ ***********************************************/
 .nav {
     position: relative;
 }
@@ -53,7 +58,7 @@
 }
 
 .menu_nav .item_nav::before {
-    content: '';
+    content: "";
     display: block;
     height: 100%;
     width: 3px;
@@ -96,6 +101,12 @@
     transition: background-color 1s ease-out;
 }
 
+/***********************************************
+ *
+ *           STYLES POUR BILLET DU NAV
+ *
+ ***********************************************/
+
 a.billet {
     text-decoration: none;
 }
@@ -105,14 +116,14 @@ a.billet {
     height: 200px;
     margin-left: 50px;
     padding-right: 40px;
-    background: url('../img/accueil/billet.jpg');
+    background: url("../img/accueil/billet.jpg");
     background-repeat: no-repeat;
 }
 
 .billet:hover {
     filter: grayscale(100%) sepia(100%) hue-rotate(300deg);
     filter: grayscale(100%) sepia(100%) hue-rotate(300deg) brightness(100%) saturate(100%);
-    transition: .5s;
+    transition: 0.5s;
 }
 
 p.texte {
@@ -124,6 +135,12 @@ p.texte {
     margin-top: 55px;
     margin-left: 29px;
 }
+
+/***********************************************
+ *
+ *           STYLES POUR LES RES.SOCIAUX DU NAV
+ *
+ ***********************************************/
 
 .reseau {
     display: flex;
@@ -142,6 +159,12 @@ img.reseau-img {
     margin-left: 20px;
     margin-right: 100px;
 }
+
+/***********************************************
+ *
+ *         STYLES POUR LA CONNEXION DU NAV
+ *
+ ***********************************************/
 
 a.connexion {
     font-family: "pf-venue", sans-serif;
@@ -163,15 +186,18 @@ a.connexion .material-icons {
     text-decoration: none;
 }
 
-.hamburger span.menuIcon.material-icons{
+.hamburger span.menuIcon.material-icons {
     display: none;
 }
-//NAV RESPONSIVE
+/***********************************************
+ *
+ *           STYLES POUR NAV RESPONSIVE
+ *
+ ***********************************************/
 @media only screen and (max-width: 1750px) {
     img.reseau-img {
         width: 95%;
     }
-
 }
 
 @media only screen and (max-width: 1700px) {
@@ -181,8 +207,6 @@ a.connexion .material-icons {
 }
 
 @media only screen and (max-width: 1600px) {
-
-
     .reseau {
         display: flex;
         justify-content: space-between;
@@ -192,8 +216,8 @@ a.connexion .material-icons {
         margin-top: 8px;
     }
 
-    .reseau a img{
-        padding-bottom:3rem ;
+    .reseau a img {
+        padding-bottom: 3rem;
     }
 
     .menu_nav {
@@ -220,7 +244,6 @@ a.connexion .material-icons {
             margin-top: 5px;
         }
     }
-
 }
 
 @media only screen and (max-width: 1480px) {
@@ -240,9 +263,9 @@ a.connexion .material-icons {
         margin-bottom: 0;
         margin-top: 20px;
     }
-    .reseau a img{
-       padding-top: 3rem;
-     }
+    .reseau a img {
+        padding-top: 3rem;
+    }
 }
 
 @media only screen and (max-width: 1250px) {
@@ -255,9 +278,9 @@ a.connexion .material-icons {
     }
 
     img.reseau-img {
-       display: none;
+        display: none;
     }
-    .hamburger span.menuIcon.material-icons{
+    .hamburger span.menuIcon.material-icons {
         display: block;
     }
 }
@@ -280,13 +303,11 @@ a.connexion .material-icons {
     }
 }
 
-
-@media only screen and (max-width:980px) {
+@media only screen and (max-width: 980px) {
     .menu_nav {
         display: none;
     }
 }
-
 
 @media only screen and (max-width: 500px) {
     a.connexion {
@@ -311,7 +332,6 @@ a.connexion .material-icons {
 }
 
 @media only screen and (max-width: 375px) {
-
     .contenu_nav {
         .reseau {
             display: none;
@@ -329,7 +349,6 @@ a.connexion .material-icons {
 }
 
 a.hamburger {
-
     border: none;
     color: $rose;
     background-color: $vert;
@@ -395,4 +414,3 @@ span.menuIcon.material-icons {
     top: 1em;
     right: 1em;
 }
-

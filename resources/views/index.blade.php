@@ -12,9 +12,10 @@
 
     <x-bannieres.countdown class="grand" />
     <blockquote>
-        <span class="material-icons">format_quote</span>Prima-Colors : L'art, la musique, et la couleur fusionnent en une <br> explosion de créativité pour une
+        <span class="material-icons">format_quote</span>Prima-Colors : L'art, la musique, et la couleur fusionnent en une
+        <br> explosion de créativité pour une
         expérience inoubliable!
-       <span class="material-icons">format_quote</span>
+        <span class="material-icons">format_quote</span>
     </blockquote>
 
     <div class="intro">
@@ -62,7 +63,6 @@
             <a href="/apropos" class="accueil">Découvrez le festival! <span class="material-icons">east</span></a>
         </div>
     </div>
-
 
     <x-bannieres.concours :url="url('img/accueil/ban_concours.png')" />
 
@@ -116,10 +116,10 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     if (entry.target.classList.contains('texte_droite')) {
-                    entry.target.classList.add(
-                        'fade-in');
-                    this.unobserve(entry
-                        .target);
+                        entry.target.classList.add(
+                            'fade-in');
+                        this.unobserve(entry
+                            .target);
                     } else if (entry.target.classList.contains('texte_gauche')) {
                         entry.target.classList.add('fade-in-2');
                     }
@@ -131,7 +131,7 @@
         images.forEach(function(image) {
             observer.observe(image);
         });
-        textes.forEach(function(texte){
+        textes.forEach(function(texte) {
             observer2.observe(texte)
         })
     });
@@ -164,10 +164,10 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     if (entry.target.classList.contains('texte_droite')) {
-                    entry.target.classList.add(
-                        'fade-in');
-                    this.unobserve(entry
-                        .target);
+                        entry.target.classList.add(
+                            'fade-in');
+                        this.unobserve(entry
+                            .target);
                     } else if (entry.target.classList.contains('texte_gauche')) {
                         entry.target.classList.add('fade-in-2');
                     }
@@ -179,7 +179,7 @@
         images.forEach(function(image) {
             observer.observe(image);
         });
-        textes.forEach(function(texte){
+        textes.forEach(function(texte) {
             observer2.observe(texte)
         })
     });
@@ -201,6 +201,6 @@
             soundButton.innerHTML = '<span class="material-icons">volume_off</span>';
         }
     }
-
+    
     soundButton.addEventListener('click', basculerSon);
 </script>
