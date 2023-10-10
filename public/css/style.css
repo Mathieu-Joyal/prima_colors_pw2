@@ -2055,6 +2055,11 @@ form.la_recherche button {
   border: 1px solid #eeb15e;
 }
 
+/***********************************************
+ *
+ *           STYLES POUR LE MENU DU FOOTER
+ *
+ ***********************************************/
 .contenu {
   position: relative;
   width: 100%;
@@ -2130,12 +2135,22 @@ form.la_recherche button {
   transition: background-color 1s ease-out;
 }
 
+/***********************************************
+ *
+ *           STYLES POUR LE lOGO DU FOOTER
+ *
+ ***********************************************/
 .logo {
-  margin-left: 300px;
+  margin-left: 365px;
   margin-top: 60px;
   z-index: 2;
 }
 
+/***********************************************
+ *
+ *           STYLES POUR LE SLOGAN DU FOOTER
+ *
+ ***********************************************/
 p.slogan {
   color: #eca6d9;
   text-transform: uppercase;
@@ -2143,10 +2158,15 @@ p.slogan {
   font-size: 54px;
 }
 
+/***********************************************
+ *
+ *    STYLES POUR LES INFOS DE FIN DE FOOTER
+ *
+ ***********************************************/
 .info,
 .info p.adresse,
 .info p.telephone,
-.info img {
+.info a img {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2156,7 +2176,9 @@ p.slogan {
   transition: text-decoration 0.3s ease, -webkit-text-decoration 0.3s ease;
   cursor: pointer;
   margin-left: 30px;
-  padding-right: 150px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-right: 125px;
   font-size: 24px;
   color: #030303;
   font-weight: bold;
@@ -2165,6 +2187,7 @@ p.slogan {
 
 .info {
   border-right: none;
+  padding-left: 150px;
 }
 
 .info a:last-child img {
@@ -2324,6 +2347,11 @@ p.adresse:hover {
     margin-bottom: 10px;
   }
 }
+/***********************************************
+ *
+ *           STYLES POUR LE MENU DU NAV
+ *
+ ***********************************************/
 .nav {
   position: relative;
 }
@@ -2419,6 +2447,11 @@ p.adresse:hover {
   transition: background-color 1s ease-out;
 }
 
+/***********************************************
+ *
+ *           STYLES POUR BILLET DU NAV
+ *
+ ***********************************************/
 a.billet {
   text-decoration: none;
 }
@@ -2448,6 +2481,11 @@ p.texte {
   margin-left: 29px;
 }
 
+/***********************************************
+ *
+ *           STYLES POUR LES RES.SOCIAUX DU NAV
+ *
+ ***********************************************/
 .reseau {
   display: flex;
   justify-content: space-between;
@@ -2466,6 +2504,11 @@ img.reseau-img {
   margin-right: 100px;
 }
 
+/***********************************************
+ *
+ *         STYLES POUR LA CONNEXION DU NAV
+ *
+ ***********************************************/
 a.connexion {
   font-family: "pf-venue", sans-serif;
   font-size: 36px;
@@ -2490,6 +2533,11 @@ a.connexion .material-icons {
   display: none;
 }
 
+/***********************************************
+ *
+ *           STYLES POUR NAV RESPONSIVE
+ *
+ ***********************************************/
 @media only screen and (max-width: 1750px) {
   img.reseau-img {
     width: 95%;
