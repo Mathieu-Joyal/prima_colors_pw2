@@ -224,9 +224,6 @@ a.connexion .material-icons {
 }
 
 @media only screen and (max-width: 1480px) {
-    .billet {
-        display: none;
-    }
 
     .menu_nav {
         padding-bottom: 0;
@@ -254,11 +251,74 @@ a.connexion .material-icons {
         }
     }
 
-    img.reseau-img {
-       display: none;
-    }
     .hamburger span.menuIcon.material-icons{
         display: block;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    img.logo-nav {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (min-width: 1480px) and (max-width: 1520px) {
+    .reseau a img {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1480px) and (max-width: 1500px) {
+    a.connexion {
+        font-size: 1.8em;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1480px) {
+    a.hamburger {
+        display: none;
+    }
+
+    .menu_nav .item_nav .nav {
+        font-size: inherit;
+    }
+
+    .billet {
+        background: none;
+        margin: 0;
+
+        p.texte {
+            font-size: 2em;
+            color: white;
+            margin-top: 62px;
+        }
+    }
+
+    div.menu_nav {
+        margin-bottom: 3em;
+    }
+
+    .reseau a img  {
+        padding-top: 0;
+    }
+
+    .logo-nav {
+        margin-top: 0;
+        margin-bottom: 25px;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    div.menu_nav {
+        display: none;
+    }
+
+    a.billet {
+        display: none;
+    }
+
+    img.reseau-img {
+       display: none;
     }
 }
 
@@ -282,6 +342,7 @@ a.connexion .material-icons {
 
 
 @media only screen and (max-width:980px) {
+
     .menu_nav {
         display: none;
     }
@@ -289,9 +350,6 @@ a.connexion .material-icons {
 
 
 @media only screen and (max-width: 500px) {
-    a.connexion {
-        display: none;
-    }
 
     section.menu.showMenu ul {
         margin-left: 2em;
@@ -300,17 +358,28 @@ a.connexion .material-icons {
 
 @media only screen and (max-width: 452px) {
     .contenu_nav img {
-        width: 200px;
-        margin-top: 35px;
-        margin-left: 60px;
+        width: 100px;
+    }
+
+    .logo-nav {
+        margin-top: 3em;
     }
 
     .contenu_nav a.hamburger {
-        margin-top: 20px;
+        margin: 3em auto 0 auto;
+    }
+
+    a.connexion {
+        background-color: rgb(255, 255, 255, 0.2);
+        padding: .25em;
     }
 }
 
 @media only screen and (max-width: 375px) {
+
+    .contenu_nav img {
+        display: none;
+    }
 
     .contenu_nav {
         .reseau {
@@ -318,8 +387,9 @@ a.connexion .material-icons {
         }
 
         a.hamburger {
-            margin-top: 20px;
-            margin-right: 20px;
+            // margin-top: 20px;
+            // margin-right: 20px;
+            margin: 3em auto 0 auto;
         }
     }
 
@@ -395,4 +465,3 @@ span.menuIcon.material-icons {
     top: 1em;
     right: 1em;
 }
-
