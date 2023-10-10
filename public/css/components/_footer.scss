@@ -237,28 +237,51 @@ p.adresse:hover {
 @media only screen and (max-width: 450px) {
     .contenu_footer {
         width: 40%;
-        display: flex;
-        flex-direction: column;
+     
     }
 
     .menu_footer {
         height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px; 
+        padding-left: 190px;
+        top: 0px;
     }
+    
 
     .contenu_footer .item_footer .menu_footer {
         padding-right: 10px;
         padding-left: 10px;
         font-size: 16px;
         border-right: none;
+        height: 0px;
     }
 
+    .contenu_footer .item_footer{
+        height: 40px;
+        border-bottom: 2px solid $rose; 
+        position: static; 
+    }
+
+    .contenu_footer .item_footer:last-child{
+        border-bottom:none;  
+    }
+
+
     .logo {
-        margin-left: 0;
-        margin-top: 30px;
+        margin-left: 95px;
+        margin-top: 15px;
     }
 
     p.slogan {
-        font-size: 32px;
+        font-size: 22px;
+        height: 0px;
+        
+
+        
     }
 
     .info,
@@ -266,7 +289,15 @@ p.adresse:hover {
     .info p.telephone,
     .info img {
         margin-left: 10px;
-        padding-right: 20px;
+        padding-right: 8px;
+        padding-top: 8px;
         font-size: 16px;
+
+    }
+
+    img.reseau-img-footer {
+        width: auto;
+        max-width: 40%;
+        margin-bottom: 10px;
     }
 }
