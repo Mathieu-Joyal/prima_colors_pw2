@@ -1,3 +1,8 @@
+/***********************************************
+ *
+ *           STYLES POUR LE MENU DU FOOTER
+ *
+ ***********************************************/
 .contenu {
     position: relative;
     width: 100%;
@@ -33,7 +38,7 @@
 }
 
 .contenu_footer .item_footer::before {
-    content: '';
+    content: "";
     display: block;
     height: 100%;
     width: 3px;
@@ -76,11 +81,23 @@
     transition: background-color 1s ease-out;
 }
 
+/***********************************************
+ *
+ *           STYLES POUR LE lOGO DU FOOTER
+ *
+ ***********************************************/
+
 .logo {
     margin-left: 300px;
     margin-top: 60px;
     z-index: 2;
 }
+
+/***********************************************
+ *
+ *           STYLES POUR LE SLOGAN DU FOOTER
+ *
+ ***********************************************/
 
 p.slogan {
     color: $rose;
@@ -89,6 +106,11 @@ p.slogan {
     font-size: 54px;
 }
 
+/***********************************************
+ *
+ *    STYLES POUR LES INFOS DE FIN DE FOOTER
+ *
+ ***********************************************/
 .info,
 .info p.adresse,
 .info p.telephone,
@@ -237,7 +259,6 @@ p.adresse:hover {
 @media only screen and (max-width: 450px) {
     .contenu_footer {
         width: 40%;
-     
     }
 
     .menu_footer {
@@ -246,11 +267,10 @@ p.adresse:hover {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 0px; 
+        padding: 0px;
         padding-left: 190px;
         top: 0px;
     }
-    
 
     .contenu_footer .item_footer .menu_footer {
         padding-right: 10px;
@@ -260,16 +280,15 @@ p.adresse:hover {
         height: 0px;
     }
 
-    .contenu_footer .item_footer{
+    .contenu_footer .item_footer {
         height: 40px;
-        border-bottom: 2px solid $rose; 
-        position: static; 
+        border-bottom: 2px solid $rose;
+        position: static;
     }
 
-    .contenu_footer .item_footer:last-child{
-        border-bottom:none;  
+    .contenu_footer .item_footer:last-child {
+        border-bottom: none;
     }
-
 
     .logo {
         margin-left: 95px;
@@ -279,9 +298,6 @@ p.adresse:hover {
     p.slogan {
         font-size: 22px;
         height: 0px;
-        
-
-        
     }
 
     .info,
@@ -292,7 +308,6 @@ p.adresse:hover {
         padding-right: 8px;
         padding-top: 8px;
         font-size: 16px;
-
     }
 
     img.reseau-img-footer {
