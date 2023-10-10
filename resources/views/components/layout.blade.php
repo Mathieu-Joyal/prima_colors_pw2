@@ -9,7 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://use.typekit.net/wct0vvp.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <title>{{ $titre }}</title>
     <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-Y"></script>
