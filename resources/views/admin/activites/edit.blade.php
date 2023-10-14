@@ -103,8 +103,6 @@
         </form>
     </section>
 
-    </x-layout-admin>
-
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const dateInput = document.getElementById('date');
